@@ -1,228 +1,120 @@
-# 深入浅出PyTorch
-**在线阅读地址**：https://datawhalechina.github.io/thorough-pytorch/
+> March, 2016: If you're on an old version of Jekyll Now and run into a) build warnings or b) syntax highlighting issues caused by [Jekyll 3 and GitHub Pages updates](https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0), just :sparkles:[update your _config.yml](https://github.com/barryclark/jekyll-now/pull/445/files):sparkles: and you'll be set!
 
-**配套视频教程**：https://www.bilibili.com/video/BV1L44y1472Z
+# Jekyll Now
 
-## 一、项目初衷
+**Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
 
-PyTorch是利用深度学习进行数据科学研究的重要工具，在灵活性、可读性和性能上都具备相当的优势，近年来已成为学术界实现深度学习算法最常用的框架。
+**Jekyll Now** makes it easier to create your Jekyll blog, by eliminating a lot of the up front setup.
 
-考虑到PyTorch的学习兼具理论储备和动手训练，两手都要抓两手都要硬的特点，我们开发了《深入浅出PyTorch》课程，期望以组队学习的形式，帮助大家从入门到熟练掌握PyTorch工具，进而实现自己的深度学习算法。
+- You don't need to touch the command line
+- You don't need to install/configure ruby, rvm/rbenv, ruby gems :relaxed:
+- You don't need to install runtime dependencies like markdown processors, Pygments, etc
+- If you're on Windows, this will make setting up Jekyll a lot easier
+- It's easy to try out, you can just delete your forked repository if you don't like it
 
-我们的愿景是：通过组队学习，大家能够掌握由浅入深地PyTorch的基本知识和内容，经过自己的动手实践加深操作的熟练度。同时通过项目实战，充分锻炼编程能力，掌握PyTorch进行深度学习的基本流程，提升解决实际问题的能力。
+In a few minutes you'll be set up with a minimal, responsive blog like the one below giving you more time to spend on writing epic blog posts!
 
-学习的先修要求是，会使用Python编程，了解包括神经网络在内的机器学习算法，勤于动手实践。
+![Jekyll Now Theme Screenshot](/images/jekyll-now-theme-screenshot.jpg "Jekyll Now Theme Screenshot")
 
-《深入浅出PyTorch》是一个系列，一共有三个部分。已经上线的是本系列的第一、二部分，后续会不断更新《深入浅出PyTorch》（下），给出更贴合实际应用的实战案例。
+## Quick Start
 
-## 二、内容简介
-- 第零章：前置知识（选学）
-  - 人工智能简史
-  - 相关评价指标
-  - 常用包的学习
-  - Jupyter相关操作
-- 第一章：PyTorch的简介和安装
-  - PyTorch简介
-  - PyTorch的安装
-  - PyTorch相关资源简介
-- 第二章：PyTorch基础知识
-  - 张量及其运算
-  - 自动求导简介
-  - 并行计算、CUDA和cuDNN简介
-- 第三章：PyTorch的主要组成模块
-  - 思考：完成一套深度学习流程需要哪些关键环节
-  - 基本配置
-  - 数据读入
-  - 模型构建
-  - 损失函数
-  - 优化器
-  - 训练和评估
-  - 可视化
-- 第四章：PyTorch基础实战
-  - 基础实战——Fashion-MNIST时装分类
-  - 基础实战——果蔬分类实战（notebook）
-- 第五章：PyTorch模型定义
-  - 模型定义方式
-  - 利用模型块快速搭建复杂网络
-  - 模型修改
-  - 模型保存与读取
-- 第六章：PyTorch进阶训练技巧
-  - 自定义损失函数
-  - 动态调整学习率
-  - 模型微调-torchvision
-  - 模型微调-timm
-  - 半精度训练
-  - 数据扩充
-  - 超参数的修改及保存
-  - PyTorch模型定义与进阶训练技巧
-- 第七章：PyTorch可视化
-  - 可视化网络结构
-  - 可视化CNN卷积层
-  - 使用TensorBoard可视化训练过程
-  - 使用wandb可视化训练过程
-- 第八章：PyTorch生态简介
-  - 简介
-  - 图像—torchvision
-  - 视频—PyTorchVideo
-  - 文本—torchtext
-- 第九章：模型部署
-  - 使用ONNX进行部署并推理
-- 第十章：常见网络代码的解读(推进中)
-  - 计算机视觉
-    - 图像分类
-      - ResNet源码解读
-      - Swin Transformer源码解读
-      - Vision Transformer源码解读
-    - 目标检测
-      - YOLO系列解读（与MMYOLO合作）
-    - 图像分割
-  - 自然语言处理
-    - RNN源码解读
-  - 音频处理
-  - 视频处理
-  - 其他
-  - 
+### Step 1) Fork Jekyll Now to your User Repository
 
-## 三、人员安排
-| 成员&nbsp; | 个人简介                                            | 个人主页                                           |
-| --------------- | --------------------------------------------------- | -------------------------------------------------- |
-|   牛志康   | DataWhale成员，西安电子科技大学本科生 | [[知乎](https://www.zhihu.com/people/obeah-82)][[个人主页](https://nofish-528.github.io/)] |
-|   李嘉骐   | DataWhale成员，清华大学研究生 | [[知乎](https://www.zhihu.com/people/li-jia-qi-16-9/posts)] |
-|    刘洋    | Datawhale成员，中国科学院数学与系统科学研究所研究生 | [[知乎](https://www.zhihu.com/people/ming-ren-19-34/asks)]   |
-|   陈安东   | DataWhale成员，中央民族大学研究生                   | [[个人主页](https://andongblue.github.io/chenandong.github.io/)] |
+Fork this repo, then rename the repository to yourgithubusername.github.io.
 
-教程贡献情况（已上线课程内容）：
+Your Jekyll blog will often be viewable immediately at <https://yourgithubusername.github.io> (if it's not, you can often force it to build by completing step 2)
 
-李嘉骐：第三章；第四章；第五章；第六章；第七章；第八章；内容整合
+![Step 1](/images/step1.gif "Step 1")
 
-牛志康：第一章；第三章；第六章；第七章；第八章，第九章，第十章；文档部署
+### Step 2) Customize and view your site
 
-刘洋：第二章；第三章
+Enter your site name, description, avatar and many other options by editing the _config.yml file. You can easily turn on Google Analytics tracking, Disqus commenting and social icons here too.
 
-陈安东：第二章；第三章；第七章
+Making a change to _config.yml (or any file in your repository) will force GitHub Pages to rebuild your site with jekyll. Your rebuilt site will be viewable a few seconds later at <https://yourgithubusername.github.io> - if not, give it ten minutes as GitHub suggests and it'll appear soon
 
-## 四、 课程编排与配套视频
-<details>
+> There are 3 different ways that you can make changes to your blog's files:
 
-部分章节直播讲解请观看B站回放（持续更新）：https://www.bilibili.com/video/BV1L44y1472Z
+> 1. Edit files within your new username.github.io repository in the browser at GitHub.com (shown below).
+> 2. Use a third party GitHub content editor, like [Prose by Development Seed](http://prose.io). It's optimized for use with Jekyll making markdown editing, writing drafts, and uploading images really easy.
+> 3. Clone down your repository and make updates locally, then push them to your GitHub repository.
 
-- 课程编排：
-  深入浅出PyTorch分为三个阶段：PyTorch深度学习基础知识、PyTorch进阶操作、PyTorch案例分析。
+![_config.yml](/images/config.png "_config.yml")
 
-- 使用方法:
+### Step 3) Publish your first blog post
 
-  我们的课程内容都以markdown格式或jupyter notebook的形式保存在本仓库内。除了多看加深课程内容的理解外，最重要的还是动手练习、练习、练习
+Edit `/_posts/2014-3-3-Hello-World.md` to publish your first blog post. This [Markdown Cheatsheet](http://www.jekyllnow.com/Markdown-Style-Guide/) might come in handy.
 
-- 组队学习安排:
+![First Post](/images/first-post.png "First Post")
 
-  第一部分：第一章到第四章，学习周期：10天；
+> You can add additional posts in the browser on GitHub.com too! Just hit the + icon in `/_posts/` to create new content. Just make sure to include the [front-matter](http://jekyllrb.com/docs/frontmatter/) block at the top of each new blog post and make sure the post's filename is in this format: year-month-day-title.md
 
-  第二部分：第五章到第八章，学习周期：11天
-</details>
+## Local Development
 
-## 五、关于贡献
-<details> 
+1. Install Jekyll and plug-ins in one fell swoop. `gem install github-pages` This mirrors the plug-ins used by GitHub Pages on your local machine including Jekyll, Sass, etc.
+2. Clone down your fork `git clone https://github.com/yourusername/yourusername.github.io.git`
+3. Serve the site and watch for markup/sass changes `jekyll serve`
+4. View your website at http://127.0.0.1:4000/
+5. Commit any changes and push everything to the master branch of your GitHub user repository. GitHub Pages will then rebuild and serve your website.
 
-本项目使用`Forking`工作流，具体参考[atlassian文档](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow)大致步骤如下：
+## Moar!
 
-1. 在GitHub上Fork本仓库
-2. Clone Fork后的个人仓库
-3. 设置`upstream`仓库地址，并禁用`push`
-4. 使用分支开发，课程分支名为`lecture{#NO}`，`#NO`保持两位，如`lecture07`，对应课程目录
-5. PR之前保持与原始仓库的同步，之后发起PR请求
+I've created a more detailed walkthrough, [**Build A Blog With Jekyll And GitHub Pages**](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/) over at the Smashing Magazine website. Check it out if you'd like a more detailed walkthrough and some background on Jekyll. :metal:
 
-命令示例：
+It covers:
 
-```shell
-# fork
-# clone
-git clone git@github.com:USERNAME/thorough-pytorch.git
-# set upstream
-git remote add upstream git@github.com:datawhalechina/thorough-pytorch.git
-# disable upstream push
-git remote set-url --push upstream DISABLE
-# verify
-git remote -v
-# some sample output:
-# origin	git@github.com:NoFish-528/thorough-pytorch.git (fetch)
-# origin	git@github.com:NoFish-528/thorough-pytorch.git (push)
-# upstream	git@github.com:datawhalechina/thorough-pytorch.git (fetch)
-# upstream	DISABLE (push)
-# do your work
-git checkout -b lecture07
-# edit and commit and push your changes
-git push -u origin lecture07
-# keep your fork up to date
-## fetch upstream main and merge with forked main branch
-git fetch upstream
-git checkout main
-git merge upstream/main
-## rebase brach and force push
-git checkout lecture07
-git rebase main
-git push -f
-```
+- A more detailed walkthrough of setting up your Jekyll blog
+- Common issues that you might encounter while using Jekyll
+- Importing from Wordpress, using your own domain name, and blogging in your favorite editor
+- Theming in Jekyll, with Liquid templating examples
+- A quick look at Jekyll 2.0’s new features, including Sass/Coffeescript support and Collections
 
-### Commit Message
+## Jekyll Now Features
 
-提交信息使用如下格式：`<type>: <short summary>`
+✓ Command-line free _fork-first workflow_, using GitHub.com to create, customize and post to your blog  
+✓ Fully responsive and mobile optimized base theme (**[Theme Demo](http://jekyllnow.com)**)  
+✓ Sass/Coffeescript support using Jekyll 2.0  
+✓ Free hosting on your GitHub Pages user site  
+✓ Markdown blogging  
+✓ Syntax highlighting  
+✓ Disqus commenting  
+✓ Google Analytics integration  
+✓ SVG social icons for your footer  
+✓ 3 http requests, including your avatar  
 
-```
-<type>: <short summary>
-  │            │
-  │            └─⫸ Summary in present tense. Not capitalized. No period at the end.
-  │
-  └─⫸ Commit Type: lecture{#NO}|others
-```
+✘ No installing dependencies
+✘ No need to set up local development  
+✘ No configuring plugins  
+✘ No need to spend time on theming  
+✘ More time to code other things ... wait ✓!  
 
-`others`包括非课程相关的改动，如本`README.md`中的变动，`.gitignore`的调整等。
-</details>
+## Questions?
 
-## 六、更新计划
-<details>
+[Open an Issue](https://github.com/barryclark/jekyll-now/issues/new) and let's chat!
 
-| 内容 | 更新时间 |内容|
-| :---- | :---- |:----:|
-|visdom可视化|  |`Visdom`的使用|
-|apex|  |apex的简介和使用|
-|模型部署|  |Flask部署PyTorch模型|
-|TorchScript|  |TorchScript|
-|并行训练| |并行训练 |
-|模型预训练 - torchhub| |torchhub的简介和使用方法|
-|目标检测 - SSD|  |SSD的简介和实现|
-|目标检测 - RCNN系列|  |Fast-RCNN & Mask-RCNN|
-|目标检测 - DETR|  |DETR的实现|
-|图像分类 - GoogLeNet|  |GoogLeNet的介绍与实现|
-|图像分类 - MobileNet系列|  |MobileNet系列介绍与实现|
-|图像分类 - GhostNet|  |GhostNet代码讲解|
-|生成式对抗网络 - 生成手写数字实战|  |生成数字并可视化|
-|生成式对抗网络 - DCGAN|  ||
-|风格迁移 - StyleGAN|  ||
-|生成网络 - VAE|  ||
-|图像分割 Deeplab系列|  |Deeplab系列代码讲解|
-|自然语言处理 LSTM|  |LSTM情感分析实战|
-|自然语言处理 Transformer|  ||
-|自然语言处理 BERT|  ||
-|视频| | 待定|
-|音频| | 待定|
-|自定义CUDA扩展和算子|||
-</details>
+## Other forkable themes
 
-## 七、鸣谢与反馈
-- 非常感谢DataWhale成员 叶前坤 @[PureBuckwheat](https://github.com/PureBuckwheat) 和 胡锐锋 @[Relph1119](https://github.com/Relph1119) 对文档的细致校对！
-- 如果有任何想法可以联系我们DataWhale也欢迎大家多多提出issue。
-- 特别感谢以下为教程做出贡献的同学！并特别感谢MMYOLO的贡献者们！
+You can use the [Quick Start](https://github.com/barryclark/jekyll-now#quick-start) workflow with other themes that are set up to be forked too! Here are some of my favorites:
 
+- [Hyde](https://github.com/poole/hyde) by MDO
+- [Lanyon](https://github.com/poole/lanyon) by MDO
+- [mojombo.github.io](https://github.com/mojombo/mojombo.github.io) by Tom Preston-Werner
+- [Left](https://github.com/holman/left) by Zach Holman
+- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) by Michael Rose
+- [Skinny Bones](https://github.com/mmistakes/skinny-bones-jekyll) by Michael Rose
 
-<a href="https://github.com/datawhalechina/thorough-pytorch/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=datawhalechina/thorough-pytorch" />
-</a>
+## Credits
 
-Made with [contrib.rocks](https://contrib.rocks).
+- [Jekyll](https://github.com/jekyll/jekyll) - Thanks to its creators, contributors and maintainers.
+- [SVG icons](https://github.com/neilorangepeel/Free-Social-Icons) - Thanks, Neil Orange Peel. They're beautiful.
+- [Solarized Light Pygments](https://gist.github.com/edwardhotchkiss/2005058) - Thanks, Edward.
+- [Joel Glovier](http://joelglovier.com/writing/) - Great Jekyll articles. I used Joel's feed.xml in this repository.
+- [David Furnes](https://github.com/dfurnes), [Jon Uy](https://github.com/jonuy), [Luke Patton](https://github.com/lkpttn) - Thanks for the design/code reviews.
+- [Bart Kiers](https://github.com/bkiers), [Florian Simon](https://github.com/vermluh), [Henry Stanley](https://github.com/henryaj), [Hun Jae Lee](https://github.com/hunjaelee), [Javier Cejudo](https://github.com/javiercejudo), [Peter Etelej](https://github.com/etelej), [Ben Abbott](https://github.com/jaminscript), [Ray Nicholus](https://github.com/rnicholus), [Erin Grand](https://github.com/eringrand), [Léo Colombaro](https://github.com/LeoColomb), [Dean Attali](https://github.com/daattali), [Clayton Errington](https://github.com/cjerrington), [Colton Fitzgerald](https://github.com/coltonfitzgerald), [Trace Mayer](https://github.com/sunnankar) - Thanks for your [fantastic contributions](https://github.com/barryclark/jekyll-now/commits/master) to the project!
 
+## Contributing
 
-## 八、关注我们
-<div align=center><img src="https://raw.githubusercontent.com/datawhalechina/easy-rl/master/docs/res/qrcode.jpeg" width = "250" height = "270" alt="Datawhale是一个专注AI领域的开源组织，以“for the learner，和学习者一起成长”为愿景，构建对学习者最有价值的开源学习社区。关注我们，一起学习成长。"></div>
+Issues and Pull Requests are greatly appreciated. If you've never contributed to an open source project before I'm more than happy to walk you through how to create a pull request.
 
-## LICENSE
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+You can start by [opening an issue](https://github.com/barryclark/jekyll-now/issues/new) describing the problem that you're looking to resolve and we'll go from there.
+
+I want to keep Jekyll Now as minimal as possible. Every line of code should be one that's useful to 90% of the people using it. Please bear that in mind when submitting feature requests. If it's not something that most people will use, it probably won't get merged. :guardsman:
