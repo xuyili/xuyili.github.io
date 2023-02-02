@@ -54,4 +54,4 @@ header:
   - titles:
       # @start locale config
       en      : &EN       Docs      
-    url: /docs/zh/quick-start
+    url: /docs/index.html
