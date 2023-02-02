@@ -54,4 +54,4 @@ header:
   - titles:
       # @start locale config
       en      : &EN       Docs      
-    url: /docs/_docs/zh/1.1-quick-start.md
+    url: /docs/zh/uick-start
