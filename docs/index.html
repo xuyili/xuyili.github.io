@@ -2,125 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>cvtutorials.com</title>
+  <title>Nodejs技术栈</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
-  <!-- Gitalk css -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <!-- switch between day and night -->
-  <link 
-  rel="stylesheet"
-  href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
-  title="docsify-darklight-theme"
-  type="text/css"
-  />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> 
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?f5bd120e1d351a666dc307fbf05e38d2";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
 </head>
 <body>
   <div id="app"></div>
   <script>
+    var gitalkConfig = {
+      clientID: '084f309ea8bc385148bc',
+      clientSecret: 'fa4bff71adc7fbb44a7ca6deffecc9ec43e29301',
+      accessToken: '30c55e31acbb0cb61d30f92d14e32541880eefaf',
+      repo: 'Nodejs-Roadmap',
+      owner: 'q-angelo',
+      admin: ["q-angelo"],
+      distractionFreeMode: false
+    };
     window.$docsify = {
-      name: '',
-      repo: '',
-      coverpage: true, 
+      name: '《Nodejs技术栈》',
+      repo: 'https://github.com/Q-Angelo/Nodejs-Roadmap',
+      auto2top: true,
+      coverpage: true,
       loadSidebar: true,
+      maxLevel: 4,
       subMaxLevel: 2,
-      loadNavbar: '_navbar.md',
-      pagination: {
-        previousText: '上一章',
-        nextText: '下一章',
-      },
-      ga: 'UA-XXXXX-Y',
-      // customize copy module 
-      copyCode: {
-        buttonText: '点击复制',
-        errorText: '错误',
-        successText: '复制成功'
-      },
-      ///////////// full text serarch/////////////////////////////////////////
-      search: 'auto', // default
-
-      search : [
-        '/',            // => /README.md
-        '/cvtutorials',       // => /guide.md
-        '/en/guide', // => /zh-cn/guide.md
-        '/en/',      // => /zh-cn/README.md
-      ],
-
-      // complete configuration parameters
       search: {
-        maxAge: 86400000, // Expiration time, the default one day
-        paths: [], // or 'auto'
+        paths: 'auto',
+        placeholder: '🔍 Type to search ',
+        noData: '😞 No Results! ',
+        depth: 6
+      },
+      pagination: {
+        previousText: 'PREVIOUS',
+        nextText: 'NEXT',
+        crossChapter: true
+      },
+      plugins: [
+        function (hook, vm) {
+          hook.doneEach(function() {
+            var label, domObj, main, divEle, gitalk;
+            label = vm.route.path.split("/").pop();
+            domObj = Docsify.dom;
+            main = domObj.getNode("#main");
 
-        // Localization
-        placeholder: {
-          '/en/': 'Type to search',
-          '/': '搜索'
-        },
+            Array.apply(
+              null,
+              document.querySelectorAll("div.gitalk-container")
+            ).forEach(function(ele) {
+              ele.remove();
+            });
 
-        noData: 'No Results!',
-
-        // Localization
-        noData: {
-          '/': '找不到结果',
-          '/en/': 'No Results'
-        },
-
-        // Headline depth, 1 - 6
-        depth: 2,
-
-        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
-
-        // To avoid search index collision
-        // between multiple websites under the same domain
-        namespace: 'website-1',
-
-        // Use different indexes for path prefixes (namespaces).
-        // NOTE: Only works in 'auto' mode.
-        //
-        // When initialiazing an index, we look for the first path from the sidebar.
-        // If it matches the prefix from the list, we switch to the corresponding index.
-        pathNamespaces: ['/zh-cn', '/en-en'],
-
-        // You can provide a regexp to match prefixes. In this case,
-        // the matching substring will be used to identify the index
-        pathNamespaces: /^(\/(zh-cn|en-en))?(\/(v1|v2))?/,
-        //////////////////////////////////////////////////////////////////////
-      }
+            divEle = domObj.create("div");
+            divEle.id = "gitalk-container-" + label;
+            divEle.className = "gitalk-container";
+            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
+            domObj.appendTo(domObj.find(".content"), divEle);
+            gitalk = new Gitalk(
+              Object.assign(gitalkConfig, { id: !label ? "home" : label })
+            );
+            gitalk.render("gitalk-container-" + label);
+          });
+        }
+      ]
     }
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- zoom image -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <!-- pagination plugin script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- click to copy -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
-  <!-- google analytics -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/ga.min.js"></script>
-  <!-- switch between day and night -->
-  <script 
-  src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
-  type="text/javascript">
-  </script>
-  <!-- plugin：gitalk -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
-  <script>
-    const gitalk = new Gitalk({
-      clientID: 'Github Application Client ID',
-      clientSecret: 'Github Application Client Secret',
-      repo: '保存评论的仓库',
-      owner: '仓库的创建者',
-      admin: ['仓库的管理员1', '仓库的管理员2'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false,
-      id: decodeURI(window.location.pathname),
-    })
-  </script>
-  <!-- full text search -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
 </body>
 </html>

@@ -1,19 +1,11 @@
-<!-- _coverpage.md -->
-<!-- 封面 -->
+<img width="160px" style="border-radius: 50%" bor src="https://nodejsred.oss-cn-shanghai.aliyuncs.com/nodejs_roadmap-logo.jpeg?x-oss-process=style/may">
 
-![网站域名](./assets/cvtutorials.png)
+# Nodejs技术栈
 
-# csdn: 机器视觉全栈er
-# http://www.cvtutorials.com
+- 本文档是作者 @五月君 从事 Node.js 开发以来的学习历程，希望这些分享能帮助到正在学习、使用 Node.js 的朋友们，也真诚的希望能聚集所有 Node.js 爱好者，共建互帮互助的「Nodejs技术栈」交流平台。
 
-[点我直达csdn](https://blog.csdn.net/qq_42322191)
+[![stars](https://badgen.net/github/stars/qufei1993/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/qufei1993/Nodejs-Roadmap) [![forks](https://badgen.net/github/forks/qufei1993/Nodejs-Roadmap?icon=github&color=4ab8a1)](https://github.com/qufei1993/Nodejs-Roadmap) [<img src="https://img.shields.io/static/v1.svg?label=%E6%85%95%E8%AF%BE&message=7k%20stars&color=ef151f">](https://www.imooc.com/u/2667395) [<img src="https://img.shields.io/badge/%E5%BE%AE%E4%BF%A1-%E5%85%AC%E4%BC%97%E5%8F%B7-brightgreen">](https://nodejsred.oss-cn-shanghai.aliyuncs.com/node_roadmap_wx.jpg?x-oss-process=style/may)
 
-- 简介：专注于机器视觉领域
-- 编程语言: python, js, C++
-- UI界面: Qt/PyQt, Vue
-- 算法及业务: pytorch/tf2, opencv-python
-- web框架: flask/Django  
-- 相机: 工业相机, realsense, k4a
-- 边缘: jetson系列
-- 智能视频处理：deepstream, dl-stream
-- 其他(仅限简单使用): XR, 语音识别
+[GitHub](<https://github.com/qufei1993/Nodejs-Roadmap>)
+[开始阅读](README.md)
+
