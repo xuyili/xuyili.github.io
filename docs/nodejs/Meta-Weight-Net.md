@@ -31,41 +31,41 @@
 
 ### 2.1 元学习的目标
 
-训练集$\{x_i,y_i\}^N_{i=1}$其中$x_i$表示第i个样本，N是训练集的数量；标签$y_i\in\{0,1\}^c$，表示有c个类别。$f(x,w)$表示分类器，其中$w$是参数。
+训练集 $\{x_i,y_i\}^N_{i=1}$ 其中 $x_i$ 表示第i个样本，N是训练集的数量；标签 $y_i\in\{0,1\}^c$，表示有c个类别。 $f(x,w)$表示分类器，其中$w$是参数。
 
-一般把$f(x,w)$设置成一个深度神经网络，通过最小化损失函数$L^{train}_i=\frac{1}{N}\Sigma_{i=1}^{N}l(y_i,f(x_i,w))$得到最优解$w^*$。
+一般把 $f(x,w)$ 设置成一个深度神经网络，通过最小化损失函数 $L^{train}_i=\frac{1}{N}\Sigma_{i=1}^{N}l(y_i,f(x_i,w))$ 得到最优解 $w^*$。
 
-然后我们加入赋权模型$V(l;\Theta)$，$V(L_i^{train};\Theta)$表示对第i个样本加上的权重，$\Theta$表示赋权函数的参数，这样一来，求解最优的$w^*$就变成了这样的问题：
-$$
+然后我们加入赋权模型 $V(l;\Theta)$，$V(L_i^{train};\Theta)$ 表示对第i个样本加上的权重，$\Theta$表示赋权函数的参数，这样一来，求解最优的$w^*$就变成了这样的问题：
+```math
 w^*(\Theta)=\operatorname*{argmin}_w \mathcal{L}^{train}(w;\Theta)\triangleq\frac{1}{N}\sum_{i=1}^NV(L_i^{train}(w);\Theta)L_i^{train}(w)
-$$
-$\triangleq$符号表示“定义为”。
+```
+ $\triangleq$ 符号表示“定义为”。
 
 如何解这个优化问题呢，欢迎主角登场：**Meta-Weight-Net**。
 
-MW-Net使用MLP来完成$V\left(L_i(w);\Theta\right)$的工作，只有一层隐藏层，并包含100个节点，每个节点使用ReLU激活，输出层使用Sigmoid函数激活，确保输出值在0～1之间。这个模型理论上可以拟合任意的连续函数。
+MW-Net使用MLP来完成 $V\left(L_i(w);\Theta\right)$ 的工作，只有一层隐藏层，并包含100个节点，每个节点使用ReLU激活，输出层使用Sigmoid函数激活，确保输出值在0～1之间。这个模型理论上可以拟合任意的连续函数。
 
 ### 2.2 算法描述：
 
-假设我们有一组干净M个样本的的元学习数据集$\{x_i^{meta},y_i^{meta}\}_{i=1}^M$，M远小于N。
+假设我们有一组干净M个样本的的元学习数据集 $\{x_i^{meta},y_i^{meta}\}_{i=1}^M$ ，M远小于N。
 
 元数据集上的损失计算为：
-$$
+```math
 L_i^{meta}(w)=l\left(y_i^{(meta)},f(x_i^{(meta)},w)\right)
-$$
-初始化$w^{(0)}$和$\Theta^{(0)}$，然后从训练集里抽取一组包含n个样本的小批量数据，训练这批数据，使用SGD求解计算得到$w^{(1)}$：
-$$
+```
+初始化 $w^{(0)}$和$\Theta^{(0)}$ ，然后从训练集里抽取一组包含n个样本的小批量数据，训练这批数据，使用SGD求解计算得到 $w^{(1)}$ ：
+```math
 \hat{w}^{(0)}(\Theta)=w^{(0)}-\alpha\frac{1}{n}\times\sum^n_{i=0}V\left(L_i^{train}(w^{(0)}\right);\Theta)\nabla_wL_i^{train}(w)\Big|_{w^{(0)}}
-$$
+```
 
-迭代计算得到$\hat{w}^{(0)}(\Theta)$后，代入到元学习模型里计算$\Theta$，这次从元数据集里抽取m组数据进行训练，通过求解得到：
-$$
+迭代计算得到```math\hat{w}^{(0)}(\Theta)```后，代入到元学习模型里计算 $\Theta$ ，这次从元数据集里抽取m组数据进行训练，通过求解得到：
+```math
 \Theta^{(1)}=\Theta^{(0)} - \beta\frac{1}{m}\sum_{i=1}^m\nabla_\Theta L_i^{meta}\left(\hat{w}^{(0)}(\Theta)\right)\Big|_{\Theta^{(0)}}
-$$
-得到$\Theta^{(1)}$后，再次回到我们的主分类模型里，抽取n组训练集，得到$\hat{w}^{(1)}$
-$$
+```
+得到 $\Theta^{(1)}$ 后，再次回到我们的主分类模型里，抽取n组训练集，得到 $\hat{w}^{(1)}$
+```math
 \hat{w}^{(1)}(\Theta)=w^{(0)}-\alpha\frac{1}{n}\times\sum^n_{i=0}V\left(L_i^{train}(w^{(0)});\Theta^{(1)}\right)\nabla_wL_i^{train}(w)\Big|_{w^{(0)}}
-$$
+```
 后面就是重复上述步骤，直到训练结束。
 
 ![img](./img/image-20230208195442576.png) 
