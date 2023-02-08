@@ -1,6 +1,6 @@
 # Meta-Weight-Net论文阅读
 
-最后更新：2023年2月8日 20:00
+最后更新：2023年2月9日 00:00
 
 ## 1.文章背景介绍
 
@@ -23,7 +23,7 @@
 | 名词                          | 中文           | 解释                                                         | 图解                                                         |
 | ----------------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | class imbalance               | 类别不均衡     | 在自然情况下，数据往往都会呈现如下相同的长尾分布。这种趋势同样出现在从自然科学到社会科学的各个领域各个问题中，就像我们常说的二八定律。直接利用长尾数据来训练的分类和识别系统，往往会对头部数据过拟合，从而在预测时忽略尾部的类别。 | ![img](https://pic3.zhimg.com/v2-3c2009cd25376e7bd63b40cee7aa3de6_r.jpg) |
-| corrupted labels/noise labels | 噪音标签       | 在现实复杂的生活场景中，由于人工失误、原始数据噪声和专业知识不足等问题，导致实际采集得到的数据常常包含错误的标签，或者只包含少量的真实性可靠的标签。 | <img src="./img/image-20230208200620520.png" alt="img" style="zoom: 25%;" /> |
+| corrupted labels/noise labels | 噪音标签       | 在现实复杂的生活场景中，由于人工失误、原始数据噪声和专业知识不足等问题，导致实际采集得到的数据常常包含错误的标签，或者只包含少量的真实性可靠的标签。 | <img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208200620520.png?raw=true" alt="img" style="zoom: 25%;" /> |
 | robust deep learning          | 鲁棒性深度学习 | 一个具有鲁棒性的模型就是即使当测试集的数据分布与训练集数据分布比较不同的时候，模型也能给出较好的预测结果。 |                                                              |
 | real-world dataset            | 真实世界数据集 | 通常由网络上众包产生，错误标签较多。常见的有Clothing-1M，ANIMAL-10N，WebVision |                                                              |
 
@@ -31,50 +31,50 @@
 
 ### 2.1 元学习的目标
 
-训练集 $\{x_i,y_i\}^N_{i=1}$ 其中 $x_i$ 表示第i个样本，N是训练集的数量；标签y_i\in\{0,1\}^c$，表示有c个类别。 $f(x,w)$表示分类器，其中$w$是参数。
+训练集$\{x_i,y_i\}^N_{i=1}$其中$x_i$表示第i个样本，$N$是训练集的数量；标签$y_i\in\{0,1\}^c$，表示有c个类别。$f(x,w)$表示分类器，其中$w$是参数。
 
-一般把 $f(x,w)$ 设置成一个深度神经网络，通过最小化损失函数 $L^{train}_i=\frac{1}{N}\Sigma_{i=1}^{N}l(y_i,f(x_i,w))$ 得到最优解 $w^*$。
+一般把$f(x,w)$设置成一个深度神经网络，通过最小化损失函数$L^{train}_i=\frac{1}{N}\Sigma_{i=1}^{N}l(y_i,f(x_i,w))$得到最优解$w^*$。
 
-然后我们加入赋权模型 $V(l;\Theta)$，$V(L_i^{train};\Theta)$ 表示对第i个样本加上的权重，$\Theta$表示赋权函数的参数，这样一来，求解最优的$w^*$就变成了这样的问题：
+然后我们加入赋权模型$V(l;\Theta)$，$V(L_i^{train};\Theta)$表示对第i个样本加上的权重，$\Theta$表示赋权函数的参数，这样一来，求解最优的$w^*$就变成了这样的问题：
 $$
 w^*(\Theta)=\operatorname*{argmin}_w \mathcal{L}^{train}(w;\Theta)\triangleq\frac{1}{N}\sum_{i=1}^NV(L_i^{train}(w);\Theta)L_i^{train}(w)
 $$
- $\triangleq$ 符号表示“定义为”。
+$\triangleq$符号表示“定义为”。
 
 如何解这个优化问题呢，欢迎主角登场：**Meta-Weight-Net**。
 
-MW-Net使用MLP来完成 $V\left(L_i(w);\Theta\right)$ 的工作，只有一层隐藏层，并包含100个节点，每个节点使用ReLU激活，输出层使用Sigmoid函数激活，确保输出值在0～1之间。这个模型理论上可以拟合任意的连续函数。
+MW-Net使用MLP来完成$V\left(L_i(w);\Theta\right)$的工作，只有一层隐藏层，并包含100个节点，每个节点使用ReLU激活，输出层使用Sigmoid函数激活，确保输出值在0～1之间。这个模型理论上可以拟合任意的连续函数。
 
 ### 2.2 算法描述：
 
-假设我们有一组干净M个样本的的元学习数据集 $\{x_i^{meta},y_i^{meta}\}_{i=1}^M$ ，M远小于N。
+假设我们有一组干净M个样本的的元学习数据集$\{x_i^{meta},y_i^{meta}\}_{i=1}^M$，M远小于N。
 
 元数据集上的损失计算为：
-```tex
+$$
 L_i^{meta}(w)=l\left(y_i^{(meta)},f(x_i^{(meta)},w)\right)
-```
-初始化 $w^{(0)}$和$\Theta^{(0)}$ ，然后从训练集里抽取一组包含n个样本的小批量数据，训练这批数据，使用SGD求解计算得到 $w^{(1)}$ ：
+$$
+初始化$w^{(0)}$和$\Theta^{(0)}$，然后从训练集里抽取一组包含n个样本的小批量数据，训练这批数据，使用SGD求解计算得到$w^{(1)}$：
 $$
 \hat{w}^{(0)}(\Theta)=w^{(0)}-\alpha\frac{1}{n}\times\sum^n_{i=0}V\left(L_i^{train}(w^{(0)}\right);\Theta)\nabla_wL_i^{train}(w)\Big|_{w^{(0)}}
 $$
 
-迭代计算得到$$\hat{w}^{(0)}(\Theta)$$后，代入到元学习模型里计算 $\Theta$ ，这次从元数据集里抽取m组数据进行训练，通过求解得到：
+迭代计算得到$$\hat{w}^{(0)}(\Theta)$$后，代入到元学习模型里计算$\Theta$，这次从元数据集里抽取m组数据进行训练，通过求解得到：
 $$
 \Theta^{(1)}=\Theta^{(0)} - \beta\frac{1}{m}\sum_{i=1}^m\nabla_\Theta L_i^{meta}\left(\hat{w}^{(0)}(\Theta)\right)\Big|_{\Theta^{(0)}}
 $$
-得到 $\Theta^{(1)}$ 后，再次回到我们的主分类模型里，抽取n组训练集，得到 $\hat{w}^{(1)}$
+得到$\Theta^{(1)}$后，再次回到我们的主分类模型里，抽取n组训练集，得到$\hat{w}^{(1)}$
 $$
 \hat{w}^{(1)}(\Theta)=w^{(0)}-\alpha\frac{1}{n}\times\sum^n_{i=0}V\left(L_i^{train}(w^{(0)});\Theta^{(1)}\right)\nabla_wL_i^{train}(w)\Big|_{w^{(0)}}
 $$
 后面就是重复上述步骤，直到训练结束。
 
-![img](./img/image-20230208195442576.png) 
+<img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208195442576.png?raw=true" alt="img" style="zoom:50%;" /> 
 
 ### 2.3 核心代码：
 
 取自https://github.com/ShiYunyi/Meta-Weight-Net_Code-Optimization
 
-$$python
+```python
 for epoch in range(args.max_epoch): #开始训练
 if epoch >= 80 and epoch % 20 == 0: #训练到第80轮后
     lr = lr / 10 #学习率除以10
@@ -131,7 +131,7 @@ for iteration, (inputs, labels) in enumerate(train_dataloader): # 读取训练�
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-$$
+```
 
 ### 2.4 数学证明
 
@@ -145,7 +145,7 @@ $$
 
 最接近的方法叫做L2RW，和本文的方法很相似，主要的区别是，这个方法没有使用一个显性的权重函数来学习。这也是这个方法的缺点，因为学习过程中这种赋权方式并不稳定，而且很难推广到更多的任务。
 
-![img](./img/image-20230208195618287.png) 
+<img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208195618287.png?raw=true" alt="img" style="zoom:50%;" /> 
 
 ## 4.实验设计
 

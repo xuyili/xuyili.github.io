@@ -58,6 +58,22 @@
         nextText: 'NEXT',
         crossChapter: true
       },
+      // latex: {
+      //   inlineMath   : [['$', '$'], ['@', '@']],
+      //   displayMath  : [['$$', '$$'], ['@@', '@@']],
+      //   customOptions: {
+      //     // For MathJax version 3
+      //     tex: {
+      //       tags: 'ams'
+      //     },
+      //     // For MathJax version 2
+      //     TeX: {
+      //       equationNumbers: {
+      //         autoNumber: "AMS"
+      //       }
+      //     }
+      //   }
+      // }
       plugins: [
         function (hook, vm) {
           hook.doneEach(function() {
@@ -87,7 +103,13 @@
       ]
     }
   </script>
-  
+  <!-- Docsify script Here -->
+
+<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+
+<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
+
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
