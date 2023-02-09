@@ -3,5 +3,5 @@
 
 - 元学习方向
     - [Meta-Weight-Net论文阅读](/nodejs/Meta-Weight-Net.md)
-    - [MetaLabelCorrection论文阅读](/nodejs/MLC.md)
+    - [Meta Label Correction论文阅读](/nodejs/MLC.md)
 
