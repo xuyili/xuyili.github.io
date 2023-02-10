@@ -1,121 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Yili的学习笔记</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css"> 
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-  <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?f5bd120e1d351a666dc307fbf05e38d2";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-  </script>
-  <link href="https://cdn.bootcss.com/KaTeX/0.10.0/katex.min.css" rel="stylesheet">
-  <script src="https://cdn.bootcss.com/KaTeX/0.10.0/katex.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-<script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+    <meta charset="UTF-8">
+    <title>无限进步</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+    <link rel="shortcut icon" href="./_media/logo.svg">
 
-<!-- CDN files for docsify-katex -->
-<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-<!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    var gitalkConfig = {
-      clientID: '67e65a44d2e188d8b86d',
-      clientSecret: 'eb1516d927468337dac04263a634340f697feb0e',
-      accessToken: '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',
-      repo: 'xuyili.github.io',
-      owner: 'xuyili',
-      admin: ["xuyili"],
-      distractionFreeMode: false
-    };
-    window.$docsify = {
-      name: '《Yili的学习笔记》',
-      repo: 'https://github.com/xuyili/xuyili.github.io',
-      auto2top: true,
-      coverpage: true,
-      loadSidebar: true,
-      maxLevel: 4,
-      subMaxLevel: 2,
-      search: {
-        paths: 'auto',
-        placeholder: '🔍 Type to search ',
-        noData: '😞 No Results! ',
-        depth: 6
-      },
-      pagination: {
-        previousText: 'PREVIOUS',
-        nextText: 'NEXT',
-        crossChapter: true
-      },
-      // latex: {
-      //   inlineMath   : [['$', '$'], ['@', '@']],
-      //   displayMath  : [['$$', '$$'], ['@@', '@@']],
-      //   customOptions: {
-      //     // For MathJax version 3
-      //     tex: {
-      //       tags: 'ams'
-      //     },
-      //     // For MathJax version 2
-      //     TeX: {
-      //       equationNumbers: {
-      //         autoNumber: "AMS"
-      //       }
-      //     }
-      //   }
-      // }
-      plugins: [
-        function (hook, vm) {
-          hook.doneEach(function() {
-            var label, domObj, main, divEle, gitalk;
-            label = vm.route.path.split("/").pop();
-            domObj = Docsify.dom;
-            main = domObj.getNode("#main");
-
-            Array.apply(
-              null,
-              document.querySelectorAll("div.gitalk-container")
-            ).forEach(function(ele) {
-              ele.remove();
-            });
-
-            divEle = domObj.create("div");
-            divEle.id = "gitalk-container-" + label;
-            divEle.className = "gitalk-container";
-            divEle.style = "width: " + main.clientWidth + "px; margin: 0 auto 20px;";
-            domObj.appendTo(domObj.find(".content"), divEle);
-            gitalk = new Gitalk(
-              Object.assign(gitalkConfig, { id: !label ? "home" : label })
-            );
-            gitalk.render("gitalk-container-" + label);
-          });
+    <div id="app"></div>
+    <script>
+        window.$docsify = {
+            latex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // default
+                displayMath: [['$$', '$$']],               // default
+                customOptions: {}                            // default
+            },
+            copyCode: {
+                buttonText : 'Copy to clipboard',
+                errorText  : 'Error',
+                successText: 'Copied'
+            },
+            loadSidebar: true,
+            coverpage: true,
+            onlyCover: true,
+            maxLevel: 3,
+            subMaxLevel: 3,
+            // sidebarDisplayLevel: 2, // set sidebar display level
+            // hideOtherSidebarContent: true, // whether or not to hide other sidebar content
+            name: '香芋学习笔记',
+            repo: 'https://github.com/shiningxy',
+            search: {
+                noData: {
+                    '/': '没有找到结果'
+                },
+                paths: 'auto',
+                placeholder: {
+                    '/': '搜索'
+                }
+            },
+            // count:{
+            //     countable: true,
+            //     position: 'top',
+            //     margin: '10px',
+            //     float: 'right',
+            //     fontsize:'0.9em',
+            //     color:'rgb(90,90,90)',
+            //     language:'chinese',
+            //     localization: {
+            //         words: "",
+            //         minute: ""
+            //     },
+            //     isExpected: true
+            // },
+            // 'flexible-alerts': {
+            //     style: 'flat'
+            //     }
         }
-      ]
-    }
-  </script>
-  <!-- Docsify script Here -->
+    </script>
+    <!-- Docsify v4 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    <!-- dark mode
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/style.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/docsify-dark-mode@latest/dist/index.min.js"></script> -->
+    <!-- Support for Katex -->
+    <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+    <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+    <!-- CDN files for docsify-katex -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+    <!-- Docsify main plugins -->
+    <script src="https://unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <!-- copy code -->
+    <script src="https://unpkg.com/docsify-copy-code@2"></script>
+    <!-- Code highlighting -->
+    <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+    <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+    <!-- 字数插件 -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script> -->
+    <!-- codeblock-iframe -->
+    <!-- <script src="//cdn.jsdelivr.net/npm/codeblock-iframe@latest/dist/index.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/docsify-codeblock-iframe@latest/dist/index.min.js"></script> -->
+    <!-- alert [!ATTENTION] [!WARNING] [!TIP] [!NOTE]-->
+    <!-- <script src="https://unpkg.com/docsify-plugin-flexible-alerts"></script> -->
+    <!-- sidebar collapse -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 
-<script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-
-<script src="//cdn.jsdelivr.net/npm/docsify-latex@0"></script>
-
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
-  <script src="//unpkg.com/prismjs/components/prism-java.min.js"></script>
 </body>
+
 </html>

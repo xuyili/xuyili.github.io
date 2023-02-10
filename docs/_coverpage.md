@@ -1,9 +1,9 @@
-# Yili的个人笔记主页
+# 无限进步
 
-- 本模版上抄别人的，很多东西还没改完，请多包含。
+> 很想学习的香芋的学习笔记
 
+<!-- - [个人网页 · 旧](https://www.studyzzz.top) -->
+- [Vue + AMap项目演示](https://www.zxxz.cloud)
 
-[GitHub](<https://github.com/xuyili/xuyili.github.io>)
-[开始阅读](README.md)
-
-
+[GitHub](https://github.com/shiningxy)
+[Get Started](/README.md)
