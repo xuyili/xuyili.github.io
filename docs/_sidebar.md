@@ -1,9 +1,10 @@
 <!-- docs/_sidebar.md -->
 
 <!-- * [Home](/) -->
-* [第40期EasyRL强化学习](/rl/easyrl)
-* [第44期可解释机器学习](/xai/xailearn)
-* [第45期《人工智能：现代方法》共读](/aima/README.md)
-    * [第一章](/aima/aimanote.md)
-    * [第二章](/aima/aimanote_chap2.md)
-    * [第三章](/aima/aimanote_chap3.md)
+
+* [元学习部分](/meta/README.md)
+    * [1.Meta-Weight-Net论文阅读](/meta/Meta-Weight-Net.md)
+    * [2.Meta Label Correction 论文阅读](/meta/MLC.md)
+    * [3.Class-aware MWNet论文阅读](/meta/CMWNet.md)
+
+- [图机器学习部分](/meta/README.md)
