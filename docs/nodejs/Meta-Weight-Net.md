@@ -1,6 +1,8 @@
 # Meta-Weight-Net论文阅读
 
-最后更新：2023年2月9日 00:00
+最后更新：2023年2月9日 16:00
+
+原论文链接:[Meta-Weight-Net: Learning an Explicit Mapping For Sample Weighting](https://arxiv.org/abs/1902.07379)
 
 ## 1.文章背景介绍
 
@@ -23,7 +25,7 @@
 | 名词                          | 中文           | 解释                                                         | 图解                                                         |
 | ----------------------------- | -------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | class imbalance               | 类别不均衡     | 在自然情况下，数据往往都会呈现如下相同的长尾分布。这种趋势同样出现在从自然科学到社会科学的各个领域各个问题中，就像我们常说的二八定律。直接利用长尾数据来训练的分类和识别系统，往往会对头部数据过拟合，从而在预测时忽略尾部的类别。 | ![img](https://pic3.zhimg.com/v2-3c2009cd25376e7bd63b40cee7aa3de6_r.jpg) |
-| corrupted labels/noise labels | 噪音标签       | 在现实复杂的生活场景中，由于人工失误、原始数据噪声和专业知识不足等问题，导致实际采集得到的数据常常包含错误的标签，或者只包含少量的真实性可靠的标签。 | <img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208200620520.png?raw=true" alt="img" style="zoom: 25%;" /> |
+| corrupted labels/noise labels | 噪音标签       | 在现实复杂的生活场景中，由于人工失误、原始数据噪声和专业知识不足等问题，导致实际采集得到的数据常常包含错误的标签，或者只包含少量的真实性可靠的标签。 | ![错误标注太多，不想人工检查？试试置信学习来自动找错- 知乎](https://picx.zhimg.com/v2-97c7d1ff17f6812ce36a42e901d1b824_720w.jpg?source=172ae18b) |
 | robust deep learning          | 鲁棒性深度学习 | 一个具有鲁棒性的模型就是即使当测试集的数据分布与训练集数据分布比较不同的时候，模型也能给出较好的预测结果。 |                                                              |
 | real-world dataset            | 真实世界数据集 | 通常由网络上众包产生，错误标签较多。常见的有Clothing-1M，ANIMAL-10N，WebVision |                                                              |
 
@@ -68,7 +70,7 @@ $$
 $$
 后面就是重复上述步骤，直到训练结束。
 
-<img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208195442576.png?raw=true" alt="img" style="zoom:50%;" /> 
+![](D:\资料归档\DataScience\xuyili.github.io\docs\nodejs\Meta-Weight-Net.assets\image-20230208195442576.png) 
 
 ### 2.3 核心代码：
 
@@ -145,7 +147,7 @@ for iteration, (inputs, labels) in enumerate(train_dataloader): # 读取训练�
 
 最接近的方法叫做L2RW，和本文的方法很相似，主要的区别是，这个方法没有使用一个显性的权重函数来学习。这也是这个方法的缺点，因为学习过程中这种赋权方式并不稳定，而且很难推广到更多的任务。
 
-<img src="https://github.com/xuyili/xuyili.github.io/blob/main/docs/nodejs/img/image-20230208195618287.png?raw=true" alt="img" style="zoom:50%;" /> 
+![](D:\资料归档\DataScience\xuyili.github.io\docs\nodejs\Meta-Weight-Net.assets\image-20230208195618287.png) 
 
 ## 4.实验设计
 
