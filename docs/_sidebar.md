@@ -7,9 +7,9 @@
     * [2.Meta Label Correction 论文阅读](/meta/MLC.md)
     * [3.Class-aware MWNet论文阅读](/meta/CMWNet.md)
 
-- [图机器学习部分](/meta/README.md)
-    - [1.图机器学习导论](/graph/cs224w01)
-    - [2.图的基本表示和特征工程](/graph/cs224w02)
+- [图机器学习部分](/graph/README.md)
+    - [1.图机器学习导论](/graph/cs224w01.md)
+    - [2.图的基本表示和特征工程](/graph/cs224w02.md)
     - [2.图的基本表示和特征工程](/graph/cs224w02)
     - [3.NetworkX工具包实战](/graph/cs224w02)
     - [4.图嵌入表示学习](/graph/cs224w02)
