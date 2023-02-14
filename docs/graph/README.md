@@ -1,10 +1,10 @@
 # 图机器学习笔记
 
-# 斯坦福大学CS224W图机器学习公开课-同济子豪兄中文精讲
+**斯坦福大学CS224W图机器学习公开课-同济子豪兄中文精讲**
 
 > 2023-2-9更新
 
-## 课程概述
+**课程概述**
 
 图机器学习、图数据挖掘、图神经网络、知识图谱入门必学公开课：斯坦福大学CS224W。算法讲解、论文精读、代码实战中文精讲。
 
@@ -14,7 +14,7 @@
 
 斯坦福官方课程主页：https://web.stanford.edu/class/cs224w
 
-## 关键词
+**关键词**
 
 图计算、图机器学习、图数据挖掘、图表示学习、图神经网络、图卷积神经网络、图深度学习、图数据库、异质图
 
@@ -22,7 +22,7 @@ PageRank、DeepWalk、Node2Vec、GNN、GCN、GraphSAGE、GAT、GIN、TransE、Tr
 
 搜索引擎、知识图谱、知识计算、推荐系统、社交网络、社会计算、媒体计算、网络智能、情感计算
 
-## 主讲人
+**主讲人**
 
 张子豪，B站人工智能科普教育UP主“同济子豪兄”：https://space.bilibili.com/1900783
 
@@ -30,23 +30,23 @@ PageRank、DeepWalk、Node2Vec、GNN、GCN、GraphSAGE、GAT、GIN、TransE、Tr
 
 代表作包括：精读AI经典论文、编程奇妙夜、斯坦福CS231N、CS224W中文精讲、OpenMMLab代码实战。
 
-## 预备知识
+**预备知识**
 
 预备知识：高等数学、概率统计、机器学习、深度学习、神经网络
 
-## 无处不在的图-图机器学习导论
+**无处不在的图-图机器学习导论**
 
 视频：https://www.bilibili.com/video/BV1pR4y1S7GA
 
 扩展阅读：https://github.com/TommyZihao/zihao_course/blob/main/CS224W/1-Intro.md
 
-## 连点成线-图的基本表示
+**连点成线-图的基本表示**
 
 视频：https://www.bilibili.com/video/BV1n84y1e7SF
 
 扩展阅读：https://github.com/TommyZihao/zihao_course/blob/main/CS224W/1-Intro.md
 
-## 好的食材造就好的菜肴-传统图机器学习的特征工程
+**好的食材造就好的菜肴-传统图机器学习的特征工程**
 
 节点特征工程：https://www.bilibili.com/video/BV1HK411175s
 
@@ -56,13 +56,13 @@ PageRank、DeepWalk、Node2Vec、GNN、GCN、GraphSAGE、GAT、GIN、TransE、Tr
 
 扩展阅读：https://github.com/TommyZihao/zihao_course/blob/main/CS224W/2-tradition-ml.md
 
-## NetworkX代码实战
+**NetworkX代码实战**
 
 安装配置、创建图、节点、连接，可视化：https://www.bilibili.com/video/BV1kM41147zV
 
 图数据挖掘、北京上海地铁站点分析：https://www.bilibili.com/video/BV1LY411R7HJ
 
-## 随机游走的艺术-图嵌入表示学习
+**随机游走的艺术-图嵌入表示学习**
 
 图表示学习综述：https://www.bilibili.com/video/BV1AP4y1r7Pz
 
@@ -80,7 +80,7 @@ Node2Vec代码实战-《悲惨世界》小说人物图嵌入、Alias Sampling复
 
 扩展阅读：https://github.com/TommyZihao/zihao_course/blob/main/CS224W/3-Embedding.md
 
-## 谷歌搜索引擎开山算法-PageRank
+**谷歌搜索引擎开山算法-PageRank**
 
 Pagerank-算法讲解：https://www.bilibili.com/video/BV1uP411K7yN
 
@@ -88,13 +88,13 @@ PageRank代码实战-西游记人物重要度：https://www.bilibili.com/video/B
 
 扩展阅读：公众号 人工智能小技巧 回复 pagerank
 
-## 物以类聚，人以群分-半监督节点分类
+**物以类聚，人以群分-半监督节点分类**
 
 https://www.bilibili.com/video/BV1184y1G7pA
 
 扩展阅读：https://github.com/TommyZihao/zihao_course/blob/main/CS224W/5-Semi.md
 
-## 致谢
+**致谢**
 
 本课程制作期间，得到了以下老师和组织的大力支持，在此表示感谢。
 
@@ -110,7 +110,7 @@ Datawhale、OpenMMLab、量子位、中国图象图形学学会-科普与教育�
 
 X-Lab（https://space.bilibili.com/510793367 ）
 
-## 课程资料下载
+**课程资料下载**
 
 https://zdb.xet.tech/s/1PNT9R
 
