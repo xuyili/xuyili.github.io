@@ -150,6 +150,8 @@ def flip_labels_C(corruption_prob, num_classes, seed=1):
 
 #### 建立模型：
 
+CIFAR数据集：
+
 ```python
 if dataset in ['cifar10', 'cifar100']:
 	from CIFAR.resnet import resnet32
@@ -161,6 +163,8 @@ if dataset in ['cifar10', 'cifar100']:
     hx_dim = 64 #0 if isinstance(model, WideResNet) else 64 # 64 for resnet-32
     meta_net = MetaNet(hx_dim, cls_dim, 128, num_classes, args)
 ```
+
+
 
 主要的骨架模型：
 
@@ -201,6 +205,47 @@ class ResNet(nn.Module):
             return out, hidden
         else:
             return out
+```
+
+![image-20230221141105302](D:\资料归档\DataScience\xuyili.github.io\docs\meta\MLC\image-20230221141105302.png)
+
+(a)部分：
+
+输入数据：
+
+```python
+class MetaNet(nn.Module):
+    def __init__(self, hx_dim, cls_dim, h_dim, num_classes, args):
+```
+
+hx_dim对应$h(x)$，cls_dim对应$y'$
+
+```python
+in_dim = hx_dim + cls_dim
+```
+
+依次经过3个全连接层，前2个采用tanh激活，最后使用softmax输出：
+
+```python
+self.net = nn.Sequential(
+            nn.Linear(in_dim, self.hdim),
+            nn.Tanh(),
+            nn.Linear(self.hdim, self.hdim),
+            nn.Tanh(),
+            nn.Linear(self.hdim, num_classes + int(self.args.skip), bias=(not self.args.tie)) 
+        )
+```
+
+(b)部分：
+
+bi-level优化代码：
+
+```python
+loss_g, loss_s = step_hmlc_K(main_net, main_opt, hard_loss_f,
+                                             meta_net, optimizer, soft_loss_f,
+                                             data_s, target_s_, data_g, target_g,
+                                             None, None,
+                                             eta, args)
 ```
 
 
