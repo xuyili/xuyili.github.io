@@ -2,12 +2,12 @@
 
 <!-- * [Home](/) -->
 
-* [元学习部分](/meta/README.md)
+* **[元学习部分](/meta/README.md)**
     * [1.Meta-Weight-Net论文阅读](/meta/Meta-Weight-Net.md)
     * [2.Meta Label Correction 论文阅读](/meta/MLC.md)
     * [3.Class-aware MWNet论文阅读](/meta/CMWNet.md)
 
-- [图机器学习部分](/graph/README.md)
+- **[图机器学习部分](/graph/README.md)**
     - [1.图机器学习导论](/graph/cs224w01.md)
     - [2.传统图机器学习的特征工程](/graph/cs224w02.md)
     - [3.NetworkX代码实战](/graph/cs224w03.md)
