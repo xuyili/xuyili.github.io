@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI论文速递 2026-03-07</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-07</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2><div class="paper">
+<h3>1. Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups<span class="title-cn">➡️ Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups</span></h3>
+<p class="meta">👤 Leif Van Holland, Domenic Zingsheim, Mana Takhsha</p>
+<div class="abstract">
+<p class="abstract-en">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered images. Existing approaches typically rely on simple heuristics for the hole filling, which can result in inconsistencies or visual artifacts. We propose to complete the missing textures using a novel, application-targeted inpainting method independent of the underlying representation as an image-based post-processing step after the novel view rende...</p>
+<p class="abstract-cn">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered 图像. Existing approaches typically rely on simple heuristics for the hole filling, which can 结果 in inconsistencies or visual artifacts. We 提出 to complete the missing textures 使用 a 新颖, 应用-targeted inpainting 方法 independent of the underlying 表示 as an 图像-based post-processing step after the 新颖 view rende...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05507v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning<span class="title-cn">➡️ FaceCam: Portrait 视频 Camera Control via 规模-Aware Conditioning</span></h3>
+<p class="meta">👤 Weijie Lyu, Ming-Hsuan Yang, Zhixin Shu</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation...</p>
+<p class="abstract-cn">📄 We 介绍 FaceCam, a system that generates 视频 under customizable camera trajectories for monocular human portrait 视频 input. Recent camera control approaches 基于 large 视频-生成 模型 have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait 视频 due to 规模-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we 提出 a face-tailored 规模-aware 表示 for camera transformations that provides deterministic conditioning without relying on 3D priors. We 训练 a 视频 生成...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05506v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Accelerating Text-to-Video Generation with Calibrated Sparse Attention<span class="title-cn">➡️ Accelerating 文本-to-视频 生成 with Calibrated Sparse 注意力机制</span></h3>
+<p class="meta">👤 Shai Yehezkel, Shahar Yadin, Noam Elata</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we introduc...</p>
+<p class="abstract-cn">📄 Recent 扩散模型 模型 enable high-quality 视频 生成, but suffer from slow runtimes. The large Transformer-based backbones used in these 模型 are bottlenecked by spatiotemporal 注意力机制. In this paper, we identify that a significant fraction of 词元-to-词元 connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the 注意力机制 computation in these cases can be skipped with little to no effect on the 结果. This observation continues to hold for connections among local 词元 blocks. Motivated by this, we introduc...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05503v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Universal quantum computation with group surface codes<span class="title-cn">➡️ Universal 量子 computation with group surface codes</span></h3>
+<p class="meta">👤 Naren Manjunath, Vieri Mattei, Apoorv Tiwari</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce group surface codes, which are a natural generalization of the $\mathbb{Z}_2$ surface code, and equivalent to quantum double models of finite groups with specific boundary conditions. We show that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we demonstrate that arbitrary reversible classical gates can be implemented transversally in the group surface code. We present the logical operations...</p>
+<p class="abstract-cn">📄 We 介绍 group surface codes, which are a natural 泛化 of the $\mathbb{Z}_2$ surface code, and equivalent to 量子 double 模型 of finite groups with specific boundary conditions. We 表明 that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we 展示 that arbitrary reversible classical gates can be implemented transversally in the group surface code. We 提出 the logical operations...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05502v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation<span class="title-cn">➡️ POET-X: 记忆-高效的 大语言模型 训练 by 规模化 Orthogonal Transformation</span></h3>
+<p class="meta">👤 Zeju Qiu, Lixin Liu, Adrian Weller</p>
+<div class="abstract">
+<p class="abstract-en">📄 Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient v...</p>
+<p class="abstract-cn">📄 高效的 and stable 训练 of large 语言 模型 (LLMs) remains a core challenge in modern 机器学习 systems. To address this challenge, Reparameterized Orthogonal Equivalence 训练 (POET), a spectrum-preserving 框架 that optimizes each weight matrix through orthogonal equivalence transformation, has been 提出. Although POET provides strong 训练 稳定性, its original implementation incurs high 记忆 consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we 介绍 POET-X, a scalable and 记忆-高效的 v...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05500v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks<span class="title-cn">➡️ The Spike, the Sparse and the Sink: Anatomy of Massive Activations and 注意力机制 Sinks</span></h3>
+<p class="meta">👤 Shangwen Sun, Alfredo Canziani, Yann LeCun</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+<p class="abstract-cn">📄 We study two recurring phenomena in Transformer 语言 模型: massive activations, in which a small number of 词元 exhibit extreme outliers in a few channels, and 注意力机制 sinks, in which certain 词元 attract disproportionate 注意力机制 mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same 词元, but their functional roles and causal relationship remain unclear. Through systematic 实验, we 表明 that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05498v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions<span class="title-cn">➡️ Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions</span></h3>
+<p class="meta">👤 Lizhi Yang, Ryan M. Bena, Meg Wilkinson</p>
+<div class="abstract">
+<p class="abstract-en">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We present Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified framework that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated using a Laplace guidance field. Our approach p...</p>
+<p class="abstract-cn">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We 提出 Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified 框架 that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated 使用 a Laplace guidance field. Our 方法 p...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05497v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Mirror codes: High-threshold quantum LDPC codes beyond the CSS regime<span class="title-cn">➡️ Mirror codes: High-threshold 量子 LDPC codes beyond the CSS regime</span></h3>
+<p class="meta">👤 Andrey Boris Khesin, Jonathan Z. Lu</p>
+<div class="abstract">
+<p class="abstract-en">📄 The realization of quantum error correction protocols whose logical error rates are suppressed far below physical error rates relies on an intricate combination: the error-correcting code's efficiency, the syndrome extraction circuit's fault tolerance and overhead, the decoder's quality, and the device's constraints, such as physical qubit count and connectivity. This work makes two contributions towards error-corrected quantum devices. First, we introduce mirror codes, a simple yet flexible construction of LDPC stabilizer codes parameterized by a group $G$ and two subsets of $G$ whose total s...</p>
+<p class="abstract-cn">📄 The realization of 量子 错误 纠正 protocols whose logical 错误 rates are suppressed far below physical 错误 rates relies on an intricate combination: the 错误-correcting code's 效率, the syndrome extraction circuit's fault tolerance and overhead, the 解码器's quality, and the device's constraints, such as physical 量子比特 count and connectivity. This work makes two contributions towards 错误-corrected 量子 devices. First, we 介绍 mirror codes, a simple yet flexible construction of LDPC stabilizer codes parameterized by a group $G$ and two subsets of $G$ whose total s...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05496v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels<span class="title-cn">➡️ Cheap Thrills: Effective Amortized 优化 使用 Inexpensive Labels</span></h3>
+<p class="meta">👤 Khai Nguyen, Petros Ellinas, Anvita Bhagavathula</p>
+<div class="abstract">
+<p class="abstract-en">📄 To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the model thr...</p>
+<p class="abstract-cn">📄 To 规模 the solution of 优化 and simulation problems, prior work has explored machine-学习 surrogates that inexpensively map problem 参数 to corresponding solutions. Commonly used approaches, including supervised and self-supervised 学习 with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult 优化 landscapes. To address their trade-offs, we 提出 a 新颖 框架 that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the 模型 thr...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05495v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation<span class="title-cn">➡️ Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</span></h3>
+<p class="meta">👤 Helena Casademunt, Bartosz Cywiński, Khoi Tran</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce fals...</p>
+<p class="abstract-cn">📄 Large 语言 模型 sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the 模型 answers truthfully -- and lie 检测 -- classifying whether a given response is false. Prior work evaluates such methods on 模型 specifically 训练 to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are 训练 to censor politically sensitive topics: Qwen3 模型 frequently produce fals...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05494v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🖼️ 计算机视觉</h2><div class="paper">
+<h3>1. Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups<span class="title-cn">➡️ Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups</span></h3>
+<p class="meta">👤 Leif Van Holland, Domenic Zingsheim, Mana Takhsha</p>
+<div class="abstract">
+<p class="abstract-en">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered images. Existing approaches typically rely on simple heuristics for the hole filling, which can result in inconsistencies or visual artifacts. We propose to complete the missing textures using a novel, application-targeted inpainting method independent of the underlying representation as an image-based post-processing step after the novel view rende...</p>
+<p class="abstract-cn">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered 图像. Existing approaches typically rely on simple heuristics for the hole filling, which can 结果 in inconsistencies or visual artifacts. We 提出 to complete the missing textures 使用 a 新颖, 应用-targeted inpainting 方法 independent of the underlying 表示 as an 图像-based post-processing step after the 新颖 view rende...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05507v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning<span class="title-cn">➡️ FaceCam: Portrait 视频 Camera Control via 规模-Aware Conditioning</span></h3>
+<p class="meta">👤 Weijie Lyu, Ming-Hsuan Yang, Zhixin Shu</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation...</p>
+<p class="abstract-cn">📄 We 介绍 FaceCam, a system that generates 视频 under customizable camera trajectories for monocular human portrait 视频 input. Recent camera control approaches 基于 large 视频-生成 模型 have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait 视频 due to 规模-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we 提出 a face-tailored 规模-aware 表示 for camera transformations that provides deterministic conditioning without relying on 3D priors. We 训练 a 视频 生成...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05506v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. RoboPocket: Improve Robot Policies Instantly with Your Phone<span class="title-cn">➡️ RoboPocket: 改进 Robot Policies Instantly with Your Phone</span></h3>
+<p class="meta">👤 Junjie Fang, Wendi Chen, Han Xue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce R...</p>
+<p class="abstract-cn">📄 规模化 imitation 学习 is fundamentally constrained by the 效率 of 数据 collection. While handheld interfaces have emerged as a scalable solution for in-the-wild 数据 acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying 策略's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to 规模. To reconcile this trade-off, we 介绍 R...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05504v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Accelerating Text-to-Video Generation with Calibrated Sparse Attention<span class="title-cn">➡️ Accelerating 文本-to-视频 生成 with Calibrated Sparse 注意力机制</span></h3>
+<p class="meta">👤 Shai Yehezkel, Shahar Yadin, Noam Elata</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we introduc...</p>
+<p class="abstract-cn">📄 Recent 扩散模型 模型 enable high-quality 视频 生成, but suffer from slow runtimes. The large Transformer-based backbones used in these 模型 are bottlenecked by spatiotemporal 注意力机制. In this paper, we identify that a significant fraction of 词元-to-词元 connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the 注意力机制 computation in these cases can be skipped with little to no effect on the 结果. This observation continues to hold for connections among local 词元 blocks. Motivated by this, we introduc...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05503v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Universal quantum computation with group surface codes<span class="title-cn">➡️ Universal 量子 computation with group surface codes</span></h3>
+<p class="meta">👤 Naren Manjunath, Vieri Mattei, Apoorv Tiwari</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce group surface codes, which are a natural generalization of the $\mathbb{Z}_2$ surface code, and equivalent to quantum double models of finite groups with specific boundary conditions. We show that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we demonstrate that arbitrary reversible classical gates can be implemented transversally in the group surface code. We present the logical operations...</p>
+<p class="abstract-cn">📄 We 介绍 group surface codes, which are a natural 泛化 of the $\mathbb{Z}_2$ surface code, and equivalent to 量子 double 模型 of finite groups with specific boundary conditions. We 表明 that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we 展示 that arbitrary reversible classical gates can be implemented transversally in the group surface code. We 提出 the logical operations...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05502v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation<span class="title-cn">➡️ POET-X: 记忆-高效的 大语言模型 训练 by 规模化 Orthogonal Transformation</span></h3>
+<p class="meta">👤 Zeju Qiu, Lixin Liu, Adrian Weller</p>
+<div class="abstract">
+<p class="abstract-en">📄 Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient v...</p>
+<p class="abstract-cn">📄 高效的 and stable 训练 of large 语言 模型 (LLMs) remains a core challenge in modern 机器学习 systems. To address this challenge, Reparameterized Orthogonal Equivalence 训练 (POET), a spectrum-preserving 框架 that optimizes each weight matrix through orthogonal equivalence transformation, has been 提出. Although POET provides strong 训练 稳定性, its original implementation incurs high 记忆 consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we 介绍 POET-X, a scalable and 记忆-高效的 v...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05500v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Calculating trace distances of bosonic states in Krylov subspace<span class="title-cn">➡️ Calculating trace distances of bosonic states in Krylov subspace</span></h3>
+<p class="meta">👤 Javier Martínez-Cifuentes, Nicolás Quesada</p>
+<div class="abstract">
+<p class="abstract-en">📄 Continuous-variable quantum systems are central to quantum technologies, with Gaussian states playing a key role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical evaluation is difficult due to the exponential cost of representing infinite-dimensional operators. We introduce an efficient numerical method to compute the trace distance between a pure and a mixed Gaussian state, based on a generalized Lanczos algorithm that ...</p>
+<p class="abstract-cn">📄 Continuous-variable 量子 systems are central to 量子 technologies, with Gaussian states playing a 键 role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical 评估 is difficult due to the exponential cost of representing infinite-dimensional operators. We 介绍 an 高效的 numerical 方法 to compute the trace distance between a pure and a mixed Gaussian state, 基于 a generalized Lanczos 算法 that ...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05499v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks<span class="title-cn">➡️ The Spike, the Sparse and the Sink: Anatomy of Massive Activations and 注意力机制 Sinks</span></h3>
+<p class="meta">👤 Shangwen Sun, Alfredo Canziani, Yann LeCun</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+<p class="abstract-cn">📄 We study two recurring phenomena in Transformer 语言 模型: massive activations, in which a small number of 词元 exhibit extreme outliers in a few channels, and 注意力机制 sinks, in which certain 词元 attract disproportionate 注意力机制 mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same 词元, but their functional roles and causal relationship remain unclear. Through systematic 实验, we 表明 that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05498v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions<span class="title-cn">➡️ Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions</span></h3>
+<p class="meta">👤 Lizhi Yang, Ryan M. Bena, Meg Wilkinson</p>
+<div class="abstract">
+<p class="abstract-en">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We present Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified framework that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated using a Laplace guidance field. Our approach p...</p>
+<p class="abstract-cn">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We 提出 Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified 框架 that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated 使用 a Laplace guidance field. Our 方法 p...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05497v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels<span class="title-cn">➡️ Cheap Thrills: Effective Amortized 优化 使用 Inexpensive Labels</span></h3>
+<p class="meta">👤 Khai Nguyen, Petros Ellinas, Anvita Bhagavathula</p>
+<div class="abstract">
+<p class="abstract-en">📄 To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the model thr...</p>
+<p class="abstract-cn">📄 To 规模 the solution of 优化 and simulation problems, prior work has explored machine-学习 surrogates that inexpensively map problem 参数 to corresponding solutions. Commonly used approaches, including supervised and self-supervised 学习 with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult 优化 landscapes. To address their trade-offs, we 提出 a 新颖 框架 that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the 模型 thr...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05495v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎨 多模态学习</h2><div class="paper">
+<h3>1. Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline<span class="title-cn">➡️ Towards 多模态 Lifelong Understanding: A 数据集 and Agentic Baseline</span></h3>
+<p class="meta">👤 Guo Chen, Lidong Lu, Yicheng Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelong, a dataset designed for Multimodal Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working Memory Bottleneck due to context saturation, while representative agentic ba...</p>
+<p class="abstract-cn">📄 While datasets for 视频 understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we 介绍 MM-Lifelong, a 数据集 designed for 多模态 Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working 记忆 Bottleneck due to context saturation, while representative agentic ba...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05484v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. HALP: Detecting Hallucinations in Vision-Language Models without Generating a Single Token<span class="title-cn">➡️ HALP: Detecting Hallucinations in 视觉语言 模型 without Generating a Single 词元</span></h3>
+<p class="meta">👤 Sai Akhil Kogilathota, Sripadha Vallabha E G, Luzh</p>
+<div class="abstract">
+<p class="abstract-en">📄 Hallucinations remain a persistent challenge for vision-language models (VLMs), which often describe nonexistent objects or fabricate facts. Existing detection methods typically operate after text generation, making intervention both costly and untimely. We investigate whether hallucination risk can instead be predicted before any token is generated by probing a model's internal representations in a single forward pass. Across a diverse set of vision-language tasks and eight modern VLMs, including Llama-3.2-Vision, Gemma-3, Phi-4-VL, and Qwen2.5-VL, we examine three families of internal repres...</p>
+<p class="abstract-cn">📄 Hallucinations remain a persistent challenge for 视觉语言 模型 (VLMs), which often describe nonexistent objects or fabricate facts. Existing 检测 methods typically operate after 文本 生成, making intervention both costly and untimely. We investigate whether hallucination risk can instead be predicted before any 词元 is generated by probing a 模型's internal representations in a single forward pass. Across a diverse set of 视觉语言 任务 and eight modern VLMs, including Llama-3.2-视觉, Gemma-3, Phi-4-VL, and Qwen2.5-VL, we examine three families of internal repres...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05465v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry<span class="title-cn">➡️ Distributed Partial Information Puzzles: Examining Common Ground Construction Under Epistemic Asymmetry</span></h3>
+<p class="meta">👤 Yifan Zhu, Mariah Bradford, Kenneth Lai</p>
+<div class="abstract">
+<p class="abstract-en">📄 Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in multimodal, multiparty settings, where the collaborators bring different information to the table. We introduce the Distributed Partial Information Puzzle (DPIP), a collaborative construction task that elicits rich multimodal communication under epistemic asymmetry. We present a multimodal dataset of these interactions, annotated and temporally aligned across speech, gesture, and action modalities to support reasoning ...</p>
+<p class="abstract-cn">📄 Establishing common ground, a shared set of beliefs and mutually recognized facts, is fundamental to collaboration, yet remains a challenge for current AI systems, especially in 多模态, multiparty settings, where the collaborators bring different information to the table. We 介绍 the Distributed Partial Information Puzzle (DPIP), a collaborative construction 任务 that elicits rich 多模态 communication under epistemic asymmetry. We 提出 a 多模态 数据集 of these interactions, annotated and temporally aligned across 语音, gesture, and action modalities to support reasoning ...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05450v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. NaiLIA: Multimodal Nail Design Retrieval Based on Dense Intent Descriptions and Palette Queries<span class="title-cn">➡️ NaiLIA: 多模态 Nail Design 检索 基于 Dense Intent Descriptions and Palette Queries</span></h3>
+<p class="meta">👤 Kanon Amemiya, Daichi Yashima, Kei Katsumata</p>
+<div class="abstract">
+<p class="abstract-en">📄 We focus on the task of retrieving nail design images based on dense intent descriptions, which represent multi-layered user intent for nail designs. This is challenging because such descriptions specify unconstrained painted elements and pre-manufactured embellishments as well as visual characteristics, themes, and overall impressions. In addition to these descriptions, we assume that users provide palette queries by specifying zero or more colors via a color picker, enabling the expression of subtle and continuous color nuances. Existing vision-language foundation models often struggle to in...</p>
+<p class="abstract-cn">📄 We focus on the 任务 of retrieving nail design 图像 基于 dense intent descriptions, which represent multi-layered user intent for nail designs. This is challenging because such descriptions specify unconstrained painted elements and pre-manufactured embellishments as well as visual characteristics, themes, and overall impressions. In addition to these descriptions, we assume that users provide palette queries by specifying zero or more colors via a color picker, enabling the expression of subtle and continuous color nuances. Existing 视觉语言 foundation 模型 often struggle to in...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05446v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. SarcasmMiner: A Dual-Track Post-Training Framework for Robust Audio-Visual Sarcasm Reasoning<span class="title-cn">➡️ SarcasmMiner: A Dual-Track Post-训练 框架 for 鲁棒 音频-Visual Sarcasm Reasoning</span></h3>
+<p class="meta">👤 Zhu Li, Yongjian Chen, Huiyuan Lai</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal sarcasm detection requires resolving pragmatic incongruity across textual, acoustic, and visual cues through cross-modal reasoning. To enable robust sarcasm reasoning with foundation models, we propose SarcasmMiner, a reinforcement learning based post-training framework that resists hallucination in multimodal reasoning. We reformulate sarcasm detection as structured reasoning and adopt a dual-track distillation strategy: high-quality teacher trajectories initialize the student model, while the full set of trajectories trains a generative reward model (GenRM) to evaluate reasoning q...</p>
+<p class="abstract-cn">📄 多模态 sarcasm 检测 requires resolving pragmatic incongruity across textual, acoustic, and visual cues through cross-modal reasoning. To enable 鲁棒 sarcasm reasoning with foundation 模型, we 提出 SarcasmMiner, a 强化学习 based post-训练 框架 that resists hallucination in 多模态 reasoning. We reformulate sarcasm 检测 as structured reasoning and adopt a dual-track 蒸馏 strategy: high-quality teacher trajectories initialize the student 模型, while the full set of trajectories trains a 生成式 奖励 模型 (GenRM) to evaluate reasoning q...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05275v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Oral to Web: Digitizing 'Zero Resource'Languages of Bangladesh<span class="title-cn">➡️ Oral to Web: Digitizing 'Zero Resource'Languages of Bangladesh</span></h3>
+<p class="meta">👤 Mohammad Mamun Or Rashid</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present the Multilingual Cloud Corpus, the first national-scale, parallel, multimodal linguistic dataset of Bangladesh's ethnic and indigenous languages. Despite being home to approximately 40 minority languages spanning four language families, Bangladesh has lacked a systematic, cross-family digital corpus for these predominantly oral, computationally "zero resource" varieties, 14 of which are classified as endangered. Our corpus comprises 85792 structured textual entries, each containing a Bengali stimulus text, an English translation, and an IPA transcription, together with approximately...</p>
+<p class="abstract-cn">📄 We 提出 the Multilingual Cloud 语料库, the first national-规模, parallel, 多模态 linguistic 数据集 of Bangladesh's ethnic and indigenous languages. Despite being home to approximately 40 minority languages spanning four 语言 families, Bangladesh has lacked a systematic, cross-family digital 语料库 for these predominantly oral, computationally "zero resource" varieties, 14 of which are classified as endangered. Our 语料库 comprises 85792 structured textual entries, each containing a Bengali stimulus 文本, an English translation, and an IPA transcription, together with approximately...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05272v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Visual-Informed Speech Enhancement Using Attention-Based Beamforming<span class="title-cn">➡️ Visual-Informed 语音 Enhancement 使用 注意力机制-Based Beamforming</span></h3>
+<p class="meta">👤 Chihyun Liu, Jiaxuan Fan, Mingtung Sun</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent studies have demonstrated that incorporating auxiliary information, such as speaker voiceprint or visual cues, can substantially improve Speech Enhancement (SE) performance. However, single-channel methods often yield suboptimal results in low signal-to-noise ratio (SNR) conditions, when there is high reverberation, or in complex scenarios involving dynamic speakers, overlapping speech, or non-stationary noise. To address these issues, we propose a novel Visual-Informed Neural Beamforming Network (VI-NBFNet), which integrates microphone array signal processing and deep neural networks (...</p>
+<p class="abstract-cn">📄 Recent studies have demonstrated that incorporating auxiliary information, such as speaker voiceprint or visual cues, can substantially 改进 语音 Enhancement (SE) 性能. However, single-channel methods often yield suboptimal 结果 in low signal-to-noise ratio (SNR) conditions, when there is high reverberation, or in complex scenarios involving dynamic speakers, overlapping 语音, or non-stationary noise. To address these issues, we 提出 a 新颖 Visual-Informed Neural Beamforming 网络 (VI-NBFNet), which integrates microphone array signal processing and deep neural networks (...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05270v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Wiki-R1: Incentivizing Multimodal Reasoning for Knowledge-based VQA via Data and Sampling Curriculum<span class="title-cn">➡️ Wiki-R1: Incentivizing 多模态 Reasoning for Knowledge-based VQA via 数据 and Sampling Curriculum</span></h3>
+<p class="meta">👤 Shan Ning, Longtian Qiu, Xuming He</p>
+<div class="abstract">
+<p class="abstract-en">📄 Knowledge-Based Visual Question Answering (KB-VQA) requires models to answer questions about an image by integrating external knowledge, posing significant challenges due to noisy retrieval and the structured, encyclopedic nature of the knowledge base. These characteristics create a distributional gap from pretrained multimodal large language models (MLLMs), making effective reasoning and domain adaptation difficult in the post-training stage. In this work, we propose \textit{Wiki-R1}, a data-generation-based curriculum reinforcement learning framework that systematically incentivizes reasonin...</p>
+<p class="abstract-cn">📄 Knowledge-Based Visual Question Answering (KB-VQA) requires 模型 to answer questions about an 图像 by integrating external knowledge, posing significant challenges due to noisy 检索 and the structured, encyclopedic nature of the knowledge base. These characteristics create a distributional gap from pretrained 多模态 large 语言 模型 (MLLMs), making effective reasoning and 领域 adaptation difficult in the post-训练 stage. In this work, we 提出 \textit{Wiki-R1}, a 数据-生成-based curriculum 强化学习 框架 that systematically incentivizes reasonin...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05256v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Mario: Multimodal Graph Reasoning with Large Language Models<span class="title-cn">➡️ Mario: 多模态 Graph Reasoning with Large 语言 模型</span></h3>
+<p class="meta">👤 Yuanfu Sun, Kang Li, Pengkang Guo</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advances in large language models (LLMs) have opened new avenues for multimodal reasoning. Yet, most existing methods still rely on pretrained vision-language models (VLMs) to encode image-text pairs in isolation, ignoring the relational structure that real-world multimodal data naturally form. This motivates reasoning on multimodal graphs (MMGs), where each node has textual and visual attributes and edges provide structural cues. Enabling LLM-based reasoning on such heterogeneous multimodal signals while preserving graph topology introduces two key challenges: resolving weak cross-moda...</p>
+<p class="abstract-cn">📄 Recent advances in large 语言 模型 (LLMs) have opened 新的 avenues for 多模态 reasoning. Yet, most existing methods still rely on pretrained 视觉语言 模型 (VLMs) to encode 图文 pairs in isolation, ignoring the relational structure that 现实世界 多模态 数据 naturally form. This motivates reasoning on 多模态 graphs (MMGs), where each node has textual and visual attributes and edges provide structural cues. Enabling 大语言模型-based reasoning on such heterogeneous 多模态 signals while preserving graph topology introduces two 键 challenges: resolving weak cross-moda...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05181v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Aura: Universal Multi-dimensional Exogenous Integration for Aviation Time Series<span class="title-cn">➡️ Aura: Universal Multi-dimensional Exogenous Integration for Aviation Time Series</span></h3>
+<p class="meta">👤 Jiafeng Lin, Mengren Zheng, Simeng Ye</p>
+<div class="abstract">
+<p class="abstract-en">📄 Time series forecasting has witnessed an increasing demand across diverse industrial applications, where accurate predictions are pivotal for informed decision-making. Beyond numerical time series data, reliable forecasting in practical scenarios requires integrating diverse exogenous factors. Such exogenous information is often multi-dimensional or even multimodal, introducing heterogeneous interactions that unimodal time series models struggle to capture. In this paper, we delve into an aviation maintenance scenario and identify three distinct types of exogenous factors that influence tempor...</p>
+<p class="abstract-cn">📄 Time series forecasting has witnessed an increasing demand across diverse industrial applications, where accurate predictions are pivotal for informed decision-making. Beyond numerical time series 数据, reliable forecasting in 实际 scenarios requires integrating diverse exogenous factors. Such exogenous information is often multi-dimensional or even 多模态, introducing heterogeneous interactions that unimodal time series 模型 struggle to capture. In this paper, we delve into an aviation maintenance scenario and identify three distinct types of exogenous factors that influence tempor...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05092v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📊 新数据集</h2><div class="paper">
+<h3>1. FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning<span class="title-cn">➡️ FaceCam: Portrait 视频 Camera Control via 规模-Aware Conditioning</span></h3>
+<p class="meta">👤 Weijie Lyu, Ming-Hsuan Yang, Zhixin Shu</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation...</p>
+<p class="abstract-cn">📄 We 介绍 FaceCam, a system that generates 视频 under customizable camera trajectories for monocular human portrait 视频 input. Recent camera control approaches 基于 large 视频-生成 模型 have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait 视频 due to 规模-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we 提出 a face-tailored 规模-aware 表示 for camera transformations that provides deterministic conditioning without relying on 3D priors. We 训练 a 视频 生成...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05506v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. cuRoboV2: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-DoF Robots<span class="title-cn">➡️ cuRoboV2: Dynamics-Aware Motion 生成 with Depth-Fused Distance Fields for High-DoF Robots</span></h3>
+<p class="meta">👤 Balakumar Sundaralingam, Adithyavairavan Murali, S</p>
+<div class="abstract">
+<p class="abstract-en">📄 Effective robot autonomy requires motion generation that is safe, feasible, and reactive. Current methods are fragmented: fast planners output physically unexecutable trajectories, reactive controllers struggle with high-fidelity perception, and existing solvers fail on high-DoF systems. We present cuRoboV2, a unified framework with three key innovations: (1) B-spline trajectory optimization that enforces smoothness and torque limits; (2) a GPU-native TSDF/ESDF perception pipeline that generates dense signed distance fields covering the full workspace, unlike existing methods that only provide...</p>
+<p class="abstract-cn">📄 Effective robot autonomy requires motion 生成 that is safe, feasible, and reactive. Current methods are fragmented: fast planners output physically unexecutable trajectories, reactive controllers struggle with high-fidelity perception, and existing solvers fail on high-DoF systems. We 提出 cuRoboV2, a unified 框架 with three 键 innovations: (1) B-spline trajectory 优化 that enforces smoothness and torque limits; (2) a GPU-native TSDF/ESDF perception pipeline that generates dense signed distance fields covering the full workspace, unlike existing methods that only provide...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05493v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. NL2GDS: LLM-aided interface for Open Source Chip Design<span class="title-cn">➡️ NL2GDS: 大语言模型-aided interface for Open Source Chip Design</span></h3>
+<p class="meta">👤 Max Eland, Jeyan Thiyagalingam, Dinesh Pamunuwa</p>
+<div class="abstract">
+<p class="abstract-en">📄 The growing complexity of hardware design and the widening gap between high-level specifications and register-transfer level (RTL) implementation hinder rapid prototyping and system design. We introduce NL2GDS (Natural Language to Layout), a novel framework that leverages large language models (LLMs) to translate natural language hardware descriptions into synthesizable RTL and complete GDSII layouts via the open-source OpenLane ASIC flow. NL2GDS employs a modular pipeline that captures informal design intent, generates HDL using multiple LLM engines and verifies them, and orchestrates automat...</p>
+<p class="abstract-cn">📄 The growing complexity of 硬件 design and the widening gap between high-level specifications and register-transfer level (RTL) implementation hinder rapid prototyping and system design. We 介绍 NL2GDS (Natural 语言 to Layout), a 新颖 框架 that leverages large 语言 模型 (LLMs) to translate natural 语言 硬件 descriptions into synthesizable RTL and complete GDSII layouts via the open-source OpenLane ASIC flow. NL2GDS employs a modular pipeline that captures informal design intent, generates HDL 使用 multiple 大语言模型 engines and verifies them, and orchestrates automat...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05489v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline<span class="title-cn">➡️ Towards 多模态 Lifelong Understanding: A 数据集 and Agentic Baseline</span></h3>
+<p class="meta">👤 Guo Chen, Lidong Lu, Yicheng Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelong, a dataset designed for Multimodal Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working Memory Bottleneck due to context saturation, while representative agentic ba...</p>
+<p class="abstract-cn">📄 While datasets for 视频 understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we 介绍 MM-Lifelong, a 数据集 designed for 多模态 Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working 记忆 Bottleneck due to context saturation, while representative agentic ba...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05484v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation in Survival Analysis<span class="title-cn">➡️ SurvHTE-Bench: A 基准测试 for Heterogeneous Treatment Effect Estimation in Survival 分析</span></h3>
+<p class="meta">👤 Shahriar Noroozizadeh, Xiaobin Shen, Jeremy C. Wei</p>
+<div class="abstract">
+<p class="abstract-en">📄 Estimating heterogeneous treatment effects (HTEs) from right-censored survival data is critical in high-stakes applications such as precision medicine and individualized policy-making. Yet, the survival analysis setting poses unique challenges for HTE estimation due to censoring, unobserved counterfactuals, and complex identification assumptions. Despite recent advances, from Causal Survival Forests to survival meta-learners and outcome imputation approaches, evaluation practices remain fragmented and inconsistent. We introduce SurvHTE-Bench, the first comprehensive benchmark for HTE estimatio...</p>
+<p class="abstract-cn">📄 Estimating heterogeneous treatment effects (HTEs) from right-censored survival 数据 is critical in high-stakes applications such as precision medicine and individualized 策略-making. Yet, the survival 分析 setting poses unique challenges for HTE estimation due to censoring, unobserved counterfactuals, and complex identification assumptions. Despite recent advances, from Causal Survival Forests to survival meta-learners and outcome imputation approaches, 评估 practices remain fragmented and inconsistent. We 介绍 SurvHTE-Bench, the first comprehensive 基准测试 for HTE estimatio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05483v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Quantum Simulation of Coupled Harmonic Oscillators: From Theory to Implementation<span class="title-cn">➡️ 量子 Simulation of Coupled Harmonic Oscillators: From 理论 to Implementation</span></h3>
+<p class="meta">👤 Viraj Dsouza, Weronika Golletz, Dimitrios Kranas</p>
+<div class="abstract">
+<p class="abstract-en">📄 We investigate the quantum algorithm of Babbush et al. (arXiv:2303.13012v3) for simulating coupled harmonic oscillators, which promises exponential speedups over classical methods. Focusing on linearly connected oscillator chains, we bridge the gap between theory and implementation by developing and comparing three concrete realizations of the algorithm. First, we implement a sparse initial state preparation combined with product-formula (Suzuki-Trotter) Hamiltonian simulation. Second, we implement a fully quantum, oracle-based framework in which classical data are accessed via oracles, the Ha...</p>
+<p class="abstract-cn">📄 We investigate the 量子 算法 of Babbush et al. (arXiv:2303.13012v3) for simulating coupled harmonic oscillators, which promises exponential speedups over classical methods. Focusing on linearly connected oscillator chains, we bridge the gap between 理论 and implementation by developing and comparing three concrete realizations of the 算法. First, we implement a sparse initial state preparation combined with product-formula (Suzuki-Trotter) Hamiltonian simulation. Second, we implement a fully 量子, oracle-based 框架 in which classical 数据 are accessed via oracles, the Ha...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05479v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Spin-resolved microscopy of $^{87}$Sr SU($N$) Fermi-Hubbard systems<span class="title-cn">➡️ Spin-resolved microscopy of $^{87}$Sr SU($N$) Fermi-Hubbard systems</span></h3>
+<p class="meta">👤 Carlos Gas-Ferrer, Antonio Rubio-Abadal, Sandra Bu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Quantum-gas microscopes provide direct access to the phases of the Hubbard model, bringing microscopic insight into the complex competition between interactions, SU(2) magnetism, and doping. Alkaline-earth(-like) fermions extend this spin-1/2 paradigm by realizing higher symmetries and giving access to SU(N) Hubbard models, with rich phase diagrams to be unveiled. Despite its fundamental interest, a microscopic exploration of SU(N) quantum systems has remained elusive. Here we report the realization of a quantum-gas microscope for fermionic $^{87}$Sr. Our imaging scheme, based on cooling and f...</p>
+<p class="abstract-cn">📄 量子-gas microscopes provide direct access to the phases of the Hubbard 模型, bringing microscopic insight into the complex competition between interactions, SU(2) magnetism, and doping. Alkaline-earth(-like) fermions extend this spin-1/2 paradigm by realizing higher symmetries and giving access to SU(N) Hubbard 模型, with rich phase diagrams to be unveiled. Despite its fundamental interest, a microscopic exploration of SU(N) 量子 systems has remained elusive. Here we report the realization of a 量子-gas microscope for fermionic $^{87}$Sr. Our imaging scheme, 基于 cooling and f...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05478v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Spatiotemporal Pauli processes: Quantum combs for modelling correlated noise in quantum error correction<span class="title-cn">➡️ Spatiotemporal Pauli processes: 量子 combs for modelling correlated noise in 量子 错误 纠正</span></h3>
+<p class="meta">👤 John F Kam, Angus Southwell, Spiro Gicev</p>
+<div class="abstract">
+<p class="abstract-en">📄 Correlated noise is a critical failure mode in quantum error correction (QEC), as temporal memory and spatial structure concentrate faults into error bursts that undermine standard threshold assumptions. Yet, a fundamental gap persists between the stochastic Pauli models ubiquitous in QEC and the microscopic, non-Markovian descriptions of physical device dynamics. We close this gap by introducing \emph{Spatiotemporal Pauli Processes} (SPPs). By applying a multi-time Pauli twirl -- operationally realised by Pauli-frame randomisation -- to a general process tensor, we map arbitrary multi-time, n...</p>
+<p class="abstract-cn">📄 Correlated noise is a critical failure mode in 量子 错误 纠正 (QEC), as temporal 记忆 and spatial structure concentrate faults into 错误 bursts that undermine standard threshold assumptions. Yet, a fundamental gap persists between the 随机 Pauli 模型 ubiquitous in QEC and the microscopic, non-Markovian descriptions of physical device dynamics. We close this gap by introducing \emph{Spatiotemporal Pauli Processes} (SPPs). By applying a multi-time Pauli twirl -- operationally realised by Pauli-frame randomisation -- to a general process tensor, we map arbitrary multi-time, n...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05474v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral Images Using Neural Radiance Fields<span class="title-cn">➡️ Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral 图像 使用 Neural Radiance Fields</span></h3>
+<p class="meta">👤 Scout Jarman, Zigfried Hampel-Arias, Adra Carr</p>
+<div class="abstract">
+<p class="abstract-en">📄 Hyperspectral images (HSI) have many applications, ranging from environmental monitoring to national security, and can be used for material detection and identification. Longwave infrared (LWIR) HSI can be used for gas plume detection and analysis. Oftentimes, only a few images of a scene of interest are available and are analyzed individually. The ability to combine information from multiple images into a single, cohesive representation could enhance analysis by providing more context on the scene's geometry and spectral properties. Neural radiance fields (NeRFs) create a latent neural repres...</p>
+<p class="abstract-cn">📄 Hyperspectral 图像 (HSI) have many applications, ranging from environmental monitoring to national security, and can be used for material 检测 and identification. Longwave infrared (LWIR) HSI can be used for gas plume 检测 and 分析. Oftentimes, only a few 图像 of a scene of interest are available and are analyzed individually. The ability to combine information from multiple 图像 into a single, cohesive 表示 could enhance 分析 by providing more context on the scene's geometry and spectral properties. Neural radiance fields (NeRFs) create a latent neural repres...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05473v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval<span class="title-cn">➡️ Leveraging 大语言模型 Parametric Knowledge for Fact Checking without 检索</span></h3>
+<p class="meta">👤 Artem Vazhentsev, Maria Marina, Daniil Moskovskiy</p>
+<div class="abstract">
+<p class="abstract-en">📄 Trustworthiness is a core research challenge for agentic AI systems built on Large Language Models (LLMs). To enhance trust, natural language claims from diverse sources, including human-written text, web content, and model outputs, are commonly checked for factuality by retrieving external knowledge and using an LLM to verify the faithfulness of claims to the retrieved evidence. As a result, such methods are constrained by retrieval errors and external data availability, while leaving the models intrinsic fact-verification capabilities largely unused. We propose the task of fact-checking with...</p>
+<p class="abstract-cn">📄 Trustworthiness is a core research challenge for agentic AI systems built on Large 语言 模型 (LLMs). To enhance trust, natural 语言 claims from diverse sources, including human-written 文本, web content, and 模型 outputs, are commonly checked for factuality by retrieving external knowledge and 使用 an 大语言模型 to verify the faithfulness of claims to the retrieved evidence. As a 结果, such methods are constrained by 检索 errors and external 数据 availability, while leaving the 模型 intrinsic fact-verification capabilities largely unused. We 提出 the 任务 of fact-checking with...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05471v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>✂️ 模型压缩</h2><div class="paper">
+<h3>1. Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups<span class="title-cn">➡️ Transformer-Based Inpainting for Real-Time 3D Streaming in Sparse Multi-Camera Setups</span></h3>
+<p class="meta">👤 Leif Van Holland, Domenic Zingsheim, Mana Takhsha</p>
+<div class="abstract">
+<p class="abstract-en">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered images. Existing approaches typically rely on simple heuristics for the hole filling, which can result in inconsistencies or visual artifacts. We propose to complete the missing textures using a novel, application-targeted inpainting method independent of the underlying representation as an image-based post-processing step after the novel view rende...</p>
+<p class="abstract-cn">📄 High-quality 3D streaming from multiple cameras is crucial for immersive experiences in many AR/VR applications. The limited number of views - often due to real-time constraints - leads to missing information and incomplete surfaces in the rendered 图像. Existing approaches typically rely on simple heuristics for the hole filling, which can 结果 in inconsistencies or visual artifacts. We 提出 to complete the missing textures 使用 a 新颖, 应用-targeted inpainting 方法 independent of the underlying 表示 as an 图像-based post-processing step after the 新颖 view rende...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05507v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. FaceCam: Portrait Video Camera Control via Scale-Aware Conditioning<span class="title-cn">➡️ FaceCam: Portrait 视频 Camera Control via 规模-Aware Conditioning</span></h3>
+<p class="meta">👤 Weijie Lyu, Ming-Hsuan Yang, Zhixin Shu</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce FaceCam, a system that generates video under customizable camera trajectories for monocular human portrait video input. Recent camera control approaches based on large video-generation models have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait videos due to scale-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we propose a face-tailored scale-aware representation for camera transformations that provides deterministic conditioning without relying on 3D priors. We train a video generation...</p>
+<p class="abstract-cn">📄 We 介绍 FaceCam, a system that generates 视频 under customizable camera trajectories for monocular human portrait 视频 input. Recent camera control approaches 基于 large 视频-生成 模型 have shown promising progress but often exhibit geometric distortions and visual artifacts on portrait 视频 due to 规模-ambiguous camera representations or 3D reconstruction errors. To overcome these limitations, we 提出 a face-tailored 规模-aware 表示 for camera transformations that provides deterministic conditioning without relying on 3D priors. We 训练 a 视频 生成...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05506v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Accelerating Text-to-Video Generation with Calibrated Sparse Attention<span class="title-cn">➡️ Accelerating 文本-to-视频 生成 with Calibrated Sparse 注意力机制</span></h3>
+<p class="meta">👤 Shai Yehezkel, Shahar Yadin, Noam Elata</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent diffusion models enable high-quality video generation, but suffer from slow runtimes. The large transformer-based backbones used in these models are bottlenecked by spatiotemporal attention. In this paper, we identify that a significant fraction of token-to-token connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the attention computation in these cases can be skipped with little to no effect on the result. This observation continues to hold for connections among local token blocks. Motivated by this, we introduc...</p>
+<p class="abstract-cn">📄 Recent 扩散模型 模型 enable high-quality 视频 生成, but suffer from slow runtimes. The large Transformer-based backbones used in these 模型 are bottlenecked by spatiotemporal 注意力机制. In this paper, we identify that a significant fraction of 词元-to-词元 connections consistently yield negligible scores across various inputs, and their patterns often repeat across queries. Thus, the 注意力机制 computation in these cases can be skipped with little to no effect on the 结果. This observation continues to hold for connections among local 词元 blocks. Motivated by this, we introduc...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05503v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Universal quantum computation with group surface codes<span class="title-cn">➡️ Universal 量子 computation with group surface codes</span></h3>
+<p class="meta">👤 Naren Manjunath, Vieri Mattei, Apoorv Tiwari</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce group surface codes, which are a natural generalization of the $\mathbb{Z}_2$ surface code, and equivalent to quantum double models of finite groups with specific boundary conditions. We show that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we demonstrate that arbitrary reversible classical gates can be implemented transversally in the group surface code. We present the logical operations...</p>
+<p class="abstract-cn">📄 We 介绍 group surface codes, which are a natural 泛化 of the $\mathbb{Z}_2$ surface code, and equivalent to 量子 double 模型 of finite groups with specific boundary conditions. We 表明 that group surface codes can be leveraged to perform non-Clifford gates in $\mathbb{Z}_2$ surface codes, thus enabling universal computation with well-established means of performing logical Clifford gates. Moreover, for suitably chosen groups, we 展示 that arbitrary reversible classical gates can be implemented transversally in the group surface code. We 提出 the logical operations...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05502v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation<span class="title-cn">➡️ POET-X: 记忆-高效的 大语言模型 训练 by 规模化 Orthogonal Transformation</span></h3>
+<p class="meta">👤 Zeju Qiu, Lixin Liu, Adrian Weller</p>
+<div class="abstract">
+<p class="abstract-en">📄 Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient v...</p>
+<p class="abstract-cn">📄 高效的 and stable 训练 of large 语言 模型 (LLMs) remains a core challenge in modern 机器学习 systems. To address this challenge, Reparameterized Orthogonal Equivalence 训练 (POET), a spectrum-preserving 框架 that optimizes each weight matrix through orthogonal equivalence transformation, has been 提出. Although POET provides strong 训练 稳定性, its original implementation incurs high 记忆 consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we 介绍 POET-X, a scalable and 记忆-高效的 v...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05500v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. The Spike, the Sparse and the Sink: Anatomy of Massive Activations and Attention Sinks<span class="title-cn">➡️ The Spike, the Sparse and the Sink: Anatomy of Massive Activations and 注意力机制 Sinks</span></h3>
+<p class="meta">👤 Shangwen Sun, Alfredo Canziani, Yann LeCun</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study two recurring phenomena in Transformer language models: massive activations, in which a small number of tokens exhibit extreme outliers in a few channels, and attention sinks, in which certain tokens attract disproportionate attention mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same tokens, but their functional roles and causal relationship remain unclear. Through systematic experiments, we show that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+<p class="abstract-cn">📄 We study two recurring phenomena in Transformer 语言 模型: massive activations, in which a small number of 词元 exhibit extreme outliers in a few channels, and 注意力机制 sinks, in which certain 词元 attract disproportionate 注意力机制 mass regardless of semantic relevance. Prior work observes that these phenomena frequently co-occur and often involve the same 词元, but their functional roles and causal relationship remain unclear. Through systematic 实验, we 表明 that the co-occurrence is largely an architectural artifact of modern Transformer design, and that the two phenome...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05498v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions<span class="title-cn">➡️ Safe-SAGE: Social-Semantic Adaptive Guidance for Safe Engagement through Laplace-Modulated Poisson Safety Functions</span></h3>
+<p class="meta">👤 Lizhi Yang, Ryan M. Bena, Meg Wilkinson</p>
+<div class="abstract">
+<p class="abstract-en">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We present Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified framework that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated using a Laplace guidance field. Our approach p...</p>
+<p class="abstract-cn">📄 Traditional safety-critical control methods, such as control barrier functions, suffer from semantic blindness, exhibiting the same behavior around obstacles regardless of contextual significance. This limitation leads to the uniform treatment of all obstacles, despite their differing semantic meanings. We 提出 Safe-SAGE (Social-Semantic Adaptive Guidance for Safe Engagement), a unified 框架 that bridges the gap between high-level semantic understanding and low-level safety-critical control through a Poisson safety function (PSF) modulated 使用 a Laplace guidance field. Our 方法 p...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05497v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Mirror codes: High-threshold quantum LDPC codes beyond the CSS regime<span class="title-cn">➡️ Mirror codes: High-threshold 量子 LDPC codes beyond the CSS regime</span></h3>
+<p class="meta">👤 Andrey Boris Khesin, Jonathan Z. Lu</p>
+<div class="abstract">
+<p class="abstract-en">📄 The realization of quantum error correction protocols whose logical error rates are suppressed far below physical error rates relies on an intricate combination: the error-correcting code's efficiency, the syndrome extraction circuit's fault tolerance and overhead, the decoder's quality, and the device's constraints, such as physical qubit count and connectivity. This work makes two contributions towards error-corrected quantum devices. First, we introduce mirror codes, a simple yet flexible construction of LDPC stabilizer codes parameterized by a group $G$ and two subsets of $G$ whose total s...</p>
+<p class="abstract-cn">📄 The realization of 量子 错误 纠正 protocols whose logical 错误 rates are suppressed far below physical 错误 rates relies on an intricate combination: the 错误-correcting code's 效率, the syndrome extraction circuit's fault tolerance and overhead, the 解码器's quality, and the device's constraints, such as physical 量子比特 count and connectivity. This work makes two contributions towards 错误-corrected 量子 devices. First, we 介绍 mirror codes, a simple yet flexible construction of LDPC stabilizer codes parameterized by a group $G$ and two subsets of $G$ whose total s...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05496v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels<span class="title-cn">➡️ Cheap Thrills: Effective Amortized 优化 使用 Inexpensive Labels</span></h3>
+<p class="meta">👤 Khai Nguyen, Petros Ellinas, Anvita Bhagavathula</p>
+<div class="abstract">
+<p class="abstract-en">📄 To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the model thr...</p>
+<p class="abstract-cn">📄 To 规模 the solution of 优化 and simulation problems, prior work has explored machine-学习 surrogates that inexpensively map problem 参数 to corresponding solutions. Commonly used approaches, including supervised and self-supervised 学习 with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult 优化 landscapes. To address their trade-offs, we 提出 a 新颖 框架 that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the 模型 thr...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05495v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation<span class="title-cn">➡️ Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</span></h3>
+<p class="meta">👤 Helena Casademunt, Bartosz Cywiński, Khoi Tran</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce fals...</p>
+<p class="abstract-cn">📄 Large 语言 模型 sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the 模型 answers truthfully -- and lie 检测 -- classifying whether a given response is false. Prior work evaluates such methods on 模型 specifically 训练 to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are 训练 to censor politically sensitive topics: Qwen3 模型 frequently produce fals...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05494v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📝 综述论文</h2><div class="paper">
+<h3>1. A FAST Survey of H I Absorption in Low-power Radio Sources<span class="title-cn">➡️ A FAST 综述 of H I Absorption in Low-power Radio Sources</span></h3>
+<p class="meta">👤 Yang Su, Qingzheng Yu, Taotao Fang</p>
+<div class="abstract">
+<p class="abstract-en">📄 We conducted a HI 21cm absorption study of a sample of 147 nearby (z &lt; 0.1) low-power radio sources with $10\,\mathrm{mJy} &lt; S_{1.4\,\mathrm{GHz}} &lt; 30\,\mathrm{mJy}$ and $\log(P_{1.4\,\mathrm{GHz}}/\mathrm{W\,Hz^{-1}}) = 20.5-23.7$, using the Five-hundred-meter Aperture Spherical radio Telescope. By investigating the origin and kinematics of HI absorbing gas, we aim to study the interplay between the active galactic nucleus (AGN) and its surrounding interstellar medium. Our observations detect 12 new absorbers, combining results from the pilot survey (three absorbers out of 26 sources), yield...</p>
+<p class="abstract-cn">📄 We conducted a HI 21cm absorption study of a 样本 of 147 nearby (z &lt; 0.1) low-power radio sources with $10\,\mathrm{mJy} &lt; S_{1.4\,\mathrm{GHz}} &lt; 30\,\mathrm{mJy}$ and $\log(P_{1.4\,\mathrm{GHz}}/\mathrm{W\,Hz^{-1}}) = 20.5-23.7$, 使用 the Five-hundred-meter Aperture Spherical radio Telescope. By investigating the origin and kinematics of HI absorbing gas, we aim to study the interplay between the active galactic nucleus (AGN) and its surrounding interstellar medium. Our observations detect 12 新的 absorbers, combining 结果 from the pilot 综述 (three absorbers out of 26 sources), yield...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05477v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral Images Using Neural Radiance Fields<span class="title-cn">➡️ Towards 3D Scene Understanding of Gas Plumes in LWIR Hyperspectral 图像 使用 Neural Radiance Fields</span></h3>
+<p class="meta">👤 Scout Jarman, Zigfried Hampel-Arias, Adra Carr</p>
+<div class="abstract">
+<p class="abstract-en">📄 Hyperspectral images (HSI) have many applications, ranging from environmental monitoring to national security, and can be used for material detection and identification. Longwave infrared (LWIR) HSI can be used for gas plume detection and analysis. Oftentimes, only a few images of a scene of interest are available and are analyzed individually. The ability to combine information from multiple images into a single, cohesive representation could enhance analysis by providing more context on the scene's geometry and spectral properties. Neural radiance fields (NeRFs) create a latent neural repres...</p>
+<p class="abstract-cn">📄 Hyperspectral 图像 (HSI) have many applications, ranging from environmental monitoring to national security, and can be used for material 检测 and identification. Longwave infrared (LWIR) HSI can be used for gas plume 检测 and 分析. Oftentimes, only a few 图像 of a scene of interest are available and are analyzed individually. The ability to combine information from multiple 图像 into a single, cohesive 表示 could enhance 分析 by providing more context on the scene's geometry and spectral properties. Neural radiance fields (NeRFs) create a latent neural repres...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05473v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Harnessing Synthetic Data from Generative AI for Statistical Inference<span class="title-cn">➡️ Harnessing Synthetic 数据 from 生成式 AI for Statistical 推理</span></h3>
+<p class="meta">👤 Ahmad Abdel-Azim, Ruoyu Wang, Xihong Lin</p>
+<div class="abstract">
+<p class="abstract-en">📄 The emergence of generative AI models has dramatically expanded the availability and use of synthetic data across scientific, industrial, and policy domains. While these developments open new possibilities for data analysis, they also raise fundamental statistical questions about when synthetic data can be used in a valid, reliable, and principled manner. This paper reviews the current landscape of synthetic data generation and use from a statistical perspective, with the goal of clarifying the assumptions under which synthetic data can meaningfully support downstream discovery, inference, and...</p>
+<p class="abstract-cn">📄 The emergence of 生成式 AI 模型 has dramatically expanded the availability and use of synthetic 数据 across scientific, industrial, and 策略 domains. While these developments open 新的 possibilities for 数据 分析, they also raise fundamental statistical questions about when synthetic 数据 can be used in a valid, reliable, and principled manner. This paper reviews the current landscape of synthetic 数据 生成 and use from a statistical perspective, with the goal of clarifying the assumptions under which synthetic 数据 can meaningfully support downstream discovery, 推理, and...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05396v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Nuclear Physics of X-ray Bursts<span class="title-cn">➡️ Nuclear Physics of X-ray Bursts</span></h3>
+<p class="meta">👤 Yi Xu, Hendrik Schatz, Rita Lau</p>
+<div class="abstract">
+<p class="abstract-en">📄 Thermonuclear X-ray bursts from the surface of accreting neutron stars are the most common astrophysical explosions in our galaxy. They provide a unique window into the physics of neutron stars, the physics of matter under extreme conditions, and the physics of astrophysical thermonuclear explosions. X-ray bursts are powered by a broad range of nuclear reactions that need to be understood to interpret observations. The relevant nuclei are mostly neutron deficient and unstable, and thus experimental information and theoretical understanding is limited and an active area of research in nuclear s...</p>
+<p class="abstract-cn">📄 Thermonuclear X-ray bursts from the surface of accreting neutron stars are the most common astrophysical explosions in our galaxy. They provide a unique window into the physics of neutron stars, the physics of matter under extreme conditions, and the physics of astrophysical thermonuclear explosions. X-ray bursts are powered by a broad range of nuclear reactions that need to be understood to interpret observations. The relevant nuclei are mostly neutron deficient and unstable, and thus experimental information and 理论 understanding is limited and an active area of research in nuclear s...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05356v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Exploring the potential and limitations of Model Merging for Multi-Domain Adaptation in ASR<span class="title-cn">➡️ Exploring the potential and limitations of 模型 Merging for Multi-领域 Adaptation in ASR</span></h3>
+<p class="meta">👤 Carlos Carvalho, Francisco Teixeira, Thomas Rollan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Model merging is a scalable alternative to multi-task training that combines the capabilities of multiple specialised models into a single model. This is particularly attractive for large speech foundation models, which are typically adapted through domain-specific fine-tuning, resulting in multiple customised checkpoints, for which repeating full fine-tuning when new data becomes available is computationally prohibitive. In this work, we study model merging for multi-domain ASR and benchmark 11 merging algorithms for 10 European Portuguese domains, evaluating in-domain accuracy, robustness un...</p>
+<p class="abstract-cn">📄 模型 merging is a scalable alternative to multi-任务 训练 that combines the capabilities of multiple specialised 模型 into a single 模型. This is particularly attractive for large 语音 foundation 模型, which are typically adapted through 领域-specific 微调, resulting in multiple customised checkpoints, for which repeating full 微调 when 新的 数据 becomes available is computationally prohibitive. In this work, we study 模型 merging for multi-领域 ASR and 基准测试 11 merging algorithms for 10 European Portuguese domains, evaluating in-领域 准确率, 鲁棒性 un...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05354v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. GASTON-GP: Source catalogue and millimetre variability of massive protostellar objects<span class="title-cn">➡️ GASTON-GP: Source catalogue and millimetre variability of massive protostellar objects</span></h3>
+<p class="meta">👤 Ji-Xuan Zhou, Nicolas Peretto, A. J. Rigby</p>
+<div class="abstract">
+<p class="abstract-en">📄 The processes governing protostellar mass growth remain debated, although episodic accretion is now understood as a key feature of protostellar evolution across all masses. Luminosity bursts have been observed in both low- and high-mass protostars, but the overall statistics remain limited, especially for high-mass objects. Over the past decade, numerical simulations of high-mass core collapse have provided a theoretical framework for interpreting protostellar variability, yet additional observational constraints are required to determine the characteristics and importance of bursts. In this w...</p>
+<p class="abstract-cn">📄 The processes governing protostellar mass growth remain debated, although episodic accretion is now understood as a 键 特征 of protostellar evolution across all masses. Luminosity bursts have been observed in both low- and high-mass protostars, but the overall statistics remain limited, especially for high-mass objects. Over the past decade, numerical simulations of high-mass core collapse have provided a 理论 框架 for interpreting protostellar variability, yet additional observational constraints are required to determine the characteristics and importance of bursts. In this w...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05351v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Scientific performance of on-board analyses for the SVOM X-ray telescope MXT<span class="title-cn">➡️ Scientific 性能 of on-board analyses for the SVOM X-ray telescope MXT</span></h3>
+<p class="meta">👤 F. Robinet, C. Van Hove, M. Moita</p>
+<div class="abstract">
+<p class="abstract-en">📄 The Microchannel X-ray Telescope on board the Space-based multi-band astronomical Variable Objects Monitor (SVOM) satellite detects and localizes the X-ray afterglow of gamma-ray bursts. One year after the launch, this paper presents the in-flight performance of the scientific analyses conducted by the on-board computer. After summarizing the analysis steps, the paper reviews the on-board results obtained with 15 gamma-ray burst afterglows detected by the telescope between October 2024 and August 2025. For all bursts, the localization uncertainty is estimated to be below 2 arcmin, as required ...</p>
+<p class="abstract-cn">📄 The Microchannel X-ray Telescope on board the Space-based multi-band astronomical Variable Objects Monitor (SVOM) satellite detects and localizes the X-ray afterglow of gamma-ray bursts. One year after the launch, this paper presents the in-flight 性能 of the scientific analyses conducted by the on-board computer. After summarizing the 分析 steps, the paper reviews the on-board 结果 obtained with 15 gamma-ray burst afterglows detected by the telescope between October 2024 and August 2025. For all bursts, the localization uncertainty is estimated to be below 2 arcmin, as required ...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05342v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. ULTIMATE deblending I. A 50-band UV-to-MIR photometric catalog combining space- and ground-based data in the JWST/PRIMER survey<span class="title-cn">➡️ ULTIMATE deblending I. A 50-band UV-to-MIR photometric catalog combining space- and ground-based 数据 in the JWST/PRIMER 综述</span></h3>
+<p class="meta">👤 Hanwen Sun, Tao Wang, Ke Xu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Our understanding of the early Universe has long been limited by biased galaxy samples selected through various color criteria. With deep JWST infrared imaging, mass-complete galaxy samples can now be studied up to $z \sim 8$ for the first time. However, recent work has revealed systematic uncertainties in measuring physical properties of galaxies based solely on JWST/NIRCam and HST photometry, due to their limited wavelength coverage. This highlights the need for supplementary data, particularly in the rest-frame UV and near-infrared. Here we present the ULTIMATE-deblending project, which wil...</p>
+<p class="abstract-cn">📄 Our understanding of the early Universe has long been limited by biased galaxy 样本 selected through various color criteria. With deep JWST infrared imaging, mass-complete galaxy 样本 can now be studied up to $z \sim 8$ for the first time. However, recent work has revealed systematic uncertainties in measuring physical properties of galaxies based solely on JWST/NIRCam and HST photometry, due to their limited wavelength coverage. This highlights the need for supplementary 数据, particularly in the rest-frame UV and near-infrared. Here we 提出 the ULTIMATE-deblending project, which wil...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05289v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Oral to Web: Digitizing 'Zero Resource'Languages of Bangladesh<span class="title-cn">➡️ Oral to Web: Digitizing 'Zero Resource'Languages of Bangladesh</span></h3>
+<p class="meta">👤 Mohammad Mamun Or Rashid</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present the Multilingual Cloud Corpus, the first national-scale, parallel, multimodal linguistic dataset of Bangladesh's ethnic and indigenous languages. Despite being home to approximately 40 minority languages spanning four language families, Bangladesh has lacked a systematic, cross-family digital corpus for these predominantly oral, computationally "zero resource" varieties, 14 of which are classified as endangered. Our corpus comprises 85792 structured textual entries, each containing a Bengali stimulus text, an English translation, and an IPA transcription, together with approximately...</p>
+<p class="abstract-cn">📄 We 提出 the Multilingual Cloud 语料库, the first national-规模, parallel, 多模态 linguistic 数据集 of Bangladesh's ethnic and indigenous languages. Despite being home to approximately 40 minority languages spanning four 语言 families, Bangladesh has lacked a systematic, cross-family digital 语料库 for these predominantly oral, computationally "zero resource" varieties, 14 of which are classified as endangered. Our 语料库 comprises 85792 structured textual entries, each containing a Bengali stimulus 文本, an English translation, and an IPA transcription, together with approximately...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05272v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. EMU/GAMA: A statistical perspective on active galactic nuclei diagnostics<span class="title-cn">➡️ EMU/GAMA: A statistical perspective on active galactic nuclei diagnostics</span></h3>
+<p class="meta">👤 J. Prathap, A. M. Hopkins, R. Carvajal</p>
+<div class="abstract">
+<p class="abstract-en">📄 While it is well known that galaxies are composites of many emission processes, quantifying the various contributions remains challenging. In this work, we use unsupervised machine learning based clustering algorithms to evaluate the agreement between the clustering tools and astrophysical classifications, and hence quantify the fractional contributions of star formation processes and nuclear black hole activity to the total galaxy energy budget of radio sources. We perform clustering on the multiwavelength (optical, infrared (IR), and radio) active galactic nuclei (AGN) diagnostic spaces, usi...</p>
+<p class="abstract-cn">📄 While it is well known that galaxies are composites of many emission processes, quantifying the various contributions remains challenging. In this work, we use unsupervised 机器学习 based clustering algorithms to evaluate the agreement between the clustering tools and astrophysical classifications, and hence quantify the fractional contributions of star formation processes and nuclear black hole activity to the total galaxy energy budget of radio sources. We perform clustering on the multiwavelength (optical, infrared (IR), and radio) active galactic nuclei (AGN) diagnostic spaces, usi...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05265v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎮 强化学习</h2><div class="paper">
+<h3>1. RoboPocket: Improve Robot Policies Instantly with Your Phone<span class="title-cn">➡️ RoboPocket: 改进 Robot Policies Instantly with Your Phone</span></h3>
+<p class="meta">👤 Junjie Fang, Wendi Chen, Han Xue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce R...</p>
+<p class="abstract-cn">📄 规模化 imitation 学习 is fundamentally constrained by the 效率 of 数据 collection. While handheld interfaces have emerged as a scalable solution for in-the-wild 数据 acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying 策略's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to 规模. To reconcile this trade-off, we 介绍 R...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05504v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation<span class="title-cn">➡️ POET-X: 记忆-高效的 大语言模型 训练 by 规模化 Orthogonal Transformation</span></h3>
+<p class="meta">👤 Zeju Qiu, Lixin Liu, Adrian Weller</p>
+<div class="abstract">
+<p class="abstract-en">📄 Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient v...</p>
+<p class="abstract-cn">📄 高效的 and stable 训练 of large 语言 模型 (LLMs) remains a core challenge in modern 机器学习 systems. To address this challenge, Reparameterized Orthogonal Equivalence 训练 (POET), a spectrum-preserving 框架 that optimizes each weight matrix through orthogonal equivalence transformation, has been 提出. Although POET provides strong 训练 稳定性, its original implementation incurs high 记忆 consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we 介绍 POET-X, a scalable and 记忆-高效的 v...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05500v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Calculating trace distances of bosonic states in Krylov subspace<span class="title-cn">➡️ Calculating trace distances of bosonic states in Krylov subspace</span></h3>
+<p class="meta">👤 Javier Martínez-Cifuentes, Nicolás Quesada</p>
+<div class="abstract">
+<p class="abstract-en">📄 Continuous-variable quantum systems are central to quantum technologies, with Gaussian states playing a key role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical evaluation is difficult due to the exponential cost of representing infinite-dimensional operators. We introduce an efficient numerical method to compute the trace distance between a pure and a mixed Gaussian state, based on a generalized Lanczos algorithm that ...</p>
+<p class="abstract-cn">📄 Continuous-variable 量子 systems are central to 量子 technologies, with Gaussian states playing a 键 role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical 评估 is difficult due to the exponential cost of representing infinite-dimensional operators. We 介绍 an 高效的 numerical 方法 to compute the trace distance between a pure and a mixed Gaussian state, 基于 a generalized Lanczos 算法 that ...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05499v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels<span class="title-cn">➡️ Cheap Thrills: Effective Amortized 优化 使用 Inexpensive Labels</span></h3>
+<p class="meta">👤 Khai Nguyen, Petros Ellinas, Anvita Bhagavathula</p>
+<div class="abstract">
+<p class="abstract-en">📄 To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the model thr...</p>
+<p class="abstract-cn">📄 To 规模 the solution of 优化 and simulation problems, prior work has explored machine-学习 surrogates that inexpensively map problem 参数 to corresponding solutions. Commonly used approaches, including supervised and self-supervised 学习 with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult 优化 landscapes. To address their trade-offs, we 提出 a 新颖 框架 that first collects "cheap" imperfect labels, then performs supervised pretraining, and finally refines the 模型 thr...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05495v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation<span class="title-cn">➡️ Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</span></h3>
+<p class="meta">👤 Helena Casademunt, Bartosz Cywiński, Khoi Tran</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce fals...</p>
+<p class="abstract-cn">📄 Large 语言 模型 sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the 模型 answers truthfully -- and lie 检测 -- classifying whether a given response is false. Prior work evaluates such methods on 模型 specifically 训练 to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are 训练 to censor politically sensitive topics: Qwen3 模型 frequently produce fals...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05494v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Ansatz-Free Learning of Lindbladian Dynamics In Situ<span class="title-cn">➡️ Ansatz-Free 学习 of Lindbladian Dynamics In Situ</span></h3>
+<p class="meta">👤 Petr Ivashkov, Nikita Romanov, Weiyuan Gong</p>
+<div class="abstract">
+<p class="abstract-en">📄 Characterizing the dynamics of open quantum systems at the level of microscopic interactions and error mechanisms is essential for calibrating quantum hardware, designing robust simulation protocols, and developing tailored error-correction methods. Under Markovian noise/dissipation, a natural characterization approach is to identify the full Lindbladian generator that gives rise to both coherent (Hamiltonian) and dissipative dynamics. Prior protocols for learning Lindbladians from dynamical data assumed pre-specified interaction structure, which can be restrictive when the relevant noise chan...</p>
+<p class="abstract-cn">📄 Characterizing the dynamics of open 量子 systems at the level of microscopic interactions and 错误 mechanisms is essential for calibrating 量子 硬件, designing 鲁棒 simulation protocols, and developing tailored 错误-纠正 methods. Under Markovian noise/dissipation, a natural characterization 方法 is to identify the full Lindbladian generator that gives rise to both coherent (Hamiltonian) and dissipative dynamics. Prior protocols for 学习 Lindbladians from dynamical 数据 assumed pre-specified interaction structure, which can be restrictive when the relevant noise chan...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05492v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought<span class="title-cn">➡️ Reasoning Theater: Disentangling 模型 Beliefs from Chain-of-Thought</span></h3>
+<p class="meta">👤 Siddharth Boppana, Annabel Ma, Max Loeffler</p>
+<div class="abstract">
+<p class="abstract-en">📄 We provide evidence of performative chain-of-thought (CoT) in reasoning models, where a model becomes strongly confident in its final answer, but continues generating tokens without revealing its internal belief. Our analysis compares activation probing, early forced answering, and a CoT monitor across two large models (DeepSeek-R1 671B & GPT-OSS 120B) and find task difficulty-specific differences: The model's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in d...</p>
+<p class="abstract-cn">📄 We provide evidence of performative chain-of-thought (CoT) in reasoning 模型, where a 模型 becomes strongly confident in its final answer, but continues generating 词元 without revealing its internal belief. Our 分析 compares activation probing, early forced answering, and a CoT monitor across two large 模型 (DeepSeek-R1 671B & GPT-OSS 120B) and find 任务 difficulty-specific differences: The 模型's final answer is decodable from activations far earlier in CoT than a monitor is able to say, especially for easy recall-based MMLU questions. We contrast this with genuine reasoning in d...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05488v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Towards Multimodal Lifelong Understanding: A Dataset and Agentic Baseline<span class="title-cn">➡️ Towards 多模态 Lifelong Understanding: A 数据集 and Agentic Baseline</span></h3>
+<p class="meta">👤 Guo Chen, Lidong Lu, Yicheng Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 While datasets for video understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we introduce MM-Lifelong, a dataset designed for Multimodal Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working Memory Bottleneck due to context saturation, while representative agentic ba...</p>
+<p class="abstract-cn">📄 While datasets for 视频 understanding have scaled to hour-long durations, they typically consist of densely concatenated clips that differ from natural, unscripted daily life. To bridge this gap, we 介绍 MM-Lifelong, a 数据集 designed for 多模态 Lifelong Understanding. Comprising 181.1 hours of footage, it is structured across Day, Week, and Month scales to capture varying temporal densities. Extensive evaluations reveal two critical failure modes in current paradigms: end-to-end MLLMs suffer from a Working 记忆 Bottleneck due to context saturation, while representative agentic ba...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05484v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. SurvHTE-Bench: A Benchmark for Heterogeneous Treatment Effect Estimation in Survival Analysis<span class="title-cn">➡️ SurvHTE-Bench: A 基准测试 for Heterogeneous Treatment Effect Estimation in Survival 分析</span></h3>
+<p class="meta">👤 Shahriar Noroozizadeh, Xiaobin Shen, Jeremy C. Wei</p>
+<div class="abstract">
+<p class="abstract-en">📄 Estimating heterogeneous treatment effects (HTEs) from right-censored survival data is critical in high-stakes applications such as precision medicine and individualized policy-making. Yet, the survival analysis setting poses unique challenges for HTE estimation due to censoring, unobserved counterfactuals, and complex identification assumptions. Despite recent advances, from Causal Survival Forests to survival meta-learners and outcome imputation approaches, evaluation practices remain fragmented and inconsistent. We introduce SurvHTE-Bench, the first comprehensive benchmark for HTE estimatio...</p>
+<p class="abstract-cn">📄 Estimating heterogeneous treatment effects (HTEs) from right-censored survival 数据 is critical in high-stakes applications such as precision medicine and individualized 策略-making. Yet, the survival 分析 setting poses unique challenges for HTE estimation due to censoring, unobserved counterfactuals, and complex identification assumptions. Despite recent advances, from Causal Survival Forests to survival meta-learners and outcome imputation approaches, 评估 practices remain fragmented and inconsistent. We 介绍 SurvHTE-Bench, the first comprehensive 基准测试 for HTE estimatio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05483v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Thermodynamic Response Functions in Singular Bayesian Models<span class="title-cn">➡️ Thermodynamic Response Functions in Singular Bayesian 模型</span></h3>
+<p class="meta">👤 Sean Plummer</p>
+<div class="abstract">
+<p class="abstract-en">📄 Singular statistical models-including mixtures, matrix factorization, and neural networks-violate regular asymptotics due to parameter non-identifiability and degenerate Fisher geometry. Although singular learning theory characterizes marginal likelihood behavior through invariants such as the real log canonical threshold and singular fluctuation, these quantities remain difficult to interpret operationally. At the same time, widely used criteria such as WAIC and WBIC appear disconnected from underlying singular geometry. We show that posterior tempering induces a one-parameter deformation of ...</p>
+<p class="abstract-cn">📄 Singular statistical 模型-including mixtures, matrix factorization, and neural networks-violate regular asymptotics due to 参数 non-identifiability and degenerate Fisher geometry. Although singular 学习 理论 characterizes marginal likelihood behavior through invariants such as the real log canonical threshold and singular fluctuation, these quantities remain difficult to interpret operationally. At the same time, widely used criteria such as WAIC and WBIC appear disconnected from underlying singular geometry. We 表明 that posterior tempering induces a one-参数 deformation of ...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.05480v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="footer"><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据分析专栏 - 伊利虾</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .hero { text-align: center; color: white; padding: 60px 0; }
+        .hero h1 { font-size: 3em; margin-bottom: 15px; }
+        .hero p { opacity: 0.85; font-size: 1.3em; }
+        .reports { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 20px 0; }
+        .report-card { background: white; padding: 35px; border-radius: 20px; text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+        .report-card:hover { transform: translateY(-10px); box-shadow: 0 15px 50px rgba(0,0,0,0.3); }
+        .report-card .icon { font-size: 3.5em; margin-bottom: 15px; }
+        .report-card h2 { color: #1a1a2e; font-size: 1.4em; margin-bottom: 12px; }
+        .report-card p { color: #666; font-size: 1em; line-height: 1.6; }
+        .report-card .meta { color: #999; font-size: 0.85em; margin-top: 15px; padding-top: 15px; border-top: 1px solid #eee; }
+        .report-card .tags { margin-top: 12px; }
+        .report-card .tag { display: inline-block; background: #667eea; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.75em; margin-right: 8px; }
+        .footer { text-align: center; color: white; opacity: 0.7; padding: 30px; }
+    /* 移动端 */@media (max-width:768px){body{padding:15px}.hero{padding:40px 0}.hero h1{font-size:2em}.grid{grid-template-columns:1fr;gap:15px}.card{padding:20px}}@media (max-width:480px){body{padding:10px}.hero h1{font-size:1.8em}}
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/" style="color:#667eea">← 返回首页</a></div>
+        
+        <div class="hero">
+            <h1>📊 数据分析专栏</h1>
+            <p>机器学习 · 数据挖掘 · 可视化分析</p>
+        </div>
+        
+        <div class="reports">
+            <a href="/electricity-ml.html" class="report-card">
+                <div class="icon">⚡</div>
+                <h2>家庭用电量分析</h2>
+                <p>完整版 · 机器学习预测 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">回归模型</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">R²: 0.85 | 样本数: 150,000</div>
+            </a>
+            <a href="/stock-ml.html" class="report-card">
+                <div class="icon">📈</div>
+                <h2>美股投资组合分析</h2>
+                <p>完整版 · 机器学习预测 · 风险评估 · 6种模型</p>
+                <div class="tags">
+                    <span class="tag">回归模型</span>
+                    <span class="tag">6种ML模型</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">R²: 负值(有效市场) | 股票数: 10</div>
+            </a>
+            <a href="/bank-ml.html" class="report-card">
+                <div class="icon">🏦</div>
+                <h2>银行营销分析</h2>
+                <p>完整版 · 机器学习建模 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">二分类模型</span>
+                    <span class="tag">Gradient Boosting</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">AUC: 0.95 | 样本数: 41,188</div>
+            </a>
+            <a href="/bmw-analysis.html" class="report-card">
+                <div class="icon">🚗</div>
+                <h2>BMW汽车市场分析</h2>
+                <p>完整版 · 机器学习建模 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">回归模型</span>
+                    <span class="tag">Gradient Boosting</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">R²: 0.98 | 样本数: 10,000</div>
+            </a>
+            <a href="/twitter-sentiment.html" class="report-card">
+                <div class="icon">🐦</div>
+                <h2>Twitter情感分析</h2>
+                <p>完整版 · NLP · 情感分类 · 特征热力图</p>
+                <div class="tags">
+                    <span class="tag">NLP</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">准确率: 87% | 样本数: 75,682</div>
+            </a>
+            <a href="/iris-ml.html" class="report-card">
+                <div class="icon">🌸</div>
+                <h2>鸢尾花分类分析</h2>
+                <p>完整版 · 机器学习建模 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">分类模型</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">准确率: 100% | 样本数: 150</div>
+            </a>
+            <a href="/titanic-ml.html" class="report-card">
+                <div class="icon">🚢</div>
+                <h2>泰坦尼克号生存分析 (完整版)</h2>
+                <p>完整版 · 机器学习建模 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">分类模型</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">准确率: 79% | 样本数: 1,309</div>
+            </a>
+            
+            <a href="/california-ml.html" class="report-card">
+                <div class="icon">🏠</div>
+                <h2>加州房价分析 (完整版)</h2>
+                <p>完整版 · 机器学习建模 · 特征热力图 · 反直觉发现</p>
+                <div class="tags">
+                    <span class="tag">回归模型</span>
+                    <span class="tag">Random Forest</span>
+                    <span class="tag">ECharts</span>
+                    <span class="tag">热力图</span>
+                </div>
+                <div class="meta">R²: 0.80 | 样本数: 20,640</div>
+            </a>
+            
+            <a href="/titanic-interactive.html" class="report-card">
+                <div class="icon">🚢</div>
+                <h2>泰坦尼克号 (交互版)</h2>
+                <p>ECharts动态图表</p>
+            </a>
+            
+            <a href="/california-interactive.html" class="report-card">
+                <div class="icon">🏠</div>
+                <h2>加州房价 (交互版)</h2>
+                <p>ECharts动态图表</p>
+            </a>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾 | 由 Python + Scikit-Learn 驱动</p>
+        </div>
+    </div>
+</body>
+</html>

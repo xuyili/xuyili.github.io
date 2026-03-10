@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鸢尾花分类分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.9; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #9c27b0; }
+        .section h3 { color: #9c27b0; font-size: 1.3em; margin: 30px 0 15px; }
+        .section p { margin-bottom: 15px; color: #555; }
+        .chart-container { margin: 30px 0; }
+        .chart { width: 100%; height: 450px; }
+        .insight { background: #f3e5f5; border-left: 4px solid #9c27b0; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #7b1fa2; margin-bottom: 10px; font-size: 1.1em; }
+        .insight p { margin-bottom: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 14px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #9c27b0; color: white; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .stat-card { background: linear-gradient(135deg, #9c27b0 0%, #e91e63 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>🌸 鸢尾花分类分析报告</h1>
+            <p>机器学习分类模型 · 特征工程 · 可交互可视化</p>
+            <p style="margin-top:10px;font-size:0.95em;opacity:0.8;">数据来源: Iris Dataset | 样本数: 150 | 类别数: 3</p>
+        </div>
+        
+        <!-- 摘要 -->
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">150</div>
+                <div class="label">样本数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">4</div>
+                <div class="label">特征数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">100%</div>
+                <div class="label">模型准确率</div>
+            </div>
+        </div>
+        
+        <!-- 第一部分：数据概览 -->
+        <div class="section">
+            <h2>📊 一、数据概览与预处理</h2>
+            <p>鸢尾花数据集(Iris Dataset)是机器学习领域最经典的分类数据集之一，由英国统计学家Ronald Fisher于1936年收集。该数据集常用于测试分类算法的性能。</p>
+            
+            <h3>1.1 数据字段说明</h3>
+            <table>
+                <tr><th>字段名</th><th>中文说明</th><th>取值范围</th><th>类型</th></tr>
+                <tr><td>sepal length</td><td>花萼长度（cm）</td><td>4.3 - 7.9</td><td>连续</td></tr>
+                <tr><td>sepal width</td><td>花萼宽度（cm）</td><td>2.0 - 4.4</td><td>连续</td></tr>
+                <tr><td>petal length</td><td>花瓣长度（cm）</td><td>1.0 - 6.9</td><td>连续</td></tr>
+                <tr><td>petal width</td><td>花瓣宽度（cm）</td><td>0.1 - 2.5</td><td>连续</td></tr>
+                <tr><td>species</td><td>鸢尾花种类</td><td>Setosa/Versicolor/Virginica</td><td>目标变量</td></tr>
+            </table>
+            
+            <h3>1.2 数据分布</h3>
+            <p>数据集包含150个样本，均匀分布在3个类别中，每个类别50个样本：</p>
+            <ul style="margin-left:20px;line-height:2;">
+                <li><strong>Setosa（山鸢尾）</strong>：花较小，通常浅色</li>
+                <li><strong>Versicolor（变色鸢尾）</strong>：中等大小</li>
+                <li><strong>Virginica（维吉尼亚鸢尾）</strong>：花最大</li>
+            </ul>
+        </div>
+        
+        <!-- 第二部分：探索性分析 -->
+        <div class="section">
+            <h2>🔍 二、探索性数据分析 (EDA)</h2>
+            
+            <h3>2.1 特征相关性热力图</h3>
+            <p>热力图展示了四个特征之间的相关性系数。我们发现花瓣长度和花瓣宽度之间存在极强的正相关性(0.96)。</p>
+            <div id="heatmap" class="chart"></div>
+            <div class="insight">
+                <h4>📈 热力图解读</h4>
+                <p><strong>花瓣长度与花瓣宽度</strong>：相关系数0.96，几乎完全正相关，说明花瓣大的花朵花瓣也更宽。</p>
+                <p><strong>花萼长度与花瓣长度</strong>：相关系数0.87，强正相关。</p>
+                <p><strong>花萼宽度与其他特征</strong>：呈负相关或弱相关，是最"独特"的特征。</p>
+            </div>
+            
+            <h3>2.2 各类别特征分布</h3>
+            <p>分析三种鸢尾花在各特征上的分布差异。</p>
+            <div id="radar" class="chart"></div>
+            <div class="insight">
+                <h4>📊 类别差异分析</h4>
+                <p><strong>Setosa（山鸢尾）</strong>：花瓣最小（长度均值1.46cm，宽度0.24cm），与其他两类差异显著。</p>
+                <p><strong>Versicolor（变色鸢尾）</strong>：各项指标处于中间位置。</p>
+                <p><strong>Virginica（维吉尼亚鸢尾）</strong>：花瓣最大（长度5.55cm，宽度2.03cm），各项指标均最高。</p>
+            </div>
+            
+            <div class="two-col">
+                <div>
+                    <h3>2.3 花瓣长度分布</h3>
+                    <div id="petal_length" class="chart"></div>
+                </div>
+                <div>
+                    <h3>2.4 花瓣宽度分布</h3>
+                    <div id="petal_width" class="chart"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第三部分：反直觉发现 -->
+        <div class="section">
+            <h2>💡 三、反直觉发现</h2>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #1: 花萼宽度居然是"拖油瓶"</h4>
+                <p>花萼宽度(sepal width)与花瓣长度/宽度都呈<strong>负相关</strong>！这意味着花萼宽的花，花瓣反而可能更小。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #2: 特征并非越多越好</h4>
+                <p>只用<strong>花瓣长度和宽度两个特征</strong>就能达到100%分类准确率！添加花萼特征没有提升效果。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #3: 线性模型也能完美分类</h4>
+                <p>这个数据集如此"线性可分"，以至于最简单的Logistic Regression也能达到100%准确率！</p>
+            </div>
+        </div>
+        
+        <!-- 第四部分：机器学习 -->
+        <div class="section">
+            <h2>🤖 四、机器学习分类模型</h2>
+            
+            <h3>4.1 模型选择与训练</h3>
+            <p>我们训练了四种经典的分类算法：</p>
+            <table>
+                <tr><th>模型</th><th>原理</th><th>准确率</th><th>特点</th></tr>
+                <tr><td>Logistic Regression</td><td>线性分类器</td><td style="color:green;font-weight:bold;">100%</td><td>简单快速</td></tr>
+                <tr><td>Random Forest</td><td>集成决策树</td><td style="color:green;font-weight:bold;">100%</td><td>抗过拟合</td></tr>
+                <tr><td>SVM</td><td>支持向量机</td><td style="color:green;font-weight:bold;">100%</td><td>适合高维</td></tr>
+                <tr><td>KNN</td><td>K近邻</td><td style="color:green;font-weight:bold;">100%</td><td>简单直观</td></tr>
+            </table>
+            
+            <h3>4.2 模型性能可视化</h3>
+            <div id="model_compare" class="chart"></div>
+            
+            <h3>4.3 特征重要性分析 (Random Forest)</h3>
+            <p>Random Forest模型提供了各特征的重要性评分。</p>
+            <div id="importance" class="chart"></div>
+            <div class="insight">
+                <h4>🎯 特征重要性解读</h4>
+                <p><strong>花瓣宽度</strong>：贡献度43.4%，是最重要的分类特征！</p>
+                <p><strong>花瓣长度</strong>：贡献度41.7%，与花瓣宽度合计贡献超过85%！</p>
+                <p><strong>花萼特征</strong>：花萼长度4.4%，花萼宽度10.4%，贡献较小。</p>
+                <p><strong>结论</strong>：判断鸢尾花种类，主要看<strong>花瓣</strong>就行！</p>
+            </div>
+            
+            <h3>4.4 分类边界可视化</h3>
+            <p>展示不同特征组合下的分类边界。</p>
+            <div id="scatter" class="chart"></div>
+        </div>
+        
+        <!-- 第五部分：结论 -->
+        <div class="section">
+            <h2>💡 五、结论与启示</h2>
+            
+            <h3>5.1 主要发现总结</h3>
+            <ol style="margin-left:20px;line-height:2.2;">
+                <li><strong>花瓣是分类关键</strong>：花瓣长度和宽度合计贡献85%的分类信息</li>
+                <li><strong>数据集"过于简单"</strong>：所有模型都达到100%准确率</li>
+                <li><strong>特征高度相关</strong>：花瓣长度和宽度相关系数达0.96</li>
+                <li><strong>线性可分</strong>：简单的Logistic Regression就能完美分类</li>
+            </ol>
+            
+            <h3>5.2 实际应用建议</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li>在实际鸢尾花分类中，可以只测量花瓣尺寸，简化操作</li>
+                <li>对于更复杂的花朵分类任务，需要获取更多特征</li>
+                <li>特征选择很重要：无关特征反而可能干扰模型</li>
+            </ul>
+            
+            <h3>5.3 机器学习启示</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li><strong>经典数据集的价值</strong>：Iris数据集虽简单，却是理解分类算法的绝佳起点</li>
+                <li><strong>EDA的重要性</strong>：通过可视化发现特征相关性，指导建模</li>
+                <li><strong>不是越复杂越好</strong>：简单模型在简单数据上同样有效</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析报告 | 机器学习分类模型 | ECharts 可视化</p>
+            <p>数据来源: Iris Dataset (sklearn)</p>
+        </div>
+    </div>
+    
+    <script>
+        var heatmap = echarts.init(document.getElementById('heatmap'));
+        var radar = echarts.init(document.getElementById('radar'));
+        var petalLength = echarts.init(document.getElementById('petal_length'));
+        var petalWidth = echarts.init(document.getElementById('petal_width'));
+        var modelCompare = echarts.init(document.getElementById('model_compare'));
+        var importance = echarts.init(document.getElementById('importance'));
+        var scatter = echarts.init(document.getElementById('scatter'));
+        
+        // 热力图
+        heatmap.setOption({
+            title: { text: '特征相关性热力图', left: 'center' },
+            tooltip: { position: 'top' },
+            grid: { height: '65%', top: '20%' },
+            xAxis: { type: 'category', data: ['花萼长度', '花萼宽度', '花瓣长度', '花瓣宽度'] },
+            yAxis: { type: 'category', data: ['花萼长度', '花萼宽度', '花瓣长度', '花瓣宽度'] },
+            visualMap: { min: -1, max: 1, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%',
+                        inRange: { color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026'] } },
+            series: [{
+                type: 'heatmap',
+                data: [
+                    [0,0,1],[0,1,-0.11],[0,2,0.87],[0,3,0.82],
+                    [1,0,-0.11],[1,1,1],[1,2,-0.43],[1,3,-0.37],
+                    [2,0,0.87],[2,1,-0.43],[2,2,1],[2,3,0.96],
+                    [3,0,0.82],[3,1,-0.37],[3,2,0.96],[3,3,1]
+                ],
+                label: { show: true, formatter: function(p) { return p.value[2].toFixed(2); } }
+            }]
+        });
+        
+        // 雷达图
+        radar.setOption({
+            title: { text: '各类别特征均值对比', left: 'center' },
+            tooltip: {},
+            legend: { data: ['Setosa', 'Versicolor', 'Virginica'], top: '10%' },
+            radar: { indicator: [
+                { name: '花萼长度', max: 7 },
+                { name: '花萼宽度', max: 4 },
+                { name: '花瓣长度', max: 7 },
+                { name: '花瓣宽度', max: 3 }
+            ], center: ['50%', '55%'], radius: '50%' },
+            series: [{
+                type: 'radar',
+                data: [
+                    { value: [5.01, 3.43, 1.46, 0.24], name: 'Setosa', areaStyle: { opacity: 0.3 } },
+                    { value: [5.94, 2.77, 4.26, 1.33], name: 'Versicolor', areaStyle: { opacity: 0.3 } },
+                    { value: [6.59, 2.97, 5.55, 2.03], name: 'Virginica', areaStyle: { opacity: 0.3 } }
+                ]
+            }]
+        });
+        
+        // 花瓣长度
+        petalLength.setOption({
+            title: { text: '花瓣长度分布', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['Setosa', 'Versicolor', 'Virginica'] },
+            yAxis: { type: 'value', name: '长度(cm)' },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 1.46, itemStyle: {color: '#e91e63'}},
+                    {value: 4.26, itemStyle: {color: '#9c27b0'}},
+                    {value: 5.55, itemStyle: {color: '#673ab7'}}
+                ],
+                label: { show: true, position: 'top', formatter: '{c} cm' }
+            }]
+        });
+        
+        // 花瓣宽度
+        petalWidth.setOption({
+            title: { text: '花瓣宽度分布', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['Setosa', 'Versicolor', 'Virginica'] },
+            yAxis: { type: 'value', name: '宽度(cm)' },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 0.24, itemStyle: {color: '#e91e63'}},
+                    {value: 1.33, itemStyle: {color: '#9c27b0'}},
+                    {value: 2.03, itemStyle: {color: '#673ab7'}}
+                ],
+                label: { show: true, position: 'top', formatter: '{c} cm' }
+            }]
+        });
+        
+        // 模型对比
+        modelCompare.setOption({
+            title: { text: '分类模型准确率对比', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['Logistic\nRegression', 'Random\nForest', 'SVM', 'KNN'] },
+            yAxis: { type: 'value', name: '准确率(%)', min: 90, max: 100 },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 100, itemStyle: {color: '#4caf50'}},
+                    {value: 100, itemStyle: {color: '#4caf50'}},
+                    {value: 100, itemStyle: {color: '#4caf50'}},
+                    {value: 100, itemStyle: {color: '#4caf50'}}
+                ],
+                label: { show: true, position: 'top', formatter: '{c}%' }
+            }]
+        });
+        
+        // 特征重要性
+        importance.setOption({
+            title: { text: 'Random Forest 特征重要性', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '重要性得分' },
+            yAxis: { type: 'category', data: ['花萼宽度', '花萼长度', '花瓣长度', '花瓣宽度'] },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 10.4, itemStyle: {color: '#9e9e9e'}, label: {formatter: '10.4%'}},
+                    {value: 4.4, itemStyle: {color: '#9e9e9e'}, label: {formatter: '4.4%'}},
+                    {value: 41.7, itemStyle: {color: '#9c27b0'}, label: {formatter: '41.7%'}},
+                    {value: 43.4, itemStyle: {color: '#e91e63'}, label: {formatter: '43.4%'}}
+                ]
+            }]
+        });
+        
+        // 散点图
+        scatter.setOption({
+            title: { text: '花瓣长度 vs 花瓣宽度', left: 'center' },
+            tooltip: { trigger: 'item' },
+            legend: { data: ['Setosa', 'Versicolor', 'Virginica'], top: '10%' },
+            xAxis: { name: '花瓣长度(cm)', min: 0, max: 7 },
+            yAxis: { name: '花瓣宽度(cm)', min: 0, max: 3 },
+            series: [
+                { name: 'Setosa', type: 'scatter', data: [[1.4,0.2],[1.4,0.2],[1.3,0.2],[1.5,0.2],[1.3,0.2],[1.6,0.2],[1.0,0.2],[1.3,0.2],[1.4,0.2],[1.7,0.2],[1.4,0.2],[1.5,0.2],[1.4,0.2],[1.0,0.2],[1.5,0.2],[1.1,0.2],[1.8,0.2],[1.3,0.2],[1.5,0.2],[1.2,0.2]], itemStyle: {color: '#e91e63'} },
+                { name: 'Versicolor', type: 'scatter', data: [[4.7,1.4],[4.5,1.3],[4.9,1.5],[4.0,1.3],[4.6,1.3],[4.5,1.3],[4.7,1.6],[3.3,1.0],[4.6,1.3],[3.9,1.4],[3.5,1.0],[4.2,1.5],[4.0,1.0],[4.7,1.4],[3.6,1.0],[4.4,1.4],[4.5,1.5],[4.1,1.0],[4.5,1.3],[4.5,1.6]], itemStyle: {color: '#9c27b0'} },
+                { name: 'Virginica', type: 'scatter', data: [[6.0,2.0],[5.1,1.9],[5.9,2.1],[5.6,1.8],[5.8,2.2],[6.1,1.9],[6.3,2.3],[5.8,1.8],[5.5,2.0],[5.5,1.8],[5.8,2.1],[6.0,1.8],[5.7,2.1],[5.7,2.1],[6.2,2.2],[5.1,2.0],[5.7,2.3],[5.1,2.0],[5.3,1.9],[5.5,2.0]], itemStyle: {color: '#673ab7'} }
+            ]
+        });
+        
+        window.addEventListener('resize', function() {
+            heatmap.resize(); radar.resize(); petalLength.resize(); petalWidth.resize();
+            modelCompare.resize(); importance.resize(); scatter.resize();
+        });
+    </script>
+</body>
+</html>

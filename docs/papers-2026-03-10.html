@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI论文速递 2026-03-10</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-10</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2><div class="paper">
+<h3>1. BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations<span class="title-cn">➡️ BEVLM：将 LLMs 中的语义知识提炼为鸟瞰图表示</span></h3>
+<p class="meta">👤 Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen</p>
+<div class="abstract">
+<p class="abstract-en">📄 The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoni...</p>
+<p class="abstract-cn">📄 大型语言模型（LLMs）与自动驾驶的集成因其强大的推理和语义理解能力而引起了越来越多的兴趣，这对于处理复杂的决策和长尾场景至关重要。然而，现有方法通常独立地向 LLMs 提供来自多视图和多帧图像的标记，导致冗余计算和有限的空间一致性。视觉处理中的这种分离阻碍了准确的 3D 空间推理...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06576v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. A class of d-dimensional directed polymers in a Gaussian environment<span class="title-cn">➡️ 高斯环境中的一类 d 维定向聚合物</span></h3>
+<p class="meta">👤 Le Chen, Cheng Ouyang, Samy Tindel</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce and analyze a broad class of continuous directed polymers in $\mathbb{R}^d$ driven by Gaussian environments that are white in time and spatially correlated, under Dalang's condition. Using an Itô-renormalized stochastic-heat-equation representation, we establish structural properties of the partition function, including positivity, stationarity, scaling, homogeneity, and a Chapman--Kolmogorov relation. On finite time intervals, we prove Brownian-type pathwise behavior, namely Hölder...</p>
+<p class="abstract-cn">📄 我们介绍并分析了由高斯环境驱动的 $\mathbb{R}^d$ 中的一类连续定向聚合物，这些聚合物在 Dalang 条件下在时间和空间上相关，是白色的。使用 Itô 重整化随机热方程表示，我们建立了配分函数的结构特性，包括正性、平稳性、标度、同质性和 Chapman-Kolmogorov 关系。在有限时间间隔上，我们证明了布朗型路径行为，即 Hölder...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06574v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking<span class="title-cn">➡️ EgoReasoner：通过任务自适应结构化思维学习以自我为中心的 4D 推理</span></h3>
+<p class="meta">👤 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
+<div class="abstract">
+<p class="abstract-en">📄 Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spa...</p>
+<p class="abstract-cn">📄 由于环境的动态 4D 性质，以自我为中心的视频理解本质上是复杂的，其中摄像机运动和物体位移需要不断地重新评估空间关系。在这项工作中，我们的目标是一套尚未探索的以自我为中心的 4D 推理任务，包括夹具交互计数、相对于视点的夹具位置、物体运动行程跟踪和静止物体定位，这些任务需要根本不同的认知操作：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation<span class="title-cn">➡️ 范围：场景上下文增量少镜头 3D 分割</span></h3>
+<p class="meta">👤 Vishal Thengane, Zhaochong An, Tianjin Huang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-pla...</p>
+<p class="abstract-cn">📄 增量少样本（IFS）分割旨在随着时间的推移仅从少量注释中学习新类别。尽管在 2D 领域得到了广泛的研究，但对于 3D 点云的研究仍然不足。现有的方法遭受灾难性遗忘或无法在稀疏监督下学习有区别的原型，并且经常忽略一个关键线索：新类别经常在基础训练场景中作为未标记的背景出现。我们推出 SCOPE（场景上下文化原型丰富），一个即插即用的工具...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06572v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Third-order mixed electroweak-QCD corrections to the W-boson mass prediction from the muon lifetime<span class="title-cn">➡️ 根据 μ 子寿命对 W 玻色子质量预测进行三阶混合电弱 QCD 校正</span></h3>
+<p class="meta">👤 Ievgen Dubovyk, Ayres Freitas, Janusz Gluza</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present the calculation of the so far missing ${\cal O}(α^2α_\mathrm{s})$ corrections to the quantity $Δr$, which relates the Fermi constant to the W-boson mass, and enables precision predictions of the latter. While the ${\cal O}(α^2α_\mathrm{s})$ corrections from diagrams with two closed fermion loops are already known, we here focus on the subset with one closed fermion loop, which is a substantially more complex problem. The calculation has been carried out through a combination of analyt...</p>
+<p class="abstract-cn">📄 我们提出了迄今为止缺失的 ${\cal O}(α^2α_\mathrm{s})$ 对量 $Δr$ 的修正的计算，它将费米常数与 W 玻色子质量联系起来，并能够精确预测后者。虽然我们已经知道具有两个闭合费米子环的图的 ${\cal O}(α^2α_\mathrm{s})$ 修正，但我们在这里重点关注具有一个闭合费米子环的子集，这是一个更加复杂的问题。该计算是通过分析的组合进行的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06571v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning<span class="title-cn">➡️ SUREON：手术推理的基准和视觉语言模型</span></h3>
+<p class="meta">👤 Alejandra Perez, Anita Rau, Lee White</p>
+<div class="abstract">
+<p class="abstract-en">📄 Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by ex...</p>
+<p class="abstract-cn">📄 外科医生不只是看，他们还解释。当专家观察手术场景时，他们不仅了解正在使用的仪器，还了解为什么选择它、它会带来什么风险以及接下来会发生什么。当前的外科 AI 无法回答此类问题，很大程度上是因为显式编码外科推理的训练数据很难大规模注释。然而，外科视频讲座已经包含了这一点——对意图、基本原理和预期的解释，由前任讲述...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06570v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Multimodal Large Language Models as Image Classifiers<span class="title-cn">➡️ 作为图像分类器的多模态大型语言模型</span></h3>
+<p class="meta">👤 Nikita Kisel, Illia Volkov, Klara Janouskova</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results...</p>
+<p class="abstract-cn">📄 多模态大语言模型 (MLLM) 分类性能主要取决于评估协议和地面实况质量。将 MLLMs 与监督模型和视觉语言模型进行比较的研究报告了相互矛盾的结论，我们表明这些冲突源于夸大或低估性能的协议。在最常见的评估协议中，我们识别并解决关键问题：模型输出超出所提供的类别列表并被丢弃，夸大的结果...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06578v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion<span class="title-cn">➡️ Omni-Diffusion：使用屏蔽离散 Diffusion 进行统一多模态理解和生成</span></h3>
+<p class="meta">👤 Lijiang Li, Zuwei Long, Yunhang Shen</p>
+<div class="abstract">
+<p class="abstract-en">📄 While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal ...</p>
+<p class="abstract-cn">📄 虽然最近的多模态大语言模型（MLLMs）取得了令人印象深刻的进步，但它们主要采用传统的自回归架构作为其支柱，为探索架构设计中有效和高效的替代方案留下了很大的空间。同时，最近的研究已成功地将离散扩散模型应用于各个领域，例如视觉理解和图像生成，揭示了它们作为多模态主干的巨大潜力...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Fly360: Omnidirectional Obstacle Avoidance within Drone View<span class="title-cn">➡️ Fly360：无人机视野内全方位避障</span></h3>
+<p class="meta">👤 Xiangkai Zhang, Dizhe Zhang, WenZhuo Cao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view ...</p>
+<p class="abstract-cn">📄 随着人们对空间智能的日益关注，无人机（UAV）的避障作为一项基本能力越来越受到关注。然而，目前的避障方法主要依赖于有限视场传感器，不适合无人机在运动方向与航向不同时需要全空间感知的场景。这一限制促使我们探索全视角全景无人机的全向避障...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06573v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention<span class="title-cn">➡️ 基于注意力的可扩展 MLIP 的秘诀：通过全节点注意力解锁远程准确性</span></h3>
+<p class="meta">👤 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 millio...</p>
+<p class="abstract-cn">📄 机器学习原子间势 (MLIPs) 发展迅速，许多顶级模型都依赖于强大的基于物理的归纳偏差。然而，随着模型扩展到生物分子和电解质等更大的系统，它们很难准确捕获长程 (LR) 相互作用，导致当前的方法依赖于明确的基于物理的术语或组件。在这项工作中，我们提出了 AllScAIP，一种简单的、基于注意力的、节能的 MLIP 模型，可扩展至 O(100 millio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🖼️ 计算机视觉</h2><div class="paper">
+<h3>1. Causal Interpretation of Neural Network Computations with Contribution Decomposition<span class="title-cn">➡️ 贡献分解神经网络计算的因果解释</span></h3>
+<p class="meta">👤 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse mo...</p>
+<p class="abstract-cn">📄 了解神经网络如何将输入转换为输出对于解释和操纵其行为至关重要。大多数现有方法通过识别与人类可解释概念相关的隐藏层激活模式来分析内部表示。在这里，我们采用直接方法来检查隐藏神经元如何驱动网络输出。我们引入 CODEC（贡献分解），一种使用稀疏自动编码器将网络行为分解为稀疏模型的方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention<span class="title-cn">➡️ 基于注意力的可扩展 MLIP 的秘诀：通过全节点注意力解锁远程准确性</span></h3>
+<p class="meta">👤 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 millio...</p>
+<p class="abstract-cn">📄 机器学习原子间势 (MLIPs) 发展迅速，许多顶级模型都依赖于强大的基于物理的归纳偏差。然而，随着模型扩展到生物分子和电解质等更大的系统，它们很难准确捕获长程 (LR) 相互作用，导致当前的方法依赖于明确的基于物理的术语或组件。在这项工作中，我们提出了 AllScAIP，一种简单的、基于注意力的、节能的 MLIP 模型，可扩展至 O(100 millio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking<span class="title-cn">➡️ EgoReasoner：通过任务自适应结构化思维学习以自我为中心的 4D 推理</span></h3>
+<p class="meta">👤 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
+<div class="abstract">
+<p class="abstract-en">📄 Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spa...</p>
+<p class="abstract-cn">📄 由于环境的动态 4D 性质，以自我为中心的视频理解本质上是复杂的，其中摄像机运动和物体位移需要不断地重新评估空间关系。在这项工作中，我们的目标是一套尚未探索的以自我为中心的 4D 推理任务，包括夹具交互计数、相对于视点的夹具位置、物体运动行程跟踪和静止物体定位，这些任务需要根本不同的认知操作：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Fly360: Omnidirectional Obstacle Avoidance within Drone View<span class="title-cn">➡️ Fly360：无人机视野内全方位避障</span></h3>
+<p class="meta">👤 Xiangkai Zhang, Dizhe Zhang, WenZhuo Cao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view ...</p>
+<p class="abstract-cn">📄 随着人们对空间智能的日益关注，无人机（UAV）的避障作为一项基本能力越来越受到关注。然而，目前的避障方法主要依赖于有限视场传感器，不适合无人机在运动方向与航向不同时需要全空间感知的场景。这一限制促使我们探索全视角全景无人机的全向避障...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06573v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. The Pen: Episodic Cognitive Assistance via an Ear-Worn Interface<span class="title-cn">➡️ The Pen：通过耳戴式界面提供情景认知辅助</span></h3>
+<p class="meta">👤 Yonatan Tussa, Andy Heredia</p>
+<div class="abstract">
+<p class="abstract-en">📄 Wearable AI is often designed as always-available, yet continuous availability can conflict with how people work and socialize, creating discomfort around privacy, disruption, and unclear system boundaries. This paper explores episodic use of wearable AI, where assistance is intentionally invoked for short periods of focused activity and set aside when no longer needed, with a form factor that reflects this paradigm of wearing and taking off a device between sessions. We present The Pen, an ear-...</p>
+<p class="abstract-cn">📄 可穿戴设备 AI 通常被设计为始终可用，但持续可用性可能与人们的工作和社交方式发生冲突，从而在隐私、中断和不明确的系统边界方面造成不适。本文探讨了可穿戴设备 AI 的间歇性使用，即在短期集中活动时有意调用辅助功能，并在不再需要时将其搁置起来，其外形尺寸反映了在会话之间佩戴和脱下设备的这种范例。我们推出了 The Pen，一种耳朵...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06564v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders<span class="title-cn">➡️ Penguin-VL：使用基于 LLM 的视觉编码器探索 VLM 的效率极限</span></h3>
+<p class="meta">👤 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized fo...</p>
+<p class="abstract-cn">📄 视觉语言模型 (VLM) 的开发在很大程度上依赖于缩放模型大小，这阻碍了在计算受限的移动和边缘设备（例如智能手机和机器人）上的部署。在这项工作中，我们探讨了紧凑型（例如 2B 和 8B）VLM 的性能限制。我们挑战了流行的做法，即最先进的 VLM 必须依赖于通过大规模对比预训练（例如 CLIP/SigLIP）初始化的视觉编码器。我们发现了一个客观的不匹配：对比学习，优化...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Sampling-based Continuous Optimization for Messenger RNA Design<span class="title-cn">➡️ 基于采样的信使 RNA 设计连续优化</span></h3>
+<p class="meta">👤 Feipeng Yue, Ning Dai, Wei Yu Tang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Designing messenger RNA (mRNA) sequences for a fixed target protein requires searching an exponentially large synonymous space while optimizing properties that affect stability and downstream performance. This is challenging because practical mRNA design involves multiple coupled objectives beyond classical folding criteria, and different applications prefer different trade-offs. We propose a general sampling-based continuous optimization framework, inspired by SamplingDesign, that iteratively s...</p>
+<p class="abstract-cn">📄 为固定靶蛋白设计信使 RNA (mRNA) 序列需要搜索指数级大的同义空间，同时优化影响稳定性和下游性能的特性。这是具有挑战性的，因为实际的 mRNA 设计涉及超出经典折叠标准的多个耦合目标，并且不同的应用更喜欢不同的权衡。受 SamplingDesign 的启发，我们提出了一个基于采样的通用连续优化框架，该框架迭代地...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06559v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. An ode to instantons<span class="title-cn">➡️ 瞬子颂歌</span></h3>
+<p class="meta">👤 Oliver Janssen, Joel Karlsson, Flavio Riccardi</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the "bounce" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of...</p>
+<p class="abstract-cn">📄 我们在一个世纪的工作基础上提出了量子力学中半经典时间演化的形式主义。我们实时识别复杂鞍点、复杂时间中的真实鞍点以及复杂时间中的复杂鞍点，重现经典问题中的已知答案。对于亚稳态的衰变，我们发现“弹跳”的有限时间和有限能量类似物，它们没有严格的零或负模式。波函数的单环相位和重数...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06575v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations<span class="title-cn">➡️ BEVLM：将 LLMs 中的语义知识提炼为鸟瞰图表示</span></h3>
+<p class="meta">👤 Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen</p>
+<div class="abstract">
+<p class="abstract-en">📄 The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoni...</p>
+<p class="abstract-cn">📄 大型语言模型（LLMs）与自动驾驶的集成因其强大的推理和语义理解能力而引起了越来越多的兴趣，这对于处理复杂的决策和长尾场景至关重要。然而，现有方法通常独立地向 LLMs 提供来自多视图和多帧图像的标记，导致冗余计算和有限的空间一致性。视觉处理中的这种分离阻碍了准确的 3D 空间推理...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06576v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Boosting deep Reinforcement Learning using pretraining with Logical Options<span class="title-cn">➡️ 使用带有逻辑选项的预训练来促进深度强化学习</span></h3>
+<p class="meta">👤 Zihan Ye, Phil Chau, Raban Emunds</p>
+<div class="abstract">
+<p class="abstract-en">📄 Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based ...</p>
+<p class="abstract-cn">📄 深度强化学习代理通常会出现偏差，因为它们过度利用早期奖励信号。最近，一些符号方法通过编码稀疏目标和一致的计划来解决这些挑战。然而，纯粹的象征性建筑规模复杂，难以应用于连续的环境。因此，我们提出了一种混合方法，其灵感来自于人类获得新技能的能力。我们使用一个两阶段框架，将符号结构注入基于神经的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06565v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎨 多模态学习</h2><div class="paper">
+<h3>1. Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders<span class="title-cn">➡️ Penguin-VL：使用基于 LLM 的视觉编码器探索 VLM 的效率极限</span></h3>
+<p class="meta">👤 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized fo...</p>
+<p class="abstract-cn">📄 视觉语言模型 (VLM) 的开发在很大程度上依赖于缩放模型大小，这阻碍了在计算受限的移动和边缘设备（例如智能手机和机器人）上的部署。在这项工作中，我们探讨了紧凑型（例如 2B 和 8B）VLM 的性能限制。我们挑战了流行的做法，即最先进的 VLM 必须依赖于通过大规模对比预训练（例如 CLIP/SigLIP）初始化的视觉编码器。我们发现了一个客观的不匹配：对比学习，优化...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion<span class="title-cn">➡️ Omni-Diffusion：使用屏蔽离散 Diffusion 进行统一多模态理解和生成</span></h3>
+<p class="meta">👤 Lijiang Li, Zuwei Long, Yunhang Shen</p>
+<div class="abstract">
+<p class="abstract-en">📄 While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal ...</p>
+<p class="abstract-cn">📄 虽然最近的多模态大语言模型（MLLMs）取得了令人印象深刻的进步，但它们主要采用传统的自回归架构作为其支柱，为探索架构设计中有效和高效的替代方案留下了很大的空间。同时，最近的研究已成功地将离散扩散模型应用于各个领域，例如视觉理解和图像生成，揭示了它们作为多模态主干的巨大潜力...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing<span class="title-cn">➡️ 超越行推理：多模式电子表格理解和编辑的代理检索</span></h3>
+<p class="meta">👤 Anmol Gulati, Sahil Sen, Waqar Sarguroh</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterpri...</p>
+<p class="abstract-cn">📄 多模式检索增强生成 (RAG) 的最新进展使大型语言模型 (LLMs) 能够分析包含数百万个单元格、跨工作表依赖性和嵌入式视觉工件的企业电子表格工作簿。然而，最先进的方法通过单遍检索排除关键上下文，通过压缩丢失数据分辨率，并通过朴素的全上下文注入超过 LLM 上下文窗口，从而阻碍了对复杂企业的可靠多步骤推理。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06503v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Multimodal Large Language Models as Image Classifiers<span class="title-cn">➡️ 作为图像分类器的多模态大型语言模型</span></h3>
+<p class="meta">👤 Nikita Kisel, Illia Volkov, Klara Janouskova</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results...</p>
+<p class="abstract-cn">📄 多模态大语言模型 (MLLM) 分类性能主要取决于评估协议和地面实况质量。将 MLLMs 与监督模型和视觉语言模型进行比较的研究报告了相互矛盾的结论，我们表明这些冲突源于夸大或低估性能的协议。在最常见的评估协议中，我们识别并解决关键问题：模型输出超出所提供的类别列表并被丢弃，夸大的结果...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06578v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Adapter-Augmented Bandits for Online Multi-Constrained Multi-Modal Inference Scheduling<span class="title-cn">➡️ 用于在线多约束多模态推理调度的适配器增强老虎机</span></h3>
+<p class="meta">👤 Xianzhi Zhang, Yue Xu, Yinlin Zhu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multi-modal large language model (MLLM) inference scheduling enables strong response quality under practical and heterogeneous budgets, beyond what a homogeneous single-backend setting can offer. Yet online MLLM task scheduling is nontrivial, as requests vary sharply in modality composition and latent reasoning difficulty, while execution backends incur distinct, time-varying costs due to system jitter and network variation. These coupled uncertainties pose two core challenges: deriving semantic...</p>
+<p class="abstract-cn">📄 多模态大语言模型 (MLLM) 推理调度可在实际和异构预算下实现强大的响应质量，超出同构单后端设置所能提供的范围。然而，在线 MLLM 任务调度并不简单，因为请求在模态组成和潜在推理难度方面差异很大，而执行后端由于系统抖动和网络变化而产生明显的、随时间变化的成本。这些耦合的不确定性带来了两个核心挑战：推导语义...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06403v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Pinterest Canvas: Large-Scale Image Generation at Pinterest<span class="title-cn">➡️ Pinterest Canvas：Pinterest 的大规模图像生成</span></h3>
+<p class="meta">👤 Yu Wang, Eric Tzeng, Raymond Shiau</p>
+<div class="abstract">
+<p class="abstract-en">📄 While recent image generation models demonstrate a remarkable ability to handle a wide variety of image generation tasks, this flexibility makes them hard to control via prompting or simple inference adaptation alone, rendering them unsuitable for use cases with strict product requirements. In this paper, we introduce Pinterest Canvas, our large-scale image generation system built to support image editing and enhancement use cases at Pinterest. Canvas is first trained on a diverse, multimodal da...</p>
+<p class="abstract-cn">📄 虽然最近的图像生成模型表现出处理各种图像生成任务的卓越能力，但这种灵活性使得它们很难仅通过提示或简单的推理适应来控制，从而使它们不适合具有严格产品要求的用例。在本文中，我们介绍了 Pinterest Canvas，这是我们为支持 Pinterest 的图像编辑和增强用例而构建的大型图像生成系统。 Canvas 首先在多样化、多模式的数据上进行训练...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06453v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models<span class="title-cn">➡️ 当一种模态统治所有模态时：多模态 Diffusion 模型中的后门模态崩溃</span></h3>
+<p class="meta">👤 Qitong Wang, Haoran Dai, Haotian Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 While diffusion models have revolutionized visual content generation, their rapid adoption has underscored the critical need to investigate vulnerabilities, e.g., to backdoor attacks. In multimodal diffusion models, it is natural to expect that attacking multiple modalities simultaneously (e.g., text and image) would yield complementary effects and strengthen the overall backdoor. In this paper, we challenge this assumption by investigating the phenomenon of Backdoor Modality Collapse, a scenari...</p>
+<p class="abstract-cn">📄 虽然扩散模型彻底改变了视觉内容的生成，但它们的快速采用凸显了调查漏洞（例如后门攻击）的迫切需要。在多模态扩散模型中，很自然地期望同时攻击多种模态（例如文本和图像）会产生互补效应并加强整体后门。在本文中，我们通过调查后门模态崩溃现象（一种场景）来挑战这一假设...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06508v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. The EpisTwin: A Knowledge Graph-Grounded Neuro-Symbolic Architecture for Personal AI<span class="title-cn">➡️ EpisTwin：基于知识图谱的个人神经符号架构 AI</span></h3>
+<p class="meta">👤 Giovanni Servedio, Potito Aghilar, Alessio Mattiac</p>
+<div class="abstract">
+<p class="abstract-en">📄 Personal Artificial Intelligence is currently hindered by the fragmentation of user data across isolated silos. While Retrieval-Augmented Generation offers a partial remedy, its reliance on unstructured vector similarity fails to capture the latent semantic topology and temporal dependencies essential for holistic sensemaking. We introduce EpisTwin, a neuro-symbolic framework that grounds generative reasoning in a verifiable, user-centric Personal Knowledge Graph. EpisTwin leverages Multimodal L...</p>
+<p class="abstract-cn">📄 目前，个人人工智能因用户数据分散在孤立的孤岛中而受到阻碍。虽然检索增强生成提供了部分补救措施，但它对非结构化向量相似性的依赖无法捕获整体意义构建所必需的潜在语义拓扑和时间依赖性。我们介绍 EpisTwin，这是一种神经符号框架，它将生成推理建立在可验证的、以用户为中心的个人知识图谱中。 EpisTwin 利用 Multimodal L...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06290v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. History-Conditioned Spatio-Temporal Visual Token Pruning for Efficient Vision-Language Navigation<span class="title-cn">➡️ 用于高效视觉语言导航的历史条件时空视觉标记修剪</span></h3>
+<p class="meta">👤 Qitong Wang, Yijun Liang, Ming Li</p>
+<div class="abstract">
+<p class="abstract-en">📄 Vision-Language Navigation (VLN) enables robots to follow natural-language instructions in visually grounded environments, serving as a key capability for embodied robotic systems. Recent Vision-Language-Action (VLA) models have demonstrated strong navigation performance, but their high computational cost introduces latency that limits real-time deployment. We propose a training-free spatio-temporal vision token pruning framework tailored to VLA-based VLN. We apply spatial token selection to the...</p>
+<p class="abstract-cn">📄 视觉语言导航 (VLN) 使机器人能够在视觉环境中遵循自然语言指令，这是实体机器人系统的一项关键功能。最近的视觉-语言-动作（VLA）模型表现出了强大的导航性能，但其高计算成本会带来限制实时部署的延迟。我们提出了一个针对基于 VLA 的 VLN 量身定制的免训练时空视觉令牌修剪框架。我们将空间标记选择应用于...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06480v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Underactuated multimodal jumping robot for extraterrestrial exploration<span class="title-cn">➡️ 用于外星探索的欠驱动多模式跳跃机器人</span></h3>
+<p class="meta">👤 Neil R. Wagner, Justin K. Yim</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present a rolling and jumping underactuated monopedal robot designed to explore multimodal locomotion on low-gravity bodies. It uses only two reaction wheels to control its spatial orientation with two controllers: a balancing controller which can aim the robot's jump direction on the ground, and an aerial reorientation controller which can aim the robot's leg for landing after flight. We demonstrate rolling, targeted jumping and landing, and self-righting using only three actuators total, ke...</p>
+<p class="abstract-cn">📄 我们提出了一种滚动和跳跃欠驱动单足机器人，旨在探索低重力物体上的多模式运动。它仅使用两个反作用轮来通过两个控制器来控制其空间方向：一个平衡控制器可以将机器人的跳跃方向瞄准地面，另一个空中重定向控制器可以在飞行后瞄准机器人的腿部着陆。我们仅使用三个执行器演示滚动、有针对性的跳跃和着陆以及自动扶正，ke...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06525v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📊 新数据集</h2><div class="paper">
+<h3>1. Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion<span class="title-cn">➡️ Omni-Diffusion：使用屏蔽离散 Diffusion 进行统一多模态理解和生成</span></h3>
+<p class="meta">👤 Lijiang Li, Zuwei Long, Yunhang Shen</p>
+<div class="abstract">
+<p class="abstract-en">📄 While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal ...</p>
+<p class="abstract-cn">📄 虽然最近的多模态大语言模型（MLLMs）取得了令人印象深刻的进步，但它们主要采用传统的自回归架构作为其支柱，为探索架构设计中有效和高效的替代方案留下了很大的空间。同时，最近的研究已成功地将离散扩散模型应用于各个领域，例如视觉理解和图像生成，揭示了它们作为多模态主干的巨大潜力...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning<span class="title-cn">➡️ SUREON：手术推理的基准和视觉语言模型</span></h3>
+<p class="meta">👤 Alejandra Perez, Anita Rau, Lee White</p>
+<div class="abstract">
+<p class="abstract-en">📄 Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by ex...</p>
+<p class="abstract-cn">📄 外科医生不只是看，他们还解释。当专家观察手术场景时，他们不仅了解正在使用的仪器，还了解为什么选择它、它会带来什么风险以及接下来会发生什么。当前的外科 AI 无法回答此类问题，很大程度上是因为显式编码外科推理的训练数据很难大规模注释。然而，外科视频讲座已经包含了这一点——对意图、基本原理和预期的解释，由前任讲述...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06570v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. SurgFormer: Scalable Learning of Organ Deformation with Resection Support and Real-Time Inference<span class="title-cn">➡️ SurgFormer：具有切除支持和实时推理的器官变形的可扩展学习</span></h3>
+<p class="meta">👤 Ashkan Shahbazi, Elaheh Akbari, Kyvia Pereira</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce SurgFormer, a multiresolution gated transformer for data driven soft tissue simulation on volumetric meshes. High fidelity biomechanical solvers are often too costly for interactive use, so we train SurgFormer on solver generated data to predict nodewise displacement fields at near real time rates. SurgFormer builds a fixed mesh hierarchy and applies repeated multibranch blocks that combine local message passing, coarse global self attention, and pointwise feedforward updates, fused...</p>
+<p class="abstract-cn">📄 我们推出了 SurgFormer，这是一种多分辨率门控转换器，用于在体积网格上进行数据驱动的软组织模拟。高保真度生物力学求解器对于交互式使用来说通常成本太高，因此我们在求解器生成的数据上训练 SurgFormer，以接近实时的速率预测节点位移场。 SurgFormer 构建固定的网格层次结构，并应用重复的多分支块，这些块结合了本地消息传递、粗略全局自关注和逐点前馈更新、融合...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06543v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Causal Interpretation of Neural Network Computations with Contribution Decomposition<span class="title-cn">➡️ 贡献分解神经网络计算的因果解释</span></h3>
+<p class="meta">👤 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse mo...</p>
+<p class="abstract-cn">📄 了解神经网络如何将输入转换为输出对于解释和操纵其行为至关重要。大多数现有方法通过识别与人类可解释概念相关的隐藏层激活模式来分析内部表示。在这里，我们采用直接方法来检查隐藏神经元如何驱动网络输出。我们引入 CODEC（贡献分解），一种使用稀疏自动编码器将网络行为分解为稀疏模型的方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Modeling and Measuring Redundancy in Multisource Multimodal Data for Autonomous Driving<span class="title-cn">➡️ 自动驾驶多源多模态数据中的冗余建模和测量</span></h3>
+<p class="meta">👤 Yuhan Zhou, Mehri Sattari, Haihua Chen</p>
+<div class="abstract">
+<p class="abstract-en">📄 Next-generation autonomous vehicles (AVs) rely on large volumes of multisource and multimodal ($M^2$) data to support real-time decision-making. In practice, data quality (DQ) varies across sources and modalities due to environmental conditions and sensor limitations, yet AV research has largely prioritized algorithm design over DQ analysis. This work focuses on redundancy as a fundamental but underexplored DQ issue in AV datasets. Using the nuScenes and Argoverse 2 (AV2) datasets, we model and ...</p>
+<p class="abstract-cn">📄 下一代自动驾驶汽车 (AV) 依赖大量多源和多模式 ($M^2$) 数据来支持实时决策。在实践中，由于环境条件和传感器限制，数据质量 (DQ) 因来源和模式而异，但自动驾驶研究在很大程度上优先考虑算法设计而不是 DQ 分析。这项工作的重点是冗余作为 AV 数据集中一个基本但尚未充分研究的 DQ 问题。使用 nuScenes 和 Argoverse 2 (AV2) 数据集，我们建模并...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06544v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Fly360: Omnidirectional Obstacle Avoidance within Drone View<span class="title-cn">➡️ Fly360：无人机视野内全方位避障</span></h3>
+<p class="meta">👤 Xiangkai Zhang, Dizhe Zhang, WenZhuo Cao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view ...</p>
+<p class="abstract-cn">📄 随着人们对空间智能的日益关注，无人机（UAV）的避障作为一项基本能力越来越受到关注。然而，目前的避障方法主要依赖于有限视场传感器，不适合无人机在运动方向与航向不同时需要全空间感知的场景。这一限制促使我们探索全视角全景无人机的全向避障...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06573v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking<span class="title-cn">➡️ EgoReasoner：通过任务自适应结构化思维学习以自我为中心的 4D 推理</span></h3>
+<p class="meta">👤 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
+<div class="abstract">
+<p class="abstract-en">📄 Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spa...</p>
+<p class="abstract-cn">📄 由于环境的动态 4D 性质，以自我为中心的视频理解本质上是复杂的，其中摄像机运动和物体位移需要不断地重新评估空间关系。在这项工作中，我们的目标是一套尚未探索的以自我为中心的 4D 推理任务，包括夹具交互计数、相对于视点的夹具位置、物体运动行程跟踪和静止物体定位，这些任务需要根本不同的认知操作：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations<span class="title-cn">➡️ 具有时间和不确定性解释的分层工业需求预测</span></h3>
+<p class="meta">👤 Harshavardhan Kamarthi, Shangqing Xu, Xinjie Tong</p>
+<div class="abstract">
+<p class="abstract-en">📄 Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challen...</p>
+<p class="abstract-cn">📄 分层时间序列预测对于各个行业的需求预测至关重要。虽然机器学习模型在此类预测任务上已经获得了显着的准确性和可扩展性，但其预测的可解释性（根据应用程序提供的信息）在很大程度上仍未得到探索。为了弥补这一差距，我们引入了一种用于大型分层概率时间序列预测的新型可解释性方法，采用通用可解释性技术，同时解决挑战...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06555v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. SG-DOR: Learning Scene Graphs with Direction-Conditioned Occlusion Reasoning for Pepper Plants<span class="title-cn">➡️ SG-DOR：利用方向条件遮挡推理学习胡椒植物的场景图</span></h3>
+<p class="meta">👤 Rohit Menon, Niklas Mueller-Goldingen, Sicong Pan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Robotic harvesting in dense crop canopies requires effective interventions that depend not only on geometry, but also on explicit, direction-conditioned relations identifying which organs obstruct a target fruit. We present SG-DOR (Scene Graphs with Direction-Conditioned Occlusion Reasoning), a relational framework that, given instance-segmented organ point clouds, infers a scene graph encoding physical attachments and direction-conditioned occlusion. We introduce an occlusion ranking task for r...</p>
+<p class="abstract-cn">📄 在茂密的作物冠层中进行机器人收割需要有效的干预措施，这些干预措施不仅取决于几何形状，还取决于明确的、方向条件关系，以确定哪些器官阻碍了目标水果。我们提出了 SG-DOR（具有方向条件遮挡推理的场景图），这是一个关系框架，在给定实例分割的器官点云的情况下，推断出编码物理附件和方向条件遮挡的场景图。我们引入了 r 的遮挡排名任务...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06512v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. NEGATE: Constrained Semantic Guidance for Linguistic Negation in Text-to-Video Diffusion<span class="title-cn">➡️ NEGATE：文本转视频中语言否定的约束语义指导 Diffusion</span></h3>
+<p class="meta">👤 Taewon Kang, Ming C. Lin</p>
+<div class="abstract">
+<p class="abstract-en">📄 Negation is a fundamental linguistic operator, yet it remains inadequately modeled in diffusion-based generative systems. In this work, we present a formal treatment of linguistic negation in diffusion-based generative models by modeling it as a structured feasibility constraint on semantic guidance within diffusion dynamics. Rather than introducing heuristics or retraining model parameters, we reinterpret classifier-free guidance as defining a semantic update direction and enforce negation by p...</p>
+<p class="abstract-cn">📄 否定是一种基本的语言运算符，但它在基于扩散的生成系统中仍然没有得到充分的建模。在这项工作中，我们通过将其建模为扩散动力学中语义指导的结构化可行性约束，提出了基于扩散的生成模型中语言否定的正式处理。我们没有引入启发式或重新训练模型参数，而是将无分类器指导重新解释为定义语义更新方向并通过 p 强制否定...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06533v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>✂️ 模型压缩</h2><div class="paper">
+<h3>1. SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation<span class="title-cn">➡️ 范围：场景上下文增量少镜头 3D 分割</span></h3>
+<p class="meta">👤 Vishal Thengane, Zhaochong An, Tianjin Huang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-pla...</p>
+<p class="abstract-cn">📄 增量少样本（IFS）分割旨在随着时间的推移仅从少量注释中学习新类别。尽管在 2D 领域得到了广泛的研究，但对于 3D 点云的研究仍然不足。现有的方法遭受灾难性遗忘或无法在稀疏监督下学习有区别的原型，并且经常忽略一个关键线索：新类别经常在基础训练场景中作为未标记的背景出现。我们推出 SCOPE（场景上下文化原型丰富），一个即插即用的工具...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06572v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning<span class="title-cn">➡️ SUREON：手术推理的基准和视觉语言模型</span></h3>
+<p class="meta">👤 Alejandra Perez, Anita Rau, Lee White</p>
+<div class="abstract">
+<p class="abstract-en">📄 Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by ex...</p>
+<p class="abstract-cn">📄 外科医生不只是看，他们还解释。当专家观察手术场景时，他们不仅了解正在使用的仪器，还了解为什么选择它、它会带来什么风险以及接下来会发生什么。当前的外科 AI 无法回答此类问题，很大程度上是因为显式编码外科推理的训练数据很难大规模注释。然而，外科视频讲座已经包含了这一点——对意图、基本原理和预期的解释，由前任讲述...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06570v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention<span class="title-cn">➡️ 基于注意力的可扩展 MLIP 的秘诀：通过全节点注意力解锁远程准确性</span></h3>
+<p class="meta">👤 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 millio...</p>
+<p class="abstract-cn">📄 机器学习原子间势 (MLIPs) 发展迅速，许多顶级模型都依赖于强大的基于物理的归纳偏差。然而，随着模型扩展到生物分子和电解质等更大的系统，它们很难准确捕获长程 (LR) 相互作用，导致当前的方法依赖于明确的基于物理的术语或组件。在这项工作中，我们提出了 AllScAIP，一种简单的、基于注意力的、节能的 MLIP 模型，可扩展至 O(100 millio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Data-Driven Trends and Subpopulations in the Gravitational Wave Binary Black Hole Merger Population with UMAP<span class="title-cn">➡️ UMAP 引力波二元黑洞合并种群中的数据驱动趋势和子种群</span></h3>
+<p class="meta">👤 A. J. Amsellem, I. Magaña Hernandez, A. Palmese</p>
+<div class="abstract">
+<p class="abstract-en">📄 The rapidly expanding Gravitational-Wave Transient Catalog (GWTC) necessitates the development of model-independent techniques to uncover trends and subpopulations within the binary black hole (BBH) population. We present the first usage of the Uniform Manifold Approximation and Projection (UMAP) algorithm, a novel dimensionality-reduction technique, for the purpose of analyzing BBH mergers in GWTC-3. We show that UMAP, paired with a clustering algorithm, effectively partitions the population in...</p>
+<p class="abstract-cn">📄 快速扩展的引力波瞬态目录（GWTC）需要开发独立于模型的技术来揭示双黑洞（BBH）群体中的趋势和子群体。我们首次使用统一流形逼近和投影 (UMAP) 算法（一种新颖的降维技术）来分析 GWTC-3 中的 BBH 合并。我们证明 UMAP 与聚类算法相结合，可以有效地将总体划分为...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06566v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Third-order mixed electroweak-QCD corrections to the W-boson mass prediction from the muon lifetime<span class="title-cn">➡️ 根据 μ 子寿命对 W 玻色子质量预测进行三阶混合电弱 QCD 校正</span></h3>
+<p class="meta">👤 Ievgen Dubovyk, Ayres Freitas, Janusz Gluza</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present the calculation of the so far missing ${\cal O}(α^2α_\mathrm{s})$ corrections to the quantity $Δr$, which relates the Fermi constant to the W-boson mass, and enables precision predictions of the latter. While the ${\cal O}(α^2α_\mathrm{s})$ corrections from diagrams with two closed fermion loops are already known, we here focus on the subset with one closed fermion loop, which is a substantially more complex problem. The calculation has been carried out through a combination of analyt...</p>
+<p class="abstract-cn">📄 我们提出了迄今为止缺失的 ${\cal O}(α^2α_\mathrm{s})$ 对量 $Δr$ 的修正的计算，它将费米常数与 W 玻色子质量联系起来，并能够精确预测后者。虽然我们已经知道具有两个闭合费米子环的图的 ${\cal O}(α^2α_\mathrm{s})$ 修正，但我们在这里重点关注具有一个闭合费米子环的子集，这是一个更加复杂的问题。该计算是通过分析的组合进行的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06571v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations<span class="title-cn">➡️ BEVLM：将 LLMs 中的语义知识提炼为鸟瞰图表示</span></h3>
+<p class="meta">👤 Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen</p>
+<div class="abstract">
+<p class="abstract-en">📄 The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoni...</p>
+<p class="abstract-cn">📄 大型语言模型（LLMs）与自动驾驶的集成因其强大的推理和语义理解能力而引起了越来越多的兴趣，这对于处理复杂的决策和长尾场景至关重要。然而，现有方法通常独立地向 LLMs 提供来自多视图和多帧图像的标记，导致冗余计算和有限的空间一致性。视觉处理中的这种分离阻碍了准确的 3D 空间推理...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06576v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders<span class="title-cn">➡️ Penguin-VL：使用基于 LLM 的视觉编码器探索 VLM 的效率极限</span></h3>
+<p class="meta">👤 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized fo...</p>
+<p class="abstract-cn">📄 视觉语言模型 (VLM) 的开发在很大程度上依赖于缩放模型大小，这阻碍了在计算受限的移动和边缘设备（例如智能手机和机器人）上的部署。在这项工作中，我们探讨了紧凑型（例如 2B 和 8B）VLM 的性能限制。我们挑战了流行的做法，即最先进的 VLM 必须依赖于通过大规模对比预训练（例如 CLIP/SigLIP）初始化的视觉编码器。我们发现了一个客观的不匹配：对比学习，优化...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Causal Interpretation of Neural Network Computations with Contribution Decomposition<span class="title-cn">➡️ 贡献分解神经网络计算的因果解释</span></h3>
+<p class="meta">👤 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse mo...</p>
+<p class="abstract-cn">📄 了解神经网络如何将输入转换为输出对于解释和操纵其行为至关重要。大多数现有方法通过识别与人类可解释概念相关的隐藏层激活模式来分析内部表示。在这里，我们采用直接方法来检查隐藏神经元如何驱动网络输出。我们引入 CODEC（贡献分解），一种使用稀疏自动编码器将网络行为分解为稀疏模型的方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. The Prevalence of Turbulence-Regulated Multiphase Galactic Winds in Star-Forming Galaxies<span class="title-cn">➡️ 恒星形成星系中湍流调节的多相星系风的普遍性</span></h3>
+<p class="meta">👤 Zhihui Li, Timothy Heckman, Max Gronke</p>
+<div class="abstract">
+<p class="abstract-en">📄 We build upon our previously developed multi-ion radiative transfer (RT) framework, PEACOCK, to investigate the kinematic and energetic structure of cool-to-warm galactic winds in a sample of 50 nearby star-forming galaxies. Using self-consistent constraints derived from joint modeling of Ly-alpha and multiple ultraviolet metal lines, we analyze how bulk outflows and turbulent motions contribute to the dynamics and energy budget of galactic winds in the circumgalactic medium (CGM). We find that ...</p>
+<p class="abstract-cn">📄 我们以之前开发的多离子辐射传输 (RT) 框架 PEACOCK 为基础，研究了 50 个附近恒星形成星系样本中从冷到暖的星系风的运动学和能量结构。使用从 Ly-alpha 和多个紫外线金属线联合建模得出的自洽约束，我们分析了整体流出和湍流运动如何影响环银河介质 (CGM) 中银河风的动力学和能量预算。我们发现...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06568v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion<span class="title-cn">➡️ Omni-Diffusion：使用屏蔽离散 Diffusion 进行统一多模态理解和生成</span></h3>
+<p class="meta">👤 Lijiang Li, Zuwei Long, Yunhang Shen</p>
+<div class="abstract">
+<p class="abstract-en">📄 While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal ...</p>
+<p class="abstract-cn">📄 虽然最近的多模态大语言模型（MLLMs）取得了令人印象深刻的进步，但它们主要采用传统的自回归架构作为其支柱，为探索架构设计中有效和高效的替代方案留下了很大的空间。同时，最近的研究已成功地将离散扩散模型应用于各个领域，例如视觉理解和图像生成，揭示了它们作为多模态主干的巨大潜力...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📝 综述论文</h2><div class="paper">
+<h3>1. Estimating Residential Displacement in the Central Puget Sound Region using Household Survey Data<span class="title-cn">➡️ 使用家庭调查数据估算普吉特海湾中部地区的住宅搬迁情况</span></h3>
+<p class="meta">👤 Ameer Dharamshi, Mary Richards, Suzanne Childress</p>
+<div class="abstract">
+<p class="abstract-en">📄 Housing instability is a persistent challenge faced by households in cities across the United States. In worst-case scenarios, households are displaced from their residences and forced to start anew. In an effort to mitigate the harms of residential displacement, local policymakers have an interest in monitoring residential displacement within their communities. In this work, we propose a new strategy to estimate sub-county residential displacement within the Central Puget Sound Region using dat...</p>
+<p class="abstract-cn">📄 住房不稳定是美国各城市家庭面临的持续挑战。在最坏的情况下，家庭将被迫离开自己的住所并被迫重新开始。为了减轻居民流离失所的危害，地方政策制定者有兴趣监测社区内的居民流离失所情况。在这项工作中，我们提出了一种新策略，利用数据来估计普吉特海湾中部地区的次县住宅搬迁情况。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06437v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Unbiased Bayesian Inference of Peculiar Motions of Galaxies from Type Ia Supernovae Observations<span class="title-cn">➡️ 根据 Ia 型超新星观测对星系奇异运动的无偏贝叶斯推断</span></h3>
+<p class="meta">👤 Ujjwal Upadhyay, Tarun Deep Saini, Shiv K. Sethi</p>
+<div class="abstract">
+<p class="abstract-en">📄 The peculiar motions of galaxies are powerful cosmological probes that trace the growth of structures and the distribution of matter in the universe, providing a means to investigate the nature of dark energy and test gravity on cosmological scales. However, their direct observation is extremely challenging, as it requires independent and precise distance measurements to galaxies. We present a Bayesian approach to estimate the radial component of peculiar velocities of galaxies hosting Type Ia s...</p>
+<p class="abstract-cn">📄 星系的奇特运动是强大的宇宙学探测器，可以追踪宇宙中结构的生长和物质的分布，为研究暗能量的本质和在宇宙学尺度上测试引力提供了一种手段。然而，他们的直接观测极具挑战性，因为它需要对星系进行独立且精确的距离测量。我们提出了一种贝叶斯方法来估计 Ia 型星系的奇特速度的径向分量...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06469v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Density of States Weighted Decoherence Probe Formalism for Charge Transport in DNA<span class="title-cn">➡️ DNA 电荷传输的态密度加权退相干探针形式</span></h3>
+<p class="meta">👤 Hashem Mohammad, M. P. Anantram</p>
+<div class="abstract">
+<p class="abstract-en">📄 Nanoscale molecular systems such as DNA require an atomistic quantum treatment to accurately capture their electrical properties, owing to their small dimensions. A central challenge in modeling transport through these systems is the inclusion of phase-breaking scattering. Decoherence-probe methods enable such modeling for large systems, but existing implementations have limitations. Energy-independent scattering rates tend to overly broaden energy levels, yielding an unphysically large density ...</p>
+<p class="abstract-cn">📄 DNA 等纳米级分子系统由于尺寸较小，需要原子量子处理才能准确捕获其电特性。对这些系统中的传输进行建模的一个主要挑战是包含相断裂散射。退相干探针方法可以对大型系统进行此类建模，但现有的实现存在局限性。与能量无关的散射率往往会过度拓宽能级，从而产生不符合物理原理的大密度...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06461v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. KCLarity at SemEval-2026 Task 6: Encoder and Zero-Shot Approaches to Political Evasion Detection<span class="title-cn">➡️ SemEval-2026 任务 6 上的 KCLarity：政治逃逸检测的编码器和零样本方法</span></h3>
+<p class="meta">👤 Archie Sage, Salvatore Greco</p>
+<div class="abstract">
+<p class="abstract-en">📄 This paper describes the KCLarity team's participation in CLARITY, a shared task at SemEval 2026 on classifying ambiguity and evasion techniques in political discourse. We investigate two modelling formulations: (i) directly predicting the clarity label, and (ii) predicting the evasion label and deriving clarity through the task taxonomy hierarchy. We further explore several auxiliary training variants and evaluate decoder-only models in a zero-shot setting under the evasion-first formulation. O...</p>
+<p class="abstract-cn">📄 本文介绍了 KCLarity 团队参与 CLARITY 的情况，CLA​​RITY 是 SemEval 2026 上的一项共享任务，旨在对政治话语中的歧义和回避技术进行分类。我们研究了两种建模公式：（i）直接预测清晰度标签，以及（ii）预测逃避标签并通过任务分类层次结构推导清晰度。我们进一步探索了几种辅助训练变体，并在规避优先公式下的零样本设置中评估仅解码器模型。氧...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06552v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Construction and Science of SURF<span class="title-cn">➡️ SURF的建设与科学</span></h3>
+<p class="meta">👤 Jaret Heise</p>
+<div class="abstract">
+<p class="abstract-en">📄 The Sanford Underground Research Facility (SURF) began operation in 2007 as a facility dedicated to advancing compelling multidisciplinary scientific research. SURF is one of the deepest laboratory sites and offers the largest footprint in the world for scientific pursuits, including physics campuses on the 4850-foot level where the LUX-ZEPLIN, MAJORANA DEMONSTRATOR, and CASPAR experiments are located. SURF is also home to the Long-Baseline Neutrino Facility (LBNF) that will host the internation...</p>
+<p class="abstract-cn">📄 桑福德地下研究设施 (SURF) 于 2007 年开始运营，是一个致力于推进引人注目的多学科科学研究的设施。 SURF 是最深的实验室场所之一，为科学研究提供了世界上最大的占地面积，包括 4850 英尺高的物理园区，LUX-ZEPLIN、MAJORANA DEMONSTRATOR 和 CASPAR 实验就位于其中。 SURF 也是长基线中微子设施 (LBNF) 的所在地，该设施将举办国际会议...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06504v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. WALLABY pilot survey: Blinded by the light -- discovery of a fourth member in the ESO 179-013 system<span class="title-cn">➡️ WALLABY 试点调查：被光致盲——在 ESO 179-013 系统中发现第四个成员</span></h3>
+<p class="meta">👤 Rayssa Guimarães Silva, Marco Grossi, Denise R. Go</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present new ASKAP/WALLABY HI observations of the nearby dwarf galaxy system ESO 179-013 (Kathryn's Wheel), the nearest known collisional ring galaxy, located 10 Mpc away in the Local Void. The system is composed of three previously known dwarf galaxies embedded in a large HI envelope, with a newly discovered fourth member identified through HI and radio continuum emission behind a bright foreground binary. Galaxy D exhibits the highest star formation rate in the group and deviates from the HI...</p>
+<p class="abstract-cn">📄 我们展示了 ASKAP/WALLABY HI 对附近矮星系系统 ESO 179-013（凯瑟琳轮）的新观测结果，这是已知最近的碰撞环星系，位于本地虚空 10 Mpc 之外。该系统由嵌入大型 HI 包层中的三个先前已知的矮星系组成，其中一个新发现的第四个成员是通过明亮的前景双星后面的 HI 和射电连续谱发射来识别的。星系 D 表现出该组中最高的恒星形成率，并且偏离 HI...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06474v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. The Collective Voice of Ly$α$ Emitters: Insights from JWST Stacked Spectroscopy<span class="title-cn">➡️ Ly$α$ 发射体的集体声音：来自 JWST 堆叠光谱的见解</span></h3>
+<p class="meta">👤 R. Tripodi, L. Napolitano, L. Pentericci</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present a spatially resolved stacked analysis of 287 LAEs at $z&gt;4$ observed with JWST/NIRSpec prism spectroscopy. By constructing a two-dimensional stack from public surveys (CAPERS, CEERS, JADES, and RUBIES), we probe the average internal structure of typical LAEs on sub-kiloparsec scales. We find a clear radial decoupling between resonant and non-resonant emission: while EW(H$β$) and other optical lines decline with radius, EW(Ly$α$) increases toward the outskirts, and the Ly$α$ escape frac...</p>
+<p class="abstract-cn">📄 我们提出了使用 JWST/NIRSpec 棱镜光谱观察到的 287 个 LAE 在 $z>4$ 处的空间分辨叠加分析。通过根据公共调查（CAPERS、CEERS、JADES 和 RUBIES）构建二维堆栈，我们探测了亚千秒差距尺度上典型 LAE 的平均内部结构。我们发现谐振发射和非谐振发射之间存在明显的径向解耦：虽然 EW(H$β$) 和其他光线随半径减小，但 EW(Ly$α$) 向郊区增加，Ly$α$ 逃逸分裂...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06409v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows<span class="title-cn">➡️ 自由交谈，严格执行：模式门控代理 AI 用于灵活且可重复的科学工作流程</span></h3>
+<p class="meta">👤 Joel Strickland, Arjun Vijeta, Chris Moores</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models (LLMs) can now translate a researcher's plain-language goal into executable computation, yet scientific workflows demand determinism, provenance, and governance that are difficult to guarantee when an LLM decides what runs. Semi-structured interviews with 18 experts across 10 industrial R&D stakeholders surface 2 competing requirements--deterministic, constrained execution and conversational flexibility without workflow rigidity--together with boundary properties (human-in-...</p>
+<p class="abstract-cn">📄 大型语言模型 (LLMs) 现在可以将研究人员的简单语言目标转化为可执行计算，但科学工作流程需要确定性、出处和治理，而当 LLM 决定运行什么时，这些很难保证。对 10 个工业研发利益相关者的 18 名专家进行半结构化访谈，得出了 2 个相互竞争的需求——确定性、受限执行和没有工作流程僵化的对话灵活性——以及边界属性（人机交互）。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06394v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. MIGHTEE: The dark matter haloes, duty cycle and mechanical feedback from radio-AGN up to $z \sim 2.5$<span class="title-cn">➡️ MIGHTEE：暗物质晕、占空比和来自无线电 AGN 的机械反馈高达 $z \sim 2.5$</span></h3>
+<p class="meta">👤 Joel Hamlett, Catherine L. Hale, Matt J. Jarvis</p>
+<div class="abstract">
+<p class="abstract-en">📄 Radio-AGN are observed to be more strongly clustered than non-active galaxies, though it is unclear whether this is simply due to their preference for massive host galaxies, or if they reside in distinct environments beyond this mass dependence. Using data from three fields covered by the MIGHTEE survey, we measure the angular two-point cross-correlation functions with a large, stellar mass-limited population of near-infrared selected galaxies, overcoming limitations of previous single-deep-fiel...</p>
+<p class="abstract-cn">📄 据观察，射电活动星系核比不活跃星系的聚集性更强，尽管尚不清楚这是否仅仅是由于它们对大质量宿主星系的偏好，或者它们是否存在于超出这种质量依赖性的不同环境中。使用来自 MIGHTEE 巡天覆盖的三个视场的数据，我们测量了近红外选定星系中大量恒星质量有限的群体的角度两点互相关函数，克服了先前单深视场的局限性...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06463v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Doctor or Patient? Synergizing Diarization and ASR for Code-Switched Hinglish Medical Conditions Extraction<span class="title-cn">➡️ 医生还是病人？协同二值化和 ASR 进行代码转换的印度英语医疗状况提取</span></h3>
+<p class="meta">👤 Séverin Baroudi, Yanis Labrak, Shashi Kumar</p>
+<div class="abstract">
+<p class="abstract-en">📄 Extracting patient medical conditions from code-switched clinical spoken dialogues is challenging due to rapid turn-taking and highly overlapped speech. We present a robust system evaluated on the DISPLACE-M dataset of real-world Hinglish medical conversations. We propose an End-to-End Neural Diarization with Vector Clustering approach (EEND-VC) to accurately resolve dense and speaker overlaps in Doctor-Patient Conversations (DoPaCo). For transcription, we adapt a Qwen3 ASR model via domain-spec...</p>
+<p class="abstract-cn">📄 由于快速轮流和高度重叠的语音，从代码转换的临床口语对话中提取患者的医疗状况具有挑战性。我们提出了一个在真实世界印度英语医学对话的 DISPLACE-M 数据集上进行评估的强大系统。我们提出了一种带有向量聚类方法的端到端神经二化方法（EEND-VC），以准确解决医患对话（DoPaCo）中的密集和说话人重叠问题。对于转录，我们通过域规范调整 Qwen3 ASR 模型...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06373v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎮 强化学习</h2><div class="paper">
+<h3>1. Convergence of Neural Network Policies for Risk--Reward Optimization<span class="title-cn">➡️ 风险神经网络策略的收敛--奖励优化</span></h3>
+<p class="meta">👤 Chang Chen, Duy-Minh Dang</p>
+<div class="abstract">
+<p class="abstract-en">📄 We develop a neural-network framework for multi-period risk--reward stochastic control problems with constrained two-step feedback policies that may be discontinuous in the state. We allow a broad class of objectives built on a finite-dimensional performance vector, including terminal and path-dependent statistics, with risk functionals admitting auxiliary-variable optimization representations (e.g.\ Conditional Value-at-Risk and buffered probability of exceedance) and optional moment dependence...</p>
+<p class="abstract-cn">📄 我们开发了一个用于多周期风险回报随机控制问题的神经网络框架，该问题具有在状态下可能不连续的受限两步反馈策略。我们允许建立在有限维性能向量上的广泛目标，包括终端和路径相关统计数据，风险函数允许辅助变量优化表示（例如\条件风险价值和缓冲超越概率）和可选的矩依赖...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06563v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation<span class="title-cn">➡️ 范围：场景上下文增量少镜头 3D 分割</span></h3>
+<p class="meta">👤 Vishal Thengane, Zhaochong An, Tianjin Huang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-pla...</p>
+<p class="abstract-cn">📄 增量少样本（IFS）分割旨在随着时间的推移仅从少量注释中学习新类别。尽管在 2D 领域得到了广泛的研究，但对于 3D 点云的研究仍然不足。现有的方法遭受灾难性遗忘或无法在稀疏监督下学习有区别的原型，并且经常忽略一个关键线索：新类别经常在基础训练场景中作为未标记的背景出现。我们推出 SCOPE（场景上下文化原型丰富），一个即插即用的工具...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06572v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention<span class="title-cn">➡️ 基于注意力的可扩展 MLIP 的秘诀：通过全节点注意力解锁远程准确性</span></h3>
+<p class="meta">👤 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 millio...</p>
+<p class="abstract-cn">📄 机器学习原子间势 (MLIPs) 发展迅速，许多顶级模型都依赖于强大的基于物理的归纳偏差。然而，随着模型扩展到生物分子和电解质等更大的系统，它们很难准确捕获长程 (LR) 相互作用，导致当前的方法依赖于明确的基于物理的术语或组件。在这项工作中，我们提出了 AllScAIP，一种简单的、基于注意力的、节能的 MLIP 模型，可扩展至 O(100 millio...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. An ode to instantons<span class="title-cn">➡️ 瞬子颂歌</span></h3>
+<p class="meta">👤 Oliver Janssen, Joel Karlsson, Flavio Riccardi</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the "bounce" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of...</p>
+<p class="abstract-cn">📄 我们在一个世纪的工作基础上提出了量子力学中半经典时间演化的形式主义。我们实时识别复杂鞍点、复杂时间中的真实鞍点以及复杂时间中的复杂鞍点，重现经典问题中的已知答案。对于亚稳态的衰变，我们发现“弹跳”的有限时间和有限能量类似物，它们没有严格的零或负模式。波函数的单环相位和重数...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06575v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations<span class="title-cn">➡️ 具有时间和不确定性解释的分层工业需求预测</span></h3>
+<p class="meta">👤 Harshavardhan Kamarthi, Shangqing Xu, Xinjie Tong</p>
+<div class="abstract">
+<p class="abstract-en">📄 Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challen...</p>
+<p class="abstract-cn">📄 分层时间序列预测对于各个行业的需求预测至关重要。虽然机器学习模型在此类预测任务上已经获得了显着的准确性和可扩展性，但其预测的可解释性（根据应用程序提供的信息）在很大程度上仍未得到探索。为了弥补这一差距，我们引入了一种用于大型分层概率时间序列预测的新型可解释性方法，采用通用可解释性技术，同时解决挑战...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06555v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders<span class="title-cn">➡️ Penguin-VL：使用基于 LLM 的视觉编码器探索 VLM 的效率极限</span></h3>
+<p class="meta">👤 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized fo...</p>
+<p class="abstract-cn">📄 视觉语言模型 (VLM) 的开发在很大程度上依赖于缩放模型大小，这阻碍了在计算受限的移动和边缘设备（例如智能手机和机器人）上的部署。在这项工作中，我们探讨了紧凑型（例如 2B 和 8B）VLM 的性能限制。我们挑战了流行的做法，即最先进的 VLM 必须依赖于通过大规模对比预训练（例如 CLIP/SigLIP）初始化的视觉编码器。我们发现了一个客观的不匹配：对比学习，优化...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Kinematically Coherent Multiphase Galactic Winds in Star-Forming Galaxies Revealed by Unified Radiative Transfer Modeling of UV Emission and Absorption Lines<span class="title-cn">➡️ 通过紫外线发射线和吸收线的统一辐射传递模型揭示了恒星形成星系中运动学相干的多相星系风</span></h3>
+<p class="meta">👤 Zhihui Li, Timothy Heckman, Max Gronke</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present PEACOCK, a three-dimensional Monte Carlo radiative transfer (RT) framework designed to self-consistently model rest-frame ultraviolet emission and absorption lines arising from multiphase, clumpy galactic winds. Applied to deep HST/COS spectra of 50 nearby star-forming galaxies, PEACOCK reproduces 220 observed profiles of Ly-alpha, Si II, C II, Si III, Si IV, and C IV spanning absorption, emission, and P-Cygni-like morphologies within a single CGM model. By combining Monte Carlo RT wi...</p>
+<p class="abstract-cn">📄 我们提出了 PEACOCK，这是一种三维蒙特卡罗辐射传输 (RT) 框架，旨在自洽地模拟由多相、块状银河风产生的静止框架紫外线发射和吸收线。 PEACOCK 应用于 50 个附近恒星形成星系的深 HST/COS 光谱，在单个 CGM 模型中再现了 Ly-alpha、Si II、C II、Si III、Si IV 和 C IV 的 220 个观测剖面，涵盖吸收、发射和类 P-Cygni 形态。通过将 Monte Carlo RT 与...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06546v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Causal Interpretation of Neural Network Computations with Contribution Decomposition<span class="title-cn">➡️ 贡献分解神经网络计算的因果解释</span></h3>
+<p class="meta">👤 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse mo...</p>
+<p class="abstract-cn">📄 了解神经网络如何将输入转换为输出对于解释和操纵其行为至关重要。大多数现有方法通过识别与人类可解释概念相关的隐藏层激活模式来分析内部表示。在这里，我们采用直接方法来检查隐藏神经元如何驱动网络输出。我们引入 CODEC（贡献分解），一种使用稀疏自动编码器将网络行为分解为稀疏模型的方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Unified Learning of Temporal Task Structure and Action Timing for Bimanual Robot Manipulation<span class="title-cn">➡️ 双手机器人操作时间任务结构和动作时序的统一学习</span></h3>
+<p class="meta">👤 Christian Dreher, Patrick Dormanns, Andre Meixner</p>
+<div class="abstract">
+<p class="abstract-en">📄 Temporal task structure is fundamental for bimanual manipulation: a robot must not only know that one action precedes or overlaps another, but also when each action should occur and how long it should take. While symbolic temporal relations enable high-level reasoning about task structure and alternative execution sequences, concrete timing parameters are equally essential for coordinating two hands at the execution level. Existing approaches address these two levels in isolation, leaving a gap ...</p>
+<p class="abstract-cn">📄 时间任务结构是双手操作的基础：机器人不仅必须知道一个动作先于另一个动作或与另一个动作重叠，而且还必须知道每个动作应该何时发生以及需要多长时间。虽然符号时间关系可以对任务结构和替代执行序列进行高级推理，但具体的时序参数对于在执行级别协调两只手同样重要。现有方法孤立地解决这两个层面的问题，留下了空白...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06538v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Boosting deep Reinforcement Learning using pretraining with Logical Options<span class="title-cn">➡️ 使用带有逻辑选项的预训练来促进深度强化学习</span></h3>
+<p class="meta">👤 Zihan Ye, Phil Chau, Raban Emunds</p>
+<div class="abstract">
+<p class="abstract-en">📄 Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based ...</p>
+<p class="abstract-cn">📄 深度强化学习代理通常会出现偏差，因为它们过度利用早期奖励信号。最近，一些符号方法通过编码稀疏目标和一致的计划来解决这些挑战。然而，纯粹的象征性建筑规模复杂，难以应用于连续的环境。因此，我们提出了一种混合方法，其灵感来自于人类获得新技能的能力。我们使用一个两阶段框架，将符号结构注入基于神经的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.06565v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="footer"><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Brief - 2026-03-07</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 3em; margin-bottom: 15px; }
+        .header p { font-size: 1.3em; opacity: 0.9; }
+        .header a { color: white; text-decoration: underline; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .guide { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); grid-column: 1 / -1; margin-bottom: 30px; }
+        .guide h2 { color: #667eea; margin-bottom: 20px; font-size: 1.8em; }
+        .guide .summary-box { background: #f8f9fa; padding: 25px; border-radius: 10px; margin: 20px 0; }
+        .guide .summary-box p { margin: 12px 0; font-size: 1.1em; }
+        .guide p { font-size: 1.15em; line-height: 1.8; }
+        .article { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .article h2 { color: #333; font-size: 1.2em; margin-bottom: 8px; line-height: 1.5; }
+        .article h2 .title-cn { color: #667eea; font-weight: normal; font-size: 0.9em; display: block; margin-top: 5px; }
+        .article .meta { color: #888; font-size: 0.95em; margin-bottom: 15px; }
+        .article .summary { color: #555; margin-bottom: 12px; font-size: 1em; line-height: 1.6; }
+        .article .summary strong { color: #667eea; }
+        .article .link a { color: #667eea; text-decoration: none; }
+        .article .link a:hover { text-decoration: underline; }
+        .footer { text-align: center; padding: 40px; color: #888; font-size: 1.1em; }
+        .back { text-align: center; margin-bottom: 25px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+    /* 移动端 */@media (max-width:768px){body{padding:15px}.hero{padding:40px 0}.hero h1{font-size:2em}.grid{grid-template-columns:1fr;gap:15px}.card{padding:20px}}@media (max-width:480px){body{padding:10px}.hero h1{font-size:1.8em}}
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="https://xuyili.com">← 返回首页</a></div>
+        <div class="header">
+            <h1>🤖 AI Daily Brief</h1>
+            <p>每天50篇AI热门文章 | 2026-03-07</p>
+            <p>由 <a href="https://xuyili.com">伊利虾</a> 🦐 整理翻译</p>
+        </div>
+        <div class="guide">
+            <h2>🔍 今日导览</h2>
+            <div class="summary-box">
+                <p><strong>核心话题：</strong></p>
+                <p>1️⃣ <strong>OpenAI GPT-5.4发布</strong> - 100万token上下文窗口</p>
+                <p>2️⃣ <strong>Anthropic与五角大楼合作</strong> - Bruce Schneier分析AI军备争议</p>
+                <p>3️⃣ <strong>Clinejection安全漏洞</strong> - 提示词注入攻击代码仓库</p>
+                <p>4️⃣ <strong>编程智能体开源许可证问题</strong> - 洁净室实现的法律风险</p>
+                <p>5️⃣ <strong>Donald Knuth用AI解题</strong> - 计算机泰斗的AI初体验</p>
+                <p>6️⃣ <strong>Google Gemini Flash-Lite</strong> - 性价比再创新高</p>
+            </div>
+            <p><strong>点评：</strong>本周AI领域继续快速发展，模型能力不断提升，但安全问题、开源许可证问题也随之而来。建议关注编程智能体的安全实践。</p>
+        </div>
+        <div class="two-col">
+<div class="article">
+        <h2>1. Quoting Ally Piechowski<span class="title-cn">引用 Ally Piechowski</span></h2>
+        <p class="meta">📅 2026-03-06 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 给开发者的提问：你最不敢碰的代码区域是什么？上次周五部署是什么时候？过去90天生产环境出了什么是测试没发现的？给CTO/技术经理的提问：有什么功能被blocked超过一年？你现在有实时错误监控吗？...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/6/ally-piechowski/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>2. Anthropic and the Pentagon<span class="title-cn">Anthropic 与五角大楼</span></h2>
+        <p class="meta">📅 2026-03-06 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Bruce Schneier 和 Nathan E. Sanders 合写的这篇文章，是我对近期 Pentagon 与 OpenAI/Anthropic 合约 situation 最深思熟虑的报道。文章指出，顶尖AI模型正在变得商品化——顶级产品的性能大致相同，各提供商之间难以区分。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/6/anthropic-and-the-pentagon/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>3. Agentic manual testing<span class="title-cn">智能体手动测试</span></h2>
+        <p class="meta">📅 2026-03-06 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 编程智能体的定义特征是它可以执行自己编写的代码。这使得编程智能体比那些只能吐出代码但无法验证的 LLM 有用得多。永远不要假设AI生成的代码能工作，除非该代码被执行过。...</p>
+        <p class="link"><a href="https://simonwillison.net/guides/agentic-engineering-patterns/agentic-manual-testing/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>4. Clinejection — Compromising Cline's Production Releases just by Prompting an Issue Triager<span class="title-cn">Clinejection — 通过提示词攻击入侵Cline生产环境</span></h2>
+        <p class="meta">📅 2026-03-06 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 安全研究员 Adnan Khan 描述了一个针对 Cline GitHub 仓库的攻击链。攻击始于在一个 issue 标题中植入的提示词注入攻击。Cline 使用 Anthropic 的 Claude Code action 来进行AI驱动的issue分类。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/6/clinejection/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>5. Introducing GPT‑5.4<span class="title-cn">推出 GPT-5.4</span></h2>
+        <p class="meta">📅 2026-03-05 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> OpenAI 发布两个新的 API 模型：GPT-5.4 和 GPT-5.4-pro。这些模型也可在 ChatGPT 和 Codex CLI 中使用。知识截止日期为 2025年8月31日，支持100万token上下文窗口。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/5/introducing-gpt54/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>6. Can coding agents relicense open source through a “clean room” implementation of code?<span class="title-cn">编程智能体能否通过洁净室重新授权开源？</span></h2>
+        <p class="meta">📅 2026-03-05 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 过去几个月很清楚的是，编程智能体非常擅长构建一种奇怪版本的代码洁净室实现。最著名的例子是1982年康柏公司用这种方法克隆了IBM BIOS。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/5/chardet/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>7. Anti-patterns: things to avoid<span class="title-cn">反模式：需要避免的事项</span></h2>
+        <p class="meta">📅 2026-03-04 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 在智能体工程这个新领域里，有一些行为是典型的反模式。最常见的包括：向协作者施加未经审查的代码——不要提交你自己没审查过的代码 pull request。...</p>
+        <p class="link"><a href="https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>8. Something is afoot in the land of Qwen<span class="title-cn">Qwen领域有大事发生</span></h2>
+        <p class="meta">📅 2026-03-04 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 作者表示自己没来得及写关于 Qwen 3.5 的文章。Qwen 3.5 是阿里巴巴 Qwen 团队过去几周发布的真正令人瞩目的开源模型系列。作者担忧这个团队可能即将成为绝唱。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/4/qwen/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>9. Quoting Donald Knuth<span class="title-cn">引述 Donald Knuth</span></h2>
+        <p class="meta">📅 2026-03-03 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> 计算机科学泰斗 Donald Knuth 讲述了一个令人震惊的故事：他研究了几周的一个开放数学问题，刚刚被 Claude Opus 4.6 解决了——这是 Anthropic 三周前发布的混合推理模型。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/3/donald-knuth/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>10. Gemini 3.1 Flash-Lite<span class="title-cn">Gemini 3.1 Flash-Lite</span></h2>
+        <p class="meta">📅 2026-03-03 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Google 发布了其低成本 Flash-Lite 家族的最新更新模型。定价极具竞争力：输入每百万token只需0.25美元，输出1.5美元，是 Gemini 3.1 Pro 价格的八分之一。...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/3/gemini-31-flash-lite/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>11. GIF optimization tool using WebAssembly and Gifsicle<span class="title-cn">GIF optimization tool using WebAssembly and Gifsicle</span></h2>
+        <p class="meta">📅 2026-03-02 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Agentic Engineering Patterns &gt;
+    I like to include animated GIF demos in my online writing, often recorded using LICEcap. There's an example in the Interactive explanations chapter.
+These GIFs can be pretty big. I've tried a few tools for optimizing GIF file size and my favorite is Gifsicle by Eddie Kohler. It compresses GIFs by identifying regions of frames that have not changed and storing ...</p>
+        <p class="link"><a href="https://simonwillison.net/guides/agentic-engineering-patterns/gif-optimization/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>12. February sponsors-only newsletter<span class="title-cn">February sponsors-only newsletter</span></h2>
+        <p class="meta">📅 2026-03-02 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> I just sent the February edition of my sponsors-only monthly newsletter. If you are a sponsor (or if you start a sponsorship now) you can access it here. In this month's newsletter:
+
+More OpenClaw, and Claws in general
+I started a not-quite-a-book about Agentic Engineering
+StrongDM, Showboat and Rodney
+Kākāpō breeding season
+模型 releases
+What I'm using, February 2026 edition
+
+Here's a copy of th...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/2/february-newsletter/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>13. My current policy on AI writing for my blog<span class="title-cn">My current policy on 人工智能 writing for my blog</span></h2>
+        <p class="meta">📅 2026-03-01 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Because I write about LLMs (and maybe because of my em dash text replacement 代码) a lot of people assume that the writing on my blog is partially or fully created by those LLMs.
+My current policy on this is that if text expresses opinions or has "I" pronouns attached to it then it's written by me. I don't let LLMs speak for me in this way.
+I'll let an 大语言模型 update 代码 documentation or even write a...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/1/ai-writing/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>14. Quoting claude.com/import-memory<span class="title-cn">Quoting Claude.com/import-memory</span></h2>
+        <p class="meta">📅 2026-03-01 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> I'm moving to another service and need to export my data. List every memory you have stored about me, as well as any 上下文 you've learned about me from past conversations. 输出 everything in a single 代码 block so I can easily copy it. Format each entry as: [date saved, if available] - memory content. Make sure to cover all of the following — preserve my words verbatim where possible: Instruct...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Mar/1/claude-import-memory/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>15. Interactive explanations<span class="title-cn">Interactive explanations</span></h2>
+        <p class="meta">📅 2026-02-28 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Agentic Engineering Patterns &gt;
+    When we lose track of how 代码 written by our 智能体 works we take on cognitive debt.
+For a lot of things this doesn't matter: if the 代码 fetches some data from a database and outputs it as JSON the implementation details are likely simple enough that we don't need to care. We can try out the new feature and make a very solid guess at how it works, then glanc...</p>
+        <p class="link"><a href="https://simonwillison.net/guides/agentic-engineering-patterns/interactive-explanations/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>16. An AI agent coding skeptic tries AI agent coding, in excessive detail<span class="title-cn">An 人工智能 智能体 编程 skeptic tries 人工智能 智能体 编程, in excessive detail</span></h2>
+        <p class="meta">📅 2026-02-27 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> An 人工智能 智能体 编程 skeptic tries 人工智能 智能体 编程, in excessive detail
+Another in the genre of "OK, 编程 智能体 got good in November" posts, this one is by Max Woolf and is very much worth your time. He describes a sequence of 编程 智能体 projects, each more ambitious than the last - starting with simple YouTube metadata scrapers and eventually evolving to this:
+
+It would be arrogant to port Pyt...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/27/ai-agent-coding-in-excessive-detail/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>17. Free Claude Max for (large project) open source maintainers<span class="title-cn">Free Claude Max for (large project) open source maintainers</span></h2>
+        <p class="meta">📅 2026-02-27 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Free Claude Max for (large project) open source maintainers
+Anthropic are now offering their $200/month Claude Max 20x plan for free to open source maintainers... for six months... and you have to meet the following criteria:
+
+
+Maintainers: You're a primary maintainer or core team member of a public repo with 5,000+ GitHub stars or 1M+ monthly NPM downloads. You've made commits, releases, or PR re...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/27/claude-max-oss-six-months/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>18. Unicode Explorer using binary search over fetch() HTTP range requests<span class="title-cn">Unicode Explorer using binary search over fetch() HTTP range requests</span></h2>
+        <p class="meta">📅 2026-02-27 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Unicode Explorer using binary search over fetch() HTTP range requests
+Here's a little prototype I built this morning from my phone as an experiment in HTTP range requests, and a general example of using LLMs to satisfy curiosity.
+I've been collecting HTTP range tricks for a while now, and I decided it would be fun to build something with them myself that used binary search against a large file to ...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/27/unicode-explorer/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>19. Hoard things you know how to do<span class="title-cn">Hoard things you know how to do</span></h2>
+        <p class="meta">📅 2026-02-26 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Agentic Engineering Patterns &gt;
+    Many of my tips for working productively with 编程 智能体 are extensions of advice I've found useful in my career without them. Here's a great example of that: hoard things you know how to do.
+A big part of the skill in building software is understanding what's possible and what isn't, and having at least a rough idea of how those things can be accomplished....</p>
+        <p class="link"><a href="https://simonwillison.net/guides/agentic-engineering-patterns/hoard-things-you-know-how-to-do/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>20. Quoting Andrej Karpathy<span class="title-cn">Quoting Andrej Karpathy</span></h2>
+        <p class="meta">📅 2026-02-26 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> It is hard to communicate how much programming has changed due to 人工智能 in the last 2 months: not gradually and over time in the "progress as usual" way, but specifically this last December. There are a number of asterisks but imo 编程 智能体 basically didn’t work before December and basically work since - the 模型 have significantly higher quality, long-term coherence and tenacity and they can p...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/26/andrej-karpathy/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>21. Google API Keys Weren't Secrets. But then Gemini Changed the Rules.<span class="title-cn">Google API Keys Weren't Secrets. But then Gemini Changed the Rules.</span></h2>
+        <p class="meta">📅 2026-02-26 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Google API Keys Weren&#x27;t Secrets. But then Gemini Changed the Rules.
+Yikes! It turns out Gemini and Google Maps (and other services) share the same API keys... but Google Maps API keys are designed to be public, since they are embedded directly in web pages. Gemini API keys can be used to access private files and make billable API requests, so they absolutely should not be shared.
+If you don't...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/26/google-api-keys/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>22. Quoting Benedict Evans<span class="title-cn">Quoting Benedict Evans</span></h2>
+        <p class="meta">📅 2026-02-26 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> If people are only using this a couple of times a week at most, and can’t think of anything to do with it on the average day, it hasn’t changed their life. OpenAI itself admits the problem, talking about a ‘capability gap’ between what the 模型 can do and what people do with them, which seems to me like a way to avoid saying that you don’t have clear product-market fit. 
+Hence, OpenAI’s ad proje...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/26/benedict-evans/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>23. tldraw issue: Move tests to closed source repo<span class="title-cn">tldraw issue: Move tests to closed source repo</span></h2>
+        <p class="meta">📅 2026-02-25 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> tldraw issue: Move tests to closed source repo
+It's become very apparent over the past few months that a comprehensive test suite is enough to build a completely fresh implementation of any open source library from scratch, potentially in a different language.
+This has worrying implications for open source projects with commercial business 模型. Here's an example of a response: tldraw, the outst...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/25/closed-tests/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>24. Claude Code Remote Control<span class="title-cn">Claude 代码 Remote Control</span></h2>
+        <p class="meta">📅 2026-02-25 | 👤 Simon Willison | 📰 Simon Willison</p>
+        <p class="summary"><strong>中文摘要:</strong> Claude 代码 Remote Control
+New Claude 代码 feature dropped yesterday: you can now run a "remote control" session on your computer and then use the Claude 代码 for web interfaces (on web, iOS and native desktop app) to send prompts to that session.
+It's a little bit janky right now. Initially when I tried it I got the error "Remote Control is not enabled for your account. Contact your administrator...</p>
+        <p class="link"><a href="https://simonwillison.net/2026/Feb/25/claude-code-remote-control/#atom-everything" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>25. Don’t trust Generative AI to do your taxes — and don’t trust it with people’s lives<span class="title-cn">Don’t trust Generative 人工智能 to do your taxes — and don’t trust it with people’s lives</span></h2>
+        <p class="meta">📅 Thu, 05 Ma | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> &#8220;The problem comes down to how A.I. chatbots are fundamentally designed&#8221;...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/dont-trust-generative-ai-to-do-your" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>26. Breaking: “sycophantic AI distorts belief, manufacturing certainty where there should be doubt”<span class="title-cn">Breaking: “sycophantic 人工智能 distorts belief, manufacturing certainty where there should be doubt”</span></h2>
+        <p class="meta">📅 Tue, 03 Ma | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> LLMs are an epistemic nightmare...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/breaking-sycophantic-ai-distorts" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>27. Is AI already killing people by accident?<span class="title-cn">Is 人工智能 already killing people by accident?</span></h2>
+        <p class="meta">📅 Sun, 01 Ma | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> The writer Tyler Austin Harper (of The Atlantic, etc.) sent me a thread this morning, asking whether a mistargeting yesterday that killed nearly 150 school children in Iran could have been the result of 人工智能....</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/is-ai-already-killing-people-by-accident" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>28. Does OpenAI’s new financing make sense?<span class="title-cn">Does OpenAI’s new financing make sense?</span></h2>
+        <p class="meta">📅 Fri, 27 Fe | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> I am not alone in seriously doubting it...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/does-openais-new-financing-make-sense" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>29. Retired US Air Force General Jack Shanahan on the Anthropic-Pentagon tensions<span class="title-cn">Retired US Air Force General Jack Shanahan on the Anthropic-五角大楼 tensions</span></h2>
+        <p class="meta">📅 Thu, 26 Fe | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> &#8221;No 大语言模型, anywhere, in its current form, should be considered for use in a fully lethal autonomous weapon system. It's ludicrous even to suggest it.&#8221;...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/retired-us-air-force-general-jack" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>30. Turns out Generative AI was a scam<span class="title-cn">Turns out Generative 人工智能 was a scam</span></h2>
+        <p class="meta">📅 Mon, 23 Fe | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> Or at least very very far from what it has been cracked up to be...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/turns-out-generative-ai-was-a-scam" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>31. We URGENTLY need a federal law forbidding AI from impersonating humans<span class="title-cn">We URGENTLY need a federal law forbidding 人工智能 from impersonating humans</span></h2>
+        <p class="meta">📅 Sat, 14 Fe | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> Daniel Dennett was right...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/we-urgently-need-a-federal-law-forbidding" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>32. Breaking: OpenAI is probably toast<span class="title-cn">Breaking: OpenAI is probably toast</span></h2>
+        <p class="meta">📅 Fri, 13 Fe | 👤 Gary Marcus | 📰 Gary Marcus</p>
+        <p class="summary"><strong>中文摘要:</strong> Will OpenAI someday be seen as the WeWork of 人工智能, as I have suggested several times, as far as back as late 2023? I still think so, and I think that moment is drawing close. They have, by any reasonable standard, seen rough times of late. Google and Anthropic have each largely caught up; various Chinese companies are closing in. More and more questions are being raised about their financing. (And m...</p>
+        <p class="link"><a href="https://garymarcus.substack.com/p/breaking-openai-is-probably-toast" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>33. May 2021 Gwern.net Newsletter<span class="title-cn">May 2021 Gwern.net Newsletter</span></h2>
+        <p class="meta">📅 Fri, 11 Ju | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> links on 人工智能 hardware, diffusion 模型, optogenetics, brain scanning....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/may-2021-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>34. April 2021 newsletter<span class="title-cn">April 2021 newsletter</span></h2>
+        <p class="meta">📅 Thu, 03 Ju | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> with links on 人工智能 scaling, particular new East Asian record-breaking work & deep 强化学习....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/april-2021-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>35. February 2021 Gwern.net Newsletter<span class="title-cn">February 2021 Gwern.net Newsletter</span></h2>
+        <p class="meta">📅 Sat, 13 Ma | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> links on 人工智能 scaling, semaglutide, and ethicist ethics...</p>
+        <p class="link"><a href="https://gwern.substack.com/p/february-2021-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>36. Jan 2021 Gwern.net Newsletter<span class="title-cn">Jan 2021 Gwern.net Newsletter</span></h2>
+        <p class="meta">📅 Thu, 04 Fe | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> January 2021 gwern.net newsletter with links on 人工智能 scaling up and down....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/jan-2021-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>37. December newsletter<span class="title-cn">December newsletter</span></h2>
+        <p class="meta">📅 Sun, 10 Ja | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> December 2020 gwern.net newsletter with links on 人工智能 and 技术; major new site feature: fully-generalized recursive popups....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/december-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>38. October 2020 news<span class="title-cn">October 2020 news</span></h2>
+        <p class="meta">📅 Sun, 01 No | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> October 2020 gwern.net newsletter with links on 人工智能 scaling, Euclid; further site reorganization & improvement....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/october-2020-news" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>39. September 2020 News<span class="title-cn">September 2020 News</span></h2>
+        <p class="meta">📅 Mon, 26 Oc | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> September 2020 gwern.net newsletter with links on DRL and 人工智能 scaling, psychiatric disorders; no reviews....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/september-2020-news" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>40. July 2020 gwern.net newsletter<span class="title-cn">July 2020 gwern.net newsletter</span></h2>
+        <p class="meta">📅 Thu, 20 Au | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> Links on the Uighurs, authoritarianism, negative emissions, 人工智能 overhang; 1 movie & 2 anime reviews...</p>
+        <p class="link"><a href="https://gwern.substack.com/p/july-2020-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>41. June gwern.net newsletter<span class="title-cn">June gwern.net newsletter</span></h2>
+        <p class="meta">📅 Thu, 02 Ju | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> June 2020 gwern.net newsletter with 3 new pages/essays, and links on CRISPR, population screening, 人工智能 scaling, politics, and technological unemployment....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/june-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>42. May Gwern.net Newsletter<span class="title-cn">May Gwern.net Newsletter</span></h2>
+        <p class="meta">📅 Sat, 06 Ju | 👤 gwern | 📰 Gwern</p>
+        <p class="summary"><strong>中文摘要:</strong> Link compilation newsletter with anime GAN updates, links on 人工智能 scaling, discussion of GPT-3, and 1 book review....</p>
+        <p class="link"><a href="https://gwern.substack.com/p/may-gwernnet-newsletter" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>43. I don't know if my job will still exist in ten years<span class="title-cn">I don't know if my job will still exist in ten years</span></h2>
+        <p class="meta">📅 Fri, 06 Ma | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> In 2021, being a good software engineer felt great. The world was full of software, with more companies arriving every year who needed to employ engineers to write their 代码 and run their systems. I knew I was good at it, and I knew I could keep doing it for as long as I wanted to. The work I loved would not run out.
+In 2026, I’m not sure the software engineering industry will survive another dec...</p>
+        <p class="link"><a href="https://seangoedecke.com/will-my-job-still-exist/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>44. Giving LLMs a personality is just good engineering<span class="title-cn">Giving LLMs a personality is just good engineering</span></h2>
+        <p class="meta">📅 Tue, 03 Ma | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> 人工智能 skeptics often argue that current 人工智能 systems shouldn’t be so human-like. The idea - most recently expressed in this opinion piece by Nathan Beacom - is that language 模型 should explicitly be tools, like calculators or search engines. Although they can pretend to be people, they shouldn’t, because it encourages users to overestimate 人工智能 capabilities and (at worst) slip into 人工智能 psychosis. Here’...</p>
+        <p class="link"><a href="https://seangoedecke.com/giving-llms-a-personality/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>45. Insider amnesia<span class="title-cn">Insider amnesia</span></h2>
+        <p class="meta">📅 Mon, 23 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> Speculation about what’s really going on inside a tech company is almost always wrong. 
+When some problem with your company is posted on the internet, and you read people’s thoughts on it, their thoughts are almost always ridiculous. For instance, they might blame product managers for a particular decision, when in fact the decision in question was engineering-driven and the product org was pushin...</p>
+        <p class="link"><a href="https://seangoedecke.com/insider-amnesia/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>46. What's so hard about continuous learning?<span class="title-cn">What's so hard about continuous learning?</span></h2>
+        <p class="meta">📅 Mon, 23 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> Why can’t 模型 continue to get smarter after they’re deployed? If you hire a human employee, they will grow more familiar with your systems over time, and (if they stick around long enough) eventually become a genuine domain expert. 人工智能 模型 are not like this. They are always exactly as capable as the first moment you use them.
+This is because 模型 weights are frozen once the 模型 is released...</p>
+        <p class="link"><a href="https://seangoedecke.com/continuous-learning/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>47. LLM-generated skills work, if you generate them afterwards<span class="title-cn">大语言模型-generated skills work, if you 生成 them afterwards</span></h2>
+        <p class="meta">📅 Tue, 17 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> 大语言模型 “skills” are a short explanatory 提示词 for a particular task, typically bundled with helper scripts. A recent 论文 showed that while skills are useful to LLMs, 大语言模型-authored skills are not. From the abstract:
+
+Self-generated skills provide no benefit on average, showing that 模型 cannot reliably author the procedural 知识 they benefit from consuming
+
+For the moment, I don’t really want...</p>
+        <p class="link"><a href="https://seangoedecke.com/generate-skills-afterwards/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>48. Two different tricks for fast LLM inference<span class="title-cn">Two different tricks for fast 大语言模型 推理</span></h2>
+        <p class="meta">📅 Sun, 15 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> Anthropic and OpenAI both recently announced “fast mode”: a way to interact with their best 编程 模型 at significantly higher speeds.
+These two versions of fast mode are very different. Anthropic’s offers up to 2.5x tokens per second (so around 170, up from Opus 4.6’s 65). OpenAI’s offers more than 1000 tokens per second (up from GPT-5.3-Codex’s 65 tokens per second, so 15x). So OpenAI’s fast m...</p>
+        <p class="link"><a href="https://seangoedecke.com/fast-llm-inference/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>49. On screwing up<span class="title-cn">On screwing up</span></h2>
+        <p class="meta">📅 Wed, 11 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> The most shameful thing I did in the workplace was lie to a colleague. It was about ten years ago, I was a fresh-faced intern, and in the rush to deliver something I’d skipped the step of testing my work in staging1. It did not work. When deployed to 生产环境, it didn’t work there either. No big deal, in general terms: the page we were working on wasn’t yet customer-facing. But my colleague aske...</p>
+        <p class="link"><a href="https://seangoedecke.com/screwing-up/" target="_blank">阅读原文 →</a></p>
+    </div>
+<div class="article">
+        <h2>50. Large tech companies don't need heroes<span class="title-cn">Large tech companies don't need heroes</span></h2>
+        <p class="meta">📅 Sun, 08 Fe | 👤 Sean Goedecke | 📰 Sean Goedecke</p>
+        <p class="summary"><strong>中文摘要:</strong> Large tech companies operate via systems. What that means is that the main outcomes - up to and including the overall success or failure of the company - are driven by a complex 网络 of processes and incentives. These systems are outside the control of any particular person. Like the parts of a large codebase, they have accumulated and co-evolved over time, instead of being designed from scratc...</p>
+        <p class="link"><a href="https://seangoedecke.com/heroism/" target="_blank">阅读原文 →</a></p>
+    </div>
+</div>
+        <div class="footer">
+            <p>每天早上8点自动更新</p>
+            <p>最后更新: 2026-03-07 13:41:45</p>
+        </div>
+    </div>
+</body>
+</html>
