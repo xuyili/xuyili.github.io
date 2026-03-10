@@ -1,0 +1,69 @@
+/* 共享响应式样式 */
+
+/* 移动端基础适配 */
+@media (max-width: 768px) {
+    /* 减小内边距 */
+    body { padding: 15px !important; }
+    .container { padding: 0 10px; }
+    
+    /* 标题调整 */
+    .hero h1 { font-size: 2em !important; }
+    .hero p { font-size: 1em !important; }
+    .hero .subtitle { font-size: 0.9em !important; }
+    .hero { padding: 40px 0 !important; }
+    
+    /* 卡片网格 */
+    .grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 15px !important; 
+        padding: 20px 0 !important;
+    }
+    .card { padding: 20px !important; }
+    .card h2 { font-size: 1.3em !important; }
+    .card p { font-size: 0.95em !important; }
+    .card-icon { font-size: 2em !important; margin-bottom: 10px !important; }
+    
+    /* 分析报告 */
+    .section { padding: 20px !important; }
+    .section h2 { font-size: 1.3em !important; }
+    .section h3 { font-size: 1.1em !important; }
+    .chart { height: 300px !important; }
+    
+    /* 表格 */
+    table { font-size: 0.85em !important; }
+    th, td { padding: 8px 4px !important; }
+    
+    /* 列布局 */
+    .two-col, .three-col, .four-col { grid-template-columns: 1fr !important; }
+    
+    /* 指标卡片 */
+    .stat-card { padding: 15px !important; }
+    .stat-card .number { font-size: 1.5em !important; }
+    .stat-card .label { font-size: 0.8em !important; }
+    
+    /* 论文/文章 */
+    .paper, .article { padding: 15px !important; }
+    .paper h3 { font-size: 0.95em !important; }
+    .topic h2 { font-size: 1.1em !important; }
+    
+    /* 页脚 */
+    .footer { padding: 20px !important; font-size: 0.9em; }
+    
+    /* 导航 */
+    .nav { margin-bottom: 15px; }
+    .nav a { font-size: 0.95em; }
+    
+    /* 返回链接 */
+    .back { margin-bottom: 15px; }
+}
+
+/* 更小屏幕 */
+@media (max-width: 480px) {
+    body { padding: 10px !important; }
+    .hero { padding: 30px 10px !important; }
+    .hero h1 { font-size: 1.8em !important; }
+    .card { padding: 15px !important; }
+    .section { padding: 15px !important; }
+    .stat-card .number { font-size: 1.3em !important; }
+    table { font-size: 0.75em !important; display: block; overflow-x: auto; }
+}

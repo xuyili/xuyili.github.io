@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家庭用电量分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.9; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #ff9800; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #ff9800; }
+        .section h3 { color: #ff9800; font-size: 1.3em; margin: 30px 0 15px; }
+        .section p { margin-bottom: 15px; color: #555; }
+        .chart { width: 100%; height: 400px; }
+        .insight { background: #fff3e0; border-left: 4px solid #ff9800; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #e65100; margin-bottom: 10px; font-size: 1.1em; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #ff9800; color: white; }
+        .stat-card { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>⚡ 家庭用电量分析报告</h1>
+            <p>机器学习预测模型 · 用电行为分析 · 可交互可视化</p>
+            <p style="margin-top:10px;font-size:0.95em;opacity:0.8;">模拟数据 | 家庭数: 5,000 | 样本: 150,000</p>
+        </div>
+        
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">29.0</div>
+                <div class="label">日均用电(kWh)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">84.5%</div>
+                <div class="label">模型准确率(R²)</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">5.6</div>
+                <div class="label">预测误差(kWh)</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 一、数据概览</h2>
+            <p>本数据集分析家庭用电行为模式，包含房屋类型、家庭规模、是否有空调、月份、星期几等多个维度。</p>
+            
+            <h3>1.1 数据字段</h3>
+            <table>
+                <tr><th>字段</th><th>说明</th><th>取值</th></tr>
+                <tr><td>htype</td><td>房屋类型</td><td>apartment/house/villa</td></tr>
+                <tr><td>famsize</td><td>家庭人口</td><td>1-5人</td></tr>
+                <tr><td>ac</td><td>是否有空调</td><td>0/1</td></tr>
+                <tr><td>month</td><td>月份</td><td>1-12</td></tr>
+                <tr><td>dow</td><td>星期几</td><td>0-6</td></tr>
+                <tr><td>kwh</td><td>用电量</td><td>kWh/天</td></tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 二、探索性分析</h2>
+            
+            <h3>2.1 房屋类型用电对比</h3>
+            <div id="htype" class="chart"></div>
+            <div class="insight">
+                <h4>🏠 发现</h4>
+                <p>别墅(villa)平均用电47kWh/天，是公寓(apt)的<strong>2.3倍</strong>！房屋类型是影响用电量的最大因素。</p>
+            </div>
+            
+            <h3>2.2 家庭规模与用电</h3>
+            <div id="famsize" class="chart"></div>
+            <div class="insight">
+                <h4>👨‍👩‍👧 发现</h4>
+                <p>家庭每增加一人，用电量增加约<strong>4-5kWh/天</strong>。5口之家比独居多用80%电量。</p>
+            </div>
+            
+            <h3>2.3 月份用电规律</h3>
+            <div id="month" class="chart"></div>
+            <div class="insight">
+                <h4>📅 发现</h4>
+                <p>冬季(12-2月)和夏季(6-8月)用电量明显高于春秋两季。冬季34kWh vs 春季24kWh，差距达<strong>40%</strong>！</p>
+            </div>
+            
+            <h3>2.4 周末vs工作日</h3>
+            <div id="weekend" class="chart"></div>
+            
+            <h3>2.5 相关性热力图</h3>
+            <div id="corr" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 三、反直觉发现</h2>
+            
+            <div class="insight" style="background:#e8f5e9;border-left-color:#4caf50;">
+                <h4 style="color:#2e7d32;">🔄 反直觉 #1: 空调影响没那么大！</h4>
+                <p>空调(ac)特征重要性仅5.2%，远低于房屋类型(57%)和家庭规模(19%)。也许样本中空调普及率太均匀了。</p>
+            </div>
+            
+            <div class="insight" style="background:#e8f5e9;border-left-color:#4caf50;">
+                <h4 style="color:#2e7d32;">🔄 反直觉 #2: 月份不是最重要的！</h4>
+                <p>月份相关性只有0.15，而房屋类型对用电量的影响是月份的4倍！</p>
+            </div>
+            
+            <div class="insight" style="background:#e8f5e9;border-left-color:#4caf50;">
+                <h4 style="color:#2e7d32;">🔄 反直觉 #3: 周末用电反而更高！</h4>
+                <p>周末平均32.8kWh vs 工作日27.4kWh，高出<strong>20%</strong>！人们在家时间多，用电自然更多。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🤖 四、机器学习预测模型</h2>
+            
+            <h3>4.1 模型对比</h3>
+            <table>
+                <tr><th>模型</th><th>R²</th><th>RMSE(kWh)</th><th>MAE(kWh)</th></tr>
+                <tr><td>Linear Regression</td><td>0.659</td><td>8.21</td><td>6.45</td></tr>
+                <tr><td>Ridge</td><td>0.659</td><td>8.21</td><td>6.45</td></tr>
+                <tr><td>Random Forest ⭐</td><td>0.845</td><td>5.55</td><td>4.12</td></tr>
+                <tr><td>Gradient Boosting</td><td>0.842</td><td>5.60</td><td>4.18</td></tr>
+            </table>
+            
+            <div id="model" class="chart"></div>
+            <div class="insight">
+                <h4>🎯 模型结论</h4>
+                <p>Random Forest表现最佳，R²=0.845，能解释84.5%的用电量变化。预测误差仅5.55kWh。</p>
+            </div>
+            
+            <h3>4.2 特征重要性</h3>
+            <div id="importance" class="chart"></div>
+            <div class="insight">
+                <h4>📊 重要性解读</h4>
+                <p><strong>房屋类型(57%)</strong>：决定性因素，别墅用电是公寓2倍以上</p>
+                <p><strong>家庭规模(19%)</strong>：人口多，用电自然多</p>
+                <p><strong>月份(15%)</strong>：冬夏季用电高峰</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 五、结论与建议</h2>
+            
+            <h3>5.1 主要发现</h3>
+            <ol style="margin-left:20px;line-height:2.2;">
+                <li><strong>房屋类型</strong>是影响用电量的最大因素，占比57%</li>
+                <li><strong>家庭规模</strong>每增加一人，用电量增加约4-5kWh/天</li>
+                <li><strong>季节</strong>影响显著：冬夏季比春秋季高40%</li>
+                <li><strong>周末</strong>用电比工作日高20%</li>
+            </ol>
+            
+            <h3>5.2 节能建议</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li>别墅用户应重点关注<strong>能效提升</strong></li>
+                <li>多口之家可考虑<strong>分时用电</strong>策略</li>
+                <li>冬季取暖可改用<strong>燃气</strong>替代电力</li>
+                <li>春秋季是<strong>节能改造</strong>的最佳时机</li>
+            </ul>
+            
+            <h3>5.3 模型应用</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li>可用于<strong>电力公司</strong>预测区域用电需求</li>
+                <li>帮助<strong>电网调度</strong>优化资源配置</li>
+                <li>为<strong>家庭用户</strong>提供个性化节能建议</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析报告 | 机器学习 | ECharts 可视化</p>
+        </div>
+    </div>
+    
+    <script>
+        var htype = echarts.init(document.getElementById('htype'));
+        var famsize = echarts.init(document.getElementById('famsize'));
+        var month = echarts.init(document.getElementById('month'));
+        var weekend = echarts.init(document.getElementById('weekend'));
+        var corr = echarts.init(document.getElementById('corr'));
+        var model = echarts.init(document.getElementById('model'));
+        var imp = echarts.init(document.getElementById('importance'));
+        
+        htype.setOption({
+            title: { text: '不同房屋类型用电量', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['公寓 Apartment', '独栋 House', '别墅 Villa'] },
+            yAxis: { type: 'value', name: 'kWh/天' },
+            series: [{ type: 'bar', data: [20.2, 33.7, 47.0], itemStyle: { color: '#ff9800' }, label: { show: true, position: 'top', formatter: '{c} kWh' } }]
+        });
+        
+        famsize.setOption({
+            title: { text: '家庭规模与用电量', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['1人', '2人', '3人', '4人', '5人'] },
+            yAxis: { type: 'value', name: 'kWh/天' },
+            series: [{ type: 'bar', data: [21.8, 25.9, 30.3, 34.5, 38.8], itemStyle: { color: '#ff9800' }, label: { show: true, position: 'top' } }]
+        });
+        
+        month.setOption({
+            title: { text: '各月份用电量', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'] },
+            yAxis: { type: 'value', name: 'kWh/天' },
+            series: [{ type: 'line', data: [34.2,34.3,24.3,24.4,24.4,33.0,33.1,32.7,24.3,24.4,24.4,34.2], itemStyle: { color: '#ff9800' }, areaStyle: { opacity: 0.3 } }]
+        });
+        
+        weekend.setOption({
+            title: { text: '周末 vs 工作日', left: 'center' },
+            series: [{ type: 'pie', radius: ['40%','70%'], data: [
+                { value: 32.8, name: '周末 32.8kWh', itemStyle: { color: '#ff9800' } },
+                { value: 27.4, name: '工作日 27.4kWh', itemStyle: { color: '#ffb74d' } }
+            ], label: { formatter: '{b}: {c}kWh' } }]
+        });
+        
+        corr.setOption({
+            title: { text: '特征相关性热力图', left: 'center' },
+            tooltip: { position: 'top' },
+            grid: { height: '60%', top: '20%' },
+            xAxis: { type: 'category', data: ['kWh', '房屋', '人口', '月份', '周末', '空调'] },
+            yAxis: { type: 'category', data: ['kWh', '房屋', '人口', '月份', '周末', '空调'] },
+            visualMap: { min: -1, max: 1, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%',
+                        inRange: { color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026'] } },
+            series: [{ type: 'heatmap', data: [
+                [0,0,1],[0,1,0.62],[0,2,0.42],[0,3,0.15],[0,4,0.12],[0,5,0.01],
+                [1,0,0.62],[1,1,1],[1,2,0.01],[1,3,0],[1,4,0],[1,5,0],
+                [2,0,0.42],[2,1,0.01],[2,2,1],[2,3,0],[2,4,0],[2,5,0],
+                [3,0,0.15],[3,1,0],[3,2,0],[3,3,1],[3,4,0],[3,5,0.05],
+                [4,0,0.12],[4,1,0],[4,2,0],[4,3,0],[4,4,1],[4,5,0],
+                [5,0,0.01],[5,1,0],[5,2,0],[5,3,0.05],[5,4,0],[5,5,1]
+            ], label: { show: true, formatter: function(p) { return p.value[2].toFixed(2); } } }]
+        });
+        
+        model.setOption({
+            title: { text: '模型性能对比', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['R²', 'RMSE'], top: '10%' },
+            grid: { top: '25%' },
+            xAxis: { type: 'category', data: ['Linear', 'Ridge', 'Random\nForest', 'Gradient\nBoosting'] },
+            yAxis: [{ type: 'value', name: 'R²', max: 1 }, { type: 'value', name: 'RMSE' }],
+            series: [
+                { name: 'R²', type: 'bar', data: [0.659, 0.659, 0.845, 0.842], itemStyle: { color: '#4caf50' } },
+                { name: 'RMSE', type: 'line', yAxisIndex: 1, data: [8.21, 8.21, 5.55, 5.60], itemStyle: { color: '#ff9800' }, lineStyle: {width:3} }
+            ]
+        });
+        
+        imp.setOption({
+            title: { text: '特征重要性', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '重要性%' },
+            yAxis: { type: 'category', data: ['周末', '空调', '月份', '家庭规模', '房屋类型'] },
+            series: [{ type: 'bar', data: [4.4, 5.2, 14.9, 18.7, 56.9], 
+                      itemStyle: { color: function(p) { return p.value < 10 ? '#ffb74d' : '#ff9800'; } },
+                      label: { show: true, position: 'right', formatter: '{c}%' } }]
+        });
+        
+        window.addEventListener('resize', function() {
+            htype.resize(); famsize.resize(); month.resize(); weekend.resize();
+            corr.resize(); model.resize(); imp.resize();
+        });
+    </script>
+</body>
+</html>

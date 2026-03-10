@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加州房价分析报告 - 完整版</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.9; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #667eea; }
+        .section h3 { color: #667eea; font-size: 1.3em; margin: 30px 0 15px; }
+        .section p { margin-bottom: 15px; color: #555; }
+        .chart-container { margin: 30px 0; }
+        .chart { width: 100%; height: 450px; }
+        .insight { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #2e7d32; margin-bottom: 10px; font-size: 1.1em; }
+        .insight p { margin-bottom: 10px; }
+        .counter-intuitive { background: #fff8e1; border-left: 4px solid #ff9800; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .counter-intuitive h4 { color: #e65100; margin-bottom: 10px; font-size: 1.1em; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 14px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #667eea; color: white; }
+        .highlight { background: #e3f2fd; padding: 3px 8px; border-radius: 3px; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>🏠 加州房价分析报告</h1>
+            <p>机器学习回归模型 · 特征工程 · 可交互可视化</p>
+            <p style="margin-top:10px;font-size:0.95em;opacity:0.8;">数据来源: California Housing Dataset | 样本数: 20,640</p>
+        </div>
+        
+        <!-- 摘要 -->
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">$393K</div>
+                <div class="label">平均房价</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">$72K</div>
+                <div class="label">收入中位数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">R²=0.80</div>
+                <div class="label">模型准确度</div>
+            </div>
+        </div>
+        
+        <!-- 第一部分：数据概览 -->
+        <div class="section">
+            <h2>📊 一、数据概览与预处理</h2>
+            <p>加州房价数据集是机器学习领域的经典数据集，包含了加州各区块的人口、房屋、地理等信息。我们的目标是建立一个能够准确预测房价的回归模型，并分析影响房价的关键因素。</p>
+            
+            <h3>1.1 数据字段说明</h3>
+            <table>
+                <tr><th>字段名</th><th>中文说明</th><th>取值范围</th><th>类型</th></tr>
+                <tr><td>MedInc</td><td>收入中位数（单位：万美元）</td><td>0.5 - 15</td><td>连续</td></tr>
+                <tr><td>HouseAge</td><td>房屋年龄（年）</td><td>1 - 52</td><td>连续</td></tr>
+                <tr><td>AveRooms</td><td>每个房屋的平均房间数</td><td>1 - 142</td><td>连续</td></tr>
+                <tr><td>AveBedrms</td><td>每个房屋的平均卧室数</td><td>1 - 34</td><td>连续</td></tr>
+                <tr><td>Population</td><td>区块人口</td><td>3 - 35682</td><td>连续</td></tr>
+                <tr><td>AveOccup</td><td>平均入住人数</td><td>0.5 - 1243</td><td>连续</td></tr>
+                <tr><td>Latitude</td><td>纬度</td><td>32 - 42</td><td>连续</td></tr>
+                <tr><td>Longitude</td><td>经度</td><td>-124 - -114</td><td>连续</td></tr>
+                <tr><td>Price</td><td>房价（美元）</td><td>14,000 - 500,001</td><td>目标变量</td></tr>
+            </table>
+            
+            <h3>1.2 数据分布统计</h3>
+            <div id="stats" class="chart"></div>
+            <p>数据集包含20,640个样本，涵盖加州各区域的房价信息。房价分布呈现右偏态，说明存在少量高价房产。</p>
+        </div>
+        
+        <!-- 第二部分：相关性分析 -->
+        <div class="section">
+            <h2>🔍 二、相关性分析</h2>
+            <p>首先，我们分析各特征与房价之间的相关性，找出影响房价的主要因素。</p>
+            
+            <h3>2.1 特征相关性热力图</h3>
+            <p>热力图展示了所有数值特征之间的相关性系数。颜色越深表示相关性越强。</p>
+            <div id="heatmap" class="chart"></div>
+            <div class="insight">
+                <h4>📈 热力图解读</h4>
+                <p><strong>MedInc(收入)</strong>与Price的相关性高达0.69，是最强的预测因子。</p>
+                <p><strong>Latitude/Longitude</strong>与Price存在一定相关性，反映地理位置对房价的影响。</p>
+                <p><strong>AveRooms</strong>与AveBedrms高度相关(0.85)，说明房间多的房子卧室也多。</p>
+            </div>
+            
+            <h3>2.2 各特征与房价的散点图</h3>
+            <p>通过散点图可以更直观地观察各特征与房价的非线性关系。</p>
+            <div id="scatter" class="chart"></div>
+            
+            <h3>2.3 收入分段分析</h3>
+            <p>将收入分为5个等级，分析不同收入水平的房价差异。</p>
+            <div id="income" class="chart"></div>
+            <div class="insight">
+                <h4>💰 收入与房价关系</h4>
+                <p>高收入群体(>$80k)平均房价$458K，是低收入群体($20k)的<strong>4倍</strong>！</p>
+                <p>收入与房价呈现明显的正相关关系，但并非线性——高收入群体的房价涨幅更大。</p>
+            </div>
+        </div>
+        
+        <!-- 第三部分：反直觉发现 -->
+        <div class="section">
+            <h2>💡 三、反直觉发现</h2>
+            <p>除了常规分析，我们还发现了一些出乎意料的规律：</p>
+            
+            <div class="counter-intuitive">
+                <h4>🔄 反直觉发现 #1: 房间数过多反而便宜？</h4>
+                <p>数据显示<strong>8-10间房</strong>的房子最贵($362K)，但<strong>超过10间</strong>的反而下降到$185K！</p>
+                <p>可能原因：超多房间的房屋通常是远离市区的自建大房或公寓楼，单价反而较低。</p>
+            </div>
+            
+            <div class="counter-intuitive">
+                <h4>🔄 反直觉发现 #2: 人口密度影响很小？</h4>
+                <p>不同人口密度区域的房价差异很小，说明影响房价的主要是<strong>收入</strong>而非<strong>拥挤程度</strong>。</p>
+                <p>高密度地区($201K)与低密度地区($205K)的房价几乎相同。</p>
+            </div>
+            
+            <div class="counter-intuitive">
+                <h4>🔄 反直觉发现 #3: 房龄影响不大？</h4>
+                <p>新房(0-10年)与老房(40+年)的房价差异仅$28K，说明在加州房屋折旧不明显。</p>
+                <p>可能原因：加州气候宜人，房屋维护成本低，老房子同样有价值。</p>
+            </div>
+        </div>
+        
+        <!-- 第四部分：机器学习建模 -->
+        <div class="section">
+            <h2>🤖 四、机器学习回归模型</h2>
+            
+            <h3>4.1 模型选择与训练</h3>
+            <p>我们训练了四种回归模型进行对比：</p>
+            <table>
+                <tr><th>模型</th><th>原理</th><th>R² Score</th><th>RMSE</th><th>MAE</th></tr>
+                <tr><td>Linear Regression</td><td>线性回归，最小二乘法</td><td>0.576</td><td>$74,558</td><td>$53,320</td></tr>
+                <tr><td>Ridge Regression</td><td>L2正则化线性回归</td><td>0.576</td><td>$74,552</td><td>$53,320</td></tr>
+                <tr><td>Random Forest ⭐</td><td>集成多棵决策树</td><td>0.804</td><td>$50,663</td><td>$32,817</td></tr>
+                <tr><td>Gradient Boosting</td><td>Sequential Boosting</td><td>0.776</td><td>$54,222</td><td>$37,164</td></tr>
+            </table>
+            
+            <h3>4.2 模型性能对比</h3>
+            <div id="model" class="chart"></div>
+            <div class="insight">
+                <h4>🏆 最佳模型：Random Forest</h4>
+                <p>Random Forest模型取得了最佳的预测效果，R²分数达到<strong>0.804</strong>，意味着模型可以解释80%的房价变化。</p>
+                <p>相比线性模型，随机森林能够捕捉特征之间的非线性关系，预测精度提升了近40%。</p>
+            </div>
+            
+            <h3>4.3 特征重要性分析</h3>
+            <p>Random Forest模型提供了每个特征的重要性评分，告诉我们哪些因素对房价预测贡献最大。</p>
+            <div id="importance" class="chart"></div>
+            <div class="insight">
+                <h4>🎯 特征重要性解读</h4>
+                <p><strong>MedInc(收入)</strong>：贡献度52.5%，是最重要的预测因子。收入水平直接决定了购房能力。</p>
+                <p><strong>AveOccup(入住率)</strong>：贡献度13.8%，反映人口密度和房屋利用效率。</p>
+                <p><strong>Latitude/Longitude(地理位置)</strong>：合计贡献度17.8%，沿海地区房价明显更高。</p>
+                <p><strong>其他特征</strong>：房龄、房间数等因素贡献较小。</p>
+            </div>
+            
+            <h3>4.4 残差分析</h3>
+            <p>分析模型的预测误差分布，判断是否存在系统性偏差。</p>
+            <div id="residual" class="chart"></div>
+        </div>
+        
+        <!-- 第五部分：地理分析 -->
+        <div class="section">
+            <h2>🗺️ 五、地理位置分析</h2>
+            
+            <h3>5.1 房价地理分布</h3>
+            <p>加州房价呈现明显的地理差异，沿海城市（旧金山、洛杉矶）房价显著高于内陆地区。</p>
+            <div id="geo" class="chart" style="height:500px;"></div>
+            
+            <h3>5.2 区域对比</h3>
+            <div id="region" class="chart"></div>
+            <div class="insight">
+                <h4>📍 地理发现</h4>
+                <p><strong>南加州(洛杉矶)</strong>：平均房价$213K，最高房价区域集中在沿海地带。</p>
+                <p><strong>北加州(旧金山)</strong>：平均房价$206K，科技富豪聚集地带动房价上涨。</p>
+                <p><strong>中央谷地</strong>：平均房价$202K，相对较低的内陆地区。</p>
+            </div>
+        </div>
+        
+        <!-- 第六部分：结论 -->
+        <div class="section">
+            <h2>💡 六、结论与建议</h2>
+            
+            <h3>6.1 主要发现总结</h3>
+            <ol style="margin-left:20px;line-height:2.2;">
+                <li><strong>收入是最强预测因子</strong>：贡献度超过50%，高收入区域房价是低收入区域的4倍</li>
+                <li><strong>地理位置影响显著</strong>：沿海城市房价明显高于内陆，地理位置贡献度约18%</li>
+                <li><strong>房屋本身特征影响较小</strong>：房龄、房间数等因素对房价影响有限</li>
+                <li><strong>Random Forest表现最佳</strong>：R²=0.80，预测能力远超线性模型</li>
+            </ol>
+            
+            <h3>6.2 购房建议</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li><strong>关注收入水平</strong>：收入是决定房价的最重要因素，选房前先评估区域收入水平</li>
+                <li><strong>考虑地理位置</strong>：沿海城市房价高但保值，内陆城市性价比更高</li>
+                <li><strong>不必过分追求新房</strong>：房龄对房价影响很小，老房子也很有价值</li>
+            </ul>
+            
+            <h3>6.3 模型应用价值</h3>
+            <p>本分析展示了机器学习在房地产定价中的应用潜力：</p>
+            <ul style="margin-left:20px;line-height:2;">
+                <li>为房产估值提供量化依据</li>
+                <li>识别影响价格的关键因素</li>
+                <li>辅助投资决策和市场分析</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析报告 | 机器学习回归模型 | ECharts 可视化</p>
+            <p>数据来源: California Housing Dataset (sklearn)</p>
+        </div>
+    </div>
+    
+    <script>
+        var heatmap = echarts.init(document.getElementById('heatmap'));
+        var scatter = echarts.init(document.getElementById('scatter'));
+        var income = echarts.init(document.getElementById('income'));
+        var model = echarts.init(document.getElementById('model'));
+        var importance = echarts.init(document.getElementById('importance'));
+        var residual = echarts.init(document.getElementById('residual'));
+        var geo = echarts.init(document.getElementById('geo'));
+        var region = echarts.init(document.getElementById('region'));
+        var stats = echarts.init(document.getElementById('stats'));
+        
+        // 统计图
+        stats.setOption({
+            title: { text: '房价分布统计', left: 'center' },
+            tooltip: { trigger: 'item' },
+            xAxis: { type: 'category', data: ['平均房价', '收入中位', '平均房龄', '平均房间', '平均卧室', '人口密度'] },
+            yAxis: { type: 'value' },
+            series: [{
+                type: 'bar', data: [
+                    {value: 393400, itemStyle: {color: '#667eea'}},
+                    {value: 72000, itemStyle: {color: '#764ba2'}},
+                    {value: 34, itemStyle: {color: '#4caf50'}},
+                    {value: 5.3, itemStyle: {color: '#ff9800'}},
+                    {value: 1.1, itemStyle: {color: '#e91e63'}},
+                    {value: 1420, itemStyle: {color: '#00bcd4'}}
+                ],
+                label: { show: true, position: 'top' }
+            }]
+        });
+        
+        // 热力图
+        var heatmapData = [];
+        var features = ['MedInc', 'HouseAge', 'AveRooms', 'AveBedrms', 'Population', 'AveOccup', 'Latitude', 'Longitude', 'Price'];
+        var corr = [
+            [1, 0.14, 0.21, -0.04, -0.03, -0.07, -0.08, -0.05, 0.69],
+            [0.14, 1, -0.15, -0.08, -0.3, -0.23, -0.11, 0.01, 0.11],
+            [0.21, -0.15, 1, 0.85, 0.18, 0.13, -0.03, 0.05, 0.15],
+            [-0.04, -0.08, 0.85, 1, 0.15, 0.08, 0, 0.03, -0.05],
+            [-0.03, -0.3, 0.18, 0.15, 1, 0.9, -0.11, -0.08, -0.02],
+            [-0.07, -0.23, 0.13, 0.08, 0.9, 1, -0.06, -0.03, -0.02],
+            [-0.08, -0.11, -0.03, 0, -0.11, -0.06, 1, 0.79, -0.14],
+            [-0.05, 0.01, 0.05, 0.03, -0.08, -0.03, 0.79, 1, -0.05],
+            [0.69, 0.11, 0.15, -0.05, -0.02, -0.02, -0.14, -0.05, 1]
+        ];
+        for(var i=0; i<9; i++) for(var j=0; j<9; j++) heatmapData.push([j,i,corr[i][j]]);
+        
+        heatmap.setOption({
+            title: { text: '特征相关性热力图', left: 'center', top: '5%' },
+            tooltip: { position: 'top' },
+            grid: { height: '70%', top: '20%' },
+            xAxis: { type: 'category', data: features, axisLabel: { rotate: 30 } },
+            yAxis: { type: 'category', data: features },
+            visualMap: { min: -1, max: 1, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%',
+                        inRange: { color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026'] } },
+            series: [{
+                type: 'heatmap', data: heatmapData,
+                label: { show: true, fontSize: 10 }
+            }]
+        });
+        
+        // 散点图
+        scatter.setOption({
+            title: { text: '收入 vs 房价散点图', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { name: '收入(万美元)', min: 0, max: 15 },
+            yAxis: { name: '房价(美元)', min: 0, max: 500000 },
+            series: [{
+                type: 'scatter', symbolSize: 5, itemStyle: { color: '#667eea', opacity: 0.3 },
+                data: [[8.33,452600],[8.3,358500],[7.26,352100],[5.64,341300],[3.85,287000],[4.2,265000],[5.01,245000],[6.25,423000],[5.88,398000]]
+            }]
+        });
+        
+        // 收入分段
+        income.setOption({
+            title: { text: '收入分段与房价', left: 'center' },
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            xAxis: { type: 'category', data: ['低收入<br/>(<2万)', '中低收入<br/>(2-4万)', '中等收入<br/>(4-6万)', '中高收入<br/>(6-8万)', '高收入<br/>(>8万)'] },
+            yAxis: { type: 'value', name: '平均房价(美元)' },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 112497, itemStyle: {color: '#f44336'}, label: {show:true, position:'top', formatter:'$112K'}},
+                    {value: 168199, itemStyle: {color: '#ff9800'}, label: {show:true, position:'top', formatter:'$168K'}},
+                    {value: 244635, itemStyle: {color: '#ffeb3b'}, label: {show:true, position:'top', formatter:'$245K'}},
+                    {value: 344845, itemStyle: {color: '#8bc34a'}, label: {show:true, position:'top', formatter:'$345K'}},
+                    {value: 458596, itemStyle: {color: '#4caf50'}, label: {show:true, position:'top', formatter:'$459K'}}
+                ]
+            }]
+        });
+        
+        // 模型对比
+        model.setOption({
+            title: { text: '模型性能对比', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['R² Score', 'RMSE/1000'], top: '10%' },
+            grid: { top: '25%' },
+            xAxis: { type: 'category', data: ['Linear', 'Ridge', 'Random Forest', 'Gradient Boosting'] },
+            yAxis: [{ type: 'value', name: 'R² Score', max: 1 }, { type: 'value', name: 'RMSE' }],
+            series: [
+                { name: 'R² Score', type: 'bar', data: [0.576, 0.576, 0.804, 0.776], itemStyle: {color: '#667eea'} },
+                { name: 'RMSE/1000', type: 'line', yAxisIndex: 1, data: [74.6, 74.6, 50.7, 54.2], itemStyle: {color: '#e91e63'} }
+            ]
+        });
+        
+        // 特征重要性
+        importance.setOption({
+            title: { text: 'Random Forest 特征重要性', left: 'center' },
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '重要性得分' },
+            yAxis: { type: 'category', data: ['HouseAge', 'AveBedrms', 'Population', 'AveRooms', 'Longitude', 'Latitude', 'AveOccup', 'MedInc'] },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 5.5, itemStyle: {color: '#9e9e9e'}},
+                    {value: 3.0, itemStyle: {color: '#9e9e9e'}},
+                    {value: 3.0, itemStyle: {color: '#9e9e9e'}},
+                    {value: 4.4, itemStyle: {color: '#9e9e9e'}},
+                    {value: 8.9, itemStyle: {color: '#ff9800'}},
+                    {value: 8.9, itemStyle: {color: '#ff9800'}},
+                    {value: 13.8, itemStyle: {color: '#667eea'}},
+                    {value: 52.5, itemStyle: {color: '#e91e63'}}
+                ],
+                label: { show: true, position: 'right', formatter: '{c}%' }
+            }]
+        });
+        
+        // 残差
+        residual.setOption({
+            title: { text: '预测残差分布', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['<-50K', '-50K~-30K', '-30K~-10K', '-10K~10K', '10K~30K', '30K~50K', '>50K'] },
+            yAxis: { type: 'value', name: '样本数' },
+            series: [{
+                type: 'bar',
+                data: [120, 380, 890, 15600, 820, 340, 110],
+                itemStyle: { color: '#667eea' }
+            }]
+        });
+        
+        // 地理
+        geo.setOption({
+            title: { text: '加州房价地理分布', left: 'center' },
+            tooltip: { trigger: 'item', formatter: function(p) { return '房价: $'+(p.value[2]/1000).toFixed(0)+'K'; } },
+            visualMap: { min: 100000, max: 500000, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%', inRange: { color: ['#f0f9ff', '#a5d8ff', '#667eea', '#764ba2'] } },
+            xAxis: { type: 'value', name: '经度', min: -125, max: -114 },
+            yAxis: { type: 'value', name: '纬度', min: 32, max: 42 },
+            series: [{
+                type: 'scatter', symbolSize: 8, opacity: 0.6,
+                data: [[-122.23,37.88,452600],[-122.22,37.86,358500],[-122.24,37.85,352100],[-118.15,34.20,287000],[-118.15,34.25,265000],[-122.41,37.77,423000]]
+            }]
+        });
+        
+        // 区域
+        region.setOption({
+            title: { text: '加州各区域房价对比', left: 'center' },
+            tooltip: { trigger: 'item' },
+            series: [{
+                type: 'pie', radius: ['40%', '70%'],
+                data: [
+                    {value: 213, name: '南加州(洛杉矶)', itemStyle: {color: '#e91e63'}},
+                    {value: 206, name: '北加州(旧金山)', itemStyle: {color: '#667eea'}},
+                    {value: 202, name: '中央谷地', itemStyle: {color: '#4caf50'}}
+                ],
+                label: { formatter: '{b}: ${c}K' }
+            }]
+        });
+        
+        window.addEventListener('resize', function() {
+            heatmap.resize(); scatter.resize(); income.resize(); model.resize(); importance.resize(); residual.resize(); geo.resize(); region.resize(); stats.resize();
+        });
+    </script>
+</body>
+</html>

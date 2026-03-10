@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泰坦尼克号生存分析 - 可交互版</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .hero p { opacity: 0.85; font-size: 1.2em; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #667eea; }
+        .section h3 { color: #667eea; font-size: 1.3em; margin: 25px 0 15px; }
+        .chart-container { margin: 20px 0; }
+        .chart { width: 100%; height: 400px; }
+        .insight { background: #fff3cd; border-left: 4px solid #ffc107; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #856404; margin-bottom: 10px; }
+        .insight strong { color: #d33; }
+        .counter-intuitive { background: #fce4ec; border-left: 4px solid #e91e63; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        .counter-intuitive h4 { color: #c2185b; margin-bottom: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>🚢 泰坦尼克号生存分析</h1>
+            <p>可交互数据可视化 · 探索反直觉发现</p>
+            <p style="margin-top:10px;font-size:1em;opacity:0.8;">数据来源: Kaggle Titanic Dataset | 样本数: 1,309</p>
+        </div>
+        
+        <div class="section">
+            <h2>🔑 反直觉发现</h2>
+            
+            <div class="counter-intuitive">
+                <h4>💡 反直觉发现 #1: 有家人反而更容易生存？</h4>
+                <p>独自旅行的人生存率仅 <strong>30.3%</strong>，而有家人同行的人生存率高达 <strong>50.3%</strong>！</p>
+                <p style="margin-top:10px;color:#666;">可能原因：家人会相互帮助、提醒救援，而且有家庭的人更有动力求生。</p>
+            </div>
+            
+            <div class="counter-intuitive">
+                <h4>💡 反直觉发现 #2: 大家庭反而更危险？</h4>
+                <p>小家庭(2-4人)生存率最高 <strong>56.3%</strong>，但超大家庭(7人以上)生存率 <strong>0%</strong>！</p>
+                <p style="margin-top:10px;color:#666;">可能原因：大家庭成员多，难以同时照顾所有人逃生。</p>
+            </div>
+            
+            <div class="counter-intuitive">
+                <h4>💡 反直觉发现 #3: 三等舱女性几乎都能活？</h4>
+                <p>头等舱女性生存率 <strong>96.5%</strong>，但三等舱女性也有 <strong>49.1%</strong>！</p>
+                <p style="margin-top:10px;color:#666;">"妇女儿童优先"原则确实保护了女性，即使是最底层的三等舱。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 性别与舱位交叉分析</h2>
+            <p>点击图例可以筛选数据，鼠标悬停查看详情</p>
+            <div id="chart1" class="chart"></div>
+        </div>
+        
+        <div class="two-col">
+            <div class="section">
+                <h2>👶 年龄段生存率</h2>
+                <div id="chart2" class="chart"></div>
+            </div>
+            
+            <div class="section">
+                <h2>👨‍👩‍👧‍👦 家庭规模生存率</h2>
+                <div id="chart3" class="chart"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💰 票价与生存率关系</h2>
+            <div id="chart4" class="chart"></div>
+        </div>
+        
+        <div class="two-col">
+            <div class="section">
+                <h2>🚢 各舱位生存率</h2>
+                <div id="chart5" class="chart"></div>
+            </div>
+            
+            <div class="section">
+                <h2>⚓ 登船港口生存率</h2>
+                <div id="chart6" class="chart"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 综合对比</h2>
+            <div id="chart7" class="chart"></div>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析 | ECharts 可视化</p>
+        </div>
+    </div>
+    
+    <script>
+        // 初始化图表
+        var chart1 = echarts.init(document.getElementById('chart1'));
+        var chart2 = echarts.init(document.getElementById('chart2'));
+        var chart3 = echarts.init(document.getElementById('chart3'));
+        var chart4 = echarts.init(document.getElementById('chart4'));
+        var chart5 = echarts.init(document.getElementById('chart5'));
+        var chart6 = echarts.init(document.getElementById('chart6'));
+        var chart7 = echarts.init(document.getElementById('chart7'));
+        
+        // 性别+舱位
+        chart1.setOption({
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            legend: { data: ['男性', '女性'] },
+            xAxis: { type: 'category', data: ['1等舱', '2等舱', '3等舱'] },
+            yAxis: { type: 'value', name: '生存率 (%)', max: 100 },
+            series: [
+                { name: '男性', type: 'bar', data: [34.1, 14.6, 15.2], itemStyle: { color: '#2196f3' } },
+                { name: '女性', type: 'bar', data: [96.5, 88.7, 49.1], itemStyle: { color: '#e91e63' } }
+            ]
+        });
+        
+        // 年龄段
+        chart2.setOption({
+            tooltip: { trigger: 'item' },
+            series: [{
+                type: 'pie', radius: ['40%', '70%'],
+                data: [
+                    { value: 57.4, name: '儿童(0-12岁)', itemStyle: { color: '#4caf50' } },
+                    { value: 41.4, name: '青少年(12-18岁)', itemStyle: { color: '#8bc34a' } },
+                    { value: 38.6, name: '青年(18-35岁)', itemStyle: { color: '#ffeb3b' } },
+                    { value: 39.2, name: '中年(35-50岁)', itemStyle: { color: '#ff9800' } },
+                    { value: 40.0, name: '老年(50+岁)', itemStyle: { color: '#f44336' } }
+                ],
+                label: { formatter: '{b}: {d}%' }
+            }]
+        });
+        
+        // 家庭规模
+        chart3.setOption({
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            xAxis: { type: 'category', data: ['单人', '小家庭(2-4人)', '大家庭(5-6人)', '超大家庭(7+)'] },
+            yAxis: { type: 'value', name: '生存率 (%)', max: 100 },
+            series: [{
+                type: 'bar',
+                data: [
+                    { value: 30.3, itemStyle: { color: '#f44336' } },
+                    { value: 56.3, itemStyle: { color: '#4caf50' } },
+                    { value: 23.8, itemStyle: { color: '#ff9800' } },
+                    { value: 0, itemStyle: { color: '#9e9e9e' } }
+                ],
+                label: { show: true, position: 'top', formatter: '{c}%' }
+            }]
+        });
+        
+        // 票价分布
+        chart4.setOption({
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['生存', '遇难'] },
+            xAxis: { type: 'category', data: ['<20', '20-50', '50-100', '100-200', '>200'] },
+            yAxis: { type: 'value', name: '人数' },
+            series: [
+                { name: '生存', type: 'bar', stack: 'total', data: [89, 158, 98, 34, 13], itemStyle: { color: '#4caf50' } },
+                { name: '遇难', type: 'bar', stack: 'total', data: [227, 218, 58, 12, 6], itemStyle: { color: '#f44336' } }
+            ]
+        });
+        
+        // 舱位
+        chart5.setOption({
+            tooltip: { trigger: 'item' },
+            series: [{
+                type: 'pie', radius: '60%',
+                data: [
+                    { value: 61.9, name: '1等舱', itemStyle: { color: '#ffd700' } },
+                    { value: 43.0, name: '2等舱', itemStyle: { color: '#c0c0c0' } },
+                    { value: 25.5, name: '3等舱', itemStyle: { color: '#cd7f32' } }
+                ],
+                label: { formatter: '{b}: {d}%' }
+            }]
+        });
+        
+        // 港口
+        chart6.setOption({
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            xAxis: { type: 'category', data: ['Cherbourg(C)', 'Queenstown(Q)', 'Southampton(S)'] },
+            yAxis: { type: 'value', name: '生存率 (%)', max: 100 },
+            series: [{
+                type: 'bar',
+                data: [
+                    { value: 55.6, itemStyle: { color: '#9c27b0' } },
+                    { value: 35.8, itemStyle: { color: '#00bcd4' } },
+                    { value: 33.4, itemStyle: { color: '#795548' } }
+                ],
+                label: { show: true, position: 'top', formatter: '{c}%' }
+            }]
+        });
+        
+        // 综合对比
+        chart7.setOption({
+            radar: {
+                indicator: [
+                    { name: '性别影响', max: 100 },
+                    { name: '舱位影响', max: 100 },
+                    { name: '年龄影响', max: 100 },
+                    { name: '家庭影响', max: 100 },
+                    { name: '票价影响', max: 100 }
+                ],
+                shape: 'circle'
+            },
+            series: [{
+                type: 'radar',
+                data: [
+                    {
+                        value: [72.7, 36.4, 19.0, 20.0, 45.0],
+                        name: '影响因素得分',
+                        areaStyle: { opacity: 0.3 },
+                        itemStyle: { color: '#667eea' }
+                    }
+                ]
+            }]
+        });
+        
+        // 响应式
+        window.addEventListener('resize', function() {
+            chart1.resize();
+            chart2.resize();
+            chart3.resize();
+            chart4.resize();
+            chart5.resize();
+            chart6.resize();
+            chart7.resize();
+        });
+    </script>
+</body>
+</html>

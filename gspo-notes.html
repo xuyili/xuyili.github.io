@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSPO算法读后感 | 徐一立</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; margin-right: 20px; }
+        .nav a:hover { text-decoration: underline; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 60px 40px; border-radius: 20px; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .header p { opacity: 0.85; font-size: 1.2em; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .article { background: white; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .article h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; border-bottom: 3px solid #667eea; padding-bottom: 15px; }
+        .article h3 { color: #333; font-size: 1.3em; margin: 30px 0 15px; }
+        .article p { margin-bottom: 20px; font-size: 1.1em; color: #555; }
+        .article ul, .article ol { margin: 20px 0 20px 30px; }
+        .article li { margin-bottom: 12px; color: #555; }
+        .quote { background: #f0f4f8; border-left: 5px solid #667eea; padding: 25px 30px; margin: 30px 0; font-style: italic; }
+        .highlight { background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); padding: 25px; border-radius: 10px; margin: 25px 0; }
+        .tag { display: inline-block; background: #667eea; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; margin-right: 10px; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+        @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">← 首页</a>
+            <a href="/ml-notes.html">← 机器学习笔记</a>
+        </div>
+        
+        <div class="header">
+            <h1>📖 GSPO算法读后感</h1>
+            <p>从token级到序列级优化的范式转变</p>
+            <p style="margin-top: 20px; opacity: 0.7;">来源：居丽叶 | 2026-03-07</p>
+        </div>
+        
+        <div class="two-col">
+            <div class="article">
+                <h2>🎯 核心要点</h2>
+                <span class="tag">强化学习</span> <span class="tag">GSPO</span> <span class="tag">GRPO</span>
+                
+                <h3>为什么GRPO会不稳定？</h3>
+                <ul>
+                    <li><strong>高方差噪声</strong>：单个token的比率波动很大</li>
+                    <li><strong>clip放大问题</strong>：在高方差权重上做clip会破坏梯度方向</li>
+                    <li><strong>MoE脆弱</strong>：不同专家切换导致重要性比率震荡</li>
+                </ul>
+                
+                <h3>GSPO的创新</h3>
+                <ul>
+                    <li>将优化粒度从token级提升到<strong>序列级</strong></li>
+                    <li>基于整个响应序列的似然计算重要性比率</li>
+                    <li>引入长度归一化，消除长短序列的尺度差异</li>
+                </ul>
+                
+                <div class="quote">
+                    <strong>核心原则：优化目标应与奖励的单位一致。</strong><br>
+                    奖励是针对完整序列的，因此重要性比率也应该在序列层面定义。
+                </div>
+            </div>
+            
+            <div class="article">
+                <h2>💡 深度思考</h2>
+                
+                <h3>1. 粒度的不匹配是万恶之源</h3>
+                <p>GRPO的问题本质是<strong>粒度不匹配</strong>：</p>
+                <ul>
+                    <li>奖励是<strong>序列级</strong>的</li>
+                    <li>优势是<strong>序列级</strong>的</li>
+                    <li>但优化是<strong>token级</strong>的</li>
+                </ul>
+                <p>这就像用一个乐队指挥来评价整个交响乐，但奖励却只发给每一个音符——荒谬但真实。</p>
+                
+                <h3>2. 归一化的智慧</h3>
+                <p>GSPO通过在log比率上除以序列长度|y_i|，消除了长短响应之间的尺度差异。这让我想到：</p>
+                <div class="highlight">
+                    <strong>归一化本质上是公平的度量。</strong><br>
+                    无论输入多长，我们都应该用相对尺度来衡量。
+                </div>
+                
+                <h3>3. MoE的困境与解决</h3>
+                <p>MoE模型中，同一个query在不同训练轮次可能激活不同专家，导致重要性比率剧烈震荡。GSPO通过只关注序列似然而非单个token的似然，从根本上解决了这个问题。</p>
+                <p>这告诉我们：<strong>有时候，忽略细节反而能获得更稳定的全局解。</strong></p>
+            </div>
+            
+            <div class="article">
+                <h2>🔬 实验结论</h2>
+                
+                <h3>训练稳定性</h3>
+                <ul>
+                    <li>GSPO训练稳定，性能随算力提升持续爬升</li>
+                    <li>GRPO需要Routing Replay等额外技巧来稳定训练</li>
+                </ul>
+                
+                <h3>效率对比</h3>
+                <ul>
+                    <li>GSPO效率更高，相同算力下取得更高训练奖励</li>
+                    <li>GRPO在噪声里"屎海遨游"，GSPO提供更干净的学习信号</li>
+                </ul>
+                
+                <h3>工程优势</h3>
+                <ul>
+                    <li>对训练引擎与推理引擎的精度差异更具容忍度</li>
+                    <li>可直接使用推理引擎返回的序列似然，免去重算开销</li>
+                    <li>在部分rollout、多轮RL、训练-推理分离等场景下优势明显</li>
+                </ul>
+            </div>
+            
+            <div class="article">
+                <h2>🌊 我的感想</h2>
+                
+                <p>读完这篇论文，我最大的感触是：<strong>在AI领域，很多问题的本质是对"粒度"的选择</strong>。</p>
+                
+                <div class="quote">
+                    "我们总是喜欢精细的控制，但有时候粗粒度反而更稳健。"
+                </div>
+                
+                <h3>技术层面</h3>
+                <p>GSPO的成功在于它理解了<strong>奖励的语义粒度应该匹配优化的粒度</strong>。这是一个简单但深刻的道理——就像项目管理中，奖励应该给团队而非个人。</p>
+                
+                <h3>哲学层面</h3>
+                <p>从GRPO到GSPO的演进，让我想起了<strong>从还原论到整体论</strong>的转变。</p>
+                <ul>
+                    <li>还原论：关注每个token（微观）</li>
+                    <li>整体论：关注整个序列（宏观）</li>
+                </ul>
+                <p>有时候，<strong>退一步海阔天空</strong>——当你过于关注局部细节时，可能反而失去了对全局的把握。</p>
+                
+                <h3>工程启发</h3>
+                <p>GSPO的工程优势也很重要：它不追求完美匹配，而是<strong>在可接受的精度范围内最大化效率</strong>。这提醒我们：完美主义往往是效率的敌人。</p>
+                
+                <div class="highlight">
+                    <strong>总结：</strong><br>
+                    GSPO不仅是一个更好的RL算法，更是一种思考方式——<br>
+                    选择正确的粒度，让奖励与优化保持一致，<br>
+                    接受适当的不完美，追求整体的稳定与高效。
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2026 徐一立 | <a href="https://github.com/xuyili">GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>神经网络 | 机器学习笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; margin-right: 20px; }
+        .article { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .article h1 { color: #1a1a2e; font-size: 2.2em; margin-bottom: 25px; }
+        .article h2 { color: #333; font-size: 1.5em; margin: 40px 0 20px; border-left: 4px solid #667eea; padding-left: 15px; }
+        .article p { margin-bottom: 20px; font-size: 1.15em; color: #555; }
+        .article ul, .article ol { margin: 20px 0 20px 30px; }
+        .article li { margin-bottom: 15px; color: #555; font-size: 1.1em; }
+        .quote { background: #f0f4f8; border-left: 6px solid #667eea; padding: 30px; margin: 35px 0; font-style: italic; }
+        .highlight { background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); padding: 30px; border-radius: 12px; margin: 30px 0; }
+        .tag { display: inline-block; background: #667eea; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; margin-right: 10px; }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">← 首页</a>
+            <a href="/ml-notes.html">← 笔记目录</a>
+        </div>
+        
+        <div class="article">
+            <h1>🧠 理解神经网络：从函数逼近到世界模型</h1>
+            <p><span class="tag">深度学习</span> <span class="tag">表示学习</span></p>
+            
+            <h2>1. Universal Approximation</h2>
+            <p>通用逼近定理（Universal Approximation Theorem）说：一个足够大的神经网络可以逼近任何连续函数。</p>
+            <p>但这里有个深刻的悖论：<strong>表达能力 ≠ 可学习性</strong></p>
+            <p>神经网络可以表示任何函数，但不意味着我们可以训练它找到这个函数。就像你有一本包含所有答案的书，但不知道如何查找。</p>
+            
+            <h2>2. 层次化表示：理解的本质</h2>
+            <p>深度网络之所以有效，是因为它学会了<strong>层次化的表示</strong>：</p>
+            <ul>
+                <li>第一层：边缘检测（你能看到线条）</li>
+                <li>第二层：形状组合（你能看到轮廓）</li>
+                <li>第三层：部件识别（你能看到眼睛、鼻子）</li>
+                <li>最后一层：概念（你能看到"人脸"）</li>
+            </ul>
+            <p>这像极了人类理解世界的方式：<strong>从感知到概念</strong>。康德的先验综合感性理论，或许在神经网络的层次结构中找到了数学对应。</p>
+            
+            <h2>3. 深度 = 组合爆炸的力量</h2>
+            <div class="quote">
+                "一层网络可以表示任何函数，但需要指数级的宽度。深层网络只需要多项式级的宽度。"
+            </div>
+            <p>这像组织知识：不是把所有东西平铺，而是建立<strong>抽象的层级</strong>。软件开发中的模块化、面向对象编程，都是同样的智慧。</p>
+            
+            <h2>4. 损失函数：目标的哲学</h2>
+            <p>我们用损失函数定义"什么是好"。但：</p>
+            <ul>
+                <li><strong>L1 loss</strong>：对异常值鲁棒——像追求中位数的人生</li>
+                <li><strong>L2 loss</strong>：惩罚大错误——像追求均值的人生</li>
+                <li><strong>Cross-entropy</strong>：追求概率分布的匹配——像追求理解他人</li>
+            </ul>
+            <p><strong>你选择什么样的loss function，就是选择什么样的人生目标。</strong></p>
+        </div>
+    </div>
+</body>
+</html>

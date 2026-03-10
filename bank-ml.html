@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银行营销数据分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.9; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #00796b; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #00796b 0%, #004d40 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #00796b; }
+        .section h3 { color: #00796b; font-size: 1.3em; margin: 30px 0 15px; }
+        .section p { margin-bottom: 15px; color: #555; }
+        .chart { width: 100%; height: 450px; }
+        .insight { background: #e0f2f1; border-left: 4px solid #00796b; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #004d40; margin-bottom: 10px; font-size: 1.1em; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #00796b; color: white; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .stat-card { background: linear-gradient(135deg, #00796b 0%, #004d40 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>🏦 银行电话营销分析报告</h1>
+            <p>机器学习预测模型 · 用户行为分析 · 可交互可视化</p>
+            <p style="margin-top:10px;font-size:0.95em;opacity:0.8;">数据来源: Kaggle Bank Marketing | 样本数: 41,188 | 变量数: 21</p>
+        </div>
+        
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">41,188</div>
+                <div class="label">样本数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">11.27%</div>
+                <div class="label">营销成功率</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">AUC 0.95</div>
+                <div class="label">模型预测能力</div>
+            </div>
+        </div>
+        
+        <!-- 第一部分：数据概览 -->
+        <div class="section">
+            <h2>📊 一、数据概览与预处理</h2>
+            <p>银行电话营销数据集是营销分析领域的经典数据集，目标是预测客户是否会订阅定期存款产品。该数据集包含了客户基本信息、联系记录、社会经济指标等多维度数据。</p>
+            
+            <h3>1.1 变量说明</h3>
+            <table>
+                <tr><th>类别</th><th>变量名</th><th>说明</th></tr>
+                <tr><td rowspan="7">客户数据</td><td>age</td><td>年龄</td></tr>
+                <tr><td>job</td><td>职业类型（12类）</td></tr>
+                <tr><td>marital</td><td>婚姻状况</td></tr>
+                <tr><td>education</td><td>教育程度（8类）</td></tr>
+                <tr><td>default</td><td>是否有信用违约</td></tr>
+                <tr><td>housing</td><td>是否有房贷</td></tr>
+                <tr><td>loan</td><td>是否有个人贷款</td></tr>
+                <tr><td rowspan="5">联系数据</td><td>contact</td><td>联系方式（手机/固话）</td></tr>
+                <tr><td>month</td><td>联系月份</td></tr>
+                <tr><td>day_of_week</td><td>联系日期</td></tr>
+                <tr><td>duration</td><td>通话时长（秒）</td></tr>
+                <tr><td>campaign</td><td>本次营销联系次数</td></tr>
+                <tr><td rowspan="3">历史数据</td><td>pdays</td><td>上次联系后天数</td></tr>
+                <tr><td>previous</td><td>之前联系次数</td></tr>
+                <tr><td>poutcome</td><td>上次营销结果</td></tr>
+                <tr><td rowspan="5">经济指标</td><td>emp.var.rate</td><td>就业变化率</td></tr>
+                <tr><td>cons.price.idx</td><td>消费者价格指数</td></tr>
+                <tr><td>cons.conf.idx</td><td>消费者信心指数</td></tr>
+                <tr><td>euribor3m</td><td>欧元银行同业拆借利率</td></tr>
+                <tr><td>nr.employed</td><td>就业人数</td></tr>
+            </table>
+            
+            <h3>1.2 目标变量分布</h3>
+            <p>数据集存在明显的类别不平衡：</p>
+            <ul style="margin-left:20px;line-height:2;">
+                <li><strong>未订阅（no）</strong>：36,548人（88.73%）</li>
+                <li><strong>已订阅（yes）</strong>：4,640人（11.27%）</li>
+            </ul>
+        </div>
+        
+        <!-- 第二部分：EDA -->
+        <div class="section">
+            <h2>🔍 二、探索性数据分析</h2>
+            
+            <h3>2.1 特征相关性热力图</h3>
+            <div id="heatmap" class="chart"></div>
+            <div class="insight">
+                <h4>📈 热力图发现</h4>
+                <p><strong>通话时长(duration)</strong>与目标变量正相关最强，是最重要的预测因子。</p>
+                <p><strong>经济指标高度相关</strong>：euribor3m、nr.employed、emp.var.rate之间相关系数高达0.9+。</p>
+            </div>
+            
+            <h3>2.2 客户年龄分布</h3>
+            <div id="age" class="chart"></div>
+            
+            <h3>2.3 职业与成功率</h3>
+            <div id="job" class="chart"></div>
+            <div class="insight">
+                <h4>💡 职业分析发现</h4>
+                <p><strong>学生</strong>成功率最高（31.4%），远超平均水平！</p>
+                <p><strong>退休人员</strong>次之（25.2%），有更多时间和兴趣。</p>
+                <p><strong>蓝领</strong>成功率最低（6.9%）。</p>
+            </div>
+            
+            <div class="two-col">
+                <div>
+                    <h3>2.4 婚姻状况成功率</h3>
+                    <div id="marital" class="chart"></div>
+                </div>
+                <div>
+                    <h3>2.5 教育程度成功率</h3>
+                    <div id="education" class="chart"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 第三部分：反直觉发现 -->
+        <div class="section">
+            <h2>💡 三、反直觉发现</h2>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #1: 老年人更容易被营销！</h4>
+                <p>65岁以上老年人成功率高达<strong>46.8%</strong>，是年轻人的2-3倍！可能原因：老年人有更多储蓄、对定期存款需求更高、有时间接听电话。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #2: 经济越差，营销越成功？</h4>
+                <p> euribor3m（欧元利率）与成功率呈<strong>强负相关(-0.31)</strong>。经济差的时候，人们更愿意存钱！</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #3: 3月和12月成功率最高！</h4>
+                <p>3月(50.5%)和12月(48.9%)成功率远超其他月份，可能与年终奖金、节日消费习惯有关。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #4: 通话时长是"作弊"特征</h4>
+                <p>通话超过600秒(10分钟)，成功率高达<strong>48.6%</strong>！但这个特征在营销前无法知道，属于"事后诸葛亮"。</p>
+            </div>
+        </div>
+        
+        <!-- 第四部分：机器学习 -->
+        <div class="section">
+            <h2>🤖 四、机器学习预测模型</h2>
+            
+            <h3>4.1 模型性能对比</h3>
+            <p>我们训练了三种分类模型，使用AUC-ROC作为主要评估指标（因为数据不平衡）：</p>
+            <table>
+                <tr><th>模型</th><th>准确率</th><th>AUC-ROC</th><th>说明</th></tr>
+                <tr><td>Logistic Regression</td><td>85.7%</td><td>0.939</td><td>可解释性强</td></tr>
+                <tr><td>Random Forest</td><td>91.7%</td><td>0.951</td><td>抗过拟合</td></tr>
+                <tr><td>Gradient Boosting ⭐</td><td>92.1%</td><td>0.954</td><td>最佳性能</td></tr>
+            </table>
+            
+            <div id="model" class="chart"></div>
+            
+            <h3>4.2 特征重要性分析</h3>
+            <div id="importance" class="chart"></div>
+            <div class="insight">
+                <h4>🎯 特征重要性解读</h4>
+                <p><strong>通话时长(duration)</strong>：贡献度41.2%，绝对主导地位！但这是"作弊"特征。</p>
+                <p><strong>经济指标</strong>：euribor3m(10%)、nr.employed(6.5%)、emp.var.rate(6.4%)合计贡献23%。</p>
+                <p><strong>客户特征</strong>：年龄(6%)、职业(3.1%)、教育(3%)也有一定贡献。</p>
+            </div>
+        </div>
+        
+        <!-- 第五部分：营销建议 -->
+        <div class="section">
+            <h2>💡 五、结论与营销建议</h2>
+            
+            <h3>5.1 主要发现</h3>
+            <ol style="margin-left:20px;line-height:2.2;">
+                <li><strong>目标群体</strong>：优先联系学生、退休人员、高学历人群</li>
+                <li><strong>时间选择</strong>：3月、12月是黄金时间</li>
+                <li><strong>经济时机</strong>：经济下行期是营销好时机</li>
+                <li><strong>沟通策略</strong>：手机比固话效果好(14.7% vs 5.2%)</li>
+            </ol>
+            
+            <h3>5.2 实践建议</h3>
+            <ul style="margin-left:20px;line-height:2;">
+建立                <li><strong>高价值客户画像</strong>：学生+高学历+手机联系</li>
+                <li>关注<strong>经济指标</strong>，在利率下降时加大营销</li>
+                <li>对<strong>历史客户</strong>重点跟进，之前成功的客户65%会再次响应</li>
+                <li>通话时长是成功的关键指标，尽量延长有效沟通</li>
+            </ul>
+            
+            <h3>5.3 模型应用价值</h3>
+            <ul style="margin-left:20px;line-height:2;">
+                <li>在拨打电话前<strong>预测客户响应概率</strong>，优先联系高概率客户</li>
+                <li>优化营销资源分配，<strong>提升ROI</strong></li>
+                <li>实时调整营销策略，基于经济指标动态决策</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析报告 | 机器学习分类模型 | ECharts 可视化</p>
+            <p>数据来源: Kaggle Bank Marketing Dataset</p>
+        </div>
+    </div>
+    
+    <script>
+        var heatmap = echarts.init(document.getElementById('heatmap'));
+        var ageChart = echarts.init(document.getElementById('age'));
+        var jobChart = echarts.init(document.getElementById('job'));
+        var maritalChart = echarts.init(document.getElementById('marital'));
+        var eduChart = echarts.init(document.getElementById('education'));
+        var modelChart = echarts.init(document.getElementById('model'));
+        var impChart = echarts.init(document.getElementById('importance'));
+        
+        // 热力图 - 渐变配色
+        heatmap.setOption({
+            title: { text: '关键特征相关性热力图', left: 'center', textStyle: { fontSize: 16 } },
+            tooltip: { 
+                position: 'top',
+                formatter: function(params) {
+                    return params.name + ': ' + params.value[2].toFixed(2);
+                }
+            },
+            grid: { height: '65%', top: '18%' },
+            xAxis: { type: 'category', data: ['duration', 'euribor3m', 'nr.employed', 'emp.var.rate', 'age', 'campaign'], axisLabel: { fontSize: 11 } },
+            yAxis: { type: 'category', data: ['duration', 'euribor3m', 'nr.employed', 'emp.var.rate', 'age', 'campaign'], axisLabel: { fontSize: 11 } },
+            visualMap: { 
+                min: -1, max: 1, 
+                calculable: true, 
+                orient: 'horizontal', 
+                left: 'center', 
+                bottom: '0%',
+                itemHeight: 200,
+                textStyle: { fontSize: 12 },
+                inRange: { 
+                    color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026']
+                }
+            },
+            series: [{
+                type: 'heatmap',
+                data: [
+                    [0,0,1],[0,1,0.01],[0,2,0.02],[0,3,0.02],[0,4,-0.03],[0,5,0.04],
+                    [1,0,0.01],[1,1,1],[1,2,0.95],[1,3,0.91],[1,4,-0.01],[1,5,0.02],
+                    [2,0,0.02],[2,1,0.95],[2,2,1],[2,3,0.91],[2,4,-0.01],[2,5,0.02],
+                    [3,0,0.02],[3,1,0.91],[3,2,0.91],[3,3,1],[3,4,-0.02],[3,5,0.02],
+                    [4,0,-0.03],[4,1,-0.01],[4,2,-0.01],[4,3,-0.02],[4,4,1],[4,5,-0.03],
+                    [5,0,0.04],[5,1,0.02],[5,2,0.02],[5,3,0.02],[5,4,-0.03],[5,5,1]
+                ],
+                label: { show: true, fontSize: 12, fontWeight: 'bold', formatter: function(p) { return p.value[2].toFixed(2); } },
+                itemStyle: { borderColor: '#fff', borderWidth: 2 }
+            }]
+        });
+        
+        // 年龄分布
+        ageChart.setOption({
+            title: { text: '客户年龄分布与成功率', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['客户数', '成功率'], top: '10%' },
+            grid: { top: '25%' },
+            xAxis: { type: 'category', data: ['<25岁','25-35岁','35-45岁','45-55岁','55-65岁','65+岁'] },
+            yAxis: [{ type: 'value', name: '客户数' }, { type: 'value', name: '成功率%', max: 50 }],
+            series: [
+                { name: '客户数', type: 'bar', data: [1400, 12000, 13000, 8000, 5000, 1000], itemStyle: {color: '#00796b'} },
+                { name: '成功率', type: 'line', yAxisIndex: 1, data: [20.9, 11.7, 8.5, 8.7, 15.2, 46.8], itemStyle: {color: '#ff9800'}, lineStyle: {width: 3} }
+            ]
+        });
+        
+        // 职业
+        jobChart.setOption({
+            title: { text: '各职业营销成功率', left: 'center' },
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '成功率%', max: 35 },
+            yAxis: { type: 'category', data: ['blue-collar','services','housemaid','entrepreneur','technician','self-employed','management','admin.','unemployed','retired','student'] },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 6.9, itemStyle: {color: '#f44336'}},
+                    {value: 8.1, itemStyle: {color: '#f44336'}},
+                    {value: 10.0, itemStyle: {color: '#ff9800'}},
+                    {value: 8.5, itemStyle: {color: '#ff9800'}},
+                    {value: 10.8, itemStyle: {color: '#ff9800'}},
+                    {value: 10.5, itemStyle: {color: '#ff9800'}},
+                    {value: 11.2, itemStyle: {color: '#ff9800'}},
+                    {value: 13.0, itemStyle: {color: '#ff9800'}},
+                    {value: 14.2, itemStyle: {color: '#4caf50'}},
+                    {value: 25.2, itemStyle: {color: '#4caf50'}},
+                    {value: 31.4, itemStyle: {color: '#00796b'}}
+                ],
+                label: { show: true, position: 'right', formatter: '{c}%' }
+            }]
+        });
+        
+        // 婚姻
+        maritalChart.setOption({
+            title: { text: '婚姻状况成功率', left: 'center' },
+            series: [{
+                type: 'pie', radius: ['40%', '70%'],
+                data: [
+                    {value: 10.2, name: '已婚 10.2%', itemStyle: {color: '#00796b'}},
+                    {value: 14.0, name: '未婚 14.0%', itemStyle: {color: '#4caf50'}},
+                    {value: 10.3, name: '离异 10.3%', itemStyle: {color: '#ff9800'}}
+                ],
+                label: { formatter: '{b}: {c}%' }
+            }]
+        });
+        
+        // 教育
+        eduChart.setOption({
+            title: { text: '教育程度成功率', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['文盲','未知','大学','专业','高中','4年','6年','9年'] },
+            yAxis: { type: 'value', name: '成功率%' },
+            series: [{
+                type: 'bar',
+                data: [22.2,14.5,13.7,11.3,10.8,10.2,8.2,7.8],
+                itemStyle: {color: '#00796b'}
+            }]
+        });
+        
+        // 模型
+        modelChart.setOption({
+            title: { text: '模型性能对比', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            legend: { data: ['准确率', 'AUC'], top: '10%' },
+            grid: { top: '25%' },
+            xAxis: { type: 'category', data: ['Logistic\nRegression', 'Random\nForest', 'Gradient\nBoosting'] },
+            yAxis: [{ type: 'value', name: '准确率%', max: 100 }, { type: 'value', name: 'AUC', max: 1 }],
+            series: [
+                { name: '准确率', type: 'bar', data: [85.7, 91.7, 92.1], itemStyle: {color: '#00796b'} },
+                { name: 'AUC', type: 'line', yAxisIndex: 1, data: [0.939, 0.951, 0.954], itemStyle: {color: '#ff9800'}, lineStyle: {width: 3} }
+            ]
+        });
+        
+        // 重要性
+        impChart.setOption({
+            title: { text: 'Random Forest 特征重要性', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '重要性得分' },
+            yAxis: { type: 'category', data: ['day_of_week','poutcome','campaign','education','job','age','emp.var.rate','nr.employed','euribor3m','duration'] },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 2.7, itemStyle: {color: '#9e9e9e'}},
+                    {value: 2.8, itemStyle: {color: '#9e9e9e'}},
+                    {value: 2.9, itemStyle: {color: '#9e9e9e'}},
+                    {value: 3.0, itemStyle: {color: '#9e9e9e'}},
+                    {value: 3.1, itemStyle: {color: '#9e9e9e'}},
+                    {value: 6.0, itemStyle: {color: '#ff9800'}},
+                    {value: 6.4, itemStyle: {color: '#ff9800'}},
+                    {value: 6.5, itemStyle: {color: '#ff9800'}},
+                    {value: 10.1, itemStyle: {color: '#00796b'}},
+                    {value: 41.2, itemStyle: {color: '#e91e63'}}
+                ],
+                label: { show: true, position: 'right', formatter: '{c}%' }
+            }]
+        });
+        
+        window.addEventListener('resize', function() {
+            heatmap.resize(); ageChart.resize(); jobChart.resize();
+            maritalChart.resize(); eduChart.resize(); modelChart.resize(); impChart.resize();
+        });
+    </script>
+</body>
+</html>

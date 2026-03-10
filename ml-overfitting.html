@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>过拟合 | 机器学习笔记</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; margin-right: 20px; }
+        .article { background: white; padding: 50px; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+        .article h1 { color: #1a1a2e; font-size: 2.2em; margin-bottom: 25px; }
+        .article h2 { color: #333; font-size: 1.5em; margin: 40px 0 20px; border-left: 4px solid #667eea; padding-left: 15px; }
+        .article p { margin-bottom: 20px; font-size: 1.15em; color: #555; }
+        .article ul, .article ol { margin: 20px 0 20px 30px; }
+        .article li { margin-bottom: 15px; color: #555; font-size: 1.1em; }
+        .quote { background: #f0f4f8; border-left: 6px solid #667eea; padding: 30px; margin: 35px 0; font-style: italic; }
+        .highlight { background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%); padding: 30px; border-radius: 12px; margin: 30px 0; }
+        .tag { display: inline-block; background: #667eea; color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.85em; margin-right: 10px; }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="/">← 首页</a>
+            <a href="/ml-notes.html">← 笔记目录</a>
+        </div>
+        
+        <div class="article">
+            <h1>🎭 过拟合：为什么恐惧是最好的老师</h1>
+            <p><span class="tag">正则化</span> <span class="tag">泛化</span> <span class="tag">哲学</span></p>
+            
+            <h2>1. 过拟合的本质</h2>
+            <p>过拟合（Overfitting）是机器学习的核心问题：模型在训练数据上完美，但在新数据上失败。</p>
+            <p>用哲学的话说：<strong>你是记住了真理，还是记住了噪声？</strong></p>
+            
+            <h2>2. 正则化的智慧</h2>
+            <p>我们用各种正则化技术来对抗过拟合：</p>
+            <ul>
+                <li><strong>L1正则化</strong>：让权重稀疏——学会<strong>取舍</strong></li>
+                <li><strong>L2正则化</strong>：让权重平滑——学会<strong>中庸</strong></li>
+                <li><strong>Dropout</strong>：随机删除神经元——学会<strong>独立</strong></li>
+                <li><strong>Early Stopping</strong>：及时停止——学会<strong>知足</strong></li>
+            </ul>
+            
+            <div class="quote">
+                "人生不是要记住所有事情，而是要记住重要的事情。"
+            </div>
+            
+            <h2>3. Bias-Variance Tradeoff: 人生的选择</h2>
+            <p>统计学习中有一个 fundamental tradeoff：</p>
+            <ul>
+                <li><strong>高偏差（High Bias）</strong>：underfitting——你看不见森林，只能看见树</li>
+                <li><strong>高方差（High Variance）</strong>：overfitting——你只看见这一棵树，看不见森林</li>
+            </ul>
+            <p>人生亦然：<strong>要么太死板（教条主义），要么太灵活（机会主义）</strong>。真正的智慧在于找到平衡点。</p>
+            
+            <h2>4. VC维度：复杂性的代价</h2>
+            <p>Vapnik-Chervonenkis 维度告诉我们：<strong>越复杂的模型，需要越多的数据来约束</strong>。</p>
+            <p>这解释了为什么"博而不精"往往是危险的——你的认知框架越复杂，就需要越多的经历来验证它。</p>
+        </div>
+    </div>
+</body>
+</html>

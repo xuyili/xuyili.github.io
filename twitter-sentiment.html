@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter情感分析报告(增强版)</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .hero { background: linear-gradient(135deg, #1da1f4 0%, #0d8ecf 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #1da1f4; }
+        .section h3 { color: #1da1f4; font-size: 1.3em; margin: 25px 0 15px; }
+        .chart { width: 100%; height: 400px; }
+        .insight { background: #e8f5fe; border-left: 4px solid #1da1f4; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .four-col { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 15px; }
+        .stat-card { background: linear-gradient(135deg, #1da1f4 0%, #0d8ecf 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .stat-card.green { background: linear-gradient(135deg, #28a745 0%, #20c997 100%); }
+        .stat-card.orange { background: linear-gradient(135deg, #fd7e14 0%, #ffc107 100%); }
+        .stat-card.purple { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #1da1f4; color: white; }
+        .formula { background: #f8f9fa; padding: 15px; border-radius: 8px; font-family: monospace; margin: 10px 0; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .hero { padding: 30px; }
+            .hero h1 { font-size: 1.8em; }
+            .section { padding: 20px; }
+            .three-col, .four-col { grid-template-columns: 1fr; }
+            .chart { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🐦 Twitter情感分析报告(增强版)</h1>
+            <p>TF-IDF · LDA主题模型 · SVD降维 · 多模型对比</p>
+            <p style="margin-top:10px;opacity:0.8;">数据来源: Kaggle | 样本数: 75,682</p>
+        </div>
+        
+        <div class="four-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">75,682</div>
+                <div class="label">样本总数</div>
+            </div>
+            <div class="stat-card green">
+                <div class="number">68%</div>
+                <div class="label">最佳模型</div>
+            </div>
+            <div class="stat-card orange">
+                <div class="number">5</div>
+                <div class="label">LDA主题</div>
+            </div>
+            <div class="stat-card purple">
+                <div class="number">23.5%</div>
+                <div class="label">SVD方差</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 一、数据概览</h2>
+            <p>Twitter情感分析数据集包含75,682条推文，每条推文包含实体(公司/产品)和情感标签。</p>
+            
+            <h3>1.1 数据字段</h3>
+            <table>
+                <tr><th>字段</th><th>说明</th><th>示例</th></tr>
+                <tr><td>id</td><td>推文ID</td><td>2401</td></tr>
+                <tr><td>entity</td><td>实体(公司/产品)</td><td>Borderlands</td></tr>
+                <tr><td>sentiment</td><td>情感(4类)</td><td>Positive</td></tr>
+                <tr><td>text</td><td>推文内容</td><td>"im getting on borderlands..."</td></tr>
+            </table>
+            
+            <h3>1.2 情感分布</h3>
+            <div id="chart-sentiment" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 二、TF-IDF特征提取</h2>
+            <p>TF-IDF(Term Frequency-Inverse Document Frequency)是一种常用的文本特征提取方法，用于评估一个词在文档中的重要程度。</p>
+            
+            <div class="formula">
+            TF-IDF = TF(t,d) × IDF(t)<br>
+            其中: TF=词频, IDF=log(总文档数/包含词t的文档数)
+            </div>
+            
+            <h3>2.1 Top 20 TF-IDF词汇</h3>
+            <div id="chart-tfidf" class="chart"></div>
+            
+            <div class="insight">
+                <h4>发现: 游戏相关词汇占主导</h4>
+                <p>"game", "play", "FIFA", "league"等游戏词汇TF-IDF得分最高，说明游戏类推文数量多且内容集中。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📑 三、LDA主题模型</h2>
+            <p>LDA(Latent Dirichlet Allocation)是一种无监督主题模型，能够自动发现文档集合中的潜在主题结构。</p>
+            
+            <div class="formula">
+            P(词|文档) = Σ P(词|主题k) × P(主题k|文档)
+            </div>
+            
+            <h3>3.1 5大主题及其关键词</h3>
+            <table>
+                <tr><th>主题</th><th>关键词</th></tr>
+                <tr><td>主题1</td><td>series, redemption, nvidia, twitch, xbox, red, tv</td></tr>
+                <tr><td>主题2</td><td>fifa, creed, legends, gta, league, thank</td></tr>
+                <tr><td>主题3</td><td>game, love, microsoft, amazon, good, great</td></tr>
+                <tr><td>主题4</td><td>time, depot, battlefield, pubg, player, facebook</td></tr>
+                <tr><td>主题5</td><td>don, fuck, fucking, shit, really, like</td></tr>
+            </table>
+            
+            <h3>3.2 主题分布</h3>
+            <div id="chart-topic" class="chart"></div>
+            
+            <h3>3.3 情感与主题交叉分析</h3>
+            <div id="chart-topic-sentiment" class="chart"></div>
+            
+            <div class="insight">
+                <h4>发现: Negative情感集中于主题5</h4>
+                <p>47.7%的负面情感推文属于主题5(包含大量负面词汇如fuck, shit)，说明LDA能有效区分情感类别。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 四、SVD降维分析</h2>
+            <p>SVD(Singular Value Decomposition)是一种矩阵分解技术，可用于降维和特征提取。</p>
+            
+            <div class="formula">
+            X = U × Σ × V^T<br>
+            其中: U(文档×概念), Σ(概念权重), V^T(概念×词汇)
+            </div>
+            
+            <p>SVD将TF-IDF矩阵从75,682×5,000维降到100维，解释了<strong>23.54%</strong>的方差。</p>
+            
+            <div id="chart-svd" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🤖 五、机器学习建模</h2>
+            
+            <h3>5.1 模型对比(使用TF-IDF特征)</h3>
+            <table>
+                <tr><th>模型</th><th>准确率</th><th>说明</th></tr>
+                <tr><td>Logistic Regression ★</td><td>68.27%</td><td>线性模型，稳定高效</td></tr>
+                <tr><td>Multinomial NB</td><td>63.90%</td><td>朴素贝叶斯，适合文本</td></tr>
+                <tr><td>Random Forest</td><td>56.40%</td><td>需更多调参</td></tr>
+                <tr><td>Gradient Boosting</td><td>57.13%</td><td>过拟合，需调参</td></tr>
+            </table>
+            
+            <h3>5.2 特征组合实验</h3>
+            <div class="insight">
+                <h4>TF-IDF + SVD组合</h4>
+                <p>准确率: 68.25%，与单独TF-IDF接近。说明SVD降维后的特征没有带来额外信息增益。</p>
+            </div>
+            
+            <h3>5.3 分类详情(最佳模型)</h3>
+            <div id="chart-cm" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>📝 六、结论与应用</h2>
+            
+            <h3>6.1 主要发现</h3>
+            <ol>
+                <li><strong>LDA有效区分情感</strong>: 负面情感集中在主题5(脏话主题)</li>
+                <li><strong>游戏行业主导</strong>: TF-IDF显示游戏相关词占主导</li>
+                <li><strong>Logistic Regression最佳</strong>: 68.27%准确率，优于复杂模型</li>
+                <li><strong>简单特征足够</strong>: TF-IDF + LR已接近最优</li>
+            </ol>
+            
+            <h3>6.2 应用场景</h3>
+            <ul>
+                <li>🎮 游戏舆情监测</li>
+                <li>🏢 品牌声誉管理</li>
+                <li>📊 竞品分析</li>
+                <li>🛡️ 危机预警</li>
+            </ul>
+            
+            <h3>6.3 改进方向</h3>
+            <ul>
+                <li>使用BERT/Transformer预训练模型</li>
+                <li>加入用户画像特征</li>
+                <li>时序分析追踪情感变化</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>🐦 Twitter情感分析报告(增强版) | Kaggle | Python + Scikit-learn + ECharts</p>
+            <p>生成时间: 2026-03-09</p>
+        </div>
+    </div>
+    
+    <script>
+        var chartSentiment = echarts.init(document.getElementById('chart-sentiment'));
+        var chartTfidf = echarts.init(document.getElementById('chart-tfidf'));
+        var chartTopic = echarts.init(document.getElementById('chart-topic'));
+        var chartTopicSentiment = echarts.init(document.getElementById('chart-topic-sentiment'));
+        var chartSvd = echarts.init(document.getElementById('chart-svd'));
+        var chartCM = echarts.init(document.getElementById('chart-cm'));
+        
+        // 情感分布
+        chartSentiment.setOption({
+            title: { text: '情感类别分布', left: 'center' },
+            tooltip: { trigger: 'item' },
+            series: [{ type: 'pie', radius: '50%', data: [
+                {value: 22542, name: 'Negative'}, {value: 20832, name: 'Positive'},
+                {value: 18318, name: 'Neutral'}, {value: 12990, name: 'Irrelevant'}
+            ] }]
+        });
+        
+        // TF-IDF
+        chartTfidf.setOption({
+            title: { text: 'Top 20 TF-IDF词汇', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['game', 'just', 'love', 'good', 'twitter', 'really', 'play', 'best', 'new', 'time'] },
+            yAxis: { type: 'value', name: 'TF-IDF得分' },
+            series: [{ type: 'bar', data: [1343, 1102, 870, 833, 832, 672, 664, 649, 647, 617], itemStyle: { color: '#1da1f4' } }]
+        });
+        
+        // 主题分布
+        chartTopic.setOption({
+            title: { text: 'LDA主题分布', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['主题1', '主题2', '主题3', '主题4', '主题5'] },
+            yAxis: { type: 'value', name: '文档数' },
+            series: [{ type: 'bar', data: [13129, 13786, 15634, 9194, 23939], itemStyle: { color: '#1da1f4' } }]
+        });
+        
+        // 主题-情感热力图
+        chartTopicSentiment.setOption({
+            title: { text: '情感×主题分布(%)', left: 'center' },
+            tooltip: { trigger: 'item' },
+            xAxis: { type: 'category', data: ['Negative', 'Positive', 'Neutral', 'Irrelevant'] },
+            yAxis: { type: 'category', data: ['主题1', '主题2', '主题3', '主题4', '主题5'] },
+            visualMap: { min: 0, max: 50, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%' },
+            series: [{ type: 'heatmap', data: [
+                [0,0,10.8],[0,1,14.1],[0,2,15.8],[0,3,11.6],[0,4,47.7],
+                [1,0,15.9],[1,1,23.8],[1,2,26.7],[1,3,7.4],[1,4,26.1]
+            ], label: { show: true } }]
+        });
+        
+        // 模型对比
+        chartCM.setOption({
+            title: { text: '模型准确率对比', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['Logistic Reg', 'Multinomial NB', 'Random Forest', 'Gradient Boost'] },
+            yAxis: { type: 'value', name: '准确率(%)', max: 100 },
+            series: [{ type: 'bar', data: [68.3, 63.9, 56.4, 57.1], itemStyle: { color: function(params) {
+                return params.dataIndex === 0 ? '#28a745' : '#1da1f4';
+            }} }]
+        });
+    </script>
+</body>
+</html>

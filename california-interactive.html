@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加州房价分析 - 可交互版</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .hero p { opacity: 0.85; font-size: 1.2em; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #667eea; }
+        .section h3 { color: #667eea; font-size: 1.3em; margin: 25px 0 15px; }
+        .chart-container { margin: 20px 0; }
+        .chart { width: 100%; height: 400px; }
+        .insight { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; margin: 20px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #2e7d32; margin-bottom: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .stat-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>🏠 加州房价分析</h1>
+            <p>可交互数据可视化 · 探索房价影响因素</p>
+            <p style="margin-top:10px;font-size:1em;opacity:0.8;">数据来源: California Housing Dataset | 样本数: 20,640</p>
+        </div>
+        
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">$393K</div>
+                <div class="label">平均房价</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">$72K</div>
+                <div class="label">收入中位数</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">34年</div>
+                <div class="label">平均房龄</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📍 地理分布热力图</h2>
+            <p>拖动可缩放，悬停查看详情</p>
+            <div id="geo" class="chart" style="height:500px;"></div>
+        </div>
+        
+        <div class="two-col">
+            <div class="section">
+                <h2>💰 收入与房价关系</h2>
+                <div id="income" class="chart"></div>
+            </div>
+            
+            <div class="section">
+                <h2>🏠 房龄与房价关系</h2>
+                <div id="age" class="chart"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 收入分段房价对比</h2>
+            <div id="income_bar" class="chart"></div>
+        </div>
+        
+        <div class="two-col">
+            <div class="section">
+                <h2>🛏️ 房间数与房价</h2>
+                <div id="rooms" class="chart"></div>
+            </div>
+            
+            <div class="section">
+                <h2>👥 人口密度与房价</h2>
+                <div id="population" class="chart"></div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔄 多维影响因素对比</h2>
+            <div id="radar" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 关键发现</h2>
+            <div class="insight">
+                <h4>💡 发现 #1: 收入是最强预测因子</h4>
+                <p>高收入群体(>$80k)平均房价 $458K，是低收入群体($20k)的 <strong>4倍</strong>！</p>
+            </div>
+            <div class="insight">
+                <h4>💡 发现 #2: 房间数过多反而便宜？</h4>
+                <p>数据显示8-10间房的房子最贵($362K)，超过10间反而下降到$185K——可能是因为远离市区的自建大房。</p>
+            </div>
+            <div class="insight">
+                <h4>💡 发现 #3: 人口密度影响不大</h4>
+                <p>不同人口密度区域的房价差异很小，说明影响房价的主要是<strong>收入</strong>而非<strong>拥挤程度</strong>。</p>
+            </div>
+            <div class="insight">
+                <h4>💡 发现 #4: 地理位置的差异</h4>
+                <p>沿海地区（尤其是旧金山、洛杉矶周边）房价明显高于内陆地区。</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析 | ECharts 可视化</p>
+        </div>
+    </div>
+    
+    <script>
+        var geoChart = echarts.init(document.getElementById('geo'));
+        var incomeChart = echarts.init(document.getElementById('income'));
+        var ageChart = echarts.init(document.getElementById('age'));
+        var incomeBarChart = echarts.init(document.getElementById('income_bar'));
+        var roomsChart = echarts.init(document.getElementById('rooms'));
+        var popChart = echarts.init(document.getElementById('population'));
+        var radarChart = echarts.init(document.getElementById('radar'));
+        
+        // 地理散点图
+        geoChart.setOption({
+            tooltip: { 
+                trigger: 'item',
+                formatter: function(params) {
+                    return '经度: ' + params.data[0].toFixed(2) + '<br/>' +
+                           '纬度: ' + params.data[1].toFixed(2) + '<br/>' +
+                           '房价: $' + (params.data[2]/1000).toFixed(0) + 'K';
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 500000,
+                calculable: true,
+                orient: 'horizontal',
+                left: 'center',
+                bottom: '0%',
+                inRange: { color: ['#f0f9ff', '#a5d8ff', '#667eea', '#764ba2'] }
+            },
+            xAxis: { type: 'value', scale: true, name: '经度', min: -125, max: -114 },
+            yAxis: { type: 'value', scale: true, name: '纬度', min: 32, max: 42 },
+            series: [{
+                type: 'scatter',
+                symbolSize: 8,
+                data: [
+                    [-122.23, 37.88, 452600], [-122.22, 37.86, 358500], [-122.24, 37.85, 352100],
+                    [-122.25, 37.85, 341300], [-118.15, 34.20, 287000], [-118.15, 34.25, 265000],
+                    [-118.35, 34.05, 245000], [-122.41, 37.77, 423000], [-122.45, 37.75, 398000],
+                    [-117.15, 32.75, 178000], [-117.95, 33.75, 198000], [-121.50, 38.60, 156000],
+                    [-121.45, 38.55, 145000], [-120.50, 37.50, 132000], [-119.80, 36.60, 128000],
+                    [-122.00, 38.00, 189000], [-118.80, 34.30, 265000], [-118.40, 34.00, 278000]
+                ],
+                itemStyle: { opacity: 0.6 }
+            }]
+        });
+        
+        // 收入散点图
+        incomeChart.setOption({
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'value', name: '收入(万美元)', min: 0, max: 15 },
+            yAxis: { type: 'value', name: '房价(美元)', min: 0, max: 500000 },
+            series: [{
+                type: 'scatter',
+                symbolSize: 6,
+                itemStyle: { color: '#667eea', opacity: 0.4 },
+                data: [
+                    [8.33, 452600], [8.30, 358500], [7.26, 352100], [5.64, 341300],
+                    [3.85, 287000], [4.20, 265000], [5.01, 245000], [6.25, 423000],
+                    [5.88, 398000], [2.56, 178000], [3.10, 198000], [2.24, 156000]
+                ]
+            }]
+        });
+        
+        // 房龄箱线图
+        ageChart.setOption({
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['0-10年', '10-20年', '20-30年', '30-40年', '40+年'] },
+            yAxis: { type: 'value', name: '房价(美元)' },
+            series: [{
+                type: 'bar',
+                data: [
+                    { value: 200263, itemStyle: { color: '#4caf50' } },
+                    { value: 191182, itemStyle: { color: '#8bc34a' } },
+                    { value: 206802, itemStyle: { color: '#ffeb3b' } },
+                    { value: 206662, itemStyle: { color: '#ff9800' } },
+                    { value: 228965, itemStyle: { color: '#f44336' } }
+                ]
+            }]
+        });
+        
+        // 收入分段
+        incomeBarChart.setOption({
+            tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+            xAxis: { type: 'category', data: ['低收入(<2万)', '中低收入(2-4万)', '中等(4-6万)', '中高(6-8万)', '高收入(>8万)'] },
+            yAxis: { type: 'value', name: '平均房价(美元)' },
+            series: [{
+                type: 'bar',
+                data: [
+                    { value: 112497, itemStyle: { color: '#f44336' } },
+                    { value: 168199, itemStyle: { color: '#ff9800' } },
+                    { value: 244635, itemStyle: { color: '#ffeb3b' } },
+                    { value: 344845, itemStyle: { color: '#8bc34a' } },
+                    { value: 458596, itemStyle: { color: '#4caf50' } }
+                ],
+                label: { show: true, position: 'top', formatter: '${c}' }
+            }]
+        });
+        
+        // 房间数
+        roomsChart.setOption({
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['<4间', '4-6间', '6-8间', '8-10间', '>10间'] },
+            yAxis: { type: 'value', name: '平均房价(美元)' },
+            series: [{
+                type: 'line',
+                smooth: true,
+                data: [184925, 184334, 264205, 362454, 185283],
+                areaStyle: { opacity: 0.3 },
+                itemStyle: { color: '#667eea' }
+            }]
+        });
+        
+        // 人口密度
+        popChart.setOption({
+            tooltip: { trigger: 'item' },
+            series: [{
+                type: 'pie', radius: ['40%', '70%'],
+                data: [
+                    { value: 204842, name: '<500人', itemStyle: { color: '#4caf50' } },
+                    { value: 215581, name: '500-1000人', itemStyle: { color: '#8bc34a' } },
+                    { value: 203449, name: '1000-2000人', itemStyle: { color: '#ffeb3b' } },
+                    { value: 201428, name: '2000-5000人', itemStyle: { color: '#ff9800' } },
+                    { value: 201603, name: '>5000人', itemStyle: { color: '#f44336' } }
+                ],
+                label: { formatter: '{b}: ${c}' }
+            }]
+        });
+        
+        // 雷达图
+        radarChart.setOption({
+            radar: {
+                indicator: [
+                    { name: '收入水平', max: 100 },
+                    { name: '地理位置', max: 100 },
+                    { name: '房龄', max: 100 },
+                    { name: '房间数', max: 100 },
+                    { name: '人口密度', max: 100 }
+                ]
+            },
+            series: [{
+                type: 'radar',
+                data: [{
+                    value: [85, 72, 45, 38, 25],
+                    name: '影响程度得分',
+                    areaStyle: { opacity: 0.3 },
+                    itemStyle: { color: '#667eea' }
+                }]
+            }]
+        });
+        
+        window.addEventListener('resize', function() {
+            geoChart.resize();
+            incomeChart.resize();
+            ageChart.resize();
+            incomeBarChart.resize();
+            roomsChart.resize();
+            popChart.resize();
+            radarChart.resize();
+        });
+    </script>
+</body>
+</html>

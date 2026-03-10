@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美股投资组合分析报告</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.9; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .nav { margin-bottom: 30px; }
+        .nav a { color: #1976d2; text-decoration: none; font-size: 1.1em; }
+        .hero { background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: white; padding: 60px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .section { background: white; padding: 40px; border-radius: 20px; margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
+        .section h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 3px solid #1976d2; }
+        .section h3 { color: #1976d2; font-size: 1.3em; margin: 30px 0 15px; }
+        .section p { margin-bottom: 15px; color: #555; }
+        .chart { width: 100%; height: 450px; }
+        .insight { background: #e3f2fd; border-left: 4px solid #1976d2; padding: 20px; margin: 25px 0; border-radius: 0 10px 10px 0; }
+        .insight h4 { color: #0d47a1; margin-bottom: 10px; font-size: 1.1em; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #1976d2; color: white; }
+        .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .stat-card { background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%); color: white; padding: 25px; border-radius: 15px; text-align: center; }
+        .stat-card .number { font-size: 2em; font-weight: bold; }
+        .stat-card .label { opacity: 0.9; font-size: 0.9em; }
+        .footer { text-align: center; color: #888; padding: 30px; }
+        @media (max-width: 900px) { .two-col, .three-col { grid-template-columns: 1fr; } }
+    
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            .container { padding: 0 10px; }
+            .hero { padding: 30px 0; }
+            .hero h1 { font-size: 1.8em; }
+            .hero p { font-size: 1em; }
+            .grid { grid-template-columns: 1fr; gap: 15px; padding: 15px 0; }
+            .card { padding: 20px; }
+            .card h2 { font-size: 1.3em; }
+            .card-icon { font-size: 2em; }
+            .section { padding: 20px; }
+            .section h2 { font-size: 1.3em; }
+            .section h3 { font-size: 1.1em; }
+            .chart { height: 300px; }
+            .two-col, .three-col, .four-col { grid-template-columns: 1fr; }
+            .stat-card { padding: 15px; }
+            .stat-card .number { font-size: 1.5em; }
+            table { font-size: 0.85em; display: block; overflow-x: auto; }
+            th, td { padding: 6px 4px; }
+            .paper, .article { padding: 15px; }
+            .paper h3 { font-size: 0.95em; }
+            .topic h2 { font-size: 1.1em; }
+            .footer { padding: 15px; font-size: 0.9em; }
+        }
+        @media (max-width: 480px) {
+            body { padding: 10px; }
+            .hero { padding: 20px 0; }
+            .hero h1 { font-size: 1.5em; }
+            .card { padding: 15px; }
+            .section { padding: 15px; }
+            .stat-card .number { font-size: 1.3em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav"><a href="/data.html">← 返回数据分析专栏</a></div>
+        
+        <div class="hero">
+            <h1>📈 美股投资组合分析报告</h1>
+            <p>10大美股深度分析 · 机器学习预测 · 风险评估 · 可交互可视化</p>
+            <p style="margin-top:10px;font-size:0.95em;opacity:0.8;">数据来源: Yahoo Finance | 股票数: 10 | 时间: 2021-2024</p>
+        </div>
+        
+        <div class="three-col" style="margin-bottom:30px;">
+            <div class="stat-card">
+                <div class="number">10</div>
+                <div class="label">热门股票</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1,005</div>
+                <div class="label">交易日</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">10,050</div>
+                <div class="label">数据点</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 一、数据概览与股票画像</h2>
+            <p>本数据集包含10只热门美股的历史交易数据，涵盖苹果、微软、Google、亚马逊等巨头，以及特斯拉、英伟达等明星股。</p>
+            
+            <h3>1.1 股票基本信息</h3>
+            <table>
+                <tr><th>股票</th><th>代码</th><th>平均价格</th><th>价格波动</th><th>日均成交量</th></tr>
+                <tr><td>苹果</td><td>AAPL</td><td>$168.90</td><td>±$30.82</td><td>7,370万</td></tr>
+                <tr><td>微软</td><td>MSFT</td><td>$319.84</td><td>±$68.38</td><td>2,637万</td></tr>
+                <tr><td>Google</td><td>GOOGL</td><td>$130.44</td><td>±$25.63</td><td>3,136万</td></tr>
+                <tr><td>亚马逊</td><td>AMZN</td><td>$149.90</td><td>±$32.32</td><td>6,090万</td></tr>
+                <tr><td>Meta</td><td>META</td><td>$318.26</td><td>±$133.36</td><td>2,332万</td></tr>
+                <tr><td>英伟达</td><td>NVDA</td><td>$45.67</td><td>±$39.62</td><td>4.38亿</td></tr>
+                <tr><td>特斯拉</td><td>TSLA</td><td>$242.83</td><td>±$60.20</td><td>1.00亿</td></tr>
+                <tr><td>摩根大通</td><td>JPM</td><td>$158.31</td><td>±$32.29</td><td>1,159万</td></tr>
+                <tr><td>Visa</td><td>V</td><td>$236.08</td><td>±$30.39</td><td>728万</td></tr>
+                <tr><td>强生</td><td>JNJ</td><td>$163.45</td><td>±$8.83</td><td>819万</td></tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🔍 二、探索性数据分析</h2>
+            
+            <h3>2.1 股票收益相关性热力图</h3>
+            <div id="corr" class="chart"></div>
+            <div class="insight">
+                <h4>📈 相关性发现</h4>
+                <p><strong>科技股高度相关</strong>: MSFT-GOOGL相关性0.70，AMZN-GOOGL相关性0.64，说明科技板块联动明显。</p>
+                <p><strong>JNJ独立性强</strong>: 强生与其他股票相关性很低(0.07~-0.05)，是很好的分散投资标的。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 三、反直觉发现</h2>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #1: NVDA收益最高，JNJ收益最低！</h4>
+                <p>英伟达年化收益率<strong>72.2%</strong>，而强生年化收益率<strong>-0.7%</strong>！成长股vs防御股的巨大差异。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #2: TSLA波动率最低！</h4>
+                <p>特斯拉年化波动率仅<strong>4.49</strong>，居然是10只股票中最低的！</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #3: 全部股票R²为负！</h4>
+                <p>所有机器学习模型预测次日收益率的R²都是<strong>负值</strong>！说明股票短期收益无法预测，符合有效市场假说。</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #4: META最大回撤76.7%！</h4>
+                <p>Meta从高点下跌最多，跌幅达<strong>76.7%</strong>！</p>
+            </div>
+            
+            <div class="insight" style="background:#fff3e0;border-left-color:#ff9800;">
+                <h4 style="color:#e65100;">🔄 反直觉发现 #5: JNJ最抗跌！</h4>
+                <p>强生最大回撤仅<strong>22.9%</strong>，是10只股票中最抗跌的！</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🤖 四、机器学习预测模型</h2>
+            
+            <h3>4.1 模型性能对比</h3>
+            <table>
+                <tr><th>模型</th><th>RMSE</th><th>MAE</th><th>R²</th><th>评价</th></tr>
+                <tr><td>Linear Regression</td><td>0.0230</td><td>0.0150</td><td style="color:red;">-0.32%</td><td>基准</td></tr>
+                <tr><td>Ridge</td><td>0.0230</td><td>0.0150</td><td style="color:red;">-0.32%</td><td>正则化</td></tr>
+                <tr><td>Lasso</td><td>0.0229</td><td>0.0149</td><td style="color:red;">-0.03%</td><td>特征选择</td></tr>
+                <tr><td>Random Forest</td><td>0.0230</td><td>0.0150</td><td style="color:red;">-0.33%</td><td>集成</td></tr>
+                <tr><td>Gradient Boosting</td><td>0.0236</td><td>0.0153</td><td style="color:red;">-5.71%</td><td>过拟合</td></tr>
+                <tr><td>SVR</td><td>0.0327</td><td>0.0248</td><td style="color:red;">-103%</td><td>最差</td></tr>
+            </table>
+            
+            <div id="model" class="chart"></div>
+            <div class="insight">
+                <h4>🎯 模型结论</h4>
+                <p><strong>所有模型R²都是负值</strong>！证实了<strong>有效市场假说</strong>：股票短期收益无法被预测。</p>
+            </div>
+            
+            <h3>4.2 特征重要性分析</h3>
+            <div id="importance" class="chart"></div>
+        </div>
+        
+        <div class="section">
+            <h2>⚠️ 五、风险与收益分析</h2>
+            
+            <h3>5.1 最大回撤分析</h3>
+            <div id="drawdown" class="chart"></div>
+            
+            <h3>5.2 夏普比率</h3>
+            <div id="sharpe" class="chart"></div>
+            
+            <div class="insight">
+                <h4>💡 投资建议</h4>
+                <p><strong>最高夏普比率</strong>: NVDA(0.13)，但波动极大。</p>
+                <p><strong>防御首选</strong>: JNJ虽然收益为负，但波动小。</p>
+                <p><strong>分散投资</strong>: JNJ与科技股相关性低，是很好的分散化标的。</p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>💡 六、结论与投资启示</h2>
+            
+            <ol style="margin-left:20px;line-height:2.2;">
+                <li><strong>短期预测不可能</strong>: 所有ML模型R²为负，证实有效市场假说</li>
+                <li><strong>成长股vs防御股</strong>: NVDA年化72% vs JNJ -0.7%，收益风险共存</li>
+                <li><strong>分散化价值</strong>: JNJ与其他股票低相关性，适合分散风险</li>
+                <li><strong>最大回撤惊人</strong>: META跌76%，投资需设止损</li>
+            </ol>
+        </div>
+        
+        <div class="footer">
+            <p>🦐 伊利虾数据分析报告 | 机器学习 | ECharts 可视化</p>
+            <p>数据来源: Yahoo Finance | 免责声明: 仅供娱乐，不构成投资建议</p>
+        </div>
+    </div>
+    
+    <script>
+        var corrChart = echarts.init(document.getElementById('corr'));
+        var modelChart = echarts.init(document.getElementById('model'));
+        var impChart = echarts.init(document.getElementById('importance'));
+        var ddChart = echarts.init(document.getElementById('drawdown'));
+        var sharpeChart = echarts.init(document.getElementById('sharpe'));
+        
+        corrChart.setOption({
+            title: { text: '股票收益相关性热力图', left: 'center' },
+            tooltip: { position: 'top' },
+            grid: { height: '65%', top: '20%' },
+            xAxis: { type: 'category', data: ['AAPL','AMZN','GOOGL','JNJ','JPM','META','MSFT','NVDA','TSLA','V'] },
+            yAxis: { type: 'category', data: ['AAPL','AMZN','GOOGL','JNJ','JPM','META','MSFT','NVDA','TSLA','V'] },
+            visualMap: { min: -1, max: 1, calculable: true, orient: 'horizontal', left: 'center', bottom: '0%',
+                        inRange: { color: ['#313695', '#4575b4', '#74add1', '#abd9e9', '#e0f3f8', '#ffffbf', '#fee090', '#fdae61', '#f46d43', '#d73027', '#a50026'] } },
+            series: [{
+                type: 'heatmap',
+                data: [
+                    [0,0,1],[0,1,0.56],[0,2,0.61],[0,3,0.18],[0,4,0.31],[0,5,0.49],[0,6,0.68],[0,7,0.55],[0,8,0.49],[0,9,0.49],
+                    [1,0,0.56],[1,1,1],[1,2,0.64],[1,3,0.07],[1,4,0.30],[1,5,0.59],[1,6,0.67],[1,7,0.55],[1,8,0.43],[1,9,0.40],
+                    [2,0,0.61],[2,1,0.64],[2,2,1],[2,3,0.11],[2,4,0.30],[2,5,0.59],[2,6,0.70],[2,7,0.54],[2,8,0.38],[2,9,0.41],
+                    [3,0,0.18],[3,1,0.07],[3,2,0.11],[3,3,1],[3,4,0.24],[3,5,0.06],[3,6,0.14],[3,7,-0.05],[3,8,-0.01],[3,9,0.24],
+                    [4,0,0.31],[4,1,0.30],[4,2,0.30],[4,3,0.24],[4,4,1],[4,5,0.25],[4,6,0.28],[4,7,0.29],[4,8,0.26],[4,9,0.46],
+                    [5,0,0.49],[5,1,0.59],[5,2,0.59],[5,3,0.06],[5,4,0.25],[5,5,1],[5,6,0.58],[5,7,0.49],[5,8,0.31],[5,9,0.35],
+                    [6,0,0.68],[6,1,0.67],[6,2,0.70],[6,3,0.14],[6,4,0.28],[6,5,0.58],[6,6,1],[6,7,0.63],[6,8,0.41],[6,9,0.47],
+                    [7,0,0.55],[7,1,0.55],[7,2,0.54],[7,3,-0.05],[7,4,0.29],[7,5,0.49],[7,6,0.63],[7,7,1],[7,8,0.46],[7,9,0.38],
+                    [8,0,0.49],[8,1,0.43],[8,2,0.38],[8,3,-0.01],[8,4,0.26],[8,5,0.31],[8,6,0.41],[8,7,0.46],[8,8,1],[8,9,0.30],
+                    [9,0,0.49],[9,1,0.40],[9,2,0.41],[9,3,0.24],[9,4,0.46],[9,5,0.35],[9,6,0.47],[9,7,0.38],[9,8,0.30],[9,9,1]
+                ],
+                label: { show: true, fontSize: 10, formatter: function(p) { return p.value[2].toFixed(2); } }
+            }]
+        });
+        
+        modelChart.setOption({
+            title: { text: 'ML模型预测性能 (R²)', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['Linear', 'Ridge', 'Lasso', 'RandomForest', 'GradientBoosting', 'SVR'] },
+            yAxis: { type: 'value', name: 'R²', max: 0.1, min: -1.2 },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: -0.0032, itemStyle: {color: '#ff9800'}},
+                    {value: -0.0032, itemStyle: {color: '#ff9800'}},
+                    {value: -0.0003, itemStyle: {color: '#4caf50'}},
+                    {value: -0.0033, itemStyle: {color: '#ff9800'}},
+                    {value: -0.0571, itemStyle: {color: '#f44336'}},
+                    {value: -1.0311, itemStyle: {color: '#d32f2f'}}
+                ],
+                label: { show: true, position: 'top', formatter: function(p) { return (p.value*100).toFixed(1)+'%'; } }
+            }]
+        });
+        
+        impChart.setOption({
+            title: { text: 'Random Forest 特征重要性', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            grid: { top: '20%', bottom: '10%' },
+            xAxis: { type: 'value', name: '重要性%' },
+            yAxis: { type: 'category', data: ['return','log_return','ma5','ma20','volatility','volume_ma5','price_change','return_lag2','volume_change','return_lag1'] },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: 5.1, itemStyle: {color: '#9e9e9e'}},
+                    {value: 5.1, itemStyle: {color: '#9e9e9e'}},
+                    {value: 7.4, itemStyle: {color: '#9e9e9e'}},
+                    {value: 7.8, itemStyle: {color: '#9e9e9e'}},
+                    {value: 13.2, itemStyle: {color: '#ff9800'}},
+                    {value: 11.0, itemStyle: {color: '#ff9800'}},
+                    {value: 6.4, itemStyle: {color: '#9e9e9e'}},
+                    {value: 11.9, itemStyle: {color: '#ff9800'}},
+                    {value: 15.8, itemStyle: {color: '#1976d2'}},
+                    {value: 16.2, itemStyle: {color: '#1976d2'}}
+                ],
+                label: { show: true, position: 'right', formatter: '{c}%' }
+            }]
+        });
+        
+        ddChart.setOption({
+            title: { text: '最大回撤 (从高点跌去%)', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['JNJ','V','AAPL','JPM','GOOGL','AMZN','NVDA','TSLA','META'] },
+            yAxis: { type: 'value', name: '回撤%', max: 0, min: -80 },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: -22.9, itemStyle: {color: '#4caf50'}},
+                    {value: -29.2, itemStyle: {color: '#4caf50'}},
+                    {value: -31.3, itemStyle: {color: '#ff9800'}},
+                    {value: -40.6, itemStyle: {color: '#ff9800'}},
+                    {value: -44.3, itemStyle: {color: '#ff9800'}},
+                    {value: -56.1, itemStyle: {color: '#f44336'}},
+                    {value: -66.4, itemStyle: {color: '#d32f2f'}},
+                    {value: -73.6, itemStyle: {color: '#d32f2f'}},
+                    {value: -76.7, itemStyle: {color: '#b71c1c'}}
+                ],
+                label: { show: true, position: 'bottom', formatter: '{c}%' }
+            }]
+        });
+        
+        sharpeChart.setOption({
+            title: { text: '夏普比率 (风险调整收益)', left: 'center' },
+            tooltip: { trigger: 'axis' },
+            xAxis: { type: 'category', data: ['JNJ','V','JPM','MSFT','AAPL','GOOGL','META','TSLA','NVDA'] },
+            yAxis: { type: 'value', name: '夏普比率' },
+            series: [{
+                type: 'bar',
+                data: [
+                    {value: -0.001, itemStyle: {color: '#f44336'}},
+                    {value: 0.017, itemStyle: {color: '#ff9800'}},
+                    {value: 0.033, itemStyle: {color: '#ff9800'}},
+                    {value: 0.038, itemStyle: {color: '#4caf50'}},
+                    {value: 0.040, itemStyle: {color: '#4caf50'}},
+                    {value: 0.042, itemStyle: {color: '#4caf50'}},
+                    {value: 0.043, itemStyle: {color: '#4caf50'}},
+                    {value: 0.068, itemStyle: {color: '#1976d2'}},
+                    {value: 0.131, itemStyle: {color: '#0d47a1'}}
+                ],
+                label: { show: true, position: 'top', formatter: '{c}' }
+            }]
+        });
+        
+        window.addEventListener('resize', function() {
+            corrChart.resize(); modelChart.resize(); impChart.resize(); ddChart.resize(); sharpeChart.resize();
+        });
+    </script>
+</body>
+</html>
