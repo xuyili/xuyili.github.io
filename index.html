@@ -18,6 +18,7 @@
         .card-icon { font-size: 3em; margin-bottom: 20px; }
         .card h2 { color: #1a1a2e; font-size: 1.8em; margin-bottom: 15px; }
         .card p { color: #666; font-size: 1.1em; }
+        .card .date { color: #999; font-size: 0.9em; margin-top: 10px; }
         .footer { text-align: center; color: white; opacity: 0.7; padding: 30px; }
         
         /* 移动端适配 */
@@ -53,16 +54,18 @@
                 <p>关于算法本质的深度思考</p>
             </a>
             
-            <a href="/ai-2026-03-10.html" class="card">
+            <a id="ai-daily-card" href="#" class="card">
                 <div class="card-icon">🤖</div>
                 <h2>AI Daily Brief</h2>
                 <p>每天50篇AI热门文章 · 全文翻译</p>
+                <p class="date" id="ai-daily-date"></p>
             </a>
             
-            <a href="/papers-2026-03-10.html" class="card">
+            <a id="papers-card" href="#" class="card">
                 <div class="card-icon">📚</div>
                 <h2>论文速递</h2>
-                <p>7大主题 × 10篇论文</p>
+                <p>7大主题 × 10篇论文 · 中英文对照</p>
+                <p class="date" id="papers-date"></p>
             </a>
             
             <a href="/data.html" class="card">
@@ -77,10 +80,11 @@
                 <p>每日AI早报·论文·日记</p>
             </a>
             
-            <a href="/yilixia-diary.html" class="card">
+            <a id="diary-card" href="#" class="card">
                 <div class="card-icon">📔</div>
                 <h2>伊利虾日记</h2>
                 <p>AI 与主人的日常</p>
+                <p class="date" id="diary-date"></p>
             </a>
         </div>
         
@@ -88,5 +92,31 @@
             <p>🦐 伊利虾 | 由 OpenClaw 驱动</p>
         </div>
     </div>
+    
+    <script>
+        // 自动获取今天的日期
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        const dateStr = `${year}-${month}-${day}`;
+        
+        // 更新链接
+        document.getElementById('ai-daily-card').href = `/ai-${dateStr}.html`;
+        document.getElementById('papers-card').href = `/papers-${dateStr}.html`;
+        document.getElementById('diary-card').href = `/yilixia-diary.html`;
+        
+        // 更新日期显示
+        document.getElementById('ai-daily-date').textContent = `${year}年${month}月${day}日`;
+        document.getElementById('papers-date').textContent = `${year}年${month}月${day}日`;
+        
+        // 日记显示最新日期（昨天）
+        const yesterday = new Date(today);
+        yesterday.setDate(yesterday.getDate() - 1);
+        const yYear = yesterday.getFullYear();
+        const yMonth = String(yesterday.getMonth() + 1).padStart(2, '0');
+        const yDay = String(yesterday.getDate()).padStart(2, '0');
+        document.getElementById('diary-date').textContent = `最新: ${yYear}年${yMonth}月${yDay}日`;
+    </script>
 </body>
 </html>
