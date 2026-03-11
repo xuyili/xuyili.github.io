@@ -82,6 +82,12 @@
                 <p>每日10道AI知识题</p>
                 <p class="date" id="quiz-date"></p>
             </a>
+            <a id="quant-card" href="/papers-quant-ai.html" class="card">
+                <div class="card-icon">📊</div>
+                <h2>AI量化论文</h2>
+                <p>深度学习量化金融最新研究</p>
+                <p class="date" id="quant-date"></p>
+            </a>
         </div>
         
         <div class="footer">
@@ -143,6 +149,7 @@
             document.getElementById('diary-date').textContent = chineseToday;
             document.getElementById('quiz-card').href = `/quiz-${todayStr}.html`;
             document.getElementById('quiz-date').textContent = chineseToday;
+            document.getElementById('quant-date').textContent = chineseToday;
         }
         
         initLinks();
