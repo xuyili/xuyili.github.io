@@ -3,174 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>300817 双飞集团 - 投资分析</title>
+    <title>300817 双飞集团 - 深度缠论分析</title>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #0d1117; color: #fff; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .nav { text-align: center; margin-bottom: 20px; }
-        .nav a { color: #58a6ff; text-decoration: none; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#0d1117;color:#fff;padding:20px;line-height:1.6}
+        .container{max-width:900px;margin:0 auto}
+        .nav{text-align:center;margin-bottom:20px}
+        .nav a{color:#58a6ff;text-decoration:none}
         
-        .stock-header { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
-        .stock-name { font-size: 28px; font-weight: bold; }
-        .stock-code { color: #8b949e; font-size: 14px; margin-left: 10px; }
-        .stock-price { font-size: 48px; font-weight: bold; color: #f97316; margin: 16px 0; }
-        .stock-change { font-size: 18px; }
-        .green { color: #22c55e; }
-        .red { color: #ef4444; }
+        .header{background:linear-gradient(135deg,#1f2937,#111827);border-radius:16px;padding:24px;text-align:center;margin-bottom:20px}
+        .stock-name{font-size:32px;font-weight:bold}
+        .stock-code{color:#8b949e;font-size:16px;margin-left:12px}
+        .price{font-size:56px;font-weight:bold;color:#f97316;margin:16px 0}
+        .change{font-size:20px}
+        .green{color:#22c55e}
+        .red{color:#ef4444}
         
-        .suggestion { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 20px; }
-        .suggestion-title { font-size: 18px; margin-bottom: 8px; }
-        .suggestion-value { font-size: 28px; font-weight: bold; }
+        .suggestion{background:linear-gradient(135deg,#eab308,#ca8a04);border-radius:16px;padding:24px;text-align:center;margin-bottom:20px}
+        .suggestion-title{font-size:20px;margin-bottom:8px}
+        .suggestion-value{font-size:32px;font-weight:bold}
         
-        .card { background: #161b22; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-        .card-title { font-size: 16px; color: #8b949e; margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+        .card{background:#161b22;border-radius:12px;padding:24px;margin-bottom:16px}
+        .card-title{font-size:18px;color:#58a6ff;margin-bottom:20px;border-bottom:1px solid #30363d;padding-bottom:12px}
         
-        .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .signal-item { background: #21262d; padding: 16px; border-radius: 8px; }
-        .signal-name { color: #8b949e; font-size: 13px; }
-        .signal-value { font-size: 18px; font-weight: bold; margin: 6px 0; }
-        .signal-tag { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
-        .tag-green { background: rgba(34,197,94,0.2); color: #22c55e; }
-        .tag-red { background: rgba(239,68,68,0.2); color: #ef4444; }
-        .tag-yellow { background: rgba(234,179,8,0.2); color: #eab308; }
+        .theory{background:#21262d;padding:16px;border-radius:8px;margin-bottom:12px;border-left:4px solid #58a6ff}
+        .theory-title{color:#58a6ff;font-weight:bold;margin-bottom:8px}
         
-        .trade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .trade-item { background: #21262d; padding: 16px; border-radius: 8px; text-align: center; }
-        .trade-label { color: #8b949e; font-size: 13px; }
-        .trade-value { font-size: 20px; font-weight: bold; margin-top: 8px; }
-        .trade-profit { color: #22c55e; }
-        .trade-loss { color: #ef4444; }
+        .data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+        .data-item{background:#21262d;padding:16px;border-radius:8px;text-align:center}
+        .data-label{color:#8b949e;font-size:13px}
+        .data-value{font-size:22px;font-weight:bold;margin:8px 0}
         
-        .warn { background: rgba(234,179,8,0.1); border: 1px solid #eab308; border-radius: 8px; padding: 12px; font-size: 13px; color: #eab308; margin-top: 20px; }
+        .analysis-text{font-size:15px;line-height:1.8;color:#ccc}
+        .analysis-text strong{color:#58a6ff}
         
-        #chart { width: 100%; height: 350px; margin-top: 20px; }
+        .chart-box{background:#21262d;border-radius:8px;padding:16px;margin-top:16px}
+        .chart-title{color:#8b949e;font-size:14px;margin-bottom:12px}
         
-        .footer { text-align: center; color: #8b949e; padding: 20px; font-size: 13px; }
+        .score-bar{background:#21262d;height:24px;border-radius:12px;overflow:hidden;margin:12px 0}
+        .score-fill{height:100%;background:linear-gradient(90deg,#ef4444,#eab308,#22c55e);transition:width 0.5s}
+        
+        .tag{display:inline-block;padding:4px 12px;border-radius:4px;font-size:12px;margin:4px}
+        .tag-red{background:rgba(239,68,68,0.2);color:#ef4444}
+        .tag-green{background:rgba(34,197,94,0.2);color:#22c55e}
+        .tag-yellow{background:rgba(234,179,8,0.2);color:#eab308}
+        .tag-blue{background:rgba(88,166,255,0.2);color:#58a6ff}
+        
+        .warn{background:rgba(234,179,8,0.1);border:1px solid #eab308;border-radius:8px;padding:16px;margin-top:20px;color:#eab308}
+        
+        .footer{text-align:center;color:#8b949e;padding:20px;font-size:13px}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
-        
-        <div class="stock-header">
-            <div class="stock-name">双飞集团 <span class="stock-code">300817</span></div>
-            <div class="stock-price">¥19.96</div>
-            <div class="stock-change red">-0.15% (2026-03-11)</div>
-        </div>
-        
-        <div class="suggestion">
-            <div class="suggestion-title">🎯 综合投资建议</div>
-            <div class="suggestion-value">可以关注</div>
-            <div style="margin-top:8px;font-size:14px;">评分 2/3 | 短期上涨趋势，但MACD死叉</div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📊 技术指标</div>
-            <div class="signal-grid">
-                <div class="signal-item">
-                    <div class="signal-name">短期趋势</div>
-                    <div class="signal-value">短期上涨</div>
-                    <span class="signal-tag tag-green">MA5>收盘价</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">MACD</div>
-                    <div class="signal-value">死叉</div>
-                    <span class="signal-tag tag-red">短期看跌</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">RSI</div>
-                    <div class="signal-value">34.8</div>
-                    <span class="signal-tag tag-yellow">接近超卖</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">均线</div>
-                    <div class="signal-value">¥19.79</div>
-                    <span class="signal-tag tag-green">5日均线</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">💰 压力支撑位</div>
-            <div class="signal-grid">
-                <div class="signal-item">
-                    <div class="signal-name">60日最高</div>
-                    <div class="signal-value red">¥23.25</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">60日最低</div>
-                    <div class="signal-value green">¥18.05</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">当前价格</div>
-                    <div class="signal-value">¥19.96</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">距高点空间</div>
-                    <div class="signal-value red">-16.5%</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📋 交易计划</div>
-            <div class="trade-grid">
-                <div class="trade-item">
-                    <div class="trade-label">建议买入价</div>
-                    <div class="trade-value">¥19.56</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止损位 (-5%)</div>
-                    <div class="trade-value trade-loss">¥18.96</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止盈位1 (+10%)</div>
-                    <div class="trade-value trade-profit">¥21.96</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止盈位2 (+15%)</div>
-                    <div class="trade-value trade-profit">¥22.95</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📈 近期K线走势</div>
-            <div id="chart"></div>
-        </div>
-        
-        <div class="warn">
-            ⚠️ 风险提示：本分析仅供参考，不构成投资建议。股市有风险，投资需谨慎！
-        </div>
-        
-        <div class="footer">
-            🦐 伊利虾 | 报告生成时间: 2026-03-11
-        </div>
-    </div>
+<div class="container">
+<div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+
+<div class="header">
+<div class="stock-name">双飞集团 <span class="stock-code">300817</span></div>
+<div class="price">¥19.91</div>
+<div class="change red">-0.40% (2026-03-11)</div>
+</div>
+
+<div class="suggestion">
+<div class="suggestion-title">🎯 综合投资建议</div>
+<div class="suggestion-value">观望</div>
+<div style="margin-top:12px;">综合评分: <strong>2/6</strong> | 短期均线震荡 | MACD死叉 | RSI接近超卖</div>
+</div>
+
+<div class="card">
+<div class="card-title">📖 缠论核心概念详解</div>
+
+<div class="theory">
+<div class="theory-title">🔴 什么是分型？</div>
+<div class="analysis-text">
+<strong>分型</strong>是缠论最基本的结构，分为<strong>顶分型</strong>和<strong>底分型</strong>：<br>
+• 顶分型：3根K线，中间一根最高，代表上涨力量衰竭，是卖出信号<br>
+• 底分型：3根K线，中间一根最低，代表下跌力量衰竭，是买入信号<br>
+<br>
+<strong>本股情况：</strong>近期有5个顶分型（最近2026-02-24）和5个底分型（最近2026-03-04）。
+当前处于底分型后形成的反弹段中。
+</div>
+</div>
+
+<div class="theory">
+<div class="theory-title">📊 什么是笔？</div>
+<div class="analysis-text">
+<strong>笔</strong>是缠论的基本运动单元，由<strong>至少5根K线</strong>组成，且：<br>
+• 向上笔：底分型+上升K线+顶分型<br>
+• 向下笔：顶分型+下降K线+底分型<br>
+<br>
+<strong>本股情况：</strong>从2026-03-04形成底分型后，目前正在运行向上笔，反弹至20元附近遇阻回落。
+</div>
+</div>
+
+<div class="theory">
+<div class="theory-title">🏗️ 什么是中枢？</div>
+<div class="analysis-text">
+<strong>中枢</strong>是3段同向笔的重叠区域，是多空双方争夺的<strong>震荡区间</strong>：<br>
+• 股价在中枢内：高抛低吸<br>
+• 突破中枢上沿：形成第三类买点，看涨<br>
+• 跌破中枢下沿：形成第三类卖点，看跌<br>
+<br>
+<strong>本股情况：</strong>20日均线区间(¥20.05-20.75)可视为短期中枢，当前股价19.91在中枢下方运行，尚未突破。
+</div>
+</div>
+
+<div class="theory">
+<div class="theory-title">💰 三类买卖点</div>
+<div class="analysis-text">
+<strong>第一类买卖点：</strong>趋势背驰点，MACD创新高/新低但股价不创新高/新低，是<strong>反转信号</strong><br>
+<strong>第二类买卖点：</strong>第一类买卖点后的回调/反弹不破前低/高，是<strong>确认信号</strong><br>
+<strong>第三类买卖点：</strong>突破中枢后回调/反弹不回到中枢，是<strong>趋势延续信号</strong><br>
+<br>
+<strong>本股情况：</strong>MACD死叉，DIF创新低但股价未创新低，可能形成底背驰。若出现底分型，可能是第二类买点机会。
+</div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">📊 均线系统分析</div>
+<div class="data-grid">
+<div class="data-item"><div class="data-label">MA5</div><div class="data-value green">19.78</div><span class="tag tag-green">短期均线</span></div>
+<div class="data-item"><div class="data-label">MA10</div><div class="data-value">20.05</div><span class="tag">短期均线</span></div>
+<div class="data-item"><div class="data-label">MA20</div><div class="data-value">20.58</div><span class="tag">中期均线</span></div>
+<div class="data-item"><div class="data-label">MA30</div><div class="data-value">20.75</div><span class="tag">中期均线</span></div>
+<div class="data-item"><div class="data-label">MA60</div><div class="data-value">20.66</div><span class="tag">长期均线</span></div>
+<div class="data-item"><div class="data-label">MA120</div><div class="data-value">20.50</div><span class="tag">年线</span></div>
+</div>
+<div class="analysis-text" style="margin-top:16px;">
+<strong>均线分析：</strong>当前<strong>收盘价19.91 > MA5(19.78)</strong>，短期均线有支撑。
+但股价 < MA10(20.05) < MA20(20.58)，中期均线仍构成压力。
+MA60(20.66)和MA120(20.50)走平，长期趋势震荡。
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">💹 MACD背驰分析</div>
+<div class="data-grid">
+<div class="data-item"><div class="data-label">DIF(快线)</div><div class="data-value red">-0.35</div></div>
+<div class="data-item"><div class="data-label">DEA(慢线)</div><div class="data-value red">-0.24</div></div>
+<div class="data-item"><div class="data-label">MACD柱</div><div class="data-value red">-0.22</div><span class="tag tag-red">死叉</span></div>
+</div>
+<div class="analysis-text" style="margin-top:16px;">
+<strong>背驰分析：</strong>MACD DIF<0，处于下跌段运行中。<br>
+<strong>关键观察点：</strong>如果DIF继续创新低但股价不创新低（底背驰），可能形成第一类买点；
+如果DIF不再创新低而股价创新低，则可能继续下跌。
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">📉 KDJ超买超卖分析</div>
+<div class="data-grid">
+<div class="data-item"><div class="data-label">K值</div><div class="data-value">36.52</div><span class="tag tag-yellow">正常</span></div>
+<div class="data-item"><div class="data-label">D值</div><div class="data-value">32.98</div><span class="tag tag-yellow">正常</span></div>
+<div class="data-item"><div class="data-label">J值</div><div class="data-value">43.62</div><span class="tag tag-yellow">正常</span></div>
+</div>
+<div class="data-item" style="margin-top:12px;"><div class="data-label">RSI</div><div class="data-value">34.40</div><span class="tag tag-yellow">接近超卖</span></div>
+<div class="analysis-text" style="margin-top:16px;">
+<strong>超卖分析：</strong>RSI=34.40，接近30超卖区域。<br>
+KDJ指标在中位区运行，等待金叉确认。RSI若下破30可能酝酿反弹，但需等待确认信号。
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">🛡️ 压力支撑位分析</div>
+<div class="data-grid">
+<div class="data-item"><div class="data-label">60日最高</div><div class="data-value red">¥23.25</div><div style="color:#8b949e;font-size:12px;">-16.8%</div></div>
+<div class="data-item"><div class="data-label">60日最低</div><div class="data-value green">¥18.05</div><div style="color:#8b949e;font-size:12px;">+10.3%</div></div>
+<div class="data-item"><div class="data-label">当前价格</div><div class="data-value">¥19.91</div><div style="color:#8b949e;font-size:12px;">当前位置</div></div>
+</div>
+<div class="analysis-text" style="margin-top:16px;">
+<strong>支撑分析：</strong><br>
+• <strong>第一支撑：¥19.78</strong>（MA5均线）<br>
+• <strong>第二支撑：¥18.05</strong>（60日最低）<br>
+• <strong>第一压力：¥20.05</strong>（MA10均线，需突破）
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">📈 综合评分系统</div>
+<div class="score-bar"><div class="score-fill" style="width:33%;background:#eab308;"></div></div>
+<div style="text-align:center;color:#8b949e;margin-bottom:16px;">2/6 (33.3%)</div>
+<div class="data-grid">
+<div class="data-item"><div class="data-label">均线多头</div><div class="data-value green">✓</div></div>
+<div class="data-item"><div class="data-label">MACD金叉</div><div class="data-value red">✗</div></div>
+<div class="data-item"><div class="data-label">RSI超卖</div><div class="data-value green">✓</div></div>
+<div class="data-item"><div class="data-label">KDJ超卖</div><div class="data-value red">✗</div></div>
+<div class="data-item"><div class="data-label">成交量放大</div><div class="data-value red">✗</div></div>
+<div class="data-item"><div class="data-label">站上MA20</div><div class="data-value red">✗</div></div>
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">📋 操作建议</div>
+<div class="analysis-text">
+<strong>当前状态：</strong>短期震荡，MACD死叉，RSI接近超卖<br><br>
+<strong>建议：</strong><br>
+• 🟡 <strong>观望</strong>，等待底分型确认<br>
+• 📥 买入价：¥19.50-19.91（分批建仓）<br>
+• 🛡️ 止损价：¥18.85（-5%）<br>
+• 🎯 目标价：¥20.05（突破MA10）→ ¥20.58（突破MA20）<br><br>
+<strong>缠论特别提示：</strong><br>
+1. 等待底分型出现后考虑买入<br>
+2. 若MACD DIF创新低但股价不创新低，可能形成底背驰，是第一类买点<br>
+3. 突破20日均线回调不破，可能是第三类买点<br>
+4. 当前RSI接近30超卖区，可适当关注但需谨慎
+</div>
+</div>
+
+<div class="card">
+<div class="card-title">📊 行情走势图</div>
+<div class="chart-box">
+<div class="chart-title">日K线 + 均线</div>
+<div id="chart-kline" style="height:350px;"></div>
+</div>
+<div class="chart-box">
+<div class="chart-title">MACD指标</div>
+<div id="chart-macd" style="height:200px;"></div>
+</div>
+<div class="chart-box">
+<div class="chart-title">RSI指标</div>
+<div id="chart-rsi" style="height:150px;"></div>
+</div>
+</div>
+
+<div class="warn">
+⚠️ <strong>风险提示：</strong><br>
+• 本报告仅供参考，不构成投资建议<br>
+• 股市有风险，投资需谨慎<br>
+• 缠论分析较为复杂，建议结合其他分析方法<br>
+• 任何分析方法都有局限性，需做好止损
+</div>
+
+<div class="footer">
+🦐 伊利虾 | 报告生成时间: 2026-03-11
+</div>
+</div>
+
+<script>
+fetch('/stock_chart_data.json')
+.then(r=>r.json())
+.then(data=>{
+    // K线图
+    const klineChart = echarts.init(document.getElementById('chart-kline'));
+    klineChart.setOption({
+        backgroundColor: 'transparent',
+        tooltip: {trigger:'axis',axisPointer:{type:'cross'}},
+        grid: [{left:50,right:20,top:20,bottom:'35%'}],
+        xAxis: {type:'category',data:data.dates,axisLine:{lineStyle:{color:'#30363d'}}},
+        yAxis: {scale:true,axisLine:{lineStyle:{color:'#30363d'}},splitLine:{lineStyle:{color:'#21262d'}}},
+        series: [
+            {name:'收盘价',type:'line',data:data.close,itemStyle:{color:'#f97316'}},
+            {name:'MA5',type:'line',data:data.ma5,smooth:true,lineStyle:{width:1,color:'#f97316'}},
+            {name:'MA10',type:'line',data:data.ma10,smooth:true,lineStyle:{width:1,color:'#3b82f6'}},
+            {name:'MA20',type:'line',data:data.ma20,smooth:true,lineStyle:{width:1,color:'#9c27b0'}}
+        ]
+    });
     
-    <script>
-        fetch('/stock_chart_data.json')
-            .then(r => r.json())
-            .then(data => {
-                const chart = echarts.init(document.getElementById('chart'));
-                const kline = data.kline.map(k => ({
-                    value: [k[1], k[2], k[4], k[3]],
-                    itemStyle: { color: k[2]>=k[1]?'#22c55e':'#ef4444', color0: k[2]>=k[1]?'#22c55e':'#ef4444' }
-                }));
-                chart.setOption({
-                    backgroundColor: 'transparent',
-                    grid: {left:50, right:20, top:10, bottom:30},
-                    xAxis: { type:'category', data:data.dates, axisLine:{lineStyle:{color:'#30363d'}} },
-                    yAxis: { scale:true, axisLine:{lineStyle:{color:'#30363d'}}, splitLine:{lineStyle:{color:'#21262d'}} },
-                    series: [
-                        { type:'candlestick', data:kline, itemStyle:{color:'#22c55e',color0:'#ef4444',borderColor:'#22c55e',borderColor0:'#ef4444'} },
-                        { name:'MA5', type:'line', data:data.ma5, smooth:true, lineStyle:{width:1,color:'#f97316'} },
-                        { name:'MA10', type:'line', data:data.ma10, smooth:true, lineStyle:{width:1,color:'#3b82f6'} }
-                    ]
-                });
-            });
-    </script>
+    // MACD图
+    const macdChart = echarts.init(document.getElementById('chart-macd'));
+    macdChart.setOption({
+        backgroundColor: 'transparent',
+        tooltip: {trigger:'axis'},
+        grid: {left:50,right:20,top:10,bottom:20},
+        xAxis: {type:'category',data:data.dates,axisLine:{lineStyle:{color:'#30363d'}}},
+        yAxis: {axisLine:{lineStyle:{color:'#30363d'}},splitLine:{lineStyle:{color:'#21262d'}}},
+        series: [
+            {name:'DIF',type:'line',data:data.dif,lineStyle:{color:'#f97316'}},
+            {name:'DEA',type:'line',data:data.dea,lineStyle:{color:'#3b82f6'}},
+            {name:'MACD',type:'bar',data:data.macd,itemStyle:{color:data.macd.map(v=>v>=0?'#22c55e':'#ef4444')}}
+        ]
+    });
+    
+    // RSI图
+    const rsiChart = echarts.init(document.getElementById('chart-rsi'));
+    rsiChart.setOption({
+        backgroundColor: 'transparent',
+        tooltip: {trigger:'axis'},
+        grid: {left:50,right:20,top:10,bottom:20},
+        xAxis: {type:'category',data:data.dates,axisLine:{lineStyle:{color:'#30363d'}}},
+        yAxis: {min:0,max:100,axisLine:{lineStyle:{color:'#30363d'}},splitLine:{lineStyle:{color:'#21262d'}}},
+        series: [
+            {name:'RSI',type:'line',data:data.rsi,lineStyle:{color:'#22c55e'},markLine:{data:[{yAxis:70},{yAxis:30}]}}
+        ]
+    });
+});
+</script>
 </body>
 </html>
