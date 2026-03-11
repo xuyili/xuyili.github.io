@@ -1,223 +1,105 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>002539 云图控股 - 投资分析</title>
-    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #0d1117; color: #fff; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .nav { text-align: center; margin-bottom: 20px; }
-        .nav a { color: #58a6ff; text-decoration: none; }
-        
-        .stock-header { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
-        .stock-name { font-size: 28px; font-weight: bold; }
-        .stock-code { color: #8b949e; font-size: 14px; margin-left: 10px; }
-        .stock-price { font-size: 48px; font-weight: bold; color: #f97316; margin: 16px 0; }
-        .stock-change { font-size: 18px; }
-        .green { color: #22c55e; }
-        .red { color: #ef4444; }
-        
-        .suggestion { background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 20px; }
-        .suggestion-title { font-size: 18px; margin-bottom: 8px; }
-        .suggestion-value { font-size: 28px; font-weight: bold; }
-        
-        .card { background: #161b22; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
-        .card-title { font-size: 16px; color: #8b949e; margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 12px; }
-        
-        .term-list { font-size: 14px; line-height: 1.8; }
-        .term-item { margin-bottom: 12px; padding: 12px; background: #21262d; border-radius: 8px; }
-        .term-name { color: #58a6ff; font-weight: bold; }
-        
-        .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .signal-item { background: #21262d; padding: 16px; border-radius: 8px; }
-        .signal-name { color: #8b949e; font-size: 13px; }
-        .signal-value { font-size: 18px; font-weight: bold; margin: 6px 0; }
-        .signal-tag { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
-        .tag-green { background: rgba(34,197,94,0.2); color: #22c55e; }
-        .tag-red { background: rgba(239,68,68,0.2); color: #ef4444; }
-        .tag-yellow { background: rgba(234,179,8,0.2); color: #eab308; }
-        
-        .trade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
-        .trade-item { background: #21262d; padding: 16px; border-radius: 8px; text-align: center; }
-        .trade-label { color: #8b949e; font-size: 13px; }
-        .trade-value { font-size: 20px; font-weight: bold; margin-top: 8px; }
-        
-        .warn { background: rgba(234,179,8,0.1); border: 1px solid #eab308; border-radius: 8px; padding: 12px; font-size: 13px; color: #eab308; margin-top: 20px; }
-        
-        #chart { width: 100%; height: 350px; margin-top: 20px; }
-        
-        .footer { text-align: center; color: #8b949e; padding: 20px; font-size: 13px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>002539 云图控股 - 缠论分析</title>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:linear-gradient(135deg,#0d1117#161b22);color:#fff;padding:20px}
+.container{max-width:800px;margin:0 auto}
+.nav{text-align:center;margin-bottom:20px}
+.nav a{color:#58a6ff;text-decoration:none}
+.header{background:linear-gradient(135deg,#1f2937,#111827);border-radius:16px;padding:24px;text-align:center;margin-bottom:20px}
+.stock-name{font-size:28px;font-weight:bold}
+.stock-code{color:#8b949e;font-size:14px;margin-left:10px}
+.stock-price{font-size:48px;font-weight:bold;color:#f97316;margin:16px 0}
+.stock-change{font-size:18px}
+.green{color:#22c55e}
+.red{color:#ef4444}
+.suggestion{background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:16px;padding:20px;text-align:center;margin-bottom:20px}
+.card{background:#161b22;border-radius:12px;padding:20px;margin-bottom:16px}
+.card-title{font-size:16px;color:#8b949e;margin-bottom:16px;border-bottom:1px solid #30363d;padding-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.item{background:#21262d;padding:16px;border-radius:8px}
+.item-label{color:#8b949e;font-size:13px}
+.item-value{font-size:18px;font-weight:bold;margin:6px 0}
+.tag{display:inline-block;padding:4px 10px;border-radius:4px;font-size:12px}
+.tag-green{background:rgba(34,197,94,0.2);color:#22c55e}
+.tag-red{background:rgba(239,68,68,0.2);color:#ef4444}
+.tag-yellow{background:rgba(234,179,8,0.2);color:#eab308}
+.warn{background:rgba(234,179,8,0.1);border:1px solid #eab308;border-radius:8px;padding:12px;font-size:13px;color:#eab308;margin-top:20px}
+.footer{text-align:center;color:#8b949e;padding:20px;font-size:13px}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
-        
-        <div class="stock-header">
-            <div class="stock-name">云图控股 <span class="stock-code">002539</span></div>
-            <div class="stock-price">¥15.04</div>
-            <div class="stock-change green">+0.07% (2026-03-11)</div>
-        </div>
-        
-        <div class="suggestion" style="background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);">
-            <div class="suggestion-title">🎯 综合投资建议</div>
-            <div class="suggestion-value">谨慎观望</div>
-            <div style="margin-top:8px;font-size:14px;">评分 1/3 | 短期下跌趋势，MACD死叉</div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📖 股票术语解释</div>
-            <div class="term-list">
-                <div class="term-item">
-                    <div class="term-name">🔴 死叉（Death Cross）</div>
-                    <div style="margin-top:8px;color:#ccc;">
-                        短期均线向下穿过长期均线，表示短期下跌趋势。比如5日均线向下穿过10日均线。<br>
-                        <strong style="color:#ef4444;">本股情况：MACD指标目前是死叉，短期看跌</strong>
-                    </div>
-                </div>
-                <div class="term-item">
-                    <div class="term-name">🟢 金叉（Golden Cross）</div>
-                    <div style="margin-top:8px;color:#ccc;">
-                        短期均线向上穿过长期均线，表示短期上涨趋势。是买入信号之一。
-                    </div>
-                </div>
-                <div class="term-item">
-                    <div class="term-name">📊 MACD</div>
-                    <div style="margin-top:8px;color:#ccc;">
-                        指数平滑异同移动平均线，用于判断趋势方向。<br>
-                        - DIF线（快线）> DEA线（慢线）：金叉，看涨<br>
-                        - DIF线 < DEA线：死叉，看跌
-                    </div>
-                </div>
-                <div class="term-item">
-                    <div class="term-name">📈 RSI（相对强弱指标）</div>
-                    <div style="margin-top:8px;color:#ccc;">
-                        衡量股票涨跌力度的指标，取值0-100。<br>
-                        - >70：超买区，风险大<br>
-                        - <30：超卖区，可能反弹<br>
-                        - 30-70：正常区间<br>
-                        <strong>本股RSI=49.6，正常偏弱</strong>
-                    </div>
-                </div>
-                <div class="term-item">
-                    <div class="term-name">📉 均线（MA）</div>
-                    <div style="margin-top:8px;color:#ccc;">
-                        一段时间的平均价格线。常用5日、10日、20日均线。<br>
-                        - 股价 > 均线：支撑位<br>
-                        - 股价 < 均线：压力位
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📊 技术指标</div>
-            <div class="signal-grid">
-                <div class="signal-item">
-                    <div class="signal-name">短期趋势</div>
-                    <div class="signal-value">短期下跌</div>
-                    <span class="signal-tag tag-red">收盘<MA5</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">MACD</div>
-                    <div class="signal-value">死叉</div>
-                    <span class="signal-tag tag-red">短期看跌</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">RSI</div>
-                    <div class="signal-value">49.6</div>
-                    <span class="signal-tag tag-yellow">正常偏弱</span>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">均线</div>
-                    <div class="signal-value">¥15.16</div>
-                    <span class="signal-tag tag-red">5日均线</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">💰 压力支撑位</div>
-            <div class="signal-grid">
-                <div class="signal-item">
-                    <div class="signal-name">60日最高</div>
-                    <div class="signal-value red">¥17.27</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">60日最低</div>
-                    <div class="signal-value green">¥10.56</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">当前价格</div>
-                    <div class="signal-value">¥15.04</div>
-                </div>
-                <div class="signal-item">
-                    <div class="signal-name">距高点空间</div>
-                    <div class="signal-value red">-14.8%</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📋 交易计划</div>
-            <div class="trade-grid">
-                <div class="trade-item">
-                    <div class="trade-label">建议买入价</div>
-                    <div class="trade-value">¥14.74</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止损位 (-5%)</div>
-                    <div class="trade-value" style="color:#ef4444;">¥14.29</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止盈位1 (+10%)</div>
-                    <div class="trade-value" style="color:#22c55e;">¥16.54</div>
-                </div>
-                <div class="trade-item">
-                    <div class="trade-label">止盈位2 (+15%)</div>
-                    <div class="trade-value" style="color:#22c55e;">¥17.30</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="card">
-            <div class="card-title">📈 近期K线走势</div>
-            <div id="chart"></div>
-        </div>
-        
-        <div class="warn">
-            ⚠️ 风险提示：本分析仅供参考，不构成投资建议。股市有风险，投资需谨慎！
-        </div>
-        
-        <div class="footer">
-            🦐 伊利虾 | 报告生成时间: 2026-03-11
-        </div>
-    </div>
-    
-    <script>
-        fetch('/stock_chart_data.json')
-            .then(r => r.json())
-            .then(data => {
-                const chart = echarts.init(document.getElementById('chart'));
-                const kline = data.kline.map(k => ({
-                    value: [k[1], k[2], k[4], k[3]],
-                    itemStyle: { color: k[2]>=k[1]?'#22c55e':'#ef4444', color0: k[2]>=k[1]?'#22c55e':'#ef4444' }
-                }));
-                chart.setOption({
-                    backgroundColor: 'transparent',
-                    grid: {left:50, right:20, top:10, bottom:30},
-                    xAxis: { type:'category', data:data.dates, axisLine:{lineStyle:{color:'#30363d'}} },
-                    yAxis: { scale:true, axisLine:{lineStyle:{color:'#30363d'}}, splitLine:{lineStyle:{color:'#21262d'}} },
-                    series: [
-                        { type:'candlestick', data:kline, itemStyle:{color:'#22c55e',color0:'#ef4444',borderColor:'#22c55e',borderColor0:'#ef4444'} },
-                        { name:'MA5', type:'line', data:data.ma5, smooth:true, lineStyle:{width:1,color:'#f97316'} },
-                        { name:'MA10', type:'line', data:data.ma10, smooth:true, lineStyle:{width:1,color:'#3b82f6'} }
-                    ]
-                });
-            });
-    </script>
+<div class=container>
+<div class=nav><a href="/archive.html">← 返回专栏</a></div>
+<div class=header>
+<div class=stock-name>云图控股 <span class=stock-code>002539</span></div>
+<div class=stock-price>¥15.04</div>
+<div class="stock-change red">-0.15% (2026-03-11)</div>
+</div>
+<div class=suggestion>
+<div style=font-size:18px;margin-bottom:8px>🎯 综合投资建议</div>
+<div style=font-size:28px;font-weight:bold>谨慎观望</div>
+<div style=margin-top:8px;font-size:14px>评分 1/3 | 短期下跌趋势</div>
+</div>
+<div class=card>
+<div class=card-title>📊 缠论核心概念</div>
+<div class=grid>
+<div class=item><div class=item-label>分型</div><div class=item-value>顶分型/底分型</div><div class=tag tag-red>顶分型=卖出</div></div>
+<div class=item><div class=item-label>笔</div><div class=item-value>至少5根K线</div><div class=tag tag-yellow>波动方向</div></div>
+<div class=item><div class=item-label>线段</div><div class=item-value>至少3笔</div><div class=tag tag-green>稳定结构</div></div>
+<div class=item><div class=item-label>中枢</div><div class=item-value>3段重叠</div><div class=tag tag-red>盘整/趋势</div></div>
+</div>
+</div>
+<div class=card>
+<div class=card-title>📈 缠论买卖点</div>
+<div class=grid>
+<div class=item><div class=item-label>第一类买卖点</div><div class=item-value>背驰点</div><div class=tag tag-green>趋势反转</div></div>
+<div class=item><div class=item-label>第二类买卖点</div><div class=item-value>回调后反弹</div><div class=tag tag-yellow>确认信号</div></div>
+<div class=item><div class=item-label>第三类买卖点</div><div class=item-value>中枢破坏</div><div class=tag tag-red>突破信号</div></div>
+</div>
+</div>
+<div class=card>
+<div class=card-title>📊 均线系统</div>
+<div class=grid>
+<div class=item><div class=item-label>MA5</div><div class=item-value>¥15.16</div><div class=tag tag-red>短期均线</div></div>
+<div class=item><div class=item-label>MA10</div><div class=item-value>¥15.26</div><div class=tag tag-red>中期均线</div></div>
+<div class=item><div class=item-label>MA20</div><div class=item-value>¥15.68</div><div class=tag>长期均线</div></div>
+<div class=item><div class=item-label>MA60</div><div class=item-value>¥14.31</div><div class=tag>趋势线</div></div>
+</div>
+</div>
+<div class=card>
+<div class=card-title>💰 MACD指标</div>
+<div class=grid>
+<div class=item><div class=item-label>DIF</div><div class=item-value>-0.12</div><div class=tag tag-red>快线</div></div>
+<div class=item><div class=item-label>DEA</div><div class=item-value>-0.08</div><div class=tag>慢线</div></div>
+<div class=item><div class=item-label>状态</div><div class=item-value>死叉</div><div class=tag tag-red>看跌</div></div>
+</div>
+</div>
+<div class=card>
+<div class=card-title>🛡️ 压力支撑</div>
+<div class=grid>
+<div class=item><div class=item-label>60日最高</div><div class=item-value style=color:#ef4444>¥17.27</div></div>
+<div class=item><div class=item-label>60日最低</div><div class=item-value style=color:#22c55e>¥10.56</div></div>
+<div class=item><div class=item-label>当前价格</div><div class=item-value>¥15.04</div></div>
+<div class=item><div class=item-label>距低点</div><div class=item-value style=color:#22c55e>+42%</div></div>
+</div>
+</div>
+<div class=warn>
+⚠️ <b>缠论要点</b><br>
+• 缠论核心：走势必完美，任何下跌后必有反弹<br>
+• 三类买卖点：第一类(背驰)、第二类(回调)、第三类(突破中枢)<br>
+• 中枢震荡：高抛低吸<br>
+• 任何反弹不新高形成第二类卖点<br>
+• 任何下跌不新低形成第二类买点
+</div>
+<div class=footer>
+🦐 伊利虾 | 报告生成时间: 2026-03-11
+</div>
+</div>
 </body>
 </html>
