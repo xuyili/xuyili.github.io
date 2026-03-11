@@ -3,232 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>300817 钧达股份 - 投资分析报告</title>
+    <title>300817 双飞集团 - 投资分析</title>
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; padding: 20px; }
-        .container { max-width: 1000px; margin: 0 auto; }
-        .header { text-align: center; padding: 30px 0; border-bottom: 1px solid #333; margin-bottom: 30px; }
-        .header h1 { color: #667eea; font-size: 2em; margin-bottom: 10px; }
-        .header .subtitle { color: #888; }
-        .price-box { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; text-align: center; margin-bottom: 30px; }
-        .price { font-size: 3em; color: #ff9800; font-weight: bold; }
-        .price-change { font-size: 1.2em; margin-top: 10px; }
-        .green { color: #4caf50; }
-        .red { color: #f44336; }
-        
-        .section { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
-        .section h2 { color: #667eea; margin-bottom: 20px; font-size: 1.3em; }
-        
-        .indicator { display: flex; flex-wrap: wrap; gap: 15px; }
-        .indicator-item { background: rgba(255,255,255,0.05); padding: 15px 20px; border-radius: 10px; flex: 1 1 200px; }
-        .indicator-name { color: #888; font-size: 0.9em; }
-        .indicator-value { font-size: 1.3em; font-weight: bold; margin: 5px 0; }
-        .indicator-signal { padding: 3px 10px; border-radius: 5px; font-size: 0.85em; }
-        .signal-buy { background: #4caf50; }
-        .signal-sell { background: #f44336; }
-        .signal-wait { background: #ff9800; }
-        
-        .recommend-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 20px; padding: 30px; text-align: center; margin-bottom: 30px; }
-        .recommend-title { font-size: 1.5em; margin-bottom: 15px; }
-        .recommend-score { font-size: 2em; font-weight: bold; }
-        
-        .trade-plan { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
-        .trade-item { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; text-align: center; }
-        .trade-label { color: #888; font-size: 0.9em; }
-        .trade-value { font-size: 1.5em; font-weight: bold; margin-top: 10px; }
-        .trade-profit { color: #4caf50; }
-        .trade-loss { color: #f44336; }
-        
-        #chart { width: 100%; height: 500px; }
-        
-        .footer { text-align: center; color: #666; padding: 30px 0; margin-top: 30px; }
-        .warning { background: rgba(255,152,0,0.2); border: 1px solid #ff9800; border-radius: 10px; padding: 15px; margin-top: 20px; font-size: 0.9em; color: #ff9800; }
-        
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #0d1117; color: #fff; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; }
         .nav { text-align: center; margin-bottom: 20px; }
-        .nav a { color: #667eea; text-decoration: none; }
+        .nav a { color: #58a6ff; text-decoration: none; }
+        
+        .stock-header { background: linear-gradient(135deg, #1f2937 0%, #111827 100%); border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+        .stock-name { font-size: 28px; font-weight: bold; }
+        .stock-code { color: #8b949e; font-size: 14px; margin-left: 10px; }
+        .stock-price { font-size: 48px; font-weight: bold; color: #f97316; margin: 16px 0; }
+        .stock-change { font-size: 18px; }
+        .green { color: #22c55e; }
+        .red { color: #ef4444; }
+        
+        .suggestion { background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%); border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 20px; }
+        .suggestion-title { font-size: 18px; margin-bottom: 8px; }
+        .suggestion-value { font-size: 28px; font-weight: bold; }
+        
+        .card { background: #161b22; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+        .card-title { font-size: 16px; color: #8b949e; margin-bottom: 16px; border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+        
+        .signal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .signal-item { background: #21262d; padding: 16px; border-radius: 8px; }
+        .signal-name { color: #8b949e; font-size: 13px; }
+        .signal-value { font-size: 18px; font-weight: bold; margin: 6px 0; }
+        .signal-tag { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+        .tag-green { background: rgba(34,197,94,0.2); color: #22c55e; }
+        .tag-red { background: rgba(239,68,68,0.2); color: #ef4444; }
+        .tag-yellow { background: rgba(234,179,8,0.2); color: #eab308; }
+        
+        .trade-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .trade-item { background: #21262d; padding: 16px; border-radius: 8px; text-align: center; }
+        .trade-label { color: #8b949e; font-size: 13px; }
+        .trade-value { font-size: 20px; font-weight: bold; margin-top: 8px; }
+        .trade-profit { color: #22c55e; }
+        .trade-loss { color: #ef4444; }
+        
+        .warn { background: rgba(234,179,8,0.1); border: 1px solid #eab308; border-radius: 8px; padding: 12px; font-size: 13px; color: #eab308; margin-top: 20px; }
+        
+        #chart { width: 100%; height: 350px; margin-top: 20px; }
+        
+        .footer { text-align: center; color: #8b949e; padding: 20px; font-size: 13px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
         
-        <div class="header">
-            <h1>🦐 300817 钧达股份</h1>
-            <p class="subtitle">A股投资分析报告 · 更新日期: 2026-03-11</p>
+        <div class="stock-header">
+            <div class="stock-name">双飞集团 <span class="stock-code">300817</span></div>
+            <div class="stock-price">¥19.96</div>
+            <div class="stock-change red">-0.15% (2026-03-11)</div>
         </div>
         
-        <div class="price-box">
-            <div class="price">¥19.93</div>
-            <div class="price-change red">-0.30% (今日涨跌幅)</div>
+        <div class="suggestion">
+            <div class="suggestion-title">🎯 综合投资建议</div>
+            <div class="suggestion-value">可以关注</div>
+            <div style="margin-top:8px;font-size:14px;">评分 2/3 | 短期上涨趋势，但MACD死叉</div>
         </div>
         
-        <div class="recommend-box">
-            <div class="recommend-title">📊 综合投资建议</div>
-            <div class="recommend-score">★★★☆☆ 建议关注</div>
-            <p style="margin-top:15px;">综合评分: 3/4 | 短期趋势震荡整理，MACD空头但RSI接近超卖区</p>
-        </div>
-        
-        <div class="section">
-            <h2>📈 技术指标分析</h2>
-            <div class="indicator">
-                <div class="indicator-item">
-                    <div class="indicator-name">均线趋势</div>
-                    <div class="indicator-value">震荡整理</div>
-                    <span class="indicator-signal signal-wait">观望</span>
+        <div class="card">
+            <div class="card-title">📊 技术指标</div>
+            <div class="signal-grid">
+                <div class="signal-item">
+                    <div class="signal-name">短期趋势</div>
+                    <div class="signal-value">短期上涨</div>
+                    <span class="signal-tag tag-green">MA5>收盘价</span>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">MACD</div>
-                    <div class="indicator-value">-0.35 / -0.24</div>
-                    <span class="indicator-signal signal-sell">空头排列</span>
+                <div class="signal-item">
+                    <div class="signal-name">MACD</div>
+                    <div class="signal-value">死叉</div>
+                    <span class="signal-tag tag-red">短期看跌</span>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">RSI(14)</div>
-                    <div class="indicator-value">34.55</div>
-                    <span class="indicator-signal signal-wait">偏空/接近超卖</span>
+                <div class="signal-item">
+                    <div class="signal-name">RSI</div>
+                    <div class="signal-value">34.8</div>
+                    <span class="signal-tag tag-yellow">接近超卖</span>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">KDJ</div>
-                    <div class="indicator-value">K:37 D:33</div>
-                    <span class="indicator-signal signal-wait">观望</span>
+                <div class="signal-item">
+                    <div class="signal-name">均线</div>
+                    <div class="signal-value">¥19.79</div>
+                    <span class="signal-tag tag-green">5日均线</span>
                 </div>
             </div>
         </div>
         
-        <div class="section">
-            <h2>📊 压力支撑位</h2>
-            <div class="indicator">
-                <div class="indicator-item">
-                    <div class="indicator-name">60日最高</div>
-                    <div class="indicator-value" style="color:#f44336;">¥23.25</div>
+        <div class="card">
+            <div class="card-title">💰 压力支撑位</div>
+            <div class="signal-grid">
+                <div class="signal-item">
+                    <div class="signal-name">60日最高</div>
+                    <div class="signal-value red">¥23.25</div>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">60日最低</div>
-                    <div class="indicator-value" style="color:#4caf50;">¥18.05</div>
+                <div class="signal-item">
+                    <div class="signal-name">60日最低</div>
+                    <div class="signal-value green">¥18.05</div>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">60日均价</div>
-                    <div class="indicator-value">¥20.66</div>
+                <div class="signal-item">
+                    <div class="signal-name">当前价格</div>
+                    <div class="signal-value">¥19.96</div>
                 </div>
-                <div class="indicator-item">
-                    <div class="indicator-name">当前价格</div>
-                    <div class="indicator-value">¥19.93</div>
+                <div class="signal-item">
+                    <div class="signal-name">距高点空间</div>
+                    <div class="signal-value red">-16.5%</div>
                 </div>
-            </div>
-            <div style="margin-top:15px; padding:15px; background:rgba(255,255,255,0.05); border-radius:10px;">
-                <p>📍 距60日低点涨幅: <strong style="color:#4caf50;">+10.4%</strong></p>
-                <p>📍 距60日高点跌幅: <strong style="color:#f44336;">-16.7%</strong></p>
             </div>
         </div>
         
-        <div class="section">
-            <h2>🎯 交易计划</h2>
-            <div class="trade-plan">
+        <div class="card">
+            <div class="card-title">📋 交易计划</div>
+            <div class="trade-grid">
                 <div class="trade-item">
-                    <div class="trade-label">建议买入区间</div>
-                    <div class="trade-value">¥19.53 - 19.93</div>
+                    <div class="trade-label">建议买入价</div>
+                    <div class="trade-value">¥19.56</div>
                 </div>
                 <div class="trade-item">
-                    <div class="trade-label">止损位 (5%)</div>
-                    <div class="trade-value trade-loss">¥18.93</div>
+                    <div class="trade-label">止损位 (-5%)</div>
+                    <div class="trade-value trade-loss">¥18.96</div>
                 </div>
                 <div class="trade-item">
-                    <div class="trade-label">止盈位1 (10%)</div>
-                    <div class="trade-value trade-profit">¥21.92</div>
+                    <div class="trade-label">止盈位1 (+10%)</div>
+                    <div class="trade-value trade-profit">¥21.96</div>
                 </div>
                 <div class="trade-item">
-                    <div class="trade-label">止盈位2 (15%)</div>
-                    <div class="trade-value trade-profit">¥22.92</div>
+                    <div class="trade-label">止盈位2 (+15%)</div>
+                    <div class="trade-value trade-profit">¥22.95</div>
                 </div>
-            </div>
-            <div class="warning">
-                ⚠️ 风险提示：本报告仅供参考，不构成投资建议。股市有风险，投资需谨慎。建议分散投资，不要把所有资金都投入单一股票。
             </div>
         </div>
         
-        <div class="section">
-            <h2>📉 K线走势图（近60日）</h2>
+        <div class="card">
+            <div class="card-title">📈 近期K线走势</div>
             <div id="chart"></div>
         </div>
         
+        <div class="warn">
+            ⚠️ 风险提示：本分析仅供参考，不构成投资建议。股市有风险，投资需谨慎！
+        </div>
+        
         <div class="footer">
-            <p>🦐 伊利虾 | 由 OpenClaw 驱动</p>
-            <p style="font-size:0.8em; margin-top:10px;">报告生成时间: 2026-03-11</p>
+            🦐 伊利虾 | 报告生成时间: 2026-03-11
         </div>
     </div>
     
     <script>
-        // 加载图表数据
         fetch('/stock_chart_data.json')
-            .then(response => response.json())
+            .then(r => r.json())
             .then(data => {
                 const chart = echarts.init(document.getElementById('chart'));
-                
-                // 准备K线数据格式
-                const klineData = data.kline.map(item => ({
-                    value: [item[1], item[2], item[4], item[3]], // 开收盘高低
-                    itemStyle: {
-                        color: item[2] >= item[1] ? '#4caf50' : '#f44336',
-                        color0: item[2] >= item[1] ? '#4caf50' : '#f44336'
-                    }
+                const kline = data.kline.map(k => ({
+                    value: [k[1], k[2], k[4], k[3]],
+                    itemStyle: { color: k[2]>=k[1]?'#22c55e':'#ef4444', color0: k[2]>=k[1]?'#22c55e':'#ef4444' }
                 }));
-                
-                const dates = data.dates;
-                
-                const option = {
+                chart.setOption({
                     backgroundColor: 'transparent',
-                    tooltip: {
-                        trigger: 'axis',
-                        axisPointer: { type: 'cross' }
-                    },
-                    grid: [{ left: '10%', right: '10%', height: '60%' }],
-                    xAxis: {
-                        type: 'category',
-                        data: dates,
-                        axisLine: { lineStyle: { color: '#666' } }
-                    },
-                    yAxis: {
-                        scale: true,
-                        axisLine: { lineStyle: { color: '#666' } },
-                        splitLine: { lineStyle: { color: '#333' } }
-                    },
+                    grid: {left:50, right:20, top:10, bottom:30},
+                    xAxis: { type:'category', data:data.dates, axisLine:{lineStyle:{color:'#30363d'}} },
+                    yAxis: { scale:true, axisLine:{lineStyle:{color:'#30363d'}}, splitLine:{lineStyle:{color:'#21262d'}} },
                     series: [
-                        {
-                            type: 'candlestick',
-                            data: klineData,
-                            itemStyle: {
-                                color: '#4caf50',
-                                color0: '#f44336',
-                                borderColor: '#4caf50',
-                                borderColor0: '#f44336'
-                            }
-                        },
-                        {
-                            name: 'MA5',
-                            type: 'line',
-                            data: data.ma5,
-                            smooth: true,
-                            lineStyle: { width: 1, color: '#ff9800' }
-                        },
-                        {
-                            name: 'MA10',
-                            type: 'line',
-                            data: data.ma10,
-                            smooth: true,
-                            lineStyle: { width: 1, color: '#2196f3' }
-                        },
-                        {
-                            name: 'MA20',
-                            type: 'line',
-                            data: data.ma20,
-                            smooth: true,
-                            lineStyle: { width: 1, color: '#9c27b0' }
-                        }
+                        { type:'candlestick', data:kline, itemStyle:{color:'#22c55e',color0:'#ef4444',borderColor:'#22c55e',borderColor0:'#ef4444'} },
+                        { name:'MA5', type:'line', data:data.ma5, smooth:true, lineStyle:{width:1,color:'#f97316'} },
+                        { name:'MA10', type:'line', data:data.ma10, smooth:true, lineStyle:{width:1,color:'#3b82f6'} }
                     ]
-                };
-                
-                chart.setOption(option);
+                });
             });
     </script>
 </body>
