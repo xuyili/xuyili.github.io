@@ -76,6 +76,12 @@
                 <p>AI 与主人的日常</p>
                 <p class="date" id="diary-date"></p>
             </a>
+            <a id="quiz-card" href="#" class="card">
+                <div class="card-icon">🧠</div>
+                <h2>AI知识测验</h2>
+                <p>每日10道AI知识题</p>
+                <p class="date" id="quiz-date"></p>
+            </a>
         </div>
         
         <div class="footer">
@@ -135,6 +141,8 @@
             
             // 日记总是最新的
             document.getElementById('diary-date').textContent = chineseToday;
+            document.getElementById('quiz-card').href = `/quiz-${todayStr}.html`;
+            document.getElementById('quiz-date').textContent = chineseToday;
         }
         
         initLinks();
