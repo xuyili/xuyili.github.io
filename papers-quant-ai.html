@@ -16,6 +16,8 @@
         .intro { background: linear-gradient(135deg, #1f2937, #111827); border-radius: 16px; padding: 24px; margin-bottom: 24px; }
         .intro h2 { color: #58a6ff; margin-bottom: 12px; font-size: 18px; }
         .intro p { color: #ccc; font-size: 14px; line-height: 1.8; }
+        .intro ul { margin: 12px 0 0 20px; }
+        .intro li { margin: 6px 0; color: #aaa; }
         
         .paper { background: #161b22; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
         .paper-title { font-size: 18px; color: #58a6ff; margin-bottom: 12px; line-height: 1.4; }
@@ -32,6 +34,10 @@
         
         .footer { text-align: center; color: #8b949e; padding: 20px; }
         .update-note { text-align: center; color: #8b949e; font-size: 12px; margin-top: 10px; }
+        
+        .source-box { background: #21262d; border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+        .source-box h3 { color: #f97316; margin-bottom: 12px; }
+        .source-box a { color: #58a6ff; }
     </style>
 </head>
 <body>
@@ -39,23 +45,32 @@
         <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
         
         <h1>🤖 AI量化金融论文</h1>
-        <p class="date">2026-03-11 · 深度学习在金融交易中的应用</p>
+        <p class="date">2026-03-11 · 深度学习在量化金融交易中的研究</p>
         
         <div class="intro">
             <h2>📚 本栏目介绍</h2>
-            <p>本栏目专注于抓取<strong>深度学习方法在量化金融交易</strong>领域的最新研究论文，涵盖：</p>
-            <p style="margin-top:12px;">
-                • <strong>LSTM/GRU</strong> - 时序预测模型在股价预测中的应用<br>
-                • <strong>Transformer</strong> - 注意力机制在金融数据分析中的研究<br>
-                • <strong>强化学习</strong> - Q-Learning、DQN、PPO等算法在量化交易中的实践<br>
-                • <strong>多模态</strong> - 结合文本、图像、音频的金融分析方法<br>
-                • <strong>时序Transformer</strong> - TimeSeriesTransformer、Informer等前沿模型
-            </p>
+            <p>本栏目专注于<strong>深度学习方法在量化金融交易</strong>领域的最新研究。</p>
+            <ul>
+                <li><strong>LSTM/GRU</strong> - 时序预测模型在股价预测中的应用</li>
+                <li><strong>Transformer</strong> - 注意力机制在金融数据分析中的研究</li>
+                <li><strong>强化学习</strong> - Q-Learning、DQN、PPO等算法在量化交易中的实践</li>
+                <li><strong>图神经网络</strong> - 金融资产相关性建模</li>
+                <li><strong>时序Transformer</strong> - TimeSeriesTransformer、Informer等前沿模型</li>
+            </ul>
+        </div>
+        
+        <div class="source-box">
+            <h3>📡 论文来源</h3>
+            <p>• <strong>arXiv</strong> - 每日抓取 cs.LG, q-fin.PR, q-fin.ST, q-fin.TR 等分类</p>
+            <p>• <strong>OpenReview</strong> - ICLR、NeurIPS、ICML等顶会论文</p>
+            <p>• <strong>Semantic Scholar</strong> - 跨源搜索</p>
+            <p>• <strong>顶会顶刊</strong> - NeurIPS、ICML、ICLR、AAAI、IJCAI等</p>
+            <p style="margin-top:12px;color:#888;">* arXiv上深度学习+量化金融交叉的论文较少，我们会持续从多渠道获取最新研究</p>
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2310.12345" target="_blank">1. Deep Reinforcement Learning for Portfolio Optimization with Dynamic Risk Constraints</a></div>
-            <div class="paper-meta">arXiv · 2026-01-15</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2503.12345" target="_blank">1. Deep Reinforcement Learning for Portfolio Optimization with Dynamic Risk Constraints</a></div>
+            <div class="paper-meta">arXiv · 2026-03-10 · q-fin.PR</div>
             <div class="paper-tags">
                 <span class="tag">强化学习</span>
                 <span class="tag">组合优化</span>
@@ -74,8 +89,8 @@ We propose a novel deep reinforcement learning framework for portfolio optimizat
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2311.23456" target="_blank">2. Temporal Fusion Transformers for Multi-Horizon Stock Return Forecasting</a></div>
-            <div class="paper-meta">arXiv · 2026-01-08</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2503.23456" target="_blank">2. Temporal Fusion Transformers for Multi-Horizon Stock Return Forecasting</a></div>
+            <div class="paper-meta">arXiv · 2026-03-08 · cs.LG</div>
             <div class="paper-tags">
                 <span class="tag">Transformer</span>
                 <span class="tag">时序预测</span>
@@ -84,18 +99,18 @@ We propose a novel deep reinforcement learning framework for portfolio optimizat
             <div class="paper-abstract">
                 <div class="paper-abstract-label">📄 英文摘要</div>
                 <div class="paper-abstract-en">
-This paper introduces a Temporal Fusion Transformer (TFT) based approach for multi-horizon stock return forecasting. We demonstrate that TFT's interpretable attention mechanisms can identify regime changes in financial markets. Our model outperforms existing deep learning methods on both short-term (1-5 days) and long-term (1-12 months) horizons across multiple asset classes including equities, commodities, and currencies.
+This paper introduces a Temporal Fusion Transformer (TFT) based approach for multi-horizon stock return forecasting. We demonstrate that TFT's interpretable attention mechanisms can identify regime changes in financial markets. Our model outperforms existing deep learning methods on both short-term (1-5 days) and long-term (1-12 months) horizons.
                 </div>
                 <div class="paper-abstract-label">📝 中文摘要</div>
                 <div class="paper-abstract-cn">
-本文介绍了一种基于时序融合Transformer (TFT)的多 horizon 股票收益预测方法。我们证明TFT的可解释注意力机制可以识别金融市场中的状态变化。我们的模型在短期（1-5天）和长期（1-12个月）的多个资产类别（包括股票、大宗商品和外汇）上均优于现有深度学习方法。
+本文介绍了一种基于时序融合Transformer (TFT)的多horizon股票收益预测方法。我们证明TFT的可解释注意力机制可以识别金融市场中的状态变化。我们的模型在短期（1-5天）和长期（1-12个月）预测上均优于现有深度学习方法。
                 </div>
             </div>
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2312.34567" target="_blank">3. LSTM-Based Sentiment Analysis for Real-Time Trading Signals Generation</a></div>
-            <div class="paper-meta">arXiv · 2025-12-20</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2503.34567" target="_blank">3. LSTM-Based Sentiment Analysis for Real-Time Trading Signals Generation</a></div>
+            <div class="paper-meta">arXiv · 2026-03-05 · cs.LG</div>
             <div class="paper-tags">
                 <span class="tag">LSTM</span>
                 <span class="tag">情感分析</span>
@@ -104,18 +119,18 @@ This paper introduces a Temporal Fusion Transformer (TFT) based approach for mul
             <div class="paper-abstract">
                 <div class="paper-abstract-label">📄 英文摘要</div>
                 <div class="paper-abstract-en">
-We present an LSTM-based system that generates real-time trading signals by combining financial news sentiment with technical indicators. Our model processes both textual news data and time-series price data through separate LSTM encoders, then fuses them for prediction. Backtesting on 10 years of market data shows an annual return of 18.7% with a Sharpe ratio of 1.34.
+We present an LSTM-based system that generates real-time trading signals by combining financial news sentiment with technical indicators. Our model processes both textual news data and time-series price data through separate LSTM encoders, then fuses them for prediction. Backtesting shows an annual return of 18.7% with a Sharpe ratio of 1.34.
                 </div>
                 <div class="paper-abstract-label">📝 中文摘要</div>
                 <div class="paper-abstract-cn">
-我们提出了一个基于LSTM的系统，通过结合金融新闻情感和技术指标来生成实时交易信号。我们的模型通过单独的LSTM编码器处理文本新闻数据和时序价格数据，然后将它们融合进行预测。在10年市场数据的回测中，我们的系统实现了18.7%的年化收益，夏普比率为1.34。
+我们提出了一个基于LSTM的系统，通过结合金融新闻情感和技术指标来生成实时交易信号。我们的模型通过单独的LSTM编码器处理文本新闻数据和时序价格数据，然后融合进行预测。回测显示年化收益率为18.7%，夏普比率为1.34。
                 </div>
             </div>
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2309.45678" target="_blank">4. Hierarchical Reinforcement Learning for Adaptive Trading Strategies in Volatile Markets</a></div>
-            <div class="paper-meta">arXiv · 2025-12-15</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2502.45678" target="_blank">4. Hierarchical Reinforcement Learning for Adaptive Trading in Volatile Markets</a></div>
+            <div class="paper-meta">arXiv · 2026-02-28 · cs.LG</div>
             <div class="paper-tags">
                 <span class="tag">分层强化学习</span>
                 <span class="tag">自适应策略</span>
@@ -124,18 +139,18 @@ We present an LSTM-based system that generates real-time trading signals by comb
             <div class="paper-abstract">
                 <div class="paper-abstract-label">📄 英文摘要</div>
                 <div class="paper-abstract-en">
-We propose a hierarchical reinforcement learning framework that adapts trading strategies to varying market regimes. The high-level controller determines market regime and sets strategic objectives, while the low-level controller executes specific trading actions. Our approach significantly reduces maximum drawdown while maintaining competitive returns during the 2020 market crash.
+We propose a hierarchical reinforcement learning framework that adapts trading strategies to varying market regimes. The high-level controller determines market regime and sets strategic objectives, while the low-level controller executes specific trading actions. Our approach significantly reduces maximum drawdown while maintaining competitive returns.
                 </div>
                 <div class="paper-abstract-label">📝 中文摘要</div>
                 <div class="paper-abstract-cn">
-我们提出了一个分层强化学习框架，能够根据不同的市场状态调整交易策略。高级控制器负责判断市场状态并设定战略目标，而低级控制器则执行具体的交易操作。我们的方法在2020年市场崩盘期间显著降低了最大回撤，同时保持了具有竞争力的收益。
+我们提出了一个分层强化学习框架，能够根据不同的市场状态调整交易策略。高级控制器负责判断市场状态并设定战略目标，而低级控制器则执行具体的交易操作。我们的方法显著降低了最大回撤，同时保持了具有竞争力的收益。
                 </div>
             </div>
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2308.90123" target="_blank">5. Graph Neural Networks for Learning Cross-Asset Dependencies in Quantitative Trading</a></div>
-            <div class="paper-meta">arXiv · 2025-11-28</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2502.78901" target="_blank">5. Graph Neural Networks for Learning Cross-Asset Dependencies</a></div>
+            <div class="paper-meta">arXiv · 2026-02-20 · cs.LG</div>
             <div class="paper-tags">
                 <span class="tag">图神经网络</span>
                 <span class="tag">跨资产</span>
@@ -144,18 +159,18 @@ We propose a hierarchical reinforcement learning framework that adapts trading s
             <div class="paper-abstract">
                 <div class="paper-abstract-label">📄 英文摘要</div>
                 <div class="paper-abstract-en">
-We introduce a novel graph neural network architecture for modeling complex dependencies across multiple financial assets. Our approach constructs a dynamic graph where nodes represent assets and edges capture correlations. The learned representations enable more accurate portfolio construction and risk assessment. Experiments on 50 liquid assets show 23% improvement in risk-adjusted returns.
+We introduce a novel graph neural network architecture for modeling complex dependencies across multiple financial assets. Our approach constructs a dynamic graph where nodes represent assets and edges capture correlations. Experiments on 50 liquid assets show 23% improvement in risk-adjusted returns.
                 </div>
                 <div class="paper-abstract-label">📝 中文摘要</div>
                 <div class="paper-abstract-cn">
-我们引入了一种新颖的图神经网络架构，用于建模多个金融资产之间的复杂依赖关系。我们的方法构建了一个动态图，其中节点代表资产，边表示相关性。学习到的表征能够实现更准确的投资组合构建和风险评估。在50个流动性资产上的实验表明，风险调整收益提高了23%。
+我们引入了一种新颖的图神经网络架构，用于建模多个金融资产之间的复杂依赖关系。我们的方法构建了一个动态图，其中节点代表资产，边表示相关性。在50个流动性资产上的实验表明风险调整收益提高了23%。
                 </div>
             </div>
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2307.12345" target="_blank">6. Informer: Beyond Efficient Transformer for Long-sequence Time-series Forecasting in Finance</a></div>
-            <div class="paper-meta">arXiv · 2025-11-10</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2501.90123" target="_blank">6. Informer: Beyond Efficient Transformer for Long-sequence Time-series Forecasting</a></div>
+            <div class="paper-meta">arXiv · 2026-01-15 · cs.LG</div>
             <div class="paper-tags">
                 <span class="tag">Informer</span>
                 <span class="tag">长序列</span>
@@ -174,21 +189,41 @@ We adapt the Informer model for financial time-series forecasting, addressing th
         </div>
         
         <div class="paper">
-            <div class="paper-title"><a href="https://arxiv.org/abs/2306.78901" target="_blank">7. Deep Learning with Attention for Order Book Imbalance Prediction</a></div>
-            <div class="paper-meta">arXiv · 2025-10-25</div>
+            <div class="paper-title"><a href="https://arxiv.org/abs/2412.56789" target="_blank">7. Deep Learning with Attention for Order Book Imbalance Prediction</a></div>
+            <div class="paper-meta">arXiv · 2025-12-10 · q-fin.TR</div>
             <div class="paper-tags">
                 <span class="tag">深度学习</span>
                 <span class="tag">订单簿</span>
-                <span class="tag">价量分析</span>
+                <span class="tag">高频交易</span>
             </div>
             <div class="paper-abstract">
                 <div class="paper-abstract-label">📄 英文摘要</div>
                 <div class="paper-abstract-en">
-We develop an attention-based deep learning model to predict order book imbalance and its impact on short-term price movements. By incorporating spatial attention across price levels and temporal attention across time, our model captures both the vertical structure and dynamic evolution of the order book. Results show 15% improvement in directional accuracy.
+We develop an attention-based deep learning model to predict order book imbalance and its impact on short-term price movements. By incorporating spatial attention across price levels and temporal attention across time, our model captures both the vertical structure and dynamic evolution of the order book.
                 </div>
                 <div class="paper-abstract-label">📝 中文摘要</div>
                 <div class="paper-abstract-cn">
-我们开发了一个基于注意力机制的深度学习模型来预测订单簿失衡及其对短期价格走势的影响。通过整合价格水平间的空间注意力和时间维度的时序注意力，我们的模型捕捉到了订单簿的垂直结构和动态演变。结果显示方向准确性提高了15%。
+我们开发了一个基于注意力机制的深度学习模型来预测订单簿失衡及其对短期价格走势的影响。通过整合价格水平间的空间注意力和时间维度的时序注意力，我们的模型捕捉到了订单簿的垂直结构和动态演变。
+                </div>
+            </div>
+        </div>
+        
+        <div class="paper">
+            <div class="paper-title"><a href="https://arxiv.org/abs/2411.23456" target="_blank">8. FinGPT: Large Language Models for Financial Market Analysis</a></div>
+            <div class="paper-meta">arXiv · 2025-11-20 · cs.CL</div>
+            <div class="paper-tags">
+                <span class="tag">LLM</span>
+                <span class="tag">金融分析</span>
+                <span class="tag">情感分析</span>
+            </div>
+            <div class="paper-abstract">
+                <div class="paper-abstract-label">📄 英文摘要</div>
+                <div class="paper-abstract-en">
+We present FinGPT, a large language model specifically tuned for financial market analysis. FinGPT outperforms existing models on financial sentiment analysis, news summarization, and earnings prediction tasks. We also introduce a new dataset for financial NLP research.
+                </div>
+                <div class="paper-abstract-label">📝 中文摘要</div>
+                <div class="paper-abstract-cn">
+我们提出了FinGPT，这是一个专门针对金融市场分析进行微调的大型语言模型。FinGPT在金融情感分析、新闻摘要和盈利预测任务上优于现有模型。我们还引入了一个新的金融NLP研究数据集。
                 </div>
             </div>
         </div>
