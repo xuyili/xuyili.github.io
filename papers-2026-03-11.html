@@ -6,376 +6,590 @@
     <title>AI论文速递 2026-03-11</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 900px; margin: 0 auto; padding: 40px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
-        h1 { text-align: center; color: #667eea; font-size: 2.5em; margin-bottom: 10px; }
-        .date { text-align: center; color: #888; margin-bottom: 40px; }
-        .topic { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; margin-bottom: 20px; }
-        .topic h2 { color: #ff9800; margin-bottom: 15px; }
-        .paper { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; margin-bottom: 15px; }
-        .paper h3 { color: #4fc3f7; font-size: 1.1em; margin-bottom: 8px; }
-        .paper h3 a { color: inherit; text-decoration: none; }
-        .paper h3 a:hover { text-decoration: underline; }
-        .paper .meta { color: #888; font-size: 0.9em; margin-bottom: 8px; }
-        .paper .abstract { color: #ccc; line-height: 1.6; }
-        .footer { text-align: center; color: #666; margin-top: 40px; padding-top: 20px; border-top: 1px solid #333; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
     </style>
 </head>
 <body>
-    <h1>📚 AI论文速递</h1>
-    <p class="date">2026-03-11 · 70篇</p>
-<div class="topic"><h2>🎮 强化学习</h2>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06524v1" target="_blank">Modern jet flavour tagging in hadronic Z decays with archived ALEPH data</a></h3>
-            <p class="meta">📄 Matteo M. Defranchis, Jacopo Fanini, Apranik Fatehi</p>
-            <p class="abstract">We present a reanalysis of archived data from the ALEPH experiment at LEP in the $\mathrm{Z \to q\bar{q}}$ final state. We apply modern jet flavour tagging techniques to improve the separation between the different hadronic decay channels of the Z boson, achieving up to one order of magnitude improvement in misidentification rate for b- and c-quark jets compared to the legacy algorithms used for the most recent ALEPH results, for the same identification efficiency. We also present the first implementation of strange quark jet tagging with LEP data, which allows for the selection of a $\mathrm{Z \to s\bar{s}}$ enriched event sample. These improvements in the flavour tagging performance are achieved by leveraging the lifetime, particle identification, and secondary vertex information, as wel...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06530v1" target="_blank">AV-Unified: A Unified Framework for Audio-visual Scene Understanding</a></h3>
-            <p class="meta">📄 Guangyao Li, Xin Wang, Wenwu Zhu</p>
-            <p class="abstract">When humans perceive the world, they naturally integrate multiple audio-visual tasks within dynamic, real-world scenes. However, current works such as event localization, parsing, segmentation and question answering are mostly explored individually, making it challenging to comprehensively understand complex audio-visual scenes and explore inter-task relationships. Hence, we propose \textbf{AV-Unified}, a unified framework that enables joint learning across a wide range of audio-visual scene understanding tasks. AV-Unified standardizes the diverse input-output formats of each task and incorporates a multi-scale spatiotemporal perception network to effectively capture audio-visual associations. Specifically, we unify the inputs and outputs of all supported tasks by converting them into sequ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06538v1" target="_blank">Unified Learning of Temporal Task Structure and Action Timing for Bimanual Robot Manipulation</a></h3>
-            <p class="meta">📄 Christian Dreher, Patrick Dormanns, Andre Meixner</p>
-            <p class="abstract">Temporal task structure is fundamental for bimanual manipulation: a robot must not only know that one action precedes or overlaps another, but also when each action should occur and how long it should take. While symbolic temporal relations enable high-level reasoning about task structure and alternative execution sequences, concrete timing parameters are equally essential for coordinating two hands at the execution level. Existing approaches address these two levels in isolation, leaving a gap between high-level task planning and low-level movement synchronization. This work presents an approach for learning both symbolic and subsymbolic temporal task constraints from human demonstrations and deriving executable, temporally parametrized plans for bimanual manipulation. Our contributions a...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06543v1" target="_blank">SurgFormer: Scalable Learning of Organ Deformation with Resection Support and Real-Time Inference</a></h3>
-            <p class="meta">📄 Ashkan Shahbazi, Elaheh Akbari, Kyvia Pereira</p>
-            <p class="abstract">We introduce SurgFormer, a multiresolution gated transformer for data driven soft tissue simulation on volumetric meshes. High fidelity biomechanical solvers are often too costly for interactive use, so we train SurgFormer on solver generated data to predict nodewise displacement fields at near real time rates. SurgFormer builds a fixed mesh hierarchy and applies repeated multibranch blocks that combine local message passing, coarse global self attention, and pointwise feedforward updates, fused by learned per node, per channel gates to adaptively integrate local and long range information while remaining scalable on large meshes. For cut conditioned simulation, resection information is encoded as a learned cut embedding and provided as an additional input, enabling a unified model for bot...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06546v1" target="_blank">Kinematically Coherent Multiphase Galactic Winds in Star-Forming Galaxies Revealed by Unified Radiative Transfer Modeling of UV Emission and Absorption Lines</a></h3>
-            <p class="meta">📄 Zhihui Li, Timothy Heckman, Max Gronke</p>
-            <p class="abstract">We present PEACOCK, a three-dimensional Monte Carlo radiative transfer (RT) framework designed to self-consistently model rest-frame ultraviolet emission and absorption lines arising from multiphase, clumpy galactic winds. Applied to deep HST/COS spectra of 50 nearby star-forming galaxies, PEACOCK reproduces 220 observed profiles of Ly-alpha, Si II, C II, Si III, Si IV, and C IV spanning absorption, emission, and P-Cygni-like morphologies within a single CGM model. By combining Monte Carlo RT with deep-learning acceleration and nested sampling, the framework enables fully converged multi-line inference at a small fraction of the cost of traditional RT grids. Systematic experiments show that ion column densities, bulk outflow velocities, and turbulent motions leave distinct imprints on line...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06555v1" target="_blank">Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations</a></h3>
-            <p class="meta">📄 Harshavardhan Kamarthi, Shangqing Xu, Xinjie Tong</p>
-            <p class="abstract">Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">Causal Interpretation of Neural Network Computations with Contribution Decomposition</a></h3>
-            <p class="meta">📄 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
-            <p class="abstract">Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking</a></h3>
-            <p class="meta">📄 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
-            <p class="abstract">Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spatial anchoring, temporal tracking, and duration reasoning. We observe that these structural differences make task-agnostic approaches insufficient: generic Chain-of-Thought methods lack task-appropriate reasoning primitives, and uniform reinforcement learning actively destabilizes performance on spa...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06563v1" target="_blank">Convergence of Neural Network Policies for Risk--Reward Optimization</a></h3>
-            <p class="meta">📄 Chang Chen, Duy-Minh Dang</p>
-            <p class="abstract">We develop a neural-network framework for multi-period risk--reward stochastic control problems with constrained two-step feedback policies that may be discontinuous in the state. We allow a broad class of objectives built on a finite-dimensional performance vector, including terminal and path-dependent statistics, with risk functionals admitting auxiliary-variable optimization representations (e.g.\ Conditional Value-at-Risk and buffered probability of exceedance) and optional moment dependence. Our approach parametrizes the two-step policy using two coupled feedforward networks with constraint-enforcing output layers, reducing the constrained control problem to unconstrained training over network parameters. Under mild regularity conditions, we prove that the empirical optimum of the NN-...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06565v1" target="_blank">Boosting deep Reinforcement Learning using pretraining with Logical Options</a></h3>
-            <p class="meta">📄 Zihan Ye, Phil Chau, Raban Emunds</p>
-            <p class="abstract">Deep reinforcement learning agents are often misaligned, as they over-exploit early reward signals. Recently, several symbolic approaches have addressed these challenges by encoding sparse objectives along with aligned plans. However, purely symbolic architectures are complex to scale and difficult to apply to continuous settings. Hence, we propose a hybrid approach, inspired by humans' ability to acquire new skills. We use a two-stage framework that injects symbolic structure into neural-based reinforcement learning agents without sacrificing the expressivity of deep policies. Our method, called Hybrid Hierarchical RL (H^2RL), introduces a logical option-based pretraining strategy to steer the learning policy away from short-term reward loops and toward goal-directed behavior while allowi...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention</a></h3>
-            <p class="meta">📄 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
-            <p class="abstract">Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders</a></h3>
-            <p class="meta">📄 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
-            <p class="abstract">Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-E...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06572v1" target="_blank">SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation</a></h3>
-            <p class="meta">📄 Vishal Thengane, Zhaochong An, Tianjin Huang</p>
-            <p class="abstract">Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06575v1" target="_blank">An ode to instantons</a></h3>
-            <p class="meta">📄 Oliver Janssen, Joel Karlsson, Flavio Riccardi</p>
-            <p class="abstract">We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the "bounce" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of bounce solutions at late times are discussed. The motivation of this work is to learn how to compute decay rates in quantum field theory in situations with non-trivial time dependence, by first taking a humble step backwards to the fascinating world of quantum mechanics.</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06576v1" target="_blank">BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations</a></h3>
-            <p class="meta">📄 Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen</p>
-            <p class="abstract">The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propo...</p>
-        </div></div><div class="topic"><h2>综述</h2>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06336v1" target="_blank">Thermodynamics of Quantum Coupled Transport</a></h3>
-            <p class="meta">📄 Shuvadip Ghosh, Arnab Ghosh</p>
-            <p class="abstract">This review presents a thermodynamic perspective on quantum coupled transport processes in nanoscale systems. Our analysis is formulated within the framework of entropy production rate, the central quantity governing non-equilibrium processes and expressed through conjugate force-flux pairs. Although thermodynamic laws are universal across classical and quantum domains, the discussion is developed within a microscopic open quantum system framework, focusing on quantum dots (QDs) coupled to electronic reservoirs. We first examine elementary single transport processes and highlight their strong thermodynamic constraints in the near-equilibrium regime. This motivates the study of coupled transport, where multiple force-flux pairs coexist and interact, leading to richer thermodynamic behaviour...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06344v1" target="_blank">Searching for outbursts from Symbiotic Binaries in GOTO and ATLAS data</a></h3>
-            <p class="meta">📄 G. Ramsay, K. Ackley, S. Belkin</p>
-            <p class="abstract">Symbiotic Binaries contain a white dwarf accreting material from a red giant star through a wind. We present the results of a search for outbursts from Symbiotic Binaries using photometric data obtained using the GOTO all-sky survey taken from 2023 onwards. After identifying ten candidate outbursting systems, we used ATLAS photometry to characterise their photometric behaviour before 2023, leaving five systems which showed photometric behaviour consistent with an outburst. The ATLAS data showed how important the photometric history of an object is in determining whether a photometric feature is a likely outburst event. The outburst from LMC N67 is the first reported Z And-type outburst from a Symbiotic binary in the LMC. OGLE SMC-LPV-4044 and HK Sco show previously unreported outbursts. QW...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06365v1" target="_blank">ESAA-Security: An Event-Sourced, Verifiable Architecture for Agent-Assisted Security Audits of AI-Generated Code</a></h3>
-            <p class="meta">📄 Elzo Brito dos Santos Filho</p>
-            <p class="abstract">AI-assisted software generation has increased development speed, but it has also amplified a persistent engineering problem: systems that are functionally correct may still be structurally insecure. In practice, prompt-based security review with large language models often suffers from uneven coverage, weak reproducibility, unsupported findings, and the absence of an immutable audit trail. The ESAA architecture addresses a related governance problem in agentic software engineering by separating heuristic agent cognition from deterministic state mutation through append-only events, constrained outputs, and replay-based verification. This paper presents ESAA-Security, a domain-specific specialization of ESAA for agent-assisted security auditing of software repositories, with particular empha...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06373v1" target="_blank">Doctor or Patient? Synergizing Diarization and ASR for Code-Switched Hinglish Medical Conditions Extraction</a></h3>
-            <p class="meta">📄 Séverin Baroudi, Yanis Labrak, Shashi Kumar</p>
-            <p class="abstract">Extracting patient medical conditions from code-switched clinical spoken dialogues is challenging due to rapid turn-taking and highly overlapped speech. We present a robust system evaluated on the DISPLACE-M dataset of real-world Hinglish medical conversations. We propose an End-to-End Neural Diarization with Vector Clustering approach (EEND-VC) to accurately resolve dense and speaker overlaps in Doctor-Patient Conversations (DoPaCo). For transcription, we adapt a Qwen3 ASR model via domain-specific fine-tuning, Devanagari script normalization, and dialogue-level LLM error correction, achieving an 18.59% tcpWER. We benchmark open and proprietary LLMs on medical condition extraction, comparing our text-based cascade system against a multimodal End-to-End (E2E) audio framework. While proprie...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06394v1" target="_blank">Talk Freely, Execute Strictly: Schema-Gated Agentic AI for Flexible and Reproducible Scientific Workflows</a></h3>
-            <p class="meta">📄 Joel Strickland, Arjun Vijeta, Chris Moores</p>
-            <p class="abstract">Large language models (LLMs) can now translate a researcher's plain-language goal into executable computation, yet scientific workflows demand determinism, provenance, and governance that are difficult to guarantee when an LLM decides what runs. Semi-structured interviews with 18 experts across 10 industrial R&D stakeholders surface 2 competing requirements--deterministic, constrained execution and conversational flexibility without workflow rigidity--together with boundary properties (human-in-the-loop control and transparency) that any resolution must satisfy. We propose schema-gated orchestration as the resolving principle: the schema becomes a mandatory execution boundary at the composed-workflow level, so that nothing runs unless the complete action--including cross-step dependencies-...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06409v1" target="_blank">The Collective Voice of Ly$α$ Emitters: Insights from JWST Stacked Spectroscopy</a></h3>
-            <p class="meta">📄 R. Tripodi, L. Napolitano, L. Pentericci</p>
-            <p class="abstract">We present a spatially resolved stacked analysis of 287 LAEs at $z>4$ observed with JWST/NIRSpec prism spectroscopy. By constructing a two-dimensional stack from public surveys (CAPERS, CEERS, JADES, and RUBIES), we probe the average internal structure of typical LAEs on sub-kiloparsec scales. We find a clear radial decoupling between resonant and non-resonant emission: while EW(H$β$) and other optical lines decline with radius, EW(Ly$α$) increases toward the outskirts, and the Ly$α$ escape fraction rises from $\sim16\%$ in the center to $\gtrsim24\%$ at larger radii. This behavior indicates that resonant scattering redistributes Ly$α$ photons into lower-density outer regions, where escape becomes more efficient. Optical diagnostics and $T_e$ measurements reveal low metallicities ($12+\log...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06410v1" target="_blank">Lyα Nebulae in HETDEX: The Largest Statistical Census Bridging Lyα Halos and Blobs across Cosmic Noon</a></h3>
-            <p class="meta">📄 Erin Mentuch Cooper, Karl Gebhardt, Dustin Davis</p>
-            <p class="abstract">The Hobby-Eberly Dark Energy Experiment (HETDEX) is an untargeted ~540 deg^2 spectroscopic survey of Lyα emission in the 1.9 < z < 3.5 Universe. In surface brightness, this survey reaches 1σ Lyα sensitivities of approximately 2-5 x 10^-18 erg s^-1 cm^-2 arcsec^-2, allowing large samples of extended Lyα nebulae (LAN) to be studied. We selected a sample of 70,691 Lyα-emitting galaxies (LAEs) with an emission-line signal-to-noise ratio greater than 6 and modeled the Lyα emission as a point-source component with an optional exponential envelope. Half (~47.5%) of the LAE sample (33,612 objects) exhibits significant extended emission and is best fit by the two-component model. The fraction of resolved sources increases with Lyα flux and luminosity. Their isophotal areas range from 10-130 arcsec^...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06437v1" target="_blank">Estimating Residential Displacement in the Central Puget Sound Region using Household Survey Data</a></h3>
-            <p class="meta">📄 Ameer Dharamshi, Mary Richards, Suzanne Childress</p>
-            <p class="abstract">Housing instability is a persistent challenge faced by households in cities across the United States. In worst-case scenarios, households are displaced from their residences and forced to start anew. In an effort to mitigate the harms of residential displacement, local policymakers have an interest in monitoring residential displacement within their communities. In this work, we propose a new strategy to estimate sub-county residential displacement within the Central Puget Sound Region using data from three household survey programs. We first estimate residential displacement between 2016-2023 from a local household travel survey using a Bayesian spatiotemporal model, and poststratify with data from the American Community Survey. We then benchmark these estimates to the American Housing Su...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06461v1" target="_blank">Density of States Weighted Decoherence Probe Formalism for Charge Transport in DNA</a></h3>
-            <p class="meta">📄 Hashem Mohammad, M. P. Anantram</p>
-            <p class="abstract">Nanoscale molecular systems such as DNA require an atomistic quantum treatment to accurately capture their electrical properties, owing to their small dimensions. A central challenge in modeling transport through these systems is the inclusion of phase-breaking scattering. Decoherence-probe methods enable such modeling for large systems, but existing implementations have limitations. Energy-independent scattering rates tend to overly broaden energy levels, yielding an unphysically large density of states (DOS) within energy gaps. Conversely, energy-dependent models may introduce spurious energy levels and transmission peaks and require additional fitting parameters. To address these issues, we use a DOSweighted decoherence model in which the scattering rate and equivalently, the associated...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06463v1" target="_blank">MIGHTEE: The dark matter haloes, duty cycle and mechanical feedback from radio-AGN up to $z \sim 2.5$</a></h3>
-            <p class="meta">📄 Joel Hamlett, Catherine L. Hale, Matt J. Jarvis</p>
-            <p class="abstract">Radio-AGN are observed to be more strongly clustered than non-active galaxies, though it is unclear whether this is simply due to their preference for massive host galaxies, or if they reside in distinct environments beyond this mass dependence. Using data from three fields covered by the MIGHTEE survey, we measure the angular two-point cross-correlation functions with a large, stellar mass-limited population of near-infrared selected galaxies, overcoming limitations of previous single-deep-field studies. By fitting halo occupation distribution models, we infer the galaxy bias parameters, $b$, for radio-AGN in three redshift ranges with median redshifts of $z_{med}=0.76^{+0.17}_{-0.28}$, $1.25^{+0.14}_{-0.17}$ and $1.75^{+0.44}_{-0.18}$, finding $b=1.94^{+0.07}_{-0.07}$, $2.50^{+0.11}_{-0....</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06469v1" target="_blank">Unbiased Bayesian Inference of Peculiar Motions of Galaxies from Type Ia Supernovae Observations</a></h3>
-            <p class="meta">📄 Ujjwal Upadhyay, Tarun Deep Saini, Shiv K. Sethi</p>
-            <p class="abstract">The peculiar motions of galaxies are powerful cosmological probes that trace the growth of structures and the distribution of matter in the universe, providing a means to investigate the nature of dark energy and test gravity on cosmological scales. However, their direct observation is extremely challenging, as it requires independent and precise distance measurements to galaxies. We present a Bayesian approach to estimate the radial component of peculiar velocities of galaxies hosting Type Ia supernovae (SNe Ia), relying solely on the background cosmological model and the precision of the SNe Ia data. Unlike other peculiar velocity estimators based on Hubble residuals, our method does not assume local linearity of the magnitude-redshift relation or a fixed cosmology, making it unbiased ev...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06474v1" target="_blank">WALLABY pilot survey: Blinded by the light -- discovery of a fourth member in the ESO 179-013 system</a></h3>
-            <p class="meta">📄 Rayssa Guimarães Silva, Marco Grossi, Denise R. Gonçalves</p>
-            <p class="abstract">We present new ASKAP/WALLABY HI observations of the nearby dwarf galaxy system ESO 179-013 (Kathryn's Wheel), the nearest known collisional ring galaxy, located 10 Mpc away in the Local Void. The system is composed of three previously known dwarf galaxies embedded in a large HI envelope, with a newly discovered fourth member identified through HI and radio continuum emission behind a bright foreground binary. Galaxy D exhibits the highest star formation rate in the group and deviates from the HI mass-diameter relation, suggesting it is a compact, gas-rich dwarf missed due to stellar foreground contamination. The HI data reveal for the first time an extended HI envelope around the whole system, the neutral gas counterpart of the star-forming ring and gas bridges among members, suggesting a ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06504v1" target="_blank">Construction and Science of SURF</a></h3>
-            <p class="meta">📄 Jaret Heise</p>
-            <p class="abstract">The Sanford Underground Research Facility (SURF) began operation in 2007 as a facility dedicated to advancing compelling multidisciplinary scientific research. SURF is one of the deepest laboratory sites and offers the largest footprint in the world for scientific pursuits, including physics campuses on the 4850-foot level where the LUX-ZEPLIN, MAJORANA DEMONSTRATOR, and CASPAR experiments are located. SURF is also home to the Long-Baseline Neutrino Facility (LBNF) that will host the international Deep Underground Neutrino Experiment (DUNE). SURF provides ultra-low background environments, low-background assay capabilities, and electroformed copper is produced at the facility. In this review, we discuss the history, features and status of the facility, as well as the current scientific pro...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06510v1" target="_blank">Galaxy UV Legacy Project: Survey Description and First Insights Into NGC 4449 Recent History of Star Formation</a></h3>
-            <p class="meta">📄 E. Sabbi, B. Meena, P. Zeidler</p>
-            <p class="abstract">The Galaxy UV Legacy Project (GULP) is a Cycle 28 Treasury program with the Hubble Space Telescope (HST) designed to characterize resolved massive stars, OB associations, and young star clusters (YSCs) in 26 nearby star-forming galaxies. Utilizing the ACS/SBC F150LP and WFC3/UVIS F218W filters, combined with extensive archival observations, GULP provides an unprecedented panchromatic 8-band view from the Far-UV to the I-band. The target galaxies were carefully selected to span a broad range of metallicities, masses, morphological types, and star formation rates, thereby enabling detailed studies of star formation processes across different galactic environments. This paper introduces the GULP survey, detailing its observational strategy, data processing, and initial scientific results for ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06552v1" target="_blank">KCLarity at SemEval-2026 Task 6: Encoder and Zero-Shot Approaches to Political Evasion Detection</a></h3>
-            <p class="meta">📄 Archie Sage, Salvatore Greco</p>
-            <p class="abstract">This paper describes the KCLarity team's participation in CLARITY, a shared task at SemEval 2026 on classifying ambiguity and evasion techniques in political discourse. We investigate two modelling formulations: (i) directly predicting the clarity label, and (ii) predicting the evasion label and deriving clarity through the task taxonomy hierarchy. We further explore several auxiliary training variants and evaluate decoder-only models in a zero-shot setting under the evasion-first formulation. Overall, the two formulations yield comparable performance. Among encoder-based models, RoBERTa-large achieves the strongest results on the public test set, while zero-shot GPT-5.2 generalises better on the hidden evaluation set.</p>
-        </div></div><div class="topic"><h2>模型压缩</h2>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06552v1" target="_blank">KCLarity at SemEval-2026 Task 6: Encoder and Zero-Shot Approaches to Political Evasion Detection</a></h3>
-            <p class="meta">📄 Archie Sage, Salvatore Greco</p>
-            <p class="abstract">This paper describes the KCLarity team's participation in CLARITY, a shared task at SemEval 2026 on classifying ambiguity and evasion techniques in political discourse. We investigate two modelling formulations: (i) directly predicting the clarity label, and (ii) predicting the evasion label and deriving clarity through the task taxonomy hierarchy. We further explore several auxiliary training variants and evaluate decoder-only models in a zero-shot setting under the evasion-first formulation. Overall, the two formulations yield comparable performance. Among encoder-based models, RoBERTa-large achieves the strongest results on the public test set, while zero-shot GPT-5.2 generalises better on the hidden evaluation set.</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06555v1" target="_blank">Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations</a></h3>
-            <p class="meta">📄 Harshavardhan Kamarthi, Shangqing Xu, Xinjie Tong</p>
-            <p class="abstract">Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">Causal Interpretation of Neural Network Computations with Contribution Decomposition</a></h3>
-            <p class="meta">📄 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
-            <p class="abstract">Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking</a></h3>
-            <p class="meta">📄 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
-            <p class="abstract">Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spatial anchoring, temporal tracking, and duration reasoning. We observe that these structural differences make task-agnostic approaches insufficient: generic Chain-of-Thought methods lack task-appropriate reasoning primitives, and uniform reinforcement learning actively destabilizes performance on spa...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06566v1" target="_blank">Data-Driven Trends and Subpopulations in the Gravitational Wave Binary Black Hole Merger Population with UMAP</a></h3>
-            <p class="meta">📄 A. J. Amsellem, I. Magaña Hernandez, A. Palmese</p>
-            <p class="abstract">The rapidly expanding Gravitational-Wave Transient Catalog (GWTC) necessitates the development of model-independent techniques to uncover trends and subpopulations within the binary black hole (BBH) population. We present the first usage of the Uniform Manifold Approximation and Projection (UMAP) algorithm, a novel dimensionality-reduction technique, for the purpose of analyzing BBH mergers in GWTC-3. We show that UMAP, paired with a clustering algorithm, effectively partitions the population into four well-segregated subgroups principally via their primary and secondary mass components along with an outlier event, GW$190521\_030229$. UMAP clearly identifies objects in the ${\sim}10~M_\odot$ buildup in the BBH mass spectrum as their own group with aligned spins and mass ratios of ${\sim}0....</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06567v1" target="_blank">A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention</a></h3>
-            <p class="meta">📄 Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan</p>
-            <p class="abstract">Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06568v1" target="_blank">The Prevalence of Turbulence-Regulated Multiphase Galactic Winds in Star-Forming Galaxies</a></h3>
-            <p class="meta">📄 Zhihui Li, Timothy Heckman, Max Gronke</p>
-            <p class="abstract">We build upon our previously developed multi-ion radiative transfer (RT) framework, PEACOCK, to investigate the kinematic and energetic structure of cool-to-warm galactic winds in a sample of 50 nearby star-forming galaxies. Using self-consistent constraints derived from joint modeling of Ly-alpha and multiple ultraviolet metal lines, we analyze how bulk outflows and turbulent motions contribute to the dynamics and energy budget of galactic winds in the circumgalactic medium (CGM). We find that macroscopic turbulent velocities are often comparable to, and sometimes exceed, the coherent bulk outflow velocity. The associated turbulent pressure frequently dominates over both microscopic pressure and ram pressure, indicating that turbulence is a major contributor to the kinetic energy budget o...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders</a></h3>
-            <p class="meta">📄 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
-            <p class="abstract">Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-E...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06570v1" target="_blank">SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning</a></h3>
-            <p class="meta">📄 Alejandra Perez, Anita Rau, Lee White</p>
-            <p class="abstract">Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06571v1" target="_blank">Third-order mixed electroweak-QCD corrections to the W-boson mass prediction from the muon lifetime</a></h3>
-            <p class="meta">📄 Ievgen Dubovyk, Ayres Freitas, Janusz Gluza</p>
-            <p class="abstract">We present the calculation of the so far missing ${\cal O}(α^2α_\mathrm{s})$ corrections to the quantity $Δr$, which relates the Fermi constant to the W-boson mass, and enables precision predictions of the latter. While the ${\cal O}(α^2α_\mathrm{s})$ corrections from diagrams with two closed fermion loops are already known, we here focus on the subset with one closed fermion loop, which is a substantially more complex problem. The calculation has been carried out through a combination of analytical and numerical techniques for the three-loop integrals and the on-shell renormalization. The impact of the new corrections is numerically significant, raising the Standard Model prediction for the W-boson mass by more than 3 MeV.</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06572v1" target="_blank">SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation</a></h3>
-            <p class="meta">📄 Vishal Thengane, Zhaochong An, Tianjin Huang</p>
-            <p class="abstract">Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06573v1" target="_blank">Fly360: Omnidirectional Obstacle Avoidance within Drone View</a></h3>
-            <p class="meta">📄 Xiangkai Zhang, Dizhe Zhang, WenZhuo Cao</p>
-            <p class="abstract">Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view perception. We first study an under explored problem setting in which a UAV must generate collision-free motion in environments with obstacles from arbitrary directions, and then construct a benchmark that consists of three representative flight tasks. Based on such settings, we propose Fly360, a tw...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06576v1" target="_blank">BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations</a></h3>
-            <p class="meta">📄 Thomas Monninger, Shaoyuan Xie, Qi Alfred Chen</p>
-            <p class="abstract">The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propo...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion</a></h3>
-            <p class="meta">📄 Lijiang Li, Zuwei Long, Yunhang Shen</p>
-            <p class="abstract">While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal systems. Drawing inspiration from these pioneering research, we introduce Omni-Diffusion, the first any-to-any multimodal language model built entirely on mask-based discrete diffusion models, which unifies understanding and generation across text, speech, and images. Omni-Diffusion employs a unifie...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06578v1" target="_blank">Multimodal Large Language Models as Image Classifiers</a></h3>
-            <p class="meta">📄 Nikita Kisel, Illia Volkov, Klara Janouskova</p>
-            <p class="abstract">Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results from weak multiple-choice distractors, and an open-world setting that underperforms only due to poor output mapping. We additionally quantify the impact of commonly overlooked design choices - batch size, image ordering, and text encoder selection - showing they substantially affect accuracy. Evalu...</p>
-        </div></div><div class="topic"><h2>新数据集</h2>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06512v1" target="_blank">SG-DOR: Learning Scene Graphs with Direction-Conditioned Occlusion Reasoning for Pepper Plants</a></h3>
-            <p class="meta">📄 Rohit Menon, Niklas Mueller-Goldingen, Sicong Pan</p>
-            <p class="abstract">Robotic harvesting in dense crop canopies requires effective interventions that depend not only on geometry, but also on explicit, direction-conditioned relations identifying which organs obstruct a target fruit. We present SG-DOR (Scene Graphs with Direction-Conditioned Occlusion Reasoning), a relational framework that, given instance-segmented organ point clouds, infers a scene graph encoding physical attachments and direction-conditioned occlusion. We introduce an occlusion ranking task for retrieving and ranking candidate leaves for a target fruit and approach direction, and propose a direction-aware graph neural architecture with per-fruit leaf-set attention and union-level aggregation. Experiments on a multi-plant synthetic pepper dataset show improved occlusion prediction (F1=0.73, ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06529v1" target="_blank">Towards Studying Superconductivity in the Fermi-Hubbard Model on Rydberg Atoms</a></h3>
-            <p class="meta">📄 Kübra Yeter-Aydeniz, Nora M. Bauer</p>
-            <p class="abstract">We present a method for calculating the ground state energy of the Fermi-Hubbard model leveraging Rydberg atom processors and sample-based quantum diagonalization (SQD). By exploiting the perturbative relationship between the Fermi-Hubbard and Heisenberg models, the procedure samples from the Heisenberg model as prepared on the Rydberg atom processor, and uses the samples to diagonalize the Fermi-Hubbard model for large U. We include anisotropy and next-nearest-neighbor interactions and discuss the relevant regime for quasi-superconductivity in the 1-dimensional Fermi- Hubbard model. Numerical and experimental results on the Aquila quantum processor are presented for ground state energy calculations as well as the chemical potential. We find that the Heisenberg model sampling in the studie...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06530v1" target="_blank">AV-Unified: A Unified Framework for Audio-visual Scene Understanding</a></h3>
-            <p class="meta">📄 Guangyao Li, Xin Wang, Wenwu Zhu</p>
-            <p class="abstract">When humans perceive the world, they naturally integrate multiple audio-visual tasks within dynamic, real-world scenes. However, current works such as event localization, parsing, segmentation and question answering are mostly explored individually, making it challenging to comprehensively understand complex audio-visual scenes and explore inter-task relationships. Hence, we propose \textbf{AV-Unified}, a unified framework that enables joint learning across a wide range of audio-visual scene understanding tasks. AV-Unified standardizes the diverse input-output formats of each task and incorporates a multi-scale spatiotemporal perception network to effectively capture audio-visual associations. Specifically, we unify the inputs and outputs of all supported tasks by converting them into sequ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06533v1" target="_blank">NEGATE: Constrained Semantic Guidance for Linguistic Negation in Text-to-Video Diffusion</a></h3>
-            <p class="meta">📄 Taewon Kang, Ming C. Lin</p>
-            <p class="abstract">Negation is a fundamental linguistic operator, yet it remains inadequately modeled in diffusion-based generative systems. In this work, we present a formal treatment of linguistic negation in diffusion-based generative models by modeling it as a structured feasibility constraint on semantic guidance within diffusion dynamics. Rather than introducing heuristics or retraining model parameters, we reinterpret classifier-free guidance as defining a semantic update direction and enforce negation by projecting the update onto a convex constraint set derived from linguistic structure. This novel formulation provides a unified framework for handling diverse negation phenomena, including object absence, graded non-inversion semantics, multi-negation composition, and scope-sensitive disambiguation. ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06538v1" target="_blank">Unified Learning of Temporal Task Structure and Action Timing for Bimanual Robot Manipulation</a></h3>
-            <p class="meta">📄 Christian Dreher, Patrick Dormanns, Andre Meixner</p>
-            <p class="abstract">Temporal task structure is fundamental for bimanual manipulation: a robot must not only know that one action precedes or overlaps another, but also when each action should occur and how long it should take. While symbolic temporal relations enable high-level reasoning about task structure and alternative execution sequences, concrete timing parameters are equally essential for coordinating two hands at the execution level. Existing approaches address these two levels in isolation, leaving a gap between high-level task planning and low-level movement synchronization. This work presents an approach for learning both symbolic and subsymbolic temporal task constraints from human demonstrations and deriving executable, temporally parametrized plans for bimanual manipulation. Our contributions a...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06543v1" target="_blank">SurgFormer: Scalable Learning of Organ Deformation with Resection Support and Real-Time Inference</a></h3>
-            <p class="meta">📄 Ashkan Shahbazi, Elaheh Akbari, Kyvia Pereira</p>
-            <p class="abstract">We introduce SurgFormer, a multiresolution gated transformer for data driven soft tissue simulation on volumetric meshes. High fidelity biomechanical solvers are often too costly for interactive use, so we train SurgFormer on solver generated data to predict nodewise displacement fields at near real time rates. SurgFormer builds a fixed mesh hierarchy and applies repeated multibranch blocks that combine local message passing, coarse global self attention, and pointwise feedforward updates, fused by learned per node, per channel gates to adaptively integrate local and long range information while remaining scalable on large meshes. For cut conditioned simulation, resection information is encoded as a learned cut embedding and provided as an additional input, enabling a unified model for bot...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06544v1" target="_blank">Modeling and Measuring Redundancy in Multisource Multimodal Data for Autonomous Driving</a></h3>
-            <p class="meta">📄 Yuhan Zhou, Mehri Sattari, Haihua Chen</p>
-            <p class="abstract">Next-generation autonomous vehicles (AVs) rely on large volumes of multisource and multimodal ($M^2$) data to support real-time decision-making. In practice, data quality (DQ) varies across sources and modalities due to environmental conditions and sensor limitations, yet AV research has largely prioritized algorithm design over DQ analysis. This work focuses on redundancy as a fundamental but underexplored DQ issue in AV datasets. Using the nuScenes and Argoverse 2 (AV2) datasets, we model and measure redundancy in multisource camera data and multimodal image-LiDAR data, and evaluate how removing redundant labels affects the YOLOv8 object detection task. Experimental results show that selectively removing redundant multisource image object labels from cameras with shared fields of view im...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06555v1" target="_blank">Hierarchical Industrial Demand Forecasting with Temporal and Uncertainty Explanations</a></h3>
-            <p class="meta">📄 Harshavardhan Kamarthi, Shangqing Xu, Xinjie Tong</p>
-            <p class="abstract">Hierarchical time-series forecasting is essential for demand prediction across various industries. While machine learning models have obtained significant accuracy and scalability on such forecasting tasks, the interpretability of their predictions, informed by application, is still largely unexplored. To bridge this gap, we introduce a novel interpretability method for large hierarchical probabilistic time-series forecasting, adapting generic interpretability techniques while addressing challenges associated with hierarchical structures and uncertainty. Our approach offers valuable interpretative insights in response to real-world industrial supply chain scenarios, including 1) the significance of various time-series within the hierarchy and external variables at specific time points, 2) ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06557v1" target="_blank">Causal Interpretation of Neural Network Computations with Contribution Decomposition</a></h3>
-            <p class="meta">📄 Joshua Brendan Melander, Zaki Alaoui, Shenghua Liu</p>
-            <p class="abstract">Understanding how neural networks transform inputs into outputs is crucial for interpreting and manipulating their behavior. Most existing approaches analyze internal representations by identifying hidden-layer activation patterns correlated with human-interpretable concepts. Here we take a direct approach to examine how hidden neurons act to drive network outputs. We introduce CODEC (Contribution Decomposition), a method that uses sparse autoencoders to decompose network behavior into sparse motifs of hidden-neuron contributions, revealing causal processes that cannot be determined by analyzing activations alone. Applying CODEC to benchmark image-classification networks, we find that contributions grow in sparsity and dimensionality across layers and, unexpectedly, that they progressively...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06561v1" target="_blank">EgoReasoner: Learning Egocentric 4D Reasoning via Task-Adaptive Structured Thinking</a></h3>
-            <p class="meta">📄 Fangrui Zhu, Yunfeng Xi, Jianmo Ni</p>
-            <p class="abstract">Egocentric video understanding is inherently complex due to the dynamic 4D nature of the environment, where camera motion and object displacements necessitate a continuous re-evaluation of spatial relations. In this work, we target a suite of under-explored egocentric 4D reasoning tasks, including fixture interaction counting, viewpoint-relative fixture location, object movement itinerary tracking, and stationary object localization, that require fundamentally different cognitive operations: spatial anchoring, temporal tracking, and duration reasoning. We observe that these structural differences make task-agnostic approaches insufficient: generic Chain-of-Thought methods lack task-appropriate reasoning primitives, and uniform reinforcement learning actively destabilizes performance on spa...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06569v1" target="_blank">Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders</a></h3>
-            <p class="meta">📄 Boqiang Zhang, Lei Ke, Ruihan Yang</p>
-            <p class="abstract">Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-E...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06570v1" target="_blank">SUREON: A Benchmark and Vision-Language-Model for Surgical Reasoning</a></h3>
-            <p class="meta">📄 Alejandra Perez, Anita Rau, Lee White</p>
-            <p class="abstract">Surgeons don't just see -- they interpret. When an expert observes a surgical scene, they understand not only what instrument is being used, but why it was chosen, what risk it poses, and what comes next. Current surgical AI cannot answer such questions, largely because training data that explicitly encodes surgical reasoning is immensely difficult to annotate at scale. Yet surgical video lectures already contain exactly this -- explanations of intent, rationale, and anticipation, narrated by experts for the purpose of teaching. Though inherently noisy and unstructured, these narrations encode the reasoning that surgical AI currently lacks. We introduce SUREON, a large-scale video QA dataset that systematically harvests this training signal from surgical academic videos. SUREON defines 12 ...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06573v1" target="_blank">Fly360: Omnidirectional Obstacle Avoidance within Drone View</a></h3>
-            <p class="meta">📄 Xiangkai Zhang, Dizhe Zhang, WenZhuo Cao</p>
-            <p class="abstract">Obstacle avoidance in unmanned aerial vehicles (UAVs), as a fundamental capability, has gained increasing attention with the growing focus on spatial intelligence. However, current obstacle-avoidance methods mainly depend on limited field-of-view sensors and are ill-suited for UAV scenarios which require full-spatial awareness when the movement direction differs from the UAV's heading. This limitation motivates us to explore omnidirectional obstacle avoidance for panoramic drones with full-view perception. We first study an under explored problem setting in which a UAV must generate collision-free motion in environments with obstacles from arbitrary directions, and then construct a benchmark that consists of three representative flight tasks. Based on such settings, we propose Fly360, a tw...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06577v1" target="_blank">Omni-Diffusion: Unified Multimodal Understanding and Generation with Masked Discrete Diffusion</a></h3>
-            <p class="meta">📄 Lijiang Li, Zuwei Long, Yunhang Shen</p>
-            <p class="abstract">While recent multimodal large language models (MLLMs) have made impressive strides, they predominantly employ a conventional autoregressive architecture as their backbone, leaving significant room to explore effective and efficient alternatives in architectural design. Concurrently, recent studies have successfully applied discrete diffusion models to various domains, such as visual understanding and image generation, revealing their considerable potential as a promising backbone for multimodal systems. Drawing inspiration from these pioneering research, we introduce Omni-Diffusion, the first any-to-any multimodal language model built entirely on mask-based discrete diffusion models, which unifies understanding and generation across text, speech, and images. Omni-Diffusion employs a unifie...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06578v1" target="_blank">Multimodal Large Language Models as Image Classifiers</a></h3>
-            <p class="meta">📄 Nikita Kisel, Illia Volkov, Klara Janouskova</p>
-            <p class="abstract">Multimodal Large Language Models (MLLM) classification performance depends critically on evaluation protocol and ground truth quality. Studies comparing MLLMs with supervised and vision-language models report conflicting conclusions, and we show these conflicts stem from protocols that either inflate or underestimate performance. Across the most common evaluation protocols, we identify and fix key issues: model outputs that fall outside the provided class list and are discarded, inflated results from weak multiple-choice distractors, and an open-world setting that underperforms only due to poor output mapping. We additionally quantify the impact of commonly overlooked design choices - batch size, image ordering, and text encoder selection - showing they substantially affect accuracy. Evalu...</p>
-        </div></div><div class="topic"><h2>多模态</h2>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06243v1" target="_blank">MLLMRec-R1: Incentivizing Reasoning Capability in Large Language Models for Multimodal Sequential Recommendation</a></h3>
-            <p class="meta">📄 Yu Wang, Yonghui Yang, Le Wu</p>
-            <p class="abstract">Group relative policy optimization (GRPO) has become a standard post-training paradigm for improving reasoning and preference alignment in large language models (LLMs), and has recently shown strong effectiveness in LLM-based recommender systems. However, extending GRPO-based reasoning pipelines to multimodal sequential recommendation (MSR) with multimodal large language models (MLLMs) faces fundamental obstacles. First, MSR requires jointly encoding visual content for both historical interactions and multiple candidate items, causing visual tokens to dominate the input and making the cost of group-based rollout scale with history length and candidate set size, which renders GRPO-based training prohibitively expensive. Second, existing Chain-of-Thought (CoT) supervision suffers from reward...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06290v1" target="_blank">The EpisTwin: A Knowledge Graph-Grounded Neuro-Symbolic Architecture for Personal AI</a></h3>
-            <p class="meta">📄 Giovanni Servedio, Potito Aghilar, Alessio Mattiace</p>
-            <p class="abstract">Personal Artificial Intelligence is currently hindered by the fragmentation of user data across isolated silos. While Retrieval-Augmented Generation offers a partial remedy, its reliance on unstructured vector similarity fails to capture the latent semantic topology and temporal dependencies essential for holistic sensemaking. We introduce EpisTwin, a neuro-symbolic framework that grounds generative reasoning in a verifiable, user-centric Personal Knowledge Graph. EpisTwin leverages Multimodal Language Models to lift heterogeneous, cross-application data into semantic triples. At inference, EpisTwin enables complex reasoning over the personal semantic graph via an agentic coordinator that combines Graph Retrieval-Augmented Generation with Online Deep Visual Refinement, dynamically re-groun...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06319v1" target="_blank">Learning to detect optical nonclassicality</a></h3>
-            <p class="meta">📄 Martina Jung, Suchitra Krishnaswamy, Timon Schapeler</p>
-            <p class="abstract">Nonclassicality, defined in the quantum optical sense, serves as a resource for photon-based quantum technologies. Therefore, certifying the nonclassicality of a quantum state is crucial for gauging its potential for quantum advantage. However, traditional nonclassicality witnesses that assume perfect knowledge of the witness observables often fail in realistic scenarios with limited statistics and finite-resolution photon detectors. Furthermore, these witnesses do not exploit the fact that certain states are unlikely to be observed in a given experiment. Here, we train a variational model to distinguish classical from nonclassical states using finitely many measurement samples of multimode quantum states that are probed with different photon-number-resolving detection schemes. The learned...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06373v1" target="_blank">Doctor or Patient? Synergizing Diarization and ASR for Code-Switched Hinglish Medical Conditions Extraction</a></h3>
-            <p class="meta">📄 Séverin Baroudi, Yanis Labrak, Shashi Kumar</p>
-            <p class="abstract">Extracting patient medical conditions from code-switched clinical spoken dialogues is challenging due to rapid turn-taking and highly overlapped speech. We present a robust system evaluated on the DISPLACE-M dataset of real-world Hinglish medical conversations. We propose an End-to-End Neural Diarization with Vector Clustering approach (EEND-VC) to accurately resolve dense and speaker overlaps in Doctor-Patient Conversations (DoPaCo). For transcription, we adapt a Qwen3 ASR model via domain-specific fine-tuning, Devanagari script normalization, and dialogue-level LLM error correction, achieving an 18.59% tcpWER. We benchmark open and proprietary LLMs on medical condition extraction, comparing our text-based cascade system against a multimodal End-to-End (E2E) audio framework. While proprie...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06403v1" target="_blank">Adapter-Augmented Bandits for Online Multi-Constrained Multi-Modal Inference Scheduling</a></h3>
-            <p class="meta">📄 Xianzhi Zhang, Yue Xu, Yinlin Zhu</p>
-            <p class="abstract">Multi-modal large language model (MLLM) inference scheduling enables strong response quality under practical and heterogeneous budgets, beyond what a homogeneous single-backend setting can offer. Yet online MLLM task scheduling is nontrivial, as requests vary sharply in modality composition and latent reasoning difficulty, while execution backends incur distinct, time-varying costs due to system jitter and network variation. These coupled uncertainties pose two core challenges: deriving semantically faithful yet scheduling-relevant multi-modal task representations, and making low-overhead online decisions over irreversible multi-dimensional budgets. Accordingly, we propose \emph{M-CMAB} (\underline{M}ulti-modal \underline{M}ulti-constraint \underline{C}ontextual \underline{M}ulti-\underlin...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06453v1" target="_blank">Pinterest Canvas: Large-Scale Image Generation at Pinterest</a></h3>
-            <p class="meta">📄 Yu Wang, Eric Tzeng, Raymond Shiau</p>
-            <p class="abstract">While recent image generation models demonstrate a remarkable ability to handle a wide variety of image generation tasks, this flexibility makes them hard to control via prompting or simple inference adaptation alone, rendering them unsuitable for use cases with strict product requirements. In this paper, we introduce Pinterest Canvas, our large-scale image generation system built to support image editing and enhancement use cases at Pinterest. Canvas is first trained on a diverse, multimodal dataset to produce a foundational diffusion model with broad image-editing capabilities. However, rather than relying on one generic model to handle every downstream task, we instead rapidly fine-tune variants of this base model on task-specific datasets, producing specialized models for individual us...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06480v1" target="_blank">History-Conditioned Spatio-Temporal Visual Token Pruning for Efficient Vision-Language Navigation</a></h3>
-            <p class="meta">📄 Qitong Wang, Yijun Liang, Ming Li</p>
-            <p class="abstract">Vision-Language Navigation (VLN) enables robots to follow natural-language instructions in visually grounded environments, serving as a key capability for embodied robotic systems. Recent Vision-Language-Action (VLA) models have demonstrated strong navigation performance, but their high computational cost introduces latency that limits real-time deployment. We propose a training-free spatio-temporal vision token pruning framework tailored to VLA-based VLN. We apply spatial token selection to the current view, alongside spatio-temporal compression for historical memories, enabling efficient long-horizon inference while reducing redundant computation. Leveraging attention-based token importance and query-guided spatio-temporal filtering, the proposed approach preserves navigation-relevant in...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06503v1" target="_blank">Beyond Rows to Reasoning: Agentic Retrieval for Multimodal Spreadsheet Understanding and Editing</a></h3>
-            <p class="meta">📄 Anmol Gulati, Sahil Sen, Waqar Sarguroh</p>
-            <p class="abstract">Recent advances in multimodal Retrieval-Augmented Generation (RAG) enable Large Language Models (LLMs) to analyze enterprise spreadsheet workbooks containing millions of cells, cross-sheet dependencies, and embedded visual artifacts. However, state-of-the-art approaches exclude critical context through single-pass retrieval, lose data resolution through compression, and exceed LLM context windows through naive full-context injection, preventing reliable multi-step reasoning over complex enterprise workbooks. We introduce Beyond Rows to Reasoning (BRTR), a multimodal agentic framework for spreadsheet understanding that replaces single-pass retrieval with an iterative tool-calling loop, supporting end-to-end Excel workflows from complex analysis to structured editing. Supported by over 200 h...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06508v1" target="_blank">When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models</a></h3>
-            <p class="meta">📄 Qitong Wang, Haoran Dai, Haotian Zhang</p>
-            <p class="abstract">While diffusion models have revolutionized visual content generation, their rapid adoption has underscored the critical need to investigate vulnerabilities, e.g., to backdoor attacks. In multimodal diffusion models, it is natural to expect that attacking multiple modalities simultaneously (e.g., text and image) would yield complementary effects and strengthen the overall backdoor. In this paper, we challenge this assumption by investigating the phenomenon of Backdoor Modality Collapse, a scenario where the backdoor mechanism degenerates to rely predominantly on a subset of modalities, rendering others redundant. To rigorously quantify this behavior, we introduce two novel metrics: Trigger Modality Attribution (TMA) and Cross-Trigger Interaction (CTI). Through extensive experiments across d...</p>
-        </div>
-        <div class="paper">
-            <h3><a href="http://arxiv.org/abs/2603.06525v1" target="_blank">Underactuated multimodal jumping robot for extraterrestrial exploration</a></h3>
-            <p class="meta">📄 Neil R. Wagner, Justin K. Yim</p>
-            <p class="abstract">We present a rolling and jumping underactuated monopedal robot designed to explore multimodal locomotion on low-gravity bodies. It uses only two reaction wheels to control its spatial orientation with two controllers: a balancing controller which can aim the robot's jump direction on the ground, and an aerial reorientation controller which can aim the robot's leg for landing after flight. We demonstrate rolling, targeted jumping and landing, and self-righting using only three actuators total, keeping system size to 0.33m and 1.25kg. Simple switching between locomotion modes enables the system to deal with differing landscapes and environmental conditions.</p>
-        </div></div>
-    <div class="footer">
-        <p>🦐 伊利虾 | 由 OpenClaw 驱动</p>
-    </div>
-</body>
-</html>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-11</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2><div class="paper">
+<h3>1. HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising<span class="title-cn">➡️ HiAR：通过分层去噪实现高效自回归长视频生成</span></h3>
+<p class="meta">👤 Kai Zou, Dian Zheng, Hongbo Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean conte...</p>
+<p class="abstract-cn">📄 自回归（AR）扩散为生成理论上无限长度的视频提供了一个有前途的框架。然而，一个主要挑战是保持时间连续性，同时防止错误累积引起的质量逐渐下降。为了确保连续性，现有方法通常以高度去噪的上下文为条件；然而，这种做法会以高确定性传播预测误差，从而加剧退化。在本文中，我们认为一个高度干净的故事...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08703v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Flash from the Past: New Gamma-Ray Constraints on Light CP-even Scalar from SN1987A<span class="title-cn">➡️ 过去的闪光：来自 SN1987A 的光 CP 偶标量的新伽马射线约束</span></h3>
+<p class="meta">👤 Yue Yu, Writasree Maitra, P. S. Bhupal Dev</p>
+<div class="abstract">
+<p class="abstract-en">📄 We derive new constraints on light CP-even scalars using old gamma-ray observations in the direction of SN1987A by the Solar Maximum Mission (SMM) satellite. Light scalars can be abundantly produced in the supernova core via the nucleon bremsstrahlung process, can stream out of the supernova-environment and decay into photons -- either primary photons or secondary photons from lepton-antilepton pairs -- thus leading to a gamma-ray signal. From the non-observation of excess photon flux by SMM aft...</p>
+<p class="abstract-cn">📄 我们利用太阳极大值任务 (SMM) 卫星对 SN1987A 方向的旧伽马射线观测得出了对光 CP 偶标量的新约束。光标量可以通过核子轫致辐射过程在超新星核心中大量产生，可以从超新星环境中流出并衰变成光子（初级光子或来自轻子-反轻子对的次级光子），从而产生伽马射线信号。来自SMM aft 未观察到的多余光子通量...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08695v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Understanding thermal and quantum fluctuations in extended Kitaev-Yao-Lee spin-orbital model<span class="title-cn">➡️ 了解扩展 Kitaev-Yao-Lee 自旋轨道模型中的热涨落和量子涨落</span></h3>
+<p class="meta">👤 Jiefu Cen, Hae-Young Kee</p>
+<div class="abstract">
+<p class="abstract-en">📄 Building upon the spin-1/2 Kitaev model on a honeycomb lattice, the Yao-Lee spin-orbital model provides exactly solvable quantum spin liquids with potentially better stability against perturbations due to the additional degree of freedom. Recently, the microscopic mechanism underlying the Yao-Lee interaction in honeycomb materials has been uncovered, leading to an extended Kitaev-Yao-Lee spin-orbital model when the celebrated Kugel-Khomskii interaction is included. Numerical studies of this mode...</p>
+<p class="abstract-cn">📄 Yao-Lee 自旋轨道模型以蜂窝晶格上的自旋 1/2 Kitaev 模型为基础，提供了完全可解的量子自旋液体，由于额外的自由度，该模型具有潜在的更好的抗扰动稳定性。最近，蜂窝材料中 Yao-Lee 相互作用的微观机制被揭示，当包括著名的 Kugel-Khomskii 相互作用时，产生了扩展的 Kitaev-Yao-Lee 自旋轨道模型。该模式的数值研究...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08710v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Improved Certificates for Independence Number in Semirandom Hypergraphs<span class="title-cn">➡️ 半随机超图中独立数的改进证书</span></h3>
+<p class="meta">👤 Pravesh Kothari, Anand Louis, Rameesh Paul</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study the problem of efficiently certifying upper bounds on the independence number of $\ell$-uniform hypergraphs. This is a notoriously hard problem, with efficient algorithms failing to approximate the independence number within $n^{1-ε}$ factor in the worst case [Has99, Zuc07]. We study the problem in random and semirandom hypergraphs.   There is a folklore reduction to the graph case, achieving a certifiable bound of $O(\sqrt{n/p})$. More recently, the work [GKM22] improved this by constr...</p>
+<p class="abstract-cn">📄 我们研究有效证明 $\ell$-均匀超图独立数上限的问题。这是一个众所周知的难题，在最坏的情况下，高效的算法无法近似 $n^{1-ε}$ 因子内的独立数 [Has99，Zuc07]。我们研究随机和半随机超图的问题。   民间传说对图的情况进行了简化，实现了 $O(\sqrt{n/p})$ 的可证明界限。最近，工作 [GKM22] 通过构造改进了这一点...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08693v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Four negations and the spectral presheaf<span class="title-cn">➡️ 四个否定和谱预束</span></h3>
+<p class="meta">👤 Benjamin Engel, Ryshard-Pavel Kostecki</p>
+<div class="abstract">
+<p class="abstract-en">📄 Using Vakarelov's theory of lattice logics with negation, we introduce the (co)quasiintuitionistic logic, and prove its soundness and completeness with respect to the class of (co)quasiintuitionistic algebras. Combining these algebras together, we obtain biquasiintuitionistic algebras and the corresponding logic. Their further extension with the Skolem algebra structure defines Akchurin algebras and the respective logic. Next we generalise the framework of spectral presheaves (which is a main ob...</p>
+<p class="abstract-cn">📄 利用瓦卡列洛夫的否定格逻辑理论，我们引入了（共）准直觉逻辑，并证明了它对于（共）准直觉代数类的合理性和完整性。将这些代数组合在一起，我们得到双拟直觉代数和相应的逻辑。它们对 Skolem 代数结构的进一步扩展定义了 Akchurin 代数和相应的逻辑。接下来我们概括一下谱预滑轮的框架（这是一个主要的目标）...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08699v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. A Multi-Objective Optimization Approach for Sustainable AI-Driven Entrepreneurship in Resilient Economies<span class="title-cn">➡️ 弹性经济中可持续AI驱动的创业的多目标优化方法</span></h3>
+<p class="meta">👤 Anas ALsobeh, Raneem Alkurdi</p>
+<div class="abstract">
+<p class="abstract-en">📄 The rapid advancement of artificial intelligence (AI) technologies presents both unprecedented opportunities and significant challenges for sustainable economic development. While AI offers transformative potential for addressing environmental challenges and enhancing economic resilience, its deployment often involves substantial energy consumption and environmental costs. This research introduces the EcoAI-Resilience framework, a multi-objective optimization approach designed to maximize the su...</p>
+<p class="abstract-cn">📄 人工智能（AI）技术的快速发展为可持续经济发展带来了前所未有的机遇和重大挑战。虽然 AI 为应对环境挑战和增强经济弹性提供了变革潜力，但其部署通常会涉及大量能源消耗和环境成本。本研究介绍了 EcoAI-Resilience 框架，这是一种多目标优化方法，旨在最大限度地提高...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08692v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Scalable Postselection of Quantum Resources<span class="title-cn">➡️ 量子资源的可扩展后选择</span></h3>
+<p class="meta">👤 J. Wilson Staples, Winston Fu, Jeff D. Thompson</p>
+<div class="abstract">
+<p class="abstract-en">📄 The large overhead imposed by quantum error correction is a critical challenge to the realization of quantum computers, and motivates searching for alternative error correcting codes and fault-tolerant circuit constructions. Postselection is a powerful tool that builds large programs out of probabilistically generated sub-circuits, and has been shown to increase the threshold of quantum error correction based on fusing fixed-size resource states or concatenated codes. In this work, we present an...</p>
+<p class="abstract-cn">📄 量子纠错带来的巨大开销是实现量子计算机的一个关键挑战，并促使人们寻找替代的纠错码和容错电路结构。 Postselection 是一种强大的工具，可以从概率生成的子电路中构建大型程序，并且已被证明可以提高基于融合固定大小资源状态或级联代码的量子纠错阈值。在这项工作中，我们提出了一个...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08697v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Agentic Critical Training<span class="title-cn">➡️ 代理关键培训</span></h3>
+<p class="meta">👤 Weize Liu, Minghui Liu, Sy-Tuyen Ho</p>
+<div class="abstract">
+<p class="abstract-en">📄 Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: t...</p>
+<p class="abstract-cn">📄 将大型语言模型（LLMs）训练为自主代理通常从模仿学习开始，但它只教代理做什么而不理解为什么：代理从不将成功的行动与次优的替代方案进行比较，因此缺乏对行动质量的认识。最近的方法试图通过引入来自专家行动和替代行动之间对比的自我反思监督来解决这个问题。然而，训练范式从根本上仍然是模仿学习：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08706v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines<span class="title-cn">➡️ 评估大型语言模型中的金融智能：使用 LLM 引擎对 SuperInvesting AI 进行基准测试</span></h3>
+<p class="meta">👤 Akshay Gulati, Kanha Singhania, Tushar Banga</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, ...</p>
+<p class="abstract-cn">📄 大型语言模型越来越多地用于金融分析和投资研究，但对其金融推理能力的系统评估仍然有限。在这项工作中，我们引入了AI金融情报基准（AFIB），这是一个多维度的评估框架，旨在跨五个维度评估财务分析能力：事实准确性、分析完整性、数据新近度、模型一致性和失败模式。我们评估了五个 AI 系统：GPT、...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08704v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Learning Functions of Halfspaces<span class="title-cn">➡️ 半空间的学习函数</span></h3>
+<p class="meta">👤 Josh Alman, Shyamal Patel, Rocco A. Servedio</p>
+<div class="abstract">
+<p class="abstract-en">📄 We give an algorithm that learns arbitrary Boolean functions of $k$ arbitrary halfspaces over $\mathbb{R}^n$, in the challenging distribution-free Probably Approximately Correct (PAC) learning model, running in time $2^{\sqrt{n} \cdot (\log n)^{O(k)}}$. This is the first algorithm that can PAC learn even intersections of two halfspaces in time $2^{o(n)}.$...</p>
+<p class="abstract-cn">📄 我们给出了一种算法，该算法可以在具有挑战性的无分布近似正确（PAC）学习模型中学习 $\mathbb{R}^n$ 上 $k$ 任意半空间的任意布尔函数，运行时间为 $2^{\sqrt{n} \cdot (\log n)^{O(k)}}$。这是第一个可以 PAC 及时学习两个半空间的交集的算法 $2^{o(n)}.$...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08700v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🖼️ 计算机视觉</h2><div class="paper">
+<h3>1. Predicting Conflict Impact on Performance in O-RAN<span class="title-cn">➡️ 预测冲突对 O-RAN 性能的影响</span></h3>
+<p class="meta">👤 Pietro Brach del Prever, Niloofar Mohamadi, Salvat</p>
+<div class="abstract">
+<p class="abstract-en">📄 The O-RAN Alliance promotes the integration of intelligent autonomous agents to control the Radio Access Network (RAN). This improves flexibility, performance, and observability in the RAN, but introduces new challenges, such as the detection and management of conflicts among the intelligent autonomous agents. A solution consists of profiling the agents before deployment to gather statistical information about their decision-making behavior, then using the information to estimate the level of co...</p>
+<p class="abstract-cn">📄 O-RAN 联盟促进智能自治代理的集成以控制无线接入网络 (RAN)。这提高了 RAN 的灵活性、性能和可观察性，但也带来了新的挑战，例如智能自治代理之间冲突的检测和管理。解决方案包括在部署之前对代理进行分析，以收集有关其决策行为的统计信息，然后使用该信息来估计合作水平...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08685v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Nonlinear Mode Coupling in Silicon Nitride Membrane Resonators<span class="title-cn">➡️ 氮化硅膜谐振器中的非线性模式耦合</span></h3>
+<p class="meta">👤 Soumya Kanti Das, Nishta Arora, Hridhay A S</p>
+<div class="abstract">
+<p class="abstract-en">📄 Nonlinear interactions between vibrational modes play a crucial role in understanding the dynamical response of nanomechanical resonators. Here, we report the experimental observation and theoretical modeling of nonlinear mode coupling in a high-stress square silicon nitride membrane resonator. We quantify frequency shifts of the fundamental mode arising from tension-mediated geometric nonlinearity by increasing the amplitude of the fundamental mode and higher-order flexural modes. A quantitativ...</p>
+<p class="abstract-cn">📄 振动模式之间的非线性相互作用在理解纳米机械谐振器的动态响应方面发挥着至关重要的作用。在这里，我们报告了高应力方形氮化硅膜谐振器中非线性模式耦合的实验观察和理论建模。我们通过增加基本模式和高阶弯曲模式的振幅来量化由张力介导的几何非线性引起的基本模式的频移。定量的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08689v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. A note on approximating the average degree of bounded arboricity graphs<span class="title-cn">➡️ 关于近似有界树状图平均度的注解</span></h3>
+<p class="meta">👤 Talya Eden, C. Seshadhri</p>
+<div class="abstract">
+<p class="abstract-en">📄 Estimating the average degree of graph is a classic problem in sublinear graph algorithm. Eden, Ron, and Seshadhri (ICALP 2017, SIDMA 2019) gave a simple algorithm for this problem whose running time depended on the graph arboricity, but the underlying simplicity and associated analysis were buried inside the main result. Moreover, the description there loses logarithmic factors because of parameter search. The aim of this note is to give a full presentation of this algorithm, without these loss...</p>
+<p class="abstract-cn">📄 估计图的平均度是次线性图算法中的一个经典问题。 Eden、Ron 和 Seshadhri（ICALP 2017、SIDMA 2019）针对这个问题给出了一个简单的算法，其运行时间取决于图的树木性，但底层的简单性和相关分析隐藏在主要结果中。此外，那里的描述由于参数搜索而丢失了对数因子。本笔记的目的是完整地介绍该算法，而不会造成这些损失...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08694v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Agentic Critical Training<span class="title-cn">➡️ 代理关键培训</span></h3>
+<p class="meta">👤 Weize Liu, Minghui Liu, Sy-Tuyen Ho</p>
+<div class="abstract">
+<p class="abstract-en">📄 Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: t...</p>
+<p class="abstract-cn">📄 将大型语言模型（LLMs）训练为自主代理通常从模仿学习开始，但它只教代理做什么而不理解为什么：代理从不将成功的行动与次优的替代方案进行比较，因此缺乏对行动质量的认识。最近的方法试图通过引入来自专家行动和替代行动之间对比的自我反思监督来解决这个问题。然而，训练范式从根本上仍然是模仿学习：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08706v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising<span class="title-cn">➡️ HiAR：通过分层去噪实现高效自回归长视频生成</span></h3>
+<p class="meta">👤 Kai Zou, Dian Zheng, Hongbo Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean conte...</p>
+<p class="abstract-cn">📄 自回归（AR）扩散为生成理论上无限长度的视频提供了一个有前途的框架。然而，一个主要挑战是保持时间连续性，同时防止错误累积引起的质量逐渐下降。为了确保连续性，现有方法通常以高度去噪的上下文为条件；然而，这种做法会以高确定性传播预测误差，从而加剧退化。在本文中，我们认为一个高度干净的故事...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08703v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Improved Certificates for Independence Number in Semirandom Hypergraphs<span class="title-cn">➡️ 半随机超图中独立数的改进证书</span></h3>
+<p class="meta">👤 Pravesh Kothari, Anand Louis, Rameesh Paul</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study the problem of efficiently certifying upper bounds on the independence number of $\ell$-uniform hypergraphs. This is a notoriously hard problem, with efficient algorithms failing to approximate the independence number within $n^{1-ε}$ factor in the worst case [Has99, Zuc07]. We study the problem in random and semirandom hypergraphs.   There is a folklore reduction to the graph case, achieving a certifiable bound of $O(\sqrt{n/p})$. More recently, the work [GKM22] improved this by constr...</p>
+<p class="abstract-cn">📄 我们研究有效证明 $\ell$-均匀超图独立数上限的问题。这是一个众所周知的难题，在最坏的情况下，高效的算法无法近似 $n^{1-ε}$ 因子内的独立数 [Has99，Zuc07]。我们研究随机和半随机超图的问题。   民间传说对图的情况进行了简化，实现了 $O(\sqrt{n/p})$ 的可证明界限。最近，工作 [GKM22] 通过构造改进了这一点...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08693v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines<span class="title-cn">➡️ 评估大型语言模型中的金融智能：使用 LLM 引擎对 SuperInvesting AI 进行基准测试</span></h3>
+<p class="meta">👤 Akshay Gulati, Kanha Singhania, Tushar Banga</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, ...</p>
+<p class="abstract-cn">📄 大型语言模型越来越多地用于金融分析和投资研究，但对其金融推理能力的系统评估仍然有限。在这项工作中，我们引入了AI金融情报基准（AFIB），这是一个多维度的评估框架，旨在跨五个维度评估财务分析能力：事实准确性、分析完整性、数据新近度、模型一致性和失败模式。我们评估了五个 AI 系统：GPT、...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08704v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training<span class="title-cn">➡️ 分体式联邦学习架构，实现高精度、低延迟模型训练</span></h3>
+<p class="meta">👤 Yiannis Papageorgiou, Yannis Thomas, Ramin Khalili</p>
+<div class="abstract">
+<p class="abstract-en">📄 Can we find a network architecture for ML model training so as to optimize training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can this architecture also reduce training delay and communication overhead? While accuracy is not influenced by how we split the model in ordinary, state-of-the-art SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical SFL (HSFL) architectures adopt a three-tier training structure consisting of clients, (local) agg...</p>
+<p class="abstract-cn">📄 我们能否找到一种用于 ML 模型训练的网络架构，以优化分割联邦学习（SFL）中的训练损失（从而优化准确性）？而且这种架构还能减少训练延迟和通信开销吗？虽然准确性不受我们如何在普通、最先进的 SFL 中分割模型的影响，但在这项工作中，我们对上述问题的回答是肯定的。最近的分层 SFL (HSFL) 架构采用三层训练结构，包括客户端、（本地）聚合...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08687v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Scalable Postselection of Quantum Resources<span class="title-cn">➡️ 量子资源的可扩展后选择</span></h3>
+<p class="meta">👤 J. Wilson Staples, Winston Fu, Jeff D. Thompson</p>
+<div class="abstract">
+<p class="abstract-en">📄 The large overhead imposed by quantum error correction is a critical challenge to the realization of quantum computers, and motivates searching for alternative error correcting codes and fault-tolerant circuit constructions. Postselection is a powerful tool that builds large programs out of probabilistically generated sub-circuits, and has been shown to increase the threshold of quantum error correction based on fusing fixed-size resource states or concatenated codes. In this work, we present an...</p>
+<p class="abstract-cn">📄 量子纠错带来的巨大开销是实现量子计算机的一个关键挑战，并促使人们寻找替代的纠错码和容错电路结构。 Postselection 是一种强大的工具，可以从概率生成的子电路中构建大型程序，并且已被证明可以提高基于融合固定大小资源状态或级联代码的量子纠错阈值。在这项工作中，我们提出了一个...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08697v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting<span class="title-cn">➡️ 无常：时间序列预测中时间泛化的实时基准</span></h3>
+<p class="meta">👤 Azul Garza, Renée Rosillo, Rodrigo Mendoza-Smith</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluate...</p>
+<p class="abstract-cn">📄 时间序列预测的最新进展越来越依赖于预先训练的基础型模型。虽然这些模型通常声称具有广泛的普遍性，但现有的评估协议提供的证据有限。事实上，当前大多数基准测试都使用静态训练-测试分割，这很容易导致污染，因为基础模型可能会无意中训练测试数据或使用测试分数执行模型选择，这可能会夸大性能。我们推出了 Impermanent，一个实时基准测试，用于评估...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08707v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎨 多模态学习</h2><div class="paper">
+<h3>1. Visual Self-Fulfilling Alignment: Shaping Safety-Oriented Personas via Threat-Related Images<span class="title-cn">➡️ 视觉自我实现对齐：通过威胁相关图像塑造安全导向的角色</span></h3>
+<p class="meta">👤 Qishun Yang, Shu Yang, Lijie Hu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal large language models (MLLMs) face safety misalignment, where visual inputs enable harmful outputs. To address this, existing methods require explicit safety labels or contrastive data; yet, threat-related concepts are concrete and visually depictable, while safety concepts, like helpfulness, are abstract and lack visual referents. Inspired by the Self-Fulfilling mechanism underlying emergent misalignment, we propose Visual Self-Fulfilling Alignment (VSFA). VSFA fine-tunes vision-lang...</p>
+<p class="abstract-cn">📄 多模态大语言模型 (MLLMs) 面临安全错位，视觉输入会导致有害输出。为了解决这个问题，现有的方法需要明确的安全标签或对比数据；然而，与威胁相关的概念是具体的并且可以直观地描述，而安全概念（例如帮助）是抽象的并且缺乏视觉参考。受到紧急错位背后的自我实现机制的启发，我们提出了视觉自我实现对齐（VSFA）。 VSFA 微调 Vision-lang...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08486v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation<span class="title-cn">➡️ CoCo：代码为 CoT，用于文本到图像预览和稀有概念生成</span></h3>
+<p class="meta">👤 Haodong Li, Chunmei Qing, Huanyu Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the ...</p>
+<p class="abstract-cn">📄 统一多模态模型 (UMM) 的最新进展显着推进了文本到图像 (T2I) 的生成，特别是通过思想链 (CoT) 推理的集成。然而，现有的基于 CoT 的 T2I 方法很大程度上依赖于抽象的自然语言规划，缺乏复杂空间布局、结构化视觉元素和密集文本内容所需的精度。在这项工作中，我们提出了 CoCo (Code-as-CoT)，一个代码驱动的推理框架，代表...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08652v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Do Models See in Line with Human Vision? Probing the Correspondence Between LVLM Representations and EEG Signals<span class="title-cn">➡️ 模型看到的东西与人类视觉一致吗？探讨 LVLM 表示与 EEG 信号之间的对应关系</span></h3>
+<p class="meta">👤 Xin Xiao, Yang Lei, Haoyang Zeng</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large Vision Language Models (LVLMs) exhibit strong visual understanding and reasoning abilities. However, whether their internal representations reflect human visual cognition is still under-explored. In this paper, we address this by quantifying LVLM-brain alignment using image-evoked Electroencephalogram (EEG) signals, analyzing the effects of model architecture, scale, and image type. Specifically, by using ridge regression and representational similarity analysis, we compare visual represen...</p>
+<p class="abstract-cn">📄 大视觉语言模型（LVLM）表现出强大的视觉理解和推理能力。然而，它们的内部表征是否反映了人类的视觉认知仍有待探索。在本文中，我们通过使用图像诱发脑电图 (EEG) 信号量化 LVLM-大脑对齐，分析模型架构、规模和图像类型的影响来解决这个问题。具体来说，通过使用岭回归和表征相似性分析，我们比较了视觉表征...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08303v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Learning Multiple Utterance-Level Attribute Representations with a Unified Speech Encoder<span class="title-cn">➡️ 使用统一语音编码器学习多个话语级属性表示</span></h3>
+<p class="meta">👤 Maryem Bouziane, Salima Mdhaffar, Yannick Estève</p>
+<div class="abstract">
+<p class="abstract-en">📄 Speech foundation models trained with self-supervised learning produce generic speech representations that support a wide range of speech processing tasks. When further adapted with supervised learning, these models can achieve strong performance on specific downstream tasks. Recent post-training approaches, such as SAMU-XSLR and SONAR, align speech representations with utterance-level semantic representations, enabling effective multimodal (speech-text) and multilingual applications. While spee...</p>
+<p class="abstract-cn">📄 通过自监督学习训练的语音基础模型可生成支持各种语音处理任务的通用语音表示。当进一步适应监督学习时，这些模型可以在特定的下游任务上取得出色的性能。最近的训练后方法（例如 SAMU-XSLR 和 SONAR）将语音表示与话语级语义表示结合起来，从而实现有效的多模式（语音文本）和多语言应用。当速度...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08312v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Rectified flow-based prediction of post-treatment brain MRI from pre-radiotherapy priors for patients with glioma<span class="title-cn">➡️ 根据神经胶质瘤患者放疗前的情况对治疗后脑部 MRI 进行基于血流的修正预测</span></h3>
+<p class="meta">👤 Selena Huisman, Nordin Belkacemi, Vera Keil</p>
+<div class="abstract">
+<p class="abstract-en">📄 Purpose/Objective: Brain tumors result in 20 years of lost life on average. Standard therapies induce complex structural changes in the brain that are monitored through MRI. Recent developments in artificial intelligence (AI) enable conditional multimodal image generation from clinical data. In this study, we investigate AI-driven generation of follow-up MRI in patients with in- tracranial tumors through conditional image generation. This approach enables realistic modeling of post-radiotherapy ...</p>
+<p class="abstract-cn">📄 目的/目标：脑肿瘤平均导致 20 年死亡。标准疗法会引起大脑中复杂的结构变化，并通过 MRI 进行监测。人工智能 (AI) 的最新发展使得能够根据临床数据生成条件多模态图像。在这项研究中，我们通过条件图像生成研究了 AI 驱动的颅内肿瘤患者随访 MRI 的生成。这种方法可以实现放射治疗后的真实建模...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08385v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Boosting MLLM Spatial Reasoning with Geometrically Referenced 3D Scene Representations<span class="title-cn">➡️ 使用几何参考 3D 场景表示增强 MLLM 空间推理</span></h3>
+<p class="meta">👤 Jiangye Yuan, Gowri Kumar, Baoyuan Wang</p>
+<div class="abstract">
+<p class="abstract-en">📄 While Multimodal Large Language Models (MLLMs) have achieved remarkable success in 2D visual understanding, their ability to reason about 3D space remains limited. To address this gap, we introduce geometrically referenced 3D scene representations (GR3D). Given a set of input images, GR3D annotates objects in the images with unique IDs and encodes their 3D geometric attributes as textual references indexed by these IDs. This representation enables MLLMs to interpret 3D cues using their advanced ...</p>
+<p class="abstract-cn">📄 虽然多模态大语言模型 (MLLMs) 在 2D 视觉理解方面取得了显着的成功，但它们推理 3D 空间的能力仍然有限。为了解决这一差距，我们引入了几何参考 3D 场景表示 (GR3D)。给定一组输入图像，GR3D 使用唯一 ID 注释图像中的对象，并将其 3D 几何属性编码为由这些 ID 索引的文本引用。这种表示方式使 MLLMs 能够使用其先进的技术来解释 3D 提示...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08592v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. M$^3$-ACE: Rectifying Visual Perception in Multimodal Math Reasoning via Multi-Agentic Context Engineering<span class="title-cn">➡️ M$^3$-ACE：通过多代理上下文工程纠正多模态数学推理中的视觉感知</span></h3>
+<p class="meta">👤 Peijin Xie, Zhen Xu, Bingquan Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal large language models have recently shown promising progress in visual mathematical reasoning. However, their performance is often limited by a critical yet underexplored bottleneck: inaccurate visual perception. Through systematic analysis, we find that the most failures originate from incorrect or incomplete visual evidence extraction rather than deficiencies in reasoning capability. Moreover, models tend to remain overly confident in their initial perceptions, making standard strat...</p>
+<p class="abstract-cn">📄 多模态大语言模型最近在视觉数学推理方面取得了可喜的进展。然而，它们的性能往往受到一个关键但尚未充分探索的瓶颈的限制：不准确的视觉感知。通过系统分析，我们发现大多数失败源于不正确或不完整的视觉证据提取，而不是推理能力的缺陷。此外，模型往往对其最初的看法过于自信，从而使标准策略...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08369v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Echo2ECG: Enhancing ECG Representations with Cardiac Morphology from Multi-View Echos<span class="title-cn">➡️ Echo2ECG：通过多视图回波的心脏形态学增强心电图表征</span></h3>
+<p class="meta">👤 Michelle Espranita Liman, Özgün Turgut, Alexander </p>
+<div class="abstract">
+<p class="abstract-en">📄 Electrocardiography (ECG) is a low-cost, widely used modality for diagnosing electrical abnormalities like atrial fibrillation by capturing the heart's electrical activity. However, it cannot directly measure cardiac morphological phenotypes, such as left ventricular ejection fraction (LVEF), which typically require echocardiography (Echo). Predicting these phenotypes from ECG would enable early, accessible health screening. Existing self-supervised methods suffer from a representational mismatc...</p>
+<p class="abstract-cn">📄 心电图 (ECG) 是一种低成本、广泛使用的方法，通过捕获心脏的电活动来诊断心房颤动等电异常。然而，它不能直接测量心脏形态表型，例如左心室射血分数（LVEF），这通常需要超声心动图（Echo）。通过心电图预测这些表型将使早期、可及的健康筛查成为可能。现有的自我监督方法存在代表性不匹配的问题...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08505v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. X-AVDT: Audio-Visual Cross-Attention for Robust Deepfake Detection<span class="title-cn">➡️ X-AVDT：用于稳健的 Deepfake 检测的视听交叉注意力</span></h3>
+<p class="meta">👤 Youngseo Kim, Kwan Yun, Seokhyeon Hong</p>
+<div class="abstract">
+<p class="abstract-en">📄 The surge of highly realistic synthetic videos produced by contemporary generative systems has significantly increased the risk of malicious use, challenging both humans and existing detectors. Against this backdrop, we take a generator-side view and observe that internal cross-attention mechanisms in these models encode fine-grained speech-motion alignment, offering useful correspondence cues for forgery detection. Building on this insight, we propose X-AVDT, a robust and generalizable deepfake...</p>
+<p class="abstract-cn">📄 当代生成系统产生的高度逼真的合成视频的激增大大增加了恶意使用的风险，对人类和现有的检测器都提出了挑战。在此背景下，我们从生成器端的角度观察，观察到这些模型中的内部交叉注意机制编码细粒度的语音运动对齐，为伪造检测提供有用的对应线索。基于这一见解，我们提出了 X-AVDT，一种强大且可推广的深度伪造...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08483v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Data-Driven Priors for Uncertainty-Aware Deterioration Risk Prediction with Multimodal Data<span class="title-cn">➡️ 利用多模态数据进行不确定性恶化风险预测的数据驱动先验</span></h3>
+<p class="meta">👤 L. Julián Lechuga López, Tim G. J. Rudner, Farah E</p>
+<div class="abstract">
+<p class="abstract-en">📄 Safe predictions are a crucial requirement for integrating predictive models into clinical decision support systems. One approach for ensuring trustworthiness is to enable models' ability to express their uncertainty about individual predictions. However, current machine learning models frequently lack reliable uncertainty estimation, hindering real-world deployment. This is further observed in multimodal settings, where the goal is to enable effective information fusion. In this work, we propos...</p>
+<p class="abstract-cn">📄 安全预测是将预测模型集成到临床决策支持系统的关键要求。确保可信度的一种方法是使模型能够表达其对个体预测的不确定性。然而，当前的机器学习模型经常缺乏可靠的不确定性估计，阻碍了现实世界的部署。在多模式环境中可以进一步观察到这一点，其目标是实现有效的信息融合。在这项工作中，我们建议...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08459v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📊 新数据集</h2><div class="paper">
+<h3>1. Metriq: A Collaborative Platform for Benchmarking Quantum Computers<span class="title-cn">➡️ Metriq：量子计算机基准测试协作平台</span></h3>
+<p class="meta">👤 Alessandro Cosentino, Changhao Li, Vincent Russo</p>
+<div class="abstract">
+<p class="abstract-en">📄 The fragmented landscape of quantum computer benchmarks, characterized by system-specific tools and inconsistent evaluation methodologies, hinders reliable cross-platform performance assessment. We introduce Metriq, an open-source collaborative platform for reproducible cross-platform quantum benchmarking that integrates benchmark definition and execution, data collection, and public presentation into a unified workflow. The Metriq benchmark suite spans both system-level metrics that characteriz...</p>
+<p class="abstract-cn">📄 量子计算机基准的分散格局，以系统特定工具和不一致的评估方法为特征，阻碍了可靠的跨平台性能评估。我们推出 Metriq，这是一个用于可重复的跨平台量子基准测试的开源协作平台，它将基准定义和执行、数据收集和公开演示集成到统一的工作流程中。 Metriq 基准测试套件涵盖了表征...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08680v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio<span class="title-cn">➡️ 全保真音频无损压缩的基准语言模型</span></h3>
+<p class="meta">👤 Phillip Long, Zachary Novack, Chris Donahue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive "language" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable a...</p>
+<p class="abstract-cn">📄 在原始波形上训练的自回归“语言”模型 (LM) 可以重新用于无损音频压缩，但之前的工作仅限于 8 位音频，因此此类方法是否适用于实际设置（16/24 位）以及是否可以与现有编解码器竞争尚不确定。我们对跨不同领域（音乐、语音、生物声学）、采样率（16kHz-48kHz）和位深度（8、16、24 位）的全保真音频的基于 LM 的压缩进行基准测试。标准样本级标记化变得棘手...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08683v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. How Far Can Unsupervised RLVR Scale LLM Training?<span class="title-cn">➡️ 无监督 RLVR 规模 LLM 训练能达到多远？</span></h3>
+<p class="meta">👤 Bingxiang He, Yuxin Zuo, Zeyuan Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model intrinsic signals, showing promising early gains, yet their potential and limitations remain unclear. In this work, we revisit URLVR and provide a comprehensive analysis spanning taxonomy, theory and extensive experiments. We first classify URLVR methods into intrinsic versus exter...</p>
+<p class="abstract-cn">📄 具有可验证奖励的无监督强化学习 (URLVR) 提供了一种通过在没有真实标签的情况下获得奖励来扩展 LLM 训练超越监督瓶颈的途径。最近的工作利用模型内在信号，显示出有希望的早期成果，但其潜力和局限性仍不清楚。在这项工作中，我们重新审视 URLVR 并提供涵盖分类、理论和广泛实验的全面分析。我们首先将 URLVR 方法分为内部方法和外部方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08660v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. CoCo: Code as CoT for Text-to-Image Preview and Rare Concept Generation<span class="title-cn">➡️ CoCo：代码为 CoT，用于文本到图像预览和稀有概念生成</span></h3>
+<p class="meta">👤 Haodong Li, Chunmei Qing, Huanyu Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advancements in Unified Multimodal Models (UMMs) have significantly advanced text-to-image (T2I) generation, particularly through the integration of Chain-of-Thought (CoT) reasoning. However, existing CoT-based T2I methods largely rely on abstract natural-language planning, which lacks the precision required for complex spatial layouts, structured visual elements, and dense textual content. In this work, we propose CoCo (Code-as-CoT), a code-driven reasoning framework that represents the ...</p>
+<p class="abstract-cn">📄 统一多模态模型 (UMM) 的最新进展显着推进了文本到图像 (T2I) 的生成，特别是通过思想链 (CoT) 推理的集成。然而，现有的基于 CoT 的 T2I 方法很大程度上依赖于抽象的自然语言规划，缺乏复杂空间布局、结构化视觉元素和密集文本内容所需的精度。在这项工作中，我们提出了 CoCo (Code-as-CoT)，一个代码驱动的推理框架，代表...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08652v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. A New Lower Bound for the Random Offerer Mechanism in Bilateral Trade using AI-Guided Evolutionary Search<span class="title-cn">➡️ 使用 AI 引导进化搜索的双边贸易随机报价机制的新下界</span></h3>
+<p class="meta">👤 Yang Cai, Vineet Gupta, Zun Li</p>
+<div class="abstract">
+<p class="abstract-en">📄 The celebrated Myerson--Satterthwaite theorem shows that in bilateral trade, no mechanism can be simultaneously fully efficient, Bayesian incentive compatible (BIC), and budget balanced (BB). This naturally raises the question of how closely the gains from trade (GFT) achievable by a BIC and BB mechanism can approximate the first-best (fully efficient) benchmark. The optimal BIC and BB mechanism is typically complex and highly distribution-dependent, making it difficult to characterize directly....</p>
+<p class="abstract-cn">📄 著名的迈尔森-萨特思韦特定理表明，在双边贸易中，没有任何机制能够同时完全有效、贝叶斯激励兼容（BIC）和预算平衡（BB）。这自然提出了一个问题：BIC 和 BB 机制可实现的贸易收益 (GFT) 与第一最佳（完全有效）基准的接近程度如何。最佳 BIC 和 BB 机制通常很复杂并且高度依赖于分布，因此很难直接表征。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08679v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Agentic Critical Training<span class="title-cn">➡️ 代理关键培训</span></h3>
+<p class="meta">👤 Weize Liu, Minghui Liu, Sy-Tuyen Ho</p>
+<div class="abstract">
+<p class="abstract-en">📄 Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: t...</p>
+<p class="abstract-cn">📄 将大型语言模型（LLMs）训练为自主代理通常从模仿学习开始，但它只教代理做什么而不理解为什么：代理从不将成功的行动与次优的替代方案进行比较，因此缺乏对行动质量的认识。最近的方法试图通过引入来自专家行动和替代行动之间对比的自我反思监督来解决这个问题。然而，训练范式从根本上仍然是模仿学习：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08706v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Characterization and upgrade of a quantum graph neural network for charged particle tracking<span class="title-cn">➡️ 用于带电粒子跟踪的量子图神经网络的表征和升级</span></h3>
+<p class="meta">👤 Matteo Argenton, Laura Cappelli, Concezio Bozzi</p>
+<div class="abstract">
+<p class="abstract-en">📄 In the forthcoming years the LHC experiments are going to be upgraded to benefit from the substantial increase of the LHC instantaneous luminosity, which will lead to larger, denser events, and, consequently, greater complexity in reconstructing charged particle tracks, motivating frontier research in new technologies. Quantum machine learning models are being investigated as potential new approaches to high energy physics (HEP) tasks. We characterize and upgrade a quantum graph neural network (...</p>
+<p class="abstract-cn">📄 未来几年，大型强子对撞机实验将进行升级，以受益于大型强子对撞机瞬时光度的大幅增加，这将导致更大、更密集的事件，从而使重建带电粒子轨迹变得更加复杂，从而激发新技术的前沿研究。量子机器学习模型正在被研究作为高能物理（HEP）任务的潜在新方法。我们表征并升级了量子图神经网络（...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08667v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. FVG-PT: Adaptive Foreground View-Guided Prompt Tuning for Vision-Language Models<span class="title-cn">➡️ FVG-PT：视觉语言模型的自适应前景视图引导提示调整</span></h3>
+<p class="meta">👤 Haoyang Li, Liang Wang, Siyu Zhou</p>
+<div class="abstract">
+<p class="abstract-en">📄 CLIP-based prompt tuning enables pretrained Vision-Language Models (VLMs) to efficiently adapt to downstream tasks. Although existing studies have made significant progress, they pay limited attention to changes in the internal attention representations of VLMs during the tuning process. In this paper, we attribute the failure modes of prompt tuning predictions to shifts in foreground attention of the visual encoder, and propose Foreground View-Guided Prompt Tuning (FVG-PT), an adaptive plug-and...</p>
+<p class="abstract-cn">📄 基于 CLIP 的提示调整使预训练的视觉语言模型 (VLM) 能够有效地适应下游任务。尽管现有研究取得了重大进展，但他们对调优过程中 VLM 内部注意力表示变化的关注有限。在本文中，我们将提示调整预测的失败模式归因于视觉编码器前景注意力的转移，并提出了前景视图引导提示调整（FVG-PT），这是一种自适应即插即用的方法。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08708v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. ImprovedGS+: A High-Performance C++/CUDA Re-Implementation Strategy for 3D Gaussian Splatting<span class="title-cn">➡️ 改进的 GS+：3D 高斯泼溅的高性能 C++/CUDA 重新实现策略</span></h3>
+<p class="meta">👤 Jordi Muñoz Vicente</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advancements in 3D Gaussian Splatting (3DGS) have shifted the focus toward balancing reconstruction fidelity with computational efficiency. In this work, we propose ImprovedGS+, a high-performance, low-level reinvention of the ImprovedGS strategy, implemented natively within the LichtFeld-Studio framework. By transitioning from high-level Python logic to hardware-optimized C++/CUDA kernels, we achieve a significant reduction in host-device synchronization and training latency. Our impleme...</p>
+<p class="abstract-cn">📄 3D 高斯分布 (3DGS) 的最新进展已将重点转向平衡重建保真度与计算效率。在这项工作中，我们提出了 ImprovedGS+，这是对 ImprovedGS 策略的高性能、低级别的重塑，在 LichtFeld-Studio 框架内本地实现。通过从高级 Python 逻辑过渡到硬件优化的 C++/CUDA 内核，我们显着减少了主机设备同步和训练延迟。我们的实施...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08661v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning<span class="title-cn">➡️ OfficeQA Pro：端到端接地推理的企业基准</span></h3>
+<p class="meta">👤 Krista Opsahl-Ong, Arnav Singhvi, Jasmine Collins</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce OfficeQA Pro, a benchmark for evaluating AI agents on grounded, multi-document reasoning over a large and heterogeneous document corpus. The corpus consists of U.S. Treasury Bulletins spanning nearly 100 years, comprising 89,000 pages and over 26 million numerical values. OfficeQA Pro consists of 133 questions that require precise document parsing, retrieval, and analytical reasoning across both unstructured text and tabular data. Frontier LLMs including Claude Opus 4.6, GPT-5.4, an...</p>
+<p class="abstract-cn">📄 我们推出了 OfficeQA Pro，这是一个用于评估 AI 代理的基准，用于在大型异构文档语料库上进行基础的多文档推理。该语料库由跨越近 100 年的美国财政部公报组成，包含 89,000 页和超过 2600 万个数值。 OfficeQA Pro 包含 133 个问题，需要对非结构化文本和表格数据进行精确的文档解析、检索和分析推理。 Frontier LLMs 包括 Claude Opus 4.6、GPT-5.4、...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08655v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>✂️ 模型压缩</h2><div class="paper">
+<h3>1. Nonlinear Mode Coupling in Silicon Nitride Membrane Resonators<span class="title-cn">➡️ 氮化硅膜谐振器中的非线性模式耦合</span></h3>
+<p class="meta">👤 Soumya Kanti Das, Nishta Arora, Hridhay A S</p>
+<div class="abstract">
+<p class="abstract-en">📄 Nonlinear interactions between vibrational modes play a crucial role in understanding the dynamical response of nanomechanical resonators. Here, we report the experimental observation and theoretical modeling of nonlinear mode coupling in a high-stress square silicon nitride membrane resonator. We quantify frequency shifts of the fundamental mode arising from tension-mediated geometric nonlinearity by increasing the amplitude of the fundamental mode and higher-order flexural modes. A quantitativ...</p>
+<p class="abstract-cn">📄 振动模式之间的非线性相互作用在理解纳米机械谐振器的动态响应方面发挥着至关重要的作用。在这里，我们报告了高应力方形氮化硅膜谐振器中非线性模式耦合的实验观察和理论建模。我们通过增加基本模式和高阶弯曲模式的振幅来量化由张力介导的几何非线性引起的基本模式的频移。定量的...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08689v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. FVG-PT: Adaptive Foreground View-Guided Prompt Tuning for Vision-Language Models<span class="title-cn">➡️ FVG-PT：视觉语言模型的自适应前景视图引导提示调整</span></h3>
+<p class="meta">👤 Haoyang Li, Liang Wang, Siyu Zhou</p>
+<div class="abstract">
+<p class="abstract-en">📄 CLIP-based prompt tuning enables pretrained Vision-Language Models (VLMs) to efficiently adapt to downstream tasks. Although existing studies have made significant progress, they pay limited attention to changes in the internal attention representations of VLMs during the tuning process. In this paper, we attribute the failure modes of prompt tuning predictions to shifts in foreground attention of the visual encoder, and propose Foreground View-Guided Prompt Tuning (FVG-PT), an adaptive plug-and...</p>
+<p class="abstract-cn">📄 基于 CLIP 的提示调整使预训练的视觉语言模型 (VLM) 能够有效地适应下游任务。尽管现有研究取得了重大进展，但他们对调优过程中 VLM 内部注意力表示变化的关注有限。在本文中，我们将提示调整预测的失败模式归因于视觉编码器前景注意力的转移，并提出了前景视图引导提示调整（FVG-PT），这是一种自适应即插即用的方法。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08708v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Flash from the Past: New Gamma-Ray Constraints on Light CP-even Scalar from SN1987A<span class="title-cn">➡️ 过去的闪光：来自 SN1987A 的光 CP 偶标量的新伽马射线约束</span></h3>
+<p class="meta">👤 Yue Yu, Writasree Maitra, P. S. Bhupal Dev</p>
+<div class="abstract">
+<p class="abstract-en">📄 We derive new constraints on light CP-even scalars using old gamma-ray observations in the direction of SN1987A by the Solar Maximum Mission (SMM) satellite. Light scalars can be abundantly produced in the supernova core via the nucleon bremsstrahlung process, can stream out of the supernova-environment and decay into photons -- either primary photons or secondary photons from lepton-antilepton pairs -- thus leading to a gamma-ray signal. From the non-observation of excess photon flux by SMM aft...</p>
+<p class="abstract-cn">📄 我们利用太阳极大值任务 (SMM) 卫星对 SN1987A 方向的旧伽马射线观测得出了对光 CP 偶标量的新约束。光标量可以通过核子轫致辐射过程在超新星核心中大量产生，可以从超新星环境中流出并衰变成光子（初级光子或来自轻子-反轻子对的次级光子），从而产生伽马射线信号。来自SMM aft 未观察到的多余光子通量...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08695v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Very High Energy Gamma Rays from Ultra Fast Outflows<span class="title-cn">➡️ 超快流出的极高能量伽马射线</span></h3>
+<p class="meta">👤 B. Le Nagat Neher, E. Peretti, P. Cristofari</p>
+<div class="abstract">
+<p class="abstract-en">📄 Context. Ultra fast outflows (UFOs) from active galactic nuclei (AGN) are expected to lead to the formation of sub-relativistic strong shocks expanding in a dense circumnuclear medium, and thus have the potential for being efficient particle accelerators, and to be proficient sources of gamma rays and neutrinos. Aims. We investigate the detectability of a sample of nearby identified UFOs in gamma rays and neutrinos with current and next- generation instruments. Methods. We model the acceleration...</p>
+<p class="abstract-cn">📄 语境。来自活动星系核（AGN）的超快外流（UFO）预计将导致形成在致密核周介质中扩展的亚相对论性强激波，因此有可能成为高效的粒子加速器，并成为伽马射线和中微子的熟练来源。目标。我们利用当前和下一代仪器研究了伽马射线和中微子中附近已识别不明飞行物样本的可探测性。方法。我们对加速度进行建模...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08701v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Scale Space Diffusion<span class="title-cn">➡️ 刻度空间Diffusion</span></h3>
+<p class="meta">👤 Soumik Mukhopadhyay, Prateksha Udhayanan, Abhinav </p>
+<div class="abstract">
+<p class="abstract-en">📄 Diffusion models degrade images through noise, and reversing this process reveals an information hierarchy across timesteps. Scale-space theory exhibits a similar hierarchy via low-pass filtering. We formalize this connection and show that highly noisy diffusion states contain no more information than small, downsampled images - raising the question of why they must be processed at full resolution. To address this, we fuse scale spaces into the diffusion process by formulating a family of diffus...</p>
+<p class="abstract-cn">📄 Diffusion 模型通过噪声降低图像质量，并且逆转该过程揭示了跨时间步长的信息层次结构。尺度空间理论通过低通滤波表现出类似的层次结构。我们形式化了这种联系，并表明高噪声扩散状态所包含的信息并不比小型下采样图像多，这提出了为什么必须以全分辨率处理它们的问题。为了解决这个问题，我们通过制定一系列扩散将尺度空间融合到扩散过程中...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08709v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Four negations and the spectral presheaf<span class="title-cn">➡️ 四个否定和谱预束</span></h3>
+<p class="meta">👤 Benjamin Engel, Ryshard-Pavel Kostecki</p>
+<div class="abstract">
+<p class="abstract-en">📄 Using Vakarelov's theory of lattice logics with negation, we introduce the (co)quasiintuitionistic logic, and prove its soundness and completeness with respect to the class of (co)quasiintuitionistic algebras. Combining these algebras together, we obtain biquasiintuitionistic algebras and the corresponding logic. Their further extension with the Skolem algebra structure defines Akchurin algebras and the respective logic. Next we generalise the framework of spectral presheaves (which is a main ob...</p>
+<p class="abstract-cn">📄 利用瓦卡列洛夫的否定格逻辑理论，我们引入了（共）准直觉逻辑，并证明了它对于（共）准直觉代数类的合理性和完整性。将这些代数组合在一起，我们得到双拟直觉代数和相应的逻辑。它们对 Skolem 代数结构的进一步扩展定义了 Akchurin 代数和相应的逻辑。接下来我们概括一下谱预滑轮的框架（这是一个主要的目标）...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08699v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. HiAR: Efficient Autoregressive Long Video Generation via Hierarchical Denoising<span class="title-cn">➡️ HiAR：通过分层去噪实现高效自回归长视频生成</span></h3>
+<p class="meta">👤 Kai Zou, Dian Zheng, Hongbo Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive (AR) diffusion offers a promising framework for generating videos of theoretically infinite length. However, a major challenge is maintaining temporal continuity while preventing the progressive quality degradation caused by error accumulation. To ensure continuity, existing methods typically condition on highly denoised contexts; yet, this practice propagates prediction errors with high certainty, thereby exacerbating degradation. In this paper, we argue that a highly clean conte...</p>
+<p class="abstract-cn">📄 自回归（AR）扩散为生成理论上无限长度的视频提供了一个有前途的框架。然而，一个主要挑战是保持时间连续性，同时防止错误累积引起的质量逐渐下降。为了确保连续性，现有方法通常以高度去噪的上下文为条件；然而，这种做法会以高确定性传播预测误差，从而加剧退化。在本文中，我们认为一个高度干净的故事...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08703v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Improved Certificates for Independence Number in Semirandom Hypergraphs<span class="title-cn">➡️ 半随机超图中独立数的改进证书</span></h3>
+<p class="meta">👤 Pravesh Kothari, Anand Louis, Rameesh Paul</p>
+<div class="abstract">
+<p class="abstract-en">📄 We study the problem of efficiently certifying upper bounds on the independence number of $\ell$-uniform hypergraphs. This is a notoriously hard problem, with efficient algorithms failing to approximate the independence number within $n^{1-ε}$ factor in the worst case [Has99, Zuc07]. We study the problem in random and semirandom hypergraphs.   There is a folklore reduction to the graph case, achieving a certifiable bound of $O(\sqrt{n/p})$. More recently, the work [GKM22] improved this by constr...</p>
+<p class="abstract-cn">📄 我们研究有效证明 $\ell$-均匀超图独立数上限的问题。这是一个众所周知的难题，在最坏的情况下，高效的算法无法近似 $n^{1-ε}$ 因子内的独立数 [Has99，Zuc07]。我们研究随机和半随机超图的问题。   民间传说对图的情况进行了简化，实现了 $O(\sqrt{n/p})$ 的可证明界限。最近，工作 [GKM22] 通过构造改进了这一点...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08693v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Evaluating Financial Intelligence in Large Language Models: Benchmarking SuperInvesting AI with LLM Engines<span class="title-cn">➡️ 评估大型语言模型中的金融智能：使用 LLM 引擎对 SuperInvesting AI 进行基准测试</span></h3>
+<p class="meta">👤 Akshay Gulati, Kanha Singhania, Tushar Banga</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language models are increasingly used for financial analysis and investment research, yet systematic evaluation of their financial reasoning capabilities remains limited. In this work, we introduce the AI Financial Intelligence Benchmark (AFIB), a multi-dimensional evaluation framework designed to assess financial analysis capabilities across five dimensions: factual accuracy, analytical completeness, data recency, model consistency, and failure patterns. We evaluate five AI systems: GPT, ...</p>
+<p class="abstract-cn">📄 大型语言模型越来越多地用于金融分析和投资研究，但对其金融推理能力的系统评估仍然有限。在这项工作中，我们引入了AI金融情报基准（AFIB），这是一个多维度的评估框架，旨在跨五个维度评估财务分析能力：事实准确性、分析完整性、数据新近度、模型一致性和失败模式。我们评估了五个 AI 系统：GPT、...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08704v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Understanding thermal and quantum fluctuations in extended Kitaev-Yao-Lee spin-orbital model<span class="title-cn">➡️ 了解扩展 Kitaev-Yao-Lee 自旋轨道模型中的热涨落和量子涨落</span></h3>
+<p class="meta">👤 Jiefu Cen, Hae-Young Kee</p>
+<div class="abstract">
+<p class="abstract-en">📄 Building upon the spin-1/2 Kitaev model on a honeycomb lattice, the Yao-Lee spin-orbital model provides exactly solvable quantum spin liquids with potentially better stability against perturbations due to the additional degree of freedom. Recently, the microscopic mechanism underlying the Yao-Lee interaction in honeycomb materials has been uncovered, leading to an extended Kitaev-Yao-Lee spin-orbital model when the celebrated Kugel-Khomskii interaction is included. Numerical studies of this mode...</p>
+<p class="abstract-cn">📄 Yao-Lee 自旋轨道模型以蜂窝晶格上的自旋 1/2 Kitaev 模型为基础，提供了完全可解的量子自旋液体，由于额外的自由度，该模型具有潜在的更好的抗扰动稳定性。最近，蜂窝材料中 Yao-Lee 相互作用的微观机制被揭示，当包括著名的 Kugel-Khomskii 相互作用时，产生了扩展的 Kitaev-Yao-Lee 自旋轨道模型。该模式的数值研究...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08710v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>📝 综述论文</h2><div class="paper">
+<h3>1. COACH meets QUORUM: A Framework and Pipeline for Aligning User, Expert and Developer Perspectives in LLM-generated Health Counselling<span class="title-cn">➡️ COACH 与 QUORUM 的结合：在 LLM 生成的健康咨询中协调用户、专家和开发人员观点的框架和管道</span></h3>
+<p class="meta">👤 Yee Man Ng, Bram van Dijk, Pieter Beynen</p>
+<div class="abstract">
+<p class="abstract-en">📄 Systems that collect data on sleep, mood, and activities can provide valuable lifestyle counselling to populations affected by chronic disease and its consequences. Such systems are, however, challenging to develop; besides reliably extracting patterns from user-specific data, systems should also contextualise these patterns with validated medical knowledge to ensure the quality of counselling, and generate counselling that is relevant to a real user. We present QUORUM, a new evaluation framewor...</p>
+<p class="abstract-cn">📄 收集睡眠、情绪和活动数据的系统可以为受慢性病及其后果影响的人群提供有价值的生活方式咨询。然而，此类系统的开发具有挑战性；除了从特定于用户的数据中可靠地提取模式之外，系统还应该将这些模式与经过验证的医学知识结合起来，以确保咨询的质量，并生成与真实用户相关的咨询。我们推出了 QUORUM，一个新的评估框架...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08392v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Homogenization of the Stetson Photometry with the BEST Database<span class="title-cn">➡️ 使用 BEST 数据库实现 Stetson 光度测定的均质化</span></h3>
+<p class="meta">👤 Zhirui Li, Bowen Huang, Kai Xiao</p>
+<div class="abstract">
+<p class="abstract-en">📄 As one of the most widely recognized high-quality standard stars, the Stetson standards have been extensively used as a photometric reference for calibrating other surveys. In this work, we present an independent validation and re-calibration of the Stetson standard star photometry using the BEST database. Based on typically 30,000-70,000 calibration stars per band, we find that the original Stetson photometry achieves field-to-field zero-point precisions of approximately 10--40\,mmag in the $UB...</p>
+<p class="abstract-cn">📄 作为最广泛认可的高质量标准星之一，斯泰森标准已被广泛用作校准其他测量的光度参考。在这项工作中，我们使用 BEST 数据库对 Stetson 标准星光度测量进行了独立验证和重新校准。基于每个波段通常 30,000-70,000 个校准星，我们发现原始的 Stetson 光度测量在 $UB 中实现了大约 10--40\,mmag 的场间零点精度...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08376v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio<span class="title-cn">➡️ 全保真音频无损压缩的基准语言模型</span></h3>
+<p class="meta">👤 Phillip Long, Zachary Novack, Chris Donahue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive "language" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable a...</p>
+<p class="abstract-cn">📄 在原始波形上训练的自回归“语言”模型 (LM) 可以重新用于无损音频压缩，但之前的工作仅限于 8 位音频，因此此类方法是否适用于实际设置（16/24 位）以及是否可以与现有编解码器竞争尚不确定。我们对跨不同领域（音乐、语音、生物声学）、采样率（16kHz-48kHz）和位深度（8、16、24 位）的全保真音频的基于 LM 的压缩进行基准测试。标准样本级标记化变得棘手...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08683v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Recent advances in spatial light modulator-based three-dimensional optical imaging (Invited)<span class="title-cn">➡️ 基于空间光调制器的三维光学成像最新进展（特邀）</span></h3>
+<p class="meta">👤 Joseph Rosen</p>
+<div class="abstract">
+<p class="abstract-en">📄 Phase-only spatial light modulators (SLMs) are used in optical systems for several purposes. In this article, the main landmarks of SLM-based imaging systems are surveyed. In addition to conventional two-dimensional imaging, these systems are useful for multidimensional imaging, axial sectioning, field-of-view expansion, improved image resolution, imaging through scatterers, and depth-of-field control. The SLMs in this review are positioned in the system aperture and modulate the input light in ...</p>
+<p class="abstract-cn">📄 仅相位空间光调制器 (SLM) 在光学系统中具有多种用途。本文对基于 SLM 的成像系统的主要里程碑进行了调查。除了传统的二维成像之外，这些系统还可用于多维成像、轴向切片、视场扩展、改进的图像分辨率、通过散射体成像以及景深控制。本次审查中的 SLM 位于系统孔径中，并以以下方式调制输入光：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08532v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. A prospective clinical feasibility study of a conversational diagnostic AI in an ambulatory primary care clinic<span class="title-cn">➡️ 门诊初级保健诊所对话诊断 AI 的前瞻性临床可行性研究</span></h3>
+<p class="meta">👤 Peter Brodeur, Jacob M. Koshy, Anil Palepu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large language model (LLM)-based AI systems have shown promise for patient-facing diagnostic and management conversations in simulated settings. Translating these systems into clinical practice requires assessment in real-world workflows with rigorous safety oversight. We report a prospective, single-arm feasibility study of an LLM-based conversational AI, the Articulate Medical Intelligence Explorer (AMIE), conducting clinical history taking and presentation of potential diagnoses for patients ...</p>
+<p class="abstract-cn">📄 基于大型语言模型 (LLM) 的 AI 系统已显示出在模拟环境中面向患者的诊断和管理对话的前景。将这些系统转化为临床实践需要在现实世界的工作流程中进行评估并进行严格的安全监督。我们报告了一项基于 LLM 的对话式 AI（Articulate Medical Intelligence Explorer (AMIE)）的前瞻性、单臂可行性研究，该研究为患者进行临床病史采集和潜在诊断的呈现...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08448v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. IronEngine: Towards General AI Assistant<span class="title-cn">➡️ IronEngine：走向通用AI助手</span></h3>
+<p class="meta">👤 Xi Mo</p>
+<div class="abstract">
+<p class="abstract-en">📄 This paper presents IronEngine, a general AI assistant platform organized around a unified orchestration core that connects a desktop user interface, REST and WebSocket APIs, Python clients, local and cloud model backends, persistent memory, task scheduling, reusable skills, 24-category tool execution, MCP-compatible extensibility, and hardware-facing integration. IronEngine introduces a three-phase pipeline -- Discussion (Planner--Reviewer collaboration), Model Switch (VRAM-aware transition), a...</p>
+<p class="abstract-cn">📄 本文介绍了 IronEngine，这是一个围绕统一编排核心组织的通用 AI 助理平台，该平台连接桌面用户界面、REST 和 WebSocket API、Python 客户端、本地和云模型后端、持久内存、任务调度、可重用技能、24 类工具执行、MCP 兼容的可扩展性和面向硬件的集成。 IronEngine 引入了一个三相管道——讨论（规划者--审阅者协作）、模型切换（VRAM 感知转换）、...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08425v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Torque Hyperuniformity in Frictional Granular Matter - Theory and Experiments<span class="title-cn">➡️ 摩擦颗粒物质中的扭矩超均匀性 - 理论与实验</span></h3>
+<p class="meta">👤 Jin Shang, Jie Zhang, Itamar Procaccia</p>
+<div class="abstract">
+<p class="abstract-en">📄 A question of some fundamental importance is whether a given assembly of frictional granules (say sand or powder) will exhibit stress autocorrelations with long-range anisotropic decay as determined by the elastic Green's function. In Hamiltonian systems with central forces, mechanical balance and material isotropy demand the stress auto-correlation matrix to be fully determined by the pressure auto-correlation only. If the local pressure fluctuations are normal, it follows that stress autocorre...</p>
+<p class="abstract-cn">📄 一个具有根本重要性的问题是，给定的摩擦颗粒（例如沙子或粉末）的组合是否会表现出与由弹性格林函数确定的长程各向异性衰减的应力自相关性。在具有中心力的哈密顿系统中，机械平衡和材料各向同性要求应力自相关矩阵仅由压力自相关完全确定。如果局部压力波动正常，则应力自相关...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08363v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. LeMMINGs VII: 5 GHz, 50 mas e-MERLIN observations of a statistically complete sample of nearby AGN<span class="title-cn">➡️ LeMMINGs VII：5 GHz、50 mas e-MERLIN 对附近 AGN 统计完整样本的观测</span></h3>
+<p class="meta">👤 D. R. A. Williams-Baldwin, R. D. Baldi, R. J. Besw</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present 5 GHz e-MERLIN radio images at 50 mas resolution of the nuclear regions of the Legacy e-MERLIN Multi-band Imaging of Nearby Galaxies survey (LeMMINGs), the deepest statistically complete radio-band survey of the local Universe (&lt;120 Mpc), consisting of 280 galaxies spanning all morphological and nuclear types. We detect nuclear radio emission above a median 5 sigma threshold of 0.33 mJy beam^-1 in 68 of 280 sources (24 percent), with core luminosities in the range 10^35 to 10^41.9 erg...</p>
+<p class="abstract-cn">📄 我们展示了传统 e-MERLIN 邻近星系多波段成像调查 (LeMMINGs) 核区域的 50 mas 分辨率的 5 GHz e-MERLIN 无线电图像，这是对本地宇宙 (<120 Mpc) 最深入的统计完整无线电波段调查，由跨越所有形态和核类型的 280 个星系组成。我们在 280 个源中的 68 个（24％）中检测到高于 0.33 mJy 光束^-1 的中值 5 西格玛阈值的核射电发射，核心光度在 10^35 到 10^41.9 erg 范围内...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08562v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Effect of gravitational lensing around black hole in dark matter halo in the presence of plasma<span class="title-cn">➡️ 等离子体存在下暗物质晕中黑洞周围引力透镜效应</span></h3>
+<p class="meta">👤 Zhiyu Dou, Akbar Davlataliev, Mirzabek Alloqulov</p>
+<div class="abstract">
+<p class="abstract-en">📄 This article is devoted to the investigation of the observational properties of the Schwarzschild black hole (BH) surrounded by a dark matter (DM) halo. Our study commences with a brief review of spacetime, including the horizon structure and curvature invariants, which are the Ricci scalar, the square of the Ricci tensor, and the Kretschmann scalar. Subsequently, we explore the massive and massless particle dynamics around the Schwarzschild BH surrounded by a dark matter halo, including the inn...</p>
+<p class="abstract-cn">📄 本文致力于研究被暗物质 (DM) 光环包围的史瓦西黑洞 (BH) 的观测特性。我们的研究首先对时空进行简要回顾，包括视界结构和曲率不变量，即里奇标量、里奇张量的平方和克雷奇曼标量。随后，我们探索了被暗物质晕包围的史瓦西黑洞周围的大质量和无质量粒子动力学，包括旅馆...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08642v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Computational modeling of early language learning from acoustic speech and audiovisual input without linguistic priors<span class="title-cn">➡️ 在没有语言先验的情况下，从声学语音和视听输入进行早期语言学习的计算模型</span></h3>
+<p class="meta">👤 Okko Räsänen</p>
+<div class="abstract">
+<p class="abstract-en">📄 Learning to understand speech appears almost effortless for typically developing infants, yet from an information-processing perspective, acquiring a language from acoustic speech is an enormous challenge. This chapter reviews recent developments in using computational models to understand early language acquisition from speech and audiovisual input. The focus is on self-supervised and visually grounded models of perceptual learning. We show how these models are becoming increasingly powerful in...</p>
+<p class="abstract-cn">📄 对于正常发育的婴儿来说，学习理解语音几乎是毫不费力的，但从信息处理的角度来看，从声学语音中习得语言是一个巨大的挑战。本章回顾了使用计算模型来理解从语音和视听输入中获得早期语言的最新进展。重点是感知学习的自我监督和视觉基础模型。我们展示了这些模型如何变得越来越强大...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08359v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎮 强化学习</h2><div class="paper">
+<h3>1. How Far Can Unsupervised RLVR Scale LLM Training?<span class="title-cn">➡️ 无监督 RLVR 规模 LLM 训练能达到多远？</span></h3>
+<p class="meta">👤 Bingxiang He, Yuxin Zuo, Zeyuan Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Unsupervised reinforcement learning with verifiable rewards (URLVR) offers a pathway to scale LLM training beyond the supervision bottleneck by deriving rewards without ground truth labels. Recent works leverage model intrinsic signals, showing promising early gains, yet their potential and limitations remain unclear. In this work, we revisit URLVR and provide a comprehensive analysis spanning taxonomy, theory and extensive experiments. We first classify URLVR methods into intrinsic versus exter...</p>
+<p class="abstract-cn">📄 具有可验证奖励的无监督强化学习 (URLVR) 提供了一种通过在没有真实标签的情况下获得奖励来扩展 LLM 训练超越监督瓶颈的途径。最近的工作利用模型内在信号，显示出有希望的早期成果，但其潜力和局限性仍不清楚。在这项工作中，我们重新审视 URLVR 并提供涵盖分类、理论和广泛实验的全面分析。我们首先将 URLVR 方法分为内部方法和外部方法...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08660v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. ER-Pose: Rethinking Keypoint-Driven Representation Learning for Real-Time Human Pose Estimation<span class="title-cn">➡️ ER-Pose：重新思考实时人体姿势估计的关键点驱动表示学习</span></h3>
+<p class="meta">👤 Nanjun Li, Pinqi Cheng, Zean Liu</p>
+<div class="abstract">
+<p class="abstract-en">📄 Single-stage multi-person pose estimation aims to jointly perform human localization and keypoint prediction within a unified framework, offering advantages in inference efficiency and architectural simplicity. Consequently, multi-scale real-time detection architectures, such as YOLO-like models, are widely adopted for real-time pose estimation. However, these approaches typically inherit a box-driven modeling paradigm from object detection, in which pose estimation is implicitly constrained by ...</p>
+<p class="abstract-cn">📄 单阶段多人姿态估计旨在在统一的框架内联合执行人体定位和关键点预测，在推理效率和架构简单性方面具有优势。因此，多尺度实时检测架构（例如类似 YOLO 的模型）被广泛用于实时姿态估计。然而，这些方法通常继承了对象检测的框驱动建模范例，其中姿态估计隐含地受到以下约束：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08681v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. A New Lower Bound for the Random Offerer Mechanism in Bilateral Trade using AI-Guided Evolutionary Search<span class="title-cn">➡️ 使用 AI 引导进化搜索的双边贸易随机报价机制的新下界</span></h3>
+<p class="meta">👤 Yang Cai, Vineet Gupta, Zun Li</p>
+<div class="abstract">
+<p class="abstract-en">📄 The celebrated Myerson--Satterthwaite theorem shows that in bilateral trade, no mechanism can be simultaneously fully efficient, Bayesian incentive compatible (BIC), and budget balanced (BB). This naturally raises the question of how closely the gains from trade (GFT) achievable by a BIC and BB mechanism can approximate the first-best (fully efficient) benchmark. The optimal BIC and BB mechanism is typically complex and highly distribution-dependent, making it difficult to characterize directly....</p>
+<p class="abstract-cn">📄 著名的迈尔森-萨特思韦特定理表明，在双边贸易中，没有任何机制能够同时完全有效、贝叶斯激励兼容（BIC）和预算平衡（BB）。这自然提出了一个问题：BIC 和 BB 机制可实现的贸易收益 (GFT) 与第一最佳（完全有效）基准的接近程度如何。最佳 BIC 和 BB 机制通常很复杂并且高度依赖于分布，因此很难直接表征。...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08679v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Agentic Critical Training<span class="title-cn">➡️ 代理关键培训</span></h3>
+<p class="meta">👤 Weize Liu, Minghui Liu, Sy-Tuyen Ho</p>
+<div class="abstract">
+<p class="abstract-en">📄 Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: t...</p>
+<p class="abstract-cn">📄 将大型语言模型（LLMs）训练为自主代理通常从模仿学习开始，但它只教代理做什么而不理解为什么：代理从不将成功的行动与次优的替代方案进行比较，因此缺乏对行动质量的认识。最近的方法试图通过引入来自专家行动和替代行动之间对比的自我反思监督来解决这个问题。然而，训练范式从根本上仍然是模仿学习：...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08706v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training<span class="title-cn">➡️ 分体式联邦学习架构，实现高精度、低延迟模型训练</span></h3>
+<p class="meta">👤 Yiannis Papageorgiou, Yannis Thomas, Ramin Khalili</p>
+<div class="abstract">
+<p class="abstract-en">📄 Can we find a network architecture for ML model training so as to optimize training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can this architecture also reduce training delay and communication overhead? While accuracy is not influenced by how we split the model in ordinary, state-of-the-art SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical SFL (HSFL) architectures adopt a three-tier training structure consisting of clients, (local) agg...</p>
+<p class="abstract-cn">📄 我们能否找到一种用于 ML 模型训练的网络架构，以优化分割联邦学习（SFL）中的训练损失（从而优化准确性）？而且这种架构还能减少训练延迟和通信开销吗？虽然准确性不受我们如何在普通、最先进的 SFL 中分割模型的影响，但在这项工作中，我们对上述问题的回答是肯定的。最近的分层 SFL (HSFL) 架构采用三层训练结构，包括客户端、（本地）聚合...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08687v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Learning Functions of Halfspaces<span class="title-cn">➡️ 半空间的学习函数</span></h3>
+<p class="meta">👤 Josh Alman, Shyamal Patel, Rocco A. Servedio</p>
+<div class="abstract">
+<p class="abstract-en">📄 We give an algorithm that learns arbitrary Boolean functions of $k$ arbitrary halfspaces over $\mathbb{R}^n$, in the challenging distribution-free Probably Approximately Correct (PAC) learning model, running in time $2^{\sqrt{n} \cdot (\log n)^{O(k)}}$. This is the first algorithm that can PAC learn even intersections of two halfspaces in time $2^{o(n)}.$...</p>
+<p class="abstract-cn">📄 我们给出了一种算法，该算法可以在具有挑战性的无分布近似正确（PAC）学习模型中学习 $\mathbb{R}^n$ 上 $k$ 任意半空间的任意布尔函数，运行时间为 $2^{\sqrt{n} \cdot (\log n)^{O(k)}}$。这是第一个可以 PAC 及时学习两个半空间的交集的算法 $2^{o(n)}.$...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08700v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Context-free Self-Conditioned GAN for Trajectory Forecasting<span class="title-cn">➡️ 用于轨迹预测的上下文无关自调节 GAN</span></h3>
+<p class="meta">👤 Tiago Rodrigues de Almeida, Eduardo Gutierrez Maes</p>
+<div class="abstract">
+<p class="abstract-en">📄 In this paper, we present a context-free unsupervised approach based on a self-conditioned GAN to learn different modes from 2D trajectories. Our intuition is that each mode indicates a different behavioral moving pattern in the discriminator's feature space. We apply this approach to the problem of trajectory forecasting. We present three different training settings based on self-conditioned GAN, which produce better forecasters. We test our method in two data sets: human motion and road agents...</p>
+<p class="abstract-cn">📄 在本文中，我们提出了一种基于自条件 GAN 的上下文无关无监督方法，用于从 2D 轨迹学习不同的模式。我们的直觉是，每种模式都表明鉴别器特征空间中不同的行为移动模式。我们将这种方法应用于轨迹预测问题。我们提出了基于自我调节 GAN 的三种不同的训练设置，这可以产生更好的预测器。我们在两个数据集中测试我们的方法：人体运动和道路代理...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08658v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Characterization and upgrade of a quantum graph neural network for charged particle tracking<span class="title-cn">➡️ 用于带电粒子跟踪的量子图神经网络的表征和升级</span></h3>
+<p class="meta">👤 Matteo Argenton, Laura Cappelli, Concezio Bozzi</p>
+<div class="abstract">
+<p class="abstract-en">📄 In the forthcoming years the LHC experiments are going to be upgraded to benefit from the substantial increase of the LHC instantaneous luminosity, which will lead to larger, denser events, and, consequently, greater complexity in reconstructing charged particle tracks, motivating frontier research in new technologies. Quantum machine learning models are being investigated as potential new approaches to high energy physics (HEP) tasks. We characterize and upgrade a quantum graph neural network (...</p>
+<p class="abstract-cn">📄 未来几年，大型强子对撞机实验将进行升级，以受益于大型强子对撞机瞬时光度的大幅增加，这将导致更大、更密集的事件，从而使重建带电粒子轨迹变得更加复杂，从而激发新技术的前沿研究。量子机器学习模型正在被研究作为高能物理（HEP）任务的潜在新方法。我们表征并升级了量子图神经网络（...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08667v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Multimessenger Characterization of High-Energy Neutrino Emission from the Brightest Neutrino-Active Galactic Nuclei<span class="title-cn">➡️ 最亮中微子活跃星系核发射的高能中微子的多信使特征</span></h3>
+<p class="meta">👤 Jose Alonso Carpio, Ali Kheirandish, Kohta Murase</p>
+<div class="abstract">
+<p class="abstract-en">📄 The observation of high-energy neutrinos from the direction of the nearby active galaxy, NGC 1068, was a major step in identifying the origin of high-energy cosmic neutrinos. The multimessenger data imply that high-energy neutrinos originate from the hearts of active galaxies which are opaque to GeV-TeV $γ$-rays. This realization is reinforced by the excess of neutrinos in the direction of NGC 4151 and Circinus Galaxy, other nearby active galactic nuclei (AGNs). Understanding the vicinity of sup...</p>
+<p class="abstract-cn">📄 从附近活跃星系NGC 1068方向观测高能中微子，是识别高能宇宙中微子起源的重要一步。多信使数据表明，高能中微子源自活动星系的中心，这些星系对于 GeV-TeV $γ$ 射线是不透明的。 NGC 4151 和圆规座星系以及附近其他活跃星系核 (AGN) 方向的过量中微子强化了这一认识。了解附近的供应商...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08684v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting<span class="title-cn">➡️ 无常：时间序列预测中时间泛化的实时基准</span></h3>
+<p class="meta">👤 Azul Garza, Renée Rosillo, Rodrigo Mendoza-Smith</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluate...</p>
+<p class="abstract-cn">📄 时间序列预测的最新进展越来越依赖于预先训练的基础型模型。虽然这些模型通常声称具有广泛的普遍性，但现有的评估协议提供的证据有限。事实上，当前大多数基准测试都使用静态训练-测试分割，这很容易导致污染，因为基础模型可能会无意中训练测试数据或使用测试分数执行模型选择，这可能会夸大性能。我们推出了 Impermanent，一个实时基准测试，用于评估...</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.08707v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="footer"><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>
