@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-12</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-12 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "以下哪一项是Transformer架构的核心创新组件？", "options": ["A. 自注意力机制", "B. 卷积神经网络", "C. 循环神经网络", "D. 生成对抗网络"], "answer": "A", "explanation": "Transformer架构的核心创新是引入了自注意力机制，它允许模型在处理序列数据时，动态地权衡输入序列中不同位置信息的重要性，从而有效地捕获长距离依赖关系。卷积神经网络、循环神经网络和生成对抗网络是其他类型的神经网络架构，并非Transformer的核心。"}, {"question": "GPT系列模型（如GPT-3, GPT-4）是由哪家公司或研究机构开发的？", "options": ["A. Google", "B. OpenAI", "C. Anthropic", "D. Meta"], "answer": "B", "explanation": "GPT（Generative Pre-trained Transformer）系列模型是由OpenAI开发和发布的。Google开发了BERT、PaLM等模型，Anthropic开发了Claude，Meta开发了Llama系列模型。"}, {"question": "在大型语言模型的训练中，“预训练”阶段的主要目标是什么？", "options": ["A. 学习特定任务（如情感分析）的精确模式", "B. 通过大量无标注文本学习通用的语言表示和知识", "C. 根据人类反馈优化模型的输出风格", "D. 减少模型的计算参数量"], "answer": "B", "explanation": "预训练是LLM训练的第一阶段，其核心目标是让模型在海量、多样化的无标注文本数据上，通过自监督学习任务（如下一个词预测），学习语言的通用模式、语法、语义和世界知识，形成一个强大的基础模型。特定任务精调、人类反馈强化学习（RLHF）和模型压缩都是后续可能进行的步骤。"}, {"question": "Anthropic公司提出的“Constitutional AI”核心思想是什么？", "options": ["A. 使用宪法条文作为训练数据", "B. 让模型根据一套原则（宪法）进行自我改进和修正", "C. 只训练与法律相关的AI模型", "D. 建立一个由AI制定宪法的系统"], "answer": "B", "explanation": "Constitutional AI是Anthropic提出的一种AI对齐方法。其核心思想是定义一套高层次的原则（“宪法”），然后让AI模型根据这些原则，通过自我批判和修正来改进自己的行为，从而减少对大量人工标注的依赖，使AI的输出更符合人类价值观。"}, {"question": "在深度学习中，“反向传播”算法的主要作用是什么？", "options": ["A. 前向计算模型的预测值", "B. 根据损失函数计算梯度并更新模型参数", "C. 初始化神经网络的权重", "D. 对输入数据进行预处理"], "answer": "B", "explanation": "反向传播是训练神经网络的核心算法。它首先进行前向传播计算预测值和损失，然后从输出层向输入层反向传递，利用链式法则计算损失函数相对于每个模型参数（权重和偏置）的梯度。这些梯度随后被优化器（如SGD、Adam）用来更新参数，以最小化损失。"}, {"question": "以下哪项技术主要用于提升大语言模型生成内容的安全性和有用性，并使其与人类意图对齐？", "options": ["A. 数据增强", "B. 人类反馈强化学习", "C. 知识蒸馏", "D. 量化压缩"], "answer": "B", "explanation": "人类反馈强化学习是一种将人类偏好引入模型训练的技术。它通常包括收集人类对模型输出的排序反馈，训练一个奖励模型来模拟人类偏好，然后使用强化学习（如PPO）来优化语言模型，使其生成更符合人类价值观和安全、有用的内容。数据增强、知识蒸馏和量化压缩是用于改进模型性能或效率的其他技术。"}, {"question": "“幻觉”在大语言模型语境中通常指什么现象？", "options": ["A. 模型运行速度极快", "B. 模型生成看似合理但事实上不正确或无法验证的内容", "C. 模型拒绝回答某些问题", "D. 模型的内存使用量激增"], "answer": "B", "explanation": "“幻觉”是指大语言模型生成的内容在语法和表面上流畅连贯，但其中包含的事实性信息是错误的、捏造的或与提供的信息源相矛盾的。这是当前LLM面临的主要挑战之一，因为它会传播错误信息。"}, {"question": "Transformer架构中的“位置编码”是为了解决什么问题？", "options": ["A. 降低模型计算复杂度", "B. 为模型提供输入序列中词汇的顺序信息", "C. 防止模型过拟合", "D. 增加模型的非线性表达能力"], "answer": "B", "explanation": "自注意力机制本身是“排列不变”的，即它不考虑输入序列的顺序。为了让模型能够理解序列中词汇的顺序关系（这对理解语言至关重要），Transformer引入了位置编码，将每个词的位置信息（通过正弦/余弦函数或可学习的向量）添加到词嵌入中，从而使模型能够利用序列的顺序信息。"}, {"question": "以下哪个是当前AI在创意写作领域的主要应用方式？", "options": ["A. 完全替代人类作家进行独立创作", "B. 作为辅助工具，帮助人类进行头脑风暴、草稿生成和润色", "C. 自动判定文学作品的版权归属", "D. 取代所有的编辑和校对工作"], "answer": "B", "explanation": "目前，AI在创意写作领域主要扮演的是“副驾驶”或“创意伙伴”的角色。它可以快速生成灵感、提供不同风格的初稿、帮助克服写作障碍、进行语法检查和文字润色等，但作品的最终创意、情感深度和整体把控仍需依赖人类作者。完全替代人类独立创作并达到高水平在现阶段并不现实。"}, {"question": "“MoE”在大语言模型发展中指的是什么？", "options": ["A. 模型优化效率", "B. 混合专家模型", "C. 模型输出编码", "D. 多目标评估"], "answer": "B", "explanation": "MoE全称是Mixture of Experts（混合专家模型）。它是一种稀疏化模型架构，将一个大模型分解为许多“专家”子网络。对于每个输入，一个路由网络只会激活一部分相关的专家进行计算。这样可以在极大地增加模型总参数量的同时，保持实际计算量（FLOPs）相对恒定，从而以更高效的方式提升模型能力。例如，GPT-4和Mixtral 8x7B都采用了MoE架构。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
