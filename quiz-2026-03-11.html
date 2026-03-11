@@ -14,11 +14,9 @@
         .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
         .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
         .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
-        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
-        .options label:hover { background: rgba(255,255,255,0.15); }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
         .options input { margin-right: 10px; }
         .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
-        .btn:hover { background: #5a6fd6; }
         .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
         .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
         .analysis { display: none; margin-top: 30px; }
@@ -31,134 +29,44 @@
     <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
     <h1>🧠 AI知识小测验</h1>
     <p class="subtitle">2026-03-11 · 10道题测测你对AI的了解</p>
-    
     <div id="quiz">
         <div class="quiz-container" id="q-container"></div>
         <button class="btn" onclick="submitQuiz()">提交答案</button>
     </div>
-    
     <div class="result" id="result">
         <div class="score" id="score"></div>
         <p id="score-text"></p>
         <button class="btn" onclick="showAnalysis()">查看解析</button>
     </div>
-    
     <div class="analysis" id="analysis"></div>
-    
     <script>
-    const questions = [
-        {
-            question: "GPT-4是由哪家公司在2023年3月发布的？",
-            options: ["A. Google", "B. Meta", "C. OpenAI", "D. Anthropic"],
-            answer: "C",
-            explanation: "GPT-4是OpenAI在2023年3月14日发布的大型语言模型，是GPT系列的最新版本。"
-        },
-        {
-            question: "Transformer架构最初是在哪篇论文中提出的？",
-            options: ["A. 'Attention Is All You Need'", "B. 'BERT: Pre-training of Deep Bidirectional Transformers'", "C. 'Improving language understanding with unsupervised pre-training'", "D. 'Language Models are Few-Shot Learners'"],
-            answer: "A",
-            explanation: "Transformer架构最初是在2017年Google提出的论文'Attention Is All You Need'中提出的。"
-        },
-        {
-            question: "以下哪种技术被用于训练ChatGPT？",
-            options: ["A. 仅监督学习", "B. 强化学习人类反馈(RLHF)", "C. 无监督学习", "D. 迁移学习"],
-            answer: "B",
-            explanation: "ChatGPT使用人类反馈的强化学习(RLHF)来微调模型，使其更好地遵循人类指令。"
-        },
-        {
-            question: "Claude是由哪家公司开发的？",
-            options: ["A. OpenAI", "B. Google", "C. Anthropic", "D. Meta"],
-            answer: "C",
-            explanation: "Claude是Anthropic公司开发的AI助手，于2023年3月首次发布。"
-        },
-        {
-            question: "LLM指的是什么？",
-            options: ["A. Low-Level Machine", "B. Large Language Model", "C. Linear Learning Method", "D. Long Memory Module"],
-            answer: "B",
-            explanation: "LLM是Large Language Model(大型语言模型)的缩写，指参数量巨大的语言模型。"
-        },
-        {
-            question: "以下哪个不是GPT-4的新能力？",
-            options: ["A. 多模态理解", "B. 代码生成", "C. 通过律师考试", "D. 实时互联网浏览"],
-            answer: "D",
-            explanation: "GPT-4在2023年3月发布时不具备实时互联网浏览能力，这一功能后来通过插件实现。"
-        },
-        {
-            question: "LLaMA是Meta发布的什么类型的模型？",
-            options: ["A. 图像生成模型", "B. 开源大语言模型", "C. 语音识别模型", "D. 推荐系统模型"],
-            answer: "B",
-            explanation: "LLaMA是Meta发布的开源大语言模型系列，于2023年2月首次发布。"
-        },
-        {
-            question: "Prompt Engineering（提示工程）是指？",
-            options: ["A. 设计AI硬件", "B. 优化输入提示以获得更好的输出", "C. 训练AI模型", "D. 数据标注"],
-            answer: "B",
-            explanation: "提示工程是指设计和优化输入提示（prompt）以获得更好AI输出的技术和方法。"
-        },
-        {
-            question: "以下哪家公司在2023年发布了Gemini多模态模型？",
-            options: ["A. Microsoft", "B. OpenAI", "C. Google", "D. Amazon"],
-            answer: "C",
-            explanation: "Google在2023年12月发布了Gemini，这是一个多模态AI模型系列。"
-        },
-        {
-            question: "RAG技术用于？",
-            options: ["A. 图像生成", "B. 增强AI的知识获取能力", "C. 语音合成", "D. 模型压缩"],
-            answer: "B",
-            explanation: "RAG(检索增强生成)通过结合外部知识库来增强大语言模型的知识获取能力。"
-        }
-    ];
+    const questions = [{"question": "以下哪个是大型语言模型（LLM）最核心的训练目标？", "options": ["A. 根据上文预测下一个词或token的概率", "B. 理解并执行复杂的逻辑推理", "C. 生成完全原创、从未见过的内容", "D. 准确回答任何事实性问题"], "answer": "A", "explanation": "LLM的核心训练目标是通过海量文本数据，学习根据给定的上文（上下文）来预测下一个最可能出现的词或token（文本的基本单位）。这种自监督学习方式使其掌握了语言的统计规律和模式。其他选项（如复杂推理、绝对原创、事实准确性）是LLM能力的体现或期望，但并非其最根本、最直接的训练目标。"}, {"question": "Transformer架构中，使模型能够关注输入序列中不同部分信息的关键机制是？", "options": ["A. 循环神经网络（RNN）", "B. 长短期记忆网络（LSTM）", "C. 注意力机制（Attention Mechanism）", "D. 卷积神经网络（CNN）"], "answer": "C", "explanation": "注意力机制是Transformer架构的核心创新。它允许模型在处理序列中的任何一个位置时，动态地“关注”并加权融合序列中所有其他位置的信息，从而有效捕捉长距离依赖关系，并实现高效的并行计算。RNN、LSTM和CNN是其他类型的神经网络架构，它们在处理序列数据时存在并行化困难或长程依赖捕捉能力弱等局限，而Transformer通过注意力机制克服了这些缺点。"}, {"question": "OpenAI开发的ChatGPT最初是基于哪个模型系列进行微调而诞生的？", "options": ["A. BERT系列", "B. GPT系列", "C. LLaMA系列", "D. T5系列"], "answer": "B", "explanation": "ChatGPT是OpenAI基于其GPT（Generative Pre-trained Transformer）系列模型，通过指令微调（Instruction Tuning）和基于人类反馈的强化学习（RLHF）等技术开发而成的对话式AI。例如，初代ChatGPT基于GPT-3.5。BERT是Google开发的以双向编码为特点的模型，LLaMA是Meta开源的模型，T5是Google提出的“文本到文本”统一框架模型。"}, {"question": "Anthropic公司提出的“宪法AI”（Constitutional AI）核心目标是什么？", "options": ["A. 最大化模型的预测准确率", "B. 让模型在训练中自我遵循一套原则（宪法）", "C. 创建不受任何约束的创造性AI", "D. 专门用于生成法律条文"], "answer": "B", "explanation": "宪法AI是Anthropic提出的一种AI对齐方法。其核心思想是定义一套明确的、人类认可的原则（即“宪法”），然后让AI模型在训练过程中，根据这些原则进行自我批评、自我改进，从而使其输出符合这些原则，而无需在每一步都依赖大量的人力反馈。这旨在以可扩展的方式使AI行为与人类价值观保持一致。"}, {"question": "在深度学习中，用于防止模型在训练数据上过拟合的技术是？", "options": ["A. 梯度下降", "B. 反向传播", "C. 丢弃法（Dropout）", "D. 激活函数"], "answer": "C", "explanation": "丢弃法（Dropout）是一种正则化技术。它在训练过程中，随机将神经网络中的一部分神经元（及其连接）暂时“丢弃”（输出设为0），这样可以防止神经元之间产生过强的协同适应，迫使网络学习到更鲁棒的特征，从而有效减轻过拟合。梯度下降是优化算法，反向传播是计算梯度的算法，激活函数是为网络引入非线性。"}, {"question": "以下哪项是目前大语言模型在专业领域（如法律、医疗）应用面临的主要挑战？", "options": ["A. 生成速度太慢", "B. 可能产生“幻觉”或事实性错误", "C. 无法进行多轮对话", "D. 只能处理英文"], "answer": "B", "explanation": "“幻觉”是指模型生成的内容看似合理，但事实上不正确或无法验证。在专业领域，信息的准确性至关重要，而LLM的本质是概率生成模型，并非事实数据库，因此其输出可能包含错误、过时或编造的信息。这是将其可靠应用于法律、医疗等高风险领域的主要障碍。生成速度、多轮对话和多语言支持方面已有显著改进，并非核心挑战。"}, {"question": "GPT模型中“解码器”（Decoder）部分的主要作用是什么？", "options": ["A. 将输入文本压缩为固定长度的向量", "B. 理解并分类输入文本的情感", "C. 根据编码后的表示自回归地生成输出文本", "D. 将图像转换为文本描述"], "answer": "C", "explanation": "在GPT这类纯解码器（Decoder-only）的Transformer模型中，模型结构主要由堆叠的解码器层构成。它的作用是进行自回归生成：在训练时，它通过注意力机制学习上文信息，预测下一个token；在推理时，它根据已生成的token，逐个预测并生成后续的token，从而形成连贯的文本输出。选项A更像是编码器（Encoder）的作用，B和D是特定的下游任务。"}, {"question": "指令微调（Instruction Tuning）的主要目的是什么？", "options": ["A. 增加模型的参数量", "B. 提升模型对未见过的任务的泛化能力", "C. 加快模型的推理速度", "D. 压缩模型的大小"], "answer": "B", "explanation": "指令微调是在模型完成预训练后，使用大量以自然语言指令形式描述的任务（及对应输出）进行有监督微调。其核心目的是教会模型理解并遵循人类的指令，将预训练中获得的知识和能力“对齐”到用户的需求上，从而显著提升模型在零样本或少样本情况下执行新任务、新指令的泛化能力。它不主要关注参数量、速度或模型压缩。"}, {"question": "以下哪个概念与“对齐”（Alignment）在AI安全中的含义最相关？", "options": ["A. 模型的训练速度与硬件对齐", "B. AI系统的目标与人类价值观和意图对齐", "C. 不同AI模型之间的参数对齐", "D. 训练数据与测试数据的分布对齐"], "answer": "B", "explanation": "AI对齐（AI Alignment）是AI安全领域的核心议题，指的是确保人工智能系统的目标、行为和决策与人类的价值观、伦理标准和真实意图保持一致。其目的是防止强大AI系统出现 unintended consequences（非预期后果）或追求与人类福祉相悖的目标。其他选项涉及的是工程优化或机器学习中的一般性问题，与“对齐”的特定安全含义无关。"}, {"question": "在多模态大模型中，如GPT-4V或Gemini，实现“视觉理解”的常见方式是？", "options": ["A. 将图像直接输入文本Transformer", "B. 使用独立的视觉编码器将图像转换为特征序列，再与文本特征融合", "C. 仅通过图片描述文本来理解图像", "D. 训练一个完全独立的视觉模型，不与语言模型交互"], "answer": "B", "explanation": "主流的多模态大模型通常采用“编码器-融合-解码器”的架构。具体来说，一个独立的视觉编码器（如ViT）将图像分割成图块并编码成一系列视觉特征向量（类似于文本的token）。这些视觉特征序列与文本token序列一起，输入到一个强大的语言模型（作为融合器和解码器）中进行联合处理和生成。这种方法能实现深度的视觉-语言语义对齐和推理，而非简单的A、C、D所描述的浅层或分离的处理方式。"}];
     
     function renderQuiz() {
-        const container = document.getElementById('q-container');
-        container.innerHTML = questions.map((q, i) => `
-            <div class="question-num">第${i+1}题</div>
-            <div class="question">${q.question}</div>
-            <div class="options">
-                ${q.options.map((opt, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${opt}</label>`).join('')}
-            </div>
-        `).join('');
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
     }
     
     function submitQuiz() {
-        let score = 0;
-        const answers = [];
-        
+        let s = 0, ans = [];
         questions.forEach((q, i) => {
-            const selected = document.querySelector(`input[name="q${i}"]:checked`);
-            const userAnswer = selected ? selected.value : null;
-            const correct = q.answer;
-            
-            if (userAnswer === correct) {
-                score++;
-                answers.push({index: i, correct: true, user: userAnswer, correct: correct});
-            } else {
-                answers.push({index: i, correct: false, user: userAnswer, correct: correct});
-            }
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
         });
-        
         document.getElementById('quiz').style.display = 'none';
         document.getElementById('result').style.display = 'block';
-        document.getElementById('score').textContent = `${score}/10`;
-        document.getElementById('score-text').textContent = score >= 7 ? '太棒了！' : score >= 5 ? '不错哦！' : '继续加油！';
-        
-        window.answers = answers;
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
     }
     
     function showAnalysis() {
-        const container = document.getElementById('analysis');
-        container.style.display = 'block';
-        container.innerHTML = '<h2>📝 答案解析</h2>' + window.answers.map(a => `
-            <div class="analysis-item">
-                <div class="${a.correct ? 'correct' : 'wrong'}">
-                    <strong>第${a.index+1}题：${a.correct ? '✅ 正确' : '❌ 错误'}</strong>
-                </div>
-                <div>你的答案：${a.user || '未作答'} · 正确答案：${a.correct}</div>
-                <div style="margin-top:8px; color:#ccc;">📖 ${questions[a.index].explanation}</div>
-            </div>
-        `).join('');
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
     }
-    
     renderQuiz();
     </script>
 </body>
