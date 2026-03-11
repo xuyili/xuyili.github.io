@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-11</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; transition: all 0.2s; }
+        .options label:hover { background: rgba(255,255,255,0.15); }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .btn:hover { background: #5a6fd6; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-11 · 10道题测测你对AI的了解</p>
+    
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    
+    <div class="analysis" id="analysis"></div>
+    
+    <script>
+    const questions = [
+        {
+            question: "GPT-4是由哪家公司在2023年3月发布的？",
+            options: ["A. Google", "B. Meta", "C. OpenAI", "D. Anthropic"],
+            answer: "C",
+            explanation: "GPT-4是OpenAI在2023年3月14日发布的大型语言模型，是GPT系列的最新版本。"
+        },
+        {
+            question: "Transformer架构最初是在哪篇论文中提出的？",
+            options: ["A. 'Attention Is All You Need'", "B. 'BERT: Pre-training of Deep Bidirectional Transformers'", "C. 'Improving language understanding with unsupervised pre-training'", "D. 'Language Models are Few-Shot Learners'"],
+            answer: "A",
+            explanation: "Transformer架构最初是在2017年Google提出的论文'Attention Is All You Need'中提出的。"
+        },
+        {
+            question: "以下哪种技术被用于训练ChatGPT？",
+            options: ["A. 仅监督学习", "B. 强化学习人类反馈(RLHF)", "C. 无监督学习", "D. 迁移学习"],
+            answer: "B",
+            explanation: "ChatGPT使用人类反馈的强化学习(RLHF)来微调模型，使其更好地遵循人类指令。"
+        },
+        {
+            question: "Claude是由哪家公司开发的？",
+            options: ["A. OpenAI", "B. Google", "C. Anthropic", "D. Meta"],
+            answer: "C",
+            explanation: "Claude是Anthropic公司开发的AI助手，于2023年3月首次发布。"
+        },
+        {
+            question: "LLM指的是什么？",
+            options: ["A. Low-Level Machine", "B. Large Language Model", "C. Linear Learning Method", "D. Long Memory Module"],
+            answer: "B",
+            explanation: "LLM是Large Language Model(大型语言模型)的缩写，指参数量巨大的语言模型。"
+        },
+        {
+            question: "以下哪个不是GPT-4的新能力？",
+            options: ["A. 多模态理解", "B. 代码生成", "C. 通过律师考试", "D. 实时互联网浏览"],
+            answer: "D",
+            explanation: "GPT-4在2023年3月发布时不具备实时互联网浏览能力，这一功能后来通过插件实现。"
+        },
+        {
+            question: "LLaMA是Meta发布的什么类型的模型？",
+            options: ["A. 图像生成模型", "B. 开源大语言模型", "C. 语音识别模型", "D. 推荐系统模型"],
+            answer: "B",
+            explanation: "LLaMA是Meta发布的开源大语言模型系列，于2023年2月首次发布。"
+        },
+        {
+            question: "Prompt Engineering（提示工程）是指？",
+            options: ["A. 设计AI硬件", "B. 优化输入提示以获得更好的输出", "C. 训练AI模型", "D. 数据标注"],
+            answer: "B",
+            explanation: "提示工程是指设计和优化输入提示（prompt）以获得更好AI输出的技术和方法。"
+        },
+        {
+            question: "以下哪家公司在2023年发布了Gemini多模态模型？",
+            options: ["A. Microsoft", "B. OpenAI", "C. Google", "D. Amazon"],
+            answer: "C",
+            explanation: "Google在2023年12月发布了Gemini，这是一个多模态AI模型系列。"
+        },
+        {
+            question: "RAG技术用于？",
+            options: ["A. 图像生成", "B. 增强AI的知识获取能力", "C. 语音合成", "D. 模型压缩"],
+            answer: "B",
+            explanation: "RAG(检索增强生成)通过结合外部知识库来增强大语言模型的知识获取能力。"
+        }
+    ];
+    
+    function renderQuiz() {
+        const container = document.getElementById('q-container');
+        container.innerHTML = questions.map((q, i) => `
+            <div class="question-num">第${i+1}题</div>
+            <div class="question">${q.question}</div>
+            <div class="options">
+                ${q.options.map((opt, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${opt}</label>`).join('')}
+            </div>
+        `).join('');
+    }
+    
+    function submitQuiz() {
+        let score = 0;
+        const answers = [];
+        
+        questions.forEach((q, i) => {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const userAnswer = selected ? selected.value : null;
+            const correct = q.answer;
+            
+            if (userAnswer === correct) {
+                score++;
+                answers.push({index: i, correct: true, user: userAnswer, correct: correct});
+            } else {
+                answers.push({index: i, correct: false, user: userAnswer, correct: correct});
+            }
+        });
+        
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${score}/10`;
+        document.getElementById('score-text').textContent = score >= 7 ? '太棒了！' : score >= 5 ? '不错哦！' : '继续加油！';
+        
+        window.answers = answers;
+    }
+    
+    function showAnalysis() {
+        const container = document.getElementById('analysis');
+        container.style.display = 'block';
+        container.innerHTML = '<h2>📝 答案解析</h2>' + window.answers.map(a => `
+            <div class="analysis-item">
+                <div class="${a.correct ? 'correct' : 'wrong'}">
+                    <strong>第${a.index+1}题：${a.correct ? '✅ 正确' : '❌ 错误'}</strong>
+                </div>
+                <div>你的答案：${a.user || '未作答'} · 正确答案：${a.correct}</div>
+                <div style="margin-top:8px; color:#ccc;">📖 ${questions[a.index].explanation}</div>
+            </div>
+        `).join('');
+    }
+    
+    renderQuiz();
+    </script>
+</body>
+</html>
