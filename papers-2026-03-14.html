@@ -2,156 +2,63 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI论文速递 2026-03-14</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
-        .topic { margin-bottom: 50px; }
-        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
-        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
-        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
-        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
-        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
-        .paper .abstract-en { color: #555; font-size: 0.9em; line-height: 1.6; }
-        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
-        .back { text-align: center; margin-bottom: 30px; }
-        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
-        .footer { text-align: center; padding: 40px; color: #888; }
+        body { font-family: -apple-system; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
+        .paper { background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; }
+        .paper h3 { color: #333; }
+        .title-cn { color: #667eea; font-size: 0.9em; }
+        .meta { color: #888; font-size: 0.8em; }
+        .abstract { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-top: 10px; }
+        .abstract-en { color: #555; font-size: 0.85em; }
+        .abstract-cn { color: #2563eb; font-size: 0.85em; background: #eff6ff; padding: 10px; border-radius: 6px; margin-top: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="back"><a href="/">← 返回首页</a></div>
         <div class="header">
             <h1>📚 AI论文速递 2026-03-14</h1>
-            <p>完整摘要版 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
-        </div><div class="topic"><h2>📄 LLM</h2>
-            <div class="paper">
-                <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
-                <div class="meta">作者: Tianwei Xiong, Jun Hao Liew, Zilong Huang... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12267v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
-                <div class="meta">作者: Haozhan Shen, Shilin Yan, Hongwei Xue... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12266v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
-                <div class="meta">作者: Yibin Yan, Jilan Xu, Shangzhe Di... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12265v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing</h3>
-                <div class="meta">作者: Mingxin Liu, Ziqian Fan, Zhaokai Wang... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12264v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
-                <div class="meta">作者: Songlin Wei, Hongyi Jing, Boqian Li... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \ours\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\times$ as much data by over 40\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12263v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously</h3>
-                <div class="meta">作者: Yiran Guan, Liang Yin, Dingkang Liang... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response latency. To address this trade-off, we propose Video Streaming Thinking (VST), a novel paradigm for streaming video understanding. It supports a thinking while watching mechanism, which activates reasoning over incoming video clips during streaming. This design improves timely comprehension and coherent cognition while preserving real-time responsiveness by amortizing LLM reasoning latency over video playback. Furthermore, we introduce a comprehensive post-training pipeline that integrates VST-SFT, which structurally adapts the offline VideoLLM to causal streaming reasoning, and VST-RL, which provides end-to-end improvement through self-exploration in a multi-turn video interaction environment. Additionally, we devise an automated training-data synthesis pipeline that uses video knowledge graphs to generate high-quality streaming QA pairs, with an entity-relation grounded streaming Chain-of-Thought to enforce multi-evidence reasoning and sustained attention to the video stream. Extensive evaluations show that VST-7B performs strongly on online benchmarks, e.g. 79.5% on StreamingBench and 59.3% on OVO-Bench. Meanwhile, VST remains competitive on offline long-form or reasoning benchmarks. Compared with Video-R1, VST responds 15.7 times faster and achieves +5.4% improvement on VideoHolmes, demonstrating higher efficiency and strong generalization across diverse video understanding tasks. Code, data, and models will be released at https://github.com/1ranGuan/VST.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12262v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
-                <div class="meta">作者: Mateusz Pach, Jessica Bader, Quentin Bouniot... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12261v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>Emergent Anomalous Hall Effect from Surface States in the Altermagnet MnTe Thin Films</h3>
-                <div class="meta">作者: Yufei Zhao, Saswata Mandal, Chao-Xing Liu... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Transport measurements on thin films of the prototypical altermagnet MnTe have reported conflicting phenomena of anomalous Hall effects (AHE), including opposite signs and thickness-independent resistivity. Here we resolve these discrepancies by separating bulk and surface contributions to the AHE for different crystal terminations. Using first-principles calculations and symmetry-based effective models, we show that although the bulk hosts a characteristic $g$-wave Fermi surface, surface states within the bulk gap acquire a ferromagnet-like spin polarization and dominate the AHE at experimentally relevant Fermi energies. While the surface magnetization follows the surface spin sublattice, the resulting AHE is uniquely determined by the bulk Néel order for a given termination. Both bulk and surface contributions are closely linked to a small but finite out-of-plane orbital magnetization. Incorporating realistic interfacial chemistry further reveals that a Te capping layer can reverse the surface AHE sign relative to that on an InP substrate. Our results establish a microscopic framework for interpreting and engineering AHE responses in altermagnetic thin films through interface design.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12259v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>Stable Topology in Exactly Flat Bands</h3>
-                <div class="meta">作者: Yan-Qi Li, Yi-Jie Wang, Pei-Han Lin... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Topological flat bands (FBs) offer an ideal platform for realizing exotic topological phases, such as fractional Chern insulators, yet their realization with both exact flatness and stable topology in local lattice models has been long hindered by fundamental no-go theorems. Here, we overcome this barrier by demonstrating the existence of critical topological FBs (CTFBs) in finite-range hopping models. They saturate the no-go theorems via a unique structure of Bloch wavefunctions: While continuous over the whole Brillouin zone, the wavefunctions are non-analytic at isolated band touching points, thereby relaxing the inherent restrictions on the coexistence of exact flatness and stable topology. We establish a general principle to construct CTFBs, as well as their parent Hamiltonians, that carry desired topological invariants in given space groups. Explicit examples exhibiting Chern numbers, strong $\mathbb{Z}_2$ index, and crystalline-symmetry-protected invariants in two and three dimensions are provided. Furthermore, an automated algorithm identifies more than 50,000 robust, symmetry-indicated CTFBs. Filling such CTFBs yields short-range entangled topological states that exhibit power-law correlations. Crucially, all filled CTFB states admit exact tensor-network representations with finite bond dimensions, providing a tractable starting point for exploring strongly correlated topological matter.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12258v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
-                <div class="meta">作者: Yujie Wei, Xinyu Liu, Shiwei Zhang... | 主题: LLM</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">📖 阅读原文 →</a></div>
-            </div></div><div class="topic"><h2>📄 CV</h2>
-            <div class="paper">
-                <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
-                <div class="meta">作者: Tianwei Xiong, Jun Hao Liew, Zilong Huang... | 主题: CV</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12267v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
-                <div class="meta">作者: Haozhan Shen, Shilin Yan, Hongwei Xue... | 主题: CV</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12266v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
-                <div class="meta">作者: Yibin Yan, Jilan Xu, Shangzhe Di... | 主题: CV</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12265v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing</h3>
-                <div class="meta">作者: Mingxin Liu, Ziqian Fan, Zhaokai Wang... | 主题: CV</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12264v1" target="_blank">📖 阅读原文 →</a></div>
-            </div>
-            <div class="paper">
-                <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
-                <div class="meta">作者: Songlin Wei, Hongyi Jing, Boqian Li... | 主题: CV</div>
-                <div class="abstract">
-                    <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \ours\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\times$ as much data by over 40\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.</div>
-                </div>
-                <div class="link"><a href="http://arxiv.org/abs/2603.12263v1" target="_blank">📖 阅读原文 →</a></div>
-            </div></div>
-        <div class="footer">
-            <p>数据来源: arXiv | 每天8点自动更新</p>
+            <p>中英文对照 | 🦐 伊利虾</p>
+        </div><div class="paper">
+        <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
+        <div class="title-cn">**EVATok：自适应长度视频标记化，用于高效的视觉自回归生成**</div>
+        <div class="meta">LLM</div>
+        <div class="abstract">
+            <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these...</div>
+            <div class="abstract-cn">📝 自回归（AR）视频生成模型依赖于将像素压缩为离散 token 序列的视频分词器（video tokenizer）。这些 token 序列的长度对于在重建质量和下游生成计算成本之间取得平衡至关重要。传统的视频分词器在不同的视频时间块上采用统一的 token 分配，常常在简单、静态或重复的片段上浪费 token，而在动态或复杂的片段上分配不足。为解决这种低效问题，我们提出 **EVATok**（**E**fficient **V**ideo **A**daptive **Tok**enizers）框架。我们的框架能够为每个视频估计最优的 token 分配，以实现最佳的质量‑成本权衡；开发轻量级路由器（router）用于快速预测这些最优分配；并训练自适应分词器，使其根据路由器预测的分配方案对视频进行编码。我们证明 EVATok 在视频重建和下游 AR 生成任务上实现了显著的效率提升和整体质量改进。得益于我们融合视频语义编码器的高级训练配方，EVATok 在 UCF‑101 数据集上实现了卓越的重建效果和领先的类‑视频生成性能，同时相较于先前最优的 LARP 以及固定长度的基线方法，平均 token 使用量至少节约 24.4%。</div>
         </div>
-    </div>
-</body>
-</html>
+    </div><div class="paper">
+        <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+        <div class="title-cn">MM‑CondChain：视觉基础的深度组合推理的编程验证基准</div>
+        <div class="meta">LLM</div>
+        <div class="abstract">
+            <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multipl...</div>
+            <div class="abstract-cn">📝 多模态大型语言模型（MLLMs）正越来越多地被用于执行视觉工作流，例如导航图形用户界面（GUI），其中下一步操作取决于经过验证的视觉组合条件（例如“如果出现权限对话框且界面颜色为绿色，则点击允许”），并且该过程可能会分支或提前终止。然而，这一能力仍然缺乏充分评估：现有基准测试侧重于浅层组合或独立约束，而非深度链式组合条件。在本文中，我们引入了MM-CondChain，一个用于视觉 grounded 深度组合推理的基准测试。每个基准实例都被组织为多层推理链，其中每一层都包含一个基于视觉证据构建的非平凡组合条件，由多个对象、属性或关系组成。要正确回答，MLLM必须详细感知图像，在每一步对多个视觉元素进行推理，并遵循生成的执行路径直到最终结果。为了可扩展地构建此类工作流风格的数据，我们提出了一个智能体合成管道：规划器（Planner）负责逐层生成分组合条件，而可验证的程序化中间表示（VPIR）则确保每一层的条件在机械上是可验证的。随后，组合器（Composer）将这些经过验证的层组装成完整的指令。使用该管道，我们在三个视觉领域中构建了基准测试：自然图像、数据图表和GUI。</div>
+        </div>
+    </div><div class="paper">
+        <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+        <div class="title-cn">OmniStream：掌握连续流中的感知、重建与动作</div>
+        <div class="meta">LLM</div>
+        <div class="abstract">
+            <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric rec...</div>
+            <div class="abstract-cn">📝 现代视觉智能体需要通用、因果且物理结构化的表征，才能在实时流式环境中运行。然而，当前的视觉基础模型仍然碎片化，狭义地专注于图像语义感知、离线时序建模或空间几何。本论文推出了OmniStream——一种统一的流式视觉主干网络，能够从多样化的视觉输入中进行有效感知、重建和行动。我们的模型通过结合因果时空注意力和3D旋转位置嵌入（3D-RoPE），支持通过持久KV缓存对视频流进行高效的逐帧在线处理。我们使用协同多任务框架对OmniStream进行预训练，将静态和时序表征学习、流式几何重建以及视觉-语言对齐结合在29个数据集上。大量评估表明，即使使用完全冻结的主干网络，OmniStream在图像和视频探测、流式几何重建、复杂视频和空间推理以及机器人操作（训练中未见过）等任务上，也能持续保持与专业专家模型相当的竞争力。我们的工作并非追求在特定基准上占据优势，而是展示了训练一个单一、多功能视觉主干网络的可行性——该网络能够泛化到语义、空间和时序推理，即向交互式和具身智能体的通用视觉理解迈出了更有意义的一步。</div>
+        </div>
+    </div><div class="paper">
+        <h3>GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing</h3>
+        <div class="title-cn">GRADE：图像编辑中基于学科信息的推理基准</div>
+        <div class="meta">LLM</div>
+        <div class="abstract">
+            <div class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal subs...</div>
+            <div class="abstract-cn">📝 统一多模态模型旨在实现联合理解、推理和生成，但当前的图像编辑基准主要局限于自然图像和浅层次的常识推理，难以在结构化、领域特定的约束下对该能力进行充分评估。本工作提出 **GRADE**——首个用于评估图像编辑中学科感知知识与推理能力的基准。GRADE 包含 520 个精心筛选的样本，涵盖 10 个学术领域，从自然科学到社会科学不等。为了支持严格的评估，我们提出了一种多维评估协议，同时评估**学科推理**、**视觉一致性**和**逻辑可读性**。对 20 个最先进的开源和闭源模型进行的大规模实验表明，当前模型在隐性的、知识密集的编辑场景下存在显著不足，导致性能差距明显。除了定量分数外，我们还进行了深入的分析和消融实验，以揭示模型的缺陷并明确学科编辑中的限制。综合来看，GRADE 为统一多模态模型的未来发展指明了关键方向，推动了学科感知图像编辑与推理的研究。基准和评估代码已公开。</div>
+        </div>
+    </div><div class="paper">
+        <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
+        <div class="title-cn">$Ψ_0$：一个面向通用类人机器人运动与操作的开放基础模型</div>
+        <div class="meta">LLM</div>
+        <div class="abstract">
+            <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acqui...</div>
+            <div class="abstract-cn">📝 我们推出 $Ψ_0$（Psi-Zero），一个用于解决挑战性人形机器人locomotion-manipulation任务的开源基础模型。现有的方法通常尝试通过在大型且多样化的人类和人形机器人数据上进行联合训练来解决这一基本问题，但我们认为由于人类和人形机器人之间存在根本性的运动学和运动差异，这种策略并非最优的。因此，尽管数据量相当可观，数据效率和模型性能仍然不尽如人意。为应对这一挑战，\ours\;将学习过程解耦，以最大化异构数据源的效用。具体而言，我们提出了一种具有不同学习目标的多阶段训练范式：首先，我们在大型自我中心人类视频上自回归地预训练一个视觉语言模型（VLM）主干，以获得可泛化的视觉-动作表示。然后，我们在高质量的人形机器人数据上后训练一个基于流（flow）的动作专家，以学习精确的机器人关节控制。我们的研究进一步发现了一个关键但经常被忽视的数据配方：与那些使用嘈杂的互联网片段或异构跨本体机器人数据集进行扩展的方法不同，我们证明在高质量的自我中心人类manipulation数据上进行预训练，然后在特定领域的真实世界人形机器人轨迹上进行后训练，可以获得卓越的性能。大量真实世界实验表明，\ours\;仅使用约800小时的人类视频数据和30小时的人形机器人数据就实现了最佳性能。</div>
+        </div>
+    </div></div></body></html>
