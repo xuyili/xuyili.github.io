@@ -28,6 +28,94 @@
         <div class="title-cn">➡️ To Words and Beyond: Probing Large Language Models for Sentence-Level Psycholinguistic Norms of Memorability and Reading Times</div>
         <div class="meta">👤 Thomas Hikaru Clark, Carlos Arriaga, Javier Conde | 2026-03-12</div>
         <div class="abstract">
+            <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) ...</div>
+            <div class="abstract-cn">📝 &lt;think&gt;
+用户要求将一段关于"加速扩散模型方法"的英文技术文档翻译成中文。这段文字介绍了一种名为BiGain的新框架，用于在加速扩散模型中同时保持生成质量和提高分类能力。
+
+让我仔细翻译这段文字：
+
+"Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity."
+
+扩散模型的加速方法（例如token合并或下采样）通常在减少计算量的同时优化合成质量，但往往忽视判别能力。
+
+"We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models."
+
+我们重新审视token压缩的联合目标，并提出BiGain，这是一个无需训练、即插即用的框架，在加速扩散模型中保持生成质量的同时提高分类性能。
+
+"Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representation disentangles fine detail from global semantics, enabling compression that respects both generative fidelity and discriminative utility."
+
+我们的关键洞察是频率分离：将特征空间信号映射到频率感知表示中，将精细细节与全局语义解耦，从而使压缩同时尊重生成保真度和判别效用。
+
+"BiGain reflects this principle with two frequency-aware operators: (1) Laplacian-gated token merging, which encourages merges among spectrally smooth tokens while discouraging merges of high-contrast tokens, thereby retaining edges and textures; and (2) Interpolate-Extrapolate KV Downsampling, which downsamples keys/values via a controllable interextrapolation between nearest and average pooling while keeping queries intact, thereby conserving attention precision."
+
+BiGain通过两个频率感知算子来体现这一原则：(1) 拉普拉斯门控token合并，它鼓励在光谱平滑的token之间进行合并，同时阻止高对比度token的合并，从而保留边缘和纹理；(2) 插值-外推KV下采样，它通过在最近邻池化和平均池化之间进行可控的interextrapolation来下采样键/值，同时保持查询不变，从而保留注意力精度。
+
+I'll continue the translation by completing the partial sentence about the datasets used for evaluation. The research evaluated BiGain across multiple image datasets, including ImageNet-1K, ImageNet-100, Oxford-IIIT Pets, and another dataset that was not fully specified in the original text. The evaluation likely compared performance across different model architectures like DiT and U-Net to demonstrate the framework's versatility.
+&lt;/think&gt;
+
+以下是翻译：
+
+扩散模型的加速方法（例如 token 合并或下采样）通常在降低计算量的同时优化合成质量，但往往忽视了判别能力。我们重新审视 token 压缩的联合目标，并提出 BiGain——一个无需训练、即插即用的框架，能够在加速扩散模型中保持生成质量的同时提升分类性能。我们的关键洞察是频率分离：将特征空间信号映射到频率感知的表示中，将精细细节与全局语义解耦，从而使压缩能够同时兼顾生成保真度和判别效用。BiGain 体现了这一原则，包含两个频率感知算子：（1）拉普拉斯门控 token 合并，它鼓励在光谱平滑的 token 之间进行合并，同时阻止高对比度 token 的合并，从而保留边缘和纹理；（2）插值-外推 KV 下采样，它通过在最近邻池化和平均池化之间进行可控的插值-外推来下采样键/值，同时保持查询不变，从而保留注意力精度。在基于 DiT 和 U-Net 的骨干网络以及 ImageNet-1K、ImageNet-100、Oxford-IIIT Pets 和 CO...
+
+（原文在此处中断）</div>
+            <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framew...</div>
+            <div class="abstract-cn">📝 &lt;think&gt;
+We need to translate the provided English paragraph into Chinese. It is a fairly technical description about a framework called STAMP (Selective Task-Aware Mechanism for Text Privacy), describing its method.
+
+We must translate accurately, preserving meaning and terminology. Need to translate "Selective Task-Aware Mechanism for Text Privacy", "privacy-utility trade-off", "privacy budgets", "tokens", "downstream task", "task- or query-specific representation", "privacy sensitivity", "token-level partitioning", "fine-grained, group-wise control", "noise", "privacy protection with task relevance", "privatize individual token embeddings", "polar mechanism", "perturb only the direction of embeddings on the unit sphere while preserving their magnitude", "decoding", "cosine nearest-neighbor search", "perturbation geometry", "decoding geometry", "isotropic noise mechanisms", "semantic neighborhoods", "embedding space", "downstream utility", "Experimental evaluations", "SQuAD", "Yelp", "AG News datasets", "normalized polar mechani" (the text is truncated at the end; but we can guess perhaps "mechanism").
+
+We should ensure translation is fluent and coherent in Chinese. Provide translation. Probably want to translate as "我们提出了 STAMP（文本隐私的选择性任务感知机制），一个在任务感知的文本隐私化框架，实现了更好的隐私-效用权衡。STAMP 通过联合考虑（i）每个 token 对下游任务的重要性（通过任务或查询特定的表示来衡量），以及（ii）其隐私敏感度（例如姓名、日期、标识符），在 token 层面有选择性地分配隐私预算。这种 token 级分区实现了对输入不同部分噪声水平的细粒度、组级别控制，从而在隐私保护和任务相关性之间取得平衡。为了对单个 token 嵌入进行隐私化处理，我们引入了极化机制（polar mechanism），该机制仅扰动单位球面上嵌入的方向，同时保留其幅度。解码通过余弦最近邻搜索执行，使扰动几何与解码几何保持一致。与各向同性噪声机制不同，极化机制保持了嵌入空间中的语义邻域，从而更好地保留了下游任务的效用。在 SQuAD、Yelp 和 AG News 数据集上的实验评估表明，STAMP 与归一化极化机制相结合，..."
+
+We need to handle truncated ending: "normalized polar mechani". Likely "normalized polar mechanism". So we can translate "normalized polar mechanism" as "归一化极化机制". Also "STAMP, when combined with the normalized polar mechani" maybe ends with "mechanism".
+
+Thus final translation: Chinese full. Also ensure that it's "完整翻译为中文".
+
+Let's translate.
+&lt;/think&gt;
+
+我们提出了 STAMP（Selective Task‑Aware Mechanism for Text Privacy，文本隐私的选择性任务感知机制），这是一种任务感知的文本隐私化框架，能够在隐私‑效用之间实现更优的权衡。STAMP 通过联合考虑（i）每个词元（token）对下游任务的重要性——即通过任务或查询特定的表示来度量——以及（ii）其隐私敏感度（如姓名、日期、标识符等），在词元层面上有选择性地分配隐私预算。这种词元级分区实现了对输入不同部分噪声水平的细粒度、组级别控制，从而在隐私保护与任务相关性之间取得平衡。
+
+为了对单个词元的嵌入进行隐私化处理，我们引入了**极化机制（polar mechanism）**。该机制仅扰动单位球面上嵌入向量的方向，而保留其幅度。解码时采用余弦最近邻搜索，使扰动几何与解码几何相匹配。与各向同性噪声机制不同，极化机制能够保持嵌入空间中的语义邻域，从而更好地保留下游任务的效用。
+
+在 SQuAD、Yelp 和 AG News 数据集上的实验评估表明，STAMP 与归一化极化机制（normalized polar mechanism）相结合，……（原文在此处截断）</div>
+            <div class="abstract-en">📄 Learning good representations is essential for latent planning with world models...</div>
+            <div class="abstract-cn">📝 &lt;think&gt;
+The user asks: "完整翻译为中文：" followed by a paragraph in English, about learning representations, temporal straightening, etc. They want a full translation to Chinese (presumably Simplified Chinese). So I need to translate the entire paragraph to Chinese. They likely want a proper translation that is natural and complete.
+
+Thus answer: translation.
+
+But let's think about any nuance. The paragraph: "Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straightened latent trajectories, we jointly learn an encoder and a predictor. We show that reducing curvature this way makes the Euclidean distance in latent space a better proxy for the geodesic distance and improves the conditioning of the planning objective. We demonstrate empirically that temporal straightening makes gradient-based planning more stable and yields significantly higher success rates across a suite of goal-reaching tasks."
+
+We translate. There's a term "latent planning" - perhaps "潜在规划". "world models" - "世界模型". "pretrained visual encoders" - "预训练视觉编码器". "semantic visual features" - "语义视觉特征". "perceptual straightening hypothesis" - "感知直线化假设". "temporal straightening" - "时序直线化". "curvature regularizer" - "曲率正则化器". "locally straightened latent trajectories" - "局部平直化的潜在轨迹". "encoder and predictor" - "编码器与预测器". "Euclidean distance" - "欧氏距离". "geodesic distance" - "测地线距离". "conditioning of the planning objective" - "规划目标的conditioning"? Perhaps "规划目标的条件数" or "规划目标的良态性". Could be "conditioning" meaning well-conditioning. In optimization, "conditioning" refers to condition number, so "改善了规划目标的条件数". Might be okay. Or "改进规划目标的条件" is ambiguous. Maybe "改善了规划目标的数值稳定性". But they mention "conditioning of the planning objective", which probably refers to making it better conditioned. So translate as "改善了规划目标的数值特性" or "使规划目标的条件数更好". We'll pick "改善了规划目标的数值条件". Or "使规划目标更易优化". There's nuance. Then "gradient-based planning" - "基于梯度的规划". "suite of goal-reaching tasks" - "一系列目标到达任务". That seems fine.
+
+Let's translate fully.
+
+First sentence: "学习良好的表示对于使用世界模型的潜在规划至关重要。" Good.
+
+Second: "虽然预训练的视觉编码器能产生强大的语义视觉特征，但它们并未针对规划进行定制，且包含与规划无关——甚至对规划有害——的信息。" Good.
+
+Third: "受人类视觉处理中的感知直线化假说的启发，我们引入时序直线化来改进潜在规划的表示学习。" Good.
+
+Fourth: "我们使用一种鼓励局部平直化潜在轨迹的曲率正则化器，联合学习编码器和预测器。" Good.
+
+Fifth: "我们表明，通过这种方式降低曲率能使潜在空间中的欧氏距离更好地逼近测地线距离，并改善规划目标的数值条件。" Good.
+
+Sixth: "我们通过实验证明，时序直线化使基于梯度的规划更加稳定，并在一系列目标到达任务中显著提高了成功率。" Good.
+
+Thus final answer is translation. Let's include appropriate Chinese translation. Perhaps add a short note? The user just wants translation. So just provide translation. Use Chinese punctuation maybe.
+
+Thus answer: translation. Use proper Chinese.
+
+I'll output:
+
+"学习良好的表示对于使用世界模型的潜在规划至关重要。"
+
+Make sure to keep all. Should include quotes? Not necessary. The user asked "完整翻译为中文：" then the paragraph. So we can just give the translation.
+
+Now final.
+&lt;/think&gt;
+
+学习良好的表示对于使用世界模型的潜在规划至关重要。虽然预训练的视觉编码器能够产生强大的语义视觉特征，但它们并未针对规划进行定制，而且包含与规划无关——甚至对规划有害——的信息。受到人类视觉处理中感知直线化假说的启发，我们引入时序直线化来改进潜在规划的表示学习。我们使用一种鼓励局部平直化潜在轨迹的曲率正则化器，联合学习编码器和预测器。我们表明，通过这种方式降低曲率能够使潜在空间中的欧氏距离更好地逼近测地线距离，并改善规划目标的数值条件。我们通过实验证明，时序直线化使得基于梯度的规划更加稳定，并在多种目标到达任务中显著提升了成功率。</div>
             <div class="abstract-en">📄 Large Language Models (LLMs) have recently been shown to produce estimates of psycholinguistic norms, such as valence, arousal, or concreteness, for words and multiword expressions, that correlate with human judgments. These estimates are obtained by prompting an LLM, in zero-shot fashion, with a question similar to those used in human studies. Meanwhile, for other norms such as lexical decision time or age of acquisition, LLMs require supervised fine-tuning to obtain results that align with ground-truth values. In this paper, we extend this approach to the previously unstudied features of sentence memorability and reading times, which involve the relationship between multiple words in a sentence-level context. Our results show that via fine-tuning, models can provide estimates that correlate with human-derived norms and exceed the predictive power of interpretable baseline predictors, demonstrating that LLMs contain useful information about sentence-level features. At the same time, our results show very mixed zero-shot and few-shot performance, providing further evidence that care is needed when using LLM-prompting as a proxy for human cognitive measures.</div>
         </div>
     </div><div class="paper">
