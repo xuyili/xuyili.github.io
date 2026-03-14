@@ -7,179 +7,510 @@
         body { font-family: -apple-system; padding: 20px; background: #f5f5f5; }
         .container { max-width: 1000px; margin: 0 auto; }
         .header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
+        .topic { margin-bottom: 40px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.4em; margin-bottom: 15px; border-bottom: 3px solid #667eea; padding-bottom: 8px; }
         .paper { background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; }
-        .paper h3 { color: #333; }
-        .title-cn { color: #667eea; font-size: 0.9em; margin-bottom: 8px; }
-        .meta { color: #888; font-size: 0.8em; }
-        .abstract { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-top: 10px; }
-        .abstract-en { color: #555; font-size: 0.85em; }
-        .abstract-cn { color: #2563eb; font-size: 0.85em; background: #eff6ff; padding: 10px; border-radius: 6px; margin-top: 8px; }
+        .paper h3 { color: #333; font-size: 1em; }
+        .title-cn { color: #667eea; font-size: 1.1em; font-weight: bold; margin-bottom: 10px; }
+        .meta { color: #888; font-size: 0.85em; margin-bottom: 10px; }
+        .abstract { background: #f8f9fa; padding: 12px; border-radius: 8px; }
+        .abstract-en { color: #555; font-size: 0.9em; }
+        .abstract-cn { color: #2563eb; font-size: 0.95em; background: #eff6ff; padding: 12px; border-radius: 6px; margin-top: 8px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
             <h1>📚 AI论文速递 2026-03-14</h1>
-            <p>中英文对照 | 🦐 伊利虾</p>
+            <p>7大领域 × 多篇 | 🦐 伊利虾</p>
+        </div><div class="topic"><h2>🔥 LLM</h2><div class="paper">
+            <h3>To Words and Beyond: Probing Large Language Models for Sentence-Level Psycholinguistic Norms of Memorability and Reading Times</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Thomas Hikaru Clark, Carlos Arriaga, Javier Conde</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Large Language Models (LLMs) have recently been shown to produce estimates of psycholinguistic norms, such as valence, arousal, or concreteness, for words and multiword expressions, that correlate with human judgments. These estimates are obtained by prompting an LLM, in zero-shot fashion, with a question similar to those used in human studies. Meanwhile, for other norms such as lexical decision time or age of acquisition, LLMs require supervised fine-tuning to obtain results that align with gro...</div>
+            </div>
         </div><div class="paper">
-        <h3>A Persona-based Multi-turn Conversation Model in an Adversarial Learning Framework</h3>
-        <div class="title-cn">through [20].</div>
-        <div class="meta">stat.ML | 2019-04-29</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 In this paper, we extend the persona-based sequence-to-sequence (Seq2Seq) neural network conversation model to multi-turn dialogue by modifying the state-of-the-art hredGAN architecture. To achieve this, we introduce an additional input modality into the encoder and decoder of hredGAN to capture other attributes such as speaker identity, location, sub-topics, and other external attributes that might be available from the corpus of human-to-human interactions. The resulting persona hredGAN ($phre...</div>
-            <div class="abstract-cn">📝 在本文中，我们通过修改最先进的hredGAN架构，将基于人格的序列到序列（Seq2Seq）神经对话模型扩展到多轮对话。为此，我们在hredGAN的编码器和解码器中引入额外的输入模态，以捕获其他属性，如说话人身份、地点、子主题以及人机交互语料库中可能存在的其他外部属性。由此产生的人格化hredGAN（$phre</div>
-        </div>
-    </div><div class="paper">
-        <h3>A Content-Based Approach to Email Triage Action Prediction: Exploration and Evaluation</h3>
-        <div class="title-cn">A Content-Based Approach to Email Triage Action Prediction: Exploration and Evaluation</div>
-        <div class="meta">stat.ML | 2019-04-30</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Email has remained a principal form of communication among people, both in enterprise and social settings. With a deluge of emails crowding our mailboxes daily, there is a dire need of smart email systems that can recover important emails and make personalized recommendations. In this work, we study the problem of predicting user triage actions to incoming emails where we take the reply prediction as a working example. Different from existing methods, we formulate the triage action prediction as...</div>
-            <div class="abstract-cn">📝 电子邮件一直是人们在企业和社会环境中交流的主要形式。随着大量邮件涌入我们的邮箱，智能邮件系统能够恢复重要邮件并进行个性化推荐的需求变得迫切。在本工作中，我们研究预测用户对 incoming 邮件的处理操作的问题，我们将回复预测作为一个工作示例。与现有方法不同，我们将处理操作预测表述为</div>
-        </div>
-    </div><div class="paper">
-        <h3>Who wrote this book? A challenge for e-commerce</h3>
-        <div class="title-cn">Who wrote this book? A challenge for e-commerce</div>
-        <div class="meta">stat.ML | 2019-04-19</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Modern e-commerce catalogs contain millions of references, associated with textual and visual information that is of paramount importance for the products to be found via search or browsing. Of particular significance is the book category, where the author name(s) field poses a significant challenge. Indeed, books written by a given author (such as F. Scott Fitzgerald) might be listed with different authors' names in a catalog due to abbreviations and spelling variants and mistakes, among others...</div>
-            <div class="abstract-cn">📝 现代电子商务目录包含数百万个条目，附带对产品通过搜索或浏览发现至关重要的文本和视觉信息。书籍类别尤其重要，因为作者名字段带来了重大挑战。实际上，同一作者（如F. Scott Fitzgerald）所著的书籍在目录中可能以不同的作者名字列出，这可能是由于缩写、拼写变体和错误等原因</div>
-        </div>
-    </div><div class="paper">
-        <h3>Text2Node: a Cross-Domain System for Mapping Arbitrary Phrases to a Taxonomy</h3>
-        <div class="title-cn">Text2Node: a Cross-Domain System for Mapping Arbitrary Phrases to a Taxonomy</div>
-        <div class="meta">stat.ML | 2019-04-11</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Electronic health record (EHR) systems are used extensively throughout the healthcare domain. However, data interchangeability between EHR systems is limited due to the use of different coding standards across systems. Existing methods of mapping coding standards based on manual human experts mapping, dictionary mapping, symbolic NLP and classification are unscalable and cannot accommodate large scale EHR datasets.
-  In this work, we present Text2Node, a cross-domain mapping system capable of ma...</div>
-            <div class="abstract-cn">📝 电子健康记录（EHR）系统在医疗领域得到广泛应用。然而，由于不同系统使用不同的编码标准，EHR系统之间的数据互操作性有限。基于人工专家映射、字典映射、符号NLP和分类的现有编码标准映射方法不可扩展，无法适应大规模的EHR数据集。</div>
-        </div>
-    </div><div class="paper">
-        <h3>A Generative Model for Sampling High-Performance and Diverse Weights for Neural Networks</h3>
-        <div class="title-cn">A Generative Model for Sampling High-Performance and Diverse Weights for Neural Networks</div>
-        <div class="meta">stat.ML | 2019-05-07</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Recent work on mode connectivity in the loss landscape of deep neural networks has demonstrated that the locus of (sub-)optimal weight vectors lies on continuous paths. In this work, we train a neural network that serves as a hypernetwork, mapping a latent vector into high-performance (low-loss) weight vectors, generalizing recent findings of mode connectivity to higher dimensional manifolds. We formulate the training objective as a compromise between accuracy and diversity, where the diversity ...</div>
-            <div class="abstract-cn">📝 最近关于深度神经网络损失景观中模式连接的研究表明，（次）最优权重向量位于连续路径上。在本工作中，我们训练一个作为超网络的神经网络，将潜在向量映射到高性能（低损失）的权重向量，将模式连接的发现推广到更高维度的流形。我们将训练目标表述为准确性和多样性之间的折中，其中多样性</div>
-        </div>
-    </div><div class="paper">
-        <h3>Feature Selection and Feature Extraction in Pattern Analysis: A Literature Review</h3>
-        <div class="title-cn">Feature Selection and Feature Extraction in Pattern Analysis: A Literature Review</div>
-        <div class="meta">stat.ML | 2019-05-07</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Pattern analysis often requires a pre-processing stage for extracting or selecting features in order to help the classification, prediction, or clustering stage discriminate or represent the data in a better way. The reason for this requirement is that the raw data are complex and difficult to process without extracting or selecting appropriate features beforehand. This paper reviews theory and motivation of different common methods of feature selection and extraction and introduces some of thei...</div>
-            <div class="abstract-cn">📝 模式分析通常需要一个预处理阶段来提取或选择特征，以帮助分类、预测或聚类阶段更好地区分或表示数据。提出这一要求的原因是，原始数据复杂且难以处理，除非事先提取或选择适当的特征。本文综述了特征选择和提取的不同常用方法的理论动机，并介绍了其中一些</div>
-        </div>
-    </div><div class="paper">
-        <h3>Decision Making with Machine Learning and ROC Curves</h3>
-        <div class="title-cn">Decision Making with Machine Learning and ROC Curves</div>
-        <div class="meta">stat.ML | 2019-05-05</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 The Receiver Operating Characteristic (ROC) curve is a representation of the statistical information discovered in binary classification problems and is a key concept in machine learning and data science. This paper studies the statistical properties of ROC curves and its implication on model selection. We analyze the implications of different models of incentive heterogeneity and information asymmetry on the relation between human decisions and the ROC curves. Our theoretical discussion is illu...</div>
-            <div class="abstract-cn">📝 受试者工作特征（ROC）曲线是二分类问题中发现的统计信息的表示，是机器学习和数据科学中的一个关键概念。本文研究了ROC曲线的统计特性及其对模型选择的影响。我们分析了不同激励异质性和信息不对称模型对人类决策与ROC曲线之间关系的影响。我们的理论讨论通过</div>
-        </div>
-    </div><div class="paper">
-        <h3>Collaborative and Privacy-Preserving Machine Teaching via Consensus Optimization</h3>
-        <div class="title-cn">Collaborative and Privacy-Preserving Machine Teaching via Consensus Optimization</div>
-        <div class="meta">stat.ML | 2019-05-07</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 In this work, we define a collaborative and privacy-preserving machine teaching paradigm with multiple distributed teachers. We focus on consensus super teaching. It aims at organizing distributed teachers to jointly select a compact while informative training subset from data hosted by the teachers to make a learner learn better. The challenges arise from three perspectives. First, the state-of-the-art pool-based super teaching method applies mixed-integer non-linear programming (MINLP) which d...</div>
-            <div class="abstract-cn">📝 在本工作中，我们定义了一种具有多个分布式教师的协作且保护隐私的机器教学范式。我们专注于共识超级教学。其目标是组织分布式教师，从教师托管的数据中联合选择一个紧凑而信息丰富的训练子集，以使学习者学得更好。挑战来自三个方面。首先，基于池的超级教学方法采用混合整数非线性规划（MINLP），这</div>
-        </div>
-    </div><div class="paper">
-        <h3>Sparseout: Controlling Sparsity in Deep Networks</h3>
-        <div class="title-cn">Sparseout: Controlling Sparsity in Deep Networks</div>
-        <div class="meta">stat.ML | 2019-04-17</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Dropout is commonly used to help reduce overfitting in deep neural networks. Sparsity is a potentially important property of neural networks, but is not explicitly controlled by Dropout-based regularization. In this work, we propose Sparseout a simple and efficient variant of Dropout that can be used to control the sparsity of the activations in a neural network. We theoretically prove that Sparseout is equivalent to an $L_q$ penalty on the features of a generalized linear model and that Dropout...</div>
-            <div class="abstract-cn">📝 Dropout常用于帮助减少深度神经网络的过拟合。稀疏性是神经网络的一个重要潜在特性，但Dropout正则化并未明确控制它。在本工作中，我们提出了Sparseout，这是Dropout的一种简单高效的变体，可用于控制神经网络激活的稀疏性。我们从理论上证明，Sparseout等价于对广义线性模型特征的$L_q$惩罚，并且Dropout</div>
-        </div>
-    </div><div class="paper">
-        <h3>Neural Message Passing for Multi-Label Classification</h3>
-        <div class="title-cn">Neural Message Passing for Multi-Label Classification</div>
-        <div class="meta">stat.ML | 2019-04-17</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Multi-label classification (MLC) is the task of assigning a set of target labels for a given sample. Modeling the combinatorial label interactions in MLC has been a long-haul challenge. We propose Label Message Passing (LaMP) Neural Networks to efficiently model the joint prediction of multiple labels. LaMP treats labels as nodes on a label-interaction graph and computes the hidden representation of each label node conditioned on the input using attention-based neural message passing. Attention ...</div>
-            <div class="abstract-cn">📝 多标签分类（MLC）是为给定样本分配一组目标标签的任务。建模MLC中的组合标签交互一直是一个长期挑战。我们提出了标签消息传递（LaMP）神经网络，以有效地建模多标签的联合预测。LaMP将标签视为标签交互图上的节点，并使用基于注意力的神经消息传递计算每个标签节点在给定输入条件下的隐藏表示。注意</div>
-        </div>
-    </div><div class="paper">
-        <h3>People infer recursive visual concepts from just a few examples</h3>
-        <div class="title-cn">People infer recursive visual concepts from just a few examples</div>
-        <div class="meta">stat.ML | 2019-04-17</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Machine learning has made major advances in categorizing objects in images, yet the best algorithms miss important aspects of how people learn and think about categories. People can learn richer concepts from fewer examples, including causal models that explain how members of a category are formed. Here, we explore the limits of this human ability to infer causal "programs" -- latent generating processes with nontrivial algorithmic properties -- from one, two, or three visual examples. People we...</div>
-            <div class="abstract-cn">📝 机器学习在图像物体分类方面取得了重大进展，但最好的算法仍缺少人类学习和思考类别的关键方面。人们可以从较少的例子中学习更丰富的概念，包括解释类别成员是如何形成的因果模型。在这里，我们探索了人类从一两个或三个视觉示例中推断因果"程序"——具有非平凡算法特性的潜在生成过程——的能力极限。我们</div>
-        </div>
-    </div><div class="paper">
-        <h3>SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula</h3>
-        <div class="title-cn">SynC: A Unified Framework for Generating Synthetic Population with Gaussian Copula</div>
-        <div class="meta">stat.ML | 2019-04-16</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Synthetic population generation is the process of combining multiple socioeconomic and demographic datasets from different sources and/or granularity levels, and downscaling them to an individual level. Although it is a fundamental step for many data science tasks, an efficient and standard framework is absent. In this study, we propose a multi-stage framework called SynC (Synthetic Population via Gaussian Copula) to fill the gap. SynC first removes potential outliers in the data and then fits t...</div>
-            <div class="abstract-cn">📝 综合人口生成是组合来自不同来源和/或粒度水平的多个社会经济人口数据集，并将其下缩放到个体级别的过程。尽管这是许多数据科学任务的基本步骤，但缺乏高效的标准框架。在本研究中，我们提出了一个名为SynC（通过高斯Copula生成综合人口）的多阶段框架来填补这一空白。SynC首先去除数据中潜在的异常值，然后拟合t</div>
-        </div>
-    </div><div class="paper">
-        <h3>DNN Architecture for High Performance Prediction on Natural Videos Loses Submodule's Ability to Learn Discrete-World Dataset</h3>
-        <div class="title-cn">DNN Architecture for High Performance Prediction on Natural Videos Loses Submodule's Ability to Learn Discrete-World Dataset</div>
-        <div class="meta">stat.ML | 2019-04-16</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Is cognition a collection of loosely connected functions tuned to different tasks, or can there be a general learning algorithm? If such an hypothetical general algorithm did exist, tuned to our world, could it adapt seamlessly to a world with different laws of nature? We consider the theory that predictive coding is such a general rule, and falsify it for one specific neural architecture known for high-performance predictions on natural videos and replication of human visual illusions: PredNet....</div>
-            <div class="abstract-cn">📝 认知是一组松散连接的针对不同任务调优的功能，还是可能存在一种通用学习算法？如果这样一个假设的通用算法确实存在，并为我们的世界调优，它能否无缝地适应具有不同自然法则的世界？我们考虑预测编码是这样一条通用规则的理论，并对一种已知的在自然视频上具有高性能预测并能复现人类视觉错觉的特定神经架构进行证伪：PredNet。</div>
-        </div>
-    </div><div class="paper">
-        <h3>3D Shape Synthesis for Conceptual Design and Optimization Using Variational Autoencoders</h3>
-        <div class="title-cn">3D Shape Synthesis for Conceptual Design and Optimization Using Variational Autoencoders</div>
-        <div class="meta">stat.ML | 2019-04-16</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 We propose a data-driven 3D shape design method that can learn a generative model from a corpus of existing designs, and use this model to produce a wide range of new designs. The approach learns an encoding of the samples in the training corpus using an unsupervised variational autoencoder-decoder architecture, without the need for an explicit parametric representation of the original designs. To facilitate the generation of smooth final surfaces, we develop a 3D shape representation based on a...</div>
-            <div class="abstract-cn">📝 我们提出了一种数据驱动的3D形状设计方法，能够从现有设计语料库学习生成模型，并使用该模型生成广泛的新设计。该方法使用无监督变分自编码器-解码器架构学习训练语料库中样本的编码，无需对原始设计进行显式参数化表示。为了促进生成平滑的最终表面，我们开发了一种基于</div>
-        </div>
-    </div><div class="paper">
-        <h3>Towards sample-efficient episodic control with DAC-ML</h3>
-        <div class="title-cn">Towards sample-efficient episodic control with DAC-ML</div>
-        <div class="meta">stat.ML | 2020-12-26</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 The sample-inefficiency problem in Artificial Intelligence refers to the inability of current Deep Reinforcement Learning models to optimize action policies within a small number of episodes. Recent studies have tried to overcome this limitation by adding memory systems and architectural biases to improve learning speed, such as in Episodic Reinforcement Learning. However, despite achieving incremental improvements, their performance is still not comparable to how humans learn behavioral policie...</div>
-            <div class="abstract-cn">📝 人工智能中的样本效率问题指的是当前深度强化学习模型无法在少量回合内优化动作策略。最近的研究尝试通过添加记忆系统和架构偏差来提高学习速度来克服这一限制，例如情景强化学习。然而，尽管取得了渐进式改进，它们的性能仍无法与人类学习行为策略的方式相比</div>
-        </div>
-    </div><div class="paper">
-        <h3>Fairness, Welfare, and Equity in Personalized Pricing</h3>
-        <div class="title-cn">Fairness, Welfare, and Equity in Personalized Pricing</div>
-        <div class="meta">stat.ML | 2020-12-21</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 We study the interplay of fairness, welfare, and equity considerations in personalized pricing based on customer features. Sellers are increasingly able to conduct price personalization based on predictive modeling of demand conditional on covariates: setting customized interest rates, targeted discounts of consumer goods, and personalized subsidies of scarce resources with positive externalities like vaccines and bed nets. These different application areas may lead to different concerns around ...</div>
-            <div class="abstract-cn">📝 我们研究个性化定价中基于客户特征的公平性、福利和公平性之间的相互作用。卖家越来越能够基于需求条件预测建模进行价格个性化：设定定制利率、针对消费品的定向折扣，以及对具有正外部性的稀缺资源（如疫苗和蚊帐）提供个性化补贴。这些不同的应用领域可能会导致不同的担忧</div>
-        </div>
-    </div><div class="paper">
-        <h3>Learning Structures in Earth Observation Data with Gaussian Processes</h3>
-        <div class="title-cn">Learning Structures in Earth Observation Data with Gaussian Processes</div>
-        <div class="meta">stat.ML | 2020-12-22</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 Gaussian Processes (GPs) has experienced tremendous success in geoscience in general and for bio-geophysical parameter retrieval in the last years. GPs constitute a solid Bayesian framework to formulate many function approximation problems consistently. This paper reviews the main theoretical GP developments in the field. We review new algorithms that respect the signal and noise characteristics, that provide feature rankings automatically, and that allow applicability of associated uncertainty ...</div>
-            <div class="abstract-cn">📝 高斯过程（GP）在地球科学特别是生物地球物理参数反演方面近年来取得了巨大成功。GP构成了一个坚实的贝叶斯框架，能够一致地表述许多函数近似问题。本文综述了该领域的主要理论GP发展。我们综述了尊重信号和噪声特性、提供自动特征排名并允许相关不确定性应用的新算法</div>
-        </div>
-    </div><div class="paper">
-        <h3>QUACKIE: A NLP Classification Task With Ground Truth Explanations</h3>
-        <div class="title-cn">QUACKIE: A NLP Classification Task With Ground Truth Explanations</div>
-        <div class="meta">stat.ML | 2020-12-24</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 NLP Interpretability aims to increase trust in model predictions. This makes evaluating interpretability approaches a pressing issue. There are multiple datasets for evaluating NLP Interpretability, but their dependence on human provided ground truths raises questions about their unbiasedness. In this work, we take a different approach and formulate a specific classification task by diverting question-answering datasets. For this custom classification task, the interpretability ground-truth aris...</div>
-            <div class="abstract-cn">📝 NLP可解释性旨在增加对模型预测的信任。这使得评估可解释性方法成为一个紧迫的问题。存在多个用于评估NLP可解释性的数据集，但它们对人工提供的真实标签的依赖引发了对无偏性的质疑。在本工作中，我们采用一种不同的方法，通过改造问答数据集来制定一个特定的分类任务。对于这个自定义分类任务，可解释性的真实标签来自</div>
-        </div>
-    </div><div class="paper">
-        <h3>Upper Confidence Bounds for Combining Stochastic Bandits</h3>
-        <div class="title-cn">Upper Confidence Bounds for Combining Stochastic Bandits</div>
-        <div class="meta">stat.ML | 2020-12-24</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 We provide a simple method to combine stochastic bandit algorithms. Our approach is based on a "meta-UCB" procedure that treats each of $N$ individual bandit algorithms as arms in a higher-level $N$-armed bandit problem that we solve with a variant of the classic UCB algorithm. Our final regret depends only on the regret of the base algorithm with the best regret in hindsight. This approach provides an easy and intuitive alternative strategy to the CORRAL algorithm for adversarial bandits, witho...</div>
-            <div class="abstract-cn">📝 我们提供了一种简单的方法来组合随机多臂老虎机算法。我们的方法基于"元UCB"程序，将每个N个单独的老虎机算法视为更高层次N臂老虎机问题的手臂，我们用UCB算法的变体来解决。我们的最终遗憾仅取决于事后具有最佳遗憾的基础算法的遗憾。这种方法为对抗性老虎机提供了CORRAL算法的简单直观替代方案，且</div>
-        </div>
-    </div><div class="paper">
-        <h3>Data Assimilation in the Latent Space of a Neural Network</h3>
-        <div class="title-cn">through [20].</div>
-        <div class="meta">stat.ML | 2020-12-22</div>
-        <div class="abstract">
-            <div class="abstract-en">📄 There is an urgent need to build models to tackle Indoor Air Quality issue. Since the model should be accurate and fast, Reduced Order Modelling technique is used to reduce the dimensionality of the problem. The accuracy of the model, that represent a dynamic system, is improved integrating real data coming from sensors using Data Assimilation techniques. In this paper, we formulate a new methodology called Latent Assimilation that combines Data Assimilation and Machine Learning. We use a Convol...</div>
-            <div class="abstract-cn">📝 迫切需要构建模型来解决室内空气质量问题。由于模型需要准确且快速，我们使用降阶建模技术来降低问题的维度。表示动态系统的模型的准确性通过使用数据同化技术整合来自传感器的实时数据来提高。在本文中，我们提出了一种名为潜变量同化的新方法，结合了数据同化和机器学习。我们使用卷积</div>
-        </div>
-    </div></div></body></html>
+            <h3>SommBench: Assessing Sommelier Expertise of Language Models</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 William Brach, Tomas Bedej, Jacob Nielsen</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 With the rapid advances of large language models, it becomes increasingly important to systematically evaluate their multilingual and multicultural capabilities. Previous cultural evaluation benchmarks focus mainly on basic cultural knowledge that can be encoded in linguistic form. Here, we propose SommBench, a multilingual benchmark to assess sommelier expertise, a domain deeply grounded in the senses of smell and taste. While language models learn about sensory properties exclusively through t...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Cross-Context Review: Improving LLM Output Quality by Separating Production and Review Sessions</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Tae-Eun Song</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Large language models struggle to catch errors in their own outputs when the review happens in the same session that produced them. This paper introduces Cross-Context Review (CCR), a straightforward method where the review is conducted in a fresh session with no access to the production conversation history. We ran a controlled experiment: 30 artifacts (code, technical documents, presentation scripts) with 150 injected errors, tested under four review conditions -- same-session Self-Review (SR)...</div>
+            </div>
+        </div><div class="paper">
+            <h3>TopoBench: Benchmarking LLMs on Hard Topological Reasoning</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Mayug Maniparambil, Nils Hoehing, Janak Kapuriya</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Solving topological grid puzzles requires reasoning over global spatial invariants such as connectivity, loop closure, and region symmetry and remains challenging for even the most powerful large language models (LLMs). To study these abilities under controlled settings, we introduce TopoBench, a benchmark of six puzzle families across three difficulty levels. We evaluate strong reasoning LLMs on TopoBench and find that even frontier models solve fewer than one quarter of hard instances, with tw...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Linking Perception, Confidence and Accuracy in MLLMs</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Yuetian Du, Yucheng Wang, Rongyu Zhang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Recent advances in Multi-modal Large Language Models (MLLMs) have predominantly focused on enhancing visual perception to improve accuracy. However, a critical question remains unexplored: Do models know when they do not know? Through a probing experiment, we reveal a severe confidence miscalibration problem in MLLMs. To address this, we propose Confidence-Driven Reinforcement Learning (CDRL), which uses original-noise image pairs and a novel confidence-based reward to enhance perceptual sensiti...</div>
+            </div>
+        </div><div class="paper">
+            <h3>LifeSim: Long-Horizon User Life Simulator for Personalized Assistant Evaluation</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Feiyu Duan, Xuanjing Huang, Zhongyu Wei</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 The rapid advancement of large language models (LLMs) has accelerated progress toward universal AI assistants. However, existing benchmarks for personalized assistants remain misaligned with real-world user-assistant interactions, failing to capture the complexity of external contexts and users' cognitive states. To bridge this gap, we propose LifeSim, a user simulator that models user cognition through the Belief-Desire-Intention (BDI) model within physical environments for coherent life trajec...</div>
+            </div>
+        </div><div class="paper">
+            <h3>QAQ: Bidirectional Semantic Coherence for Selecting High-Quality Synthetic Code Instructions</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Jiayin Lei, Ming Ma, Yunxi Duan</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Synthetic data has become essential for training code generation models, yet it introduces significant noise and hallucinations that are difficult to detect with current metrics. Existing data selection methods like Instruction-Following Difficulty (IFD) typically assess how hard a model generates an answer given a query ($A|Q$). However, this metric is ambiguous on noisy synthetic data, where low probability can distinguish between intrinsic task complexity and model-generated hallucinations. H...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Łukasz Borchmann, Jordy Van Landeghem, Michał Turski</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multimodal agents offer a promising path to automating complex document-intensive workflows. Yet, a critical question remains: do these agents demonstrate genuine strategic reasoning, or merely stochastic trial-and-error search? To address this, we introduce MADQA, a benchmark of 2,250 human-authored questions grounded in 800 heterogeneous PDF documents. Guided by Classical Test Theory, we design it to maximize discriminative power across varying levels of agentic abilities. To evaluate agentic ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Long-Context Encoder Models for Polish Language Understanding</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Sławomir Dadas, Rafał Poświata, Marek Kozłowski</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 While decoder-only Large Language Models (LLMs) have recently dominated the NLP landscape, encoder-only architectures remain a cost-effective and parameter-efficient standard for discriminative tasks. However, classic encoders like BERT are limited by a short context window, which is insufficient for processing long documents. In this paper, we address this limitation for the Polish by introducing a high-quality Polish model capable of processing sequences of up to 8192 tokens. The model was dev...</div>
+            </div>
+        </div><div class="paper">
+            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
+            <div class="title-cn">➡️ IndexCache：通过跨层索引复用加速稀疏注意力计算</div>
+            <div class="meta">👤 Yushi Bai, Qian Dong, Ting Jiang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity ...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 CV</h2><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div><div class="paper">
+            <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Moayed Haji-Ali, Willi Menapace, Ivan Skorokhodov</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which stand...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Ziyu Chen, Yilun Zhao, Chengye Wang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale Regrounding, which programmatically re-embeds these pairs into full-document tasks to ensu...</div>
+            </div>
+        </div><div class="paper">
+            <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anc...</div>
+            </div>
+        </div><div class="paper">
+            <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-s...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), wh...</div>
+            </div>
+        </div><div class="paper">
+            <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject custom...</div>
+            </div>
+        </div><div class="paper">
+            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explic...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 多模态</h2><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div><div class="paper">
+            <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Moayed Haji-Ali, Willi Menapace, Ivan Skorokhodov</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which stand...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Ziyu Chen, Yilun Zhao, Chengye Wang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale Regrounding, which programmatically re-embeds these pairs into full-document tasks to ensu...</div>
+            </div>
+        </div><div class="paper">
+            <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anc...</div>
+            </div>
+        </div><div class="paper">
+            <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-s...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), wh...</div>
+            </div>
+        </div><div class="paper">
+            <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject custom...</div>
+            </div>
+        </div><div class="paper">
+            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+            <div class="title-cn">➡️ 潜在色彩子空间：高维混沌中的涌现秩序</div>
+            <div class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explic...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 新数据集</h2><div class="paper">
+            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Krishnakumar Balasubramanian, Shiva Prasad Kasiviswanathan</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Abhinaba Basu, Pavan Chakraborty</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 for...</div>
+            </div>
+        </div><div class="paper">
+            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yushi Bai, Qian Dong, Ting Jiang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Andy Li, Aiden Durrant, Milan Markovic</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Vision Transformers require significant computational resources and memory bandwidth, severely limiting their deployment on edge devices. While recent structured pruning methods successfully reduce theoretical FLOPs, they typically operate at a single structural granularity and rely on complex, multi-stage pipelines with post-hoc thresholding to satisfy sparsity budgets. In this paper, we propose Hierarchical Auto-Pruning (HiAP), a continuous relaxation framework that discovers optimal sub-netwo...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Javier Fumanal-Idocin, Mohammadreza Jamalifard, Javier Andreu-Perez</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Free-style text is still one of the common ways in which data is registered in real environments, like legal procedures and medical records. Because of that, there have been significant efforts in the area of natural language processing to convert these texts into a structured format, which standard machine learning methods can then exploit. One of the most popular methods to embed text into a vectorial representation is the Contrastive Language-Image Pre-training model (CLIP), which was trained...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yulu Gan, Phillip Isola</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Security Considerations for Artificial Intelligence Agents</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ninghui Li, Kaiyuan Zhang, Kyle Polley</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries,...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Temporal Straightening for Latent Planning</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ying Wang, Oumayma Bounou, Gaoyue Zhou</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straighten...</div>
+            </div>
+        </div><div class="paper">
+            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro...</div>
+            </div>
+        </div><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 模型压缩</h2><div class="paper">
+            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Krishnakumar Balasubramanian, Shiva Prasad Kasiviswanathan</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Abhinaba Basu, Pavan Chakraborty</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 for...</div>
+            </div>
+        </div><div class="paper">
+            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yushi Bai, Qian Dong, Ting Jiang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Andy Li, Aiden Durrant, Milan Markovic</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Vision Transformers require significant computational resources and memory bandwidth, severely limiting their deployment on edge devices. While recent structured pruning methods successfully reduce theoretical FLOPs, they typically operate at a single structural granularity and rely on complex, multi-stage pipelines with post-hoc thresholding to satisfy sparsity budgets. In this paper, we propose Hierarchical Auto-Pruning (HiAP), a continuous relaxation framework that discovers optimal sub-netwo...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Javier Fumanal-Idocin, Mohammadreza Jamalifard, Javier Andreu-Perez</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Free-style text is still one of the common ways in which data is registered in real environments, like legal procedures and medical records. Because of that, there have been significant efforts in the area of natural language processing to convert these texts into a structured format, which standard machine learning methods can then exploit. One of the most popular methods to embed text into a vectorial representation is the Contrastive Language-Image Pre-training model (CLIP), which was trained...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yulu Gan, Phillip Isola</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Security Considerations for Artificial Intelligence Agents</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ninghui Li, Kaiyuan Zhang, Kyle Polley</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries,...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Temporal Straightening for Latent Planning</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ying Wang, Oumayma Bounou, Gaoyue Zhou</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straighten...</div>
+            </div>
+        </div><div class="paper">
+            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro...</div>
+            </div>
+        </div><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 综述</h2><div class="paper">
+            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Krishnakumar Balasubramanian, Shiva Prasad Kasiviswanathan</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Abhinaba Basu, Pavan Chakraborty</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 for...</div>
+            </div>
+        </div><div class="paper">
+            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yushi Bai, Qian Dong, Ting Jiang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Andy Li, Aiden Durrant, Milan Markovic</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Vision Transformers require significant computational resources and memory bandwidth, severely limiting their deployment on edge devices. While recent structured pruning methods successfully reduce theoretical FLOPs, they typically operate at a single structural granularity and rely on complex, multi-stage pipelines with post-hoc thresholding to satisfy sparsity budgets. In this paper, we propose Hierarchical Auto-Pruning (HiAP), a continuous relaxation framework that discovers optimal sub-netwo...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Javier Fumanal-Idocin, Mohammadreza Jamalifard, Javier Andreu-Perez</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Free-style text is still one of the common ways in which data is registered in real environments, like legal procedures and medical records. Because of that, there have been significant efforts in the area of natural language processing to convert these texts into a structured format, which standard machine learning methods can then exploit. One of the most popular methods to embed text into a vectorial representation is the Contrastive Language-Image Pre-training model (CLIP), which was trained...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yulu Gan, Phillip Isola</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Security Considerations for Artificial Intelligence Agents</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ninghui Li, Kaiyuan Zhang, Kyle Polley</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries,...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Temporal Straightening for Latent Planning</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ying Wang, Oumayma Bounou, Gaoyue Zhou</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straighten...</div>
+            </div>
+        </div><div class="paper">
+            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro...</div>
+            </div>
+        </div><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 RL</h2><div class="paper">
+            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Krishnakumar Balasubramanian, Shiva Prasad Kasiviswanathan</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Abhinaba Basu, Pavan Chakraborty</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 for...</div>
+            </div>
+        </div><div class="paper">
+            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yushi Bai, Qian Dong, Ting Jiang</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity ...</div>
+            </div>
+        </div><div class="paper">
+            <h3>HiAP: A Multi-Granular Stochastic Auto-Pruning Framework for Vision Transformers</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Andy Li, Aiden Durrant, Milan Markovic</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Vision Transformers require significant computational resources and memory bandwidth, severely limiting their deployment on edge devices. While recent structured pruning methods successfully reduce theoretical FLOPs, they typically operate at a single structural granularity and rely on complex, multi-stage pipelines with post-hoc thresholding to satisfy sparsity budgets. In this paper, we propose Hierarchical Auto-Pruning (HiAP), a continuous relaxation framework that discovers optimal sub-netwo...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Javier Fumanal-Idocin, Mohammadreza Jamalifard, Javier Andreu-Perez</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Free-style text is still one of the common ways in which data is registered in real environments, like legal procedures and medical records. Because of that, there have been significant efforts in the area of natural language processing to convert these texts into a structured format, which standard machine learning methods can then exploit. One of the most popular methods to embed text into a vectorial representation is the Contrastive Language-Image Pre-training model (CLIP), which was trained...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Yulu Gan, Phillip Isola</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Security Considerations for Artificial Intelligence Agents</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ninghui Li, Kaiyuan Zhang, Kyle Polley</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries,...</div>
+            </div>
+        </div><div class="paper">
+            <h3>Temporal Straightening for Latent Planning</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Ying Wang, Oumayma Bounou, Gaoyue Zhou</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straighten...</div>
+            </div>
+        </div><div class="paper">
+            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro...</div>
+            </div>
+        </div><div class="paper">
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ </div>
+            <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio...</div>
+            </div>
+        </div></div></div></body></html>
