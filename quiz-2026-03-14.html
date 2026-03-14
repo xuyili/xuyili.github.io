@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-14</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-14 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中，哪个核心机制使得模型能够并行处理序列中的所有位置，并捕获长距离依赖关系？", "options": ["A. 循环神经网络(RNN)", "B. 自注意力机制(Self-Attention)", "C. 卷积神经网络(CNN)", "D. 残差连接(Residual Connection)"], "answer": "B", "explanation": "Transformer架构的核心创新是自注意力机制。它允许模型在处理序列时，同时关注序列中所有位置的信息，并计算它们之间的相关性权重，从而有效地捕获长距离依赖关系。这与RNN的顺序处理形成鲜明对比，并实现了高效的并行计算。"}, {"question": "在大型语言模型(LLM)的预训练阶段，最常用的训练目标是什么？", "options": ["A. 情感分类", "B. 机器翻译", "C. 下一词预测（语言建模）", "D. 图像描述生成"], "answer": "C", "explanation": "绝大多数LLM（如GPT系列、LLaMA等）的核心预训练目标是“下一词预测”或称为“自回归语言建模”。模型通过在大规模文本数据上学习根据上文预测下一个词的概率分布，从而掌握语言的语法、语义和世界知识。其他任务（如A、B、D）通常是预训练后的下游应用或微调目标。"}, {"question": "OpenAI的GPT-4模型相较于之前的版本，一个关键的技术特点是？", "options": ["A. 首次引入Transformer架构", "B. 是一个纯文本模型，不支持多模态", "C. 是一个大型多模态模型，可以接受图像和文本输入", "D. 其模型架构和训练细节已完全开源"], "answer": "C", "explanation": "GPT-4是OpenAI发布的一个大型多模态模型。与之前的GPT-3等纯文本模型不同，GPT-4可以接受图像和文本作为输入，并生成文本输出。虽然其具体架构和训练细节并未完全公开（因此D错误），但多模态能力是其官方明确的关键特性之一。"}, {"question": "Anthropic公司提出的“宪法AI”（Constitutional AI）方法，其主要目的是什么？", "options": ["A. 大幅提升模型的数学推理能力", "B. 通过一套原则（宪法）来引导和训练AI模型，使其输出更安全、无害、有帮助", "C. 设计一种新的神经网络硬件架构", "D. 专注于代码生成任务的优化"], "answer": "B", "explanation": "宪法AI是Anthropic为其模型Claude开发的一种对齐方法。其核心思想是定义一套明确的、人类认可的伦理原则（即“宪法”），并利用这些原则通过自我改进和强化学习来训练模型，使其行为符合这些原则，从而减少有害输出，提高安全性和有用性，减少对人工反馈的依赖。"}, {"question": "在深度学习模型中，“微调”（Fine-tuning）通常指的是什么过程？", "options": ["A. 在大型通用数据集上从头开始训练一个模型", "B. 对一个已经预训练好的模型，在特定任务的小规模数据集上进行额外训练以适配该任务", "C. 调整模型的超参数以优化性能", "D. 将模型部署到生产环境的过程"], "answer": "B", "explanation": "微调是迁移学习中的一种常见技术。它首先在一个大规模通用数据集（如互联网文本）上对模型进行预训练，获得通用知识。然后，在一个特定任务（如法律文档分析、医疗问答）的小规模数据集上，继续训练这个预训练模型，使其参数适应新任务，从而用较少的数据和计算资源获得好性能。"}, {"question": "以下哪项是当前大语言模型(LLM)面临的突出挑战或局限性？", "options": ["A. 无法进行基本的算术计算", "B. 可能产生看似合理但不准确或虚构的信息（“幻觉”）", "C. 完全无法理解上下文语境", "D. 运行速度远超人类，没有延迟问题"], "answer": "B", "explanation": "“幻觉”是当前LLM最突出的局限性之一。由于模型是基于统计模式生成文本，而非访问确凿的事实数据库，它可能会生成内容连贯、看似合理但事实上错误或完全虚构的信息。这是将LLM应用于需要高可靠性场景（如医疗、法律）时的重大风险。其他选项（A、C）过于绝对且不符合事实，D则与实际情况相反。"}, {"question": "“提示工程”（Prompt Engineering）主要关注的是什么？", "options": ["A. 设计更高效的GPU来训练模型", "B. 通过设计和优化输入文本（提示词）来引导LLM产生更期望的输出", "C. 编写代码来编译神经网络", "D. 管理AI项目的工程团队"], "answer": "B", "explanation": "提示工程是与大语言模型交互的一门实践性学科。由于LLM对输入提示的措辞、格式和上下文非常敏感，精心设计提示词可以显著提高模型在特定任务上的表现，例如通过提供示例（少样本学习）、明确指令、指定角色或输出格式等，从而更有效地激发模型的能力。"}, {"question": "在Transformer架构中，编码器-解码器结构最初是为哪个任务设计的？", "options": ["A. 图像分类", "B. 序列到序列的任务，如机器翻译", "C. 语音识别", "D. 游戏对战"], "answer": "B", "explanation": "原始论文《Attention Is All You Need》中提出的Transformer模型就是一个编码器-解码器架构。编码器处理输入序列（如源语言句子），解码器生成输出序列（如目标语言句子）。这种结构天然适合机器翻译这类序列到序列的任务。后来，像GPT这样的模型只使用了解码器部分（用于文本生成），而BERT只使用了编码器部分（用于理解任务）。"}, {"question": "以下哪个AI应用场景中，使用检索增强生成（RAG）技术能特别有效地缓解大语言模型的“幻觉”问题？", "options": ["A. 创意诗歌写作", "B. 基于特定知识库的智能问答", "C. 开放式故事续写", "D. 生成通用性的电子邮件模板"], "answer": "B", "explanation": "检索增强生成（RAG）通过将外部知识库（如公司文档、最新新闻、专业数据库）的检索机制与LLM的生成能力相结合。在回答问题时，RAG首先从可靠的知识源中检索相关片段，然后将这些片段作为上下文提供给LLM来生成答案。这极大地增强了答案的事实准确性，并减少了模型依赖自身参数化知识可能产生的幻觉，因此特别适合基于特定、实时、专有知识库的问答场景。"}, {"question": "“令牌”（Token）在大语言模型的上下文中通常指的是什么？", "options": ["A. 用于访问API的密钥", "B. 模型训练中的一种奖励信号", "C. 文本被切分后的基本单元（可以是词、子词或字符）", "D. 区块链中的一种数字货币"], "answer": "C", "explanation": "在LLM中，文本输入和输出首先会被一个分词器（Tokenizer）处理成一系列“令牌”。这些令牌通常是子词（如“playing”可能被分成“play”和“ing”），也可以是完整的词或单个字符。模型处理的是这些令牌的整数ID序列。理解令牌对于计算模型的处理长度（上下文窗口）和API调用成本（按令牌计费）非常重要。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
