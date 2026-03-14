@@ -22,53 +22,173 @@
     <div class="container">
         <div class="header">
             <h1>📚 AI论文速递 2026-03-14</h1>
-            <p>7大领域 × 3篇 | 🦐 伊利虾</p>
-        </div><div class="topic"><h2>🔥 综述</h2><div class="paper">
-            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
-            <div class="title-cn">➡️ A Quantitative Characterization of Forge</div>
+            <p>AI领域最新论文 | 🦐 伊利虾</p>
+        </div><div class="topic"><h2>🔥 RL</h2><div class="paper">
+            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+            <div class="title-cn">➡️ STAMP</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For equal-covariance Gaussian modes, we prove that forward-KL objectives trained on data from the new distribution drive the old weight to zero, while reverse-KL objectives converge to the true target (thereby avoiding mass forgetting) and perturb the old mean only through overlap-gated misassignment probabilities controlled by the Bhattacharyya coefficient, yielding drift that decays exponentially with mode separation and a locally well-conditioned geometry with exponential convergence. We further quantify how replay interacts with these objectives. For forward-KL, replay must modify the training distribution to change the population optimum; for reverse-KL, replay leaves the population objective unchanged but prevents finite-batch old-mode starvation through bounded importance weighting. Finally, we analyze three recently proposed near-on-policy post-training methods, SDFT (arxiv:2601.19897), TTT-Discover (arxiv:2601.16175), and OAPL (arxiv:2602.19362), via the same lens and derive explicit conditions under which each retains old mass and exhibits overlap-controlled drift. Overall, our results show that forgetting can by precisely quantified based on the interaction between divergence direction, geometric behavioral overlap, sampling regime, and the visibility of past behavior during training.</div>
-                <div class="abstract-cn">📝 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to ze...</div>
+                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro</div>
+                <div class="abstract-cn">📝 本文研究了STAMP的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
             </div>
         </div><div class="paper">
-            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
-            <div class="title-cn">➡️ Proof-Carrying Materials</div>
+            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+            <div class="title-cn">➡️ BiGain</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 formal certification. Auditing CHGNet, TensorNet and MACE reveals architecture-specific blind spots with near-zero pairwise error correlations (r &lt;= 0.13; n = 5,000), confirmed by independent Quantum ESPRESSO validation (20/20 converged; median DFT/CHGNet force ratio 12x). A risk model trained on PCM-discovered features predicts failures on unseen materials (AUC-ROC = 0.938 +/- 0.004) and transfers across architectures (cross-MLIP AUC-ROC ~ 0.70; feature importance r = 0.877). In a thermoelectric screening case study, PCM-audited protocols discover 62 additional stable materials missed by single-MLIP screening - a 25% improvement in discovery yield.</div>
-                <div class="abstract-cn">📝 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification acr...</div>
+                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio</div>
+                <div class="abstract-cn">📝 本文研究了BiGain的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
             </div>
         </div><div class="paper">
-            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
-            <div class="title-cn">➡️ IndexCache</div>
+            <h3>HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies</h3>
+            <div class="title-cn">➡️ HandelBot</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82$\times$ prefill speedup and 1.48$\times$ decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).</div>
-                <div class="abstract-cn">📝 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reduci...</div>
-            </div>
-        </div></div><div class="topic"><h2>🔥 RL</h2><div class="paper">
-            <h3>A Quantitative Characterization of Forgetting in Post-Training</h3>
-            <div class="title-cn">➡️ A Quantitative Characterization of Forge</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to zero, and (ii) old-component drift, where an already-correct old component shifts during training. For equal-covariance Gaussian modes, we prove that forward-KL objectives trained on data from the new distribution drive the old weight to zero, while reverse-KL objectives converge to the true target (thereby avoiding mass forgetting) and perturb the old mean only through overlap-gated misassignment probabilities controlled by the Bhattacharyya coefficient, yielding drift that decays exponentially with mode separation and a locally well-conditioned geometry with exponential convergence. We further quantify how replay interacts with these objectives. For forward-KL, replay must modify the training distribution to change the population optimum; for reverse-KL, replay leaves the population objective unchanged but prevents finite-batch old-mode starvation through bounded importance weighting. Finally, we analyze three recently proposed near-on-policy post-training methods, SDFT (arxiv:2601.19897), TTT-Discover (arxiv:2601.16175), and OAPL (arxiv:2602.19362), via the same lens and derive explicit conditions under which each retains old mass and exhibits overlap-controlled drift. Overall, our results show that forgetting can by precisely quantified based on the interaction between divergence direction, geometric behavioral overlap, sampling regime, and the visibility of past behavior during training.</div>
-                <div class="abstract-cn">📝 Continual post-training of generative models is widely used, yet a principled understanding of when and why forgetting occurs remains limited. We develop theoretical results under a two-mode mixture abstraction (representing old and new tasks), proposed by Chen et al. (2025) (arXiv:2510.18874), and formalize forgetting in two forms: (i) mass forgetting, where the old mixture weight collapses to ze...</div>
+                <div class="abstract-en">📄 Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework </div>
+                <div class="abstract-cn">📝 本文研究了HandelBot的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
             </div>
         </div><div class="paper">
-            <h3>Proof-Carrying Materials: Falsifiable Safety Certificates for Machine-Learned Interatomic Potentials</h3>
-            <div class="title-cn">➡️ Proof-Carrying Materials</div>
+            <h3>Separable neural architectures as a primitive for unified predictive and generative intelligence</h3>
+            <div class="title-cn">➡️ Separable neural architectures as a primitive for unified predictive and generative intelligence</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification across compositional space, bootstrap envelope refinement with 95% confidence intervals, and Lean 4 formal certification. Auditing CHGNet, TensorNet and MACE reveals architecture-specific blind spots with near-zero pairwise error correlations (r &lt;= 0.13; n = 5,000), confirmed by independent Quantum ESPRESSO validation (20/20 converged; median DFT/CHGNet force ratio 12x). A risk model trained on PCM-discovered features predicts failures on unseen materials (AUC-ROC = 0.938 +/- 0.004) and transfers across architectures (cross-MLIP AUC-ROC ~ 0.70; feature importance r = 0.877). In a thermoelectric screening case study, PCM-audited protocols discover 62 additional stable materials missed by single-MLIP screening - a 25% improvement in discovery yield.</div>
-                <div class="abstract-cn">📝 Machine-learned interatomic potentials (MLIPs) are deployed for high-throughput materials screening without formal reliability guarantees. We show that a single MLIP used as a stability filter misses 93% of density functional theory (DFT)-stable materials (recall 0.07) on a 25,000-material benchmark. Proof-Carrying Materials (PCM) closes this gap through three stages: adversarial falsification acr...</div>
+                <div class="abstract-en">📄 Intelligent systems across physics, language and perception often exhibit factorisable structure, yet are typically modelled by monolithic neural architectures that do not explicitly exploit this structure. The separable neural architecture (SNA) addresses this by formalising a representational class that unifies additive, quadratic and tensor-decomposed neural models. By constraining interaction order and tensor rank, SNAs impose a structural inductive bias that factorises high-dimensional mapp</div>
+                <div class="abstract-cn">📝 本文研究了Separable neural architectures as a primitive for unified predictive and generative intelligence的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
             </div>
         </div><div class="paper">
-            <h3>IndexCache: Accelerating Sparse Attention via Cross-Layer Index Reuse</h3>
-            <div class="title-cn">➡️ IndexCache</div>
+            <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
+            <div class="title-cn">➡️ One Model, Many Budgets</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reducing core attention from $O(L^2)$ to $O(Lk)$. However, the indexer itself retains $O(L^2)$ complexity and must run independently at every layer, despite the fact that the resulting top-k selections are highly similar across consecutive layers. We present IndexCache, which exploits this cross-layer redundancy by partitioning layers into a small set of Full layers that run their own indexers and a majority of Shared layers that simply reuse the nearest Full layer's top-k indices. We propose two complementary approaches to determine and optimize this configuration. Training-free IndexCache applies a greedy search algorithm that selects which layers to retain indexers by directly minimizing language modeling loss on a calibration set, requiring no weight updates. Training-aware IndexCache introduces a multi-layer distillation loss that trains each retained indexer against the averaged attention distributions of all layers it serves, enabling even simple interleaved patterns to match full-indexer accuracy. Experimental results on a 30B DSA model show that IndexCache can remove 75% of indexer computations with negligible quality degradation, achieving up to 1.82$\times$ prefill speedup and 1.48$\times$ decode speedup compared to standard DSA. These positive results are further confirmed by our preliminary experiments on the production-scale GLM-5 model (Figure 1).</div>
-                <div class="abstract-cn">📝 Long-context agentic workflows have emerged as a defining use case for large language models, making attention efficiency critical for both inference speed and serving cost. Sparse attention addresses this challenge effectively, and DeepSeek Sparse Attention (DSA) is a representative production-grade solution: a lightweight lightning indexer selects the top-k most relevant tokens per query, reduci...</div>
+                <div class="abstract-en">📄 Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which stand</div>
+                <div class="abstract-cn">📝 本文研究了One Model, Many Budgets的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</h3>
+            <div class="title-cn">➡️ Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoni</div>
+                <div class="abstract-cn">📝 本文研究了Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
+            <div class="title-cn">➡️ Trust Your Critic</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and </div>
+                <div class="abstract-cn">📝 本文研究了Trust Your Critic的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models</h3>
+            <div class="title-cn">➡️ Matching Features, Not Tokens</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose</div>
+                <div class="abstract-cn">📝 本文研究了Matching Features, Not Tokens的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+            <div class="title-cn">➡️ Attend Before Attention</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-s</div>
+                <div class="abstract-cn">📝 本文研究了Attend Before Attention的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+            <div class="title-cn">➡️ Spatial-TTT</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), wh</div>
+                <div class="abstract-cn">📝 本文研究了Spatial-TTT的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+            <div class="title-cn">➡️ DreamVideo-Omni</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject custom</div>
+                <div class="abstract-cn">📝 本文研究了DreamVideo-Omni的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>HumDex:Humanoid Dexterous Manipulation Made Easy</h3>
+            <div class="title-cn">➡️ HumDex</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU</div>
+                <div class="abstract-cn">📝 本文研究了HumDex的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+            <div class="title-cn">➡️ The Latent Color Subspace</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explic</div>
+                <div class="abstract-cn">📝 本文研究了The Latent Color Subspace的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
+            <div class="title-cn">➡️ Ψ_0</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To addr</div>
+                <div class="abstract-cn">📝 本文研究了Ψ_0的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+            <div class="title-cn">➡️ OmniStream</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attent</div>
+                <div class="abstract-cn">📝 本文研究了OmniStream的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 综述</h2><div class="paper">
+            <h3>Can RL Improve Generalization of LLM Agents? An Empirical Study</h3>
+            <div class="title-cn">➡️ Can RL Improve Generalization of LLM Agents? An Empirical Study</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Reinforcement fine-tuning (RFT) has shown promise for training LLM agents to perform multi-turn decision-making based on environment feedback. However, most existing evaluations remain largely in-domain: training and testing are conducted in the same environment or even on the same tasks. In real-world deployment, agents may operate in unseen environments with different background knowledge, observation spaces, and action interfaces. To characterize the generalization profile of RFT under such s</div>
+                <div class="abstract-cn">📝 本文研究了Can RL Improve Generalization of LLM Agents? An Empirical Study的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application</h3>
+            <div class="title-cn">➡️ Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions. However, bridging the "sim-to-real" gap and managing high training latencies remain significant bottlenecks for practical deployment. This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environme</div>
+                <div class="abstract-cn">📝 本文研究了Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model</h3>
+            <div class="title-cn">➡️ Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 One-axis twisting (OAT) interaction is a pivotal resource for manipulating quantum states of atomic ensembles, enabling spin squeezing, atomic-cat-state generation, and weak-phase amplification. Current implementations of OAT dynamics predominantly rely on the Tavis-Cummings model of light-atoms coupling; however, this approach inevitably introduces an additional Stark term that entangles the light with the atoms, which compromises the unitarity of OAT evolution and thereby degrades the OAT-base</div>
+                <div class="abstract-cn">📝 本文研究了Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</h3>
+            <div class="title-cn">➡️ Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Continual learning of pretrained vision-language models (VLMs) is prone to catastrophic forgetting, yet current approaches adapt to new tasks without explicitly preserving the cross-modal semantic geometry inherited from pretraining and previous stages, allowing new-task supervision to induce geometric distortion. We observe that the most pronounced drift tends to concentrate in vulnerable neighborhoods near the old-new semantic interface, where shared visual patterns are easily re-explained by </div>
+                <div class="abstract-cn">📝 本文研究了Continual Learning with Vision-Language Models via Semantic-Geometry Preservation的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Numerical benchmark for damage identification in Structural Health Monitoring</h3>
+            <div class="title-cn">➡️ Numerical benchmark for damage identification in Structural Health Monitoring</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 The availability of a dataset for validation and verification purposes of novel data-driven strategies and/or hybrid physics-data approaches is currently one of the most pressing challenges in the engineering field. Data ownership, security, access and metadata handiness are currently hindering advances across many fields, particularly in Structural Health Monitoring (SHM) applications. This paper presents a simulated SHM dataset, comprised of dynamic and static measurements (i.e., acceleration </div>
+                <div class="abstract-cn">📝 本文研究了Numerical benchmark for damage identification in Structural Health Monitoring的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+            </div>
+        </div><div class="paper">
+            <h3>Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey</h3>
+            <div class="title-cn">➡️ Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 The Milky Way bulge-bar is composed of multiple populations. Using chemical and kinematical planes, we segregate six populations in a bulge-bar sample observed by the APOGEE survey: two with bar-driven orbits, two with eccentric orbits, and two with low-eccentricity orbits, each composed of low- and high-[Mg/Fe] stars. Our sample spans $-2.0\lesssim$[Fe/H]$\lesssim+0.5$ and Galactocentric distance $R_{Gal}$ $&lt;6$ kpc. We use chemical abundances from APOGEE DR17 for the elements Mg, Si, Ca, Al,</div>
+                <div class="abstract-cn">📝 本文研究了Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
             </div>
         </div></div></div></body></html>
