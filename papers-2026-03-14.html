@@ -9,6 +9,7 @@
         .header { background: linear-gradient(135deg, #1a1a2e, #16213e); color: white; padding: 30px; border-radius: 15px; text-align: center; margin-bottom: 30px; }
         .paper { background: white; padding: 20px; border-radius: 10px; margin-bottom: 15px; }
         .paper h3 { color: #333; }
+        .title-cn { color: #667eea; font-size: 0.9em; margin-bottom: 8px; }
         .meta { color: #888; font-size: 0.8em; }
         .abstract { background: #f8f9fa; padding: 12px; border-radius: 8px; margin-top: 10px; color: #555; font-size: 0.85em; }
     </style>
@@ -17,45 +18,58 @@
     <div class="container">
         <div class="header">
             <h1>📚 AI论文速递 2026-03-14</h1>
-            <p>🦐 伊利虾</p>
+            <p>中英文对照 | 🦐 伊利虾</p>
         </div><div class="paper">
-        <h3>Neural Thickets: Diverse Task Experts Are Dense Around Pretrained Weights</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Yulu Gan, Phillip Isola...</div>
-        <div class="abstract">📄 Pretraining produces a learned parameter vector that is typically treated as a starting point for further iterative adaptation. In this work, we instead view the outcome of pretraining as a distribution over parameter vectors, whose support already contains task-specific experts. We show that in small models such expert solutions occupy a negligible fraction of the volume of this distribution, making their discovery reliant on structured optimization methods such as gradient descent. In contrast, in large, well-pretrained models the density of task-experts increases dramatically, so that diverse, task-improving specialists populate a substantial fraction of the neighborhood around the pretrained weights. Motivated by this perspective, we explore a simple, fully parallel post-training method that samples $N$ parameter perturbations at random, selects the top $K$, and ensembles predictions via majority vote. Despite its simplicity, this approach is competitive with standard post-training...</div>
+        <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+        <div class="title-cn"><think>
+The user asks to translate the English phrase "EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models" into Chinese.
+
+We need to give a Chinese translation.
+
+We need to consider proper translation of "EndoCoT" which is likely a proper noun (acronym). Should keep the acronym and translate the rest: "Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models". 
+
+Possible translation: "EndoCoT：在扩散模型中扩展内生思维链推理". 
+
+Alternatively "EndoCoT：扩散模型中内生思维链推理的规模化". Could be "EndoCoT：在扩散模型中扩展内生思维链推理". Keep the colon as "：" used in Chinese. 
+
+Thus final answer: "EndoCoT：在扩散模型中扩展内生思维链推理". Or "EndoCoT：扩散模型中内生思维链推理的规模化". Provide both.
+
+Will respond with translation.
+</think>
+
+**EndoCoT：在扩散模型中扩展内生思维链推理**</div>
+        <div class="meta">cs.CL</div>
+        <div class="abstract">📄 Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the ...</div>
     </div><div class="paper">
-        <h3>Security Considerations for Artificial Intelligence Agents</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Ninghui Li, Kaiyuan Zhang, Kyle Polley, Jerry Ma...</div>
-        <div class="abstract">📄 This article, a lightly adapted version of Perplexity's response to NIST/CAISI Request for Information 2025-0035, details our observations and recommendations concerning the security of frontier AI agents. These insights are informed by Perplexity's experience operating general-purpose agentic systems used by millions of users and thousands of enterprises in both controlled and open-world environments. Agent architectures change core assumptions around code-data separation, authority boundaries, and execution predictability, creating new confidentiality, integrity, and availability failure modes. We map principal attack surfaces across tools, connectors, hosting boundaries, and multi-agent coordination, with particular emphasis on indirect prompt injection, confused-deputy behavior, and cascading failures in long-running workflows. We then assess current defenses as a layered stack: input-level and model-level mitigations, sandboxed execution, and deterministic policy enforcement for h...</div>
-    </div><div class="paper">
-        <h3>Temporal Straightening for Latent Planning</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Ying Wang, Oumayma Bounou, Gaoyue Zhou, Randall Ba...</div>
-        <div class="abstract">📄 Learning good representations is essential for latent planning with world models. While pretrained visual encoders produce strong semantic visual features, they are not tailored to planning and contain information irrelevant -- or even detrimental -- to planning. Inspired by the perceptual straightening hypothesis in human visual processing, we introduce temporal straightening to improve representation learning for latent planning. Using a curvature regularizer that encourages locally straightened latent trajectories, we jointly learn an encoder and a predictor. We show that reducing curvature this way makes the Euclidean distance in latent space a better proxy for the geodesic distance and improves the conditioning of the planning objective. We demonstrate empirically that temporal straightening makes gradient-based planning more stable and yields significantly higher success rates across a suite of goal-reaching tasks....</div>
-    </div><div class="paper">
-        <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Fengwei Tian, Payel Bhattacharjee, Heidi Hanson, G...</div>
-        <div class="abstract">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoo...</div>
-    </div><div class="paper">
-        <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Jiacheng Liu, Shengkun Tang, Jiacheng Cui, Dongkua...</div>
-        <div class="abstract">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representation disentangles fine detail from global semantics, enabling compression that respects both generative fidelity and discriminative utility. BiGain reflects this principle with two frequency-aware operators: (1) Laplacian-gated token merging, which encourages merges among spectrally smooth tokens while discouraging merges of high-contrast tokens, thereby retaining edges and textures; and (2) Interpolate-Extrapolate KV Downsampling, which downsamples keys/values via a controllable interextrapolation...</div>
-    </div><div class="paper">
-        <h3>Separable neural architectures as a primitive for unified predictive and generative intelligence</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Reza T. Batley, Apurba Sarker, Rajib Mostakim, And...</div>
-        <div class="abstract">📄 Intelligent systems across physics, language and perception often exhibit factorisable structure, yet are typically modelled by monolithic neural architectures that do not explicitly exploit this structure. The separable neural architecture (SNA) addresses this by formalising a representational class that unifies additive, quadratic and tensor-decomposed neural models. By constraining interaction order and tensor rank, SNAs impose a structural inductive bias that factorises high-dimensional mappings into low-arity components. Separability need not be a property of the system itself: it often emerges in the coordinates or representations through which the system is expressed. Crucially, this coordinate-aware formulation reveals a structural analogy between chaotic spatiotemporal dynamics and linguistic autoregression. By treating continuous physical states as smooth, separable embeddings, SNAs enable distributional modelling of chaotic systems. This approach mitigates the nonphysical dr...</div>
+        <h3>SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning</h3>
+        <div class="title-cn"><think>
+The user wants a translation of the English phrase into Chinese: "SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning". This is straightforward: The translation should be "SciMDR：科学多模态文档推理的基准测试与提升" or "SciMDR：科学多模态文档推理的基准与推进" or "SciMDR：科学多模态文档推理基准与提升". We need to give Chinese translation. Could also include "基准测评" or "基准测试". We can translate "Benchmarking and Advancing Scientific Multimodal Document Reasoning" as "科学多模态文档推理的基准测评与推进". Could choose something like "SciMDR：科学多模态文档推理基准测试与提升". I'll provide that. The user didn't ask for anything else, so answer simply with translation.
+
+But maybe they also want the title translation for a paper? Possibly they want "SciMDR: 科学多模态文档推理的基准测试与提升". Could also incorporate "benchmarking" = "基准化" but less common. In Chinese academic context: "基准测试与推进" is fine.
+
+Thus answer: "SciMDR：科学多模态文档推理的基准测试与推进". Could add "Benchmarking and Advancing Scientific Multimodal Document Reasoning". Possibly the translation: "SciMDR: 科学多模态文档推理的基准测评与推进".
+
+Will answer in Chinese.
+</think>
+
+**SciMDR：科学多模态文档推理的基准测试与推进**</div>
+        <div class="meta">cs.CL</div>
+        <div class="abstract">📄 Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale Regrounding, which programmatically re-embeds these pairs into full-document tasks to ensu...</div>
     </div><div class="paper">
         <h3>Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Yixin Liu, Yue Yu, DiJia Su, Sid Wang, Xuewei Wang...</div>
-        <div class="abstract">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled synthetic setting, where a "gold-standard" judge (gpt-oss-120b) provides preference annotations to train smaller judges, reveals key differences between non-reasoning and reasoning judges: non-reasoning judges lead to reward hacking easily, while reasoning judges can lead to policies that achieve strong performance when evaluated by the gold-standard judge. Interestingly, we find that the reasoning-judge-traine...</div>
-    </div><div class="paper">
-        <h3>Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Samy Jelassi, Mujin Kwun, Rosie Zhao, Yuanzhi Li, ...</div>
-        <div class="abstract">📄 Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose energy-based fine-tuning (EBFT), which uses strided block-parallel sampling to generate multiple rollouts from nested prefixes concurrently, batches feature extraction over these rollouts, and uses the resulting embeddings to perform an on-policy policy-gradient update. We present a theoretical perspective connecting EBFT to KL-regularized feature-matching and energy-based modeling. Empirically, across Q&A coding, unstructured coding, and translation, EBFT matches RLVR and outperforms SFT on do...</div>
-    </div><div class="paper">
-        <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Fangfu Liu, Diankun Wu, Jiawei Chi, Yimo Cai, Yi-H...</div>
-        <div class="abstract">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continu...</div>
-    </div><div class="paper">
-        <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
-        <div class="meta">cs.LG | 2026-03-12 | Mateusz Pach, Jessica Bader, Quentin Bouniot, Serg...</div>
-        <div class="abstract">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS....</div>
+        <div class="title-cn"><think>
+The user wants a translation into Chinese: "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training". This is a title of a research paper. They ask to translate to Chinese. Provide translation. Likely "在不可验证的LLM后训练中检验推理LLM作为评判者". Possibly better: "在不可验证的LLM后训练中审视推理LLM作为评判者". They might want a literal translation: "Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training". Could translate as: "在非可验证的LLM后训练中检验推理型LLM作为评判者". Or "在不可验证的LLM后训练中审视推理LLM即评判者". I think "在不可验证的LLM后训练中审视推理LLM作为评判者" is fine.
+
+Thus answer in Chinese.
+
+Now, output translation only? Could add note about nuance. The user asked: "翻译为中文：Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training". Provide translation. Should keep it in Chinese.
+
+Thus answer: "在不可验证的 LLM 后训练中审视推理 LLM 作为评判者". Or "在非可验证的 LLM 后训练中检验推理 LLM 即评判者". I think "在不可验证的 LLM 后训练中审视推理型 LLM 作为评判者" is appropriate.
+
+Thus answer.
+</think>
+
+在不可验证的 LLM 后训练中审视推理型 LLM 作为评判者。</div>
+        <div class="meta">cs.CL</div>
+        <div class="abstract">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoni...</div>
     </div></div></body></html>
