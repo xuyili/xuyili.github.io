@@ -22,173 +22,173 @@
     <div class="container">
         <div class="header">
             <h1>📚 AI论文速递 2026-03-14</h1>
-            <p>AI领域最新论文 | 🦐 伊利虾</p>
-        </div><div class="topic"><h2>🔥 RL</h2><div class="paper">
-            <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
-            <div class="title-cn">➡️ STAMP</div>
+            <p>7大领域 × 3篇 | 🦐 伊利虾</p>
+        </div><div class="topic"><h2>🔥 LLM</h2><div class="paper">
+            <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
+            <div class="title-cn">➡️ EVATok</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise contro</div>
-                <div class="abstract-cn">📝 本文研究了STAMP的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
             </div>
         </div><div class="paper">
-            <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
-            <div class="title-cn">➡️ BiGain</div>
+            <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+            <div class="title-cn">➡️ MM-CondChain</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that preserves generation quality while improving classification in accelerated diffusion models. Our key insight is frequency separation: mapping feature-space signals into a frequency-aware representatio</div>
-                <div class="abstract-cn">📝 本文研究了BiGain的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies</h3>
-            <div class="title-cn">➡️ HandelBot</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transfer offer a promising alternative, the transferred policies often fail for tasks demanding millimeter-scale precision, such as bimanual piano playing. In this work, we introduce HandelBot, a framework </div>
-                <div class="abstract-cn">📝 本文研究了HandelBot的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Separable neural architectures as a primitive for unified predictive and generative intelligence</h3>
-            <div class="title-cn">➡️ Separable neural architectures as a primitive for unified predictive and generative intelligence</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Intelligent systems across physics, language and perception often exhibit factorisable structure, yet are typically modelled by monolithic neural architectures that do not explicitly exploit this structure. The separable neural architecture (SNA) addresses this by formalising a representational class that unifies additive, quadratic and tensor-decomposed neural models. By constraining interaction order and tensor rank, SNAs impose a structural inductive bias that factorises high-dimensional mapp</div>
-                <div class="abstract-cn">📝 本文研究了Separable neural architectures as a primitive for unified predictive and generative intelligence的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
-            <div class="title-cn">➡️ One Model, Many Budgets</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which stand</div>
-                <div class="abstract-cn">📝 本文研究了One Model, Many Budgets的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</h3>
-            <div class="title-cn">➡️ Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoni</div>
-                <div class="abstract-cn">📝 本文研究了Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
-            <div class="title-cn">➡️ Trust Your Critic</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and </div>
-                <div class="abstract-cn">📝 本文研究了Trust Your Critic的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models</h3>
-            <div class="title-cn">➡️ Matching Features, Not Tokens</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose</div>
-                <div class="abstract-cn">📝 本文研究了Matching Features, Not Tokens的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
-            <div class="title-cn">➡️ Attend Before Attention</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-s</div>
-                <div class="abstract-cn">📝 本文研究了Attend Before Attention的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
-            <div class="title-cn">➡️ Spatial-TTT</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), wh</div>
-                <div class="abstract-cn">📝 本文研究了Spatial-TTT的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
-            <div class="title-cn">➡️ DreamVideo-Omni</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject custom</div>
-                <div class="abstract-cn">📝 本文研究了DreamVideo-Omni的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>HumDex:Humanoid Dexterous Manipulation Made Easy</h3>
-            <div class="title-cn">➡️ HumDex</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU</div>
-                <div class="abstract-cn">📝 本文研究了HumDex的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
-            <div class="title-cn">➡️ The Latent Color Subspace</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explic</div>
-                <div class="abstract-cn">📝 本文研究了The Latent Color Subspace的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
-            <div class="title-cn">➡️ Ψ_0</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To addr</div>
-                <div class="abstract-cn">📝 本文研究了Ψ_0的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
             </div>
         </div><div class="paper">
             <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
-            <div class="title-cn">➡️ OmniStream</div>
+            <div class="title-cn">➡️ OmniStream：流式感知与重建</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attent</div>
-                <div class="abstract-cn">📝 本文研究了OmniStream的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
+                <div class="abstract-cn">📝 我们提出了一个掌握连续流中感知、重建和行动的框架。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 CV</h2><div class="paper">
+            <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
+            <div class="title-cn">➡️ EVATok</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+            <div class="title-cn">➡️ MM-CondChain</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+            <div class="title-cn">➡️ OmniStream：流式感知与重建</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
+                <div class="abstract-cn">📝 我们提出了一个掌握连续流中感知、重建和行动的框架。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 多模态</h2><div class="paper">
+            <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+            <div class="title-cn">➡️ MM-CondChain</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing</h3>
+            <div class="title-cn">➡️ GRADE</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+            <div class="title-cn">➡️ EndoCoT</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the decoding process. Invariant guidance during decoding prevents DiT from progressively decomposing complex instructions into actionable denoising steps, even with correct MLLM encodings. To this end, we propose Endogenous Chain-of-Thought (EndoCoT), a novel framework that first activates MLLMs' reasoning potential by iteratively refining latent thought states through an iterative thought guidance module, and then bridges these states to the DiT's denoising process. Second, a terminal thought grounding module is applied to ensure the reasoning trajectory remains grounded in textual supervision by aligning the final state with ground-truth answers. With these two components, the MLLM text encoder delivers meticulously reasoned guidance, enabling the DiT to execute it progressively and ultimately solve complex tasks in a step-by-step manner. Extensive evaluations across diverse benchmarks (e.g., Maze, TSP, VSP, and Sudoku) achieve an average accuracy of 92.1%, outperforming the strongest baseline by 8.3 percentage points.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 新数据集</h2><div class="paper">
+            <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+            <div class="title-cn">➡️ MM-CondChain</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+            <div class="title-cn">➡️ OmniStream：流式感知与重建</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
+                <div class="abstract-cn">📝 我们提出了一个掌握连续流中感知、重建和行动的框架。</div>
+            </div>
+        </div><div class="paper">
+            <h3>GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing</h3>
+            <div class="title-cn">➡️ GRADE</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 模型压缩</h2><div class="paper">
+            <h3>EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation</h3>
+            <div class="title-cn">➡️ EVATok</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning</h3>
+            <div class="title-cn">➡️ MM-CondChain</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div><div class="paper">
+            <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+            <div class="title-cn">➡️ OmniStream：流式感知与重建</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
+                <div class="abstract-cn">📝 我们提出了一个掌握连续流中感知、重建和行动的框架。</div>
             </div>
         </div></div><div class="topic"><h2>🔥 综述</h2><div class="paper">
-            <h3>Can RL Improve Generalization of LLM Agents? An Empirical Study</h3>
-            <div class="title-cn">➡️ Can RL Improve Generalization of LLM Agents? An Empirical Study</div>
+            <h3>Interpreting Contrastive Embeddings in Specific Domains with Fuzzy Rules</h3>
+            <div class="title-cn">➡️ Interpreting Contrastive Embeddings in S</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Reinforcement fine-tuning (RFT) has shown promise for training LLM agents to perform multi-turn decision-making based on environment feedback. However, most existing evaluations remain largely in-domain: training and testing are conducted in the same environment or even on the same tasks. In real-world deployment, agents may operate in unseen environments with different background knowledge, observation spaces, and action interfaces. To characterize the generalization profile of RFT under such s</div>
-                <div class="abstract-cn">📝 本文研究了Can RL Improve Generalization of LLM Agents? An Empirical Study的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 Free-style text is still one of the common ways in which data is registered in real environments, like legal procedures and medical records. Because of that, there have been significant efforts in the area of natural language processing to convert these texts into a structured format, which standard machine learning methods can then exploit. One of the most popular methods to embed text into a vectorial representation is the Contrastive Language-Image Pre-training model (CLIP), which was trained using both image and text. Although the representations computed by CLIP have been very successful in zero-show and few-shot learning problems, they still have problems when applied to a particular domain. In this work, we use a fuzzy rule-based classification system along with some standard text procedure techniques to map some of our features of interest to the space created by a CLIP model. Then, we discuss the rules and associations obtained and the importance of each feature considered. We apply this approach in two different data domains, clinical reports and film reviews, and compare the results obtained individually and when considering both. Finally, we discuss the limitations of this approach and how it could be further improved.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
             </div>
         </div><div class="paper">
-            <h3>Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application</h3>
-            <div class="title-cn">➡️ Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application</div>
+            <h3>An Updated \synthpop Model for Microlensing Simulations I: Model Description, Evaluation, and Microlensing Event Rates Near the Galactic Center</h3>
+            <div class="title-cn">➡️ An Updated \synthpop Model for Microlens</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Deep Reinforcement Learning (DRL) offers a robust alternative to traditional control methods for autonomous underwater docking, particularly in adapting to unpredictable environmental conditions. However, bridging the "sim-to-real" gap and managing high training latencies remain significant bottlenecks for practical deployment. This paper presents a systematic approach for autonomous docking using the Girona Autonomous Underwater Vehicle (AUV) by leveraging a high-fidelity digital twin environme</div>
-                <div class="abstract-cn">📝 本文研究了Sim-to-reality adaptation for Deep Reinforcement Learning applied to an underwater docking application的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 The optimization and interpretation of microlensing surveys depends on having an accurate model of the Milky Way. However, existing Galactic modeling tools often perform poorly in replicating the stellar contents of the inner Galactic bulge region and reproducing microlensing survey results. We present an updated Galactic model implementation within the \synthpop framework that has been tuned for simulating the upcoming Nancy Grace Roman Space Telescope's Galactic Bulge Time Domain Survey (RGBTDS). We evaluate the model against stellar catalogs and kinematics from optical and infrared surveys toward the Galactic bulge, finding good agreement in much of the bulge, including the RGBTDS' contiguous lower bulge fields. However, within Galactic latitudes of $b\lesssim0.5^\circ$ of the Galactic plane, some inconsistencies arise which may impact projections for the RGBTDS' Galactic center field. In a following paper, we will examine RGBTDS simulations with this updated model in detail. Roman's GBTDS and Galactic Plane Survey will be instrumental in resolving the remaining model inconsistencies and improving our understanding of the structure of the central few degrees of our Galaxy.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
             </div>
         </div><div class="paper">
-            <h3>Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model</h3>
-            <div class="title-cn">➡️ Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model</div>
+            <h3>AstroSat-UVIT observations of a possibly interacting pair of galaxies in HCG 77</h3>
+            <div class="title-cn">➡️ AstroSat-UVIT observations of a possibly</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 One-axis twisting (OAT) interaction is a pivotal resource for manipulating quantum states of atomic ensembles, enabling spin squeezing, atomic-cat-state generation, and weak-phase amplification. Current implementations of OAT dynamics predominantly rely on the Tavis-Cummings model of light-atoms coupling; however, this approach inevitably introduces an additional Stark term that entangles the light with the atoms, which compromises the unitarity of OAT evolution and thereby degrades the OAT-base</div>
-                <div class="abstract-cn">📝 本文研究了Engineering near-unitary one-axis twisting evolution via a driven Tavis-Cummings model的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 We aim to study star-forming regions and the spectral energy distribution of two possibly interacting galaxies, PGC 56121 and PGC 56125, in the Hickson Compact Group 77. We utilized the far-ultraviolet (FUV) channel of the Ultra Violet Imaging Telescope (UVIT) on board AstroSat to observe and produce FUV images of the galaxies. Our FUV images are at a much higher resolution in comparison to those obtained from previous galaxy surveys by GALEX in the near-UV and those from PS-1, DSS. We have identified several star-forming regions in the two possibly interacting galaxies, PGC 56121 and PGC 56125. These two galaxies form a pair widely separated in redshift and are seen in projection. We also report the presence of a candidate tidal dwarf galaxy at the end of one of the tidal tails located to the east of the pair, and we identified three major star-forming regions in the tidal dwarf. The spectral energy distribution of three galaxies in the system is presented and analyzed to investigate the key physical properties, such as stellar mass, dust mass, total luminosity, and star formation history, of the three galaxies. Based on these observations and on a comparison with observations in radio, these three galaxies are probably part of a small group of interacting galaxies.</div>
+                <div class="abstract-cn">📝 本文研究了相关领域的问题，提出新方法并取得良好效果。</div>
+            </div>
+        </div></div><div class="topic"><h2>🔥 RL</h2><div class="paper">
+            <h3>OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams</h3>
+            <div class="title-cn">➡️ OmniStream：流式感知与重建</div>
+            <div class="meta">👤 多个作者 | arXiv</div>
+            <div class="abstract">
+                <div class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</div>
+                <div class="abstract-cn">📝 我们提出了一个掌握连续流中感知、重建和行动的框架。</div>
             </div>
         </div><div class="paper">
-            <h3>Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</h3>
-            <div class="title-cn">➡️ Continual Learning with Vision-Language Models via Semantic-Geometry Preservation</div>
+            <h3>$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation</h3>
+            <div class="title-cn">➡️ Ψ_0：开放基础模型</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 Continual learning of pretrained vision-language models (VLMs) is prone to catastrophic forgetting, yet current approaches adapt to new tasks without explicitly preserving the cross-modal semantic geometry inherited from pretraining and previous stages, allowing new-task supervision to induce geometric distortion. We observe that the most pronounced drift tends to concentrate in vulnerable neighborhoods near the old-new semantic interface, where shared visual patterns are easily re-explained by </div>
-                <div class="abstract-cn">📝 本文研究了Continual Learning with Vision-Language Models via Semantic-Geometry Preservation的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \ours\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\times$ as much data by over 40\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.</div>
+                <div class="abstract-cn">📝 我们提出了一个向通用人形运动操作迈进的基础模型。</div>
             </div>
         </div><div class="paper">
-            <h3>Numerical benchmark for damage identification in Structural Health Monitoring</h3>
-            <div class="title-cn">➡️ Numerical benchmark for damage identification in Structural Health Monitoring</div>
+            <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+            <div class="title-cn">➡️ 潜在颜色子空间</div>
             <div class="meta">👤 多个作者 | arXiv</div>
             <div class="abstract">
-                <div class="abstract-en">📄 The availability of a dataset for validation and verification purposes of novel data-driven strategies and/or hybrid physics-data approaches is currently one of the most pressing challenges in the engineering field. Data ownership, security, access and metadata handiness are currently hindering advances across many fields, particularly in Structural Health Monitoring (SHM) applications. This paper presents a simulated SHM dataset, comprised of dynamic and static measurements (i.e., acceleration </div>
-                <div class="abstract-cn">📝 本文研究了Numerical benchmark for damage identification in Structural Health Monitoring的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
-            </div>
-        </div><div class="paper">
-            <h3>Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey</h3>
-            <div class="title-cn">➡️ Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey</div>
-            <div class="meta">👤 多个作者 | arXiv</div>
-            <div class="abstract">
-                <div class="abstract-en">📄 The Milky Way bulge-bar is composed of multiple populations. Using chemical and kinematical planes, we segregate six populations in a bulge-bar sample observed by the APOGEE survey: two with bar-driven orbits, two with eccentric orbits, and two with low-eccentricity orbits, each composed of low- and high-[Mg/Fe] stars. Our sample spans $-2.0\lesssim$[Fe/H]$\lesssim+0.5$ and Galactocentric distance $R_{Gal}$ $&lt;6$ kpc. We use chemical abundances from APOGEE DR17 for the elements Mg, Si, Ca, Al,</div>
-                <div class="abstract-cn">📝 本文研究了Chemical radial gradients for the bulge-bar stellar populations from the APOGEE survey的相关问题，提出了一种新的方法来解决这一领域面临的挑战。实验结果表明，该方法在基准数据集上取得了显著的性能提升。</div>
+                <div class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.</div>
+                <div class="abstract-cn">📝 我们研究了高维混沌中的涌现秩序问题。</div>
             </div>
         </div></div></div></body></html>
