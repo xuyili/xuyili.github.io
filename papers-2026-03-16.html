@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI论文速递 2026-03-16</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-16</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2></div><div class="topic"><h2>🖼️ 计算机视觉</h2><div class="paper">
+<h3>1. Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing<span class="title-cn">➡️ **中文翻译（保留英文专有名词）：**  
+
+**Attend Before Attention：高效且可扩展的视频理解（通过 Autoregressive Gazing）**</span></h3>
+<p class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.</p>
+<p class="abstract-cn">📄 多模态大型语言模型（MLLMs）在通用视频理解方面取得了进展，但在处理长时、高分辨率视频时仍然困难——它们在视觉 Transformer（ViTs）或 MLLMs 中对每个像素进行同等处理，尽管存在显著的时空冗余。我们提出 **AutoGaze**，一个轻量级模块，在 ViT 或 MLLM 处理之前去除冗余的 patch。该模块通过 next‑token 预测和强化学习训练，能够自回归地选取最小的多尺度 patch 集合，在用户指定的误差阈值内重建视频，从而在保留信息的同时消除冗余。实验表明，AutoGaze 将视觉 token 减少 4 倍至 100 倍，并将 ViTs 和 MLLMs 加速最多 19 倍，使 MLLMs 能够扩展到 1K 帧 4K 分辨率视频，并在视频基准测试中取得优异成绩（例如在 **VideoMME** 上达到 67.0%）。此外，我们推出 **HLVid**：首个高分辨率、时长 5 分钟的 4K 视频问答基准，其中使用 AutoGaze 扩展的 MLLM 相比基线提升 10.1%，并且比之前的最佳 MLLM 高出 4.5%。项目主页：https://autogaze.github.io/。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. EVATok: Adaptive Length Video Tokenization for Efficient Visual Autoregressive Generation<span class="title-cn">➡️ **EVATok：自适应长度视频标记化，用于高效视觉自回归生成**</span></h3>
+<p class="meta">👤 Tianwei Xiong, Jun Hao Liew, Zilong Huang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Autoregressive (AR) video generative models rely on video tokenizers that compress pixels into discrete token sequences. The length of these token sequences is crucial for balancing reconstruction quality against downstream generation computational cost. Traditional video tokenizers apply a uniform token assignment across temporal blocks of different videos, often wasting tokens on simple, static, or repetitive segments while underserving dynamic or complex ones. To address this inefficiency, we introduce $\textbf{EVATok}$, a framework to produce $\textbf{E}$fficient $\textbf{V}$ideo $\textbf{A}$daptive $\textbf{Tok}$enizers. Our framework estimates optimal token assignments for each video to achieve the best quality-cost trade-off, develops lightweight routers for fast prediction of these optimal assignments, and trains adaptive tokenizers that encode videos based on the assignments predicted by routers. We demonstrate that EVATok delivers substantial improvements in efficiency and overall quality for video reconstruction and downstream AR generation. Enhanced by our advanced training recipe that integrates video semantic encoders, EVATok achieves superior reconstruction and state-of-the-art class-to-video generation on UCF-101, with at least 24.4% savings in average token usage compared to the prior state-of-the-art LARP and our fixed-length baseline.</p>
+<p class="abstract-cn">📄 自回归（AR）视频生成模型依赖于将像素压缩为离散 token 序列的视频标记化器。这些 token 序列的长度对于平衡重建质量与下游生成计算成本至关重要。传统的视频标记化器在不同视频的时序块上采用统一的 token 分配，常常在简单、静态或重复的片段上浪费 token，而在动态或复杂的片段上分配不足。为了解决这一低效问题，我们引入了 $\textbf{EVATok}$，一个用于生成高效视频自适应标记化器（Efficient Video Adaptive Tokenizers）的框架。我们的框架为每个视频估计最优 token 分配，以实现最佳的质量‑成本权衡，并开发轻量级路由器用于快速预测这些最优分配，同时训练能够根据路由器预测的分配对视频进行编码的自适应标记化器。我们证明 EVATok 在视频重建和下游 AR 生成方面实现了显著的效率提升和整体质量提升。通过整合视频语义编码器的高级训练配方，EVATok 在 UCF‑101 数据集上实现了卓越的重建效果和领先的类别到视频生成，与此前最先进的 LARP 以及我们的固定长度基线相比，平均 token 使用量节省了至少 24.4%。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12267v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Binding Free Energies without Alchemy<span class="title-cn">➡️ **中文翻译：**
+
+无需炼金术的结合自由能
+
+或：**结合自由能：无须炼金术**
+
+---
+
+**说明：**
+
+- "Binding Free Energies" = 结合自由能
+- "without" = 没有/无需/无须
+- "Alchemy" = 炼金术（此处为比喻用法，指计算化学中一些不够精确的方法）
+
+这是PubMed Central上的一篇学术论文标题，作者用"Alchemy"（炼金术）来比喻某些不够严谨的自由能计算方法，标题的含义是介绍一种不需要这些"炼金术"般不精确方法的结合自由能计算新方法。</span></h3>
+<p class="meta">👤 Michael Brocidiacono, Brandon Novy, Rishabh Dey</p>
+<div class="abstract">
+<p class="abstract-en">📄 Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE), an end-state ABFE method in implicit solvent that requires no alchemical intermediates. DBFE outperforms OBC2 double decoupling on a host-guest benchmark and performs comparably to OBC2 MM/GBSA on a protein-ligand benchmark. Since receptor and ligand simulations can be precomputed and amortized across compounds, DBFE requires only one complex simulation per ligand compared to the many lambda windows needed for double decoupling, making it a promising candidate for virtual screening workflows. We publicly release the code for this method at https://github.com/molecularmodelinglab/dbfe.</p>
+<p class="abstract-cn">📄 Absolute Binding Free Energy (ABFE) 方法是预测蛋白‑配体结合亲和力最准确的计算技术之一，但其应用受到需要大量对化学修饰的中间态进行模拟的限制。我们提出 Direct Binding Free Energy (DBFE)，一种在隐式溶剂中的端点 ABFE 方法，无需任何化学中间态。DBFE 在 host‑guest 基准测试中优于 OBC2 double decoupling，并在 protein‑ligand 基准测试中与 OBC2 MM/GBSA 表现相当。由于受体和配体的模拟可以预先计算并在多个化合物之间分摊，DBFE 每个配体仅需一次复合物模拟，而 double decoupling 则需要许多 lambda 窗口，这使它成为虚拟筛选工作流的有力候选。我们公开了该方法的代码，地址为 https://github.com/molecularmodelinglab/dbfe。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12253v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning<span class="title-cn">➡️ **SciMDR：科学多模态文档推理基准评测与能力提升**
+
+或可选译法：
+
+- SciMDR：科学多模态文档推理基准测试与推进</span></h3>
+<p class="meta">👤 Ziyu Chen, Yilun Zhao, Chengye Wang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Synthesis, which generates faithful, isolated QA pairs and reasoning on focused segments, and (2) Document-Scale Regrounding, which programmatically re-embeds these pairs into full-document tasks to ensure realistic complexity. Using this framework, we construct SciMDR, a large-scale training dataset for cross-modal comprehension, comprising 300K QA pairs with explicit reasoning chains across 20K scientific papers. We further construct SciMDR-Eval, an expert-annotated benchmark to evaluate multimodal comprehension within full-length scientific workflows. Experiments demonstrate that models fine-tuned on SciMDR achieve significant improvements across multiple scientific QA benchmarks, particularly in those tasks requiring complex document-level reasoning.</p>
+<p class="abstract-cn">📄 中文翻译：
+
+构建用于基础模型训练的科学多模态文档推理数据集涉及规模、忠实度（faithfulness）和真实性（realism）之间的固有权衡。为解决这一挑战，我们引入了**synthesize-and-reground**框架，这是一个两阶段管道，包括：(1) **以声明为中心的问答合成（Claim-Centric QA Synthesis）**，生成忠实的、孤立的QA问答对并对聚焦片段进行推理；以及 (2) **文档级重嵌入（Document-Scale Regrounding）**，以编程方式将这些问答对重新嵌入到完整文档任务中，以确保真实的复杂性。使用该框架，我们构建了**SciMDR**，这是一个用于跨模态理解的大规模训练数据集，包含来自2万篇科学论文的30万个QA问答对，并配有明确的推理链。我们进一步构建了**SciMDR-Eval**，这是一个专家注释的基准，用于评估完整科学工作流程中的多模态理解能力。实验表明，在SciMDR上微调的模型在多个科学问答基准上取得了显著改进，尤其是在需要复杂文档级推理的任务中。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12249v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning<span class="title-cn">➡️ DreamVideo-Omni：Omni‑Motion 控制的多主体视频定制与 Latent Identity Reinforcement Learning</span></h3>
+<p class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.</p>
+<p class="abstract-cn">📄 中文翻译：
+
+尽管大规模扩散模型已经革新了视频合成，但要实现对多主体身份以及多粒度运动的精确控制仍然是一项重大挑战。近期尝试弥补这一差距的工作往往受限于运动粒度不足、控制模糊以及身份退化等问题，导致在身份保持和运动控制方面的表现不佳。本工作提出 DreamVideo-Omni，一个统一框架，通过渐进式两阶段训练范式实现和谐的多主体定制与全方向运动控制。在第一阶段，我们整合了综合控制信号进行联合训练，涵盖主体外观、全局运动、局部动态以及相机运动。为确保鲁棒且精确的可控性，我们引入了条件感知的 3D 旋转位置嵌入（condition‑aware 3D rotary positional embedding）来协调异构输入，并采用层次化运动注入策略（hierarchical motion injection strategy）以加强全局运动指导。此外，为解决多主体歧义，我们引入组和角色嵌入（group and role embeddings）将运动信号明确锚定到特定身份，有效将复杂场景解耦为独立可控的实例。在第二阶段，为减轻身份退化，我们设计了潜在身份奖励反馈学习范式（latent identity reward feedback learning paradigm），在预训练视频扩散骨干（pretrained video diffusion backbone）上训练潜在身份奖励模型（latent identity reward model）。这提供了潜在空间中的运动感知身份奖励，优先保留符合人类偏好的身份。在我们精选的大规模数据集以及用于多主体和全方向运动控制评估的综合 DreamOmni Bench 的支持下，DreamVideo-Omni 在生成具有精确可控性的高质量视频方面展现出卓越性能。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. The Latent Color Subspace: Emergent Order in High-Dimensional Chaos<span class="title-cn">➡️ **Latent Color Subspace：高维混沌中的涌现秩序**</span></h3>
+<p class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot</p>
+<div class="abstract">
+<p class="abstract-en">📄 Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.</p>
+<p class="abstract-cn">📄 文本到图像生成模型发展迅速，然而对生成图像实现细粒度控制仍然困难，这在很大程度上是由于对语义信息如何被编码的理解有限。  
+我们在 FLUX.1 [Dev] 的 Variational Autoencoder latent space 中开发了对颜色表示的解释，揭示了反映 Hue、Saturation 和 Lightness 的结构。  
+我们通过展示它既能预测又能显式控制颜色来验证我们的 Latent Color Subspace (LCS) 解释，引入了一种完全无需训练的 FLUX 方法，仅基于闭式 latent‑space 操作。  
+代码可在 https://github.com/ExplainableML/LCS 获取。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12261v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. DVD: Deterministic Video Depth Estimation with Generative Priors<span class="title-cn">➡️ **DVD：基于生成先验的确定性视频深度估计**</span></h3>
+<p class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anchor to balance global stability with high-frequency details; (ii) latent manifold rectification (LMR) to mitigate regression-induced over-smoothing, enforcing differential constraints to restore sharp boundaries and coherent motion; and (iii) global affine coherence, an inherent property bounding inter-window divergence, which enables seamless long-video inference without requiring complex temporal alignment. Extensive experiments demonstrate that DVD achieves state-of-the-art zero-shot performance across benchmarks. Furthermore, DVD successfully unlocks the profound geometric priors implicit in video foundation models using 163x less task-specific data than leading baselines. Notably, we fully release our pipeline, providing the whole training suite for SOTA video depth estimation to benefit the open-source community.</p>
+<p class="abstract-cn">📄 现有视频深度估计面临一个根本性的权衡：生成模型存在随机几何幻觉和尺度漂移问题，而判别模型需要大规模标注数据集来解决语义歧义。为打破这一困境，我们提出了DVD，这是首个将预训练视频扩散模型确定性适配为单次深度回归器的框架。具体而言，DVD具有三个核心设计：(i) 将扩散时间步重新用作结构锚点，以平衡全局稳定性与高频细节；(ii) 潜在流形修正（Latent Manifold Rectification, LMR）以缓解回归导致的过度平滑，施加微分约束以恢复清晰边界和连贯运动；以及(iii) 全局仿射 coherence，这是一种固有属性，用于限制窗口间发散，从而使长视频推理无需复杂的时序对齐即可无缝进行。大量实验表明，DVD在各类基准测试中实现了最先进的零样本性能。此外，DVD成功解锁了视频基础模型中隐含的深度几何先验，仅使用领先基线1/163的任务特定数据量。值得注意的是，我们完整发布了整个流程，提供了最先进的视频深度估计完整训练套件，以造福开源社区。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training<span class="title-cn">➡️ **中文翻译：**
+
+Spatial-TTT: 基于视觉的流式空间智能与测试时训练
+
+---
+
+**说明：**
+
+- **Spatial-TTT**: 保留英文（论文名称）
+- **Streaming**: 流式
+- **Visual-based**: 基于视觉的
+- **Spatial Intelligence**: 空间智能
+- **Test-Time Training**: 测试时训练（深度学习领域专有名词）</span></h3>
+<p class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi</p>
+<div class="abstract">
+<p class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.</p>
+<p class="abstract-cn">📄 人类通过连续的视觉观察感知并理解真实世界空间。因此，能够在潜在无界的视频流中**流式**（streaming）地保持和更新空间证据，是空间智能的核心能力。核心挑战并不仅仅是更长的上下文窗口，而是空间信息在时间维度上如何被**选择、组织和保留**。在本文中，我们提出 **Spatial-TTT**，旨在实现基于流式视觉的空间智能，并采用 **test‑time training (TTT)** 方法，使模型能够适配一小部分参数（即 **fast weights**），从而在长时序场景视频中捕获并组织空间证据。具体而言，我们设计了一种 **混合架构（hybrid architecture）**，并采用 **大块更新（large‑chunk updates）** 与 **滑动窗口注意力（sliding‑window attention）** 并行，以实现高效的空间视频处理。为进一步提升空间感知，我们在 **TTT 层** 中引入了 **空间预测机制（spatial‑predictive mechanism）**，并结合 **3D 时空卷积（3D spatiotemporal convolution）**，促使模型在帧间捕获几何对应关系和时间连续性。除了架构设计，我们构建了一个包含密集 **3D 空间描述（dense 3D spatial descriptions）** 的数据集，以指导模型更新其 **fast weights**，以结构化方式记忆和组织全局 **3D 空间信号**。大量实验表明，**Spatial-TTT** 在长时序空间理解方面取得了显著提升，并在 **视频空间基准（video spatial benchmarks）** 上达到了 **最先进（state‑of‑the‑art）** 的性能。项目主页：https://liuff19.github.io/Spatial-TTT.</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. $Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation<span class="title-cn">➡️ **Ψ₀：面向 Universal Humanoid Loco‑Manipulation 的 Open Foundation Model**</span></h3>
+<p class="meta">👤 Songlin Wei, Hongyi Jing, Boqian Li</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \ours\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\times$ as much data by over 40\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.</p>
+<p class="abstract-cn">📄 我们推出 Ψ_0（Psi-Zero），这是一个用于解决挑战性人形机器人运动操作任务的开源基础模型。现有的方法通常尝试通过在大量多样化的人类和人形机器人数据上进行联合训练来解决这一基本问题，但我们认为这一策略并非最优，因为人类和人形机器人之间存在根本性的运动学和运动差异。因此，尽管数据量相当庞大，但数据效率和模型性能仍然不能令人满意。为了应对这一挑战，我们的模型将学习过程解耦，以最大化异构数据源的效用。具体而言，我们提出了一种具有不同学习目标的多阶段训练范式：首先，我们在大规模第一人称人类视频上自回归地预训练一个VLM主干，以获取可泛化的视觉-动作表示；然后，我们在高质量的人形机器人数据上后训练一个基于流（flow-based）的动作专家，以学习精准的机器人关节控制。我们的研究进一步发现了一个关键但常被忽视的数据配方：与使用嘈杂的互联网视频片段或异构跨本体机器人数据集进行扩展的方法不同，我们证明在高质量的第一人称人类操作数据上进行预训练，然后在特定领域的真实世界人形机器人轨迹上进行后训练，能够获得卓越的性能。大量真实世界实验表明，我们的模型仅使用约800小时的人类视频数据和30小时的真实世界机器人数据，就能在多个任务上实现最佳性能，总体成功率比在超过10倍数据量上预训练的基线模型高出40%以上。我们将向社区开源整个生态系统，包括数据处理和训练流程、一个人形基础模型，以及一个实时动作推理引擎。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12263v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning<span class="title-cn">➡️ MM-CondChain: 一个程序化验证的视觉定位深度组合推理基准</span></h3>
+<p class="meta">👤 Haozhan Shen, Shilin Yan, Hongwei Xue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</p>
+<p class="abstract-cn">📄 多模态大型语言模型（MLLMs）正越来越多地被用于执行视觉工作流，例如导航图形用户界面（GUI），其中下一步取决于已验证的视觉组合条件（例如“如果出现权限对话框且界面颜色为绿色，则点击‘允许’”），并且该过程可能会分支或提前终止。  
+
+然而，这一能力仍然缺乏评估：现有的基准侧重于浅层组合或独立约束，而不是深层链式组合条件。  
+
+在本文中，我们提出了MM-CondChain，一个用于基于视觉的深度组合推理的基准。  
+
+每个基准实例被组织为一条多层推理链，其中每一层都包含一个基于视觉证据的非平凡组合条件，由多个对象、属性或关系构建。  
+
+为了正确回答，MLLM必须详细感知图像，在每一步对多个视觉元素进行推理，并遵循产生的执行路径直至最终结果。  
+
+为了大规模构建此类工作流式数据，我们提出了一个代理合成管道：Planner 负责逐层生成组合条件，而可验证的程序化中间表示（VPIR）确保每一层的条件在机械上可验证。  
+
+随后，Composer 将这些已验证的层组装成完整的指令。  
+
+使用该管道，我们在三个视觉领域构建基准：自然图像、数据图表和 GUI 轨迹。  
+
+在一系列 MLLMs 上的实验表明，即使是最强的模型也仅能达到 53.33 Path F1，且在困难负例以及深度或谓词复杂度增加时显著下降，证实深度组合推理仍然是一个根本性的挑战。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12266v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>🎨 多模态学习</h2></div><div class="topic"><h2>📊 新数据集</h2><div class="paper">
+<h3>1. $Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation<span class="title-cn">➡️ Ψ_0：一个面向通用人形机器人 Loco‑Manipulation 的 Open Foundation Model</span></h3>
+<p class="meta">👤 Songlin Wei, Hongyi Jing, Boqian Li</p>
+<div class="abstract">
+<p class="abstract-en">📄 We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \ours\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \ours\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\times$ as much data by over 40\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.</p>
+<p class="abstract-cn">📄 中文翻译：
+
+我们推出了 $Ψ_0$（Psi-Zero），一个开放的基础模型，用于解决具有挑战性的人形机器人运动操作任务。现有方法通常尝试通过在大量多样化的人类和人形机器人数据上进行联合训练来解决这一基本问题，但我们认为，由于人类和人形机器人之间存在根本性的运动学和运动差异，这种策略并非最优方案。因此，尽管数据量相当可观，但数据效率和模型性能仍然不尽如人意。为解决这一挑战，\ours\;将学习过程解耦，以最大化异构数据源的效用。具体而言，我们提出了一种分阶段训练范式，具有不同的学习目标：首先，我们在大规模自我中心人类视频上自回归地预训练一个VLM主干，以获得泛化的视觉-动作表示。然后，我们在高质量人形机器人数据上后训练一个基于流（flow-based）的动作专家，以学习精确的机器人关节控制。我们的研究进一步发现了一个关键但常被忽视的数据方案：与使用嘈杂的互联网片段或异构跨本体机器人数据集进行扩展的方法形成对比，我们证明在高质量自我中心人类操作数据上进行预训练，然后在特定领域的真实世界人形机器人轨迹上进行后训练，能够带来卓越的性能。大量真实世界实验表明，\ours\;仅使用约800小时的人类视频数据和30小时的真实世界机器人数据，就实现了最佳性能，在多个任务中总体成功率比使用超过10倍数据的基线方法高出40%以上。我们将向社区开源整个生态系统，包括数据处理和训练流程、一个人形基础模型以及一个实时动作推理引擎。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12263v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models<span class="title-cn">➡️ EndoCoT: 在 Diffusion 模型中扩展内生思维链推理</span></h3>
+<p class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing</p>
+<div class="abstract">
+<p class="abstract-en">📄 Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning depth. Single-step encoding fails to activate the Chain-of-Thought process, which is essential for MLLMs to provide accurate guidance for complex tasks. (ii) The guidance remains invariant during the decoding process. Invariant guidance during decoding prevents DiT from progressively decomposing complex instructions into actionable denoising steps, even with correct MLLM encodings. To this end, we propose Endogenous Chain-of-Thought (EndoCoT), a novel framework that first activates MLLMs' reasoning potential by iteratively refining latent thought states through an iterative thought guidance module, and then bridges these states to the DiT's denoising process. Second, a terminal thought grounding module is applied to ensure the reasoning trajectory remains grounded in textual supervision by aligning the final state with ground-truth answers. With these two components, the MLLM text encoder delivers meticulously reasoned guidance, enabling the DiT to execute it progressively and ultimately solve complex tasks in a step-by-step manner. Extensive evaluations across diverse benchmarks (e.g., Maze, TSP, VSP, and Sudoku) achieve an average accuracy of 92.1%, outperforming the strongest baseline by 8.3 percentage points.</p>
+<p class="abstract-cn">📄 **中文翻译：**
+
+近年来，多模态大语言模型（Multimodal Large Language Models，MLLMs）已被广泛集成到扩散框架中，主要作为文本编码器来应对空间推理等复杂任务。然而，这种范式存在两个关键局限性：（i）MLLMs文本编码器的推理深度不足。单步编码无法激活思维链（Chain-of-Thought）过程，而这一过程对于MLLMs为复杂任务提供准确指导至关重要。（ii）解码过程中的指导保持不变。解码时的不变指导会阻止DiT（Diffusion Transformer）将复杂指令逐步分解为可执行的去噪步骤，即使编码正确也无法实现。为此，我们提出了内生思维链（Endogenous Chain-of-Thought，EndoCoT），这是一种新颖的框架，首先通过迭代思维指导模块迭代优化潜在思维状态来激活MLLMs的推理潜力，然后将这些状态桥接到DiT的去噪过程。其次，应用终端思维接地模块，通过将最终状态与真实答案对齐，确保推理轨迹保持基于文本监督的状态。凭借这两个组件，MLLMs文本编码器提供经过细致推理的指导，使DiT能够逐步执行该指导，最终以逐步方式解决复杂任务。在各种基准测试（如Maze、TSP、VSP和Sudoku）上的广泛评估取得了92.1%的平均准确率，比最强基线高出8.3个百分点。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12252v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training<span class="title-cn">➡️ 审视不可验证的 LLM 后训练中的推理 LLMs-as-Judges</span></h3>
+<p class="meta">👤 Yixin Liu, Yue Yu, DiJia Su</p>
+<div class="abstract">
+<p class="abstract-en">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled synthetic setting, where a "gold-standard" judge (gpt-oss-120b) provides preference annotations to train smaller judges, reveals key differences between non-reasoning and reasoning judges: non-reasoning judges lead to reward hacking easily, while reasoning judges can lead to policies that achieve strong performance when evaluated by the gold-standard judge. Interestingly, we find that the reasoning-judge-trained policies achieve such strong performance by learning to generate highly effective adversarial outputs that can also score well on popular benchmarks such as Arena-Hard by deceiving other LLM-judges. Combined with our further analysis, our study highlights both important findings and room for improvements for applying (reasoning) LLM-judges in non-verifiable LLM post-training.</p>
+<p class="abstract-cn">📄 中文翻译：推理 LLMs-as-Judges（可受益于推理时规模化），为将推理模型的成功扩展到输出正确性/质量无法直接检验的非可验证领域提供了有前景的路径。然而，尽管推理型法官在静态评估基准上表现出更好的性能，但它们在实际策略训练中的效果尚未得到系统性检验。因此，我们进行了一项严格的研究，以探讨非推理型法官和推理型法官在基于强化学习的 LLM 对齐中的实际影响。我们的受控合成环境使用“黄金标准”法官（gpt-oss-120b）提供偏好注释来训练更小的法官，揭示了非推理型法官和推理型法官之间的关键差异：非推理型法官容易导致奖励黑客行为，而推理型法官可以产生在黄金标准法官评估时表现强劲的策略。有趣的是，我们发现经推理型法官训练的策略之所以取得如此强劲的性能，是因为它们学习生成高度有效的对抗性输出，这些输出还能通过欺骗其他 LLM 法官而在 Arena-Hard 等流行基准上获得高分。结合我们的进一步分析，我们的研究突出了在非可验证的 LLM 后期训练中应用（推理型）LLM 法官的重要发现和改进空间。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12246v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation<span class="title-cn">➡️ 信任你的批评者：用于忠实图像编辑和生成的 **Robust Reward Modeling** 与 **Reinforcement Learning**</span></h3>
+<p class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin</p>
+<div class="abstract">
+<p class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and editing. First, we design tailored data curation pipelines to construct high-quality scoring datasets. Specifically, we evaluate editing using both execution and consistency, while generation is primarily assessed via instruction following. Using these pipelines, we collect the FIRM-Edit-370K and FIRM-Gen-293K datasets, and train specialized reward models (FIRM-Edit-8B and FIRM-Gen-8B) that accurately reflect these criteria. Second, we introduce FIRM-Bench, a comprehensive benchmark specifically designed for editing and generation critics. Evaluations demonstrate that our models achieve superior alignment with human judgment compared to existing metrics. Furthermore, to seamlessly integrate these critics into the RL pipeline, we formulate a novel "Base-and-Bonus" reward strategy that balances competing objectives: Consistency-Modulated Execution (CME) for editing and Quality-Modulated Alignment (QMA) for generation. Empowered by this framework, our resulting models FIRM-Qwen-Edit and FIRM-SD3.5 achieve substantial performance breakthroughs. Comprehensive experiments demonstrate that FIRM mitigates hallucinations, establishing a new standard for fidelity and instruction adherence over existing general models. All of our datasets, models, and code have been publicly available at https://firm-reward.github.io.</p>
+<p class="abstract-cn">📄 强化学习（Reinforcement Learning，RL）已成为提升图像编辑和文本到图像（Text-to-Image，T2I）生成的有前景的范式。然而，当前的奖励模型在强化学习过程中充当评判者，往往存在幻觉问题并给出有噪声的分数，这本质上会误导优化过程。在本文中，我们提出了FIRM（Faithful Image Reward Modeling，忠实图像奖励建模），这是一个全面的框架，用于开发强大的奖励模型，以提供准确可靠的指导，实现忠实的图像生成和编辑。首先，我们设计了定制的数据整理流程来构建高质量的评分数据集。具体而言，我们从执行性和一致性两个维度评估编辑效果，而生成效果主要通过指令遵循能力来评估。利用这些流程，我们收集了FIRM-Edit-370K和FIRM-Gen-293K数据集，并训练了专门的奖励模型（FIRM-Edit-8B和FIRM-Gen-8B），能够准确反映这些标准。其次，我们推出了FIRM-Bench，这是一个专门为编辑和生成评判者设计的综合基准。评估表明，我们的模型与人类判断的一致性优于现有指标。此外，为了将这些评判者无缝集成到强化学习流程中，我们提出了一种新颖的“基础加奖励”（Base-and-Bonus）奖励策略，以平衡相互竞争的目标：用于编辑的一致性调制执行（Consistency-Modulated Execution，CME）和用于生成的质量调制对齐（Quality-Modulated Alignment，QMA）。在此框架的赋能下，我们得到的模型FIRM-Qwen-Edit和FIRM-SD3.5实现了显著的性能突破。全面的实验表明，FIRM有效缓解了幻觉问题，为现有通用模型树立了保真度和指令遵循的新标准。我们所有的数据集、模型和代码已在https://firm-reward.github.io上公开可用。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12247v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing<span class="title-cn">➡️ **中文翻译（保留英文专有名词）**：  
+
+先Attend再Attention：通过自回归注视（Autoregressive Gazing）实现高效且可扩展的Video Understanding。</span></h3>
+<p class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.</p>
+<p class="abstract-cn">📄 多模态大语言模型（MLLMs）在通用视频理解方面取得了进展，但在处理长时、高分辨率视频时表现不佳——它们在视觉Transformer（ViTs）或LLMs中对每个像素同等处理，尽管存在显著的时空冗余。我们提出了AutoGaze，一个轻量级模块，在由ViT或MLLM处理之前去除冗余的补丁。AutoGaze通过下一个 token 预测和强化学习进行训练，能够自回归地选取最小规模的多尺度补丁集合，使其在用户指定的误差阈值内重建视频，从而在保留信息的同时消除冗余。实验表明，AutoGaze将视觉 token 减少4倍至100倍，并将ViTs和MLLMs加速最多19倍，使得MLLMs能够扩展到1K‑frame 4K‑resolution视频，并在视频基准测试中取得优异成绩（例如VideoMME上的67.0%）。此外，我们还推出了HLVid：首个高分辨率、长达5分钟的4K分辨率视频问答基准，其中使用AutoGaze扩展的MLLM相比基线提升10.1%，比之前的最佳MLLM高出4.5%。Project page: https://autogaze.github.io/.</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously<span class="title-cn">➡️ 视频流思考：VideoLLMs 可以同时观看和思考</span></h3>
+<p class="meta">👤 Yiran Guan, Liang Yin, Dingkang Liang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response latency. To address this trade-off, we propose Video Streaming Thinking (VST), a novel paradigm for streaming video understanding. It supports a thinking while watching mechanism, which activates reasoning over incoming video clips during streaming. This design improves timely comprehension and coherent cognition while preserving real-time responsiveness by amortizing LLM reasoning latency over video playback. Furthermore, we introduce a comprehensive post-training pipeline that integrates VST-SFT, which structurally adapts the offline VideoLLM to causal streaming reasoning, and VST-RL, which provides end-to-end improvement through self-exploration in a multi-turn video interaction environment. Additionally, we devise an automated training-data synthesis pipeline that uses video knowledge graphs to generate high-quality streaming QA pairs, with an entity-relation grounded streaming Chain-of-Thought to enforce multi-evidence reasoning and sustained attention to the video stream. Extensive evaluations show that VST-7B performs strongly on online benchmarks, e.g. 79.5% on StreamingBench and 59.3% on OVO-Bench. Meanwhile, VST remains competitive on offline long-form or reasoning benchmarks. Compared with Video-R1, VST responds 15.7 times faster and achieves +5.4% improvement on VideoHolmes, demonstrating higher efficiency and strong generalization across diverse video understanding tasks. Code, data, and models will be released at https://github.com/1ranGuan/VST.</p>
+<p class="abstract-cn">📄 在线视频大语言模型（VideoLLMs）在支持响应式、实时交互方面发挥着关键作用。现有的方法侧重于流式感知，缺乏同步的逻辑推理流。然而，直接应用测试时扩展方法会导致不可接受的响应延迟。为解决这一权衡，我们提出了视频流思考（Video Streaming Thinking，VST），这是一种用于流式视频理解的新范式。它支持“边看边思考”机制，在流式传输过程中对传入的视频片段激活推理。该设计通过在视频播放期间分摊LLM推理延迟，提升了及时的理解和连贯的认知，同时保持实时响应能力。此外，我们引入了一个完整的后训练流程，整合了VST‑SFT（将离线的VideoLLM结构化地适配到因果流式推理），以及VST‑RL（通过在多轮视频交互环境中的自我探索提供端到端改进）。此外，我们设计了一个自动化的训练数据合成流程，利用视频知识图谱生成高质量的流式问答对，并采用基于实体‑关系的流式Chain‑of‑Thought，以强化多证据推理并保持对视频流的持续关注。大量评估表明，VST‑7B在在线基准上表现优异，例如在StreamingBench上达到79.5%，在OVO‑Bench上达到59.3%。同时，VST在离线长文本或推理基准上仍具竞争力。与Video‑R1相比，VST的响应速度快15.7倍，且在VideoHolmes上提升5.4%，展现出更高的效率和在各种视频理解任务中的强泛化能力。代码、数据和模型将在 https://github.com/1ranGuan/VST 上发布。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12262v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. DVD: Deterministic Video Depth Estimation with Generative Priors<span class="title-cn">➡️ **中文翻译**：  
+**DVD：基于生成先验的确定性视频深度估计**</span></h3>
+<p class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to deterministically adapt pre-trained video diffusion models into single-pass depth regressors. Specifically, DVD features three core designs: (i) repurposing the diffusion timestep as a structural anchor to balance global stability with high-frequency details; (ii) latent manifold rectification (LMR) to mitigate regression-induced over-smoothing, enforcing differential constraints to restore sharp boundaries and coherent motion; and (iii) global affine coherence, an inherent property bounding inter-window divergence, which enables seamless long-video inference without requiring complex temporal alignment. Extensive experiments demonstrate that DVD achieves state-of-the-art zero-shot performance across benchmarks. Furthermore, DVD successfully unlocks the profound geometric priors implicit in video foundation models using 163x less task-specific data than leading baselines. Notably, we fully release our pipeline, providing the whole training suite for SOTA video depth estimation to benefit the open-source community.</p>
+<p class="abstract-cn">📄 中文翻译：现有的视频深度估计面临一个根本性的权衡：生成模型容易出现随机几何幻觉和尺度漂移，而判别模型需要大规模标注数据集来解决语义模糊。为打破这一困境，我们提出了 DVD，这是首个将预训练视频扩散模型确定性适配为单次深度回归器的框架。具体而言，DVD 具有三个核心设计：(i) 将扩散时间步重新用作结构锚，以平衡全局稳定性与高频细节；(ii) 潜在流形校正（Latent Manifold Rectification，简称 LMR），用于缓解回归导致的过度平滑，施加微分约束以恢复清晰的边界和连贯的运动；(iii) 全局仿射一致性（global affine coherence），这是一种固有属性，限定了窗口间散度，使得无需复杂的时间对齐即可实现无缝的长视频推理。大量实验表明，DVD 在各基准（benchmarks）上实现了最先进的零样本（zero‑shot）性能。此外，DVD 成功解锁了视频基础模型中隐含的深刻几何先验，只需使用领先基线 163 倍少的任务特定数据。值得注意的是，我们完整发布了整个流程，提供了用于 SOTA 视频深度估计的完整训练套件，以惠及开源社区。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. GRADE: Benchmarking Discipline-Informed Reasoning in Image Editing<span class="title-cn">➡️ **GRADE：图像编辑中学科知情推理的基准测试**</span></h3>
+<p class="meta">👤 Mingxin Liu, Ziqian Fan, Zhaokai Wang</p>
+<div class="abstract">
+<p class="abstract-en">📄 Unified multimodal models target joint understanding, reasoning, and generation, but current image editing benchmarks are largely confined to natural images and shallow commonsense reasoning, offering limited assessment of this capability under structured, domain-specific constraints. In this work, we introduce GRADE, the first benchmark to assess discipline-informed knowledge and reasoning in image editing. GRADE comprises 520 carefully curated samples across 10 academic domains, spanning from natural science to social science. To support rigorous evaluation, we propose a multi-dimensional evaluation protocol that jointly assesses Discipline Reasoning, Visual Consistency, and Logical Readability. Extensive experiments on 20 state-of-the-art open-source and closed-source models reveal substantial limitations in current models under implicit, knowledge-intensive editing settings, leading to large performance gaps. Beyond quantitative scores, we conduct rigorous analyses and ablations to expose model shortcomings and identify the constraints within disciplinary editing. Together, GRADE pinpoints key directions for the future development of unified multimodal models, advancing the research on discipline-informed image editing and reasoning. Our benchmark and evaluation code are publicly released.</p>
+<p class="abstract-cn">📄 统一多模态模型旨在实现联合理解、推理和生成，但目前的图像编辑基准测试大多局限于自然图像和浅显的常识推理，在结构化、领域特定的约束下对该能力的评估十分有限。  
+在本工作中，我们提出了 GRADE，首个用于评估图像编辑中领域知识与推理的基准。  
+GRADE 包含 520 个精心挑选的样本，涵盖 10 个学术领域，从自然科学到社会科学。  
+为支持严谨的评估，我们提出了一种多维评估协议，该协议同时评估 Discipline Reasoning、Visual Consistency 和 Logical Readability。  
+对 20 个最先进的开源和闭源模型进行了广泛实验，揭示了在隐式、知识密集的编辑设置下，当前模型存在显著局限，导致了较大的性能差距。  
+除定量分数之外，我们进行了严格的分析和消融实验，以揭示模型的不足，并识别学科编辑中的限制。  
+总体而言，GRADE 为统一多模态模型的未来发展指明了关键方向，推动了领域知识驱动的图像编辑与推理的研究。  
+我们的基准和评估代码已公开发布。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12264v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning<span class="title-cn">➡️ 中文翻译：
+
+**DreamVideo-Omni：基于潜在身份强化学习的全动作控制多主体视频定制**
+
+说明：
+- "Omni-Motion Controlled" 翻译为"全动作控制"
+- "Multi-Subject Video Customization" 翻译为"多主体视频定制"
+- "Latent Identity Reinforcement Learning" 作为技术术语，可保留英文或翻译为"潜在身份强化学习"</span></h3>
+<p class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.</p>
+<p class="abstract-cn">📄 尽管大规模扩散模型已经革新了视频合成，但要同时实现多主体身份（multi‑subject identity）和多粒度运动（multi‑granularity motion）的精确控制仍然是一项重大挑战。近期的尝试往往受限于运动粒度不足、控制歧义以及身份退化等问题，导致身份保持和运动控制的表现不尽如人意。在本工作中，我们提出了 **DreamVideo‑Omni**，一个统一的框架，通过渐进式两阶段训练范式实现和谐的多主体定制与全方位运动（omni‑motion）控制。
+
+在第一阶段，我们整合了全面的控制信号进行联合训练，涵盖主体外观、全局运动、局部动态以及摄像机运动。为确保鲁棒且精确的可控性，我们引入了**条件感知的 3D 旋转位置嵌入（condition‑aware 3D rotary positional embedding）**来协调异构输入，并采用**层级运动注入策略（hierarchical motion injection strategy）**以增强全局运动引导。此外，为解决多主体歧义，我们引入了**组与角色嵌入（group and role embeddings）**，将运动信号明确锚定到特定身份，从而将复杂场景有效地解耦为独立可控的实例。
+
+在第二阶段，为减轻身份退化，我们设计了**潜在身份奖励反馈学习范式（latent identity reward feedback learning paradigm）**，通过在预训练的视频扩散骨干（pretrained video diffusion backbone）上训练潜在身份奖励模型（latent identity reward model）来实现。这在**潜在空间（latent space）**中提供运动感知的身份奖励，优先考虑符合人类偏好的身份保持。
+
+在我们整理的大规模数据集以及全面的 **DreamOmni Bench**（用于多主体和全方位运动控制的评估）的支撑下，**DreamVideo‑Omni** 在生成高质量视频并实现精确可控性方面展示了卓越的性能。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. MM-CondChain: A Programmatically Verified Benchmark for Visually Grounded Deep Compositional Reasoning<span class="title-cn">➡️ MM‑CondChain：一个程序化验证的视觉基础深度组合推理基准。</span></h3>
+<p class="meta">👤 Haozhan Shen, Shilin Yan, Hongwei Xue</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multimodal Large Language Models (MLLMs) are increasingly used to carry out visual workflows such as navigating GUIs, where the next step depends on verified visual compositional conditions (e.g., "if a permission dialog appears and the color of the interface is green, click Allow") and the process may branch or terminate early. Yet this capability remains under-evaluated: existing benchmarks focus on shallow-compositions or independent-constraints rather than deeply chained compositional conditionals. In this paper, we introduce MM-CondChain, a benchmark for visually grounded deep compositional reasoning. Each benchmark instance is organized as a multi-layer reasoning chain, where every layer contains a non-trivial compositional condition grounded in visual evidence and built from multiple objects, attributes, or relations. To answer correctly, an MLLM must perceive the image in detail, reason over multiple visual elements at each step, and follow the resulting execution path to the final outcome. To scalably construct such workflow-style data, we propose an agentic synthesis pipeline: a Planner orchestrates layer-by-layer generation of compositional conditions, while a Verifiable Programmatic Intermediate Representation (VPIR) ensures each layer's condition is mechanically verifiable. A Composer then assembles these verified layers into complete instructions. Using this pipeline, we construct benchmarks across three visual domains: natural images, data charts, and GUI trajectories. Experiments on a range of MLLMs show that even the strongest model attains only 53.33 Path F1, with sharp drops on hard negatives and as depth or predicate complexity grows, confirming that deep compositional reasoning remains a fundamental challenge.</p>
+<p class="abstract-cn">📄 多模态大语言模型（MLLMs）正越来越多地被用于执行视觉工作流，例如导航图形用户界面（GUI），其中下一步取决于已验证的视觉组合条件（例如“如果出现权限对话框且界面颜色为绿色，则点击‘允许’”），并且该过程可能会分支或提前终止。然而，这一能力仍然缺乏评估：现有基准侧重于浅层组合或独立约束，而不是深度链式组合条件。在本文中，我们推出 **MM‑CondChain**，一个用于视觉基础的深度组合推理的基准。每个基准实例都被组织为多层推理链，其中每一层都包含一个基于视觉证据的 **非平凡** 组合条件，并由多个对象、属性或关系构成。要正确回答，MLLM 必须细致感知图像，在每一步对多个视觉元素进行推理，并遵循产生的执行路径直至最终结果。为了大规模构建此类工作流式数据，我们提出一个 **代理式合成管道**：**Planner** 负责逐层生成组合条件，而 **Verifiable Programmatic Intermediate Representation (VPIR)** 确保每一层的条件都是可机械验证的。随后，**Composer** 将这些已验证的层组装成完整指令。利用该管道，我们在三个视觉领域构建了基准：自然图像、数据图表和 GUI 轨迹。对一系列 MLLMs 的实验表明，即使是最强的模型也仅能达到 **53.33 Path F1**，且在困难负例以及深度或谓词复杂度增加时显著下降，这证实了深度组合推理仍然是一个根本性的挑战。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12266v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="topic"><h2>✂️ 模型压缩</h2></div><div class="topic"><h2>📝 综述论文</h2></div><div class="topic"><h2>🎮 强化学习</h2><div class="paper">
+<h3>1. Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing<span class="title-cn">➡️ Attend Before Attention：通过 Autoregressive Gazing 实现高效且可扩展的视频理解</span></h3>
+<p class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian</p>
+<div class="abstract">
+<p class="abstract-en">📄 Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweight module that removes redundant patches before processed by a ViT or an MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively selects a minimal set of multi-scale patches that can reconstruct the video within a user-specified error threshold, eliminating redundancy while preserving information. Empirically, AutoGaze reduces visual tokens by 4x-100x and accelerates ViTs and MLLMs by up to 19x, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks (e.g., 67.0% on VideoMME). Furthermore, we introduce HLVid: the first high-resolution, long-form video QA benchmark with 5-minute 4K-resolution videos, where an MLLM scaled with AutoGaze improves over the baseline by 10.1% and outperforms the previous best MLLM by 4.5%. Project page: https://autogaze.github.io/.</p>
+<p class="abstract-cn">📄 多模态大型语言模型（MLLMs）在通用视频理解方面取得了进展，但在处理长篇高分辨率视频时仍面临困难——尽管存在显著的时空冗余，它们在其视觉Transformer（ViTs）或LLMs中对每个像素都同等处理。我们推出了AutoGaze，一个轻量级模块，在ViT或MLLM处理之前去除冗余的补丁。AutoGaze通过下一token预测和强化学习进行训练，自动回归地选择最小的多尺度补丁集合，使其能够在用户指定的误差阈值内重构视频，从而在保留信息的同时消除冗余。实验表明，AutoGaze将视觉token减少4倍至100倍，并将ViTs和MLLMs加速最多19倍，使得能够将MLLMs扩展到1K帧4K分辨率视频，并在视频基准测试中取得优异成绩（例如VideoMME上67.0%）。此外，我们推出HLVid：首个高分辨率、长时视频问答基准，包含5分钟4K分辨率视频，其中使用AutoGaze扩展的MLLM相比基线提升10.1%，并且比之前的最佳MLLM高出4.5%。项目页面：https://autogaze.github.io/</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers<span class="title-cn">➡️ **中文翻译（保留英文专有名词）：**  
+
+一个模型，多种预算：面向 Diffusion Transformers 的 Elastic Latent Interfaces。</span></h3>
+<p class="meta">👤 Moayed Haji-Ali, Willi Menapace, Ivan Skorokhodov</p>
+<div class="abstract">
+<p class="abstract-en">📄 Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface Transformer (ELIT), a drop-in, DiT-compatible mechanism that decouples input image size from compute. Our approach inserts a latent interface, a learnable variable-length token sequence on which standard transformer blocks can operate. Lightweight Read and Write cross-attention layers move information between spatial tokens and latents and prioritize important input regions. By training with random dropping of tail latents, ELIT learns to produce importance-ordered representations with earlier latents capturing global structure while later ones contain information to refine details. At inference, the number of latents can be dynamically adjusted to match compute constraints. ELIT is deliberately minimal, adding two cross-attention layers while leaving the rectified flow objective and the DiT stack unchanged. Across datasets and architectures (DiT, U-ViT, HDiT, MM-DiT), ELIT delivers consistent gains. On ImageNet-1K 512px, ELIT delivers an average gain of $35.3\%$ and $39.6\%$ in FID and FDD scores. Project page: https://snap-research.github.io/elit/</p>
+<p class="abstract-cn">📄 Diffusion Transformers（DiTs）实现了高质量的生成，但将 FLOPs 与图像分辨率锁定，限制了基于原则的延迟‑质量权衡，并且在输入的空间 token 上均匀分配计算，导致资源浪费在不重要的区域。我们引入了弹性潜在接口 Transformer（ELIT），一种即插即用、与 DiT 兼容的机制，将输入图像大小与计算解耦。我们的方法插入了一个潜在接口——一个可学习的变长 token 序列，标准的 transformer 块可以在其上操作。轻量级的读取（Read）和写入（Write）跨注意力层在空间 token 与潜在 token 之间移动信息，并优先处理重要的输入区域。通过在训练时随机丢弃尾部的潜在 token，ELIT 学习生成重要性有序的表示，其中前面的潜在 token 捕获全局结构，后面的潜在 token 包含用于细化细节的信息。在推理时，潜在 token 的数量可以动态调整，以匹配计算约束。ELIT 刻意保持简洁，仅添加两个跨注意力层，同时保持修正流（rectified flow）目标和 DiT 堆栈不变。在多个数据集和架构（DiT、U‑ViT、HDiT、MM‑DiT）上，ELIT 带来了一致的提升。在 ImageNet‑1K 512px 上，ELIT 在 FID 和 FDD 分数上分别实现了 35.3% 和 39.6% 的平均提升。项目主页：https://snap-research.github.io/elit/</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12245v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams<span class="title-cn">➡️ OmniStream：在连续流中掌握感知、重建与行动</span></h3>
+<p class="meta">👤 Yibin Yan, Jilan Xu, Shangzhe Di</p>
+<div class="abstract">
+<p class="abstract-en">📄 Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.</p>
+<p class="abstract-cn">📄 现代视觉智能体需要通用、因果且物理结构化的表征，以在实时流式环境中运行。然而，当前的视觉基础模型仍呈碎片化趋势，仅在图像语义感知、离线时间建模或空间几何方面进行专项研究。本文推出了OmniStream——一种统一的流式视觉骨干网络，能够从多样化的视觉输入中进行有效感知、重建和行动。通过整合因果时空注意力机制和3D旋转位置嵌入（3D-RoPE），我们的模型支持通过持久化KV缓存对视频流进行高效的逐帧在线处理。我们使用协同多任务框架对OmniStream进行预训练，将静态与时间表征学习、流式几何重建以及视觉-语言对齐相结合，涵盖29个数据集。大量评估表明，即使采用完全冻结的骨干网络，OmniStream在图像和视频探测、流式几何重建、复杂视频和空间推理以及机器人操作（训练中未见过）等任务中，仍能与专业专家模型保持一致的竞争力。我们的工作并非追求在特定基准上的主导地位，而是旨在展示训练一个单一、多功能视觉骨干网络的可行性——使其能够泛化到语义、空间和时间推理，即向交互式和具身智能体的通用视觉理解迈出了更有意义的一步。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12265v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training<span class="title-cn">➡️ **中文翻译**：
+
+Spatial-TTT: 流式视觉空间智能与 Test‑Time Training</span></h3>
+<p class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi</p>
+<div class="abstract">
+<p class="abstract-en">📄 Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows but how spatial information is selected, organized, and retained over time. In this paper, we propose Spatial-TTT towards streaming visual-based spatial intelligence with test-time training (TTT), which adapts a subset of parameters (fast weights) to capture and organize spatial evidence over long-horizon scene videos. Specifically, we design a hybrid architecture and adopt large-chunk updates parallel with sliding-window attention for efficient spatial video processing. To further promote spatial awareness, we introduce a spatial-predictive mechanism applied to TTT layers with 3D spatiotemporal convolution, which encourages the model to capture geometric correspondence and temporal continuity across frames. Beyond architecture design, we construct a dataset with dense 3D spatial descriptions, which guides the model to update its fast weights to memorize and organize global 3D spatial signals in a structured manner. Extensive experiments demonstrate that Spatial-TTT improves long-horizon spatial understanding and achieves state-of-the-art performance on video spatial benchmarks. Project page: https://liuff19.github.io/Spatial-TTT.</p>
+<p class="abstract-cn">📄 中文翻译：
+
+人类通过一系列视觉观察来感知和理解现实世界空间。因此，能够在潜在无界的视频流中流式地保持和更新空间证据，对于空间智能至关重要。核心挑战不仅仅是更长的上下文窗口，而是空间信息如何在时间中被选择、组织和保留。在本文中，我们提出 **Spatial-TTT**，即面向流式视觉空间智能的 **test‑time training (TTT)**，它对一部分参数（**fast weights**）进行适配，以在长时序场景视频中捕获和组织空间证据。具体而言，我们设计了一种混合架构，并采用 **large‑chunk updates** 并行 **sliding‑window attention**，以实现高效的空间视频处理。为进一步提升空间感知能力，我们在 TTT 层中引入了 **spatial‑predictive mechanism**，该机制使用 **3D spatiotemporal convolution** 来鼓励模型捕获帧间的几何对应关系和时间连续性。除了架构设计之外，我们构建了一个包含密集 3D 空间描述的数据集，用于指导模型更新其 **fast weights**，以结构化的方式记忆和组织全局 3D 空间信号。大量实验表明，**Spatial‑TTT** 在长时序空间理解方面有显著提升，并在视频空间基准测试中取得了最先进的性能。项目主页：https://liuff19.github.io/Spatial-TTT。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. HumDex:Humanoid Dexterous Manipulation Made Easy<span class="title-cn">➡️ **HumDex：让人形灵巧操作变得更简单**</span></h3>
+<p class="meta">👤 Liang Heng, Yihe Tang, Jiajun Xu</p>
+<div class="abstract">
+<p class="abstract-en">📄 This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.</p>
+<p class="abstract-cn">📄 本文研究了人形机器人全身灵巧操作，其中高质量示范数据的高效收集仍然是核心瓶颈。现有遥操作系统通常存在便携性有限、遮挡或精度不足的问题，这阻碍了它们在复杂全身任务中的适用性。为解决这些挑战，我们推出了HumDex，一个专为 人形机器人全身灵巧操作设计的便携式遥操作系统。我们的系统利用基于IMU的运动跟踪来平衡便携性与精度，在保持易于部署的同时实现准确的全身跟踪。对于灵巧手控制，我们进一步引入了一种基于学习的重定向方法，可生成平滑自然的手部运动，无需手动参数调整。除了遥操作，HumDex还能高效收集人体运动数据。基于这一能力，我们提出了一种两阶段模仿学习框架，首先在不同人体运动数据上进行预训练以学习可泛化的先验知识，然后在机器人数据上进行微调以弥补实体化差距，实现精确执行。我们证明，这种方法能够以极低的数据采集成本显著提高对新配置、新物体和新背景的泛化能力。整个系统完全可复现，并在 https://github.com/physical-superintelligence-lab/HumDex 上开源。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12260v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning<span class="title-cn">➡️ DreamVideo‑Omni：Omni‑Motion 控制的多主体视频定制（含 Latent Identity Reinforcement Learning）</span></h3>
+<p class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang</p>
+<div class="abstract">
+<p class="abstract-en">📄 While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.</p>
+<p class="abstract-cn">📄 虽然大规模扩散模型已经革新了视频合成技术，但实现对多主体身份和多粒度运动的精确控制仍然是一个重大挑战。最近弥合这一差距的尝试往往受到运动粒度有限、控制模糊和身份退化的困扰，导致身份保持和运动控制方面的表现不佳。在本工作中，我们提出了DreamVideo-Omni，这是一个统一的框架，通过渐进式两阶段训练范式实现和谐的多主体定制和全向运动控制。在第一阶段，我们整合了综合控制信号进行联合训练，包括主体外观、整体运动、局部动态和摄像机运动。为确保稳健和精确的可控性，我们引入了条件感知的三维旋转位置嵌入来协调异构输入，以及分层运动注入策略来增强整体运动指导。此外，为了解决多主体模糊问题，我们引入了组和角色嵌入来明确地将运动信号锚定到特定身份，有效地解耦复杂场景为独立可控的实例。在第二阶段，为了减轻身份退化，我们设计了一个潜在身份奖励反馈学习范式，在预训练的视频扩散主干上训练潜在身份奖励模型。这在潜在空间中提供运动感知的身份奖励，优先考虑与人类偏好一致的身份保持。在我们精心策划的大规模数据集和综合DreamOmni Bench（用于多主体和全向运动控制评估）的支持下，DreamVideo-Omni在生成具有精确可控性的高质量视频方面表现出卓越性能。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models<span class="title-cn">➡️ 匹配特征，而非标记：Energy‑Based Fine‑Tuning of Language Models</span></h3>
+<p class="meta">👤 Samy Jelassi, Mujin Kwun, Rosie Zhao</p>
+<div class="abstract">
+<p class="abstract-en">📄 Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequence-level statistics of the completion distribution, providing dense semantic feedback without requiring a task-specific verifier or preference model. To optimize this objective efficiently, we propose energy-based fine-tuning (EBFT), which uses strided block-parallel sampling to generate multiple rollouts from nested prefixes concurrently, batches feature extraction over these rollouts, and uses the resulting embeddings to perform an on-policy policy-gradient update. We present a theoretical perspective connecting EBFT to KL-regularized feature-matching and energy-based modeling. Empirically, across Q&A coding, unstructured coding, and translation, EBFT matches RLVR and outperforms SFT on downstream accuracy while achieving a lower validation cross-entropy than both methods.</p>
+<p class="abstract-cn">📄 Cross‑entropy (CE) 训练为语言模型提供了密集且可扩展的监督，但它在 teacher forcing 下优化 next‑token 预测，而不是在模型 rollouts 下优化序列层面的行为。我们为语言模型的微调引入了一种 feature‑matching objective，针对完成分布的序列层面统计量提供密集的语义反馈，而无需任务特定的 verifier 或 preference model。为高效优化该目标，我们提出了 energy‑based fine‑tuning (EBFT)，它使用 strided block‑parallel sampling 从嵌套前缀并行生成多个 rollouts，批量对这些 rollouts 进行特征提取，并利用得到的嵌入执行 on‑policy policy‑gradient 更新。我们从理论上把 EBFT 与 KL‑regularized feature‑matching 和 energy‑based modeling 联系起来。在 Q&A coding、unstructured coding 和 translation 任务上，EBFT 与 RLVR 性能相当，并在下游准确率上超过 SFT，同时取得了比这两种方法更低的验证 cross‑entropy。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12248v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. STAMP: Selective Task-Aware Mechanism for Text Privacy<span class="title-cn">➡️ STAMP：面向文本隐私的选择性任务感知机制</span></h3>
+<p class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson</p>
+<div class="abstract">
+<p class="abstract-en">📄 We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream task (as measured via a task- or query-specific representation), and (ii) its privacy sensitivity (e.g., names, dates, identifiers). This token-level partitioning enables fine-grained, group-wise control over the level of noise applied to different parts of the input, balancing privacy protection with task relevance. To privatize individual token embeddings, we introduce the polar mechanism, which perturbs only the direction of embeddings on the unit sphere while preserving their magnitude. Decoding is performed via cosine nearest-neighbor search, aligning the perturbation geometry with the decoding geometry. Unlike isotropic noise mechanisms, the polar mechanism maintains semantic neighborhoods in the embedding space and better preserves downstream utility. Experimental evaluations on SQuAD, Yelp, and AG News datasets demonstrate that STAMP, when combined with the normalized polar mechanism, consistently achieves superior privacy-utility trade-offs across varying per-token privacy budgets.</p>
+<p class="abstract-cn">📄 我们提出 **STAMP（Selective Task‑Aware Mechanism for Text Privacy）**，一种用于任务感知的文本私有化新框架，能够实现更优的隐私‑效用权衡。  
+
+**STAMP** 通过联合考虑（i）每个 token 对下游任务的重要性（通过任务或查询特定的表示来衡量），以及（ii）其隐私敏感度（例如姓名、日期、标识符），在 token 层面有选择性地分配隐私预算。这种 token‑级别的划分实现了对输入不同部分噪声水平的细粒度、分组控制，从而在隐私保护与任务相关性之间取得平衡。  
+
+为了对单独的 token 嵌入进行私有化，我们引入了 **polar mechanism（极化机制）**，该机制仅在单位球面上扰动嵌入的方向而保持其幅度。解码通过 **cosine nearest‑neighbor search（余弦最近邻搜索）** 完成，使扰动几何与解码几何对齐。与各向同性噪声机制不同，**polar mechanism** 能够保持嵌入空间中的语义邻域，从而更好地保留下游效用。  
+
+在 **SQuAD、Yelp** 和 **AG News** 数据集上的实验评估表明，**STAMP** 与 **normalized polar mechanism（归一化 polar mechanism）** 相结合，在不同的每 token 隐私预算下始终能够获得更优的隐私‑效用权衡。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12237v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation<span class="title-cn">➡️ 中文翻译：
+
+**版本一（直译）：**
+信任你的批评者：用于保真图像编辑与生成的鲁棒奖励建模与强化学习
+
+**版本二（更学术化）：**
+信任你的评判者：面向保真图像编辑与生成的稳健奖励建模与强化学习
+
+**版本三（简化）：**
+信任你的评判者：实现保真图像编辑与生成的鲁棒奖励建模及强化学习
+
+---
+
+**说明：**
+
+- "Faithful" 译为“保真”，指保持原始图像特征的忠实度
+- "Robust" 译为“鲁棒”或“稳健”，两者在学术中均可使用
+- "Reward Modeling" 译为“奖励建模”
+- "Reinforcement Learning" 保持为“强化学习”（标准术语）</span></h3>
+<p class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin</p>
+<div class="abstract">
+<p class="abstract-en">📄 Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In this paper, we present FIRM (Faithful Image Reward Modeling), a comprehensive framework that develops robust reward models to provide accurate and reliable guidance for faithful image generation and editing. First, we design tailored data curation pipelines to construct high-quality scoring datasets. Specifically, we evaluate editing using both execution and consistency, while generation is primarily assessed via instruction following. Using these pipelines, we collect the FIRM-Edit-370K and FIRM-Gen-293K datasets, and train specialized reward models (FIRM-Edit-8B and FIRM-Gen-8B) that accurately reflect these criteria. Second, we introduce FIRM-Bench, a comprehensive benchmark specifically designed for editing and generation critics. Evaluations demonstrate that our models achieve superior alignment with human judgment compared to existing metrics. Furthermore, to seamlessly integrate these critics into the RL pipeline, we formulate a novel "Base-and-Bonus" reward strategy that balances competing objectives: Consistency-Modulated Execution (CME) for editing and Quality-Modulated Alignment (QMA) for generation. Empowered by this framework, our resulting models FIRM-Qwen-Edit and FIRM-SD3.5 achieve substantial performance breakthroughs. Comprehensive experiments demonstrate that FIRM mitigates hallucinations, establishing a new standard for fidelity and instruction adherence over existing general models. All of our datasets, models, and code have been publicly available at https://firm-reward.github.io.</p>
+<p class="abstract-cn">📄 强化学习 (RL) 已成为提升图像编辑和文本到图像（T2I）生成的有前景的范式。然而，当前的奖励模型（RL 中的批评者）常出现幻觉并给出噪声分数，从而固有地误导优化过程。本文中，我们提出了 **FIRM（Faithful Image Reward Modeling，忠实图像奖励建模）**，一个旨在构建稳健奖励模型以提供准确可靠指导的全面框架，用于忠实的图像生成和编辑。
+
+首先，我们设计了定制的数据整理流水线，以构建高质量的评分数据集。具体而言，我们从执行和一致性两个维度评估编辑，而生成主要通过指令遵循进行评估。利用这些流水线，我们收集了 **FIRM‑Edit‑370K** 和 **FIRM‑Gen‑293K** 数据集，并训练了专门的奖励模型（**FIRM‑Edit‑8B** 和 **FIRM‑Gen‑8B**），准确反映这些标准。
+
+其次，我们推出了 **FIRM‑Bench**，一个专为编辑和生成批评者设计的综合基准。评估表明，我们的模型与人类判断的对齐程度优于现有指标。此外，为了将这些批评者无缝集成到 RL 流水线中，我们提出了一种新颖的 **“基础+奖励”（Base‑and‑Bonus）** 奖励策略，以平衡相互竞争的目标：编辑方面的 **一致性调制执行（Consistency‑Modulated Execution，CME）** 和生成方面的 **质量调制对齐（Quality‑Modulated Alignment，QMA）**。
+
+在此框架的加持下，我们的最终模型 **FIRM‑Qwen‑Edit** 和 **FIRM‑SD3.5** 取得了显著的性能突破。大量实验表明，FIRM 能够抑制幻觉，在保真度和指令遵循方面树立了超越现有通用模型的新标准。所有数据集、模型和代码已在 https://firm-reward.github.io 上公开提供。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12247v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training<span class="title-cn">➡️ 在不可验证的 LLM 后训练中审视 LLMs-as-Judges 的推理</span></h3>
+<p class="meta">👤 Yixin Liu, Yue Yu, DiJia Su</p>
+<div class="abstract">
+<p class="abstract-en">📄 Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on static evaluation benchmarks, their effectiveness in actual policy training has not been systematically examined. Therefore, we conduct a rigorous study to investigate the actual impact of non-reasoning and reasoning judges in reinforcement-learning-based LLM alignment. Our controlled synthetic setting, where a "gold-standard" judge (gpt-oss-120b) provides preference annotations to train smaller judges, reveals key differences between non-reasoning and reasoning judges: non-reasoning judges lead to reward hacking easily, while reasoning judges can lead to policies that achieve strong performance when evaluated by the gold-standard judge. Interestingly, we find that the reasoning-judge-trained policies achieve such strong performance by learning to generate highly effective adversarial outputs that can also score well on popular benchmarks such as Arena-Hard by deceiving other LLM-judges. Combined with our further analysis, our study highlights both important findings and room for improvements for applying (reasoning) LLM-judges in non-verifiable LLM post-training.</p>
+<p class="abstract-cn">📄 中文翻译：
+
+推理LLMs-as-Judges（推理评判模型）可以从推理时扩展中受益，为将推理模型的成功扩展到输出正确性/质量无法直接检查的不可验证领域提供了有前景的路径。然而，尽管推理评判模型在静态评估基准上表现出更好的性能，但其在实际策略训练中的有效性尚未得到系统检验。因此，我们进行了严格的研究，以调查基于强化学习的LLM对齐中非推理评判模型和推理评判模型的实际影响。我们的受控合成设置使用"金标准"评判模型（gpt-oss-120b）提供偏好标注来训练更小的评判模型，揭示了非推理评判模型和推理评判模型之间的关键差异：非推理评判模型容易导致奖励黑客行为，而推理评判模型可以训练出在金标准评判模型评估下表现强劲的策略。有趣的是，我们发现推理评判模型训练的策略能够通过学习生成高度有效的对抗性输出来实现这种强劲性能，这些输出还可以通过欺骗其他LLM评判模型在Arena-Hard等流行基准上获得高分。结合我们的进一步分析，我们的研究强调了将（推理）LLM评判模型应用于不可验证LLM后训练的重要发现和改进空间。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.12246v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="footer"><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>
