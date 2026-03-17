@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI论文速递 2026-03-15</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-15</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2>
+
+            <div class="paper">
+                <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+                <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                    <div class="abstract-cn">现有的视频深度估计面临一个根本的权衡：生成模型遭受随机几何幻觉和尺度漂移的困扰，而判别模型需要大量标注数据集来解决语义歧义。为打破这一僵局，我们提出了DVD，这是首个框架……</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+                <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                    <div class="abstract-cn">【翻译】Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12252v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+                <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                    <div class="abstract-cn">【翻译】Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+                <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                    <div class="abstract-cn">【翻译】Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Quantum Inductance as a Phase-Sensitive Probe of Fermion Parity Switching in Majorana Nanowires</h3>
+                <div class="meta">👤 Binayyak B. Roy, Jay D. Sau, Sumanta Tewari · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">We study the flux-dependent quantum inductance of a one-dimensional (1D) semiconductor-superconductor (SM-SC) Majorana nanowire coupled to a quantum dot in an interferometric setup. Although quantum capacitance in this setup enables fast fermion parity readout, as has been demonstrated experimentall...</div>
+                    <div class="abstract-cn">【翻译】We study the flux-dependent quantum inductance of a one-dimensional (1D) semiconductor-superconductor (SM-SC) Majorana nanowire coupled to a quantum dot in an interferometric setup. Although quantum capacitance in this setup enables fast fermion parity readout, as has been demonstrated experimentall...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12256v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+                <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                    <div class="abstract-cn">【翻译】While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Stable Topology in Exactly Flat Bands</h3>
+                <div class="meta">👤 Yan-Qi Li, Yi-Jie Wang, Pei-Han Lin · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Topological flat bands (FBs) offer an ideal platform for realizing exotic topological phases, such as fractional Chern insulators, yet their realization with both exact flatness and stable topology in local lattice models has been long hindered by fundamental no-go theorems. Here, we overcome this b...</div>
+                    <div class="abstract-cn">【翻译】Topological flat bands (FBs) offer an ideal platform for realizing exotic topological phases, such as fractional Chern insulators, yet their realization with both exact flatness and stable topology in local lattice models has been long hindered by fundamental no-go theorems. Here, we overcome this b...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12258v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Emergent Anomalous Hall Effect from Surface States in the Altermagnet MnTe Thin Films</h3>
+                <div class="meta">👤 Yufei Zhao, Saswata Mandal, Chao-Xing Liu · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Transport measurements on thin films of the prototypical altermagnet MnTe have reported conflicting phenomena of anomalous Hall effects (AHE), including opposite signs and thickness-independent resistivity. Here we resolve these discrepancies by separating bulk and surface contributions to the AHE f...</div>
+                    <div class="abstract-cn">【翻译】Transport measurements on thin films of the prototypical altermagnet MnTe have reported conflicting phenomena of anomalous Hall effects (AHE), including opposite signs and thickness-independent resistivity. Here we resolve these discrepancies by separating bulk and surface contributions to the AHE f...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12259v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+                <div class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                    <div class="abstract-cn">【翻译】Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12261v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously</h3>
+                <div class="meta">👤 Yiran Guan, Liang Yin, Dingkang Liang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                    <div class="abstract-cn">【翻译】Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12262v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class="topic"><h2>🖼️ 计算机视觉</h2>
+
+            <div class="paper">
+                <h3>SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning</h3>
+                <div class="meta">👤 Ziyu Chen, Yilun Zhao, Chengye Wang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Syn...</div>
+                    <div class="abstract-cn">【翻译】Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Syn...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12249v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+                <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                    <div class="abstract-cn">【翻译】Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+                <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                    <div class="abstract-cn">【翻译】Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12252v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Binding Free Energies without Alchemy</h3>
+                <div class="meta">👤 Michael Brocidiacono, Brandon Novy, Rishabh Dey · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE),...</div>
+                    <div class="abstract-cn">【翻译】Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE),...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12253v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+                <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                    <div class="abstract-cn">【翻译】Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+                <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                    <div class="abstract-cn">【翻译】Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+                <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                    <div class="abstract-cn">【翻译】While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>HumDex:Humanoid Dexterous Manipulation Made Easy</h3>
+                <div class="meta">👤 Liang Heng, Yihe Tang, Jiajun Xu · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applic...</div>
+                    <div class="abstract-cn">【翻译】This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.   Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applic...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12260v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+                <div class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                    <div class="abstract-cn">【翻译】Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12261v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously</h3>
+                <div class="meta">👤 Yiran Guan, Liang Yin, Dingkang Liang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                    <div class="abstract-cn">【翻译】Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12262v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class="topic"><h2>🎨 多模态学习</h2>
+
+            <div class="paper">
+                <h3>LABSHIELD: A Multimodal Benchmark for Safety-Critical Reasoning and Planning in Scientific Laboratories</h3>
+                <div class="meta">👤 Qianpu Sun, Xiaowei Chi, Yuhan Rui · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Artificial intelligence is increasingly catalyzing scientific automation, with multimodal large language model (MLLM) agents evolving from lab assistants into self-driving lab operators. This transition imposes stringent safety requirements on laboratory environments, where fragile glassware, hazard...</div>
+                    <div class="abstract-cn">【翻译】Artificial intelligence is increasingly catalyzing scientific automation, with multimodal large language model (MLLM) agents evolving from lab assistants into self-driving lab operators. This transition imposes stringent safety requirements on laboratory environments, where fragile glassware, hazard...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.11987v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>XSkill: Continual Learning from Experience and Skills in Multimodal Agents</h3>
+                <div class="meta">👤 Guanyu Jiang, Zhaochen Su, Xiaoye Qu · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past traject...</div>
+                    <div class="abstract-cn">【翻译】Multimodal agents can now tackle complex reasoning tasks with diverse tools, yet they still suffer from inefficient tool use and inflexible orchestration in open-ended settings. A central challenge is enabling such agents to continually improve without parameter updates by learning from past traject...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12056v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Wasserstein Gradient Flows for Batch Bayesian Optimal Experimental Design</h3>
+                <div class="meta">👤 Louis Sharrock · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected. In practice, however, its applicability can be limited by the difficulty of optimising the chosen utility. The e...</div>
+                    <div class="abstract-cn">【翻译】Bayesian optimal experimental design (BOED) provides a powerful, decision-theoretic framework for selecting experiments so as to maximise the expected utility of the data to be collected. In practice, however, its applicability can be limited by the difficulty of optimising the chosen utility. The e...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12102v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EvoTok: A Unified Image Tokenizer via Residual Latent Evolution for Visual Understanding and Generation</h3>
+                <div class="meta">👤 Yan Li, Ning Liao, Xiangyu Zhao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">The development of unified multimodal large language models (MLLMs) is fundamentally challenged by the granularity gap between visual understanding and generation: understanding requires high-level semantic abstractions, while image generation demands fine-grained pixel-level representations. Existi...</div>
+                    <div class="abstract-cn">【翻译】The development of unified multimodal large language models (MLLMs) is fundamentally challenged by the granularity gap between visual understanding and generation: understanding requires high-level semantic abstractions, while image generation demands fine-grained pixel-level representations. Existi...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12108v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Cornserve: A Distributed Serving System for Any-to-Any Multimodal Models</h3>
+                <div class="meta">👤 Jae-Won Chung, Jeff J. Ma, Jisang Ahn · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Any-to-Any models are an emerging class of multimodal models that accept combinations of multimodal data (e.g., text, image, video, audio) as input and generate them as output. Serving these models are challenging; different requests with different input and output modalities traverse different path...</div>
+                    <div class="abstract-cn">【翻译】Any-to-Any models are an emerging class of multimodal models that accept combinations of multimodal data (e.g., text, image, video, audio) as input and generate them as output. Serving these models are challenging; different requests with different input and output modalities traverse different path...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12118v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Hoi3DGen: Generating High-Quality Human-Object-Interactions in 3D</h3>
+                <div class="meta">👤 Agniv Sharma, Xianghui Xie, Tom Fischer · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming. Existing approaches often rely on score distillation from text-to-image models, but their results suffer from the Janus problem and do not follow text prompts faithfully due to the scarc...</div>
+                    <div class="abstract-cn">【翻译】Modeling and generating 3D human-object interactions from text is crucial for applications in AR, XR, and gaming. Existing approaches often rely on score distillation from text-to-image models, but their results suffer from the Janus problem and do not follow text prompts faithfully due to the scarc...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12126v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EgoIntent: An Egocentric Step-level Benchmark for Understanding What, Why, and Next</h3>
+                <div class="meta">👤 Ye Pan, Chi Kit Wong, Yuanhuiyi Lyu · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multimodal Large Language Models (MLLMs) have demonstrated remarkable video reasoning capabilities across diverse tasks. However, their ability to understand human intent at a fine-grained level in egocentric videos remains largely unexplored. Existing benchmarks focus primarily on episode-level int...</div>
+                    <div class="abstract-cn">【翻译】Multimodal Large Language Models (MLLMs) have demonstrated remarkable video reasoning capabilities across diverse tasks. However, their ability to understand human intent at a fine-grained level in egocentric videos remains largely unexplored. Existing benchmarks focus primarily on episode-level int...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12147v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>LatentGeo: Learnable Auxiliary Constructions in Latent Space for Multimodal Geometric Reasoning</h3>
+                <div class="meta">👤 Haiying Xu, Zihan Wang, Song Dai · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Despite recent advances in multimodal reasoning, representing auxiliary geometric constructions remains a fundamental challenge for multimodal large language models (MLLMs). Such constructions are absent from the original diagram and must be introduced before theorems apply. Existing approaches pred...</div>
+                    <div class="abstract-cn">【翻译】Despite recent advances in multimodal reasoning, representing auxiliary geometric constructions remains a fundamental challenge for multimodal large language models (MLLMs). Such constructions are absent from the original diagram and must be introduced before theorems apply. Existing approaches pred...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12166v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Strategic Navigation or Stochastic Search? How Agents and Humans Reason Over Document Collections</h3>
+                <div class="meta">👤 Łukasz Borchmann, Jordy Van Landeghem, Michał Turski · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multimodal agents offer a promising path to automating complex document-intensive workflows. Yet, a critical question remains: do these agents demonstrate genuine strategic reasoning, or merely stochastic trial-and-error search? To address this, we introduce MADQA, a benchmark of 2,250 human-authore...</div>
+                    <div class="abstract-cn">【翻译】Multimodal agents offer a promising path to automating complex document-intensive workflows. Yet, a critical question remains: do these agents demonstrate genuine strategic reasoning, or merely stochastic trial-and-error search? To address this, we introduce MADQA, a benchmark of 2,250 human-authore...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12180v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Optimal Discrimination of Gaussian States by Gaussian Measurements</h3>
+                <div class="meta">👤 Leah Turner, Ludovico Lami, Madalin Guta · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Are Gaussian measurements enough to distinguish between Gaussian states? Here, we tackle this question by focusing on the max-relative entropy as an operational distinguishability metric. Given two general multimode Gaussian states, we derive a condition, based on their covariance matrices, that com...</div>
+                    <div class="abstract-cn">【翻译】Are Gaussian measurements enough to distinguish between Gaussian states? Here, we tackle this question by focusing on the max-relative entropy as an operational distinguishability metric. Given two general multimode Gaussian states, we derive a condition, based on their covariance matrices, that com...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12182v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class="topic"><h2>📊 新数据集</h2>
+
+            <div class="paper">
+                <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
+                <div class="meta">👤 Moayed Haji-Ali, Willi Menapace, Ivan Skorokhodov · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface ...</div>
+                    <div class="abstract-cn">【翻译】Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12245v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</h3>
+                <div class="meta">👤 Yixin Liu, Yue Yu, DiJia Su · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on ...</div>
+                    <div class="abstract-cn">【翻译】Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12246v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
+                <div class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In...</div>
+                    <div class="abstract-cn">【翻译】Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12247v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>SciMDR: Benchmarking and Advancing Scientific Multimodal Document Reasoning</h3>
+                <div class="meta">👤 Ziyu Chen, Yilun Zhao, Chengye Wang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Syn...</div>
+                    <div class="abstract-cn">【翻译】Constructing scientific multimodal document reasoning datasets for foundation model training involves an inherent trade-off among scale, faithfulness, and realism. To address this challenge, we introduce the synthesize-and-reground framework, a two-stage pipeline comprising: (1) Claim-Centric QA Syn...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12249v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+                <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                    <div class="abstract-cn">【翻译】Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+                <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                    <div class="abstract-cn">【翻译】Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12252v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Binding Free Energies without Alchemy</h3>
+                <div class="meta">👤 Michael Brocidiacono, Brandon Novy, Rishabh Dey · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE),...</div>
+                    <div class="abstract-cn">【翻译】Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE),...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12253v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+                <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                    <div class="abstract-cn">【翻译】Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+                <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                    <div class="abstract-cn">【翻译】Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+                <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                    <div class="abstract-cn">【翻译】While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class="topic"><h2>✂️ 模型压缩</h2>
+
+            <div class="paper">
+                <h3>DVD: Deterministic Video Depth Estimation with Generative Priors</h3>
+                <div class="meta">👤 Hongfei Zhang, Harold Haodong Chen, Chenfei Liao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                    <div class="abstract-cn">【翻译】Existing video depth estimation faces a fundamental trade-off: generative models suffer from stochastic geometric hallucinations and scale drift, while discriminative models demand massive labeled datasets to resolve semantic ambiguities. To break this impasse, we present DVD, the first framework to...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12250v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>EndoCoT: Scaling Endogenous Chain-of-Thought Reasoning in Diffusion Models</h3>
+                <div class="meta">👤 Xuanlang Dai, Yujie Zhou, Long Xing · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                    <div class="abstract-cn">【翻译】Recently, Multimodal Large Language Models (MLLMs) have been widely integrated into diffusion frameworks primarily as text encoders to tackle complex tasks such as spatial reasoning. However, this paradigm suffers from two critical limitations: (i) MLLMs text encoder exhibits insufficient reasoning ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12252v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+                <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                    <div class="abstract-cn">【翻译】Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+                <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                    <div class="abstract-cn">【翻译】Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Quantum Inductance as a Phase-Sensitive Probe of Fermion Parity Switching in Majorana Nanowires</h3>
+                <div class="meta">👤 Binayyak B. Roy, Jay D. Sau, Sumanta Tewari · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">We study the flux-dependent quantum inductance of a one-dimensional (1D) semiconductor-superconductor (SM-SC) Majorana nanowire coupled to a quantum dot in an interferometric setup. Although quantum capacitance in this setup enables fast fermion parity readout, as has been demonstrated experimentall...</div>
+                    <div class="abstract-cn">【翻译】We study the flux-dependent quantum inductance of a one-dimensional (1D) semiconductor-superconductor (SM-SC) Majorana nanowire coupled to a quantum dot in an interferometric setup. Although quantum capacitance in this setup enables fast fermion parity readout, as has been demonstrated experimentall...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12256v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning</h3>
+                <div class="meta">👤 Yujie Wei, Xinyu Liu, Shiwei Zhang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                    <div class="abstract-cn">【翻译】While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and ide...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12257v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Stable Topology in Exactly Flat Bands</h3>
+                <div class="meta">👤 Yan-Qi Li, Yi-Jie Wang, Pei-Han Lin · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Topological flat bands (FBs) offer an ideal platform for realizing exotic topological phases, such as fractional Chern insulators, yet their realization with both exact flatness and stable topology in local lattice models has been long hindered by fundamental no-go theorems. Here, we overcome this b...</div>
+                    <div class="abstract-cn">【翻译】Topological flat bands (FBs) offer an ideal platform for realizing exotic topological phases, such as fractional Chern insulators, yet their realization with both exact flatness and stable topology in local lattice models has been long hindered by fundamental no-go theorems. Here, we overcome this b...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12258v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Emergent Anomalous Hall Effect from Surface States in the Altermagnet MnTe Thin Films</h3>
+                <div class="meta">👤 Yufei Zhao, Saswata Mandal, Chao-Xing Liu · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Transport measurements on thin films of the prototypical altermagnet MnTe have reported conflicting phenomena of anomalous Hall effects (AHE), including opposite signs and thickness-independent resistivity. Here we resolve these discrepancies by separating bulk and surface contributions to the AHE f...</div>
+                    <div class="abstract-cn">【翻译】Transport measurements on thin films of the prototypical altermagnet MnTe have reported conflicting phenomena of anomalous Hall effects (AHE), including opposite signs and thickness-independent resistivity. Here we resolve these discrepancies by separating bulk and surface contributions to the AHE f...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12259v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>The Latent Color Subspace: Emergent Order in High-Dimensional Chaos</h3>
+                <div class="meta">👤 Mateusz Pach, Jessica Bader, Quentin Bouniot · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                    <div class="abstract-cn">【翻译】Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12261v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Video Streaming Thinking: VideoLLMs Can Watch and Think Simultaneously</h3>
+                <div class="meta">👤 Yiran Guan, Liang Yin, Dingkang Liang · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                    <div class="abstract-cn">【翻译】Online Video Large Language Models (VideoLLMs) play a critical role in supporting responsive, real-time interaction. Existing methods focus on streaming perception, lacking a synchronized logical reasoning stream. However, directly applying test-time scaling methods incurs unacceptable response late...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12262v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class="topic"><h2>🎮 强化学习</h2>
+
+            <div class="paper">
+                <h3>STAMP: Selective Task-Aware Mechanism for Text Privacy</h3>
+                <div class="meta">👤 Fengwei Tian, Payel Bhattacharjee, Heidi Hanson · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream ta...</div>
+                    <div class="abstract-cn">【翻译】We present STAMP (Selective Task-Aware Mechanism for Text Privacy), a new framework for task-aware text privatization that achieves an improved privacy-utility trade-off. STAMP selectively allocates privacy budgets across tokens by jointly considering (i) each token's importance to the downstream ta...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12237v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>BiGain: Unified Token Compression for Joint Generation and Classification</h3>
+                <div class="meta">👤 Jiacheng Liu, Shengkun Tang, Jiacheng Cui · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that ...</div>
+                    <div class="abstract-cn">【翻译】Acceleration methods for diffusion models (e.g., token merging or downsampling) typically optimize synthesis quality under reduced compute, yet often ignore discriminative capacity. We revisit token compression with a joint objective and present BiGain, a training-free, plug-and-play framework that ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12240v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>HandelBot: Real-World Piano Playing via Fast Adaptation of Dexterous Robot Policies</h3>
+                <div class="meta">👤 Amber Xie, Haozhi Qi, Dorsa Sadigh · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transf...</div>
+                    <div class="abstract-cn">【翻译】Mastering dexterous manipulation with multi-fingered hands has been a grand challenge in robotics for decades. Despite its potential, the difficulty of collecting high-quality data remains a primary bottleneck for high-precision tasks. While reinforcement learning and simulation-to-real-world transf...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12243v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Separable neural architectures as a primitive for unified predictive and generative intelligence</h3>
+                <div class="meta">👤 Reza T. Batley, Apurba Sarker, Rajib Mostakim · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Intelligent systems across physics, language and perception often exhibit factorisable structure, yet are typically modelled by monolithic neural architectures that do not explicitly exploit this structure. The separable neural architecture (SNA) addresses this by formalising a representational clas...</div>
+                    <div class="abstract-cn">【翻译】Intelligent systems across physics, language and perception often exhibit factorisable structure, yet are typically modelled by monolithic neural architectures that do not explicitly exploit this structure. The separable neural architecture (SNA) addresses this by formalising a representational clas...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12244v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>One Model, Many Budgets: Elastic Latent Interfaces for Diffusion Transformers</h3>
+                <div class="meta">👤 Moayed Haji-Ali, Willi Menapace, Ivan Skorokhodov · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface ...</div>
+                    <div class="abstract-cn">【翻译】Diffusion transformers (DiTs) achieve high generative quality but lock FLOPs to image resolution, limiting principled latency-quality trade-offs, and allocate computation uniformly across input spatial tokens, wasting resource allocation to unimportant regions. We introduce Elastic Latent Interface ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12245v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Examining Reasoning LLMs-as-Judges in Non-Verifiable LLM Post-Training</h3>
+                <div class="meta">👤 Yixin Liu, Yue Yu, DiJia Su · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on ...</div>
+                    <div class="abstract-cn">【翻译】Reasoning LLMs-as-Judges, which can benefit from inference-time scaling, provide a promising path for extending the success of reasoning models to non-verifiable domains where the output correctness/quality cannot be directly checked. However, while reasoning judges have shown better performance on ...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12246v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Trust Your Critic: Robust Reward Modeling and Reinforcement Learning for Faithful Image Editing and Generation</h3>
+                <div class="meta">👤 Xiangyu Zhao, Peiyuan Zhang, Junming Lin · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In...</div>
+                    <div class="abstract-cn">【翻译】Reinforcement learning (RL) has emerged as a promising paradigm for enhancing image editing and text-to-image (T2I) generation. However, current reward models, which act as critics during RL, often suffer from hallucinations and assign noisy scores, inherently misguiding the optimization process. In...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12247v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Matching Features, Not Tokens: Energy-Based Fine-Tuning of Language Models</h3>
+                <div class="meta">👤 Samy Jelassi, Mujin Kwun, Rosie Zhao · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequen...</div>
+                    <div class="abstract-cn">【翻译】Cross-entropy (CE) training provides dense and scalable supervision for language models, but it optimizes next-token prediction under teacher forcing rather than sequence-level behavior under model rollouts. We introduce a feature-matching objective for language-model fine-tuning that targets sequen...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12248v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing</h3>
+                <div class="meta">👤 Baifeng Shi, Stephanie Fu, Long Lian · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                    <div class="abstract-cn">【翻译】Multi-modal large language models (MLLMs) have advanced general-purpose video understanding but struggle with long, high-resolution videos -- they process every pixel equally in their vision transformers (ViTs) or LLMs despite significant spatiotemporal redundancy. We introduce AutoGaze, a lightweig...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12254v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            
+            <div class="paper">
+                <h3>Spatial-TTT: Streaming Visual-based Spatial Intelligence with Test-Time Training</h3>
+                <div class="meta">👤 Fangfu Liu, Diankun Wu, Jiawei Chi · 📅 2026-03-15</div>
+                <div class="abstract">
+                    <div class="abstract-en">Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                    <div class="abstract-cn">【翻译】Humans perceive and understand real-world spaces through a stream of visual observations. Therefore, the ability to streamingly maintain and update spatial evidence from potentially unbounded video streams is essential for spatial intelligence. The core challenge is not simply longer context windows...</div>
+                </div>
+                <div class="link"><a href="http://arxiv.org/abs/2603.12255v1" target="_blank">📄 查看论文</a></div>
+            </div>
+            </div>
+<div class=footer><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>

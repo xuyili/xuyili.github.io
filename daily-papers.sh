@@ -63,8 +63,13 @@ conn = sqlite3.connect(DB)
 conn.row_factory = sqlite3.Row
 date = datetime.now().strftime('%Y-%m-%d')
 
-# 初始化翻译器
-translator = GoogleTranslator(source='en', target='zh-CN')
+# 使用MiniMax API翻译
+import openai
+
+client = openai.OpenAI(
+    api_key="sk-cp-IWrizN0npGAA6PpF7t5a72iGF41yP36B-ew3InsCrlZKTHIxSbcIUq8a8j71BdfqI_XjebE3O2XSOMf4YlRTJov9izmUSrb39OS8jXTMDWau7zx2EDW-wlU",
+    base_url="https://api.minimax.chat/v1"
+)
 
 # 不翻译的专有名词
 NO_TRANSLATE = {
@@ -77,32 +82,59 @@ NO_TRANSLATE = {
     'GPU', 'TPU', 'NPU',
 }
 
-def translate_text(text):
-    """真正的翻译，保留专有名词"""
+def translate_text(text, max_retries=2):
+    """使用MiniMax API翻译，保留专有名词，带质量检查和重试"""
     if not text or len(text) < 5:
         return text
-    try:
-        # 临时替换专有名词
-        temp_text = text
-        replacements = {}
-        for word in sorted(NO_TRANSLATE, key=len, reverse=True):
-            if word in temp_text:
-                placeholder = f"__T{hash(word) % 10000}__"
-                replacements[placeholder] = word
-                temp_text = temp_text.replace(word, placeholder)
-        
-        # 翻译
-        if len(temp_text) > 1000:
-            temp_text = temp_text[:1000]
-        translated = translator.translate(temp_text)
-        
-        # 恢复专有名词
-        for placeholder, word in replacements.items():
-            translated = translated.replace(placeholder, word)
-        
-        return translated
-    except Exception as e:
-        return text
+    
+    for attempt in range(max_retries):
+        try:
+            # 临时替换专有名词
+            temp_text = text
+            replacements = {}
+            for word in sorted(NO_TRANSLATE, key=len, reverse=True):
+                if word in temp_text:
+                    placeholder = f"__T{hash(word) % 10000}__"
+                    replacements[placeholder] = word
+                    temp_text = temp_text.replace(word, placeholder)
+            
+            # 使用MiniMax API翻译
+            if len(temp_text) > 4000:
+                temp_text = temp_text[:4000]
+            
+            resp = client.chat.completions.create(
+                model="MiniMax-M2.5",
+                messages=[{"role": "user", "content": f"完整翻译为中文（保留英文专有名词）：\n\n{temp_text}\n\n中文翻译："}],
+                temperature=0.3,
+                timeout=30
+            )
+            translated = resp.choices[0].message.content.strip()
+            
+            # 移除思考内容
+            if "</think>" in translated:
+                translated = translated.split("
+</think>
+
+")[-1].strip()
+            
+            # 质量检查：确保翻译不为空，不与原文相同
+            if not translated or translated == text or len(translated) < 10:
+                print(f"  ⚠️ 翻译质量不佳，重试 {attempt+1}/{max_retries}")
+                time.sleep(1)
+                continue
+            
+            # 恢复专有名词
+            for placeholder, word in replacements.items():
+                translated = translated.replace(placeholder, word)
+            
+            return translated
+            
+        except Exception as e:
+            print(f"  翻译错误: {e}, 重试 {attempt+1}/{max_retries}")
+            time.sleep(2)
+    
+    # 重试失败，返回原文并标记
+    return f"[翻译失败] {text[:200]}..."
 
 html = f'''<!DOCTYPE html>
 <html lang="zh-CN">
@@ -149,7 +181,7 @@ for topic, emoji, topic_cn in topic_info:
     for i, p in enumerate(papers, 1):
         title = p['title'].replace('<', '&lt;').replace('>', '&gt;')
         title_cn = translate_text(title)
-        abstract = p['abstract'][:500].replace('<', '&lt;').replace('>', '&gt;')
+        abstract = p['abstract'].replace('<', '&lt;').replace('>', '&gt;')
         abstract_cn = translate_text(abstract)
         
         # 每翻译几篇休息一下
@@ -159,8 +191,8 @@ for topic, emoji, topic_cn in topic_info:
 <h3>{i}. {title}<span class="title-cn">➡️ {title_cn}</span></h3>
 <p class="meta">👤 {p['authors'][:50]}</p>
 <div class="abstract">
-<p class="abstract-en">📄 {abstract}...</p>
-<p class="abstract-cn">📄 {abstract_cn}...</p>
+<p class="abstract-en">📄 {abstract}</p>
+<p class="abstract-cn">📄 {abstract_cn}</p>
 </div>
 <p class="link"><a href="{p["url"]}" target="_blank">🔗 查看论文 →</a></p>
 </div>'''
