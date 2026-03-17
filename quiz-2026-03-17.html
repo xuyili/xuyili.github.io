@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-17</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-17 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中的位置编码(Positional Encoding)主要用于解决什么问题？", "options": ["A. 解决词序信息丢失问题，使模型能够理解词语的顺序关系", "B. 加快模型收敛速度", "C. 减少模型参数数量", "D. 防止过拟合"], "answer": "A", "explanation": "Transformer采用自注意力机制进行并行计算，但自注意力本身不考虑序列中元素的位置信息。位置编码通过向输入嵌入添加位置相关的信息，使模型能够区分不同位置的词语，从而理解文本的词序和语义顺序。位置编码通常使用正弦和余弦函数或学习得到。"}, {"question": "GPT系列模型(如GPT-3、GPT-4)采用的训练范式是什么？", "options": ["A. 监督学习", "B. 强化学习(RLHF)", "C. 无监督预训练+有监督微调", "D. 自回归语言建模"], "answer": "D", "explanation": "GPT系列采用自回归(Autoregressive)语言建模进行训练，即根据前文预测下一个词。训练过程中，模型学习给定前序序列的情况下，预测下一个最可能出现的token。这种方式使模型能够生成连贯的文本。GPT-3主要使用大规模无监督预训练，GPT-4则结合了人类反馈强化学习(RLHF)进行对齐。"}, {"question": "Anthropic公司开发的Claude模型的核心安全原则是什么？", "options": ["A. 最大化模型能力", "B. 有用(Helpful)、无害(Harmless)、诚实(Honest)", "C. 开源透明", "D. 追求技术领先"], "answer": "B", "explanation": "Anthropic在开发Claude时提出了'宪法人工智能'(Constitutional AI)的概念，核心原则是'有帮助(Helpful)、无害(Harmless)、诚实(Honest)'。这一原则指导模型在生成内容时遵循道德规范，避免产生有害内容，同时保持对用户的诚实态度。"}, {"question": "下列哪项不属于大语言模型(LLM)的'涌现能力'(Emergent Abilities)？", "options": ["A. 零样本学习(Zero-shot Learning)", "B. 思维链推理(Chain-of-Thought)", "C. 文本分类", "D. 上下文学习(In-context Learning)"], "answer": "C", "explanation": "涌现能力是指模型在规模达到一定临界点后突然出现的新能力，这些能力在小模型中不存在。零样本学习、思维链推理和上下文学习都是典型的涌现能力。而文本分类是传统NLP任务，在小模型中也能完成，不属于涌现能力。"}, {"question": "RAG(检索增强生成)技术的主要目的是什么？", "options": ["A. 提高模型推理速度", "B. 减少模型训练成本", "C. 缓解幻觉问题，让模型能够访问最新或私有知识", "D. 降低模型参数量"], "answer": "C", "explanation": "RAG(Retrieval-Augmented Generation)通过结合外部知识库检索与语言模型生成来工作。当用户提问时，系统先从知识库中检索相关信息，然后将这些信息作为上下文提供给模型。这种方法可以有效缓解大语言模型的'幻觉'问题，使模型能够生成基于真实信息的回答，并能够访问训练数据之外的最新或私有知识。"}, {"question": "在Transformer的自注意力机制中，Query、Key、Value的作用是什么？", "options": ["A. 用于存储历史信息", "B. 用于计算词与词之间的相关性权重", "C. 用于模型的特征提取", "D. 用于输出最终预测"], "answer": "B", "explanation": "自注意力机制中，Query(查询)代表当前词的查询向量，Key(键)代表所有词的键向量，Value(值)代表所有词的值向量。通过计算Query与Key的点积得到注意力权重，再将这些权重应用于Value，从而实现每个词根据与其它词的相关程度来聚合信息。这一机制使模型能够捕捉长距离依赖关系。"}, {"question": "OpenAI的API中，temperature参数主要控制什么？", "options": ["A. 生成文本的长度", "B. 生成结果的多样性和随机性", "C. 模型的推理速度", "D. 模型的注意力范围"], "answer": "B", "explanation": "temperature参数控制生成文本的随机性或创造性。较高的temperature(如0.8)会使输出更加多样化和随机，适合创意写作；较低的temperature(如0.2)会使输出更加确定性和保守，适合需要准确性的任务(如代码生成、问答)。它通过调整softmax函数的概率分布来实现这一控制。"}, {"question": "大语言模型的主要局限性不包括以下哪项？", "options": ["A. 幻觉(Hallucination)问题", "B. 上下文窗口限制", "C. 无法实时更新知识", "D. 可以完美通过图灵测试"], "answer": "D", "explanation": "大语言模型存在多个局限性：1)幻觉问题：可能生成看似合理但实际错误的内容；2)上下文窗口限制：无法处理超过预设长度的输入；3)知识时效性：无法自动获取最新信息，需要重新训练或微调；4)推理能力有限等。而'完美通过图灵测试'并非当前LLM的局限性，实际上它们在很多场景下尚未通过严格的图灵测试。"}, {"question": "与传统的RNN(循环神经网络)相比，Transformer架构的主要优势是什么？", "options": ["A. 参数量更少", "B. 可以并行处理序列，捕捉长距离依赖更有效", "C. 不需要大量训练数据", "D. 更适合处理音频数据"], "answer": "B", "explanation": "Transformer相比RNN的主要优势：1)并行计算：RNN需要按顺序处理数据(时间步依次执行)，而Transformer可以同时计算所有位置的注意力，显著加速训练；2)长距离依赖：RNN在处理长序列时存在梯度消失问题，Transformer的自注意力机制可以直接建立任意位置之间的联系，更有效捕捉长距离依赖关系。"}, {"question": "以下哪项不是大语言模型在企业场景中的典型应用？", "options": ["A. 智能客服对话", "B. 代码辅助编写", "C. 医疗诊断替代医生", "D. 文档摘要生成"], "answer": "C", "explanation": "大语言模型在企业中有众多应用：智能客服(自动回复客户咨询)、代码辅助(GitHub Copilot等)、文档摘要(自动生成会议纪要、报告摘要)、内容创作、数据分析等。然而，医疗诊断涉及生命安全，需要执业医师的专业判断和法律责任，目前LLM只能作为辅助工具提供信息参考，不能替代医生进行诊断。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
