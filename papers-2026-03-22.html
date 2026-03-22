@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>论文速递 2026-03-22</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; }
+        h1 { color: #1a1a1a; border-bottom: 2px solid #0066cc; padding-bottom: 10px; }
+        h2 { color: #0066cc; margin-top: 30px; }
+        .paper { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .paper h3 { margin: 0 0 10px 0; font-size: 16px; }
+        .paper a { color: #0066cc; text-decoration: none; }
+        .paper a:hover { text-decoration: underline; }
+        .abstract { font-size: 14px; color: #666; line-height: 1.6; }
+        .topic-tag { display: inline-block; background: #e6f0ff; color: #0066cc; padding: 2px 8px; border-radius: 4px; font-size: 12px; margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+    <h1>📚 论文速递 2026-03-22</h1>
+    <p>来源: arXiv | 主题: LLM, CV, 多模态, 新数据集, 模型压缩, 综述, RL</p>
+
+<h2>LLM</h2>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19234v1" target="_blank">Matryoshka Gaussian Splatting</a></h3>
+        <p class="abstract">The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that ena...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens</a></h3>
+        <p class="abstract">Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fund...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19233v1" target="_blank">Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</a></h3>
+        <p class="abstract">Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recover...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">NavTrust: Benchmarking Trustworthiness for Embodied Navigation</a></h3>
+        <p class="abstract">There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input mo...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19227v1" target="_blank">Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer</a></h3>
+        <p class="abstract">Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples sema...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h3>
+        <p class="abstract">Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19225v1" target="_blank">FinTradeBench: A Financial Reasoning Benchmark for LLMs</a></h3>
+        <p class="abstract">Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data a...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing</a></h3>
+        <p class="abstract">Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19223v1" target="_blank">F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World</a></h3>
+        <p class="abstract">We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19222v1" target="_blank">Spectrally-Guided Diffusion Noise Schedules</a></h3>
+        <p class="abstract">Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral proper...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19221v1" target="_blank">Online Learning and Equilibrium Computation with Ranking Feedback</a></h3>
+        <p class="abstract">Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \emph{...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19220v1" target="_blank">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</a></h3>
+        <p class="abstract">We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICP...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19219v1" target="_blank">DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding</a></h3>
+        <p class="abstract">With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">LLM</span>
+        <h3><a href="http://arxiv.org/abs/2603.19218v1" target="_blank">Rethinking Vector Field Learning for Generative Segmentation</a></h3>
+        <p class="abstract">Taming diffusion models for generative segmentation has attracted increasing attention. While existing approaches primarily focus on architectural tweaks or training heuristics, there remains a limited understanding of the intrinsic mismatch between continuous flow matching objectives and discrete perception tasks. In this work, we revisit diffusion segmentation from the perspective of vector field learning. We identify two key limitations of the commonly used flow matching objective: gradient v...</p>
+    </div>
+
+<h2>CV</h2>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19234v1" target="_blank">Matryoshka Gaussian Splatting</a></h3>
+        <p class="abstract">The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that ena...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens</a></h3>
+        <p class="abstract">Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fund...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19233v1" target="_blank">Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</a></h3>
+        <p class="abstract">Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recover...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19231v1" target="_blank">MonoArt: Progressive Structural Reasoning for Monocular Articulated 3D Reconstruction</a></h3>
+        <p class="abstract">Reconstructing articulated 3D objects from a single image requires jointly inferring object geometry, part structure, and motion parameters from limited visual evidence. A key difficulty lies in the entanglement between motion cues and object structure, which makes direct articulation regression unstable. Existing methods address this challenge through multi-view supervision, retrieval-based assembly, or auxiliary video generation, often sacrificing scalability or efficiency. We present MonoArt,...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">NavTrust: Benchmarking Trustworthiness for Embodied Navigation</a></h3>
+        <p class="abstract">There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input mo...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19227v1" target="_blank">Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer</a></h3>
+        <p class="abstract">Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples sema...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h3>
+        <p class="abstract">Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19226v1" target="_blank">Under One Sun: Multi-Object Generative Perception of Materials and Illumination</a></h3>
+        <p class="abstract">We introduce Multi-Object Generative Perception (MultiGP), a generative inverse rendering method for stochastic sampling of all radiometric constituents -- reflectance, texture, and illumination -- underlying object appearance from a single image. Our key idea to solve this inherently ambiguous radiometric disentanglement is to leverage the fact that while their texture and reflectance may differ, objects in the same scene are all lit by the same illumination. MultiGP exploits this consensus to ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19225v1" target="_blank">FinTradeBench: A Financial Reasoning Benchmark for LLMs</a></h3>
+        <p class="abstract">Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data a...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing</a></h3>
+        <p class="abstract">Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19223v1" target="_blank">F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World</a></h3>
+        <p class="abstract">We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19222v1" target="_blank">Spectrally-Guided Diffusion Noise Schedules</a></h3>
+        <p class="abstract">Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral proper...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19221v1" target="_blank">Online Learning and Equilibrium Computation with Ranking Feedback</a></h3>
+        <p class="abstract">Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \emph{...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">CV</span>
+        <h3><a href="http://arxiv.org/abs/2603.19220v1" target="_blank">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</a></h3>
+        <p class="abstract">We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICP...</p>
+    </div>
+
+<h2>多模态</h2>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens</a></h3>
+        <p class="abstract">Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fund...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19233v1" target="_blank">Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</a></h3>
+        <p class="abstract">Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recover...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19217v1" target="_blank">LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs</a></h3>
+        <p class="abstract">Recent advancements in omnimodal large language models (OmniLLMs) have significantly improved the comprehension of audio and video inputs. However, current evaluations primarily focus on short audio and video clips ranging from 10 seconds to 5 minutes, failing to reflect the demands of real-world applications, where videos typically run for tens of minutes. To address this critical gap, we introduce LVOmniBench, a new benchmark designed specifically for the cross-modal comprehension of long-form...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19176v1" target="_blank">Few-shot Acoustic Synthesis with Multimodal Flow Matching</a></h3>
+        <p class="abstract">Generating audio that is acoustically consistent with a scene is essential for immersive virtual environments. Recent neural acoustic field methods enable spatially continuous sound rendering but remain scene-specific, requiring dense audio measurements and costly training for each environment. Few-shot approaches improve scalability across rooms but still rely on multiple recordings and, being deterministic, fail to capture the inherent uncertainty of scene acoustics under sparse context. We in...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19134v1" target="_blank">Introducing M: A Modular, Modifiable Social Robot</a></h3>
+        <p class="abstract">We present M, an open-source, low-cost social robot platform designed to reduce platform friction that slows social robotics research by making robots easier to reproduce, modify, and deploy in real-world settings. M combines a modular mechanical design, multimodal sensing, and expressive yet mechanically simple actuation architecture with a ROS2-native software package that cleanly separates perception, expression control, and data management. The platform includes a simulation environment with...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19127v1" target="_blank">On Optimizing Multimodal Jailbreaks for Spoken Language Models</a></h3>
+        <p class="abstract">As Spoken Language Models (SLMs) integrate speech and text modalities, they inherit the safety vulnerabilities of their LLM backbone and an expanded attack surface. SLMs have been previously shown to be susceptible to jailbreaking, where adversarial prompts induce harmful responses. Yet existing attacks largely remain unimodal, optimizing either text or audio in isolation. We explore gradient-based multimodal jailbreaks by introducing JAMA (Joint Audio-text Multimodal Attack), a joint multimodal...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19092v1" target="_blank">SAVeS: Steering Safety Judgments in Vision-Language Models via Semantic Cues</a></h3>
+        <p class="abstract">Vision-language models (VLMs) are increasingly deployed in real-world and embodied settings where safety decisions depend on visual context. However, it remains unclear which visual evidence drives these judgments. We study whether multimodal safety behavior in VLMs can be steered by simple semantic cues. We introduce a semantic steering framework that applies controlled textual, visual, and cognitive interventions without changing the underlying scene content. To evaluate these effects, we prop...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19064v1" target="_blank">Photon-echo synchronization and quantum state transfer in short quantum links</a></h3>
+        <p class="abstract">The short quantum link regime, where the photon travel time $τ$ is comparable to the emitter lifetime $1/γ$, is experimentally relevant but theoretically underexplored: existing few-mode descriptions lose validity as retardation and multimode effects become significant. Using a Delay Differential Equation (DDE) framework that admits exact analytical solutions from the single-mode cavity limit to the multimode waveguide continuum, we show that emitters coupled to a short link spontaneously lock i...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19063v1" target="_blank">Fire as a Service: Augmenting Robot Simulators with Thermally and Visually Accurate Fire Dynamics</a></h3>
+        <p class="abstract">Most existing robot simulators prioritize rigid-body dynamics and photorealistic rendering, but largely neglect the thermally and optically complex phenomena that characterize real-world fire environments. For robots envisioned as future firefighters, this limitation hinders both reliable capability evaluation and the generation of representative training data prior to deployment in hazardous scenarios. To address these challenges, we introduce Fire as a Service (FaaS), a novel, asynchronous co-...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19053v1" target="_blank">SwiftTailor: Efficient 3D Garment Generation with Geometry Image Representation</a></h3>
+        <p class="abstract">Realistic and efficient 3D garment generation remains a longstanding challenge in computer vision and digital fashion. Existing methods typically rely on large vision- language models to produce serialized representations of 2D sewing patterns, which are then transformed into simulation-ready 3D meshes using garment modeling framework such as GarmentCode. Although these approaches yield high-quality results, they often suffer from slow inference times, ranging from 30 seconds to a minute. In thi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19028v1" target="_blank">SEM: Sparse Embedding Modulation for Post-Hoc Debiasing of Vision-Language Models</a></h3>
+        <p class="abstract">Models that bridge vision and language, such as CLIP, are key components of multimodal AI, yet their large-scale, uncurated training data introduce severe social and spurious biases. Existing post-hoc debiasing methods often operate directly in the dense CLIP embedding space, where bias and task-relevant information are highly entangled. This entanglement limits their ability to remove bias without degrading semantic fidelity. In this work, we propose Sparse Embedding Modulation (SEM), a post-ho...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.19024v1" target="_blank">Exact Law of Quantum Reversibility under Gaussian Pure Loss</a></h3>
+        <p class="abstract">Classical reverse diffusion is generated by changing the drift at fixed noise. We show that the quantum version of this principle obeys an exact law with a sharp phase boundary. For Gaussian pure-loss dynamics -- the canonical model of continuous-variable decoherence in optical attenuation channels, squeezed-light interferometric sensing, and superconducting bosonic architectures -- complete positivity, the requirement that the dynamics remain physical even for systems entangled with an ancilla,...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.18774v1" target="_blank">SEAR: Simple and Efficient Adaptation of Visual Geometric Transformers for RGB+Thermal 3D Reconstruction</a></h3>
+        <p class="abstract">Foundational feed-forward visual geometry models enable accurate and efficient camera pose estimation and scene reconstruction by learning strong scene priors from massive RGB datasets. However, their effectiveness drops when applied to mixed sensing modalities, such as RGB-thermal (RGB-T) images. We observe that while a visual geometry grounded transformer pretrained on RGB data generalizes well to thermal-only reconstruction, it struggles to align RGB and thermal modalities when processed join...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">多模态</span>
+        <h3><a href="http://arxiv.org/abs/2603.18758v1" target="_blank">Dual-Model Prediction of Affective Engagement and Vocal Attractiveness from Speaker Expressiveness in Video Learning</a></h3>
+        <p class="abstract">This paper outlines a machine learning-enabled speaker-centric Emotion AI approach capable of predicting audience-affective engagement and vocal attractiveness in asynchronous video-based learning, relying solely on speaker-side affective expressions. Inspired by the demand for scalable, privacy-preserving affective computing applications, this speaker-centric Emotion AI approach incorporates two distinct regression models that leverage a massive corpus developed within Massive Open Online Cours...</p>
+    </div>
+
+<h2>新数据集</h2>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19234v1" target="_blank">Matryoshka Gaussian Splatting</a></h3>
+        <p class="abstract">The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that ena...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19233v1" target="_blank">Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</a></h3>
+        <p class="abstract">Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recover...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">NavTrust: Benchmarking Trustworthiness for Embodied Navigation</a></h3>
+        <p class="abstract">There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input mo...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h3>
+        <p class="abstract">Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19225v1" target="_blank">FinTradeBench: A Financial Reasoning Benchmark for LLMs</a></h3>
+        <p class="abstract">Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data a...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing</a></h3>
+        <p class="abstract">Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19223v1" target="_blank">F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World</a></h3>
+        <p class="abstract">We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19220v1" target="_blank">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</a></h3>
+        <p class="abstract">We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICP...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19219v1" target="_blank">DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding</a></h3>
+        <p class="abstract">With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19217v1" target="_blank">LVOmniBench: Pioneering Long Audio-Video Understanding Evaluation for Omnimodal LLMs</a></h3>
+        <p class="abstract">Recent advancements in omnimodal large language models (OmniLLMs) have significantly improved the comprehension of audio and video inputs. However, current evaluations primarily focus on short audio and video clips ranging from 10 seconds to 5 minutes, failing to reflect the demands of real-world applications, where videos typically run for tens of minutes. To address this critical gap, we introduce LVOmniBench, a new benchmark designed specifically for the cross-modal comprehension of long-form...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19216v1" target="_blank">DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising</a></h3>
+        <p class="abstract">Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, p...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19214v1" target="_blank">Outage Probability Analysis of NOMA Enabled Hierarchical UAV Networks with Non-Linear Energy Harvesting</a></h3>
+        <p class="abstract">Uncrewed aerial vehicles (UAVs) are expected to enhance connectivity, extend network coverage, and support advanced communication services in sixth-generation (6G) cellular networks, particularly in public and civil domains. Although multi-UAV systems enhance connectivity for IoT networks more than single-UAV systems, energy-efficient communication systems and the integration of energy harvesting (EH) are crucial for their widespread adoption and effectiveness. In this regard, this paper propose...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19204v1" target="_blank">Robustness, Cost, and Attack-Surface Concentration in Phishing Detection</a></h3>
+        <p class="abstract">Phishing detectors built on engineered website features attain near-perfect accuracy under i.i.d.\ evaluation, yet deployment security depends on robustness to post-deployment feature manipulation. We study this gap through a cost-aware evasion framework that models discrete, monotone feature edits under explicit attacker budgets. Three diagnostics are introduced: minimal evasion cost (MEC), the evasion survival rate $S(B)$, and the robustness concentration index (RCI).
+  On the UCI Phishing Web...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">新数据集</span>
+        <h3><a href="http://arxiv.org/abs/2603.19201v1" target="_blank">OmniVTA: Visuo-Tactile World Modeling for Contact-Rich Robotic Manipulation</a></h3>
+        <p class="abstract">Contact-rich manipulation tasks, such as wiping and assembly, require accurate perception of contact forces, friction changes, and state transitions that cannot be reliably inferred from vision alone. Despite growing interest in visuo-tactile manipulation, progress is constrained by two persistent limitations: existing datasets are small in scale and narrow in task coverage, and current methods treat tactile signals as passive observations rather than using them to model contact dynamics or enab...</p>
+    </div>
+
+<h2>模型压缩</h2>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19234v1" target="_blank">Matryoshka Gaussian Splatting</a></h3>
+        <p class="abstract">The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that ena...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens</a></h3>
+        <p class="abstract">Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fund...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19233v1" target="_blank">Not All Features Are Created Equal: A Mechanistic Study of Vision-Language-Action Models</a></h3>
+        <p class="abstract">Vision-Language-Action (VLA) models combine perception, language, and motor control in a single architecture, yet how they translate multimodal inputs into actions remains poorly understood. We apply activation injection, sparse autoencoders (SAEs), and linear probes to six models spanning 80M--7B parameters across 394,000+ rollout episodes on four benchmarks. The visual pathway dominates action generation across all architectures: injecting baseline activations into null-prompt episodes recover...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">NavTrust: Benchmarking Trustworthiness for Embodied Navigation</a></h3>
+        <p class="abstract">There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input mo...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19227v1" target="_blank">Bridging Semantic and Kinematic Conditions with Diffusion-based Discrete Motion Tokenizer</a></h3>
+        <p class="abstract">Prior motion generation largely follows two paradigms: continuous diffusion models that excel at kinematic control, and discrete token-based generators that are effective for semantic conditioning. To combine their strengths, we propose a three-stage framework comprising condition feature extraction (Perception), discrete token generation (Planning), and diffusion-based motion synthesis (Control). Central to this framework is MoTok, a diffusion-based discrete motion tokenizer that decouples sema...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h3>
+        <p class="abstract">Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19225v1" target="_blank">FinTradeBench: A Financial Reasoning Benchmark for LLMs</a></h3>
+        <p class="abstract">Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data a...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing</a></h3>
+        <p class="abstract">Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19223v1" target="_blank">F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World</a></h3>
+        <p class="abstract">We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19222v1" target="_blank">Spectrally-Guided Diffusion Noise Schedules</a></h3>
+        <p class="abstract">Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral proper...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19221v1" target="_blank">Online Learning and Equilibrium Computation with Ranking Feedback</a></h3>
+        <p class="abstract">Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \emph{...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19220v1" target="_blank">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</a></h3>
+        <p class="abstract">We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICP...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19219v1" target="_blank">DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding</a></h3>
+        <p class="abstract">With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">模型压缩</span>
+        <h3><a href="http://arxiv.org/abs/2603.19218v1" target="_blank">Rethinking Vector Field Learning for Generative Segmentation</a></h3>
+        <p class="abstract">Taming diffusion models for generative segmentation has attracted increasing attention. While existing approaches primarily focus on architectural tweaks or training heuristics, there remains a limited understanding of the intrinsic mismatch between continuous flow matching objectives and discrete perception tasks. In this work, we revisit diffusion segmentation from the perspective of vector field learning. We identify two key limitations of the commonly used flow matching objective: gradient v...</p>
+    </div>
+
+<h2>综述</h2>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19225v1" target="_blank">FinTradeBench: A Financial Reasoning Benchmark for LLMs</a></h3>
+        <p class="abstract">Real-world financial decision-making is a challenging problem that requires reasoning over heterogeneous signals, including company fundamentals derived from regulatory filings and trading signals computed from price dynamics. Recently, with the advancement of Large Language Models (LLMs), financial analysts have begun to use them for financial decision-making tasks. However, existing financial question answering benchmarks for testing these models primarily focus on company balance sheet data a...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19191v1" target="_blank">OS-Themis: A Scalable Critic Framework for Generalist GUI Rewards</a></h3>
+        <p class="abstract">Reinforcement Learning (RL) has the potential to improve the robustness of GUI agents in stochastic environments, yet training is highly sensitive to the quality of the reward function. Existing reward approaches struggle to achieve both scalability and performance. To address this, we propose OS-Themis, a scalable and accurate multi-agent critic framework. Unlike a single judge, OS-Themis decomposes trajectories into verifiable milestones to isolate critical evidence for decision making and emp...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19181v1" target="_blank">Identifying AGNs from X-ray detections---I: Metallicity calibrations in AGNs with X-ray luminosity as the primary input parameter</a></h3>
+        <p class="abstract">We present the first semi-empirical strong-line calibrations to determine metallicity in Active Galactic Nuclei (AGNs) that use the directly observable X-ray luminosity ($Ł_{\rm X}$) instead of the dimensionless ionization parameter ($U$). The calibrations are derived from an extensive grid of photoionization models computed with the {\sc Cloudy} code, which are compared with observational data of Seyfert nuclei from the Burst Alert Telescope (BAT) AGN Spectroscopic Survey (BASS). In this first ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19178v1" target="_blank">Formation and Decay of Oscillons in Einstein-Cartan Higgs Inflation</a></h3>
+        <p class="abstract">We review recent progress in the understanding of the preheating stage of Higgs inflation formulated within the Einstein-Cartan framework of gravity. This setup smoothly interpolates between the metric and Palatini formulations of the theory, leading to a distinctive phenomenology in an intermediate regime. Following the end of inflation, the Higgs field undergoes a non-trivial out-of-equilibrium evolution driven by tachyonic instabilities and nonlinear self-interactions, which fragment the infl...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19160v1" target="_blank">PPI is the Difference Estimator: Recognizing the Survey Sampling Roots of Prediction-Powered Inference</a></h3>
+        <p class="abstract">Prediction-powered inference (PPI) is a rapidly growing framework for combining machine learning predictions with a small set of gold-standard labels to conduct valid statistical inference. In this article, I argue that the core estimators underlying PPI are equivalent to well-established estimators from the survey sampling literature dating back to the 1970s. Specifically, the PPI estimator for a population mean is algebraically equivalent to the difference estimator of Cassel et al. (1976), an...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19127v1" target="_blank">On Optimizing Multimodal Jailbreaks for Spoken Language Models</a></h3>
+        <p class="abstract">As Spoken Language Models (SLMs) integrate speech and text modalities, they inherit the safety vulnerabilities of their LLM backbone and an expanded attack surface. SLMs have been previously shown to be susceptible to jailbreaking, where adversarial prompts induce harmful responses. Yet existing attacks largely remain unimodal, optimizing either text or audio in isolation. We explore gradient-based multimodal jailbreaks by introducing JAMA (Joint Audio-text Multimodal Attack), a joint multimodal...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19117v1" target="_blank">Variational and Annealing-Based Approaches to Quantum Combinatorial Optimization</a></h3>
+        <p class="abstract">In this work, we review quantum approaches to combinatorial optimization, with the aim of bridging theoretical developments and industrial relevance. We first survey the main families of quantum algorithms, including Quantum Annealing, the Quantum Approximate Optimization Algorithm (QAOA), Quantum Reinforcement Learning (QRL), and Quantum Generative Modeling (QGM). We then examine the problem classes where quantum technologies currently show evidence of quantum advantage, drawing on established ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19093v1" target="_blank">Follow the Rules (or Not): Community Norms and AI-Generated Support in Online Health Communities</a></h3>
+        <p class="abstract">Generative AI (GenAI) is increasingly being integrated into the online ecosystem, including online health communities (OHCs), where people with diverse health conditions exchange social support. For example, in OHCs, support providers are beginning to share content generated, directly or indirectly, by popular GenAI-based tools. OHCs are governed by norms that define appropriate behavior when providing support. Ways in which AI-generated support interacts with these norms remain underexplored. I...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19073v1" target="_blank">Finite-sample bounds for multi-output system identification</a></h3>
+        <p class="abstract">This paper presents uniform-in-time finite-sample bounds for regularized linear regression with vector-valued outputs and conditionally zero-mean subgaussian noise. By revisiting classical self-normalized martingale arguments, we obtain bounds that apply directly to multi-output regression, unlike most of the prior work. Compared to the state of the art, the new results are more general and yield tighter bounds, even for scalar-valued outputs. The mild assumptions we use allow for unknown depend...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19046v1" target="_blank">D$_4$CNN$\times$AnaCal: Physics-Informed Machine Learning for Accurate and Precise Weak Lensing Shear Estimation</a></h3>
+        <p class="abstract">Traditional weak gravitational lensing shear estimators are carefully calibrated but struggle to fully capture realistic galaxy morphologies, point-spread-function (PSF) effects, blending, and noise in deep surveys, while blindly trained machine learning (ML) models can introduce significant calibration biases. Here we construct a fully D$_4$-equivariant deep neural network for galaxy shape measurement whose architecture enforces symmetry under 90$^{\circ}$ rotations and mirror transformations, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19042v1" target="_blank">Man and machine: artificial intelligence and judicial decision making</a></h3>
+        <p class="abstract">The integration of artificial intelligence (AI) technologies into judicial decision-making - particularly in pretrial, sentencing, and parole contexts - has generated substantial concerns about transparency, reliability, and accountability. At the same time, these developments have brought the limitations of human judgment into sharper relief and underscored the importance of understanding how judges interact with AI-based decision aids. Using criminal justice risk assessment as a focal case, we...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19002v1" target="_blank">RADIUS: Ranking, Distribution, and Significance - A Comprehensive Alignment Suite for Survey Simulation</a></h3>
+        <p class="abstract">Simulation of surveys using LLMs is emerging as a powerful application for generating human-like responses at scale. Prior work evaluates survey simulation using metrics borrowed from other domains, which are often ad hoc, fragmented, and non-standardized, leading to results that are difficult to compare. Moreover, existing metrics focus mainly on accuracy or distributional measures, overlooking the critical dimension of ranking alignment. In practice, a simulation can achieve high accuracy whil...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.19000v1" target="_blank">SVLAT: Scientific Visualization Literacy Assessment Test</a></h3>
+        <p class="abstract">Scientific visualization (SciVis) has become an essential means for exploring, understanding, and communicating complex scientific phenomena. However, the field still lacks a validated instrument assessing how well people read, understand, and interpret them. We present a scientific visualization literacy assessment test (SVLAT) that measures the general public's SciVis literacy. Covering a range of visualization forms and interpretation demands, SVLAT comprises 49 items grounded in 18 scientifi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.18990v1" target="_blank">Distributed lag non-linear models with spatial effect modification using Laplacian P-splines</a></h3>
+        <p class="abstract">Distributed lag non-linear models (DLNMs) are a popular approach to flexibly model the effect of time-delayed exposures. Classical DLNMs specify a common exposure-lag-response relationship across geographical areas. However, this relationship might be altered by an effect modifier that differs between spatial units. Although some methods have been proposed to account for effect modification, their applicability is context-dependent. For example, a meta-analysis can account for heterogeneity betw...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">综述</span>
+        <h3><a href="http://arxiv.org/abs/2603.18976v1" target="_blank">Evaluating 5W3H Structured Prompting for Intent Alignment in Human-AI Interaction</a></h3>
+        <p class="abstract">Natural language prompts often suffer from intent transmission loss: the gap between what users actually need and what they communicate to AI systems. We evaluate PPS (Prompt Protocol Specification), a 5W3H-based framework for structured intent representation in human-AI interaction. In a controlled three-condition study across 60 tasks in three domains (business, technical, and travel), three large language models (DeepSeek-V3, Qwen-Max, and Kimi), and three prompt conditions - (A) simple promp...</p>
+    </div>
+
+<h2>RL</h2>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19235v1" target="_blank">Generation Models Know Space: Unleashing Implicit 3D Priors for Scene Understanding</a></h3>
+        <p class="abstract">While Multimodal Large Language Models demonstrate impressive semantic capabilities, they often suffer from spatial blindness, struggling with fine-grained geometric reasoning and physical dynamics. Existing solutions typically rely on explicit 3D modalities or complex geometric scaffolding, which are limited by data scarcity and generalization challenges. In this work, we propose a paradigm shift by leveraging the implicit spatial prior within large-scale video generation models. We posit that ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19234v1" target="_blank">Matryoshka Gaussian Splatting</a></h3>
+        <p class="abstract">The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that ena...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens</a></h3>
+        <p class="abstract">Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fund...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">NavTrust: Benchmarking Trustworthiness for Embodied Navigation</a></h3>
+        <p class="abstract">There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input mo...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing</a></h3>
+        <p class="abstract">Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editi...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing</a></h3>
+        <p class="abstract">Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across va...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19223v1" target="_blank">F2LLM-v2: Inclusive, Performant, and Efficient Embeddings for a Multilingual World</a></h3>
+        <p class="abstract">We present F2LLM-v2, a new family of general-purpose, multilingual embedding models in 8 distinct sizes ranging from 80M to 14B. Trained on a newly curated composite of 60 million publicly available high-quality data samples, F2LLM-v2 supports more than 200 languages, with a particular emphasis on previously underserved mid- and low-resource languages. By integrating a two-stage LLM-based embedding training pipeline with matryoshka learning, model pruning, and knowledge distillation techniques, ...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19222v1" target="_blank">Spectrally-Guided Diffusion Noise Schedules</a></h3>
+        <p class="abstract">Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral proper...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19221v1" target="_blank">Online Learning and Equilibrium Computation with Ranking Feedback</a></h3>
+        <p class="abstract">Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \emph{...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19220v1" target="_blank">Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation</a></h3>
+        <p class="abstract">We introduce Nemotron-Cascade 2, an open 30B MoE model with 3B activated parameters that delivers best-in-class reasoning and strong agentic capabilities. Despite its compact size, its mathematical and coding reasoning performance approaches that of frontier open models. It is the second open-weight LLM, after DeepSeekV3.2-Speciale-671B-A37B, to achieve Gold Medal-level performance in the 2025 International Mathematical Olympiad (IMO), the International Olympiad in Informatics (IOI), and the ICP...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19219v1" target="_blank">DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding</a></h3>
+        <p class="abstract">With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19218v1" target="_blank">Rethinking Vector Field Learning for Generative Segmentation</a></h3>
+        <p class="abstract">Taming diffusion models for generative segmentation has attracted increasing attention. While existing approaches primarily focus on architectural tweaks or training heuristics, there remains a limited understanding of the intrinsic mismatch between continuous flow matching objectives and discrete perception tasks. In this work, we revisit diffusion segmentation from the perspective of vector field learning. We identify two key limitations of the commonly used flow matching objective: gradient v...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19216v1" target="_blank">DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising</a></h3>
+        <p class="abstract">Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, p...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19209v1" target="_blank">Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders</a></h3>
+        <p class="abstract">Large vision--language models (VLMs) often use a frozen vision backbone, whose image features are mapped into a large language model through a lightweight connector. While transformer-based encoders are the standard visual backbone, we ask whether state space model (SSM) vision backbones can be a strong alternative. We systematically evaluate SSM vision backbones for VLMs in a controlled setting. Under matched ImageNet-1K initialization, the SSM backbone achieves the strongest overall performanc...</p>
+    </div>
+    <div class="paper">
+        <span class="topic-tag">RL</span>
+        <h3><a href="http://arxiv.org/abs/2603.19204v1" target="_blank">Robustness, Cost, and Attack-Surface Concentration in Phishing Detection</a></h3>
+        <p class="abstract">Phishing detectors built on engineered website features attain near-perfect accuracy under i.i.d.\ evaluation, yet deployment security depends on robustness to post-deployment feature manipulation. We study this gap through a cost-aware evasion framework that models discrete, monotone feature edits under explicit attacker budgets. Three diagnostics are introduced: minimal evasion cost (MEC), the evasion survival rate $S(B)$, and the robustness concentration index (RCI).
+  On the UCI Phishing Web...</p>
+    </div>
+
+</body>
+</html>

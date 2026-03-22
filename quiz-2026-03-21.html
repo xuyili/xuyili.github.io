@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-22</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-22 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构的核心组件是什么？", "options": ["A. 卷积层 (Convolutional Layer)", "B. 循环层 (Recurrent Layer)", "C. 自注意力机制 (Self-Attention Mechanism)", "D. 全连接层 (Fully Connected Layer)"], "answer": "C", "explanation": "Transformer架构的核心创新是自注意力机制（Self-Attention），它允许模型同时关注输入序列中的所有位置，捕捉长距离依赖关系。自注意力机制是Transformer区别于传统RNN和CNN的关键组件。"}, {"question": "GPT模型的全称是什么？", "options": ["A. General Pre-trained Transformer", "B. Generative Pre-trained Transformer", "C. Global Prompt Tuning", "D. Gaussian Process Transition"], "answer": "B", "explanation": "GPT的全称是Generative Pre-trained Transformer（生成式预训练Transformer），由OpenAI开发。GPT采用预训练+微调的范式，先在大规模文本上进行无监督预训练，再针对特定任务进行微调。"}, {"question": "RLHF在大型语言模型训练中指的是什么？", "options": ["A. Recursive Learning from Hierarchical Features", "B. Reinforcement Learning from Human Feedback", "C. Representation Learning with Hierarchical Filters", "D. Residual Learning with High Flexibility"], "answer": "B", "explanation": "RLHF即从人类反馈中学习的强化学习（Reinforcement Learning from Human Feedback），是ChatGPT等模型训练的关键技术。它通过人类评分来微调模型，使模型输出更符合人类偏好，提高有用性和安全性。"}, {"question": "Claude模型是由哪家公司开发的？", "options": ["A. OpenAI", "B. Google DeepMind", "C. Anthropic", "D. Meta AI"], "answer": "C", "explanation": "Claude是由Anthropic公司开发的大型语言模型。Anthropic成立于2021年，专注于AI安全研究，Claude是其推出的AI助手产品，以安全、可靠和有帮助著称。"}, {"question": "BPE (Byte Pair Encoding) 分词器的主要特点是什么？", "options": ["A. 基于字符级别的分词", "B. 基于词级别的分词", "C. 基于子词级别的分词", "D. 基于句子级别的分词"], "answer": "C", "explanation": "BPE（字节对编码）是一种子词分词算法，它通过合并高频的字节对来构建词表，在字符级和词级之间取得平衡。这种方法可以有效处理未登录词（OOV）问题，是GPT、Llama等主流模型常用的分词方式。"}, {"question": "在LLM中，'幻觉'（Hallucination）指的是什么？", "options": ["A. 模型产生语法错误", "B. 模型生成看似合理但实际不正确或无意义的内容", "C. 模型运行速度变慢", "D. 模型无法理解用户输入"], "answer": "B", "explanation": "幻觉是指大型语言模型生成看似流畅、连贯但实际上是不真实、不准确或无意义的内容。这是LLM面临的主要挑战之一，可能导致模型输出误导性信息。缓解方法包括检索增强生成（RAG）、事实核查等。"}, {"question": "模型量化（Quantization）的主要目的是什么？", "options": ["A. 提高模型准确率", "B. 减少模型的参数数量", "C. 减少模型存储和计算成本", "D. 增加模型层数"], "answer": "C", "explanation": "模型量化是将模型的权重和激活从高精度（如FP32）转换为低精度（如INT8、FP16）的技术。主要目的是减少模型存储空间、降低计算复杂度和推理延迟，使大模型能够在资源受限的设备上运行。"}, {"question": "以下哪个指标常用于评估机器翻译质量？", "options": ["A. AUC-ROC", "B. BLEU", "C. F1-Score", "D. Accuracy"], "answer": "B", "explanation": "BLEU（Bilingual Evaluation Understudy）是评估机器翻译质量的经典指标，通过计算生成译文与参考译文之间的n-gram重叠度来衡量翻译效果。虽然BLEU存在局限性，但仍被广泛用于NLP任务评估。"}, {"question": "什么是In-Context Learning（上下文学习）？", "options": ["A. 需要大量标注数据进行训练", "B. 通过在提示中提供示例来让模型学习任务", "C. 在模型结构中添加额外的上下文层", "D. 使用外部知识库增强模型"], "answer": "B", "explanation": "上下文学习是LLM的一种独特能力，指模型可以通过在提示（Prompt）中提供少量示例来学习和执行新任务，而不需要额外的梯度更新或微调。这使得LLM能够快速适应各种下游任务。"}, {"question": "以下哪项不是Prompt Engineering（提示工程）的常用技巧？", "options": ["A. Chain-of-Thought (思维链)", "B. Few-shot Learning", "C. 增加模型参数数量", "D. Role Playing"], "answer": "C", "explanation": "Prompt Engineering是优化提示以获得更好模型输出的技术，常用技巧包括：Chain-of-Thought（思维链推理）、Few-shot Learning（少样本学习）、Role Playing（角色扮演）等。增加模型参数数量不属于提示工程技巧，而是模型层面的改变。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
