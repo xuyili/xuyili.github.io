@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI论文速递 2026-03-23</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .topic { margin-bottom: 50px; }
+        .topic h2 { color: #1a1a2e; font-size: 1.6em; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; }
+        .paper { background: white; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 3px 15px rgba(0,0,0,0.08); }
+        .paper h3 { color: #333; font-size: 1.1em; margin-bottom: 8px; line-height: 1.5; }
+        .paper .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 5px; margin-bottom: 12px; }
+        .paper .meta { color: #888; font-size: 0.85em; margin-bottom: 12px; }
+        .paper .abstract { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .paper .abstract-en { color: #555; font-size: 0.9em; margin-bottom: 8px; line-height: 1.6; }
+        .paper .abstract-cn { color: #2563eb; font-size: 0.9em; line-height: 1.6; background: #eff6ff; padding: 10px; border-radius: 6px; }
+        .paper .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .back { text-align: center; margin-bottom: 30px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📚 AI论文速递 2026-03-23</h1>
+            <p>7大主题 × 10篇 | 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理</p>
+        </div>
+<div class="topic"><h2>🧠 大语言模型</h2></div><div class="topic"><h2>🖼️ 计算机视觉</h2></div><div class="topic"><h2>🎨 多模态学习</h2></div><div class="topic"><h2>📊 新数据集</h2></div><div class="topic"><h2>✂️ 模型压缩</h2></div><div class="topic"><h2>📝 综述论文</h2></div><div class="topic"><h2>🎮 强化学习</h2><div class="paper">
+<h3>1. NavTrust: Benchmarking Trustworthiness for Embodied Navigation<span class="title-cn">➡️ NavTrust：具身导航可信度基准测试
+
+**术语说明：**
+
+- **NavTrust**：专有名词（保留英文）
+- **Benchmarking**：基准测试
+- **Trustworthiness**：可信度
+- **Embodied Navigation**：具身导航</span></h3>
+<p class="meta">👤 Huaide Jiang, Yash Chaudhary, Yuping Wang</p>
+<div class="abstract">
+<p class="abstract-en">📄 There are two major categories of embodied navigation: Vision-Language Navigation (VLN), where agents navigate by following natural language instructions; and Object-Goal Navigation (OGN), where agents navigate to a specified target object. However, existing work primarily evaluates model performance under nominal conditions, overlooking the potential corruptions that arise in real-world settings. To address this gap, we present NavTrust, a unified benchmark that systematically corrupts input modalities, including RGB, depth, and instructions, in realistic scenarios and evaluates their impact on navigation performance. To our best knowledge, NavTrust is the first benchmark that exposes embodied navigation agents to diverse RGB-Depth corruptions and instruction variations in a unified framework. Our extensive evaluation of seven state-of-the-art approaches reveals substantial performance degradation under realistic corruptions, which highlights critical robustness gaps and provides a roadmap toward more trustworthy embodied navigation systems. Furthermore, we systematically evaluate four distinct mitigation strategies to enhance robustness against RGB-Depth and instructions corruptions. Our base models include Uni-NaVid and ETPNav. We deployed them on a real mobile robot and observed improved robustness to corruptions. The project website is: https://navtrust.github.io.</p>
+<p class="abstract-cn">📄 嵌入式导航主要有两大类别：视觉-语言导航（Vision-Language Navigation, VLN），即智能体通过遵循自然语言指令进行导航；以及目标物体导航（Object-Goal Navigation, OGN），即智能体导航至指定的目标物体。然而，现有工作主要在正常条件下评估模型性能，忽略了现实环境中可能出现的各种退化（corruptions）。为解决这一差距，我们提出了NavTrust，这是一个统一基准测试，在现实场景中对输入模态（包括RGB、深度和指令）进行系统性的退化处理，并评估其对导航性能的影响。据我们所知，NavTrust是首个在统一框架内将嵌入式导航智能体暴露于多样化RGB-Depth退化和指令变化中的基准测试。我们对七种最先进方法进行了广泛评估，结果表明在现实退化条件下存在显著的性能下降，这凸显了关键的鲁棒性差距，并为构建更值得信赖的嵌入式导航系统提供了路线图。此外，我们系统地评估了四种不同的缓解策略，以增强对RGB-Depth和指令退化的鲁棒性。我们的基础模型包括Uni-NaVid和ETPNav。我们将其部署在真实的移动机器人上，并观察到对退化具有改善的鲁棒性。项目网站为：https://navtrust.github.io。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19229v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>2. Online Learning and Equilibrium Computation with Ranking Feedback<span class="title-cn">➡️ **中文翻译（保留英文专有名词）：**  
+
+基于 Ranking Feedback 的 Online Learning 与 Equilibrium Computation</span></h3>
+<p class="meta">👤 Mingyang Liu, Yongshan Chen, Zhiyuan Fan</p>
+<div class="abstract">
+<p class="abstract-en">📄 Online learning in arbitrary, and possibly adversarial, environments has been extensively studied in sequential decision-making, and it is closely connected to equilibrium computation in game theory. Most existing online learning algorithms rely on \emph{numeric} utility feedback from the environment, which may be unavailable in human-in-the-loop applications and/or may be restricted by privacy concerns. In this paper, we study an online learning model in which the learner only observes a \emph{ranking} over a set of proposed actions at each timestep. We consider two ranking mechanisms: rankings induced by the \emph{instantaneous} utility at the current timestep, and rankings induced by the \emph{time-average} utility up to the current timestep, under both \emph{full-information} and \emph{bandit} feedback settings. Using the standard external-regret metric, we show that sublinear regret is impossible with instantaneous-utility ranking feedback in general. Moreover, when the ranking model is relatively deterministic, \emph{i.e.}, under the Plackett-Luce model with a temperature that is sufficiently small, sublinear regret is also impossible with time-average utility ranking feedback. We then develop new algorithms that achieve sublinear regret under the additional assumption that the utility sequence has sublinear total variation. Notably, for full-information time-average utility ranking feedback, this additional assumption can be removed. As a consequence, when all players in a normal-form game follow our algorithms, repeated play yields an approximate coarse correlated equilibrium. We also demonstrate the effectiveness of our algorithms in an online large-language-model routing task.</p>
+<p class="abstract-cn">📄 在顺序决策中，在任意且可能是对抗性的环境中进行在线学习已被广泛研究，它与博弈论中的均衡计算密切相关。大多数现有的在线学习算法依赖于环境提供的数值型（numeric）效用反馈，而在人机交互应用中和/或受到隐私限制的情况下，这种反馈可能无法获得。本文研究了一种在线学习模型，其中学习者仅在每个时间步观察到一组候选动作的排序（ranking）。我们考虑两种排序机制：在完全信息（full-information）和 bandit 反馈设置下，由当前时间步的瞬时效用（instantaneous utility）诱导的排序，以及由截至当前时间步的时间平均效用（time-average utility）诱导的排序。使用标准的外部遗憾（external-regret）度量，我们表明在一般情况下，瞬时效用排序反馈无法实现次线性遗憾（sublinear regret）。此外，当排序模型相对确定性时，即在温度参数足够小的 Plackett-Luce 模型下，时间平均效用排序反馈也无法实现次线性遗憾。随后，我们在新假设——效用序列具有次线性全变差（total variation）——下开发了能够实现次线性遗憾的新算法。值得注意的是，对于完全信息时间平均效用排序反馈，可以移除这一额外假设。因此，当正常形式博弈（normal-form game）中的所有参与者遵循我们的算法时，重复博弈会产生近似的粗相关均衡（approximate coarse correlated equilibrium）。我们还在在线大语言模型路由任务中展示了算法的有效性。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19221v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>3. Spectrally-Guided Diffusion Noise Schedules<span class="title-cn">➡️ **Spectrally‑Guided T592 噪声调度**  
+
+（即保留英文的 “Spectrally‑Guided” 与 “T592”，其余部分译为中文。）</span></h3>
+<p class="meta">👤 Carlos Esteves, Ameesh Makadia</p>
+<div class="abstract">
+<p class="abstract-en">📄 Denoising diffusion models are widely used for high-quality image and video generation. Their performance depends on noise schedules, which define the distribution of noise levels applied during training and the sequence of noise levels traversed during sampling. Noise schedules are typically handcrafted and require manual tuning across different resolutions. In this work, we propose a principled way to design per-instance noise schedules for pixel diffusion, based on the image's spectral properties. By deriving theoretical bounds on the efficacy of minimum and maximum noise levels, we design ``tight'' noise schedules that eliminate redundant steps. During inference, we propose to conditionally sample such noise schedules. Experiments show that our noise schedules improve generative quality of single-stage pixel diffusion models, particularly in the low-step regime.</p>
+<p class="abstract-cn">📄 去噪扩散模型被广泛应用于高质量图像和视频生成。其性能取决于噪声调度（noise schedules），噪声调度定义了训练过程中应用的噪声水平分布以及采样过程中遍历的噪声水平序列。噪声调度通常是手工设计的，需要在不同分辨率下进行手动调整。在这项工作中，我们提出了一种基于图像频谱特性（spectral properties）的原则性方法，为像素扩散（pixel diffusion）设计逐实例的噪声调度。通过推导最小和最大噪声水平功效的理论边界，我们设计了“紧凑”（tight）的噪声调度以消除冗余步骤。在推理过程中，我们提出对这种噪声调度进行条件采样。实验表明，我们的噪声调度提高了单阶段像素扩散模型的生成质量，尤其是在低步数（low-step regime）情况下效果显著。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19222v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>4. Do VLMs Need Vision Transformers? Evaluating State Space Models as Vision Encoders<span class="title-cn">➡️ **中文翻译**  
+
+VLMs 需要 Vision Transformer 吗？评估 State Space Models 作为 Vision Encoders。</span></h3>
+<p class="meta">👤 Shang-Jui Ray Kuo, Paola Cascante-Bonilla</p>
+<div class="abstract">
+<p class="abstract-en">📄 Large vision--language models (VLMs) often use a frozen vision backbone, whose image features are mapped into a large language model through a lightweight connector. While transformer-based encoders are the standard visual backbone, we ask whether state space model (SSM) vision backbones can be a strong alternative. We systematically evaluate SSM vision backbones for VLMs in a controlled setting. Under matched ImageNet-1K initialization, the SSM backbone achieves the strongest overall performance across both VQA and grounding/localization. We further adapt both SSM and ViT-family backbones with detection or segmentation training and find that dense-task tuning generally improves performance across families; after this adaptation, the SSM backbone remains competitive while operating at a substantially smaller model scale. We further observe that (i) higher ImageNet accuracy or larger backbones do not reliably translate into better VLM performance, and (ii) some visual backbones are unstable in localization. Based on these findings, we propose stabilization strategies that improve robustness for both backbone families and highlight SSM backbones as a strong alternative to transformer-based vision encoders in VLMs.</p>
+<p class="abstract-cn">📄 大型视觉-语言模型（VLMs）通常采用冻结的视觉骨干网络，其图像特征通过轻量级连接器映射到大型语言模型中。尽管基于Transformer的编码器是标准的视觉骨干网络，但我们探讨基于状态空间模型（SSM）的视觉骨干网络是否可以成为强有力的替代方案。我们在受控环境下系统评估了SSM视觉骨干网络在VLMs中的表现。在ImageNet-1K初始化条件相匹配的情况下，SSM骨干网络在视觉问答（VQA）和定位/本地化任务中均取得了最强的整体性能。我们进一步对SSM和ViT系列骨干网络进行检测或分割训练适配，发现密集任务微调通常能够提升各家族的模型性能；在此适配之后，SSM骨干网络在显著更小的模型规模下仍保持强劲竞争力。我们还观察到：（i）更高的ImageNet准确率或更大的骨干网络并不能可靠地转化为更好的VLM性能，（ii）某些视觉骨干网络在定位任务中表现不稳定。基于这些发现，我们提出了稳定化策略来提升两个骨干网络家族的鲁棒性，并强调SSM骨干网络是VLMs中基于Transformer视觉编码器的有力替代方案。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19209v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>5. Robustness, Cost, and Attack-Surface Concentration in Phishing Detection<span class="title-cn">➡️ 中文翻译：鲁棒性、成本与攻击面集中度在网络钓鱼检测中的研究</span></h3>
+<p class="meta">👤 Julian Allagan, Mohamed Elbakary, Zohreh Safari</p>
+<div class="abstract">
+<p class="abstract-en">📄 Phishing detectors built on engineered website features attain near-perfect accuracy under i.i.d.\ evaluation, yet deployment security depends on robustness to post-deployment feature manipulation. We study this gap through a cost-aware evasion framework that models discrete, monotone feature edits under explicit attacker budgets. Three diagnostics are introduced: minimal evasion cost (MEC), the evasion survival rate $S(B)$, and the robustness concentration index (RCI).   On the UCI Phishing Websites benchmark (11\,055 instances, 30 ternary features), Logistic Regression, Random Forests, Gradient Boosted Trees, and XGBoost all achieve $\mathrm{AUC}\ge 0.979$ under static evaluation. Under budgeted sanitization-style evasion, robustness converges across architectures: the median MEC equals 2 with full features, and over 80\% of successful minimal-cost evasions concentrate on three low-cost surface features. Feature restriction improves robustness only when it removes all dominant low-cost transitions. Under strict cost schedules, infrastructure-leaning feature sets exhibit 17-19\% infeasible mass for ensemble models, while the median MEC among evadable instances remains unchanged. We formalize this convergence: if a positive fraction of correctly detected phishing instances admit evasion through a single feature transition of minimal cost $c_{\min}$, no classifier can raise the corresponding MEC quantile above $c_{\min}$ without modifying the feature representation or cost model. Adversarial robustness in phishing detection is governed by feature economics rather than model complexity.</p>
+<p class="abstract-cn">📄 基于工程化网站特征构建的钓鱼检测器在i.i.d.（独立同分布）评估下达到了接近完美的准确率，然而部署安全性取决于对部署后特征操纵的鲁棒性。我们通过一个成本感知规避框架来研究这一差距，该框架在明确的攻击者预算下对离散、单调的特征编辑进行建模。引入了三个诊断指标：最小规避成本(MEC)、规避存活率S(B)和鲁棒性集中度指数(RCI)。在UCI Phishing Websites基准数据集（11,055个实例，30个三元特征）上，Logistic Regression、Random Forests、Gradient Boosted Trees和XGBoost在静态评估下均达到了AUC≥0.979。在预算化的清洗式规避攻击下，鲁棒性在各种架构间趋同：使用全部特征时，中位数MEC等于2，且超过80%的成功最小成本规避集中在三个低成本表面特征上。特征限制仅在移除所有主导性低成本转换时才提高鲁棒性。在严格的成本约束下，依赖基础设施的特征集对集成模型表现出17-19%的不可能性质量，而可规避实例的中位数MEC保持不变。我们形式化地证明了这一趋同现象：如果正确检测到的钓鱼实例中有一定比例可以通过单一特征转换（最小成本为c_min）实现规避，那么任何分类器在不修改特征表示或成本模型的情况下，都无法将相应的MEC分位数提高到c_min以上。钓鱼检测中的对抗性鲁棒性由特征经济学而非模型复杂性决定。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19204v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>6. DriveTok: 3D Driving Scene Tokenization for Unified Multi-View Reconstruction and Understanding<span class="title-cn">➡️ **DriveTok：面向统一多视角重建与理解的3D驾驶场景令牌化**</span></h3>
+<p class="meta">👤 Dong Zhuo, Wenzhao Zheng, Sicheng Zuo</p>
+<div class="abstract">
+<p class="abstract-en">📄 With the growing adoption of vision-language-action models and world models in autonomous driving systems, scalable image tokenization becomes crucial as the interface for the visual modality. However, most existing tokenizers are designed for monocular and 2D scenes, leading to inefficiency and inter-view inconsistency when applied to high-resolution multi-view driving scenes. To address this, we propose DriveTok, an efficient 3D driving scene tokenizer for unified multi-view reconstruction and understanding. DriveTok first obtains semantically rich visual features from vision foundation models and then transforms them into the scene tokens with 3D deformable cross-attention. For decoding, we employ a multi-view transformer to reconstruct multi-view features from the scene tokens and use multiple heads to obtain RGB, depth, and semantic reconstructions. We also add a 3D head directly on the scene tokens for 3D semantic occupancy prediction for better spatial awareness. With the multiple training objectives, DriveTok learns unified scene tokens that integrate semantic, geometric, and textural information for efficient multi-view tokenization. Extensive experiments on the widely used nuScenes dataset demonstrate that the scene tokens from DriveTok perform well on image reconstruction, semantic segmentation, depth prediction, and 3D occupancy prediction tasks.</p>
+<p class="abstract-cn">📄 随着视觉-语言-动作模型和世界模型在自动驾驶系统中的广泛应用，可扩展的图像分词（tokenization）作为视觉模态的接口变得至关重要。然而，现有大多数分词器都是针对单目和2D场景设计的，在应用于高分辨率多视角驾驶场景时存在效率低下和视角间不一致的问题。为解决这一问题，我们提出了 DriveTok，这是一种高效的3D驾驶场景分词器，用于统一的多视角重建和理解。DriveTok 首先从视觉基础模型中获取语义丰富的视觉特征，然后通过3D可变形交叉注意力将其转换为场景分词（scene tokens）。在解码阶段，我们采用多视角Transformer从场景分词中重建多视角特征，并使用多个预测头分别获得RGB、深度和语义重建。此外，我们还在场景分词上直接添加了一个3D预测头，用于3D语义占用预测，以增强空间感知能力。通过多任务训练目标，DriveTok 学习了统一的场景分词，整合了语义、几何和纹理信息，实现高效的多视角分词。在广泛使用的 nuScenes 数据集上进行的广泛实验表明，DriveTok 生成的场景分词在图像重建、语义分割、深度预测和3D占用预测任务中表现出色。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19219v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>7. Cubic Discrete Diffusion: Discrete Visual Generation on High-Dimensional Representation Tokens<span class="title-cn">➡️ **中文翻译：**
+
+**立方离散 T592：基于高维表示标记的离散视觉生成**</span></h3>
+<p class="meta">👤 Yuqing Wang, Chuofan Ma, Zhijie Lin</p>
+<div class="abstract">
+<p class="abstract-en">📄 Visual generation with discrete tokens has gained significant attention as it enables a unified token prediction paradigm shared with language models, promising seamless multimodal architectures. However, current discrete generation methods remain limited to low-dimensional latent tokens (typically 8-32 dims), sacrificing the semantic richness essential for understanding. While high-dimensional pretrained representations (768-1024 dims) could bridge this gap, their discrete generation poses fundamental challenges. In this paper, we present Cubic Discrete Diffusion (CubiD), the first discrete generation model for high-dimensional representations. CubiD performs fine-grained masking throughout the high-dimensional discrete representation -- any dimension at any position can be masked and predicted from partial observations. This enables the model to learn rich correlations both within and across spatial positions, with the number of generation steps fixed at $T$ regardless of feature dimensionality, where $T \ll hwd$. On ImageNet-256, CubiD achieves state-of-the-art discrete generation with strong scaling behavior from 900M to 3.7B parameters. Crucially, we validate that these discretized tokens preserve original representation capabilities, demonstrating that the same discrete tokens can effectively serve both understanding and generation tasks. We hope this work will inspire future research toward unified multimodal architectures. Code is available at: https://github.com/YuqingWang1029/CubiD.</p>
+<p class="abstract-cn">📄 基于离散token的视觉生成已获得显著关注，因为它实现了与语言模型共享的统一token预测范式，有望构建无缝的多模态架构。然而，当前的离散生成方法仍局限于低维潜在token（通常8-32维），牺牲了理解所需的语义丰富性。尽管高维预训练表示（768-1024维）可以弥补这一差距，但其离散生成仍面临根本性挑战。在本文中，我们提出了Cubic Discrete（CubiD），这是首个针对高维表示的离散生成模型。CubiD在高维离散表示中进行细粒度掩码——任意位置的任意维度都可以被掩码并从部分观测中预测。这使得模型能够学习位置内部和跨位置的丰富相关性，而生成步数固定为T，与特征维度无关，其中T ≪ hwd。在ImageNet-256上，CubiD实现了最先进的离散生成，并展现出从900M到37亿参数的强缩放行为。关键的是，我们验证了这些离散化token保留了原始表示能力，表明相同的离散token可以有效地同时服务于理解和生成任务。我们希望这项工作能激励未来研究迈向统一的多模态架构。代码已开源于：https://github.com/YuqingWang1029/CubiD。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19232v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>8. EffectErase: Joint Video Object Removal and Insertion for High-Quality Effect Erasing<span class="title-cn">➡️ **EffectErase：用于高质量效果消除的联合视频物体移除与插入**</span></h3>
+<p class="meta">👤 Yang Fu, Yike Zheng, Ziyun Dai</p>
+<div class="abstract">
+<p class="abstract-en">📄 Video object removal aims to eliminate dynamic target objects and their visual effects, such as deformation, shadows, and reflections, while restoring seamless backgrounds. Recent diffusion-based video inpainting and object removal methods can remove the objects but often struggle to erase these effects and to synthesize coherent backgrounds. Beyond method limitations, progress is further hampered by the lack of a comprehensive dataset that systematically captures common object effects across varied environments for training and evaluation. To address this, we introduce VOR (Video Object Removal), a large-scale dataset that provides diverse paired videos, each consisting of one video where the target object is present with its effects and a counterpart where the object and effects are absent, with corresponding object masks. VOR contains 60K high-quality video pairs from captured and synthetic sources, covers five effects types, and spans a wide range of object categories as well as complex, dynamic multi-object scenes. Building on VOR, we propose EffectErase, an effect-aware video object removal method that treats video object insertion as the inverse auxiliary task within a reciprocal learning scheme. The model includes task-aware region guidance that focuses learning on affected areas and enables flexible task switching. Then, an insertion-removal consistency objective that encourages complementary behaviors and shared localization of effect regions and structural cues. Trained on VOR, EffectErase achieves superior performance in extensive experiments, delivering high-quality video object effect erasing across diverse scenarios.</p>
+<p class="abstract-cn">📄 视频目标移除（Video Object Removal）旨在消除动态目标对象及其视觉效果（如变形、阴影和反射），同时恢复无缝背景。近期基于扩散模型的视频修复和目标移除方法能够移除对象，但往往难以消除这些效果并合成连贯的背景。除了方法本身的局限性之外，进展还受到缺乏综合数据集的阻碍——该数据集需要在多样化环境中系统地捕获常见对象效果，以用于训练和评估。为解决此问题，我们提出了VOR（Video Object Removal，视频目标移除），这是一个大规模数据集，提供多样化的配对视频，每对视频包括一个包含目标对象及其效果的视频，以及一个对象和效果均不存在的对应视频，并配有相应的对象掩码。VOR包含60K对高质量视频，来源于实拍和合成，覆盖五种效果类型，涵盖广泛的对象类别以及复杂的动态多对象场景。基于VOR，我们提出了EffectErase，这是一种效果感知的视频目标移除方法，在互惠学习框架中将视频对象插入作为逆向辅助任务。该模型包含任务感知区域引导（task-aware region guidance），将学习重点聚焦于受影响区域，并实现灵活的任务切换。此外，还设计了插入-移除一致性目标（insertion-removal consistency objective），鼓励互补行为，并共享效果区域和结构线索的定位。在VOR上训练后，EffectErase在大量实验中取得了卓越性能，能够在不同场景中实现高质量的视频目标效果消除。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19224v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>9. SAMA: Factorized Semantic Anchoring and Motion Alignment for Instruction-Guided Video Editing<span class="title-cn">➡️ **SAMA：面向指令引导视频编辑的分解式语义锚定与运动对齐**
+
+---
+
+**注：** 该翻译采用以下处理方式：
+
+- **SAMA**：保留英文原名（专有名词/缩写）
+- **Factorized**：分解式（强调分解因子的特性）
+- **Semantic Anchoring**：语义锚定（计算机视觉领域常见术语）
+- **Motion Alignment**：运动对齐
+- **Instruction-Guided Video Editing**：指令引导视频编辑
+
+如果追求更口语化表达，也可译为：
+
+> **SAMA：基于分解式语义锚定与运动对齐的指令引导视频编辑**</span></h3>
+<p class="meta">👤 Xinyao Zhang, Wenkai Dong, Yuxin Song</p>
+<div class="abstract">
+<p class="abstract-en">📄 Current instruction-guided video editing models struggle to simultaneously balance precise semantic modifications with faithful motion preservation. While existing approaches rely on injecting explicit external priors (e.g., VLM features or structural conditions) to mitigate these issues, this reliance severely bottlenecks model robustness and generalization. To overcome this limitation, we present SAMA (factorized Semantic Anchoring and Motion Alignment), a framework that factorizes video editing into semantic anchoring and motion modeling. First, we introduce Semantic Anchoring, which establishes a reliable visual anchor by jointly predicting semantic tokens and video latents at sparse anchor frames, enabling purely instruction-aware structural planning. Second, Motion Alignment pre-trains the same backbone on motion-centric video restoration pretext tasks (cube inpainting, speed perturbation, and tube shuffle), enabling the model to internalize temporal dynamics directly from raw videos. SAMA is optimized with a two-stage pipeline: a factorized pre-training stage that learns inherent semantic-motion representations without paired video-instruction editing data, followed by supervised fine-tuning on paired editing data. Remarkably, the factorized pre-training alone already yields strong zero-shot video editing ability, validating the proposed factorization. SAMA achieves state-of-the-art performance among open-source models and is competitive with leading commercial systems (e.g., Kling-Omni). Code, models, and datasets will be released.</p>
+<p class="abstract-cn">📄 当前基于指令引导的视频编辑模型在同时平衡精确的语义修改与忠实保留运动方面存在困难。尽管现有方法依赖于注入显式外部先验（如VLM features或结构条件）来缓解这些问题，但这种依赖严重制约了模型的鲁棒性和泛化能力。为克服这一局限，我们提出了SAMA（Factorized Semantic Anchoring and Motion Alignment，因子化语义锚定与运动对齐），该框架将视频编辑分解为语义锚定和运动建模两个部分。首先，我们引入Semantic Anchoring（语义锚定），通过在稀疏锚定帧上联合预测语义tokens和视频latents来建立可靠的视觉锚点，从而实现纯粹的指令感知结构规划。其次，Motion Alignment（运动对齐）采用以运动为中心的视频修复 pretext 任务（cube inpainting、speed perturbation和tube shuffle）对同一backbone进行预训练，使模型能够直接从原始视频中内化时间动态特性。SAMA采用两阶段优化流程：首先进行因子化预训练阶段，在无需配对视频-指令编辑数据的情况下学习固有语义-运动表示；随后在配对编辑数据上进行监督微调。值得注意的是，仅凭因子化预训练就已具备强大的zero-shot视频编辑能力，验证了所提分解方法的有效性。SAMA在开源模型中实现了最优性能，并与领先的商业系统（如Kling-Omni）具有竞争力。代码、模型和数据集将予以发布。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19228v1" target="_blank">🔗 查看论文 →</a></p>
+</div><div class="paper">
+<h3>10. DreamPartGen: Semantically Grounded Part-Level 3D Generation via Collaborative Latent Denoising<span class="title-cn">➡️ **DreamPartGen：语义锚定的部件级三维生成通过协同潜在去噪**</span></h3>
+<p class="meta">👤 Tianjiao Yu, Xinzhuo Li, Muntasir Wahed</p>
+<div class="abstract">
+<p class="abstract-en">📄 Understanding and generating 3D objects as compositions of meaningful parts is fundamental to human perception and reasoning. However, most text-to-3D methods overlook the semantic and functional structure of parts. While recent part-aware approaches introduce decomposition, they remain largely geometry-focused, lacking semantic grounding and failing to model how parts align with textual descriptions or their inter-part relations. We propose DreamPartGen, a framework for semantically grounded, part-aware text-to-3D generation. DreamPartGen introduces Duplex Part Latents (DPLs) that jointly model each part's geometry and appearance, and Relational Semantic Latents (RSLs) that capture inter-part dependencies derived from language. A synchronized co-denoising process enforces mutual geometric and semantic consistency, enabling coherent, interpretable, and text-aligned 3D synthesis. Across multiple benchmarks, DreamPartGen delivers state-of-the-art performance in geometric fidelity and text-shape alignment.</p>
+<p class="abstract-cn">📄 理解和生成三维物体作为有意义部件的组合，对人类感知和推理至关重要。然而，大多数文本到 3D 方法忽视了部件的语义和功能结构。虽然最近的部件感知方法引入了分解，但它们仍然主要关注几何，缺乏语义基础，且未能建模部件如何与文本描述对齐以及部件之间的相互关系。我们提出 **DreamPartGen**，一个语义关联、部件感知的文本到 3D 生成框架。**DreamPartGen** 引入了 **Duplex Part Latents (DPLs)**，共同建模每个部件的几何和外观，以及 **Relational Semantic Latents (RSLs)**，捕捉从语言中得出的部件间依赖关系。同步的 **co‑denoising process** 强制几何与语义的相互一致性，从而实现连贯、可解释且文本对齐的 3D 合成。在多个基准测试中，**DreamPartGen** 在几何保真度和文本‑形状对齐方面达到了最先进的性能。</p>
+</div>
+<p class="link"><a href="http://arxiv.org/abs/2603.19216v1" target="_blank">🔗 查看论文 →</a></p>
+</div></div><div class="footer"><p>数据来源: arXiv | 每天8点自动更新</p></div></body></html>
