@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Brief - 2026年03月23日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; border-radius: 20px; text-align: center; margin-bottom: 30px; }
+        .header h1 { font-size: 2.5em; margin-bottom: 15px; }
+        .header p { font-size: 1.1em; opacity: 0.9; }
+        .article { background: white; padding: 25px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); margin-bottom: 25px; }
+        .article h2 { color: #333; font-size: 1.2em; margin-bottom: 10px; line-height: 1.4; }
+        .article .title-cn { color: #667eea; font-size: 0.95em; display: block; margin-top: 8px; margin-bottom: 15px; }
+        .article .meta { color: #888; font-size: 0.9em; margin-bottom: 15px; }
+        .article .summary { color: #555; margin-bottom: 12px; font-size: 0.95em; line-height: 1.6; }
+        .article .summary-cn { color: #2563eb; font-size: 0.9em; line-height: 1.7; background: #eff6ff; padding: 15px; border-radius: 8px; margin-bottom: 15px; }
+        .article .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .footer { text-align: center; padding: 30px; color: #888; }
+        .back { text-align: center; margin-bottom: 20px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📰 AI Daily Brief</h1>
+            <p>2026年03月23日 · 5篇 · 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理 · 使用MiniMax API翻译</p>
+        </div>
+        <div class="article">
+            <h2>1. EnshittifAIcation</h2>
+            <div class="title-cn">➡️ **中文译法**  
+**AI平台沉沦化**（亦可写作 **AI化堕落**）  
+
+> 这一译法把 “EnshittifAIcation” 拆解为 “Enshittification + AI”。  
+> - “Enshittification” 在华语网络常译为 **沉沦化**、**堕落** 或 **崩坏**。  
+> - 加上 “AI”，便形成了 **AI平台沉沦化**（或 **AI化堕落**），指 AI 产品或服务在初期表现优秀后，逐渐出现质量下降、偏见加剧、用户体验恶化等现象，类似平台“沉沦化”的过程。  
+
+如果只想用一个更口语化的词，也可以直接说 **“AI 化堕落”**，但在正式或学术语境中推荐使用 **“AI平台沉沦化”**。</div>
+            <p class="meta">📅 2026-03-20 · 👤 Stefano Marinelli · 📡 IT Notes</p>
+            <p class="summary">Three episodes, one week. AI bots that hallucinate VPN requirements, recommend Apache configs on nginx servers, and suggest replacing 128 GB of RAM with a cloud VPS. A field note on the cost of mistak...</p>
+            <div class="summary-cn">📝 三集，一周。AI 机器人会臆想出 VPN 需求、在 nginx 服务器上推荐 Apache 配置，并建议把 128 GB 的 RAM 换成云 VPS。一篇关于把自信误当成能力的代价的现场笔记。</div>
+            <p class="link"><a href="https://it-notes.dragas.net/2026/03/20/enshittifaication/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>2. Tighter bounds on alternating series remainder</h2>
+            <div class="title-cn">➡️ **中文翻译：**  
+关于交错级数余项的更紧密界。  
+
+（即 “Tighter bounds on alternating series remainder”）</div>
+            <p class="meta">📅 2026-03-18 · 👤 John · 📡 John D. Cook</p>
+            <p class="summary">The alternating series test is part of the standard calculus curriculum. It says that if you truncate an alternating series, the remainder is bounded by the first term that was left out. This fact goe...</p>
+            <div class="summary-cn">📝 **译文**
+
+交错级数判别法（alternating series test）是标准微积分课程的一部分。它指出，如果对一个交错级数进行截断（即只取前几项而省略后面的项），则余项（即剩余的无穷级数之和）的绝对值不超过被省略的**第一项**的大小。大多数学生往往对此一掠而过，然而在以后需要进行数值计算时，这一事实会变得非常有用。
+
+更准确地说，假设我们有一个形如  
+
+\[
+\sum_{i=0}^{\infty}(-1)^i a_i
+\]
+
+的交错级数，其中 \(a_i>0\) 且单调递减并趋于零（即 \(a_{i+1}\le a_i\) 且 \(\displaystyle\lim_{i\to\infty}a_i=0\)）。则该级数的尾部（即余项）的绝对值被其第一项所限制：
+
+\[
+\Bigl|\sum_{i=n}^{\infty}(-1)^i a_i\Bigr|\le a_n .
+\]
+
+我们可以进一步说明……（原文在此处中断）</div>
+            <p class="link"><a href="https://www.johndcook.com/blog/2026/03/17/alternating-series-remainder/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>3. Why Claude's new 1M context length is a big deal</h2>
+            <div class="title-cn">➡️ **中文翻译**  
+为什么克劳德（Claude）新推出的 1M（100 万）上下文长度意义重大？</div>
+            <p class="meta">📅 2026-03-15 · 👤 martin@martinalderson.com (Martin Alderson) · 📡 Martin Alderson</p>
+            <p class="summary">Last Friday Anthropic released a new (production at least - has been in beta for a while) 1M context window variant of Opus 4.6 and Sonnet 4.6. This is actually a big breakthrough from my initial expe...</p>
+            <div class="summary-cn">📝 上周五，Anthropic发布了一款新的（至少是生产级别的——已经经过一段时间的beta测试）Opus 4.6和Sonnet 4.6的一百万上下文窗口版本。根据我的初步实验，这实际上是一个重大突破。如果你难以形象地理解什么是token——我使用的一个很好的经验法则是，一页标准的A4/信纸大小的页面通常包含大约500-1000个英文token。因此，100万个token大约相当于1000-2000页——或者大约4-5本小说的文本量。AI正在如此多的维度上不断改进...</div>
+            <p class="link"><a href="https://martinalderson.com/posts/why-claudes-new-1m-context-length-is-a-big-deal/?utm_source=rss&utm_medium=rss&utm_campaign=feed" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>4. How Can Governments Pay Open Source Maintainers?</h2>
+            <div class="title-cn">➡️ **政府如何支付开源维护者的报酬？**</div>
+            <p class="meta">📅 2026-03-14 · 👤 @edent · 📡 Terence Eden’s Blog</p>
+            <p class="summary">When I worked for the UK Government I was once asked if we could find a way to pay for all the Open Source Software we were using. It is a surprisingly hard problem and I want to talk about some of th...</p>
+            <div class="summary-cn">📝 # 中文翻译
+
+当我为英国政府工作时，有人曾问我，我们是否能找到一种方式为我们使用的所有开源软件付费。这是一个出乎意料的难题，我想谈谈我们面临的一些问题。
+
+英国政府发布了大量开源代码——几乎所有由国家内部开发的软件都以OSI（开放源代码 Initiative）批准的许可证提供。英国对个人、公司和国家重复使用其代码总体上相当宽松。没有意愿，而且几乎没有能力……
+
+---
+
+*（原文在此处被截断）*</div>
+            <p class="link"><a href="https://shkspr.mobi/blog/2026/03/how-can-governments-pay-open-source-maintainers/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>5. Dylan Patel — Deep dive on the 3 big bottlenecks to scaling AI compute</h2>
+            <div class="title-cn">➡️ **迪伦·帕特尔：深度剖析扩展AI算力的三大瓶颈**</div>
+            <p class="meta">📅 2026-03-13 · 👤 Dwarkesh Patel · 📡 Dwarkesh Podcast</p>
+            <p class="summary">Dylan Patel, founder of SemiAnalysis, provides a deep dive into the 3 big bottlenecks to scaling AI compute: logic, memory, and power.And walks through the economics of labs, hyperscalers, foundries, ...</p>
+            <div class="summary-cn">📝 Dylan Patel，SemiAnalysis的创始人，深入分析了扩展AI算力的三大瓶颈：逻辑、内存和电力。他还详细讲解了实验室、超大规模云服务商、代工厂和半导体设备制造商的经济学。对整个技术栈的每个层面都有了深入的了解。非常精彩！
+
+可在YouTube上观看；在Apple Podcasts或Spotify上收听。
+
+赞助商
+
+Mercury已经为我省了不少时间在这个报税季节。去年，我用Mercury向所有与我合作的承包商请求W-9表格。</div>
+            <p class="link"><a href="https://www.dwarkesh.com/p/dylan-patel" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="footer">
+            <p>数据来源: RSS订阅 · 翻译: MiniMax API · 每天自动更新</p>
+            <p><small>注：今日数据可能不完整，正在修复RSS抓取问题</small></p>
+        </div>
+    </div>
+</body>
+</html>
