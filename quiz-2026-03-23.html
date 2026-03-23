@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-23</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-23 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中最核心的机制是什么？", "options": ["A. 卷积操作", "B. 循环连接", "C. 自注意力机制", "D. 池化操作"], "answer": "C", "explanation": "Transformer架构的核心是自注意力机制（Self-Attention），它允许模型在处理序列时考虑序列中所有位置的关系，而不是像RNN那样按顺序处理。这使得Transformer能够并行计算，大幅提升训练效率。"}, {"question": "以下哪个模型是由OpenAI发布的？", "options": ["A. Claude", "B. Gemini", "C. GPT-4", "D. Llama"], "answer": "C", "explanation": "GPT-4是OpenAI发布的大型语言模型。Claude是Anthropic发布的，Gemini是Google发布的，Llama是Meta发布的。"}, {"question": "大语言模型（LLM）训练通常分为三个主要阶段，正确的顺序是？", "options": ["A. 预训练 -> 强化学习 -> 微调", "B. 预训练 -> 指令微调 -> 人类反馈强化学习", "C. 指令微调 -> 预训练 -> 强化学习", "D. 强化学习 -> 预训练 -> 微调"], "answer": "B", "explanation": "LLM的标准训练流程是：1) 预训练（Pre-training）在海量文本上学习语言知识；2) 指令微调（SFT）让模型学会理解指令；3) 人类反馈强化学习（RLHF）进一步提升模型的有用性和安全性。"}, {"question": "Anthropic公司开发的AI助手以什么命名？", "options": ["A. ChatGPT", "B. Claude", "C. Bard", "D. Copilot"], "answer": "B", "explanation": "Anthropic公司开发的AI助手叫做Claude。ChatGPT是OpenAI的，Bard是Google的，Copilot是Microsoft的。"}, {"question": "在Prompt Engineering中，'Few-shot'提示是指什么？", "options": ["A. 不提供任何示例的零样本学习", "B. 提供大量示例进行训练", "C. 提供少量示例帮助模型理解任务", "D. 使用链式思考推理"], "answer": "C", "explanation": "Few-shot提示是指在提示中提供少量（通常2-5个）输入-输出示例，帮助模型理解任务格式和期望输出，从而在没有专门训练的情况下完成新任务。"}, {"question": "以下哪项不是大语言模型可能存在的局限性？", "options": ["A. 产生幻觉（hallucination）", "B. 知识截止日期", "C. 无法进行数学计算", "D. 完全理解人类情感"], "answer": "D", "explanation": "LLM的局限性包括：可能产生看似真实但错误的信息（幻觉）、知识受限于训练数据截止日期、在复杂数学推理方面较弱。完全理解人类情感是AI尚未完全达到的能力，但这不是LLM的主要局限。"}, {"question": "Transformer模型中，多头注意力（Multi-Head Attention）的主要作用是？", "options": ["A. 减少计算量", "B. 让模型同时关注不同位置的不同类型信息", "C. 防止过拟合", "D. 加速推理速度"], "answer": "B", "explanation": "多头注意力允许模型同时学习多个注意力权重，每个头可以关注不同位置的不同类型信息（如语法、语义、位置关系等），增强模型表达能力和泛化能力。"}, {"question": "Tokenization（分词）在大语言模型中的作用是？", "options": ["A. 压缩模型体积", "B. 将文本转换为模型可处理的数字表示", "C. 提高推理速度", "D. 减少训练数据"], "answer": "B", "explanation": "Tokenization是将原始文本拆分成模型可处理的token（词片段）的过程，每个token会被映射为一个数字ID。这是LLM处理自然语言的第一步，使文本成为模型可计算的数值形式。"}, {"question": "以下哪个是大型语言模型在企业中的典型应用场景？", "options": ["A. 图像生成", "B. 语音识别", "C. 智能客服与对话系统", "D. 自动驾驶"], "answer": "C", "explanation": "大型语言模型的核心能力是自然语言理解和生成，因此在企业中最典型的应用是智能客服、对话系统、内容生成、文档处理等。图像生成主要依靠Diffusion等模型，语音识别和自动驾驶有专门的技术栈。"}, {"question": "RLHF（人类反馈强化学习）在LLM训练中的主要目的是？", "options": ["A. 增加模型参数规模", "B. 让模型的输出更符合人类期望和价值观", "C. 扩大训练数据规模", "D. 加速模型推理"], "answer": "B", "explanation": "RLHF通过人类反馈来调整模型行为，使模型输出更有帮助（helpful）、更诚实（honest）、更无害（harmless）。它帮助模型理解什么是好的响应，从而生成更符合人类期望的内容。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
