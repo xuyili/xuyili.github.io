@@ -31,85 +31,144 @@
             <p>2026年03月23日 · 5篇 · 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理 · 使用MiniMax API翻译</p>
         </div>
         <div class="article">
-            <h2>1. EnshittifAIcation</h2>
-            <div class="title-cn">➡️ **中文译法**  
-**AI平台沉沦化**（亦可写作 **AI化堕落**）  
+            <h2>1. More Details Than You Probably Wanted to Know About Recent Updates to My Notes Site</h2>
+            <div class="title-cn">➡️ 关于我的笔记网站最近更新的、比你可能想知道的更详细的细节。</div>
+            <p class="meta">📅 2026-03-22 · 👤 Unknown · 📡 Jim Nielsen’s Blog</p>
+            <p class="summary">I shipped some updates to my notes site. Nothing huge. Just small stuff. But what is big stuff except a bunch of small stuff combined? So small stuff is important too. What follows is a bunch of tiny ...</p>
+            <div class="summary-cn">📝 # 中文翻译
 
-> 这一译法把 “EnshittifAIcation” 拆解为 “Enshittification + AI”。  
-> - “Enshittification” 在华语网络常译为 **沉沦化**、**堕落** 或 **崩坏**。  
-> - 加上 “AI”，便形成了 **AI平台沉沦化**（或 **AI化堕落**），指 AI 产品或服务在初期表现优秀后，逐渐出现质量下降、偏见加剧、用户体验恶化等现象，类似平台“沉沦化”的过程。  
+我向我的笔记网站推送了一些更新。没什么大不了的，只是些小改动。但所谓的大改动不就是一堆小改动组合在一起吗？所以小改动也很重要。下面是一堆你可能不在意的细节，但它们都是我在一路发布过程中需要做出决定并考虑的。对我来说，细节才是乐趣所在！
 
-如果只想用一个更口语化的词，也可以直接说 **“AI 化堕落”**，但在正式或学术语境中推荐使用 **“AI平台沉沦化”**。</div>
+## 每篇文章现在都有独立的 URL
+
+这个网站以前只有一个巨大的 HTML 页面，包含所有笔记。为了方便订阅源和链接，我会用锚点链接到这个巨大 HTML 文档中的某篇文章，例如 `https://notes.jim-nielsen.com/#2026-03-09T2305`
+
+这样挺好，但随着我的笔记页面越来越大，每次只想链接到一篇笔记却要加载所有内容，似乎有些浪费。于是我做了改变。现在每篇笔记都有自己独立的页面，例如 `https://notes.jim-nielsen.com/n/2026-03-09-2305/`
+
+## 你可能注意到了：我改了笔记的标识符
+
+每当创建一篇笔记，我都会根据发布时间的时间戳来命名，例如 `2026-03-09T2305.md`。这就是用于深度链接到该笔记的片段标识符（fragment identifier），例如 `/#2026-03-09T2305`
+
+一开始，我打算直接把这种 ID 转换成路径格式，例如 `/#2026-03-09T2305` → `/n/2026-03-09T2305/`
+
+虽然片段标识符按理应该是大小写敏感的，但在测试中我发现 Safari 有时会把它改成小写的 t，例如 `/#2026-03-09T2305` → `/n/2026-03-09t2305`
+
+这让我很恼火。这也促使我更多地思考这些标识符，最终我决定改动它们。所以旧文章的片段标识符现在会重定向到新文章页面，标识符格式略有调整：`/#2026-03-09T2305` → `/n/2026-03-09-2305/`
+
+我去掉了 T，换成了连字符 `-`，所以现在 Markdown 文章的格式是：`YYYY-MM-DD-HHmm.md`
+
+最终的永久链接格式是：`/n/YYYY-MM-DD-HHmm/`
+
+我知道信息量有点大，但我在 URL 格式上纠结了很久，因为我不想以后再改它。我对现在的结果很满意。
+
+## 但是等等！重定向怎么办？
+
+如果你要更改旧 URL，就得设置重定向到新 URL——对吧？（是的——如果你想做得好的话。）
+
+但服务器端（我在用 Netlify）无法读取片段标识符并处理重定向，所以我不得不在客户端处理重定向。我通过在文档 head 中放置一个阻塞渲染的 `<script>` 来实现这一点，这样浏览器在…</div>
+            <p class="link"><a href="https://blog.jim-nielsen.com/2026/notes-site-updates/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>2. EnshittifAIcation</h2>
+            <div class="title-cn">➡️ **EnshittifAIcation** 的常见中文译法为：
+
+- **AI平台劣化**  
+- （亦可译作 “AI平台腐化”）  
+
+即指 AI 产品或服务在运营过程中逐步降低质量、牺牲用户体验的趋势。</div>
             <p class="meta">📅 2026-03-20 · 👤 Stefano Marinelli · 📡 IT Notes</p>
             <p class="summary">Three episodes, one week. AI bots that hallucinate VPN requirements, recommend Apache configs on nginx servers, and suggest replacing 128 GB of RAM with a cloud VPS. A field note on the cost of mistak...</p>
-            <div class="summary-cn">📝 三集，一周。AI 机器人会臆想出 VPN 需求、在 nginx 服务器上推荐 Apache 配置，并建议把 128 GB 的 RAM 换成云 VPS。一篇关于把自信误当成能力的代价的现场笔记。</div>
+            <div class="summary-cn">📝 三集，一周。AI 机器人会虚构 VPN 需求，在 nginx 服务器上推荐 Apache 配置，并建议把 128 GB 的内存换成云 VPS。一篇关于把自信误认为能力的代价的现场笔记。</div>
             <p class="link"><a href="https://it-notes.dragas.net/2026/03/20/enshittifaication/" target="_blank">🔗 查看原文 →</a></p>
         </div>
         <div class="article">
-            <h2>2. Tighter bounds on alternating series remainder</h2>
-            <div class="title-cn">➡️ **中文翻译：**  
-关于交错级数余项的更紧密界。  
-
-（即 “Tighter bounds on alternating series remainder”）</div>
+            <h2>3. Tighter bounds on alternating series remainder</h2>
+            <div class="title-cn">➡️ **翻译**  
+**Tighter bounds on alternating series remainder** → **交错级数余项的更紧密界**（亦可译为 “关于交错级数余项的更严格界限”。）</div>
             <p class="meta">📅 2026-03-18 · 👤 John · 📡 John D. Cook</p>
             <p class="summary">The alternating series test is part of the standard calculus curriculum. It says that if you truncate an alternating series, the remainder is bounded by the first term that was left out. This fact goe...</p>
-            <div class="summary-cn">📝 **译文**
+            <div class="summary-cn">📝 **中文翻译**
 
-交错级数判别法（alternating series test）是标准微积分课程的一部分。它指出，如果对一个交错级数进行截断（即只取前几项而省略后面的项），则余项（即剩余的无穷级数之和）的绝对值不超过被省略的**第一项**的大小。大多数学生往往对此一掠而过，然而在以后需要进行数值计算时，这一事实会变得非常有用。
+交错级数判别法（alternating series test）是标准微积分课程的常规内容。它指出，如果对交错级数进行截断（即取前有限项），其**余项**的绝对值不会超过被略去的首项的大小。这一结论在大多数学生的课堂记忆中往往一闪而过，但在后续需要做数值计算时却会变得非常有用。
 
-更准确地说，假设我们有一个形如  
+更精确地说，假设我们有一个形如  
+\[
+\sum_{n=0}^{\infty} (-1)^n a_n\qquad (a_n>0)
+\]  
+的交错级数，其中 \(a_n\) 为正数并且**单调收敛到零**。则该级数的尾部（即从第 \(N+1\) 项开始的余项）满足
 
 \[
-\sum_{i=0}^{\infty}(-1)^i a_i
+\Bigl|\sum_{n=N+1}^{\infty} (-1)^n a_n\Bigr|\le a_{N+1}.
 \]
 
-的交错级数，其中 \(a_i>0\) 且单调递减并趋于零（即 \(a_{i+1}\le a_i\) 且 \(\displaystyle\lim_{i\to\infty}a_i=0\)）。则该级数的尾部（即余项）的绝对值被其第一项所限制：
+对 \(a_n\) 的行为了解得越细致，我们对余项的估计也就越精确。  
 
-\[
-\Bigl|\sum_{i=n}^{\infty}(-1)^i a_i\Bigr|\le a_n .
-\]
+到目前为止，我们一直假设这些项是单调趋于零的。  
+- 若它们的**一阶差分** \( \Delta a_n = a_{n+1}-a_n \) 也单调趋于零，则截断误差既有**上界**也有**下界**；  
+- 若二阶差分 \( \Delta^2 a_n = \Delta a_{n+1}-\Delta a_n \) 仍然单调趋于零，我们就可以得到一个更大的下界和更小的上界；  
+- 以此类推，若 \(a_n\) 的 **k 阶差分** \(\Delta^k a_n\) 都单调趋于零，则余项的大小可以被如下更紧的界所限制（具体形式见原文）。
 
-我们可以进一步说明……（原文在此处中断）</div>
+**来源**：Mark B. Villarino, *The Error in an Alternating Series*, American Mathematical Monthly, April 2018, pp. 360–364.
+
+**相关阅读**  
+- 欧拉法加速交错级数  
+- 科恩法加速交错级数  
+
+这篇博文《Tighter bounds on alternating series remainder》首次发布于 John D. Cook 的博客。</div>
             <p class="link"><a href="https://www.johndcook.com/blog/2026/03/17/alternating-series-remainder/" target="_blank">🔗 查看原文 →</a></p>
         </div>
         <div class="article">
-            <h2>3. Why Claude's new 1M context length is a big deal</h2>
-            <div class="title-cn">➡️ **中文翻译**  
-为什么克劳德（Claude）新推出的 1M（100 万）上下文长度意义重大？</div>
+            <h2>4. Why Claude's new 1M context length is a big deal</h2>
+            <div class="title-cn">➡️ **为什么Claude的100万上下文长度是一件大事**
+
+或者：
+
+**为什么Claude的新100万上下文长度意义重大**</div>
             <p class="meta">📅 2026-03-15 · 👤 martin@martinalderson.com (Martin Alderson) · 📡 Martin Alderson</p>
             <p class="summary">Last Friday Anthropic released a new (production at least - has been in beta for a while) 1M context window variant of Opus 4.6 and Sonnet 4.6. This is actually a big breakthrough from my initial expe...</p>
-            <div class="summary-cn">📝 上周五，Anthropic发布了一款新的（至少是生产级别的——已经经过一段时间的beta测试）Opus 4.6和Sonnet 4.6的一百万上下文窗口版本。根据我的初步实验，这实际上是一个重大突破。如果你难以形象地理解什么是token——我使用的一个很好的经验法则是，一页标准的A4/信纸大小的页面通常包含大约500-1000个英文token。因此，100万个token大约相当于1000-2000页——或者大约4-5本小说的文本量。AI正在如此多的维度上不断改进...</div>
+            <div class="summary-cn">📝 # 中文翻译
+
+上周五，Anthropic发布了一款新的（至少是生产级别——已在测试阶段有一段时间了） Opus 4.6 和 Sonnet 4.6 的100万上下文窗口变体。根据我的初步实验，这实际上是一个重大突破。
+
+如果你难以想象什么是token（词元），我使用的一个很好的经验法则是：一张标准A4/信纸大小的页面大约包含500-1000个英文token[1]。因此，100万token大约相当于1,000-2,000页——或者大约4-5本小说的文本量。
+
+AI正在如此多的维度上不断进步，我认为重要的是首先强调AI领域正在改进的事情有多少。在质量、成本、速度（新的Qwen 3.5模型以低成本解锁了非常有趣的应用场景）以及现在的上下文长度方面，步伐是无情的。
+
+2022年末，GPT-3.5的上下文窗口只有4,096个token——也许只有几页文本。在随后几年里，这个数字稳步增长到大约20万。现在，我们在一个非常强大的前沿模型上拥有了100万的上下文长度（我应该补充，GPT-5.x也有更长的上下文窗口，但在大多数情况下它们仅限于API使用）。
+
+但你可能会问——Gemini不是早就有了吗？是的，他们确实有，但结果相当差。
+
+## 并非所有上下文长度都相等
+
+在LLM中有一个概念叫做"上下文衰减"——随着与模型会话长度的增加，质量往往会下降。它可能开始"忘记"已经在上下文窗口中说过的内容，或者更糟的是混淆概念并产生更多幻觉。这也是该领域大多数从业者建议尽可能频繁地开始新会话的（众多）原因之一。
+
+衡量这种退化的一种方法是"针"基准测试。这要求LLM从其上下文窗口中回忆某个事实并复述它（名称来自于"大海捞针"这个短语）。像所有基准测试一样，它确实有弱点，但我认为Anthropic发布的这张图表非常有趣：
+
+从图中可以看到，虽然GPT-5.4和Gemini 3.1 Pro都有100万的上下文长度，但它们在超过256K后很快就会退化——在100万长度时难以获得超过50%的匹配率。这对于长时间运行的代理任务来说是一个真正的问题。
+
+现在，我们需要对这些来自实验室的基准测试比较保持一定的保留态度——Anthropic有充分的动机选择对其自身模型有利的基准测试，他们都会这样做。但我粗略的实践经验来看，Opus 4.6 1M的表现确实相当不错。我已经运行了...</div>
             <p class="link"><a href="https://martinalderson.com/posts/why-claudes-new-1m-context-length-is-a-big-deal/?utm_source=rss&utm_medium=rss&utm_campaign=feed" target="_blank">🔗 查看原文 →</a></p>
         </div>
         <div class="article">
-            <h2>4. How Can Governments Pay Open Source Maintainers?</h2>
-            <div class="title-cn">➡️ **政府如何支付开源维护者的报酬？**</div>
+            <h2>5. How Can Governments Pay Open Source Maintainers?</h2>
+            <div class="title-cn">➡️ **翻译：**  
+政府如何向开源维护者支付报酬？
+
+（也可以说：“政府怎样才能给开源项目维护者支付费用？”）</div>
             <p class="meta">📅 2026-03-14 · 👤 @edent · 📡 Terence Eden’s Blog</p>
             <p class="summary">When I worked for the UK Government I was once asked if we could find a way to pay for all the Open Source Software we were using. It is a surprisingly hard problem and I want to talk about some of th...</p>
-            <div class="summary-cn">📝 # 中文翻译
+            <div class="summary-cn">📝 当我在英国政府工作时，曾有人问我是否能够找到一种方式，为我们使用的所有开源软件付费。这是一个出乎意料地困难的问题，我想谈谈我们面临的一些问题。英国政府发布大量开源代码——几乎所有在内部开发的代码都以OSI（开放源代码促进会）批准许可证发布。英国总体上对个人、公司乃至其他国家复用其代码持宽容态度。没有欲望、也几乎没有能力将从公共资金中开发的成果货币化，因此它们成为公共代码。那么英国政府使用的开源软件又如何呢？国家使用像WordPress这样的大型项目，也使用相当流行的NPM包，以及小型Python库等各种规模的组件。但它能为这些软件的维护者付费吗？这篇博文的一个版本最初发表在Hackernoon上。
 
-当我为英国政府工作时，有人曾问我，我们是否能找到一种方式为我们使用的所有开源软件付费。这是一个出乎意料的难题，我想谈谈我们面临的一些问题。
+**修复管道**
 
-英国政府发布了大量开源代码——几乎所有由国家内部开发的软件都以OSI（开放源代码 Initiative）批准的许可证提供。英国对个人、公司和国家重复使用其代码总体上相当宽松。没有意愿，而且几乎没有能力……
+开源正面临危机。世界依赖的代码往往是由收入微薄、濒临倦怠的工程师们开发的。虽然我不认为有人想让开源出现付费墙，但很明显大型组织应该为其使用付费，而不是仅仅依赖志愿者劳动。下面是我在尝试让英国政府为开源软件付费时遇到的一些问题，以及作为维护者，您可以如何帮助大型组织更容易地为您付款。
 
----
+**首先，很多开源软件没有明确的“所有者”；那么钱该给谁？**  
+我并不是说您创建的每个小库都必须通过注册公司发布，也不是在暗示您应取消匿名身份。但政府和其它组织需要知道他们资助的对象以及资金的流向。意外把钱流向受制裁的国家或个人的风险太大，对大多数组织来说是不可承受的风险。如果您想获得资助，请把自己的身份说得清清楚楚。
 
-*（原文在此处被截断）*</div>
+**您能提供什么？**  
+即便有所有者，往往也没有简便的付款机制。GitHub Sponsors、Ko‑Fi、Patreon等捐赠平台对想要给创作者少量资助的个人很友好，但对大型组织可能会产生问题。许多开源项目通过提供支持合同来规避这一点。它让组织更容易为自己的支出辩护——因为他们不再是向一种可以免费获取的东西捐款，而是为一种服务付费。这种方式并不一定需要提供繁复的合同…（原文在此处截断）</div>
             <p class="link"><a href="https://shkspr.mobi/blog/2026/03/how-can-governments-pay-open-source-maintainers/" target="_blank">🔗 查看原文 →</a></p>
-        </div>
-        <div class="article">
-            <h2>5. Dylan Patel — Deep dive on the 3 big bottlenecks to scaling AI compute</h2>
-            <div class="title-cn">➡️ **迪伦·帕特尔：深度剖析扩展AI算力的三大瓶颈**</div>
-            <p class="meta">📅 2026-03-13 · 👤 Dwarkesh Patel · 📡 Dwarkesh Podcast</p>
-            <p class="summary">Dylan Patel, founder of SemiAnalysis, provides a deep dive into the 3 big bottlenecks to scaling AI compute: logic, memory, and power.And walks through the economics of labs, hyperscalers, foundries, ...</p>
-            <div class="summary-cn">📝 Dylan Patel，SemiAnalysis的创始人，深入分析了扩展AI算力的三大瓶颈：逻辑、内存和电力。他还详细讲解了实验室、超大规模云服务商、代工厂和半导体设备制造商的经济学。对整个技术栈的每个层面都有了深入的了解。非常精彩！
-
-可在YouTube上观看；在Apple Podcasts或Spotify上收听。
-
-赞助商
-
-Mercury已经为我省了不少时间在这个报税季节。去年，我用Mercury向所有与我合作的承包商请求W-9表格。</div>
-            <p class="link"><a href="https://www.dwarkesh.com/p/dylan-patel" target="_blank">🔗 查看原文 →</a></p>
         </div>
         <div class="footer">
             <p>数据来源: RSS订阅 · 翻译: MiniMax API · 每天自动更新</p>
