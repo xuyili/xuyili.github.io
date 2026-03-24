@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-24</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-24 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中最核心的机制是什么？", "options": ["A. 卷积操作", "B. 循环连接", "C. 自注意力机制", "D. 全连接层"], "answer": "C", "explanation": "Transformer的核心是自注意力机制(Self-Attention)，它允许模型同时关注输入序列中的所有位置，捕捉长距离依赖关系，而不是像RNN那样顺序处理。这是Transformer能够并行训练且效果优异的关键。"}, {"question": "GPT-4相比GPT-3.5最重要的改进是什么？", "options": ["A. 模型参数规模更大", "B. 支持多模态输入", "C. 训练数据更新", "D. 推理速度更快"], "answer": "B", "explanation": "GPT-4最重要的改进是支持多模态输入，能够同时处理图像和文本，这是GPT-3.5只支持文本输入的重大升级。GPT-4在推理能力、安全性等方面也有提升，但多模态是其最显著的特征。"}, {"question": "下列哪项通常不被认为是大型语言模型的涌现能力？", "options": ["A. 少样本学习(Few-shot Learning)", "B. 思维链推理(Chain-of-Thought)", "C. 文本分类", "D. 零样本任务迁移(Zero-shot Learning)"], "answer": "C", "explanation": "文本分类是传统NLP任务，不属于涌现能力。涌现能力是指模型在参数规模超过某个阈值后突然出现的能力，包括少样本学习、思维链推理、零样本任务迁移等。文本分类在小型模型中就能完成，不是涌现能力。"}, {"question": "Anthropic公司的Claude模型在设计上更强调什么特性？", "options": ["A. 参数规模最大化", "B. 模型的可解释性和AI安全性", "C. 最快的推理速度", "D. 开源可商用"], "answer": "B", "explanation": "Anthropic由前OpenAI研究人员创立，特别强调AI安全和模型可控性。Claude模型在设计上注重helpful、harmless、honest(3H原则)，强调模型的可解释性和安全性，这是Anthropic与其他公司的核心区别。"}, {"question": "深度学习中，防止过拟合的常用技术不包括以下哪项？", "options": ["A. Dropout", "B. 数据增强", "C. 批量归一化(Batch Normalization)", "D. 增加模型参数量"], "answer": "D", "explanation": "增加模型参数量通常会加剧过拟合问题，而不是防止过拟合。Dropout通过随机丢弃神经元减少过拟合，数据增强增加训练样本多样性，批量归一化稳定训练过程，这些都是常用的防止过拟合技术。"}, {"question": "在提示工程中，\"Few-shot Learning\"指的是什么？", "options": ["A. 无需任何示例的学习", "B. 在提示中提供少量示例", "C. 使用少量参数进行微调", "D. 快速推理"], "answer": "B", "explanation": "Few-shot Learning(少样本学习)是指在提示(Prompt)中提供少量的任务示例，让模型理解任务模式并完成类似任务。这是一种利用LLM涌现能力的技术，无需对模型进行额外训练即可完成新任务。"}, {"question": "与RNN(循环神经网络)相比，Transformer架构的主要优势是什么？", "options": ["A. 模型参数量更少", "B. 可以并行计算", "C. 训练成本更低", "D. 更适合处理时序数据"], "answer": "B", "explanation": "Transformer相比RNN的主要优势是可以并行计算。RNN需要按顺序处理数据，难以并行；Transformer通过自注意力机制可以同时处理所有位置，显著提高了训练和推理效率，这也是Transformer能够使用更大规模数据训练的原因。"}, {"question": "关于Tokenization(分词)，以下说法正确的是？", "options": ["A. 所有语言使用相同的分词方法", "B. 分词对模型性能没有影响", "C. 子词分词可以有效处理未登录词", "D. Token数量与字符数量完全对应"], "answer": "C", "explanation": "子词分词(如BPE、WordPiece)将词拆分为更小的单元，可以有效处理未登录词(OOV)问题。不同语言需要不同的分词策略，分词方法会显著影响模型性能，Token是语义单元而非字符。"}, {"question": "以下哪个场景不适合直接使用大语言模型？", "options": ["A. 智能客服对话", "B. 代码编写辅助", "C. 实时高精度图像识别", "D. 文本摘要生成"], "answer": "C", "explanation": "大语言模型主要处理文本数据，实时高精度图像识别需要专门的计算机视觉模型(如CNN、ViT等)。虽然多模态模型可以处理图像，但在实时性和精度要求高的场景仍不如专用CV模型。LLM适合文本相关的任务。"}, {"question": "大语言模型的主要局限性不包括以下哪项？", "options": ["A. 可能产生幻觉(Hallucination)", "B. 知识截止日期", "C. 无法实时更新知识", "D. 完美理解上下文"], "answer": "D", "explanation": "LLM的局限性包括：可能产生看似合理但错误的内容(幻觉)、知识受限于训练数据截止日期、无法实时更新知识。LLM在理解复杂上下文方面仍有不足，并非完美理解上下文。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
