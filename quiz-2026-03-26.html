@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-26</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-26 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中的核心机制是什么？", "options": ["A. 卷积操作", "B. 循环神经网络", "C. 自注意力机制", "D. 全连接层"], "answer": "C", "explanation": "Transformer架构由Google在2017年论文《Attention Is All You Need》中提出，其核心创新是自注意力机制（Self-Attention），它允许模型在处理序列时同时关注序列中的所有位置，捕捉长距离依赖关系，而非像RNN那样逐个处理。"}, {"question": "以下哪项最准确地描述了大语言模型（LLM）的定义？", "options": ["A. 基于规则的自然语言处理系统", "B. 通过大规模文本数据训练，能够理解和生成人类语言的深度学习模型", "C. 专门用于图像识别的神经网络", "D. 用于存储大量文本数据的数据库"], "answer": "B", "explanation": "大语言模型（Large Language Model，LLM）是基于深度学习技术，通过在海量文本数据上进行无监督或半监督训练，获得理解和生成自然语言能力的模型。它们具有涌现能力，可以在零样本或少样本情况下完成多种任务。"}, {"question": "OpenAI的ChatGPT是基于哪个模型系列开发的？", "options": ["A. BERT系列", "B. GPT系列", "C. T5系列", "D. BLOOM系列"], "answer": "B", "explanation": "ChatGPT是OpenAI基于GPT（Generative Pre-trained Transformer）系列模型开发的对话产品。GPT系列从GPT-1发展到GPT-4，ChatGPT最初基于GPT-3.5，后来升级为GPT-4，是典型的自回归语言模型。"}, {"question": "Anthropic公司开发的Claude模型采用了什么技术来提高安全性？", "options": ["A. 纯监督学习", "B. 强化学习从人类反馈（RLHF）", "C.  Constitutional AI（宪法AI）", "D. 数据增强"], "answer": "C", "explanation": "Anthropic在Claude模型中引入了Constitutional AI（宪法AI）技术，这是一种基于AI自身反馈来对齐模型行为的方法，通过一组内置的宪法原则来指导模型行为，使其更有帮助、无害且诚实，相比传统的RLHF有创新性。"}, {"question": "深度学习与传统机器学习最主要的区别是什么？", "options": ["A. 深度学习需要更多人工特征工程", "B. 深度学习能够自动从数据中学习层次化特征表示", "C. 深度学习只能处理结构化数据", "D. 深度学习不需要大量数据"], "answer": "B", "explanation": "深度学习的核心优势在于能够自动从原始数据中学习多层次的特征表示（层次化特征），而不像传统机器学习需要人工进行特征工程。深度学习通过深层神经网络逐层提取从低级到高级的特征，这一过程是端到端学习的。"}, {"question": "RAG（检索增强生成）技术的主要目的是什么？", "options": ["A. 提高模型训练速度", "B. 让LLM能够访问最新或私有知识库，减少幻觉", "C. 压缩模型参数", "D. 降低推理成本"], "answer": "B", "explanation": "RAG（Retrieval-Augmented Generation）结合了信息检索系统和生成式模型，让大语言模型在生成回答时可以先从外部知识库检索相关信息，然后基于检索到的内容进行生成。这有效地解决了LLM知识截止和 hallucination（幻觉）问题。"}, {"question": "在NLP中，tokenization（分词）的作用是什么？", "options": ["A. 将文本转换为数值向量", "B. 将文本分割成模型可处理的最小单元", "C. 进行情感分析", "D. 翻译语言"], "answer": "B", "explanation": "Tokenization是将文本字符串分割成多个token（标记）的过程，这些token是语言模型处理的基本单元。不同的模型使用不同的分词策略，如BPE、WordPiece、SentencePiece等。正确分词对模型性能至关重要，因为它直接影响词汇表大小和编码效率。"}, {"question": "什么是Fine-tuning（微调）？", "options": ["A. 从头训练一个全新模型", "B. 在预训练模型基础上，用特定领域数据继续训练以适应特定任务", "C. 调整模型架构", "D. 减少模型参数"], "answer": "B", "explanation": "Fine-tuning（微调）是在已经预训练好的模型基础上，使用特定领域或任务的数据进行进一步训练，使模型能够更好地完成特定任务。这种方法充分利用预训练模型学到的通用知识，同时适配特定需求，是迁移学习的重要应用。"}, {"question": "Few-shot Prompting（少样本提示）指的是什么？", "options": ["A. 训练时使用大量数据", "B. 在提示中提供少量示例，让模型学习任务模式", "C. 使用最小的模型", "D. 减少推理步骤"], "answer": "B", "explanation": "Few-shot Prompting是一种提示工程技术，在提示中提供少量（通常1-5个）输入-输出示例，让模型理解任务要求和输出格式。这利用了LLM的涌现能力，即使没有专门训练，模型也能从示例中学习并泛化到新问题，是Prompt Engineering的核心技术之一。"}, {"question": "以下哪个是AI对齐（AI Alignment）研究的核心目标？", "options": ["A. 提高模型的语言理解能力", "B. 使AI系统的行为符合人类意图和价值观", "C. 加快模型推理速度", "D. 增加模型参数规模"], "answer": "B", "explanation": "AI对齐（Alignment）研究的核心目标是确保人工智能系统的行为与人类意图、价值观和利益保持一致。这是一个关键的安全研究领域，涉及如何控制和引导AI系统，防止其产生有害输出或偏离人类期望。OpenAI的Constitutional AI和Anthropic的AI安全研究都是对齐工作的体现。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
