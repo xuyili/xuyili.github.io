@@ -1,0 +1,302 @@
+[
+  {
+    "title": "datasette-files-s3 0.1a1",
+    "summary": "Release: datasette-files-s3 0.1a1 A backend for datasette-files that adds the ability to store and retrieve files using an S3 bucket. This release added a mechanism for fetching S3 configuration periodically from a URL, which means we can use time limited IAM credentials that are restricted to a prefix within a bucket. Tags: s3, datasette",
+    "link": "https://simonwillison.net/2026/Mar/25/datasette-files-s3/#atom-everything",
+    "source": "simonwillison.net"
+  },
+  {
+    "title": "Thoughts on slowing the fuck down",
+    "summary": "Thoughts on slowing the fuck down Mario Zechner created the Pi agent framework used by OpenClaw, giving considerable credibility to his opinions on current trends in agentic engineering. He's not impressed: We have basically given up all discipline and agency for a sort of addiction, where your highest goal is to produce the largest amount of code in the shortest amount of time. Consequences be da",
+    "link": "https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/#atom-everything",
+    "source": "simonwillison.net"
+  },
+  {
+    "title": "datasette-llm 0.1a1",
+    "summary": "Release: datasette-llm 0.1a1 New release of the base plugin that makes models from LLM available for use by other Datasette plugins such as datasette-enrichments-llm. New register_llm_purposes() plugin hook and get_purposes() function for retrieving registered purpose strings. #1 One of the responsibilities of this plugin is to configure which models are used for which purposes, so you can say in ",
+    "link": "https://simonwillison.net/2026/Mar/25/datasette-llm/#atom-everything",
+    "source": "simonwillison.net"
+  },
+  {
+    "title": "LiteLLM Hack: Were You One of the 47,000?",
+    "summary": "LiteLLM Hack: Were You One of the 47,000? Daniel Hnyk used the BigQuery PyPI dataset to determine how many downloads there were of the exploited LiteLLM packages during the 46 minute period they were live on PyPI. The answer was 46,996 across the two compromised release versions (1.82.7 and 1.82.8). They also identified 2,337 packages that depended on LiteLLM - 88% of which did not pin versions in",
+    "link": "https://simonwillison.net/2026/Mar/25/litellm-hack/#atom-everything",
+    "source": "simonwillison.net"
+  },
+  {
+    "title": "Auto mode for Claude Code",
+    "summary": "Auto mode for Claude Code Really interesting new development in Claude Code today as an alternative to --dangerously-skip-permissions: Today, we're introducing auto mode, a new permissions mode in Claude Code where Claude makes permission decisions on your behalf, with safeguards monitoring actions before they run. Those safeguards appear to be implemented using Claude Sonnet 4.6, as described in ",
+    "link": "https://simonwillison.net/2026/Mar/24/auto-mode-for-claude-code/#atom-everything",
+    "source": "simonwillison.net"
+  },
+  {
+    "title": "A Social Filesystem",
+    "summary": "Formats over apps.",
+    "link": "https://overreacted.io/a-social-filesystem/",
+    "source": "overreacted.io"
+  },
+  {
+    "title": "Introducing RSC Explorer",
+    "summary": "My new hobby project.",
+    "link": "https://overreacted.io/introducing-rsc-explorer/",
+    "source": "overreacted.io"
+  },
+  {
+    "title": "Hire Me in Japan",
+    "summary": "I'm looking for a new job.",
+    "link": "https://overreacted.io/hire-me-in-japan/",
+    "source": "overreacted.io"
+  },
+  {
+    "title": "How to Fix Any Bug",
+    "summary": "The joys of vibecoding.",
+    "link": "https://overreacted.io/how-to-fix-any-bug/",
+    "source": "overreacted.io"
+  },
+  {
+    "title": "Where It's at://",
+    "summary": "From handles to hosting.",
+    "link": "https://overreacted.io/where-its-at/",
+    "source": "overreacted.io"
+  },
+  {
+    "title": "May 2021 Gwern.net Newsletter",
+    "summary": "links on AI hardware, diffusion models, optogenetics, brain scanning.",
+    "link": "https://gwern.substack.com/p/may-2021-gwernnet-newsletter",
+    "source": "gwern.net"
+  },
+  {
+    "title": "April 2021 newsletter",
+    "summary": "with links on AI scaling, particular new East Asian record-breaking work & deep reinforcement learning.",
+    "link": "https://gwern.substack.com/p/april-2021-newsletter",
+    "source": "gwern.net"
+  },
+  {
+    "title": "March 2021 Gwern.net Newsletter",
+    "summary": "2 major new site features: 'popins' and recursive Wikipedia popups",
+    "link": "https://gwern.substack.com/p/march-2021-gwernnet-newsletter",
+    "source": "gwern.net"
+  },
+  {
+    "title": "February 2021 Gwern.net Newsletter",
+    "summary": "links on AI scaling, semaglutide, and ethicist ethics",
+    "link": "https://gwern.substack.com/p/february-2021-gwernnet-newsletter",
+    "source": "gwern.net"
+  },
+  {
+    "title": "Jan 2021 Gwern.net Newsletter",
+    "summary": "January 2021 gwern.net newsletter with links on AI scaling up and down.",
+    "link": "https://gwern.substack.com/p/jan-2021-gwernnet-newsletter",
+    "source": "gwern.net"
+  },
+  {
+    "title": "‘CanisterWorm’ Springs Wiper Attack Targeting Iran",
+    "summary": "A financially motivated data theft and extortion group is attempting to inject itself into the Iran war, unleashing a worm that spreads through poorly secured cloud services and wipes data on infected systems that use Iran's time zone or have Farsi set as the default language.",
+    "link": "https://krebsonsecurity.com/2026/03/canisterworm-springs-wiper-attack-targeting-iran/",
+    "source": "krebsonsecurity.com"
+  },
+  {
+    "title": "Feds Disrupt IoT Botnets Behind Huge DDoS Attacks",
+    "summary": "The U.S. Justice Department joined authorities in Canada and Germany in dismantling the online infrastructure behind four highly disruptive botnets that compromised more than three million hacked Internet of Things (IoT) devices, such as routers and web cameras. The feds say the four botnets -- named Aisuru, Kimwolf, JackSkid and Mossad -- are responsible for a series of recent record-smashing dis",
+    "link": "https://krebsonsecurity.com/2026/03/feds-disrupt-iot-botnets-behind-huge-ddos-attacks/",
+    "source": "krebsonsecurity.com"
+  },
+  {
+    "title": "Iran-Backed Hackers Claim Wiper Attack on Medtech Firm Stryker",
+    "summary": "A hacktivist group with links to Iran's intelligence agencies is claiming responsibility for a data-wiping attack against Stryker, a global medical technology company based in Michigan. News reports out of Ireland, Stryker's largest hub outside of the United States, said the company sent home more than 5,000 workers there today. Meanwhile, a voicemail message at Stryker's main U.S. headquarters sa",
+    "link": "https://krebsonsecurity.com/2026/03/iran-backed-hackers-claim-wiper-attack-on-medtech-firm-stryker/",
+    "source": "krebsonsecurity.com"
+  },
+  {
+    "title": "Microsoft Patch Tuesday, March 2026 Edition",
+    "summary": "Microsoft Corp. today pushed security updates to fix at least 77 vulnerabilities in its Windows operating systems and other software. There are no pressing \"zero-day\" flaws this month (compared to February's five zero-day treat), but as usual some patches may deserve more rapid attention from organizations using Windows. Here are a few highlights from this month's Patch Tuesday.",
+    "link": "https://krebsonsecurity.com/2026/03/microsoft-patch-tuesday-march-2026-edition/",
+    "source": "krebsonsecurity.com"
+  },
+  {
+    "title": "How AI Assistants are Moving the Security Goalposts",
+    "summary": "AI-based assistants or \"agents\" -- autonomous programs that have access to the user's computer, files, online services and can automate virtually any task -- are growing in popularity with developers and IT workers. But as so many eyebrow-raising headlines over the past few weeks have shown, these powerful and assertive new tools are rapidly shifting the security priorities for organizations, whil",
+    "link": "https://krebsonsecurity.com/2026/03/how-ai-assistants-are-moving-the-security-goalposts/",
+    "source": "krebsonsecurity.com"
+  },
+  {
+    "title": "‘A List of Chain Restaurants Whose Names Contain Unusual Structures’",
+    "summary": "When I first read this post from my friend Paul Kafasis last week — a One Foot Tsunami instant classic — I was hoping that I could think of an example that he missed. I can’t say I did. The closest, though, is ShowBiz Pizza Place, a 1980s archrival to Chuck E. Cheese. (Instead of a pizza-cooking rat, ShowBiz had Billy Bob, a pizza-cooking hillbilly bear.) Place is an unusual noun to put in a resta",
+    "link": "https://onefoottsunami.com/2026/03/18/a-list-of-chain-restaurants-whose-names-contain-unusual-structures/",
+    "source": "daringfireball.net"
+  },
+  {
+    "title": "Improved Analytics in App Store Connect",
+    "summary": "Apple Developer: Analytics in App Store Connect receives its biggest update since its launch, including a refreshed user experience that makes it easier to measure the performance of your apps and games. There’s a lot that’s new, but all the data is still collected with an emphasis on user privacy. There’s an all-new support guide that documents everything. John Voorhees, writing at MacStories: Si",
+    "link": "https://developer.apple.com/news/?id=hh6v4b55",
+    "source": "daringfireball.net"
+  },
+  {
+    "title": "Claude Can Now Take Control of Your Mac",
+    "summary": "Claude: In Claude Cowork and Claude Code, you can now enable Claude to use your computer to complete tasks. When Claude doesn’t have access to the tools it needs, it will point, click, and navigate what’s on your screen to perform the task itself. It can open files, use the browser, and run dev tools automatically — with no setup required. This feature is now available in research preview for Clau",
+    "link": "https://claude.com/blog/dispatch-and-computer-use",
+    "source": "daringfireball.net"
+  },
+  {
+    "title": "WSJ: ‘OpenAI Plans Launch of Desktop “Superapp”’",
+    "summary": "Berber Jin, reporting last week for The Wall Street Journal (gift link): OpenAI is planning to unify its ChatGPT app, coding platform Codex and browser into a desktop “superapp,” a step to simplify the user experience and continue with efforts to focus on engineering and business customers. Chief of Applications Fidji Simo will oversee the change and focus on helping the company’s sales team marke",
+    "link": "https://www.wsj.com/tech/openai-plans-launch-of-desktop-superapp-to-refocus-simplify-user-experience-9e19931d?st=25wiu1",
+    "source": "daringfireball.net"
+  },
+  {
+    "title": "OpenAI Is Closing Sora",
+    "summary": "Sora, on Twitter/X: We’re saying goodbye to the Sora app. To everyone who created with Sora, shared it, and built community around it: thank you. What you made with Sora mattered, and we know this news is disappointing. We’ll share more soon, including timelines for the app and API and details on preserving your work. Sora was kind of fun for a week or two. But, contrary to the above, nothing anyo",
+    "link": "https://x.com/soraofficialapp/status/2036546752535470382",
+    "source": "daringfireball.net"
+  },
+  {
+    "title": "Superlinear Returns",
+    "summary": "",
+    "link": "http://www.paulgraham.com/superlinear.html",
+    "source": "paulgraham.com"
+  },
+  {
+    "title": "How to Do Great Work",
+    "summary": "",
+    "link": "http://www.paulgraham.com/greatwork.html",
+    "source": "paulgraham.com"
+  },
+  {
+    "title": "How to Get New Ideas",
+    "summary": "",
+    "link": "http://www.paulgraham.com/getideas.html",
+    "source": "paulgraham.com"
+  },
+  {
+    "title": "The Need to Read",
+    "summary": "",
+    "link": "http://www.paulgraham.com/read.html",
+    "source": "paulgraham.com"
+  },
+  {
+    "title": "What You (Want to)* Want",
+    "summary": "",
+    "link": "http://www.paulgraham.com/want.html",
+    "source": "paulgraham.com"
+  },
+  {
+    "title": "Terence Tao – Kepler, Newton, and the true nature of mathematical discovery",
+    "summary": "“And what those stories teach us about how AI will revolutionize math”",
+    "link": "https://www.dwarkesh.com/p/terence-tao",
+    "source": "dwarkesh.com"
+  },
+  {
+    "title": "Dylan Patel — Deep dive on the 3 big bottlenecks to scaling AI compute",
+    "summary": "Plus, why an H100 is worth more today than 3 years ago",
+    "link": "https://www.dwarkesh.com/p/dylan-patel",
+    "source": "dwarkesh.com"
+  },
+  {
+    "title": "The most important question nobody's asking about AI",
+    "summary": "“Preface to the highest stakes negotiations in history.”",
+    "link": "https://www.dwarkesh.com/p/dow-anthropic",
+    "source": "dwarkesh.com"
+  },
+  {
+    "title": "Why Leonardo was a saboteur, Gutenberg went broke, and Florence was weird – Ada Palmer",
+    "summary": "Ambassador visiting Renaissance Florence: “Where am I? None of this has existed for a thousand years.\"",
+    "link": "https://www.dwarkesh.com/p/ada-palmer",
+    "source": "dwarkesh.com"
+  },
+  {
+    "title": "Dario Amodei — \"We are near the end of the exponential\"",
+    "summary": "\"That's why I'm sending this message of urgency\"",
+    "link": "https://www.dwarkesh.com/p/dario-amodei-2",
+    "source": "dwarkesh.com"
+  },
+  {
+    "title": "War and AI, the death of Sora, and 3 ways you can catch me live today",
+    "summary": "With apologies for the short notice, a few quick announcements:",
+    "link": "https://garymarcus.substack.com/p/war-and-ai-the-death-of-sora-and",
+    "source": "garymarcus.substack.com"
+  },
+  {
+    "title": "F Cancer",
+    "summary": "The real test of AI",
+    "link": "https://garymarcus.substack.com/p/f-cancer",
+    "source": "garymarcus.substack.com"
+  },
+  {
+    "title": "BREAKING: Sam Altman concedes that we need major breakthroughs beyond mere scaling to get to AGI",
+    "summary": "It’s past time to look for new architectures",
+    "link": "https://garymarcus.substack.com/p/breaking-sam-altman-concedes-that",
+    "source": "garymarcus.substack.com"
+  },
+  {
+    "title": "BREAKING: Expensive new evidence that scaling is not all you need",
+    "summary": "Two more colossally expensive experiments have failed",
+    "link": "https://garymarcus.substack.com/p/breaking-expensive-new-evidence-that",
+    "source": "garymarcus.substack.com"
+  },
+  {
+    "title": "Is the US military actually afraid of Claude? A new theory of why Anthropic was labeled a supply chain risk.",
+    "summary": "Unpacking a perplexing argument from the Pentagon",
+    "link": "https://garymarcus.substack.com/p/is-the-us-military-actually-afraid",
+    "source": "garymarcus.substack.com"
+  },
+  {
+    "title": "My AI Adoption Journey",
+    "summary": "",
+    "link": "https://mitchellh.com/writing/my-ai-adoption-journey",
+    "source": "mitchellh.com"
+  },
+  {
+    "title": "Don't Trip[wire] Yourself: Testing Error Recovery in Zig",
+    "summary": "",
+    "link": "https://mitchellh.com/writing/tripwire",
+    "source": "mitchellh.com"
+  },
+  {
+    "title": "Finding and Fixing Ghostty's Largest Memory Leak",
+    "summary": "",
+    "link": "https://mitchellh.com/writing/ghostty-memory-leak-fix",
+    "source": "mitchellh.com"
+  },
+  {
+    "title": "Ghostty Is Now Non-Profit",
+    "summary": "",
+    "link": "https://mitchellh.com/writing/ghostty-non-profit",
+    "source": "mitchellh.com"
+  },
+  {
+    "title": "Vibing a Non-Trivial Ghostty Feature",
+    "summary": "",
+    "link": "https://mitchellh.com/writing/non-trivial-vibing",
+    "source": "mitchellh.com"
+  },
+  {
+    "title": "Consensus Board Game",
+    "summary": "I have an early adulthood trauma from struggling to understand consensus amidst a myriad of poor explanations. I am overcompensating for that by adding my own attempts to the fray. Today, I want to draw a series of pictures which could be helpful. You can see this post as a set of missing illustrations for Notes on Paxos, or, alternatively, you can view that post as a more formal narrative counter",
+    "link": "https://matklad.github.io/2026/03/19/consensus-board-game.html",
+    "source": "matklad.github.io"
+  },
+  {
+    "title": "JJ LSP Follow Up",
+    "summary": "In Majjit LSP, I described an idea of implementing Magit style UX for jj once and for all, leveraging LSP protocol. I've learned today that the upcoming 3.18 version of LSP has a feature to make this massively less hacky: Text Document Content Request",
+    "link": "https://matklad.github.io/2026/03/05/jj-lsp-followup.html",
+    "source": "matklad.github.io"
+  },
+  {
+    "title": "Against Query Based Compilers",
+    "summary": "Query based compilers are all the rage these days, so it feels only appropriate to chart some treacherous shoals in those waters.",
+    "link": "https://matklad.github.io/2026/02/25/against-query-based-compilers.html",
+    "source": "matklad.github.io"
+  },
+  {
+    "title": "Wrapping Code Comments",
+    "summary": "I was today years old when I realized that:",
+    "link": "https://matklad.github.io/2026/02/21/wrapping-code-comments.html",
+    "source": "matklad.github.io"
+  },
+  {
+    "title": "Diagnostics Factory",
+    "summary": "In Error Codes For Control Flow, I explained that Zig's strongly-typed error codes solve the handling half of error management, leaving reporting to the users. Today, I want to describe my personal default approach to the reporting problem, that is, showing the user a useful error message.",
+    "link": "https://matklad.github.io/2026/02/16/diagnostics-factory.html",
+    "source": "matklad.github.io"
+  }
+]
