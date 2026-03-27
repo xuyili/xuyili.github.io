@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Daily Brief - 2026年03月27日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 40px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px; border-radius: 20px; text-align: center; margin-bottom: 40px; }
+        .header h1 { font-size: 3em; margin-bottom: 15px; }
+        .header p { font-size: 1.3em; opacity: 0.9; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .article { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .article h2 { color: #333; font-size: 1.15em; margin-bottom: 8px; line-height: 1.4; }
+        .article h2 .title-cn { color: #667eea; font-weight: 500; font-size: 0.9em; display: block; margin-top: 8px; }
+        .article .meta { color: #888; font-size: 0.9em; margin-bottom: 12px; }
+        .article .summary { color: #555; margin-bottom: 12px; font-size: 0.95em; line-height: 1.6; }
+        .article .summary-cn { color: #2563eb; font-size: 0.9em; line-height: 1.7; background: #eff6ff; padding: 15px; border-radius: 8px; margin-bottom: 12px; }
+        .article .link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .footer { text-align: center; padding: 40px; color: #888; }
+        .back { text-align: center; margin-bottom: 25px; }
+        .back a { color: #667eea; text-decoration: none; font-size: 1.1em; }
+        @media (max-width: 900px) { .two-col { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back"><a href="/">← 返回首页</a></div>
+        <div class="header">
+            <h1>📰 AI Daily Brief</h1>
+            <p>2026年03月27日 · 50篇 · 由 <a href="/" style="color:white">伊利虾</a> 🦐 自动整理 · 全文翻译</p>
+        </div>
+<div class="two-col">
+        <div class="article">
+            <h2>How much precision can you squeeze out of a table?<span class="title-cn">您可以从表格中获得多少精度？</span></h2>
+            <p class="meta">📅 2026-03-26 · 👤 John · 📡 John D. Cook</p>
+            <p class="summary">Richard Feynman said that almost everything becomes interesting if you look into it deeply enough. Looking up numbers in a table is certainly not interesting, but it becomes more interesting when you dig into how well you can fill in the gaps. If you...</p>
+            <p class="summary-cn">📝 理查德·费曼说，如果你研究得足够深入，几乎一切都会变得有趣。在表格中查找数字当然并不有趣，但是当您深入了解如何填补空白时，它会变得更有趣。如果您想知道表中给出的 x 值之间的列表函数值，则必须使用插值。线性插值通常就足够了，但使用高阶插值可以获得更准确的结果。假设您有一个在 x = 3.00, 3.01, 3.02, …, 3.99, 4.00 处列出的函数 f(x)，并且您想要近似该函数在 π 处的值。您可以使用 f(3.14) 和 f(3.15) 的值通过线性插值来近似 f(π)，但您也可以利用表中的更多点。例如，您可以使用三次插值法使用 f(3.13)、f(3.14)、f(3.15) 和 f(3.16) 计算 f(π)。或者您可以使用 29 度插值，其中 f 的值为 3.00、3.01、3.02、…、3.29。拉格朗日插值定理可让您计算插值误差的上限。然而，该定理假设每个列表点的值都是准确的。对于普通使用，您可以假设表格中的值是准确的。最大的误差源通常是列表 x 值之间的差距大小，而不是列表值的精度。表格的设计就是为了证明这一点是正确的 [1]。 n 阶插值误差的界限具有 c hn + 1 + λ δ 的形式，其中 h 是间距</p>
+            <p class="link"><a href="https://www.johndcook.com/blog/2026/03/26/table-precision/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Why doesn’t WM_ENTER­IDLE work if the dialog box is a Message­Box?<span class="title-cn">如果对话框是 MessageBox，为什么 WM_ENTERIDLE 不起作用？</span></h2>
+            <p class="meta">📅 2026-03-26 · 👤 Raymond Chen · 📡 The Old New Thing</p>
+            <p class="summary">Last time, we looked at how the owner of a dialog can take control just before the dialog box message loop goes idle. I said that I pulled a trick. The trick is that I used the common file open dialog instead of a simple Message­Box. Indeed, if you r...</p>
+            <p class="summary-cn">📝 上次，我们研究了对话框的所有者如何在对话框消息循环空闲之前进行控制。我说我耍了把戏。诀窍是我使用通用文件打开对话框而不是简单的消息框。事实上，如果您将对 GetOpenFileName 的调用替换为对 MessageBox 的调用，则不会收到 WM_ENTERIDLE 消息，并且您不会听到蜂鸣声。发生了什么事？对话框可以通过将 DS_NOIDLEMSG 对话框样式添加到其模板来抑制 WM_ENTERIDLE 消息。这就是 MessageBox 函数使用的模板的作用。因此，WM_ENTERIDLE 技巧确实需要对话框进行少量配合，即它不会禁用 WM_ENTERIDLE 消息。但是说你可以保证对话框的配合，因为你就是对话框。现在，当对话消息循环即将空闲时，WM_ENTERIDLE 消息允许对话所有者收到通知。但是，如果对话框本身想知道，以便它可以自定义自己的消息循环，该怎么办？我们下次会看看。帖子为什么不<代码>WM_<WBR>ENTER&shy;IDLE</代码>如果对话框是 <CODE>Message&shy;Box</CODE> 是否有效？首次出现在《旧新事物》中。</p>
+            <p class="link"><a href="https://devblogs.microsoft.com/oldnewthing/20260326-00/?p=112167" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>I Can't See Apple's Vision<span class="title-cn">我看不到 Apple 的视力</span></h2>
+            <p class="meta">📅 2026-03-26 · 👤 Mathew Duggan · 📡 matduggan.com</p>
+            <p class="summary">Companies, as they grow to become multi-billion-dollar entities, somehow lose their vision. They insert lots of layers of middle management between the people running the company and the people doing the work. They no longer have an inherent feel or ...</p>
+            <p class="summary-cn">📝 当公司成长为价值数十亿美元的实体时，不知何故失去了他们的愿景。他们在公司运营人员和工作人员之间插入了许多中层管理人员。他们不再对产品有固有的感觉或热情。富有创造力的人，也就是那些充满热情的人，必须说服五层管理层去做他们认为正确的事情。 - 史蒂夫·乔布斯我通常不写 Apple 的东西。它是地球上被报道最多的公司。每一款产品的推出都会受到通常针对飞机失事和名人离婚的法医审查。不过，大多数情况下，我感觉自己就像丹尼餐厅的一线厨师，在谈论法国洗衣店是否迷失了方向。我回到这里用微波炉加热大满贯，并对托马斯·凯勒的酱料工作发表意见。平均而言，我在 Apple 认识的工程师比我更有才华。他们更加努力地工作，几十年来从未间断过，而且没有人在下午 2 点还穿着睡裤的情况下发布过任何一部作品。对于像我这样平庸的人才来批评他们似乎很疯狂。这也感觉有点狗屎。 Apple 员工知道塔霍很糟糕。他们知道这一点就像你知道你的发型不好一样&#2014;他们不需要互联网上的陌生人来确认。公平地说，Tahoe 内部埋藏着真正伟大的工作：剪贴板管理器、自动化 APIs、大大改进的 Spotl</p>
+            <p class="link"><a href="https://matduggan.com/i-cant-see-apples-vision/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>The Melissa virus of 1999<span class="title-cn">1999年的梅丽莎病毒</span></h2>
+            <p class="meta">📅 2026-03-26 · 👤 Dave Farquhar · 📡 The Silicon Underground</p>
+            <p class="summary">The Melissa virus was a mass-mailing macro virus from March 1999. It was one of the more notorious computer viruses of the 1990s, and reportedly the author named it for a dancer he met in a Florida nightclub. Authorities quickly The post The Melissa ...</p>
+            <p class="summary-cn">📝 Melissa 病毒是 1999 年 3 月出现的群发邮件宏病毒。它是 20 世纪 90 年代最臭名昭著的计算机病毒之一，据报道作者以他在佛罗里达州夜总会遇到的一位舞者的名字命名该病毒。当局迅速将 1999 年梅丽莎病毒的帖子首先出现在 The Silicon Underground 上。</p>
+            <p class="link"><a href="https://dfarq.homeip.net/the-melissa-virus-of-1999/?utm_source=rss&utm_medium=rss&utm_campaign=the-melissa-virus-of-1999" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Engineers do get promoted for writing simple code<span class="title-cn">工程师确实会因为编写简单的代码而获得晋升</span></h2>
+            <p class="meta">📅 2026-03-26 · 👤 Unknown · 📡 seangoedecke.com RSS feed</p>
+            <p class="summary">It’s a popular joke among software engineers that writing overcomplicated, unmaintainable code is a pathway to job security. After all, if you’re the only person who can work on a system, they can’t fire you. There’s a related take that “nobody gets ...</p>
+            <p class="summary-cn">📝 在软件工程师中，有一个流行的笑话：编写过于复杂、难以维护的代码是获得工作保障的途径。毕竟，如果你是唯一可以在系统上工作的人，他们就不能解雇你。有一个相关的观点是“没有人会因为简单而得到晋升”：换句话说，那些交付过于复杂的废话的工程师将会得到晋升，因为他们的工作对于非技术经理来说看起来更令人印象深刻。当然，这有一定道理。正如我之前所说，优雅解决方案的标志之一是它使问题看起来很简单（就像职业滑雪者如何使可怕的斜坡看起来可行）。然而，我担心一些工程师的做法太过分了。实际上，让自己的工作过于复杂化是一个非常糟糕的主意。简单的软件工程确实会得到回报，而且总的来说会让你在职业生涯中走得更远。非技术型管理者并不傻 主要原因正是上面那个愤世嫉俗的观点：大多数管理者都是非技术型的，无法判断技术工作的难度。当然，在没有更好的办法的情况下，管理者会将可见的复杂性视为困难的标志。但他们通常确实有更好的事情要做：实际结果。比较两位新工程师：一位编写看起来简单的简单代码，另一位编写看起来困难的复杂代码。当他们每个人都被分配了一项任务时，简单的工程师会快速解决它并继续下一步。复杂的工程师将花费更长的时间来解决它，遇到更多的错误，并且生成更多的错误。</p>
+            <p class="link"><a href="https://seangoedecke.com/simple-work-gets-rewarded/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>How can I change a dialog box’s message loop to do a Msg­Wait­For­Multiple­Objects instead of Get­Message?<span class="title-cn">如何更改对话框的消息循环以执行 MsgWaitForMultipleObjects 而不是 GetMessage？</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Raymond Chen · 📡 The Old New Thing</p>
+            <p class="summary">A customer wanted to know how to change a dialog box&#8217;s message loop so that it used Msg­Wait­For­Multiple­Objects instead of Get­Message. (I&#8217;m guessing that they had a handle that they wanted to wait on while the dialog was up.) The stand...</p>
+            <p class="summary-cn">📝 一位客户想知道如何更改对话框的消息循环，以便它使用 MsgWaitForMultipleObjects 而不是 GetMessage。 （我猜测他们有一个句柄，希望在对话框启动时等待该句柄。）标准对话框消息循环仅检查消息，而不检查内核句柄。一种方法是将模式对话框替换为非模式对话框并运行您自己的消息循环。然而，DIY 中缺少一个关键部分，即无法知道对话框过程是否调用了 EndDialog，以及如果调用了，它传递的结果代码是什么。因此，也许您正在显示其他人的对话框，因此无法更改对话框过程以在想要结束对话框时设置不同的标志。您可以做什么来从外部自定义对话循环？当对话框无事可做并准备阻塞等待消息时，它们会向其所有者发送 WM_ENTERIDLE 消息。如果 WM_ENTERIDLE 消息的处理程序返回，并且队列中没有发布的消息，则对话框将进入睡眠状态并等待消息进入。正如消息名称所示，使用 WM_ENTERIDLE 消息的一种方法是通过执行后台空闲时间活动来处理消息，然后在有消息供对话框处理时返回。例如，也许您想在用户空闲时进行拼写检查。使用 WM_ENTERIDLE 消息的另一种方法是</p>
+            <p class="link"><a href="https://devblogs.microsoft.com/oldnewthing/20260325-00/?p=112165" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>War and AI, the death of Sora, and 3 ways you can catch me live today<span class="title-cn">战争和 AI、Sora 的死以及今天你可以看到我直播的 3 种方式</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Gary Marcus · 📡 Marcus on AI</p>
+            <p class="summary">With apologies for the short notice, a few quick announcements:I will be having an ultra-timely conversation tonight on war and AI at with Katrina Manson, Bloomberg journalist and author of the excellent, could-not-be-more-topical new book Project Ma...</p>
+            <p class="summary-cn">📝 抱歉通知时间太短，我先宣布几条消息：今晚我将在马里兰州切维蔡斯的政治与散文杂志上与彭博社记者卡特里娜·曼森（Katrina Manson）就战争和AI进行一次非常及时的对话，她是优秀的、话题性十足的新书《Project Maven》的作者，该书讲述了战争的历史和AI。东部时间中午，您可以在 Sirius XM 上与兰迪·扎克伯格简短地交流。我们甚至可以拨打电话 844-942-7866。东部时间 12:20，我将在 BBC World 上谈论 Sora 的去世和 AI 的未来。</p>
+            <p class="link"><a href="https://garymarcus.substack.com/p/war-and-ai-the-death-of-sora-and" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Steve Ballmer, Microsoft executive and NBA owner<span class="title-cn">Steve Ballmer，Microsoft 执行官和 NBA 所有者</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Dave Farquhar · 📡 The Silicon Underground</p>
+            <p class="summary">Steven Anthony Ballmer, born March 24, 1956, served as chief executive officer of Microsoft from 2000 to 2014. Today he is the owner of the Los Angeles Clippers of the National Basketball Association (NBA). Steve Ballmer&#8217;s personal wealth is ar...</p>
+            <p class="summary-cn">📝 史蒂文·安东尼·鲍尔默，出生于 1956 年 3 月 24 日，2000 年至 2014 年担任Microsoft 首席执行官。如今，他是美国国家篮球协会洛杉矶快船队 (NBA) 的老板。史蒂夫·鲍尔默 (Steve Ballmer) 的个人财富围绕Microsoft 高管兼 NBA 所有者史蒂夫·鲍尔默 (Steve Ballmer) 首次出现在 The Silicon Underground 上。</p>
+            <p class="link"><a href="https://dfarq.homeip.net/steve-ballmer-microsoft-executive-and-nba-owner/?utm_source=rss&utm_medium=rss&utm_campaign=steve-ballmer-microsoft-executive-and-nba-owner" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Pluralistic: The cost of doing business (25 Mar 2026)<span class="title-cn">多元化：开展业务的成本（2026 年 3 月 25 日）</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Cory Doctorow · 📡 Pluralistic: Daily links from Cory Doctorow</p>
+            <p class="summary">->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> Top Sources: None --> Today's links The cost of doing business: "Market definition" is a denial-of-service attack on antitrust law. Hey look at this: Delights to delectate. Object permanence:...</p>
+            <p class="summary-cn">📝 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> 主要来源：无 --> 今天的链接 做生意的成本：“市场定义”是对反垄断法的拒绝服务攻击。嘿，看看这个：很高兴享受。对象持久性：Union Pacific v 模型铁路；华纳对阵波特的球迷； 《纽约时报》的商标恶搞；为什么丽贝卡·布莱克混搭很糟糕；窥视者贾巴；格伦菲尔的成本 v 租户。即将亮相：伯克利、蒙特利尔、伦敦、柏林、瓦伊河畔海伊。最近出现：我去过的地方。最新书籍：你继续读它们，我会继续写它们。即将出版的书：就像我说的，我会继续写。版权页：剩下的都可以。开展业务的成本（永久链接）任何法律、规则或政策最重要的部分不是它允许或禁止的内容——而是它允许或禁止的内容。问题在于你是否能够执行法律。毕竟，尽管禁止人们对特朗普产生卑鄙想法的法律是可恶的，但它也完全无法执行，并且最终不会非常重要，除非作为特朗普邪恶的象征。此属性称为“可管理性”，意思是“当局可以管理策略的程度”。可管理性有很多方面，包括“是否有可能检测到这项政策是否被违反？”同样，还有一些问题，例如“如果您发现有人违反了此政策，您是否能够阻止他们继续这样做？”例如，US 经常起诉朝鲜</p>
+            <p class="link"><a href="https://pluralistic.net/2026/03/25/fact-intensive/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Wander 0.3.0<span class="title-cn">漫步0.3.0</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Unknown · 📡 Susam Pal</p>
+            <p class="summary">Wander 0.3.0 is the third release of Wander, a small, decentralised, self-hosted web console that lets visitors to your website explore interesting websites and pages recommended by a community of independent website owners. To try it, go to susam.ne...</p>
+            <p class="summary-cn">📝 Wander 0.3.0 是 Wander 的第三个版本，Wander 是一个小型、去中心化、自托管的 Web 控制台，可让您网站的访问者探索由独立网站所有者社区推荐的有趣网站和页面。要尝试一下，请访问 susam.net/wander/。此版本带来了小但重要的错误修复。之前的版本 0.2.0 引入了许多新功能。不幸的是，其中两个给一些用户带来了问题。先前版本中的一个新功能是忽略列表功能。忽略列表定义控制台在发现页面推荐时从不使用的控制台 URLs 和页面 URLs。虽然此功能工作正常，但由于实现中的错误，控制台对话框无法在未定义任何忽略列表的控制台中加载。现在这个问题已经得到解决。还有另一个问题导致 <iframe> 无法正常显示。显示发现的网站和页面无法加载某些网站。特别是，任何依赖同源上下文加载自身资源的网站都无法在控制台中加载。这也已得到修复。有关此问题的详细讨论，请参阅 codeberg.org/susam/wander/issues/7。除了这两个重要的修复之外，还有一些其他的小修复，涉及防止小型设备中的水平滚动以及防止重复的推荐看起来彼此太接近。请参阅 CHANGES.md 了解详细的变更日志。要了解有关 Wander、其工作原理以及如何设置的更多信息，</p>
+            <p class="link"><a href="https://susam.net/code/news/wander/0.3.0.html" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Which Design Doc Did a Human Write?<span class="title-cn">哪份设计文档是人写的？</span></h2>
+            <p class="meta">📅 2026-03-25 · 👤 Unknown · 📡 Refactoring English</p>
+            <p class="summary">I created three design docs for the same open-source web app: I spent 16 hours writing one of the design docs completely by hand. I generated one using Claude Opus 4.6 (medium effort). I generated one using GPT-5.4 (high effort). I generated the AI v...</p>
+            <p class="summary-cn">📝 我为同一个开源 Web 应用程序创建了三个设计文档：我花了 16 个小时完全手工编写了其中一个设计文档。我使用 Claude Opus 4.6 生成了一个（中等努力）。我使用 GPT-5.4 生成了一个（费力）。我在几分钟内生成了 AI 版本。我向代理提供了一个提示，其中包括我书中的设计文档章节和框架设计文档结构。编写 AI 生成的文档的代理没有看到我编写的版本。</p>
+            <p class="link"><a href="https://refactoringenglish.com/blog/ai-vs-human-design-doc/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Writing an LLM from scratch, part 32g -- Interventions: weight tying<span class="title-cn">Writing an LLM from scratch, part 32g -- Interventions: weight tying</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Unknown · 📡 Giles' blog</p>
+            <p class="summary">In Sebastian Raschka's book "Build a Large Language Model (from Scratch)", he writes that weight tying, while it reduces the parameter count of a model, in his experience makes it worse. As such, apparently people don't use it in modern LLMs. Intuiti...</p>
+            <p class="summary-cn">📝 在 Sebastian Raschka 的书《Build a Large Language Model (from Scratch)》中，他写道，权重绑定虽然减少了模型的参数数量，但根据他的经验，情况变得更糟。因此，显然人们不会在现代 LLMs 中使用它。直观上，这是有道理的——我将在这篇文章中解释原因。但是，当我尝试各种干预措施，看看我是否可以让我的模型（基于 Raschka 的代码，但训练时间仅为原始 GPT-2 模型的一小部分）在测试集上的损失方面与原始模型一样好时，我认为值得一看的是，对于这个具有 163M 参数的特定小模型来说，它是否真的是一个负值。毕竟，最初的权重使用了权重绑定，而且我确实发现 QKV 偏差似乎有所帮助——这是他们使用的另一种老式技术，但现在已经过时了。这个也有帮助吗？值得一试！让我们试一试吧。配重：回顾 首先我将快速回顾一下配重是什么及其工作原理。这确实是针对那些一直在阅读本系列文章的人 - 如果这对您来说是全新的，您可能会首先发现我关于 LLMs 数学的文章是一个有用的追赶指南。在我们的 LLM 代码中，从一开始，我们就使用嵌入层来获取输入令牌 ID，并将它们转换为嵌入——每个令牌成为高维空间中的向量（在我们的例子中为 768），我们将其视为以某种方式表示令牌的“含义”。一种有用的思考方式</p>
+            <p class="link"><a href="https://www.gilesthomas.com/2026/03/llm-from-scratch-32g-interventions-weight-tying" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Code as a Tool of Process<span class="title-cn">代码作为流程工具</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Unknown · 📡 Jim Nielsen’s Blog</p>
+            <p class="summary">Steve Krouse wrote a piece that has me nodding along: Programming, like writing, is an activity, where one iteratively sharpens what they're doing as they do it. (You wouldn't believe how many drafts I've written of this essay.) There’s an incredible...</p>
+            <p class="summary-cn">📝 Steve Krouse 写了一篇让我点点头的文章：编程就像写作一样，是一种活动，人们在做事的过程中不断地磨练自己正在做的事情。 （你不会相信我为这篇文章写了多少草稿。）通过迭代构建某些东西的过程，需要进行大量的学习和改进，即锐化。当您将某个功能的各个方面变为现实时，它会不断地向您提出这样的问题：“但这在这里如何发挥作用？” “你有想到这一点吗？”如果您跳过迭代构建每个部分的过程，而只是要求 AI 生成解决方案，那么您就会错过理解每个部分的复杂性的机会，而这相当于整体的总和。我认为当你用英语生成代码时，有很多细节永远不会浮出水面，因为它对于计算机来说不够精确。编写代码是一个让您面临细节问题的过程。如果你掩盖了细节，事情就会出乎意料地进行，用户会发现你的想法中的歧义，而不是你（另见：“错误”）。编写代码是过程的工具。随着您的前进，它会提高您的思维并帮助您发现并制定程序的正确性。如果你停止编写代码并开始生成代码，你就会失去一个有助于锐化和完善你的思维的过程。这就是为什么代码生成看起来如此之快：它允许您跳过缓慢而痛苦的过程</p>
+            <p class="link"><a href="https://blog.jim-nielsen.com/2026/code-as-process/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>The AI Industry Is Lying To You<span class="title-cn">AI 行业在骗你</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Edward Zitron · 📡 Ed Zitron's Where's Your Ed At</p>
+            <p class="summary">Hi! If you like this piece and want to support my independent reporting and analysis, why not subscribe to my premium newsletter? It&#x2019;s $70 a year, or $7 a month, and in return you get a weekly newsletter that&#x2019;s usually anywhere from 500...</p>
+            <p class="summary-cn">📝 你好！如果您喜欢这篇文章并希望支持我的独立报告和分析，为什么不订阅我的高级时事通讯呢？每年 70 美元，或每月 7 美元，作为回报，你会收到一份每周时事通讯，通常有 5000 到 18,000 字，包括对 NVIDIA、Anthropic 和 OpenAI 的财务状况以及 AI 泡沫令状的大量详细分析。大。我刚刚发布了一份大型《SaaSpocalypse 仇恨者指南》以及《Adobe 仇恨者指南》。它有助于支持此类免费新闻通讯！整个 AI 泡沫是建立在一种模糊的必然性之上的——如果每个人都足够坚定地相信这一切都不会出错，那么到了某个时候，所有非常明显的问题都会消失。可悲的是，物理无法战胜。上周，经济学家 Paul Kedrosky 发表了一篇精彩的文章，以一张图表为中心，该图表显示新的数据中心容量增加（除了管道的增加，而不是上线）在 2025 年第四季度减半（根据 Wood 的数据） Mackenzie）：Wood Mackenzie 的报告以严厉的措辞表述了这一点：由于负载队列挑战持续存在，从 2025 年第三季度到第四季度，US 数据中心容量增加减半。这一下降凸显了当前开发环境的困难，并标志着对现有管道项目的关注。虽然德克萨斯州在 2025 年第四季度扩大了管道产能领先优势，但新墨西哥州、印第安纳州和怀俄明州的相对增长更大。计划约</p>
+            <p class="link"><a href="https://www.wheresyoured.at/the-ai-industry-is-lying-to-you/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Choose Boring Technology and Innovative Practices<span class="title-cn">选择镗削技术和创新实践</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Unknown · 📡 Computer Things</p>
+            <p class="summary">The famous article Choose Boring Technology lists two problems with using innovative technology: There are too many "unknown unknowns" in a new technology, whereas in boring technology the pitfalls are already well-known. Shiny tech has a maintenance...</p>
+            <p class="summary-cn">📝 著名文章《选择无聊技术》列出了使用创新技术的两个问题：新技术有太多“未知的未知数”，而无聊技术的陷阱已经众所周知。闪亮的技术有一个维护负担，即使每个人都厌倦了它，这种负担仍然持续很长时间。这两者都与技术的主要成本是维护成本这一理念有关。即使某些东西很容易构建，但保持运行可能并不那么容易。我们不能“放弃”关键任务技术。假设我的团队在 Julia 上构建了一项新服务，两年后认为这是错误的选择。我们陷入了要么将所有数据迁移到 Postgres 代码到 Java 的（昂贵的）过程，要么保持其运行的（昂贵的）过程。无论哪种方式，公司都需要花费资源让工程师接受技术方面的培训，而不是其他有用的事情，比如如何在他们的头脑中挖掘加密货币。技术变化缓慢。变化不像桥梁那么慢，但仍然相当慢。现在说与Julia同时，我们也决定开始练习测试&amp;&amp;提交||恢复（TCR）。两年后，我们也厌倦了这种情况。为了解决这个问题，我们可以简单地...不再进行 TCR。没有我们需要支持的“遗留实践”，也没有放弃进程的维护负担。采用和放弃实践比采用和放弃技术要容易得多。这意味着虽然我们应该在使用的软件上保持保守，但我们也可以</p>
+            <p class="link"><a href="https://buttondown.com/hillelwayne/archive/choose-boring-technology-and-innovative-practices/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Windows 95 defenses against installers that overwrite a file with an older version<span class="title-cn">Windows 95 防御安装程序用旧版本覆盖文件</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Raymond Chen · 📡 The Old New Thing</p>
+            <p class="summary">Back in the days of 16-bit Windows, many system components were redistributable, meaning that programs that used those components could include a copy of those system components and install them onto the system as part of the program&#8217;s installe...</p>
+            <p class="summary-cn">📝 早在 16 位 Windows 时代，许多系统组件都是可重新分发的，这意味着使用这些组件的程序可以包含这些系统组件的副本，并将它们作为程序安装程序的一部分安装到系统上。安装系统组件的指南是，如果安装程序发现系统上已有系统组件的副本，则应将现有文件的版本号与正在安装的文件的版本号进行比较，然后仅当正在安装的文件具有更高版本号时才覆盖该文件。如果现有文件的版本号较高，则应将其保留。此规则依赖于 Windows 保持向后兼容性的事实，因此即使较旧的程序使用较新的版本仍然可以工作。这并不意味着安装人员实际上遵循了此指南。程序安装程序通常会覆盖任何妨碍他们的文件，无论现有文件的版本号如何。当这些安装程序在 Windows 95 上运行时，会将 Windows 95 版本的组件替换为 Windows 3.1 版本。您可以想象这对系统的其余部分造成了多大的灾难。 Windows 95 通过在隐藏的 C:\Windows\SYSBCKUP 目录中保留经常被覆盖的文件的备份副本来解决此问题。每当安装程序完成时，Windows 就会检查这些经常被覆盖的文件是否确实被覆盖。如果</p>
+            <p class="link"><a href="https://devblogs.microsoft.com/oldnewthing/20260324-00/?p=112159" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>The Illusionist and the Conjurer<span class="title-cn">魔术师和魔术师</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Scott Werner · 📡 Works on My Machine</p>
+            <p class="summary">Penn &amp; Teller have this philosophy about their craft. Or, I guess, all stage magicians do, but Penn &amp; Teller are the ones who spend the most time talking about it.They will spend months on a single trick. Years, sometimes. More time on someth...</p>
+            <p class="summary-cn">📝 宾夕法尼亚大学Teller 对他们的工艺有这样的理念。或者，我猜，所有舞台魔术师都这样做，但佩恩和魔术师除外。出纳员是那些花最多时间谈论它的人。他们会花几个月的时间来研究一个技巧。几年，有时。他们说，花在某件事上的时间比任何人合理预期的都要多。同样的动作。同样的时间。在完全相同的毫秒内手腕的相同角度。消除一切可能偏离计划的地方。因为当你是一名魔术师时，你只有一次机会，一位观众。一会儿。这是一个机会，让硬币出现在耳后，而不是落入你的袖子里，滚到桌子底下，而每个人都在二手尴尬中观看。魔术师生活在稀缺之中，因为媒介需要它。节目正在直播。观众就在那里。这个技巧要么有效，要么无效。所以你排练一下。你精炼。你对着镜子重复这件事一万次，直到你的手移动起来，就像它们属于一个从未紧张过的人一样。另一方面，魔术师的做法不同。魔术师你看过体育摄影师的工作吗？我的意思是真的看过一张吗？他们蹲在篮球场边缘，或者在曲棍球比赛中压在板上，他们只是......一个晚上拍了数千张照片。快门声听起来就像你骑着自行车从山上飞驰而下，辐条上插着一张扑克牌。然后他们回家，或者回到新闻发布室，或者</p>
+            <p class="link"><a href="https://worksonmymachine.ai/p/the-illusionist-and-the-conjurer" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Book Review: If We Cannot Go at the Speed of Light by Kim Choyeop ★★☆☆☆<span class="title-cn">书评：如果我们不能以光速前进作者：Kim Choyeop ★★☆☆☆</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 @edent · 📡 Terence Eden’s Blog</p>
+            <p class="summary">Short stories offer you the chance to dip briefly into a world and then skip out so there's not much time for development; just straight in to the plot and off we go. But this is all exposition and very little action. Rather than let the plots develo...</p>
+            <p class="summary-cn">📝 Short stories offer you the chance to dip briefly into a world and then skip out so there's not much time for development; just straight in to the plot and off we go. But this is all exposition and very little action. Rather than let the plots develop naturally, there are just vast passages of infodumping. I'm sad to say this is a rather dreary and insipid collection of stories. Some of the stories start out with an interesting premise but then just fizzle out. There's a reasonably good idea in "The Materiality of Emotions" which describes people buying little trinkets which induce emotions in them. Again, emotions as drugs is well-worn stuff, but this builds up momentum nicely before suddenly ending. The highlight is "Spectrum" which has some delightful world-building but, like the others, it's rather derivative of older stories. A woman's space ship crashes on a strange planet and she tries to befriend the local hominids. You've almost certainly read it before. Overall I found it underwhelming. Many thanks to NetGalley for the review copy.</p>
+            <p class="link"><a href="https://shkspr.mobi/blog/2026/03/book-review-if-we-cannot-go-at-the-speed-of-light-by-kim-choyeop/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Pluralistic: Goodhart's Law vs "prediction markets" (24 Mar 2026)<span class="title-cn">多元化：古德哈特定律与“预测市场”（2026 年 3 月 24 日）</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Cory Doctorow · 📡 Pluralistic: Daily links from Cory Doctorow</p>
+            <p class="summary">->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> Top Sources: None --> Today's links Goodhart's Law vs "prediction markets": Putting a gun to the metric's head. Hey look at this: Delights to delectate. Object permanence: Apple v interop; Ya...</p>
+            <p class="summary-cn">📝 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> 主要来源：无 --> 今天的链接 古德哈特定律与“预测市场”：用枪指着指标的头。嘿，看看这个：很高兴享受。对象持久性：Apple v 互操作；雅虎诉世界；拉斯普京诉鬼屋； 《艰难的一天之夜》的开场和弦；蒙德里安·庞； “IP”：专利流氓诉Apple。即将亮相：伯克利、蒙特利尔、伦敦、柏林、瓦伊河畔海伊。最近出现：我去过的地方。最新书籍：你继续读它们，我会继续写它们。即将出版的书：就像我说的，我会继续写。版权页：剩下的都可以。古德哈特定律与“预测市场”（永久链接）保守派教义问答中最有选择性地相信的经文是“激励很重要”的观点。当然，如果您正在寻求医疗保健，“激励措施很重要”。这就是为什么你会被共付额和免赔额蚕食殆尽——如果您可以随时获得医疗保健，那么您可能会获得过多的医疗保健。 “激励很重要”，因此我们必须确保您只在真正需要时寻求护理：https://pluralistic.net/2025/04/14/timmy-share/#a-superior-moral-justification-for-selfishness 但富人不需要受到激励的约束。他们可以与 Uncle Sucker 签订无投标合同，而不会被诱惑去抄袭 USA。他们可以强迫工人签订非贬低条款，而不会像个大混蛋一样受到诱惑，因为他们知道他们可以起诉工人</p>
+            <p class="link"><a href="https://pluralistic.net/2026/03/24/degenerated-gambling/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Hosting a Snowflake Proxy<span class="title-cn">托管雪花代理</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Mathew Duggan · 📡 matduggan.com</p>
+            <p class="summary">In the nightmarish world of 2026 it can be difficult to know how to help at all. There are too many horrors happening to quickly to know where one can inject even a small amount of assistance. However I wanted to quickly post about something I did th...</p>
+            <p class="summary-cn">📝 在 2026 年的噩梦世界中，根本不知道如何提供帮助。太多的恐怖事件很快就发生了，以至于我们不知道可以在哪里注入哪怕是少量的援助。然而，我想快速发布一些我所做的事情，这些事情很简单，影响很小，希望能帮助一小部分人。 Snowflake 当我浏览 Mastodon 时，有人发布了一个链接，要求人们托管 Snowflake 代理。 Snowflake 是一种轻量级代理，下面由 David Fifield 进行了最好的解释。总之，Snowflake 是一个审查规避系统，这意味着，它是一种在两个端点之间实现网络通信的方式，尽管中间存在一些对手，中间有一个审查员干扰通信。现在，这是一种抽象的、科学上有用的审查制度定义，但这个模型当然是由现实世界的考虑、人们在实践中遇到的实际审查制度所激发的。它涉及安全和隐私，但也与人权和言论自由息息相关，这就是我们开展这项工作的原因。世界上有很多网络——我不会赘述——但是有很多网络，你想阅读一些新闻，你想使用一些应用程序，你想参加一些讨论组，但你不能。或者你不能轻易这样做，因为有一个审查员阻止你这样做。并给予</p>
+            <p class="link"><a href="https://matduggan.com/hosting-a-snowflake-proxy/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Tread carefully, because you tread on my fucks.<span class="title-cn">小心点，因为你踩到了我的屁股。</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 JA Westenberg · 📡 Westenberg.</p>
+            <p class="summary">This newsletter is free to read, and it&#x2019;ll stay that way. But if you want more - extra posts each month, access to the community, and a direct line to ask me things - paid subscriptions are $2.50/month. A lot of people have told me it&#x2019;s...</p>
+            <p class="summary-cn">📝 本时事通讯可免费阅读，并且将保持这种状态。但如果您想要更多 - 每月额外的帖子、访问社区以及直接向我提问 - 付费订阅费用为 2.50 美元/月。很多人告诉我这是值得的。升级 在任何一天，我都会有大约 5 次左右的事情要做。在有人认为这是完全自私的坦白之前，我想准确地表达我的意思。每天早上我醒来时都会受到有限的道德和情感关注。该数量无法根据任何外部紧急情况、任何运动、任何社交媒体平台上的任何海报的需求进行补充。当我在我自己的焦虑、我自己的工作、我自己的人际关系、我自己的家庭、我自己对未来的半清晰和各种把握的恐惧上花费了多少时间时，已经没有什么宝贵的东西留给我存在的恐惧和对我“不要把目光移开”的劝告了。当我滚动浏览你的末日帖子，你关于一切都是糟糕的，世界充满恐怖的帖子，你的病毒图像，你的统计数据时，我并不是在声明你所关心的事情在现实世界中实际上有多重要。但我已经生活在一个已经完全部署的神经系统的边缘，没有多少公众羞辱或坚持已经——或将永远——扩大了我的能力</p>
+            <p class="link"><a href="https://www.joanwestenberg.com/tread-carefully-because-you-tread-on-my-fucks/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Weekly Update 496<span class="title-cn">每周更新 496</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Troy Hunt · 📡 Troy Hunt</p>
+            <p class="summary">Watching OpenClaw do its thing must be like watching the first plane take flight. It&apos;s a bit rickety and stuck together with a lot of sticky tape, but squint and you can see the potential for agentic AI to change the world as we know it. And I d...</p>
+            <p class="summary-cn">📝 观看 OpenClaw 的工作就像观看第一架飞机起飞一样。它有点摇摇欲坠，并且用很多胶带粘在一起，但眯着眼睛看，你可以看到代理 AI 改变我们所知道的世界的潜力。我认为这并不夸张。人们声称用它所做的很多事情都是双曲线的，与所有新技术一样，挑战在于消除噪音并找到价值。请继续关注更多相关内容，因为我已经找到了一些真正有用的应用程序来帮助我更好地完成工作，我认为我应该将下周的视频专门用于此目的。</p>
+            <p class="link"><a href="https://www.troyhunt.com/weekly-update-496/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Pebble Time 2 Is In Mass Production!<span class="title-cn">《卵石时间2》量产中！</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Unknown · 📡 Eric Migicovsky's Blog RSS Feed</p>
+            <p class="summary">TLDR PT2 is in production!! Water resistance update - 30m What you need to know about Pebble Time 2 Address confirmation email…...</p>
+            <p class="summary-cn">📝 TLDR PT2 正在制作中！防水更新 - 30m 关于 Pebble Time 2 您需要了解的内容 地址确认电子邮件...</p>
+            <p class="link"><a href="https://repebble.com/blog/pebble-time-2-is-in-mass-production" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Wander 0.2.0<span class="title-cn">漫步0.2.0</span></h2>
+            <p class="meta">📅 2026-03-24 · 👤 Unknown · 📡 Susam Pal</p>
+            <p class="summary">Wander 0.2.0 is the second release of Wander, a small, decentralised, self-hosted web console that lets visitors to your website explore interesting websites and pages recommended by a community of independent personal website owners. To try it, go t...</p>
+            <p class="summary-cn">📝 Wander 0.2.0 是 Wander 的第二个版本，Wander 是一个小型、去中心化、自托管的 Web 控制台，可让您网站的访问者探索由独立个人网站所有者社区推荐的有趣网站和页面。要尝试一下，请访问 susam.net/wander。此版本带来了许多改进。当我发布 0.1.0 版本时，这是我在自己的网站上使用的软件的初始版本。当然，我最初是唯一的用户，我只将受信任的网页添加到我的控制台的推荐列表中。但自从我在 Hacker News 上宣布这个项目后，它就受到了广泛的关注。距离我在那里宣布这一消息还不到一周，已有 30 多人在他们的个人网站上设置了 Wander 控制台。现在这个控制台网络推荐了一百多个网页。随着设置 Wander 控制台的人数增加，出现了一些功能请求，其中大部分已经实现。此版本使这些新功能可用。从Wander 0.2.0开始，远程控制台的wander.js文件在沙箱iframe中执行，以确保它对父Wander控制台页面没有副作用。同样，网络推荐的页面也被加载到沙箱iframe中。此版本还带来了一些自定义功能。控制台所有者可以通过添加自定义 CSS 或 JavaScript 来自定义其 Wander 控制台。控制台所有者还可以阻止某些 URL</p>
+            <p class="link"><a href="https://susam.net/code/news/wander/0.2.0.html" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Writing an LLM from scratch, part 32f -- Interventions: weight decay<span class="title-cn">从头开始编写 LLM，第 32f 部分 -- 干预措施：权重衰减</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 Unknown · 📡 Giles' blog</p>
+            <p class="summary">I'm still working on improving the test loss for a from-scratch GPT-2 small base model, trained on code based on Sebastian Raschka's book "Build a Large Language Model (from Scratch)". In my training code, I have this code to create the optimiser: op...</p>
+            <p class="summary-cn">📝 我仍在致力于改善从头开始的 GPT-2 小基本模型的测试损失，该模型是根据 Sebastian Raschka 的书“构建大型语言模型（从头开始）”的代码进行训练的。在我的训练代码中，我使用以下代码来创建优化器： optimizationr = torch.optim.AdamW( model.parameters(), lr=0.0004, Weight_decay=0.1 ) 在我的上一篇文章中，我研究了学习率，该代码中的 lr 参数，并找到了一个值，加上一些额外的代码来安排它 - 即随着时间的推移而改变它 - 这给出了更好的训练结果。这次我想谈谈体重衰减。它是什么，它的用途是什么，0.1 真的是最佳值吗？我有点担心为了理解这个超参数，我需要很好地理解优化器的工作原理；我一直在建立一个我认为可靠的优化者心理模型，但我认为我对它们的理解还不足以解释它们，并且我一直希望在这一篇之后推迟将它们发布到一个单独的博客文章系列中。好消息是，虽然权重衰减是优化器工作方式的一个重要方面——AdamW 中的“W”，它与旧版 Adam 优化器的不同之处在于它对权重衰减的不同处理方式的认可——您不需要知道优化器本身如何工作来理解权重衰减是什么。相反，您只需要考虑构建 ML 系统的一个更古老且更基本的方面 - 正则化。为了深入研究</p>
+            <p class="link"><a href="https://www.gilesthomas.com/2026/03/llm-from-scratch-32f-interventions-weight-decay" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>‘CanisterWorm’ Springs Wiper Attack Targeting Iran<span class="title-cn">“CanisterWorm”针对伊朗发起雨刮器攻击</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 BrianKrebs · 📡 Krebs on Security</p>
+            <p class="summary">A financially motivated data theft and extortion group is attempting to inject itself into the Iran war, unleashing a worm that spreads through poorly secured cloud services and wipes data on infected systems that use Iran&#8217;s time zone or have F...</p>
+            <p class="summary-cn">📝 一个出于经济动机的数据盗窃和勒索组织正试图将自己卷入伊朗战争，释放一种蠕虫病毒，该蠕虫病毒通过安全性较差的云服务进行传播，并擦除使用伊朗时区或将波斯语设置为默认语言的受感染系统上的数据。专家表示，针对伊朗的抹除行动于上周末发生，来自一个名为 TeamPCP 的相对较新的网络犯罪组织。 2025 年 12 月，该组织开始使用一种自我传播的蠕虫病毒破坏企业云环境，该蠕虫病毒追踪暴露的 Docker APIs、Kubernetes 集群、Redis 服务器和 React2Shell 漏洞。然后，TeamPCP 尝试在受害者网络中横向移动，窃取身份验证凭据并通过 Telegram 勒索受害者。恶意 CanisterWorm 的一个片段，它会查找并销毁与伊朗时区匹配或以波斯语作为默认语言的系统上的数据。图片：Aikido.dev。在 1 月份发布的 TeamPCP 简介中，安全公司 Flare 表示，该组织将暴露的控制平面武器化，而不是利用端点，主要针对最终用户设备上的云基础设施，其中 Azure (61%) 和 AWS (36%) 占受感染服务器的 97%。 “TeamPCP 的优势并非来自新颖的漏洞利用或原始恶意软件，而是来自大规模自动化和众所周知的攻击技术的集成，” Flare 的阿萨夫·莫拉格 (Assaf Morag) 写道。 &#8220;集团现有产业化</p>
+            <p class="link"><a href="https://krebsonsecurity.com/2026/03/canisterworm-springs-wiper-attack-targeting-iran/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>How can I make sure the anti-malware software doesn’t terminate my custom service?<span class="title-cn">How can I make sure the anti-malware software doesn’t terminate my custom service?</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 Raymond Chen · 📡 The Old New Thing</p>
+            <p class="summary">A customer was developing a Windows service process, and it is important to them that the service keep running on their servers. They wanted to know if there was a way they could prevent users who connect to the server from terminating the service. I...</p>
+            <p class="summary-cn">📝 客户正在开发 Windows 服务进程，该服务在其服务器上保持运行对他们来说非常重要。他们想知道是否有办法阻止连接到服务器的用户终止服务。特别是，他们希望确保用户无法错误或恶意地使用反恶意软件软件来终止其服务。他们询问反恶意软件软件的事实告诉我，他们已经锁定了更明显的访问点。例如，他们已经对其服务设置了适当的权限，以便只有管理员才能停止该服务。但是如何保护您的进程免受反恶意软件的侵害呢？答案当然是你不能。因为如果您能够避免被反恶意软件软件终止，那么恶意软件就会做到这一点！反恶意软件软件以极高级别的系统访问权限运行。毕竟，它们具有在内核模式下运行的组件。即使他们无法终止您的进程，他们也肯定可以使您的进程无法完成任何事情（例如，通过阻止其线程被调度执行）。如果反恶意软件出现问题，整个系统可能会遭到灾难性的破坏。客户将必须使用在其服务器上运行的反恶意软件软件，以查看是否有设置或其他方式来告诉反恶意软件</p>
+            <p class="link"><a href="https://devblogs.microsoft.com/oldnewthing/20260323-00/?p=112157" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Markdown Ate The World<span class="title-cn">Markdown 吞噬了世界</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 Mathew Duggan · 📡 matduggan.com</p>
+            <p class="summary">I have always enjoyed the act of typing words and seeing them come up on screen. While my favorite word processor of all time might be WordPerfect (here), I&apos;ve used almost all of them. These programs were what sold me on the entire value proposi...</p>
+            <p class="summary-cn">📝 我一直很喜欢打字并看到它们出现在屏幕上的行为。虽然我一直以来最喜欢的文字处理程序可能是 WordPerfect（此处），但我几乎使用过所有这些文字处理程序。这些程序让我了解了计算机的整个价值主张。它们就像我在学校用过的打字机，只是在各个方面都更容易。你可以删除东西。您可以移动段落。这感觉就像作弊，我喜欢它。 随着时间的推移，“文档”的组成部分逐渐消失。文字处理的复杂性增加了。随着文字处理器从打字机的代理转变为更接近出版套件的东西，这种情况也随之增长。最初，WordPerfect、WordStar、MultiMate 等程序都有平面二进制文件，其中嵌入了专有的格式化代码。当文字处理器只是打字机的代理时，这很有意义。但随着 Microsoft Word 开始流行并迅速成为占主导地位的文字处理器，我们看到了 .doc 文件格式的崛起。与之前相比，复杂性呈指数级增长，这是有道理的，因为文字处理器突然变成了“一切工具”。 &#x2014;不仅仅是打字，还有布局、图像、修订跟踪、嵌入对象以及 Microsoft 可以塞进去的任何其他内容。 .doc：文件中的文件系统 .doc 的基础是一种复合文件二进制格式，它实际上只是一个 FAT 文件系统，具有</p>
+            <p class="link"><a href="https://matduggan.com/markdown-ate-the-world/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>The nth War of the Decade<span class="title-cn">十年来的第n次战争</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 Ibrahim Diallo @dialloibu · 📡 iDiallo.com</p>
+            <p class="summary">This is a blog where I talk mostly about programming in the workplace. These past few years the subject has often been AI, because it affects everything. From the hiring process to the very code we type. AI might just replace me mid-sentence... So wh...</p>
+            <p class="summary-cn">📝 这是一个我主要讨论工作场所编程的博客。过去几年的主题经常是AI，因为它影响一切。从招聘流程到我们输入的代码。 AI 可能会取代我的中句...因此，当一个影响我们所有人的主题主宰世界时，我想向您提供我的观点。我可能不是你政治观点的来源，但这里是。现在，我们正处于战争之中。至少美利坚合众国是。事实证明，国会规则很像 HTML 标准：它们只是一个建议，您可以选择采用或忽略。首先，我要坚定地说：不需要成为专家才能谈论战争。它在某种程度上影响着我们所有人。这种只有专家才应该参与的比喻经常被那些想要控制叙事的人使用。但这一次，世界各个角落的外行人都将参与塑造这个故事。我对所谓“新闻”最早的记忆之一是孩子们向轰鸣穿过建筑物的坦克投掷石块的镜头。我不明白这到底是勇气，还是只是一场游戏。我毕竟只是个孩子。事后看来，这些都是巴勒斯坦儿童在一座满目疮痍的城市里向他们无与伦比的对手以色列军队投掷石块。几年后，我记得当我们玩捉迷藏时，我的兄弟给我戴上了一个超大的防毒面具。我必须不断地重新调整它，这样我才能看到前面的东西，并且还能呼吸！这些口罩以及其他物资</p>
+            <p class="link"><a href="https://idiallo.com/blog/the-n-war-of-the-decade?src=feed" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Pluralistic: Understaffing as a form of enshittification (23 Mar 2026)<span class="title-cn">多元化：人手不足是一种enshittification（2026 年 3 月 23 日）</span></h2>
+            <p class="meta">📅 2026-03-23 · 👤 Cory Doctorow · 📡 Pluralistic: Daily links from Cory Doctorow</p>
+            <p class="summary">->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> Top Sources: None --> Today's links Understaffing as a form of enshittification: A way to shift value from workers, patients and shoppers to investors. Hey look at this: Delights to delectate...</p>
+            <p class="summary-cn">📝 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> 主要来源：无 --> 今天的链接 人员不足是一种形式化：将价值从工人、患者和购物者转移到投资者的一种方式。嘿，看看这个：很高兴享受。物体持久性：漫威v“超级英雄”；什么是复印机？ “反对它”； “美杜莎之网”； AI 无法完成你的工作；应对大量； “大洗牌”；鸡化的反向半人马；法国诉 iTunes；抄袭纪律；神秘的游说者； “埋斧头的地方”；免费/开放微处理器；计算机安全的民间模型；虫眼蒸汽朋克面具；学者们拥抱维基百科。即将亮相：伯克利、蒙特利尔、伦敦、柏林、瓦伊河畔海伊。最近出现：我去过的地方。最新书籍：你继续读它们，我会继续写它们。即将出版的书：就像我说的，我会继续写。版权页：剩下的都可以。人员不足是一种“效率化”（永久链接） 从根本上来说，效率化只有当公司能够转移价值时才会发生。数字工具使做到这一点比以往任何时候都更容易，例如，通过改变每个用户、每个会话的价格，使用商业监控数据来预测用户会接受的最高价格或最低工资：https://pluralistic.net/2023/02/19/twiddler/ 数字“旋转”代表了一个强大的泵系统，用于移动价值，将其从用户手中夺走并交给企业客户，然后从企业手中拿走并将其交给用户，然后，最终</p>
+            <p class="link"><a href="https://pluralistic.net/2026/03/22/nobodys-home/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>"Collaboration" is bullshit.<span class="title-cn">“合作”是胡说八道。</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 JA Westenberg · 📡 Westenberg.</p>
+            <p class="summary">This newsletter is free to read, and it&#x2019;ll stay that way. But if you want more - extra posts each month, access to the community, and a direct line to ask me things - paid subscriptions are $2.50/month. A lot of people have told me it&#x2019;s...</p>
+            <p class="summary-cn">📝 本时事通讯可免费阅读，并且将保持这种状态。但如果您想要更多 - 每月额外的帖子、访问社区以及直接向我提问 - 付费订阅费用为 2.50 美元/月。很多人告诉我这是值得的。升级 1944 年，国防军发起了希特勒拯救第三帝国的最后努力。突出部之战是一场注定失败的战役，也是一个注定失败的政权的一场注定失败的赌博，但它的残酷性却是对西线US军队真正的第二次考验。在这场战斗中，陆军历史学家 S.L.A 马歇尔开始采访在战斗中受过洗礼的步兵连。三年后，马歇尔在其 1947 年出版的著作《Men Against Fire》中发表了研究，结果显示，在活跃战斗位置的步枪手中，只有 15-20% 曾经开过枪——大多数人都低着头。他们接到命令就行动，坚守阵地，模仿战斗中士兵的外表——但他们没有开枪。按照任何标准的组织指标，这些人都在场并负责，但五分之四的人从未扣动扳机。你可以争论马歇尔的数字范围，你可以争论他的方法，但他的比率一次又一次地出现。 IBM 在 20 世纪 60 年代偶然发现了这一点，当时他们发现 80% 的计算机使用量来自于系统的 20% 功能。该模式会重复出现，因为它描述了有关努力如何分配的真实情况</p>
+            <p class="link"><a href="https://www.joanwestenberg.com/collaboration-is-bullshit/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>More Details Than You Probably Wanted to Know About Recent Updates to My Notes Site<span class="title-cn">关于“我的笔记”网站的最新更新，您可能想了解的更多详细信息</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 Unknown · 📡 Jim Nielsen’s Blog</p>
+            <p class="summary">I shipped some updates to my notes site. Nothing huge. Just small stuff. But what is big stuff except a bunch of small stuff combined? So small stuff is important too. What follows is a bunch of tiny details you probably don’t care about, but they we...</p>
+            <p class="summary-cn">📝 我向我的笔记网站发送了一些更新。没什么大不了的。只是小事。但除了一堆小东西的组合之外，什么是大东西呢？所以小事也很重要。接下来是一堆你可能不关心的小细节，但它们都是我在运输过程中必须做出和考虑的决定。对我来说，小细节就是有趣的部分！现在每个帖子都有自己的 URL 该网站过去由一个巨大的 HTML 页面组成，其中包含所有注释。出于提要和链接的目的，我将通过锚链接链接到该巨大 HTML 文档中的某个位置，例如https://notes.jim-nielsen.com/#2026-03-09T2305 这工作得很好，但随着我的笔记页面变得越来越大，当我想做的只是链接到单个笔记时，加载所有内容似乎是一种浪费。所以我改变了一些事情。现在，每个笔记都有自己的单独页面，例如https://notes.jim-nielsen.com/n/2026-03-09-2305/ 您可能已经注意到：我更改了注释的标识符每当我创建注释时，我都会根据发布的日期/时间对其进行命名，例如2026-03-09T2305.md 这就是深度链接到注释时变成片段标识符的内容，例如/#2026-03-09T2305 最初，我打算将这些 ID 转换为路径，例如/#2026-03-09T2305-> /n/2026-03-09T2305/ 虽然片段标识符似乎应该区分大小写，但在测试中我看到 Safari 有时会将 URL 栏中的 T 更改为 t，例如/#2026-03-09T2305-> /n/2026-03-09t2305</p>
+            <p class="link"><a href="https://blog.jim-nielsen.com/2026/notes-site-updates/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Bored of eating your own dogfood? Try smelling your own farts!<span class="title-cn">厌倦了吃自己的狗粮？尝试闻自己的屁！</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 @edent · 📡 Terence Eden’s Blog</p>
+            <p class="summary">I called a large company the other day. Did I know the information I wanted could be found on their website?0 And was I aware that I could manage my account online?1 And would I like to receive a link to chat with their AI assistant via WhatsApp?2 Na...</p>
+            <p class="summary-cn">📝 前几天我给一家大公司打电话。我是否知道我想要的信息可以在他们的网站上找到？0 我是否知道我可以在线管理我的帐户？1 我是否希望收到通过 WhatsApp 与他们的 AI 助理聊天的链接？2 当然，通话量高于预期。我只能假设负责预测通话量的人最近遭受了脑外伤，并且无法在不将另一只手从基础上抽出的情况下数到五以上。那个开朗的女人颤抖着她预先录制的剧本，突然被一个可怕的电子怪物所取代。我把通话录音3，以便您能体验这座合成荣耀的丰碑！ 🔊💾 下载此音频文件。这是来自一家公司，该公司的网站上滔滔不绝地宣传其创新性。 AI 正在大规模转变其业务！致力于卓越技术并在其所有部门提供 ISO 认证的质量！然而，在某个地方，有人认为客户体验已经足够好了。 “Dogfooding”是科技行业的一种神圣做法。使用您自己的产品。就是这样。这就是你所要做的。例如，如果您在 Slack 工作，则无法使用 Teams 作为消息传递解决方案。您必须向人们表明您对自己的产品充满信心。但它的意义远不止于此。当我曾经在移动电话网络工作时，他们要求我们花时间在呼叫中心。仅仅收到有关客户 KPI 的季度报告是不够的。你有</p>
+            <p class="link"><a href="https://shkspr.mobi/blog/2026/03/bored-of-eating-your-own-dogfood-try-smelling-your-own-farts/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Waarom we nu WEL zuinig moeten doen, en door moeten met groene energie<span class="title-cn">Waarom we nu WEL zuinig moeten doen, en door moeten met groene energie</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 Unknown · 📡 Bert Hubert's writings</p>
+            <p class="summary">Het Internationaal Energie Agentschap zegt dat we zuinig aan moeten doen vanwege de oorlogen in het Midden Oosten. Ministers in Den Haag zeggen dat het niet hoeft, want er zijn hier geen tekorten (!). Doet wel erg denken aan &lsquo;COVID blijft in Br...</p>
+            <p class="summary-cn">📝 国际能源代理公司（Het International Energie Agentschap）表示，我们将在中东部地区努力推动东部地区的发展。海牙的部长们希望 er zijn hier geen tekorten (!)。 Doet wel erg denken aan ‘布拉班特省的新冠疫情’。 Kennelijk een 荷兰传统！ Maar，natuurlijk komen die tekorten ook naar ons toe，de benzine is nu al stervensduur。 Maar heeft het zin om nu in de zomer slim met energie te doen？</p>
+            <p class="link"><a href="https://berthub.eu/articles/posts/waarom-we-nu-wel-zuinig-moeten-doen-en-meer-groene-energie/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>All tests pass: a short story<span class="title-cn">所有测试均通过：一个短篇故事</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 Unknown · 📡 Evan Hahn (dot com)</p>
+            <p class="summary">One night, I wrote a simple tool to pick a random programming language. After shuffling a few times, I landed on Arturo. I decided to try it for fun. What&rsquo;s Arturo? Best I understand, Arturo is a stack-based programming language. It&rsquo;s pri...</p>
+            <p class="summary-cn">📝 一天晚上，我编写了一个简单的工具来选择一种随机编程语言。拖曳了几次之后，我落在了阿图罗身上。我决定尝试一下。阿图罗是什么？据我了解，Arturo 是一种基于堆栈的编程语言。它主要由 Yanis Zafirópulos 维护。他们在 2020 年发布了该语言的愿景。这是该文章的既定目标：制作一种我自己将用作更简单的全能脚本语言的东西，你知道......自动化脚本、模板、乳胶生成，也许在打包基于 Webview 的应用程序方面对我有所帮助（想想 Electron，但它更易于管理，而无需处理 Node.js 等）。作为一个严格遵守语法的人，我对这篇文章感到愤怒。第一个词“to”应该大写。事实上，整个句子太长，结构也很奇怪。 “乳胶”应该是“LaTeX”。这篇文章虽然可读，但为了清晰和正确性可以进行编辑。另一方面，阿图罗的网站？完美无瑕！看不到语法错误，而且设计也很漂亮！ &ldquo;简单。富有表现力。便携式。”位于显眼的 <h2> 中。我向下滚动查看该语言的功能。以下是我最喜欢的六个中的两个，稍微重新格式化：优雅和优雅。最小：简洁、富有表现力的语法，不会妨碍您。没有分号，没有大括号，没有噪音。只需清晰的代码即可准确表达其含义。几分钟内了解基础知识，</p>
+            <p class="link"><a href="https://evanhahn.com/all-tests-pass-a-short-story/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Little web app to pick a random programming language<span class="title-cn">用于选择随机编程语言的小型网络应用程序</span></h2>
+            <p class="meta">📅 2026-03-22 · 👤 Unknown · 📡 Evan Hahn (dot com)</p>
+            <p class="summary">I wrote a web app to choose a random programming language. It&rsquo;s very simple; I hestitate to even call it an &ldquo;app&rdquo;! The interesting part was scraping all the languages on Rosetta Code, and even that wasn&rsquo;t very interesting. But...</p>
+            <p class="summary-cn">📝 我编写了一个网络应用程序来选择随机编程语言。这很简单；我什至犹豫是否称其为“应用程序”！有趣的部分是抓取 Rosetta Code 上的所有语言，即使这样也不是很有趣。但我希望你喜欢它！我通过这种方式了解了一种叫做 Arturo 的语言，并写了一个关于这段经历的小故事。</p>
+            <p class="link"><a href="https://evanhahn.com/random-programming-language/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Reading List 03/21/26<span class="title-cn">阅读清单 03/21/26</span></h2>
+            <p class="meta">📅 2026-03-21 · 👤 Brian Potter · 📡 Construction Physics</p>
+            <p class="summary">Cargo ship Marine Angel navigating the Chicago River in 1953. Via History Calendar.Welcome to the reading list, a weekly roundup of news and links related to buildings, infrastructure, and industrial technology. This week: damage to the Ras Laffan LN...</p>
+            <p class="summary-cn">📝 1953 年，货船“海洋天使号”在芝加哥河上航行。来自历史日历。欢迎阅读阅读列表，每周汇总与建筑、基础设施和工业技术相关的新闻和链接。本周：拉斯拉凡液化天然气设施受损、房地产泡沫风险、朝鲜海军生产、贝佐斯的战略1000 亿美元用于制造自动化等。大约 2/3 的阅读列表是付费墙，因此要获得完整的访问权限，请成为付费订阅者。 伊朗战争 位于卡塔尔的世界最大液化天然气设施拉斯拉凡 (Ras Laffan) 遭到伊朗导弹的严重破坏，生产已完全关闭。该工厂负责全球约 20% 的液化天然气供应，以及全球三分之一的用于半导体制造的氦气供应。 [彭博社] [CNBC] 由于伊朗无人机袭击，阿联酋富查伊拉港的石油运输量下降了三分之二。 [劳埃德名单]为了尝试解决霍尔木兹海峡关闭后油价上涨的问题，特朗普政府已放弃《琼斯法案》（该法案要求 US 港口之间的运输由 US 船只完成）60 天。 [路透社] 它还援引《国防生产法》命令恢复加州海岸的石油钻探。 [洛杉矶时报]China 试图通过在中东石油中断的情况下向台湾提供能源安全来吸引台湾统一。 [路透社] 比亚迪经销商对电动汽车的兴趣激增。 [布洛</p>
+            <p class="link"><a href="https://www.construction-physics.com/p/reading-list-032126" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Re: People Are Not Friction<span class="title-cn">回复：人与人之间没有摩擦</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Unknown · 📡 Jim Nielsen’s Blog</p>
+            <p class="summary">Dave Rupert puts words to the feeling in the air: the unspoken promise of AI is that you can automate away all the tasks and people who stand in your way. Sometimes I feel like there’s a palpable tension in the air as if we’re waiting to see whether ...</p>
+            <p class="summary-cn">📝 Dave Rupert 表达了空气中的感觉：AI 不言而喻的承诺是，您可以自动化处理所有任务和阻碍您的人。有时我感觉空气中弥漫着一种明显的紧张气氛，就好像我们在等待 AI 是否会首先取代设计师或工程师。受 AI 授权的设计师可能会觉得不再需要那些讨厌的、固执己见的工程师了。拥有 AI 的工程师可能会觉得 AI 创建的设计足以满足大多数情况。后端工程师觉得前端工程已经解决了问题。前端工程师知道搭建 CRUD 应用程序或整个后端 API 对于代理来说是简单的素材。与此同时，管理层坐在皮椅上咯咯地笑着说“让他们战斗吧……”这让我想起保罗·福特说过的话：生活中最残酷的事实是，如果没有你往往鄙视的其他纪律，你所热爱和关心的纪律就完全无关。啊，是的，这是一种古老的心态，你相信你的纪律是唯一真正重要的。矛盾的是，AI 对每个学科的承诺是，它将有助于绕过其他讨厌学科的乏味但几乎不必要的任务（和人员）。 AI 在我们耳边低语：“除了你，其他人的工作都很轻松”。但人很重要。他们总是有。互相交流才是重点！我期待着这样一个未来，希望决策者能够意识到：“糟糕！最好的产品来自于不同领域的团队。”</p>
+            <p class="link"><a href="https://blog.jim-nielsen.com/2026/re-people-arent-friction/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>The Mystery of Rennes-le-Château, Part 2: Secret Codes and Hidden Messages<span class="title-cn">雷恩城堡之谜，第 2 部分：密码和隐藏信息</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Jimmy Maher · 📡 The Digital Antiquarian</p>
+            <p class="summary">This series of articles chronicles the history, both real and pseudo, behind Gabriel Knight 3: Blood of the Sacred, Blood of the Damned. Rennes-le-Château enjoyed its first watershed moment as a media phenomenon when Albert Salamon wrote his newspape...</p>
+            <p class="summary-cn">📝 本系列文章记录了《加百利骑士 3：神圣之血、诅咒之血》背后的真实和虚假的历史。 1956 年，阿尔伯特·萨拉蒙 (Albert Salamon) 在报纸上发表文章时，雷恩城堡迎来了作为媒体现象的第一个分水岭。第二个转折点是 1961 年法国电视台播出了一部关于该村庄的纪录片。第三个转折点是 1967 年，当时将有数百本关于弗朗索瓦-贝朗热·索尼埃及其相关事宜的书籍中的第一本在法国出版。这本书最初的标题是“雷恩的黄金，或者贝朗格索尼埃的奇异生活”，后来以更耸人听闻的标题“Le Trésor Maudit de Rennes-le-Château”（“被诅咒的宝藏”）重新出版。雷恩城堡）。不管叫什么名字，它在法国非常非常受欢迎，极大地提升了故事的形象，并在一些非常根本的方面改变了它的个性。热拉尔·德·塞德。这本书的作者是热拉尔·德·塞德 (Gérard de Sède)，他是自从诺埃尔·科尔布 (Noël Corbu) 第一次开车上山以来，就一直在雷恩城堡 (Rennes-le-Château) 闲逛的一系列雇佣兵闲聊者之一。这些人是非常有趣的晚餐客人，但在你向他们告别之前，你最好检查一下他们的口袋，看看有没有掉进他们身上的好餐具。 Sède 出生于 1921 年，据他自己说</p>
+            <p class="link"><a href="https://www.filfre.net/2026/03/the-mystery-of-rennes-le-chateau-part-2-secret-codes-and-hidden-messages/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Premium: The Hater's Guide To Adobe<span class="title-cn">高级版：Adobe 仇恨者指南</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Edward Zitron · 📡 Ed Zitron's Where's Your Ed At</p>
+            <p class="summary">I hear from a lot of people that are filled with bilious fury about the tech industry, but few companies have pissed off the world more than Adobe.As the foremost monopolist in software, web and graphic design, Adobe has created one of the single-mos...</p>
+            <p class="summary-cn">📝 我听到很多人对科技行业充满了愤怒，但很少有公司比 Adobe 更让世界恼火。作为软件、网络和图形设计领域最重要的垄断者，Adobe 创造了资本主义历史上最滥用、最高利贷的畸形秀之一，让用户陷入无休止的惩罚性订阅他们需要的软件，而且情况似乎只会变得更糟。在司法部最近解决的针对 Adobe 的案件中，据透露，年度订阅的提前终止费用相当于客户订阅余额的 50%，一位不愿透露姓名的 Adobe 高管将这些费用称为“有点像 Adobe 的海洛因”。并补充说，“……绝对没有办法消灭 ETF，或者在不遭受重大业务打击的情况下更明显地谈论它。”“让我解释一下 Adobe 的商业模式到底是多么令人厌恶。”下面是 2026 年 3 月 18 日星期三 Adobe 网站的屏幕截图。人们可能会读到看到这里，你会想“哇，每月 34.99 美元，多划算啊！”并立即注册，无需点击“查看条款”其中显示，三个月后，订阅费用变为每月 69.99 美元，并且此“每月”费用为 69.99 美元。订阅是为期一年的合同。&#xa0;&#xa0;Adobe 故意隐藏了（我认为仍然隐藏！）其提前终止费用在“不显眼的超链接”后面</p>
+            <p class="link"><a href="https://www.wheresyoured.at/hatersguide-adobe/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Terence Tao – Kepler, Newton, and the true nature of mathematical discovery<span class="title-cn">陶哲轩 – 开普勒、牛顿和数学发现的真正本质</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Dwarkesh Patel · 📡 Dwarkesh Podcast</p>
+            <p class="summary">We begin the episode with the absolutely ingenious and surprising way in which Kepler discovered the laws of planetary motion.People sometimes say that AI will make especially fast progress at scientific discovery because of tight verification loops....</p>
+            <p class="summary-cn">📝 我们以开普勒发现行星运动定律的绝对巧妙和令人惊讶的方式开始这一集。人们有时会说 AI 将在科学发现方面取得特别快的进展，因为有严格的验证循环。但是我们如何发现太阳系形状的故事表明，正确想法的验证循环可能长达数十年（甚至数千年）。在此期间，我们今天所知道的更好的理论往往实际上会做出更糟糕的预测（哥白尼的循环模型）围绕太阳的轨道实际上不如托勒密的地心模型准确）。它在这种认知地狱中幸存下来的原因是判断和启发式的混合，我们甚至没有充分理解这些判断和启发式的实际表达，更不用说编入 RL 循环了。希望你喜欢！在 YouTube 上观看；在 Apple 播客或 Spotify 上收听。赞助商Jane Street 喜欢用不同的创意谜题挑战我的观众。我的一位听众 Shawn 解决了 Jane Street 的 ResNet 挑战，并在 X 上发布了一篇很棒的演练。如果您想亲自尝试其中一个谜题，现在在 janestreet.com/dwarkesh.Labelbox 上有一个现场直播可以为您提供基于标题的评估，无论您在哪个领域。这些规则允许您就您关心的所有维度向模型提供反馈，这样您就可以训练它的思维方式，而不仅仅是它的思维方式。无论您专注于数学、物理、金融、心理学还是其他学科，Labelbox c</p>
+            <p class="link"><a href="https://www.dwarkesh.com/p/terence-tao" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Windows stack limit checking retrospective: arm64, also known as AArch64<span class="title-cn">Windows 堆栈限制检查回顾：arm64，也称为 AArch64</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Raymond Chen · 📡 The Old New Thing</p>
+            <p class="summary">Our survey of stack limit checking wraps up with arm64, also known as AArch64. The stack limit checking takes two forms, one simple version for pure arm64 processes, and a more complex version for Arm64EC. I&#8217;m going to look at the simple versio...</p>
+            <p class="summary-cn">📝 我们对堆栈限制检查的调查以arm64（也称为AArch64）结束。堆栈限制检查采用两种形式，一种是针对纯 arm64 进程的简单版本，另一种是针对 Arm64EC 的更复杂版本。我要看看简单的版本。复杂版本的不同之处在于，在计算堆栈限制之前，它必须检查代码是否在本机arm64堆栈或模拟堆栈上运行。这部分并不是那么有趣。 ;输入时，x15 是要分配的段落数； （字节数除以 16）；退出时，堆栈已被验证（但未调整）；修改 x16, x17 chkstk: subs x16, sp, x15, lsl #4 ; x16 = sp - x15 * 16 ； x16 = 所需的新堆栈指针 csello x16, xzr, x16 ;下溢时钳位为 0 mov x17, sp 和 x17, x17, #-PAGE_SIZE ；向下舍入到最近的页面和 x16, x16, #-PAGE_SIZE ；向下舍入到最近的页 cmp x16, x17 ；在同一页上？完成； Y：无事可做探针：sub x17，x17，#PAGE_SIZE；移至下一页 ldr xzr, [x17] ;探针 cmp x17, x16 ;完毕？骨探针； N：继续完成：ret x15 中的入站值是所需的字节数除以 16。由于 arm64 堆栈必须保持 16 字节对齐，因此我们知道除以 16 不会产生余数。以段落形式传递数量可将单个常量加载中可表示的字节数从 0xFFF0 扩展到 0x0FFF0（通过 movz 指令），从而可以方便地分配堆栈帧，大小可达 1MB。自从</p>
+            <p class="link"><a href="https://devblogs.microsoft.com/oldnewthing/20260320-00/?p=112154" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>I'm OK being left behind, thanks!<span class="title-cn">我很乐意被抛在后面，谢谢！</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 @edent · 📡 Terence Eden’s Blog</p>
+            <p class="summary">Many years ago, someone tried to get me into cryptocurrencies. "They're the future of money!" they said. I replied saying that I'd rather wait until they were more useful, less volatile, easier to use, and utterly reliable. "You don't want to get lef...</p>
+            <p class="summary-cn">📝 许多年前，有人试图让我进入加密货币领域。 “他们是金钱的未来！”他们说。我回答说我宁愿等到它们更有用、更不易波动、更容易使用并且完全可靠时再使用。 “你不想被抛在后面，是吗？”他们反驳道。这让我觉得很奇怪。还有什么可以留下的呢？如果比特币（或其他什么）要把我们所有人从经济苦役中解放出来，那么“尽早介入”的意义何在？明天它仍然在那里，只要对我来说合适，我就可以加入旅程。加密货币诈骗的一部分是告诉人们“保持贫穷也很有趣”。将 FOMO 武器化是一种让人们放弃怀疑的阴险方式。我对当前的 AI 工具也有同样的感觉。我已经尝试了很多。有些是好的。大多数都有点狗屎。很少有像现在这样对我有用的。我非常乐意等待他们的炒作成为现实。当 Google Docs 随时都会推出时，为什么我应该投资学习 DOS 的 WordStar 等价物？如果这项技术像你所说的那样令人惊叹，我将能够采用它并在我选择的而不是你选择的时间范围内变得富有成效。 Git 刚出现时我并没有使用它。当它稳定下来并且工作开始需要它时，我就接受了它。如果我早年经历过痛苦，我的效率是否会提高 7%？或许。但那又怎样呢？我很容易浪费时间去学习一些永远不会成功的东西。我在 Metaver 上写了我的 MSc</p>
+            <p class="link"><a href="https://shkspr.mobi/blog/2026/03/im-ok-being-left-behind-thanks/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Why Is Everyone Supposed to Die If Machines Can Think?<span class="title-cn">如果机器可以思考，为什么每个人都会死？</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Ibrahim Diallo @dialloibu · 📡 iDiallo.com</p>
+            <p class="summary">If you only listen to spokespersons for AI companies, you'll have a skewed view of how AI is actually being integrated into the workplace. You probably don't need to convince a developer to include it in their workflow, but you also can't dictate how...</p>
+            <p class="summary-cn">📝 如果您只听 AI 公司发言人的话，您就会对 AI 实际上如何融入工作场所有一个偏颇的看法。您可能不需要说服开发人员将其包含在他们的工作流程中，但您也无法规定他们如何这样做。每当我在结对编程期间坐在另一位开发人员旁边时，我都会情不自禁地对他们的设置感到沮丧。但我不会抱怨，因为他们也会对我的抱怨感到恼火。开发工作的美妙之处在于，最重要的是输出。如果您使用像 Create React App 这样的样板生成器，很少有人会抱怨。如果你使用 AI 生成相同的代码，只要它能工作，也没有人会抱怨。如果代码是用您自己的湿软件编写的，那么没有人会更明智。开发人员将使用他们可以使用的任何工具来提高自己的生产力。但是，当每个开发者每月 1000 美元的订阅费用开始变得昂贵时会发生什么？当管理者期望十倍的投资回报，但冲刺速度却没有改变时，会发生什么？一方面，创建新的指标来跟踪开发人员对该工具的使用情况。根据我的经验，这些信息非常不准确并且差异很大。另一方面，公司则使用 AI 作为裁员的理由。那么哪个指标值得信赖呢？ AI 不仅仅是寻找问题的解决方案。这非常有用。一个人会告诉你它非常适合编写测试，另一个人会称赞它可以编写实用函数，还有一个人会用它来编写测试用例。</p>
+            <p class="link"><a href="https://idiallo.com/blog/everyone-is-supposed-to-die-when-machines-can-think?src=feed" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>The first 3Dfx card: Orchid Righteous 3D<span class="title-cn">第一张3Dfx卡：兰花正气3D</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Dave Farquhar · 📡 The Silicon Underground</p>
+            <p class="summary">On March 20, 1996, Orchid Technologies announced the Orchid Righteous 3D, the first consumer graphics card based on 3Dfx technology. It retailed for $299, achieved FCC certification July 24, 1996, and reached retail shelves October 6, 1996, beating D...</p>
+            <p class="summary-cn">📝 1996 年 3 月 20 日，Orchid Technologies 发布了 Orchid Righteous 3D，这是第一款基于 3Dfx 技术的消费类显卡。它的零售价为 299 美元，于 1996 年 7 月 24 日获得 FCC 认证，并于 1996 年 10 月 6 日进入零售货架，击败了 Diamond Multimedia 的 The post 第一张 3Dfx 卡：Orchid Righteous 3D 首先出现在 The Silicon Underground 上。</p>
+            <p class="link"><a href="https://dfarq.homeip.net/the-first-3dfx-card-orchid-righteous-3d/?utm_source=rss&utm_medium=rss&utm_campaign=the-first-3dfx-card-orchid-righteous-3d" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>EnshittifAIcation<span class="title-cn">恩施蒂夫AIcation</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 Stefano Marinelli · 📡 IT Notes</p>
+            <p class="summary">Three episodes, one week. AI bots that hallucinate VPN requirements, recommend Apache configs on nginx servers, and suggest replacing 128 GB of RAM with a cloud VPS. A field note on the cost of mistaking confidence for competence....</p>
+            <p class="summary-cn">📝 三集，一周。 AI 机器人会产生 VPN 需求，推荐 nginx 服务器上的 Apache 配置，并建议用云 VPS 替换 128 GB RAM。关于将信心误认为能力的成本的现场记录。</p>
+            <p class="link"><a href="https://it-notes.dragas.net/2026/03/20/enshittifaication/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>The best laptop Apple ever made<span class="title-cn">有史以来最好的笔记本电脑 Apple</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 jeff@jeffgeerling.com (Jeff Geerling) · 📡 Jeff Geerling</p>
+            <p class="summary">Today I posted a video titled The best laptop Apple ever made, and tl;dw1 it's the 11&quot; MacBook Air. I acknowledge in the video my pick is slightly subjective, and I also asked a number of other YouTubers which Mac laptop they consider the best (...</p>
+            <p class="summary-cn">📝 今天我发布了一个视频，标题为有史以来最好的笔记本电脑 Apple，tl;dw1 这是 11 英寸笔记本电脑。 MacBook Air。我在视频中承认我的选择有点主观，而且我还询问了其他一些 YouTube 用户，他们认为哪款 Mac 笔记本电脑最好（或至少最有影响力）。如果你不想看视频，我将在这里总结他们的选择：</p>
+            <p class="link"><a href="https://www.jeffgeerling.com/blog/2026/best-laptop-apple-ever-made/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Feds Disrupt IoT Botnets Behind Huge DDoS Attacks<span class="title-cn">联邦调查局破坏了大规模 DDoS 攻击背后的 IoT 僵尸网络</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 BrianKrebs · 📡 Krebs on Security</p>
+            <p class="summary">The U.S. Justice Department joined authorities in Canada and Germany in dismantling the online infrastructure behind four highly disruptive botnets that compromised more than three million Internet of Things (IoT) devices, such as routers and web cam...</p>
+            <p class="summary-cn">📝 美国司法部与加拿大和德国当局一起拆除了四个极具破坏性的僵尸网络背后的在线基础设施，这些网络基础设施损害了超过三百万个物联网 (IoT) 设备，例如路由器和网络摄像头。联邦政府称这四个僵尸网络“名为 Aisuru、Kimwolf、JackSkid 和 Mossad &#8212;最近发生了一系列创纪录的分布式拒绝服务 (DDoS) 攻击，这些攻击能够使几乎所有目标离线。图片：Shutterstock，@Elzicon。美国司法部表示，国防部监察长办公室 (DoDIG) 国防刑事调查局 (DCIS) 对多个在美国注册的域名、虚拟服务器和其他参与针对国防部拥有的互联网地址进行 DDoS 攻击的基础设施执行了扣押令。政府声称，控制这四个僵尸网络的未透露姓名的人利用他们的犯罪机器发起了数十万次 DDoS 攻击，通常要求受害者勒索付款。一些受害者报告了数万美元的损失和补救费用。最古老的僵尸网络——艾苏鲁&#8212;发出了超过 200,000 次攻击命令，而 JackSkid 则发起了至少 90,000 次攻击。政府表示，金沃尔夫发出了超过 25,000 次攻击命令，而摩萨德则被指责实施了大约 1,000 次数字围攻。 DOJ 表示，执法行动旨在防止受害者设备进一步受到感染，并</p>
+            <p class="link"><a href="https://krebsonsecurity.com/2026/03/feds-disrupt-iot-botnets-behind-huge-ddos-attacks/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+<div class="two-col">
+        <div class="article">
+            <h2>Members Only: How do we define our own flourishing?<span class="title-cn">仅限会员：我们如何定义自己的繁荣？</span></h2>
+            <p class="meta">📅 2026-03-20 · 👤 JA Westenberg · 📡 Westenberg.</p>
+            <p class="summary">Nikolai Kardashev believed we could classify civilisations by the eneregy they harness. The Soviet Astrophysicist proposed three &#x201c;Types&#x201d; of civilisation - Type I controls the energy budget of its homeward, Type II controls a star, and T...</p>
+            <p class="summary-cn">📝 尼古拉·卡尔达肖夫相信我们可以根据文明所利用的能量对它们进行分类。苏联天体物理学家提出了三种“类型”：文明的等级 - I 型控制其返航的能量预算，II 型控制一颗恒星，III 型控制一个星系。按照卡尔达舍夫的衡量标准，人类的指数约为 0.73，正在慢慢向 I 型文明迈进。在一切条件相同的情况下，我们将在未来一百年左右的时间内实现这一目标。卡尔达舍夫的框架现在是我们所拥有的最接近我们如何看待文明本身的默认词汇的东西。它出现在 TED 演讲和宣言中，出现在教科书和机场畅销书中，几乎涵盖了所有关于人类潜力的对话。我们的想法是这样的：能量吞吐量是我们与恒星的唯一区别。你得到了足够的它，你使用了足够的它，你就可以遍布整个银河系，殖民宇宙的天赋。谁知道呢——你甚至可能打败死亡本身。简而言之，你将成为一个名副其实的文明。但这一切都是真的吗？能源掌握//文明繁荣实际上是同一件事吗？卡尔达肖夫给了我们一个理论，还是一个神话？单一数字是一个性感的东西卡尔达肖夫的量表在心理层面上对我们有吸引力。它为我们提供了一个单一的轴来对所有可能的文明以及我们可能成为的人和事物的所有可能的变化进行排名；也许更重要的是，</p>
+            <p class="link"><a href="https://www.joanwestenberg.com/members-only-how-do-we-define-our-own-flourishing/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+        <div class="article">
+            <h2>Pluralistic: Love of corporate bullshit is correlated with bad judgment (19 Mar 2026)<span class="title-cn">多元主义：对企业废话的喜爱与错误判断相关（2026 年 3 月 19 日）</span></h2>
+            <p class="meta">📅 2026-03-19 · 👤 Cory Doctorow · 📡 Pluralistic: Daily links from Cory Doctorow</p>
+            <p class="summary">->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> Top Sources: None --> Today's links Love of corporate bullshit is correlated with bad judgment: Synergizing the strategic inflection points on the global data network. Hey look at this: Delig...</p>
+            <p class="summary-cn">📝 ->->->->->->->->->->->->->->->->->->->->->->->->->->->->-> 主要来源：无 --> 今天的链接 对企业废话的热爱与错误的判断相关：协同全球数据网络上的战略拐点。嘿，看看这个：很高兴享受。物体持久性：蓝牙耳机；水果贴纸解码器； iPod 电池 v DRM； Bruces 的 SXSW 主题演讲；海盗行为并不是资助恐怖主义；而是资助恐怖主义。希望与乐观；同卵双胞胎时空旅行恶作剧；囚犯吸引企业骗子；西班牙垃圾机器人；警长否认强奸案；不傻的魔法；诗意官僚哀狼； SXSW v MPAA； 《燃烧的日子》；纽约时报付费专区；警方说唱战斗警告；工会降低劳动力风险； “谋杀真相”即将亮相：在哪里可以找到我。最近出现：我去过的地方。最新书籍：你继续读它们，我会继续写它们。即将出版的书：就像我说的，我会继续写。版权页：剩下的都可以。对企业废话的热爱与错误的判断有关（永久链接）我是一名作家，所以我当然关心文字！但我是一名作家，所以我也认为文字的可塑性、二元性和细微差别可以得到改善。这是我作为一个以英语为母语的人喜欢的事情之一——我们这种辉煌的杂种语言充满了极其奇怪的单词，比如“cleave”，它的意思是它的反义词（“结合在一起”和“分开”）。英语中充满了这些含义相反的单词，从“灰尘”到“监督”再到“天气”：https://www.mentalfloss.com/language/w</p>
+            <p class="link"><a href="https://pluralistic.net/2026/03/19/jargon-watch/" target="_blank">🔗 查看原文 →</a></p>
+        </div>
+</div>
+        <div class="footer">
+            <p>🦐 伊利虾 | 由 OpenClaw 驱动 | 2026年03月27日</p>
+        </div>
+    </div>
+</body>
+</html>
