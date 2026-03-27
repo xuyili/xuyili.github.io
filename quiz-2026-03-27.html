@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI知识小测验 2026-03-27</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); min-height: 100vh; color: white; }
+        h1 { text-align: center; color: #667eea; font-size: 2em; margin-bottom: 10px; }
+        .nav { text-align: center; margin-bottom: 15px; }
+        .nav a { color: #667eea; text-decoration: none; }
+        .subtitle { text-align: center; color: #888; margin-bottom: 30px; }
+        .quiz-container { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 25px; margin-bottom: 20px; }
+        .question-num { color: #ff9800; font-weight: bold; margin-bottom: 10px; }
+        .question { font-size: 1.1em; margin-bottom: 15px; line-height: 1.6; }
+        .options label { display: block; padding: 12px 15px; margin: 8px 0; background: rgba(255,255,255,0.05); border-radius: 10px; cursor: pointer; }
+        .options input { margin-right: 10px; }
+        .btn { display: block; width: 100%; padding: 15px; background: #667eea; color: white; border: none; border-radius: 10px; font-size: 1.1em; cursor: pointer; margin-top: 20px; }
+        .result { display: none; background: rgba(255,255,255,0.1); border-radius: 20px; padding: 30px; margin-top: 30px; text-align: center; }
+        .score { font-size: 3em; color: #ff9800; margin-bottom: 20px; }
+        .analysis { display: none; margin-top: 30px; }
+        .analysis-item { background: rgba(255,255,255,0.05); border-radius: 10px; padding: 15px; margin-bottom: 15px; }
+        .correct { color: #4caf50; }
+        .wrong { color: #f44336; }
+    </style>
+</head>
+<body>
+    <div class="nav"><a href="/archive.html">← 返回专栏</a></div>
+    <h1>🧠 AI知识小测验</h1>
+    <p class="subtitle">2026-03-27 · 10道题测测你对AI的了解</p>
+    <div id="quiz">
+        <div class="quiz-container" id="q-container"></div>
+        <button class="btn" onclick="submitQuiz()">提交答案</button>
+    </div>
+    <div class="result" id="result">
+        <div class="score" id="score"></div>
+        <p id="score-text"></p>
+        <button class="btn" onclick="showAnalysis()">查看解析</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <script>
+    const questions = [{"question": "Transformer架构中最核心的机制是什么？", "options": ["A. 卷积层", "B. 循环层", "C. 注意力机制", "D. 池化层"], "answer": "C", "explanation": "Transformer架构是由Google在2017年论文《Attention Is All You Need》中提出的，其核心创新在于完全摒弃了传统的循环和卷积结构，仅使用注意力机制（Attention Mechanism）来捕捉序列中的长距离依赖关系。注意力机制允许模型在处理每个词时关注输入序列中的所有其他词，从而更有效地捕获上下文信息。"}, {"question": "以下哪个模型是由OpenAI开发的？", "options": ["A. Claude", "B. Gemini", "C. GPT-4", "D. Llama"], "answer": "C", "explanation": "GPT-4是由OpenAI开发的大型语言模型。Claude由Anthropic开发，Gemini由Google开发，Llama由Meta（原Facebook）开发。OpenAI的GPT系列是目前最具影响力的大语言模型之一，从GPT-1发展到GPT-4，展现了强大的语言理解和生成能力。"}, {"question": "大型语言模型（LLM）训练流程的三个主要阶段是？", "options": ["A. 预训练、微调、推理", "B. 数据收集、特征工程、部署", "C. 预训练、有监督微调、人类反馈强化学习", "D. 数据清洗、模型压缩、评估"], "answer": "C", "explanation": "现代LLM的训练通常包含三个阶段：1) 预训练（Pre-training）：在大规模文本数据上学习语言表示；2) 有监督微调（Supervised Fine-tuning）：在标注数据上微调模型使其遵循指令；3) 人类反馈强化学习（RLHF）：通过人类反馈进一步优化模型的输出质量和安全性。"}, {"question": "Anthropic公司推出的AI助手名称是什么？", "options": ["A. ChatGPT", "B. Bard", "C. Claude", "D. Copilot"], "answer": "C", "explanation": "Claude是由Anthropic公司开发的AI助手。Anthropic成立于2021年，由OpenAI前员工创立，其核心产品Claude以安全性高、输出可控著称。ChatGPT由OpenAI开发，Bard（现更名为Gemini）由Google开发，Copilot由Microsoft开发。"}, {"question": "以下哪项不是深度学习在自然语言处理中的应用？", "options": ["A. 机器翻译", "B. 情感分析", "C. 图像分类", "D. 文本摘要"], "answer": "C", "explanation": "图像分类是计算机视觉领域的任务，而非自然语言处理的应用。深度学习在NLP中的应用包括：机器翻译、情感分析、文本摘要、问答系统、命名实体识别等。图像分类主要使用CNN等架构处理图像数据。"}, {"question": "Token在LLM中是什么意思？", "options": ["A. 一种加密货币", "B. 模型的最小处理单位", "C. 模型的层数", "D. 一种编程语言"], "answer": "B", "explanation": "Token是LLM处理文本时的最小单位。一个token可以是一个单词、一个子词（subword）或一个字符。例如，在GPT的tokenization中，英文单词\"learning\"可能被分成\"learn\"和\"\"ing\"\"两个token。模型通过token嵌入将文本转换为向量进行计算。理解token概念对掌握LLM的工作原理和计算成本很重要。"}, {"question": "以下哪个不是Prompt Engineering的技巧？", "options": ["A.Few-shot提示", "B. 思维链推理", "C. 增大模型参数", "D. 角色设定"], "answer": "C", "explanation": "Prompt Engineering是指设计和优化输入提示来引导LLM产生更好输出的技术。常见技巧包括：1) Few-shot提示：提供少量示例；2) 思维链推理（Chain of Thought）：让模型展示推理过程；3) 角色设定：给模型设定特定角色；4) 清晰明确的指令。而增大模型参数是模型层面的改变，不属于prompt工程技巧。"}, {"question": "RAG（检索增强生成）技术的主要目的是？", "options": ["A. 增加模型参数数量", "B. 减少推理计算量", "C. 让模型能够访问最新或特定领域信息", "D. 提高模型训练速度"], "answer": "C", "explanation": "RAG（Retrieval-Augmented Generation）是一种结合检索系统和生成模型的技术。其主要目的是让LLM能够访问和利用训练数据之外的信息，如最新知识、特定领域文档或企业私有数据，从而生成更准确、更新的回答。RAG通过检索相关文档并将检索结果融入prompt来解决知识截止日期和知识 hallucinations（幻觉）问题。"}, {"question": "以下哪种方法可以有效减少LLM的幻觉问题？", "options": ["A. 增加模型参数规模", "B. 使用RAG和事实核查", "C. 减少训练数据量", "D. 使用更深的网络层数"], "answer": "B", "explanation": "幻觉（Hallucination）是指LLM生成看似合理但实际不正确的内容。减少幻觉的方法包括：1) RAG：通过检索外部知识库提供事实依据；2) 事实核查：使用外部工具验证生成内容的准确性；3) CoVe（验证链）：让模型自我检查。其他选项如增大参数或增加层数反而可能加剧幻觉问题。"}, {"question": "Transformer模型中的\"多头注意力\"（Multi-Head Attention）作用是？", "options": ["A. 增加计算复杂度", "B. 让模型同时关注不同位置的不同类型信息", "C. 减少模型参数量", "D. 加快训练速度"], "answer": "B", "explanation": "多头注意力是Transformer的核心组件之一。它通过并行运行多个注意力函数（头），让模型能够在不同的表示子空间中关注不同的信息。例如，一个头可能关注语法结构，另一个头关注语义关系，多个头共同作用，使模型能够更全面地捕捉序列中的各种关系和特征。这是Transformer性能优异的关键原因。"}];
+    
+    function renderQuiz() {
+        const c = document.getElementById('q-container');
+        c.innerHTML = questions.map((q, i) => `<div class="question-num">第${i+1}题</div><div class="question">${q.question}</div><div class="options">${q.options.map((o, j) => `<label><input type="radio" name="q${i}" value="${String.fromCharCode(65+j)}">${o}</label>`).join('')}</div>`).join('');
+    }
+    
+    function submitQuiz() {
+        let s = 0, ans = [];
+        questions.forEach((q, i) => {
+            const sel = document.querySelector(`input[name="q${i}"]:checked`);
+            const u = sel ? sel.value : null;
+            if (u === q.answer) { s++; ans.push({i, correct:true, u, a:q.answer}); }
+            else { ans.push({i, correct:false, u, a:q.answer}); }
+        });
+        document.getElementById('quiz').style.display = 'none';
+        document.getElementById('result').style.display = 'block';
+        document.getElementById('score').textContent = `${s}/10`;
+        document.getElementById('score-text').textContent = s>=7 ? '太棒了！' : s>=5 ? '不错哦！' : '继续加油！';
+        window.ans = ans;
+    }
+    
+    function showAnalysis() {
+        const c = document.getElementById('analysis');
+        c.style.display = 'block';
+        c.innerHTML = '<h2>📝 答案解析</h2>' + window.ans.map(a => `<div class="analysis-item"><div class="${a.correct?'correct':'wrong'}"><strong>第${a.i+1}题：${a.correct?'✅ 正确':'❌ 错误'}</strong></div><div>你的答案：${a.u||'未作答'} · 正确答案：${a.a}</div><div style="margin-top:8px;color:#ccc;">📖 ${questions[a.i].explanation}</div></div>`).join('');
+    }
+    renderQuiz();
+    </script>
+</body>
+</html>
