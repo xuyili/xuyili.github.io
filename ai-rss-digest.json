@@ -1,0 +1,455 @@
+{
+  "generated_at": "2026-04-06T18:20:03",
+  "items": [
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-02-15",
+      "url": "https://seangoedecke.com/fast-llm-inference/",
+      "title_en": "Two different tricks for fast LLM inference",
+      "title_zh": "两种加速 LLM 推理的不同技巧",
+      "summary_en": "Compares Anthropic and OpenAI fast modes, showing that they optimize for different trade-offs in throughput, latency, and coding responsiveness.",
+      "summary_zh": "文章比较了 Anthropic 和 OpenAI 的快速模式，指出两者在吞吐、延迟和编程响应性上的取舍并不相同。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-03-23",
+      "url": "https://www.gilesthomas.com/2026/03/llm-from-scratch-32f-interventions-weight-decay",
+      "title_en": "Writing an LLM from scratch, part 32f -- Interventions: weight decay",
+      "title_zh": "从零训练 LLM，第 32f 篇：权重衰减",
+      "summary_en": "Continues a GPT-2-from-scratch series by measuring how AdamW weight decay changes code-model test loss.",
+      "summary_zh": "这篇从零训练 GPT-2 的系列文章继续研究 AdamW 的权重衰减对代码模型测试损失的影响。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-02-05",
+      "url": "https://www.gilesthomas.com/2026/02/llm-from-scratch-32b-interventions-gradient-clipping",
+      "title_en": "Writing an LLM from scratch, part 32b -- Interventions: gradient clipping",
+      "title_zh": "从零训练 LLM，第 32b 篇：梯度裁剪",
+      "summary_en": "Studies gradient clipping as a practical intervention for improving stability and loss in a scratch-trained GPT-2-small model.",
+      "summary_zh": "作者把梯度裁剪当作一次具体干预，观察它能否提升从零训练 GPT-2 small 的稳定性和效果。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-02-04",
+      "url": "https://www.gilesthomas.com/2026/02/llm-from-scratch-32a-interventions-baseline-model",
+      "title_en": "Writing an LLM from scratch, part 32a -- Interventions: training a baseline model",
+      "title_zh": "从零训练 LLM，第 32a 篇：训练基线模型",
+      "summary_en": "Establishes a local-hardware baseline GPT-2-small run so later interventions can be compared against a clear reference point.",
+      "summary_zh": "文章先建立一个本地硬件训练的 GPT-2 small 基线，方便后续各种干预手段做对照。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-01-28",
+      "url": "https://www.gilesthomas.com/2026/01/custom-automodelforcausallm-frompretrained-models-on-hugging-face",
+      "title_en": "Getting a custom PyTorch LLM onto the Hugging Face Hub (Transformers: AutoModel, pipeline, and Trainer)",
+      "title_zh": "把自定义 PyTorch LLM 上传到 Hugging Face Hub",
+      "summary_en": "Explains how to package a custom PyTorch LLM so it works cleanly with Hugging Face AutoModel, pipeline, and Trainer APIs.",
+      "summary_zh": "作者讲解了如何把自定义 PyTorch LLM 打包成兼容 Hugging Face AutoModel、pipeline 和 Trainer 的形式。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2025-12-20",
+      "url": "http://antirez.com/news/157",
+      "title_en": "Reflections on AI at the end of 2025",
+      "title_zh": "2025 年末的 AI 反思",
+      "summary_en": "Argues that by late 2025 many researchers could no longer dismiss LLMs as mere stochastic parrots without meaningful internal representations.",
+      "summary_zh": "作者认为到了 2025 年底，再把 LLM 说成毫无内部表示的“随机鹦鹉”已经越来越站不住脚。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-03-10",
+      "url": "https://www.gilesthomas.com/2026/03/llm-from-scratch-32e-interventions-learning-rate",
+      "title_en": "Writing an LLM from scratch, part 32e -- Interventions: the learning rate",
+      "title_zh": "从零训练 LLM，第 32e 篇：学习率",
+      "summary_en": "Tests how learning-rate choices affect optimization and final loss in an independently trained GPT-2-small code model.",
+      "summary_zh": "这篇文章测试了不同学习率设置会怎样影响从零训练 GPT-2 small 代码模型的优化过程和最终损失。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-02-23",
+      "url": "https://seangoedecke.com/continuous-learning/",
+      "title_en": "What's so hard about continuous learning?",
+      "title_zh": "持续学习为什么这么难",
+      "summary_en": "Explains why deployed models do not keep learning like humans unless weights, data pipelines, and training loops are updated.",
+      "summary_zh": "作者解释了为什么部署后的模型不会像人类员工那样持续成长，除非权重、数据和训练流程继续更新。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-01-11",
+      "url": "http://antirez.com/news/158",
+      "title_en": "Don't fall into the anti-AI hype",
+      "title_zh": "别掉进反 AI 炒作",
+      "summary_en": "Pushes back on blanket anti-AI rhetoric while still acknowledging legitimate worries about labor, power, and social impact.",
+      "summary_zh": "文章反对一刀切的反 AI 叙事，同时也承认对劳动、权力和社会影响的担忧并非空穴来风。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-03-03",
+      "url": "https://seangoedecke.com/giving-llms-a-personality/",
+      "title_en": "Giving LLMs a personality is just good engineering",
+      "title_zh": "赋予 LLM 人格，其实是好的工程实践",
+      "summary_en": "Argues that deliberate model personality design can improve usability because it shapes expectations and interaction quality.",
+      "summary_zh": "作者认为有意识地设计模型人格并不是噱头，而是改善可用性和用户预期管理的一种工程方法。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-01-14",
+      "url": "https://lucumr.pocoo.org/2026/1/14/minijinja-go-port/",
+      "title_en": "Porting MiniJinja to Go With an Agent",
+      "title_zh": "用 Agent 把 MiniJinja 移植到 Go",
+      "summary_en": "Describes using a coding agent to do most of a cross-language port from Rust MiniJinja to native Go.",
+      "summary_zh": "文章描述了作者如何让编码 Agent 完成了从 Rust MiniJinja 到原生 Go 的大部分移植工作。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-02-17",
+      "url": "https://seangoedecke.com/generate-skills-afterwards/",
+      "title_en": "LLM-generated skills work, if you generate them afterwards",
+      "title_zh": "LLM 生成的技能，在事后生成时才真正有用",
+      "summary_en": "Argues that model-generated skills help more when they are distilled after solving tasks than when they are invented in advance.",
+      "summary_zh": "作者认为模型生成的“技能”在任务完成后再总结提炼，比事先凭空生成更有价值。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-03-24",
+      "url": "https://www.gilesthomas.com/2026/03/llm-from-scratch-32g-interventions-weight-tying",
+      "title_en": "Writing an LLM from scratch, part 32g -- Interventions: weight tying",
+      "title_zh": "从零训练 LLM，第 32g 篇：权重绑定",
+      "summary_en": "Explores weight tying in modern LLMs and why a lower parameter count can still come with quality trade-offs.",
+      "summary_zh": "文章讨论了现代 LLM 中的权重绑定，说明参数更少并不一定意味着质量更好。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2025-07-20",
+      "url": "http://antirez.com/news/154",
+      "title_en": "Coding with LLMs in the summer of 2025 (an update)",
+      "title_zh": "2025 年夏天用 LLM 编程（更新）",
+      "summary_en": "Reflects on how frontier models in 2025 amplify programmers who can clearly frame problems and manage iterative collaboration.",
+      "summary_zh": "作者回顾 2025 年的编程体验，认为前沿模型正在放大那些能够清楚定义问题并进行多轮协作的程序员。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-02-24",
+      "url": "http://antirez.com/news/160",
+      "title_en": "Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code",
+      "title_zh": "用 Claude Code 实现洁净室 Z80 / ZX Spectrum 模拟器",
+      "summary_en": "Uses Claude Code to build a Z80 and ZX Spectrum emulator while questioning how clean-room AI experiments should really be structured.",
+      "summary_zh": "作者借助 Claude Code 实现 Z80 与 ZX Spectrum 模拟器，同时质疑所谓 AI 洁净室实验应该怎样才算严谨。"
+    },
+    {
+      "source": "pluralistic.net",
+      "date": "2026-04-02",
+      "url": "https://pluralistic.net/2026/04/02/limited-monopoly/",
+      "title_en": "Pluralistic: It's extremely good that Claude's source-code leaked (02 Apr 2026)",
+      "title_zh": "Claude 源代码泄漏其实是件好事",
+      "summary_en": "Argues that the Claude leak is clarifying because it exposes tensions between closed AI products, user expectations, and transparency.",
+      "summary_zh": "作者认为 Claude 源代码泄漏之所以重要，在于它暴露了封闭式 AI 产品、透明度与用户期待之间的矛盾。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-04-03",
+      "url": "https://seangoedecke.com/programming-with-ai-agents-as-theory-building/",
+      "title_en": "Programming (with AI agents) as theory building",
+      "title_zh": "用 AI Agent 编程，本质上是在构建理论",
+      "summary_en": "Recasts programming with AI agents as theory building, where the core asset is still the engineer's mental model of the system.",
+      "summary_zh": "文章把使用 AI Agent 编程重新定义为“构建理论”，强调工程师脑中的系统理解仍然是核心资产。"
+    },
+    {
+      "source": "idiallo.com",
+      "date": "2026-04-01",
+      "url": "https://idiallo.com/blog/what-is-copilot-exactly?src=feed",
+      "title_en": "What is Copilot exactly?",
+      "title_zh": "Copilot 到底是什么？",
+      "summary_en": "Examines why some strong developers rely on Microsoft Copilot heavily while others remain unconvinced by its practical value.",
+      "summary_zh": "作者讨论了为什么有些强力开发者高度依赖 Copilot，而另一些人依然觉得它没有解决关键问题。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-02-09",
+      "url": "https://lucumr.pocoo.org/2026/2/9/a-language-for-agents/",
+      "title_en": "A Language For Agents",
+      "title_zh": "面向 Agent 的语言",
+      "summary_en": "Argues that agentic engineering may eventually influence the design of future programming languages instead of merely adapting to old ones.",
+      "summary_zh": "文章认为 Agentic Engineering 最终可能反过来塑造未来的编程语言，而不是只适配旧语言。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-01-31",
+      "url": "https://lucumr.pocoo.org/2026/1/31/pi/",
+      "title_en": "Pi: The Minimal Agent Within OpenClaw",
+      "title_zh": "OpenClaw 里的极简 Agent：Pi",
+      "summary_en": "Introduces Pi as a minimal agent design inside OpenClaw and explains why the project resonated so widely.",
+      "summary_zh": "这篇文章介绍了 OpenClaw 中的极简 Agent Pi，并解释了它为什么能在网上迅速传播。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-02-06",
+      "url": "https://www.gilesthomas.com/2026/02/llm-from-scratch-32d-interventions-adding-attention-bias",
+      "title_en": "Writing an LLM from scratch, part 32d -- Interventions: adding attention bias",
+      "title_zh": "从零训练 LLM，第 32d 篇：加入 attention bias",
+      "summary_en": "Tests whether adding attention bias improves a scratch GPT-2-small model trained on code.",
+      "summary_zh": "作者测试了在从零训练的 GPT-2 small 代码模型中加入 attention bias 是否真的能带来收益。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2025-12-23",
+      "url": "https://lucumr.pocoo.org/2025/12/23/advent-of-slop/",
+      "title_en": "Advent of Slop: A Guest Post by Claude",
+      "title_zh": "糊弄时代降临节：Claude 来稿",
+      "summary_en": "Presents a Claude-written guest post about solving Advent of Code and what that reveals about AI voice and authorship.",
+      "summary_zh": "这是一篇以 Claude 口吻撰写的 Advent of Code 来稿，也顺带讨论了 AI 的声音和作者身份问题。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-04-03",
+      "url": "https://www.gilesthomas.com/2026/04/llm-from-scratch-32h-interventions-full-fat-float32",
+      "title_en": "Writing an LLM from scratch, part 32h -- Interventions: full fat float32",
+      "title_zh": "从零训练 LLM，第 32h 篇：使用完整 float32",
+      "summary_en": "Measures whether switching back to full float32 improves results after using lower-precision training optimizations.",
+      "summary_zh": "文章测试在使用低精度优化之后，重新切回完整 float32 是否会改善训练结果。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-02-05",
+      "url": "https://www.gilesthomas.com/2026/02/llm-from-scratch-32c-interventions-removing-dropout",
+      "title_en": "Writing an LLM from scratch, part 32c -- Interventions: removing dropout",
+      "title_zh": "从零训练 LLM，第 32c 篇：移除 dropout",
+      "summary_en": "Evaluates how removing dropout changes the loss profile of a scratch-trained GPT-2-small model.",
+      "summary_zh": "作者评估了去掉 dropout 之后，从零训练 GPT-2 small 的损失曲线会发生什么变化。"
+    },
+    {
+      "source": "michael.stapelberg.ch",
+      "date": "2026-02-01",
+      "url": "https://michael.stapelberg.ch/posts/2026-02-01-coding-agent-microvm-nix/",
+      "title_en": "Coding Agent VMs on NixOS with microvm.nix",
+      "title_zh": "基于 microvm.nix 在 NixOS 上运行编码 Agent 虚拟机",
+      "summary_en": "Shows how to run coding agents inside disposable NixOS microVMs so command execution becomes safer and less tedious to supervise.",
+      "summary_zh": "文章展示了如何在 NixOS 的 microVM 中运行编码 Agent，从而让命令执行更安全、更容易监管。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-04-05",
+      "url": "https://simonwillison.net/2026/Apr/5/building-with-ai/#atom-everything",
+      "title_en": "Eight years of wanting, three months of building with AI",
+      "title_zh": "八年想法，三个月用 AI 做出来",
+      "summary_en": "Highlights a long gestation project that finally shipped after a concentrated three-month push with AI assistance.",
+      "summary_zh": "作者借一个酝酿八年、靠三个月 AI 协作落地的项目，说明 AI 如何缩短长期想法到成品之间的距离。"
+    },
+    {
+      "source": "anildash.com",
+      "date": "2026-02-24",
+      "url": "https://anildash.com/2026/02/23/taking-action-ai-harms/",
+      "title_en": "Taking action against AI harms",
+      "title_zh": "对 AI 伤害采取行动",
+      "summary_en": "Focuses on concrete ways to hold AI companies accountable for real-world harms instead of stopping at abstract criticism.",
+      "summary_zh": "文章关注的不是抽象层面的批评，而是如何真正让制造 AI 伤害的公司承担责任。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-04-06",
+      "url": "https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything",
+      "title_en": "Google AI Edge Gallery",
+      "title_zh": "Google AI 边缘模型画廊",
+      "summary_en": "Shows off Google's app for running Gemma-family models directly on an iPhone, including multimodal local use cases.",
+      "summary_zh": "Simon Willison 介绍了 Google 在 iPhone 上本地运行 Gemma 系列模型的应用，并强调它的多模态使用场景。"
+    },
+    {
+      "source": "evanhahn.com",
+      "date": "2026-03-31",
+      "url": "https://evanhahn.com/notes-from-march-2026/",
+      "title_en": "Notes from March 2026",
+      "title_zh": "2026 年 3 月笔记",
+      "summary_en": "Collects monthly notes that include AI-adjacent work, especially reflections triggered by coding-agent experiences.",
+      "summary_zh": "这组月度笔记收录了与 AI 和编码 Agent 相关的工作体验与反思。"
+    },
+    {
+      "source": "anildash.com",
+      "date": "2026-02-18",
+      "url": "https://anildash.com/2026/02/18/threatening-kids-with-AI/",
+      "title_en": "How did we end up threatening our kids’ lives with AI?",
+      "title_zh": "我们怎么会走到用 AI 威胁孩子生命这一步？",
+      "summary_en": "Criticizes AI products that expose children to serious risks and asks how mainstream tech normalized that outcome.",
+      "summary_zh": "作者批评一些 AI 产品把儿童暴露在严重风险中，并追问科技行业为何会把这种结果常态化。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-04-04",
+      "url": "https://lucumr.pocoo.org/2026/4/4/absurd-in-production/",
+      "title_en": "Absurd In Production",
+      "title_zh": "Absurd 已在生产中运行",
+      "summary_en": "Reports production lessons from Absurd, a durable execution system on top of Postgres that also matters for agent workflows.",
+      "summary_zh": "文章汇报了 Absurd 这个基于 Postgres 的持久执行系统在生产环境中的经验，也对 Agent 工作流有参考意义。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-03-06",
+      "url": "https://seangoedecke.com/will-my-job-still-exist/",
+      "title_en": "I don't know if my job will still exist in ten years",
+      "title_zh": "我不知道十年后我的工作是否还存在",
+      "summary_en": "Reflects on whether software engineering will remain the same career over the next decade as AI tools improve.",
+      "summary_zh": "作者反思随着 AI 工具快速进步，软件工程这份职业在十年后是否还会保持原样。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-03-08",
+      "url": "http://antirez.com/news/162",
+      "title_en": "GNU and the AI reimplementations",
+      "title_zh": "GNU 与 AI 重实现",
+      "summary_en": "Compares AI-driven software reimplementations to older free-software history and argues the controversy has clear precedents.",
+      "summary_zh": "文章把 AI 驱动的软件重实现与自由软件历史相比较，认为今天的争论并非毫无先例。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-01-18",
+      "url": "https://lucumr.pocoo.org/2026/1/18/agent-psychosis/",
+      "title_en": "Agent Psychosis: Are We Going Insane?",
+      "title_zh": "Agent 精神错乱：我们正在发疯吗？",
+      "summary_en": "Uses OpenClaw's internal terminology to explore how agent-heavy workflows can distort engineering judgment.",
+      "summary_zh": "作者借 OpenClaw 的内部设定讨论 Agent 工作流如何扭曲工程判断。"
+    },
+    {
+      "source": "tomrenner.com",
+      "date": "2026-01-13",
+      "url": "https://tomrenner.com/posts/400-year-confidence-trick/",
+      "title_en": "LLMs are a 400-year-long confidence trick",
+      "title_zh": "LLM 是一场持续 400 年的信心骗局",
+      "summary_en": "Places LLM enthusiasm in a much longer history of calculation, automation, and overconfident claims about intelligent machines.",
+      "summary_zh": "文章把 LLM 热潮放回更长的自动计算与智能机器历史中，提醒人们警惕重复出现的过度自信。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-04-05",
+      "url": "https://simonwillison.net/2026/Apr/5/chengpeng-mou/#atom-everything",
+      "title_en": "Quoting Chengpeng Mou",
+      "title_zh": "引用程鹏牟的观点",
+      "summary_en": "Notes that ChatGPT healthcare usage is especially strong outside clinic hours and in places with poor access to hospitals.",
+      "summary_zh": "这则引用指出，ChatGPT 在医疗场景中的使用大量发生在门诊外时间，且在“医院荒漠”地区尤为明显。"
+    },
+    {
+      "source": "refactoringenglish.com",
+      "date": "2026-03-25",
+      "url": "https://refactoringenglish.com/blog/ai-vs-human-design-doc/",
+      "title_en": "Which Design Doc Did a Human Write?",
+      "title_zh": "哪份设计文档是人写的？",
+      "summary_en": "Compares one human-written design doc with AI-generated alternatives for the same open-source app.",
+      "summary_zh": "作者比较了同一个开源项目的人类设计文档和 AI 生成版本，观察两者差异。"
+    },
+    {
+      "source": "anildash.com",
+      "date": "2026-02-12",
+      "url": "https://anildash.com/2026/02/11/coding-agents-as-the-new-compilers/",
+      "title_en": "Coding agents as the new compilers",
+      "title_zh": "编码 Agent 就是新的编译器",
+      "summary_en": "Argues that coding agents may become another abstraction layer, much as compilers abstracted lower-level coding.",
+      "summary_zh": "文章认为编码 Agent 可能会像编译器一样，成为软件开发中的新一层抽象。"
+    },
+    {
+      "source": "geoffreylitt.com",
+      "date": "2025-04-12",
+      "url": "https://geoffreylitt.com/2025/04/12/how-i-made-a-useful-ai-assistant-with-one-sqlite-table-and-a-handful-of-cron-jobs.html",
+      "title_en": "Stevens: a hackable AI assistant using a single SQLite table and a handful of cron jobs",
+      "title_zh": "Stevens：一个只用单表和几个 cron 作业的可 hack AI 助手",
+      "summary_en": "Shows that a practical personal AI assistant can be built with a single SQLite table and a few cron jobs, without heavy frameworks.",
+      "summary_zh": "作者展示了一个个人 AI 助手也可以用极简架构完成，只需要一张 SQLite 表和几个 cron 作业。"
+    },
+    {
+      "source": "buttondown.com/hillelwayne",
+      "date": "2026-03-10",
+      "url": "https://buttondown.com/hillelwayne/archive/llms-are-bad-at-vibing-specifications/",
+      "title_en": "LLMs are bad at vibing specifications",
+      "title_zh": "LLM 不擅长“凭感觉”写规格",
+      "summary_en": "Argues that LLMs help with specifications only when humans provide real structure rather than relying on vibes.",
+      "summary_zh": "作者指出，LLM 只有在人类给出真正结构化规范时才有帮助，靠“感觉”写规格往往会失真。"
+    },
+    {
+      "source": "martinalderson.com",
+      "date": "2026-02-23",
+      "url": "https://martinalderson.com/posts/which-web-frameworks-are-most-token-efficient-for-ai-agents/?utm_source=rss&utm_medium=rss&utm_campaign=feed",
+      "title_en": "Which web frameworks are most token-efficient for AI agents?",
+      "title_zh": "哪些 Web 框架对 AI Agent 最省 token？",
+      "summary_en": "Benchmarks 19 web frameworks by how many tokens AI coding agents need to build and extend the same app.",
+      "summary_zh": "这项基准测试比较了 19 个 Web 框架在 AI 编码 Agent 手里完成同类任务所需的 token 成本。"
+    },
+    {
+      "source": "blog.jim-nielsen.com",
+      "date": "2026-04-05",
+      "url": "https://blog.jim-nielsen.com/2026/vibe-dreams-didnt-come-true/",
+      "title_en": "I Tried Vibing an RSS Reader and My Dreams Did Not Come True",
+      "title_zh": "我尝试 vibe coding 一个 RSS 阅读器，但梦想并未成真",
+      "summary_en": "Recounts a failed attempt to vibe code a dream RSS reader, illustrating the limits of loose AI-driven app generation.",
+      "summary_zh": "作者记录了一次用 vibe coding 做 RSS 阅读器却未能成功的经历，展示了 AI 生成应用的边界。"
+    },
+    {
+      "source": "miguelgrinberg.com",
+      "date": "2026-02-28",
+      "url": "https://blog.miguelgrinberg.com/post/llm-use-in-the-python-source-code",
+      "title_en": "LLM Use in the Python Source Code",
+      "title_zh": "Python 源代码中的 LLM 使用",
+      "summary_en": "Looks at how Claude-authored commits show up around Python codebases and what that signals about agent adoption.",
+      "summary_zh": "文章观察 Claude 参与提交在 Python 相关代码库中的出现方式，并讨论这意味着什么。"
+    },
+    {
+      "source": "minimaxir.com",
+      "date": "2025-07-28",
+      "url": "https://minimaxir.com/2025/07/llms-identify-people/",
+      "title_en": "LLMs can now identify public figures in images",
+      "title_zh": "LLM 现在已经能识别图像中的公众人物",
+      "summary_en": "Observes that Gemini can identify public figures in images in cases where other mainstream models refuse to do so.",
+      "summary_zh": "作者指出 Gemini 已经能够识别图像中的公众人物，而其他主流模型往往仍然拒绝这么做。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-03-01",
+      "url": "http://antirez.com/news/161",
+      "title_en": "Redis patterns for coding",
+      "title_zh": "面向编程的 Redis 模式",
+      "summary_en": "Presents Redis patterns and documentation intended to help both humans and coding agents write software more effectively.",
+      "summary_zh": "文章整理了适合编程的 Redis 模式和文档，希望同时帮助人类开发者与编码 Agent。"
+    },
+    {
+      "source": "anildash.com",
+      "date": "2026-02-28",
+      "url": "https://anildash.com/2026/02/27/a-cookie-for-dario/",
+      "title_en": "A Cookie for Dario? — Anthropic and selling death",
+      "title_zh": "给 Dario 的一块饼干？Anthropic 与贩卖死亡",
+      "summary_en": "Discusses Anthropic's refusal to adapt Claude for war crimes and the politics around that decision.",
+      "summary_zh": "文章讨论了 Anthropic 拒绝让 Claude 服务于战争罪用途，以及围绕这一决定的政治含义。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-01-31",
+      "url": "http://antirez.com/news/159",
+      "title_en": "Automatic programming",
+      "title_zh": "自动编程",
+      "summary_en": "Argues that AI-assisted development is different enough to deserve the label automatic programming.",
+      "summary_zh": "作者认为 AI 辅助开发已经足够不同，值得被单独称为“自动编程”。"
+    },
+    {
+      "source": "it-notes.dragas.net",
+      "date": "2026-03-20",
+      "url": "https://it-notes.dragas.net/2026/03/20/enshittifaication/",
+      "title_en": "EnshittifAIcation",
+      "title_zh": "AI 化的劣质化",
+      "summary_en": "Critiques the habit of wrapping bad product behavior and weak technical reasoning in an AI-flavored narrative.",
+      "summary_zh": "文章批评了用 AI 化叙事包装糟糕产品行为和薄弱技术推理的习惯。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2025-05-29",
+      "url": "http://antirez.com/news/153",
+      "title_en": "Human coders are still better than LLMs",
+      "title_zh": "人类程序员仍然优于 LLM",
+      "summary_en": "Argues that strong human programmers still outperform LLMs even though the models are already useful collaborators.",
+      "summary_zh": "作者认为强的人类程序员仍然显著优于 LLM，只是模型已经足够有用，适合作为协作者。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-04-02",
+      "url": "https://www.gilesthomas.com/2026/04/automating-starting-lambda-instances",
+      "title_en": "Automating starting Lambda Labs instances",
+      "title_zh": "自动化启动 Lambda Labs 实例",
+      "summary_en": "Uses agentic coding to automate the hunt for scarce Lambda Labs GPU instances needed for LLM training.",
+      "summary_zh": "作者借助 Agentic Coding 自动化争抢稀缺的 Lambda Labs GPU 实例，以便继续做 LLM 训练。"
+    }
+  ]
+}
