@@ -195,6 +195,16 @@
             text-decoration: underline;
         }
 
+        .quality-note {
+            margin-top: 14px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            background: rgba(185, 28, 28, 0.08);
+            border: 1px solid rgba(185, 28, 28, 0.18);
+            color: #8f1d1d;
+            font: 600 0.88rem/1.5 system-ui, sans-serif;
+        }
+
         .empty {
             text-align: center;
             color: var(--muted);
@@ -259,6 +269,54 @@
                 .replace(/'/g, "&#39;");
         }
 
+        function countMatches(pattern, text) {
+            const matches = String(text ?? "").match(pattern);
+            return matches ? matches.length : 0;
+        }
+
+        function removeAllowedTerms(text) {
+            const allowedTerms = [
+                "AI", "AGI", "API", "AutoModel", "Claude", "Copilot", "Gemini", "GitHub",
+                "GPT", "Google", "Hugging Face", "JSON", "LLM", "MiniJinja", "NixOS",
+                "OpenAI", "OpenClaw", "PyTorch", "Rust", "SQL", "Transformer", "Trainer", "pipeline"
+            ];
+            let normalized = String(text ?? "");
+            for (const term of allowedTerms.sort((a, b) => b.length - a.length)) {
+                normalized = normalized.split(term).join("");
+            }
+            return normalized;
+        }
+
+        function getQualityIssues(item) {
+            const cjkPattern = /[\u3400-\u4dbf\u4e00-\u9fff]/g;
+            const latinPattern = /[A-Za-z]/g;
+            const issues = [];
+
+            const zhFields = [
+                ["title_zh", item.title_zh],
+                ["summary_zh", item.summary_zh]
+            ];
+            for (const [field, value] of zhFields) {
+                const normalized = removeAllowedTerms(value);
+                const zhCount = countMatches(cjkPattern, normalized);
+                const enCount = countMatches(latinPattern, normalized);
+                if (zhCount < 4) {
+                    issues.push(`${field} 中文不足`);
+                } else if (zhCount < enCount) {
+                    issues.push(`${field} 英文占比过高`);
+                }
+            }
+
+            if ((item.title_en || "").trim() === (item.title_zh || "").trim()) {
+                issues.push("标题中英相同");
+            }
+            if ((item.summary_en || "").trim() === (item.summary_zh || "").trim()) {
+                issues.push("摘要中英相同");
+            }
+
+            return issues;
+        }
+
         async function loadDigest() {
             const container = document.getElementById("digest");
 
@@ -285,6 +343,7 @@
                         <p class="summary-en"><span class="summary-label">EN:</span> ${escapeHtml(item.summary_en)}</p>
                         <p class="summary-zh"><span class="summary-label">中:</span> ${escapeHtml(item.summary_zh)}</p>
                         <p class="meta">${escapeHtml(item.source)} · ${escapeHtml(item.date)}</p>
+                        ${getQualityIssues(item).length ? `<div class="quality-note">校验警告：${escapeHtml(getQualityIssues(item).join("；"))}</div>` : ""}
                     </article>
                 `).join("");
             } catch (_error) {
