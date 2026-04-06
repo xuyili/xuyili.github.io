@@ -155,6 +155,11 @@
             margin-bottom: 8px;
         }
 
+        .entry .title-en,
+        .entry .title-zh {
+            margin-bottom: 8px;
+        }
+
         .entry .title-zh {
             color: var(--accent);
             font-size: 1.06rem;
@@ -268,8 +273,8 @@
                     <article class="entry">
                         <div class="entry-header">
                             <div>
-                                <h3><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title_en)}</a></h3>
-                                <p class="title-zh">${escapeHtml(item.title_zh)}</p>
+                                <p class="title-en"><span class="summary-label">EN:</span> <a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title_en)}</a></p>
+                                <p class="title-zh"><span class="summary-label">中:</span> ${escapeHtml(item.title_zh)}</p>
                             </div>
                             <div class="entry-index">${index + 1}</div>
                         </div>
