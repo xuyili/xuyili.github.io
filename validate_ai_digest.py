@@ -115,6 +115,13 @@ def validate_item(item: dict, index: int) -> list[str]:
         for reason in is_probably_bad_en(str(item.get(field, ""))):
             issues.append(f"{field}:{reason}")
 
+    summary_zh = str(item.get("summary_zh", "")).strip()
+    summary_zh_len = count_matches(CJK_RE, summary_zh)
+    if summary_zh_len < 120:
+        issues.append("summary_zh:too_short")
+    if summary_zh_len > 320:
+        issues.append("summary_zh:too_long")
+
     if not str(item.get("url", "")).startswith(("http://", "https://")):
         issues.append("invalid:url")
 
