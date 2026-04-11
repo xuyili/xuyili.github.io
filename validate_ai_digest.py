@@ -88,7 +88,8 @@ def is_probably_bad_en(text: str) -> list[str]:
 
     en_ratio = english_ratio(text)
     zh_ratio = chinese_ratio(text)
-    if count_matches(LATIN_RE, text) < 8:
+    # Short product or project names such as "RuBee" are valid English titles.
+    if count_matches(LATIN_RE, text) < 8 and len(text.strip()) > 12:
         issues.append("too_little_english")
     if en_ratio < 0.45 and zh_ratio > 0.2:
         issues.append("contains_too_much_chinese")
