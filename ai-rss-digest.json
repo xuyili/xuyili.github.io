@@ -1,59 +1,32 @@
 {
-  "generated_at": "2026-04-11T08:45:40+08:00",
+  "generated_at": "2026-04-12T08:08:44+08:00",
   "items": [
+    {
+      "source": "simonwillison.net",
+      "date": "2026-04-10",
+      "url": "https://simonwillison.net/2026/Apr/10/chatgpt-voice-mode/",
+      "title_en": "ChatGPT voice mode is a weaker model",
+      "title_zh": "ChatGPT 语音模式其实用了更弱的模型",
+      "summary_en": "Simon Willison points out that OpenAI's advanced voice mode still relies on a noticeably weaker model than the one behind the main text chat experience. His takeaway is practical: the polished speech interface can hide a real capability drop, so people evaluating AI assistants should separate product smoothness from model quality and be careful when assuming voice and text are equally strong.",
+      "summary_zh": "Simon Willison 认为，OpenAI 的高级语音模式背后使用的模型能力明显弱于主文本聊天版本。文章的关键提醒很实际：流畅自然的语音交互很容易让人误以为底层模型同样强大，但真正决定回答质量的仍然是模型本身，而不是界面包装。对于评估 AI 助手的人来说，这意味着不能把“说得更像人”直接等同于“推理和知识水平一样强”。"
+    },
     {
       "source": "anildash.com",
       "date": "2026-04-10",
       "url": "https://anildash.com/2026/04/10/y2k-2.0-ai-security/",
       "title_en": "Y2K 2.0: The AI security reckoning",
       "title_zh": "Y2K 2.0：AI 安全清算时刻",
-      "summary_en": "Anil Dash argues that a wave of major software vulnerabilities is arriving because LLMs are getting much better at both writing code and inspecting it for weaknesses. His point is not just that AI is accelerating exploitation, but that the software industry is entering a new security era where defensive practices need to catch up fast.",
-      "summary_zh": "Anil Dash 认为，一波影响巨大的软件安全漏洞正在出现，原因是 LLM 在写代码和发现代码弱点这两件事上都变强了。文章的重点不只是 AI 会加速漏洞利用，而是软件行业正在进入一个新的安全阶段，攻击者和防守者都会更快地借助模型放大能力，传统依赖人工节奏的安全流程已经明显跟不上变化速度。换句话说，这篇文章提醒大家，AI 带来的不是单点风险，而是整个安全攻防节奏和成本结构的系统性变化。"
+      "summary_en": "Anil Dash argues that the software industry is moving into a new security crisis because LLMs are rapidly improving at both generating code and finding exploitable weaknesses in it. His central point is that AI does not just speed up attackers; it also changes the tempo and scale of the whole defense problem, forcing teams to rethink how they review, ship, and secure modern software.",
+      "summary_zh": "Anil Dash 认为，软件行业正在走向一个新的安全拐点，因为 LLM 在生成代码和发现可利用漏洞这两方面都在快速进步。文章真正想强调的不是 AI 只会让攻击者更快，而是它正在改变整个安全攻防的节奏和规模。过去依赖人工审查、缓慢修补和经验判断的做法，会越来越难跟上模型驱动的速度，因此团队需要重新思考软件开发、审计和防御的基本流程。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-04-08",
-      "url": "https://simonwillison.net/2026/Apr/8/muse-spark/#atom-everything",
-      "title_en": "Meta introduces Muse Spark",
-      "title_zh": "Meta 新模型正式亮相",
-      "summary_en": "Meta's first major model release since Llama 4 is a hosted system called Muse Spark, currently offered as a limited private API preview and through meta.ai. Simon Willison highlights the practical detail: Meta is positioning it against top frontier models on selected benchmarks, while the product experience already exposes how Meta wants people to use the model in chat and tool-driven workflows.",
-      "summary_zh": "Meta 在 Llama 4 之后推出的首个重要模型是 Muse Spark，目前以受限私有 API 预览和 meta.ai 产品形态提供。Simon Willison 关注的重点是，这不只是一次单纯的模型发布，Meta 还借由聊天界面、工具能力和基准对标方式，提前展示了它希望用户如何在真实工作流里调用模型、完成任务，并把模型能力和产品形态绑在一起。相比只谈参数和榜单，这种从产品入口直接观察模型使用方式的信号，对判断 Meta 后续路线更有价值。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-04-07",
-      "url": "https://simonwillison.net/2026/Apr/7/project-glasswing/#atom-everything",
-      "title_en": "Anthropic limits Claude Mythos under Project Glasswing",
-      "title_zh": "Anthropic 启动受限发布计划",
-      "summary_en": "Anthropic chose not to broadly release Claude Mythos and instead placed it with a small set of preview partners under Project Glasswing. The rationale is that the model's cyber-security research ability may be strong enough to justify a controlled rollout, which makes this a notable example of an AI lab slowing deployment on purpose rather than chasing maximum exposure.",
-      "summary_zh": "Anthropic 没有直接大范围发布 Claude Mythos，而是通过 Glasswing 计划只向少数预览伙伴开放。给出的理由是，这个模型在网络安全研究方面的能力可能已经强到需要谨慎部署，因此它成了一个很少见的案例：实验室不是一味追求更快曝光和更大声量，而是明确把风险控制、行业准备时间和分阶段上线放在了前面。这也让这次发布更像一次面向高风险能力的治理实验，而不只是普通的新模型预告。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-04-07",
-      "url": "https://simonwillison.net/2026/Apr/7/glm-51/#atom-everything",
-      "title_en": "GLM-5.1 targets long-horizon agent tasks",
-      "title_zh": "GLM-5.1 瞄准长时程代理任务",
-      "summary_en": "Simon Willison notes that Z.ai's GLM-5.1 is a very large MIT-licensed model aimed at longer, more open-ended tasks rather than short single-turn interactions. What stands out in his quick test is not just the model scale, but the way the system starts producing richer artifacts on its own, hinting at a stronger product direction around autonomous task completion.",
-      "summary_zh": "Simon Willison 提到，Z.ai 的 GLM-5.1 是一个体量非常大的 MIT 许可模型，目标更偏向长时程、开放式任务，而不只是短单轮对话。真正值得注意的不只是参数规模，而是在简单测试里它已经会主动生成更完整的产物，这说明它想解决的不是单次回答是否聪明，而是模型能否在更长链路里持续推进任务并交付可直接使用的结果。对于关心代理式工作流的人来说，这比单纯刷新一次跑分更值得留意。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-04-06",
-      "url": "https://simonwillison.net/2026/Apr/6/google-ai-edge-gallery/#atom-everything",
-      "title_en": "Google AI Edge Gallery brings Gemma to the iPhone",
-      "title_zh": "Google 推出本地模型手机应用",
-      "summary_en": "Google's AI Edge Gallery is an official mobile app for running smaller Gemma models locally on an iPhone, including image Q&A and short audio transcription features. The interesting part is the packaging: instead of talking abstractly about on-device AI, Google is shipping a concrete consumer app that shows what lightweight local models can already do with acceptable size and speed.",
-      "summary_zh": "Google AI Edge Gallery 是 Google 官方推出的移动应用，让用户可以直接在 iPhone 上本地运行较小的 Gemma 模型，还提供图像问答和短音频转写等功能。它最有意思的地方在于产品化方式：Google 不再只是抽象地宣传端侧 AI，而是用一个真实可下载、可体验的消费者应用，证明轻量本地模型已经能够在体积、速度和可用性之间取得足够好的平衡。这类产品如果持续推进，会直接改变普通用户对“本地 AI 是否真的有用”的判断。"
-    },
-    {
-      "source": "seangoedecke.com",
-      "date": "2026-04-03",
-      "url": "https://seangoedecke.com/programming-with-ai-agents-as-theory-building/",
-      "title_en": "Programming with AI agents as theory building",
-      "title_zh": "把使用 AI 代理编程看作理论构建",
-      "summary_en": "Sean Goedecke revisits Peter Naur's idea that programming is really about building a mental theory of how a system works, then applies that lens to AI agents. The argument is that agents can help produce code, but they do not replace the engineer's responsibility to maintain a coherent model of the system, making this a useful framing piece for teams leaning harder on agentic tooling.",
-      "summary_zh": "Sean Goedecke 重新借用 Peter Naur 的观点，认为编程的核心其实是建立“系统如何运作”的心智理论，再把这个视角应用到 AI 代理身上。文章的关键论点是，代理当然可以帮助产出代码、探索方案、提升速度，但它并不能替代工程师维持整体理解和一致性的责任，所以这篇文章很适合作为团队进一步依赖 agentic tooling 时的思考框架。它提醒人们，真正难的部分往往不是生成代码，而是确保每个人仍然知道系统为什么会这样工作。"
+      "source": "martinalderson.com",
+      "date": "2026-04-10",
+      "url": "https://www.martinalderson.com/blog/has-mythos-just-broken-the-deal-that-kept-the-internet-safe",
+      "title_en": "Has Mythos just broken the deal that kept the internet safe?",
+      "title_zh": "Mythos 是否打破了维持互联网安全的旧平衡？",
+      "summary_en": "Martin Alderson uses Anthropic's restricted Mythos release to argue that browser sandboxes and virtual machines may no longer be enough if frontier models can reliably discover and chain real exploits. He frames the issue as a broken social bargain: the web stayed usable because finding working attacks was expensive, and if AI sharply lowers that cost, long-standing assumptions about internet safety could fail very quickly.",
+      "summary_zh": "Martin Alderson 借 Anthropic 对 Mythos 的受限发布提出了一个更尖锐的问题：如果前沿模型已经能稳定发现并串联真实漏洞，那么浏览器沙箱和虚拟机这些传统隔离手段，可能不再足以维持互联网原有的安全平衡。文章把这件事描述为一种“旧协议”正在失效：过去网络还能勉强保持可用，是因为真正可落地的攻击发现成本很高，而 AI 一旦大幅压低这个成本，很多默认成立的安全假设就可能迅速崩塌。"
     }
   ]
 }
