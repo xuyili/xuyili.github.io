@@ -1,234 +1,958 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles.css">
-    <title>徐一立 | xuyili.com</title>
-    <style>
-        .home-shell {
-            display: grid;
-            gap: 28px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="徐一立的个人主页：AI Daily Brief、论文速递、数据分析、日记和专栏归档。">
+  <title>徐一立 | xuyili.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --panel: rgba(255, 255, 255, 0.72);
+      --panel-strong: rgba(255, 255, 255, 0.92);
+      --panel-dark: #111114;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: rgba(29, 29, 31, 0.08);
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
+      --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
+      --radius-xl: 30px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --accent: #0071e3;
+      --accent-2: #5e5ce6;
+      --accent-3: #ff9f0a;
+      --success: #34c759;
+    }
 
-        .hero {
-            display: grid;
-            grid-template-columns: 1.35fr 0.9fr;
-            align-items: end;
-            gap: 28px;
-        }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(94, 92, 230, 0.10), transparent 28%),
+        radial-gradient(circle at 80% 10%, rgba(0, 113, 227, 0.08), transparent 28%),
+        linear-gradient(180deg, #fcfcfd 0%, var(--bg) 48%, #efeff3 100%);
+      overflow-x: hidden;
+    }
 
-        .hero-copy .kicker {
-            display: inline-flex;
-            align-items: center;
-            padding: 8px 12px;
-            border-radius: 999px;
-            background: rgba(13, 107, 97, 0.10);
-            color: #0d6b61;
-            font: 700 0.82rem/1.2 Inter, sans-serif;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 18px;
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(29, 29, 31, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(29, 29, 31, 0.03) 1px, transparent 1px);
+      background-size: 52px 52px;
+      opacity: 0.35;
+      mask-image: linear-gradient(180deg, rgba(0,0,0,0.55), transparent 85%);
+    }
 
-        .hero-copy p {
-            max-width: 32ch;
-        }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    ::selection { background: rgba(0, 113, 227, 0.16); }
 
-        .hero-panel {
-            display: grid;
-            gap: 14px;
-        }
+    .page {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 1280px);
+      margin: 0 auto;
+      padding: 18px 18px 44px;
+    }
 
-        .hero-stat {
-            padding: 18px 20px;
-            border-radius: 20px;
-            border: 1px solid rgba(27, 36, 41, 0.08);
-            background: rgba(255, 255, 255, 0.54);
-        }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 10px 0 24px;
+    }
 
-        .hero-stat strong {
-            display: block;
-            font: 700 2rem/1.05 "Iowan Old Style", serif;
-            color: #1b2429;
-            margin-bottom: 6px;
-        }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      min-width: 0;
+    }
 
-        .hero-stat span {
-            color: #5d676e;
-            font-size: 0.96rem;
-        }
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 12px 28px rgba(0, 113, 227, 0.18);
+      flex: 0 0 auto;
+    }
 
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(12, minmax(0, 1fr));
-            gap: 22px;
-        }
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
 
-        .feature-grid > a:nth-child(1),
-        .feature-grid > a:nth-child(2) {
-            grid-column: span 6;
-        }
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 2px;
+    }
 
-        .feature-grid > a:nth-child(n + 3) {
-            grid-column: span 4;
-        }
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 10px;
+    }
 
-        .card {
-            min-height: 220px;
-        }
+    .quick-nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.64);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease;
+    }
 
-        .card h2 {
-            margin-bottom: 12px;
-            font-size: 1.6rem;
-        }
+    .quick-nav a:hover {
+      transform: translateY(-1px);
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--text);
+      border-color: rgba(0, 113, 227, 0.18);
+      text-decoration: none;
+    }
 
-        .card p {
-            margin-bottom: 14px;
-        }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(330px, 0.8fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 14px;
+    }
 
-        .card .meta {
-            margin-top: auto;
-            padding-top: 14px;
-            border-top: 1px solid rgba(27, 36, 41, 0.08);
-            font-size: 0.88rem;
-        }
+    .hero-copy,
+    .hero-panel,
+    .section,
+    .footer-card {
+      border: 1px solid rgba(29, 29, 31, 0.08);
+      background: var(--panel);
+      backdrop-filter: blur(20px) saturate(1.2);
+      box-shadow: var(--shadow);
+    }
 
-        .section-strip {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 22px;
-        }
+    .hero-copy {
+      border-radius: var(--radius-xl);
+      padding: clamp(28px, 4vw, 44px);
+      overflow: hidden;
+      position: relative;
+    }
 
-        .section-box {
-            padding: 24px;
-            border-radius: 28px;
-            background: rgba(255, 251, 245, 0.72);
-            border: 1px solid rgba(27, 36, 41, 0.08);
-            box-shadow: 0 18px 45px rgba(27, 36, 41, 0.08);
-        }
+    .hero-copy::before {
+      content: "";
+      position: absolute;
+      inset: auto -10% -12% auto;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.10), rgba(0, 113, 227, 0.02) 45%, transparent 72%);
+      pointer-events: none;
+      filter: blur(8px);
+    }
 
-        .section-box h3 {
-            margin-bottom: 10px;
-            font-size: 1.35rem;
-            color: #1b2429;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 113, 227, 0.14);
+      background: rgba(0, 113, 227, 0.06);
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
 
-        .section-box p {
-            color: #5d676e;
-        }
+    .hero-title {
+      margin: 18px 0 12px;
+      font-size: clamp(3.2rem, 6.8vw, 6.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      max-width: 9.5ch;
+      color: #111114;
+    }
 
-        .footer {
-            padding-top: 10px !important;
-        }
+    .hero-subtitle {
+      margin: 0;
+      max-width: 56ch;
+      font-size: clamp(1rem, 1.3vw, 1.18rem);
+      line-height: 1.75;
+      color: var(--muted);
+    }
 
-        @media (max-width: 1100px) {
-            .hero,
-            .section-strip {
-                grid-template-columns: 1fr;
-            }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
 
-            .feature-grid > a {
-                grid-column: span 6 !important;
-            }
-        }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.9rem 1.15rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background 180ms ease;
+      will-change: transform;
+    }
 
-        @media (max-width: 768px) {
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
 
-            .feature-grid > a {
-                grid-column: auto !important;
-            }
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 16px 30px rgba(0, 113, 227, 0.18);
+    }
 
-            .card {
-                min-height: auto;
-            }
-        }
-    </style>
+    .btn-secondary {
+      color: var(--text);
+      border: 1px solid rgba(29, 29, 31, 0.10);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .btn-ghost {
+      color: var(--muted);
+      border: 1px solid rgba(29, 29, 31, 0.10);
+      background: rgba(255, 255, 255, 0.50);
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.70);
+      border: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .hero-panel {
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .status-card {
+      border-radius: 24px;
+      padding: 16px;
+      background: linear-gradient(180deg, #111114 0%, #1a1a1f 100%);
+      color: #f5f5f7;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .status-card::after {
+      content: "";
+      position: absolute;
+      inset: -30% 0 auto;
+      height: 50%;
+      background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+      animation: scan 7s linear infinite;
+      pointer-events: none;
+    }
+
+    .status-top {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .red { background: #ff5f57; }
+    .yellow { background: #febc2e; }
+    .green { background: #28c840; }
+
+    .status-label {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: rgba(255, 255, 255, 0.58);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .status-line {
+      margin: 0;
+      padding: 0.26rem 0;
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+      font-size: 0.9rem;
+      color: #ebebf0;
+    }
+
+    .status-line .prompt { color: #7dd3fc; margin-right: 8px; }
+    .status-line .ok { color: #34d399; margin-right: 8px; }
+    .status-line .warn { color: #fbbf24; margin-right: 8px; }
+    .status-line .info { color: #a78bfa; margin-right: 8px; }
+
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      padding: 14px 14px 12px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 1.12rem;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .hero-note {
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(0, 113, 227, 0.08), rgba(94, 92, 230, 0.08));
+      border: 1px solid rgba(0, 113, 227, 0.12);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: clamp(22px, 3vw, 32px);
+      border-radius: var(--radius-xl);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.6rem, 3vw, 2.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      color: #111114;
+    }
+
+    .section-subtitle {
+      margin: 8px 0 0;
+      max-width: 64ch;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      position: relative;
+      grid-column: span 4;
+      min-height: 212px;
+      padding: 20px;
+      border-radius: 24px;
+      border: 1px solid rgba(29, 29, 31, 0.08);
+      background: rgba(255, 255, 255, 0.84);
+      text-decoration: none;
+      box-shadow: 0 14px 38px rgba(0, 0, 0, 0.06);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.6), transparent 35%);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0, 113, 227, 0.18);
+      box-shadow: 0 20px 54px rgba(0, 0, 0, 0.1);
+      text-decoration: none;
+    }
+
+    .card.featured {
+      grid-column: span 6;
+      min-height: 240px;
+      background:
+        radial-gradient(circle at top right, rgba(0, 113, 227, 0.10), transparent 24%),
+        rgba(255, 255, 255, 0.86);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: start;
+      gap: 12px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      background: linear-gradient(135deg, rgba(0, 113, 227, 0.10), rgba(94, 92, 230, 0.10));
+      border: 1px solid rgba(0, 113, 227, 0.10);
+      font-size: 1.25rem;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.18rem;
+      letter-spacing: -0.03em;
+      color: #111114;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-meta {
+      margin-top: auto;
+      padding-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      border-top: 1px solid rgba(29, 29, 31, 0.08);
+      color: var(--muted);
+      font-size: 0.86rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(245, 245, 247, 0.9);
+      border: 1px solid rgba(29, 29, 31, 0.08);
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .step {
+      position: relative;
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid rgba(29, 29, 31, 0.08);
+      background: rgba(255, 255, 255, 0.82);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, rgba(0, 113, 227, 0.12), rgba(94, 92, 230, 0.12));
+      border: 1px solid rgba(0, 113, 227, 0.10);
+      color: var(--accent);
+      font-weight: 800;
+      font-family: "SF Mono", "JetBrains Mono", monospace;
+    }
+
+    .step h4 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: -0.03em;
+      color: #111114;
+    }
+
+    .step p { margin: 0; color: var(--muted); }
+
+    .footer {
+      margin-top: 22px;
+      padding-bottom: 18px;
+    }
+
+    .footer-card {
+      border-radius: var(--radius-xl);
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .footer-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .footer-card strong { color: #111114; }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.92rem;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(29, 29, 31, 0.08);
+      background: rgba(255, 255, 255, 0.74);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+      border-color: rgba(0, 113, 227, 0.18);
+      text-decoration: none;
+    }
+
+    .glow {
+      position: absolute;
+      inset: auto;
+      border-radius: 50%;
+      filter: blur(24px);
+      pointer-events: none;
+      opacity: 0.85;
+      z-index: 0;
+      animation: drift 18s ease-in-out infinite;
+    }
+
+    .glow-a {
+      width: 260px;
+      height: 260px;
+      top: 70px;
+      right: -30px;
+      background: rgba(0, 113, 227, 0.08);
+    }
+
+    .glow-b {
+      width: 220px;
+      height: 220px;
+      bottom: 50px;
+      left: -20px;
+      background: rgba(94, 92, 230, 0.08);
+      animation-duration: 22s;
+    }
+
+    @keyframes drift {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(0, -14px, 0) scale(1.05); }
+    }
+
+    @keyframes scan {
+      0% { transform: translateY(-120%); opacity: 0; }
+      15% { opacity: 1; }
+      60% { transform: translateY(500%); opacity: 0.8; }
+      100% { transform: translateY(1000%); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto;
+      }
+    }
+
+    @media (max-width: 1080px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { gap: 14px; }
+      .card, .card.featured { grid-column: span 6; }
+    }
+
+    @media (max-width: 820px) {
+      .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .quick-nav {
+        justify-content: flex-start;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card, .card.featured {
+        grid-column: 1 / -1;
+        min-height: auto;
+      }
+
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .page { padding: 14px 12px 28px; }
+      .hero-copy, .hero-panel, .section, .footer-card { border-radius: 24px; }
+      .hero-title { font-size: clamp(2.6rem, 16vw, 4.4rem); }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .metric-grid { grid-template-columns: 1fr; }
+      .quick-nav a { width: 100%; justify-content: center; }
+      .section-head { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
 </head>
 <body>
-    <div class="container home-shell">
-        <section class="hero">
-            <div class="hero-copy">
-                <span class="kicker">Xuyili.com</span>
-                <h1>伊利虾的数字工作台</h1>
-                <p>把 AI 观察、机器学习研究、数据分析和长期笔记收拢到同一个站点里。新视觉优先兼顾宽屏浏览效率和手机阅读舒适度。</p>
-            </div>
-            <div class="hero-panel">
-                <div class="hero-stat">
-                    <strong>AI Digest</strong>
-                    <span>每天从 RSS 中筛出 50 篇最相关内容，保留中英文对照标题与摘要。</span>
-                </div>
-                <div class="hero-stat">
-                    <strong>Research Notes</strong>
-                    <span>机器学习长文、论文速递、可视化分析与站点归档集中管理。</span>
-                </div>
-            </div>
-        </section>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
 
-        <section class="feature-grid">
-            <a href="/ai.html" class="card">
-                <div class="card-icon">🤖</div>
-                <h2>AI RSS Digest</h2>
-                <p>每天精选 50 篇与 AI 最相关的文章，标题与摘要全部做中英文对照，适合快速扫读和后续深挖。</p>
-                <div class="meta">Daily update · bilingual briefing</div>
-            </a>
-
-            <a href="/archive.html" class="card">
-                <div class="card-icon">🗂️</div>
-                <h2>专栏归档</h2>
-                <p>把 AI 早报、论文速递、数据分析与日记入口集中到一个索引页，便于纵向追踪更新节奏。</p>
-                <div class="meta">Index · archives · quick access</div>
-            </a>
-
-            <a href="/ml-notes.html" class="card">
-                <div class="card-icon">🧠</div>
-                <h2>机器学习笔记</h2>
-                <p>以较长篇幅拆解算法、训练、表示学习和直觉，偏向框架理解而非短平快教程。</p>
-                <div class="meta">Long-form thinking</div>
-            </a>
-
-            <a href="/data.html" class="card">
-                <div class="card-icon">📊</div>
-                <h2>数据分析专栏</h2>
-                <p>机器学习建模、交互图表、数据故事和公开数据集实验结果汇总。</p>
-                <div class="meta">Data stories · modeling</div>
-            </a>
-
-            <a href="/papers-2026-03-09.html" class="card">
-                <div class="card-icon">📚</div>
-                <h2>论文速递</h2>
-                <p>按主题整理近期论文，保留适合快速判断是否值得深入阅读的结构化入口。</p>
-                <div class="meta">Themes · papers · summaries</div>
-            </a>
-
-            <a href="/yilixia-diary.html" class="card">
-                <div class="card-icon">📔</div>
-                <h2>伊利虾日记</h2>
-                <p>站点中更轻、更私人的部分，记录日常协作、构建过程与一些不那么正式的想法。</p>
-                <div class="meta">Diary · process · notes</div>
-            </a>
-        </section>
-
-        <section class="section-strip">
-            <div class="section-box">
-                <h3>为宽屏重新排版</h3>
-                <p>首页和索引页不再只用窄列堆卡片。新版会在大屏上提供更强的版面张力、留白和内容分区，让你的网站更像一个成熟的个人出版入口。</p>
-            </div>
-            <div class="section-box">
-                <h3>移动端保持清晰</h3>
-                <p>统一的圆角、卡片间距、字体层级和流式网格会自动折叠到手机端，保证阅读顺序和点击区域稳定。</p>
-            </div>
-        </section>
-
-        <div class="footer">
-            <p>徐一立 · xuyili.com · OpenClaw workspace</p>
+  <main class="page">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <div class="brand-mark">X</div>
+        <div class="brand-text">
+          <strong>徐一立</strong>
+          <span>xuyili.com · AI / 数据 / 日记 / 论文</span>
         </div>
-    </div>
+      </a>
+
+      <nav class="quick-nav" aria-label="快捷导航">
+        <a href="/archive.html">归档</a>
+        <a href="/yilixia-diary.html">日记</a>
+        <a href="/quiz-2026-03-28.html">测验</a>
+        <a href="/bmw-analysis.html">分析报告</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <article class="hero-copy">
+        <div class="eyebrow">xuyili.com · refined interface</div>
+        <h1 class="hero-title">伊利虾主页</h1>
+        <p class="hero-subtitle">
+          我把主页整理成了更接近 Apple 官网的气质：更克制的排版、更干净的层级、更高级的留白。
+          重点内容依然保留在这里——AI Daily Brief、论文速递、数据分析、日记和专栏归档。
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">查看今日内容</a>
+          <a class="btn btn-secondary" href="/ai-2026-04-01.html">AI 日报</a>
+          <a class="btn btn-ghost" href="/papers-2026-03-17.html">论文速递</a>
+        </div>
+
+        <div class="hero-badges" aria-label="主页特性">
+          <span class="badge">极简留白</span>
+          <span class="badge">Apple 风格</span>
+          <span class="badge">科技感</span>
+          <span class="badge">时髦排版</span>
+          <span class="badge">移动端适配</span>
+        </div>
+      </article>
+
+      <aside class="hero-panel" aria-label="站点状态">
+        <div class="status-card">
+          <div class="status-top">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="status-label">site status</span>
+          </div>
+          <p class="status-line"><span class="prompt">$</span> boot xuyili.com</p>
+          <p class="status-line"><span class="ok">[ok]</span> homepage styled like a product page</p>
+          <p class="status-line"><span class="warn">[sync]</span> daily news · papers · diary · quiz</p>
+          <p class="status-line"><span class="info">[net]</span> GitHub Pages + custom domain</p>
+          <p class="status-line"><span class="ok">[ok]</span> optimized for desktop and mobile</p>
+        </div>
+
+        <div class="metric-grid">
+          <div class="metric">
+            <strong>92</strong>
+            <span>RSS 源</span>
+          </div>
+          <div class="metric">
+            <strong>50</strong>
+            <span>AI 文章 / 天</span>
+          </div>
+          <div class="metric">
+            <strong>10</strong>
+            <span>精选论文</span>
+          </div>
+        </div>
+
+        <div class="hero-note">
+          自动任务每天 08:00 生成内容并推送到 GitHub；主页会自动回退到最新可用日期，减少 404。
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="today">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">今日内容</h2>
+          <p class="section-subtitle">
+            像 Apple 的产品页一样，把最重要的信息放在最前面，减少干扰，只留下清晰的入口。
+          </p>
+        </div>
+        <a class="btn btn-ghost" href="/archive.html">查看全部归档</a>
+      </div>
+
+      <div class="grid">
+        <a id="ai-card" class="card featured" href="#">
+          <div class="card-header">
+            <div class="icon">🤖</div>
+            <div>
+              <h3>AI Daily Brief</h3>
+              <p>RSS 抓取 + AI 热点摘要 + 完整翻译</p>
+            </div>
+          </div>
+          <p>每天自动生成 AI 热门文章精选，适合快速浏览趋势、模型、工具与研究动态。</p>
+          <div class="card-meta">
+            <span class="chip" id="ai-date">加载中…</span>
+            <span class="chip">自动生成</span>
+          </div>
+        </a>
+
+        <a id="papers-card" class="card featured" href="#">
+          <div class="card-header">
+            <div class="icon">📚</div>
+            <div>
+              <h3>论文速递</h3>
+              <p>7 大主题 × 10 篇精选论文</p>
+            </div>
+          </div>
+          <p>把最新研究按主题整理为中英对照内容，适合快速扫论文、看方向、做选题。</p>
+          <div class="card-meta">
+            <span class="chip" id="papers-date">加载中…</span>
+            <span class="chip">深度阅读</span>
+          </div>
+        </a>
+
+        <a id="quiz-card" class="card" href="#">
+          <div class="card-header">
+            <div class="icon">🧠</div>
+            <div>
+              <h3>AI 知识测验</h3>
+              <p>每日 10 题 · 轻量自测</p>
+            </div>
+          </div>
+          <p>快速判断今天有没有真的看懂 AI 信息流，而不是只刷到标题。</p>
+          <div class="card-meta">
+            <span class="chip" id="quiz-date">加载中…</span>
+            <span class="chip">互动内容</span>
+          </div>
+        </a>
+
+        <a class="card" href="/yilixia-diary.html">
+          <div class="card-header">
+            <div class="icon">📔</div>
+            <div>
+              <h3>伊利虾日记</h3>
+              <p>AI 与主人的日常记录</p>
+            </div>
+          </div>
+          <p>带一点情绪和反思的日常内容，给主页留一点人味。</p>
+          <div class="card-meta">
+            <span class="chip">日更</span>
+            <span class="chip">生活记录</span>
+          </div>
+        </a>
+
+        <a class="card" href="/archive.html">
+          <div class="card-header">
+            <div class="icon">🗂️</div>
+            <div>
+              <h3>专栏汇总</h3>
+              <p>所有专栏统一入口</p>
+            </div>
+          </div>
+          <p>快速跳转到 AI 早报、论文、日记等历史页面，避免到处翻链接。</p>
+          <div class="card-meta">
+            <span class="chip">归档页</span>
+            <span class="chip">便于回看</span>
+          </div>
+        </a>
+
+        <a class="card" href="/bmw-analysis.html">
+          <div class="card-header">
+            <div class="icon">📊</div>
+            <div>
+              <h3>数据分析报告</h3>
+              <p>交互式分析与结论</p>
+            </div>
+          </div>
+          <p>把数据分析内容做成更完整的可浏览报告入口，适合展示时直接打开。</p>
+          <div class="card-meta">
+            <span class="chip">ECharts / 报告</span>
+            <span class="chip">展示友好</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">自动化工作流</h2>
+          <p class="section-subtitle">
+            主页不是静态海报，而是一个定时内容生产入口：抓取、生成、发布、归档。
+          </p>
+        </div>
+      </div>
+
+      <div class="workflow">
+        <div class="step">
+          <div class="step-number">01</div>
+          <h4>抓取 RSS</h4>
+          <p>从 92 个源中筛选 AI 关键词，保持信息流稳定更新。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <h4>生成内容</h4>
+          <p>产出 AI Daily Brief、论文速递和其它页面，让内容自动落地成 HTML。</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <h4>自动推送</h4>
+          <p>脚本每天 08:00 运行，生成后推送到 GitHub Pages，主页自动切换到最新内容。</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-card">
+        <p><strong>徐一立</strong> · xuyili.com · Clean UI · GitHub Pages</p>
+        <div class="footer-links">
+          <a href="/archive.html">Archive</a>
+          <a href="/yilixia-diary.html">Diary</a>
+          <a href="/quiz-2026-03-28.html">Quiz</a>
+          <a href="/bmw-analysis.html">Report</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const today = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    const y = today.getFullYear();
+    const m = pad(today.getMonth() + 1);
+    const d = pad(today.getDate());
+    const todayStr = `${y}-${m}-${d}`;
+    const chineseToday = `${y}年${m}月${d}日`;
+
+    const yesterday = new Date(today);
+    yesterday.setDate(yesterday.getDate() - 1);
+    const y2 = yesterday.getFullYear();
+    const m2 = pad(yesterday.getMonth() + 1);
+    const d2 = pad(yesterday.getDate());
+    const yesterdayStr = `${y2}-${m2}-${d2}`;
+    const chineseYesterday = `${y2}年${m2}月${d2}日`;
+
+    async function exists(path) {
+      try {
+        const res = await fetch(path, { method: 'HEAD' });
+        return res.ok;
+      } catch {
+        return false;
+      }
+    }
+
+    async function initLinks() {
+      const aiCard = document.getElementById('ai-card');
+      const papersCard = document.getElementById('papers-card');
+      const quizCard = document.getElementById('quiz-card');
+      const aiDate = document.getElementById('ai-date');
+      const papersDate = document.getElementById('papers-date');
+      const quizDate = document.getElementById('quiz-date');
+
+      const aiToday = await exists(`/ai-${todayStr}.html`);
+      aiCard.href = aiToday ? `/ai-${todayStr}.html` : `/ai-${yesterdayStr}.html`;
+      aiDate.textContent = aiToday ? chineseToday : `${chineseYesterday} · 最新可用`;
+
+      const papersToday = await exists(`/papers-${todayStr}.html`);
+      papersCard.href = papersToday ? `/papers-${todayStr}.html` : `/papers-${yesterdayStr}.html`;
+      papersDate.textContent = papersToday ? chineseToday : `${chineseYesterday} · 最新可用`;
+
+      const quizPath = `/quiz-${todayStr}.html`;
+      const quizToday = await exists(quizPath);
+      quizCard.href = quizToday ? quizPath : `/quiz-2026-03-28.html`;
+      quizDate.textContent = quizToday ? chineseToday : '示例测验页';
+    }
+
+    initLinks();
+  </script>
 </body>
 </html>
