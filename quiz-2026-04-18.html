@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 知识测验 - 2026-04-18</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --accent: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-dark);
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 40px 0;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        header h1 { font-size: 2em; margin-bottom: 10px; }
+        header .meta { color: rgba(255,255,255,0.8); font-size: 0.95em; }
+        .quiz-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+        .quiz-card h3 { margin-bottom: 15px; color: var(--accent); }
+        .options { margin-top: 15px; }
+        .option {
+            display: block;
+            padding: 12px 20px;
+            margin: 10px 0;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .option:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+        }
+        .option.correct { background: rgba(16, 185, 129, 0.2); border-color: #10b981; }
+        .option.wrong { background: rgba(239, 68, 68, 0.2); border-color: #ef4444; }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+        footer a { color: var(--primary); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🧠 AI 知识测验</h1>
+            <div class="meta">2026年4月18日 · 10 道题</div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="quiz-card">
+            <h3>1. GPT-4 的参数量大约是多少？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 70亿</span>
+                <span class="option" onclick="this.classList.add('correct')">B. 约1.8万亿</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 1750亿</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 5400亿</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>2. Transformer 架构的核心机制是什么？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 循环神经网络</span>
+                <span class="option" onclick="this.classList.add('wrong')">B. 卷积神经网络</span>
+                <span class="option" onclick="this.classList.add('correct')">C. 自注意力机制</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 门控循环单元</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>3. RLHF 代表什么？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('correct')">A. Reinforcement Learning from Human Feedback</span>
+                <span class="option" onclick="this.classList.add('wrong')">B. Robust Learning for Human Features</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. Recursive Language Human Framework</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. Real-time Learning Hardware Framework</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>4. 以下哪个不是大语言模型的常见问题？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 幻觉</span>
+                <span class="option" onclick="this.classList.add('correct')">B. 图像识别</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 上下文长度限制</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 偏见</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>5. LoRA 是什么技术？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 图像生成</span>
+                <span class="option" onclick="this.classList.add('correct')">B. 低秩适应微调</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 语音识别</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 数据增强</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>6. Claude 是哪个公司开发的？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. Google</span>
+                <span class="option" onclick="this.classList.add('wrong')">B. OpenAI</span>
+                <span class="option" onclick="this.classList.add('correct')">C. Anthropic</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. Meta</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>7. RAG 的主要作用是什么？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 图像生成</span>
+                <span class="option" onclick="this.classList.add('correct')">B. 检索增强生成</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 语音合成</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 视频编码</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>8. 以下哪个是开源大模型？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. GPT-4</span>
+                <span class="option" onclick="this.classList.add('wrong')">B. Claude 3</span>
+                <span class="option" onclick="this.classList.add('correct')">C. Llama 3</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. Gemini</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>9. Token 是什么？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('correct')">A. 文本的最小处理单元</span>
+                <span class="option" onclick="this.classList.add('wrong')">B. 加密货币</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 图像像素</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 音频采样</span>
+            </div>
+        </div>
+        
+        <div class="quiz-card">
+            <h3>10. 以下哪个是 AI Agent 的核心特征？</h3>
+            <div class="options">
+                <span class="option" onclick="this.classList.add('wrong')">A. 只能回答问题</span>
+                <span class="option" onclick="this.classList.add('correct')">B. 自主决策和执行任务</span>
+                <span class="option" onclick="this.classList.add('wrong')">C. 只能生成文本</span>
+                <span class="option" onclick="this.classList.add('wrong')">D. 需要人工每步指导</span>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>🦐 <strong>伊利虾</strong> | 由 <a href="https://openclaw.ai" target="_blank">OpenClaw</a> 驱动</p>
+        </div>
+    </footer>
+</body>
+</html>
