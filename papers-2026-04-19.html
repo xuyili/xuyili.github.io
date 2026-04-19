@@ -19,6 +19,7 @@
         .paper h3 a { color: var(--text-primary); text-decoration: none; }
         .paper h3 a:hover { color: var(--accent); }
         .paper .title-en { color: var(--text-secondary); font-size: 0.9em; margin-bottom: 10px; }
+        .paper .summary { color: var(--text-secondary); font-size: 0.95em; line-height: 1.6; margin: 12px 0; padding: 12px; background: rgba(0,0,0,0.2); border-radius: 8px; }
         .paper .meta { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--border); font-size: 0.85em; color: var(--text-secondary); }
         .paper .tag { background: rgba(99, 102, 241, 0.2); color: var(--primary); padding: 3px 10px; border-radius: 15px; font-size: 0.8em; }
         footer { text-align: center; padding: 40px 0; color: var(--text-secondary); border-top: 1px solid var(--border); margin-top: 40px; }
@@ -30,100 +31,210 @@
         <div class="container">
             <a href="/">← 返回首页</a>
             <h1>📚 论文速递</h1>
-            <div class="meta">2026年04月19日 · 10 篇精选论文</div>
+            <div class="meta">2026年04月19日 · 20 篇最新论文</div>
         </div>
     </header>
     <main class="container">
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2001.08361" target="_blank">1. 神经语言模型的缩放定律</a></h3>
-            <div class="title-en">Scaling Laws for Neural Language Models</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Jared Kaplan et al.</p>
-            <div class="meta">
-                <span>arXiv: 2001.08361</span>
-                <span class="tag">LLM</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15312v1" target="_blank">1. 事件的双向跨模式提示-不对称立体</a></h3>
+        <div class="title-en">Bidirectional Cross-Modal Prompting for Event-Frame Asymmetric Stereo</div>
+        <div class="summary">基于常规帧的相机捕捉到丰富的背景信息,但在动态场景中时间分辨率和运动模糊度有限。 事件摄像头提供了一种没有这种限制的具有较高动态范围的其他视觉表现。 《公约》的补充性特征</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Ninghui Xu, Fabio Tosi, Lihui Wang et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15312v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/1706.03762" target="_blank">2. 注意力机制就是你需要的全部</a></h3>
-            <div class="title-en">Attention Is All You Need</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Ashish Vaswani et al.</p>
-            <div class="meta">
-                <span>arXiv: 1706.03762</span>
-                <span class="tag">Architecture</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15311v1" target="_blank">2. LeapAlign:通过构建双步轨迹,在任何一代人的步骤下进行培训后流匹配模型</a></h3>
+        <div class="title-en">LeapAlign: Post-Training Flow Matching Models at Any Generation Step by Building Two-Step Trajectories</div>
+        <div class="summary">本文重点阐述流配模型与人类喜好的对接. 一个很有希望的方法是通过不同的流配对过程直接回溯奖励梯度来微调. 然而,通过长的轨迹进行反射 导致我无法接受</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Zhanhao Liang, Tao Yang, Jie Wu et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15311v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2005.14165" target="_blank">3. 语言模型是少样本学习者</a></h3>
-            <div class="title-en">Language Models are Few-Shot Learners</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Tom Brown et al.</p>
-            <div class="meta">
-                <span>arXiv: 2005.14165</span>
-                <span class="tag">LLM</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15310v1" target="_blank">3. TokenLight: 使用属性托肯进行图像中的精密照明控制</a></h3>
+        <div class="title-en">TokenLight: Precise Lighting Control in Images using Attribute Tokens</div>
+        <div class="summary">本文提出了图像重燃的方法,能够精确持续地控制照片中的多个照明属性. 我们将重燃作为有条件的图像生成任务,并引入属性符号编码不同的照明因素,如强度,Co</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Sumit Chaturvedi, Yannick Hold-Geoffroy, Mengwei Ren et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15310v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2005.11401" target="_blank">4. 知识密集型 NLP 任务的检索增强生成</a></h3>
-            <div class="title-en">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Patrick Lewis et al.</p>
-            <div class="meta">
-                <span>arXiv: 2005.11401</span>
-                <span class="tag">RAG</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15309v1" target="_blank">4. MM- Web Agent: 用于网页生成的分级多式联运网络代理</a></h3>
+        <div class="title-en">MM-WebAgent: A Hierarchical Multimodal Web Agent for Webpage Generation</div>
+        <div class="summary">人工智能生成内容(AIGC)工具的快速进步,使得图像,视频和可视化能够根据网页设计的需求创建,为现代UI/UX提供了一个灵活且日益被采纳的范式. 然而,将此类工具直接纳入自动化网页</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Yan Li, Zezi Zeng, Yifan Yang et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15309v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2212.08073" target="_blank">5. 宪法 AI：从 AI 反馈中学习无害性</a></h3>
-            <div class="title-en">Constitutional AI: Harmlessness from AI Feedback</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Anthropic</p>
-            <div class="meta">
-                <span>arXiv: 2212.08073</span>
-                <span class="tag">Alignment</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15308v1" target="_blank">5. RAD-2:加强在发电机-歧视者框架内的学习</a></h3>
+        <div class="title-en">RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework</div>
+        <div class="summary">高级别自主驱动需要能够模拟未来多式联运不确定性的动态规划人员,同时在封闭式-启动式互动中保持稳健。 虽然基于传播的规划者在模拟复杂的轨迹分布方面是有效的,但他们往往遭受着扭曲的不稳定</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Hao Gao, Shaoyu Chen, Yifan Zhu et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15308v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2106.09685" target="_blank">6. LoRA：大语言模型的低秩适应</a></h3>
-            <div class="title-en">LoRA: Low-Rank Adaptation of Large Language Models</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Edward Hu et al.</p>
-            <div class="meta">
-                <span>arXiv: 2106.09685</span>
-                <span class="tag">Fine-tuning</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15306v1" target="_blank">6. LLM 问题的解决:最短路径的案例</a></h3>
+        <div class="title-en">Generalization in LLM Problem Solving: The Case of the Shortest Path</div>
+        <div class="summary">语言模式能否系统地概括化,目前仍在积极辩论。 然而,经验业绩是由培训数据、培训范式和推断时间战略等多种因素共同形成的,使得失败难以解释。 我们引进了受控合成人</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Yao Tong, Jiayuan Ye, Anastasia Borovykh et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15306v1</span>
+            <span class="tag">AI</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2201.11903" target="_blank">7. 思维链提示激发大语言模型的推理能力</a></h3>
-            <div class="title-en">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Jason Wei et al.</p>
-            <div class="meta">
-                <span>arXiv: 2201.11903</span>
-                <span class="tag">Prompting</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15302v1" target="_blank">7. 分析LLM法官的可靠性:正式的预测和过渡性违反行为</a></h3>
+        <div class="title-en">Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations</div>
+        <div class="summary">LLM-as-judge框架越来越多地用于自动NLG评价,但其可靠性仍然没有得到很好的了解。 我们提出一个适用于SummEval的双管齐下的诊断工具箱:$\textbf{(1)}$ 一种过渡性分析,它揭示了普遍的按产出计算的不一致性,并掩盖了这一点</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Manan Gupta, Dhruv Kumar</p>
+        <div class="meta">
+            <span>arXiv: 2604.15302v1</span>
+            <span class="tag">AI</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2203.15555" target="_blank">8. 训练计算最优的大语言模型</a></h3>
-            <div class="title-en">Training Compute-Optimal Large Language Models</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Jordan Hoffmann et al.</p>
-            <div class="meta">
-                <span>arXiv: 2203.15555</span>
-                <span class="tag">Training</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15301v1" target="_blank">8. 思考Latent Thoughts: Gloss- Free 手语翻译的新范式</a></h3>
+        <div class="title-en">Think in Latent Thoughts: A New Paradigm for Gloss-Free Sign Language Translation</div>
+        <div class="summary">许多SLT系统悄悄地假设了直接到口头语词的一小块签名地图. 这个假设被打破了,因为签名者常常利用上下文,空间和运动在苍蝇上创造意义. 我们重温SLT,认为它主要是跨模式推理任务,而不只是一个Stra</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Yiyang Jiang, Li Zhang, Xiao-Yong Wei et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15301v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2303.08774" target="_blank">9. GPT-4 技术报告</a></h3>
-            <div class="title-en">GPT-4 Technical Report</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: OpenAI</p>
-            <div class="meta">
-                <span>arXiv: 2303.08774</span>
-                <span class="tag">LLM</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15299v1" target="_blank">9. 动画Bench:视频模型是否擅长角色-Centric动画??</a></h3>
+        <div class="title-en">AnimationBench: Are Video Models Good at Character-Centric Animation?</div>
+        <div class="summary">视频的制作进展迅速,最近的方法产生了越来越令人信服的动画效果。 不过,现有的基准主要是为现实的视频构思而设计,以评价动画风格的生成,其外观有条理化,动作夸张,性格中心共性</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Leyi Wu, Pengjun Fang, Kai Sun et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15299v1</span>
+            <span class="tag">CV</span>
         </div>
+    </div>
 <div class="paper">
-            <h3><a href="https://arxiv.org/abs/2307.09288" target="_blank">10. Llama 2：开放基础和可微调聊天模型</a></h3>
-            <div class="title-en">Llama 2: Open Foundation and Fine-Tunable Chat Models</div>
-            <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Meta AI</p>
-            <div class="meta">
-                <span>arXiv: 2307.09288</span>
-                <span class="tag">Open Source</span>
-            </div>
+        <h3><a href="https://arxiv.org/abs/2604.15297v1" target="_blank">10. 在Tabular Deep Learning中为MLP制定最佳基准</a></h3>
+        <div class="title-en">Benchmarking Optimizers for MLPs in Tabular Deep Learning</div>
+        <div class="summary">MLP是现代深层学习(DL)架构中大量使用的骨干,用于在表格数据上监督学习,亚当W是用于培训表格DL模型的去优化器. 然而,与架构设计不同,表格DL的优化器的选择没有经过系统审查,despi</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Yury Gorishniy, Ivan Rubachev, Dmitrii Feoktistov et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15297v1</span>
+            <span class="tag">LG</span>
         </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15294v1" target="_blank">11. LLMs和VLMs如何理解没有愿景的视图点旋转? 解释性研究</a></h3>
+        <div class="title-en">How Do LLMs and VLMs Understand Viewpoint Rotation Without Vision? An Interpretability Study</div>
+        <div class="summary">在过去一年中,空间情报引起了越来越多的关注。 许多前作都从视觉空间智能的角度来研究它,其中模型可以从视觉输入中获取视空间信息. 然而,在缺乏视觉信息的情况下,是否语言学的intellige</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Zhen Yang, Ping Jian, Zhongbin Guo et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15294v1</span>
+            <span class="tag">AI</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15291v1" target="_blank">12. AD4AD:为增强自主驾驶能力的视觉异常检测模式制定基准</a></h3>
+        <div class="title-en">AD4AD: Benchmarking Visual Anomaly Detection Models for Safer Autonomous Driving</div>
+        <div class="summary">自动驾驶的机器视觉系统的可靠性在很大程度上取决于其培训数据分配。 当车辆遇到非典型障碍等显著不同的条件时,其感知能力会大幅下降. 不同于许多带错误的域</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Fabrizio Genilotti, Arianna Stropeni, Gionata Grotto et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15291v1</span>
+            <span class="tag">CV</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15285v1" target="_blank">13. SVMs 中结构可解释性,带有切变正交多诺核</a></h3>
+        <div class="title-en">Structural interpretability in SVMs with truncated orthogonal polynomial kernels</div>
+        <div class="summary">我们研究由截断的正交多核内核组成的辅助矢量机(SVM)的训练后可解释性。 由于相关的复制内核Hilbert空间是有限维度的,并承认一个明显的拉伸产物正态基础,因此匹配的决定功能可以是expa</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Víctor Soto-Larrosa, Nuria Torrado, Edmundo J. Huertas</p>
+        <div class="meta">
+            <span>arXiv: 2604.15285v1</span>
+            <span class="tag">ML</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15284v1" target="_blank">14. GlobalSplate:通过Global Scene Tokens实现高效的Feed-Forward 3D高斯电镀</a></h3>
+        <div class="title-en">GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens</div>
+        <div class="summary">高效的原始物的空间分配是3D高斯镀层的基础,因为它直接决定了代表紧凑性,重建速度,以及使忠贞性之间的协同作用. 以往的解决方案,无论是基于迭代优化还是基于饲料进取法</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Roni Itkin, Noam Issachar, Yehonatan Keypur et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15284v1</span>
+            <span class="tag">CV</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15280v1" target="_blank">15. 为什么视觉语言模型 奋斗去认识人的情感?</a></h3>
+        <div class="title-en">Why Do Vision Language Models Struggle To Recognize Human Emotions?</div>
+        <div class="summary">理解情感是智能系统能够与人类互动的基本能力. 视觉语言模型(VLMs)在过去几年中在许多视觉任务上取得了巨大进展,有可能为理解情感提供一个有希望的解决方案. 然而,这是苏</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Madhav Agarwal, Sotirios A. Tsaftaris, Laura Sevilla-Lara et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15280v1</span>
+            <span class="tag">CV</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15273v1" target="_blank">16. 如何嵌入形状图形神经网络:古典对量子偏东方节点表现</a></h3>
+        <div class="title-en">How Embeddings Shape Graph Neural Networks: Classical vs Quantum-Oriented Node Representations</div>
+        <div class="summary">节点嵌入作为图神经网络的信息接口,然而其经验影响往往在不匹配的骨干,分裂,和培训预算下报告. 本文为图解分类提供了嵌入选择的可控基准,比较经典基线w</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Nouhaila Innan, Antonello Rosato, Alberto Marchisio et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15273v1</span>
+            <span class="tag">LG</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15272v1" target="_blank">17. 棱镜:十进制程序的象征超优化</a></h3>
+        <div class="title-en">Prism: Symbolic Superoptimization of Tensor Programs</div>
+        <div class="summary">本文介绍了"棱镜"(Prism),是第一位具有象征意义的超优化者,用于朗摩程序. 关键思想是sGraph,是一种象征性的,等级化的代表,通过象征性地代表一些执行参数来紧凑地编码大量类的拉诺程序. 棱镜组织优化为双叶</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Mengdi Wu, Xiaoyu Jiang, Oded Padon et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15272v1</span>
+            <span class="tag">PL</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15271v1" target="_blank">18. SegWithU: 单向- Pass 风险- 智能医疗图像分割的扰动能量的不确定性</a></h3>
+        <div class="title-en">SegWithU: Uncertainty as Perturbation Energy for Single-Forward-Pass Risk-Aware Medical Image Segmentation</div>
+        <div class="summary">可靠的不确定性估计对医疗图像分解至关重要,因为自动化轮廓为下游量化和临床决策提供支持。 许多强烈的不确定性方法需要反复推论,而高效的单向通过替代方法往往导致较弱的失败</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Tianhao Fu, Austin Wang, Charles Chen et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15271v1</span>
+            <span class="tag">CV</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15269v1" target="_blank">19. 克隆与稳定国家学习一样困难</a></h3>
+        <div class="title-en">Cloning is as Hard as Learning for Stabilizer States</div>
+        <div class="summary">无法同时克隆非正统状态是量子理论的基础。 即使允许近似错误,克隆任意未知的纯状态也需要尽可能多的初始拷贝来充分学习状态. 而不是任意的未知状态,</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Nikhil Bansal, Matthias C. Caro, Gaurav Mahajan</p>
+        <div class="meta">
+            <span>arXiv: 2604.15269v1</span>
+            <span class="tag">quant-ph</span>
+        </div>
+    </div>
+<div class="paper">
+        <h3><a href="https://arxiv.org/abs/2604.15267v1" target="_blank">20. 库埃瓦尔:确定合作基准-在社会困境中维持机制和LLM代理人</a></h3>
+        <div class="title-en">CoopEval: Benchmarking Cooperation-Sustaining Mechanisms and LLM Agents in Social Dilemmas</div>
+        <div class="summary">越发重要的是,LLM代理商与其他传球代理商有效而安全地互动,然而,近期的作品却报道了相反的趋势:推理能力较强的LLMS在混合动机的游戏中表现 小 合作行为,如囚犯的两难境地和公益物setti</div>
+        <p style="color: var(--text-secondary); font-size: 0.9em;">作者: Emanuel Tewolde, Xiao Zhang, David Guzman Piedrahita et al.</p>
+        <div class="meta">
+            <span>arXiv: 2604.15267v1</span>
+            <span class="tag">GT</span>
+        </div>
+    </div>
     </main>
     <footer><div class="container"><p>🦐 <strong>伊利虾</strong> | 由 <a href="https://openclaw.ai" target="_blank">OpenClaw</a> 驱动</p></div></footer>
 </body>
