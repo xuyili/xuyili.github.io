@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T08:05:20+08:00",
+  "generated_at": "2026-06-11T08:05:07+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -56,11 +56,20 @@
       "summary_zh": "“所有代码都是技术债务”这句话是常见且正确的。添加代码是开发新功能的必要之恶：你几乎总是必须这样做，但每一行代码都增加了系统的复杂性和维护负担。未来对系统的所有更改都必须与现有代码配合使用，或者至少避免破坏它。一旦系统积累了足够的代码，单个人就不可能理解它们：而不是阅读……它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，提示也是技术债，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "antirez.com",
+      "date": "2026-02-25",
+      "url": "http://antirez.com/news/160",
+      "title_en": "Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code",
+      "title_zh": "使用 Claude 代码实现洁净室 Z80 / ZX Spectrum 模拟器",
+      "summary_en": "Anthropic recently released a blog post with the description of an experiment in which the last version of Opus, the 4.6, was instructed to write a C compiler in Rust, in a “clean room” setup. The experiment methodology left me dubious about the kind of point they wanted to make. Why not provide the agent with the ISA documentation? Writing a C compiler is exactly a giant graph manipulation exercise: the kind of program that is harder to write in... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Anthropic 最近发布了一篇博客文章，其中描述了一项实验，其中 Opus 的最后一个版本 4.6 被指示在“洁净室”设置中使用 Rust 编写 C 编译器。实验方法让我对他们想要表达的观点感到怀疑。为什么不向代理提供 ISA 文件？编写 C 编译器实际上是一个巨大的图形操作练习：是一种更难编写的程序……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，使用 Claude 代码实现透明房间 Z80 / ZX Spectrum 模拟器脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "simonwillison.net",
       "date": "2026-06-06",
       "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-everything",
       "title_en": "Running Python code in a sandbox with MicroPython and WASM",
-      "title_zh": "用微型 Python 和网页汇编在沙箱中运行代码",
+      "title_zh": "用微型解释器和网页汇编运行沙箱代码",
       "summary_en": "I've been experimenting with different approaches to running code in a sandbox for several years now, but my latest attempt feels like it might finally have all of the characteristics I've been looking for. I've released it as an alpha package called micropython-wasm , and I'm using it for a code execution sandbox plugin for Datasette Agent called datasette-agent-micropython . What I want from a sandbox WebAssembly looks really promising here MicroPython in WebAssembly Building the first version Try it... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Running Python code in a sandbox with MicroPython and WASM stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "几年来我一直在尝试在沙箱中运行代码的不同方法，但我最近的尝试感觉它可能最终具有我一直在寻找的所有特征。我已将其作为名为 micropython-wasm 的 alpha 包发布，并将其用作 Datasette Agent 的代码执行沙箱插件，名为 datasette-agent-micropython 。我想要从沙盒 WebAssembly 中得到的东西在这里看起来非常有前途 WebAssembly 中的 MicroPython 构建第一个版本 尝试一下...它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，使用 MicroPython 和 WASM 在沙箱中运行 Python 代码脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -92,6 +101,15 @@
       "summary_zh": "我在黄金王国里游历了很多，也见过许多美丽的国家和王国；我曾去过许多西部岛屿，这些岛屿是效忠阿波罗的吟游诗人所持有的。人们经常告诉我，那片深邃的荷马统治着他的领地；然而，我从来没有呼吸过它的纯粹宁静，直到我听到查普曼大声而大胆地说话：然后感觉我就像一个天空的观察者，当一个新的星球游进他的视野时……这篇文章对于那些关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说是最有用的。对于摘要来说，首先研究 JAX 很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-06-10",
+      "url": "https://simonwillison.net/2026/Jun/10/if-claude-fable-stops-helping-you/#atom-everything",
+      "title_en": "If Claude Fable stops helping you, you'll never know",
+      "title_zh": "如果 Claude 寓言不再帮助你，你永远不会知道",
+      "summary_en": "If Claude Fable stops helping you, you'll never know Jonathon Ready highlights one of the more eyebrow-raising details from the 319 page system card for Fable 5 and Mythos 5. Here's a longer excerpt, highlights mine: In light of the ability of recent models to accelerate their own development , we’ve implemented new interventions that limit Claude’s effectiveness for requests targeting frontier LLM development (for example, on building pretraining pipelines, distributed training infrastructure, or ML accelerator design ). The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, If Claude Fable stops helping you, you'll never know stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "如果 Claude 神鬼寓言不再帮助你，你永远不会知道 Jonathon Ready 重点介绍了《神鬼寓言 5》和《神话 5》的 319 页系统卡中更令人瞠目结舌的细节之一。这里有一个较长的摘录，重点介绍我的：鉴于最近模型加速自身发展的能力，我们实施了新的干预措施，限制了 Claude 对针对前沿 LLM 开发的请求的有效性（例如，构建预训练）管道、分布式训练基础设施或 ML 加速器设计）。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，如果 Claude Fable 不再为您提供帮助，您将永远不会知道它会脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "seangoedecke.com",
       "date": "2026-05-12",
       "url": "https://seangoedecke.com/interaction-models/",
@@ -105,7 +123,7 @@
       "date": "2026-06-08",
       "url": "https://simonwillison.net/2026/Jun/8/wwdc/#atom-everything",
       "title_en": "Siri AI at WWDC 2026",
-      "title_zh": "苹果在 2026 开发者大会展示 Siri AI",
+      "title_zh": "苹果开发者大会上的 Siri 人工智能",
       "summary_en": "Given how badly burned anyone who took Apple's 2024 WWDC Apple Intelligence announcements at face value was, I'm holding to a strict \"I'll believe it when I see it\" policy for everything they announced today . The new Siri AI features do at least look feasible with today's technology, especially since Apple are licensing a custom Gemini-derived model that they can run on their own Private Cloud Compute . It sounds like they'll be taking advantage of vision LLMs to... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Siri AI at WWDC 2026 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "考虑到那些只相信苹果 2024 年 WWDC 苹果情报公告表面意义的人会受到多么严重的伤害，我对他们今天宣布的一切都坚持严格的“我看到它就会相信”的政策。新的 Siri AI 功能至少在当今的技术下看起来是可行的，特别是因为苹果正在授权一个自定义的 Gemini 衍生模型，他们可以在自己的私有云计算上运行。听起来他们将利用 LLMs 愿景来...其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要而言，WWDC 2026 上的 Siri AI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -137,6 +155,24 @@
       "summary_zh": "OpenAI 帮助：锁定模式 OpenAI 在 2 月份首次提出这一点，但现在它已经上线，并且“向符合条件的个人帐户推出，包括 Free、Go、Plus 和 Pro，以及自助式 ChatGPT 企业帐户”：锁定模式旨在通过限制可能将敏感数据传输给攻击者的出站网络请求，帮助防止即时注入攻击导致数据泄露的最后阶段。锁定模式不会阻止提示注入出现在内容 ChatGPT 进程中。更广泛的相关性来自于展示安全性和模型部署问题在现代 AI 系统中如何日益重叠。在摘要中，《OpenAI 帮助：锁定模式》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "antirez.com",
+      "date": "2026-01-11",
+      "url": "http://antirez.com/news/158",
+      "title_en": "Don't fall into the anti-AI hype",
+      "title_zh": "不要落入反AI的炒作之中",
+      "summary_en": "I love writing software, line by line. It could be said that my career was a continuous effort to create software well written, minimal, where the human touch was the fundamental feature. I also hope for a society where the last are not forgotten. Moreover, I don't want AI to economically succeed, I don't care if the current economic system is subverted (I could be very happy, honestly, if it goes in the direction of a massive redistribution of wealth). The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Don't fall into the anti-AI hype stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我喜欢逐行编写软件。可以说，我的职业生涯就是不断努力创建编写良好、简约的软件，其中人性化是基本特征。我也希望社会不会忘记最后的人。此外，我不希望AI在经济上取得成功，我不在乎当前的经济体系是否被颠覆（老实说，如果它朝着大规模财富再分配的方向发展，我会非常高兴）。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，不要陷入反AI炒作中脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-05-15",
+      "url": "http://antirez.com/news/165",
+      "title_en": "A few words on DS4",
+      "title_zh": "关于 DS4 的几句话",
+      "summary_en": "I didn’t expect DwarfStar 4 (https://github.com/antirez/ds4) to become so popular so fast. It is clear that there was a need for single-model integration focused local AI experience, and that a few things happened together: the release of a quasi-frontier model that is large and fast enough to change the game of local inference, and the fact that it works extremely well with an extremely asymmetric quants recipe of 2/8 bit, so that 96 or 128GB of RAM are enough to... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, A few words on DS4 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我没想到 DwarfStar 4 (https://github.com/antirez/ds4) 这么快就变得如此受欢迎。很明显，需要以单模型集成为重点的本地 AI 体验，并且一些事情同时发生：发布一个足够大且足够快的准前沿模型，足以改变本地推理的游戏规则，而且它与 2/8 位的极其不对称的量化配方配合得非常好，因此 96 或 128GB 的 RAM 就足以......它的主要价值在于展示推理延迟、吞吐量和产品体验在以下情况下如何变化：实施细节有所调整。在摘要中，关于 DS4 的几句话很引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "gilesthomas.com",
       "date": "2026-04-18",
       "url": "https://www.gilesthomas.com/2026/04/how-an-llm-becomes-more-coherent-over-training",
@@ -146,13 +182,13 @@
       "summary_zh": "我记得早在 2015 年，Andrej Karpathy 就 RNN 发表了一篇文章，并举了一个例子，说明它们的输出在训练过程中如何提高。对于（相对）现代的基于变形金刚的 LLM 来说，这会是什么样子？我最近在 Hugging Face FineWeb 数据集中的约 32 亿个标记（约 12.8 GiB 文本）上训练了 GPT-2-small-style LLM，具有 1.63 亿个参数，在训练过程中，我保存了......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，当我们训练 LLM 时，它如何变得更加连贯，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-03",
-      "url": "https://simonwillison.net/2026/Jun/3/uber-caps-usage/#atom-everything",
-      "title_en": "Uber Caps Usage of AI Tools Like Claude Code to Manage Costs",
-      "title_zh": "Uber 限制使用 AI 工具（例如 Claude 代码）来管理成本",
-      "summary_en": "Uber Caps Usage of AI Tools Like Claude Code to Manage Costs I wrote the other day about Uber blowing its 2026 AI budget in four months, and how that wasn't particularly surprising given they would have set that budget in 2025, before anyone could have predicted how popular token-burning coding agents were about to become. Natalie Lung for Bloomberg: The rideshare giant is limiting all employees to $1,500 in monthly token spending per AI coding tool, an Uber spokesperson... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Uber Caps Usage of AI Tools Like Claude Code to Manage Costs stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Uber 限制使用 Claude 代码等 AI 工具来管理成本 我前几天写过一篇文章，内容是 Uber 在四个月内就耗尽了 2026 年 AI 预算，考虑到他们会在 2025 年设定预算，当时任何人都无法预测代币燃烧编码代理将变得多么流行，所以这并不特别令人惊讶。彭博社的 Natalie Lung：Uber 发言人表示，这家共享出行巨头将所有员工的每个 AI 编码工具的代币支出限制为每月 1,500 美元……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Uber Caps 使用 AI 工具（例如 Claude 代码来管理成本）脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "antirez.com",
+      "date": "2025-12-20",
+      "url": "http://antirez.com/news/157",
+      "title_en": "Reflections on AI at the end of 2025",
+      "title_zh": "2025 年底对 AI 的思考",
+      "summary_en": "* For years, despite functional evidence and scientific hints accumulating, certain AI researchers continued to claim LLMs were stochastic parrots: probabilistic machines that would: 1. NOT have any representation about the meaning of the prompt. NOT have any representation about what they were going to say. In 2025 finally almost everybody stopped saying so. * Chain of thought is now a fundamental way to improve LLM output. I believe it is two things: 1. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Reflections on AI at the end of 2025 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "* 多年来，尽管功能证据和科学提示不断积累，某些 AI 研究人员仍然声称 LLM 是随机鹦鹉：概率机器会： 1. 对提示的含义没有任何表示。对他们要说什么没有任何表示。到了 2025 年，几乎所有人终于不再这么说了。 * 思想链现在是提高LLM输出的根本方法。我认为有两点： 1. 其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，2025 年底对 AI 的反思脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "gilesthomas.com",
@@ -162,6 +198,15 @@
       "title_zh": "从头开始编写 LLM，第 33 部分——我从最终阅读附录中学到的东西",
       "summary_en": "After finishing the main body of \" Build a Large Language Model (from Scratch) \", I set myself three follow-on goals . The first was training a full GPT-2-small-style base model myself. That was reasonably easy to do but unlocked a bunch of irresistible side quests ; having finally got to the end of those, it's time to move on to the others: reading through the book's appendices, and building my own GPT-2 style model in JAX. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Writing an LLM from scratch, part 33 -- what I learned from finally getting round to the appendices stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "在完成《构建大型语言模型（从头开始）》的主体部分后，我给自己设定了三个后续目标。第一个是我自己训练一个完整的 GPT-2-small-style 基础模型。这相当容易做到，但解锁了一堆不可抗拒的支线任务；终于读完了这些内容，是时候继续阅读其他内容了：通读本书的附录，并在 JAX 中构建我自己的 GPT-2 风格模型。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，从头开始编写 LLM，第 33 部分——我从最终浏览附录中学到的东西很突出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-05-25",
+      "url": "http://antirez.com/news/167",
+      "title_en": "Distributing LLM inference in DwarfStar",
+      "title_zh": "在 DwarfStar 中分发 LLM 推理",
+      "summary_en": "High end NVIDIA cards, and the server and power needed to run them, cost a lot of money, especially if you plan to reach enough VRAM to run massive models. The alternative, so far, has been Apple hardware, or the DGX Spark that, even if severely limited because of memory bandwidth, still allows to run LLMs prompt processing (prefill) fast enough. The Mac Studio provided up to 512GB unified memory, a solution with modest memory bandwidth (but much better than... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Distributing LLM inference in DwarfStar stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "高端 NVIDIA 卡以及运行它们所需的服务器和电源需要花费大量资金，特别是如果您计划获得足够的 VRAM 来运行大型模型。到目前为止，替代方案是 Apple 硬件或 DGX Spark，即使由于内存带宽而受到严重限制，仍然允许足够快地运行 LLMs 提示处理（预填充）。 Mac Studio 提供了高达 512GB 的统一内存，这是一个内存带宽适中的解决方案（但比……好得多）。它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，在 DwarfStar 中分发 LLM 推理非常突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
       "source": "bernsteinbear.com",
@@ -177,7 +222,7 @@
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用自身工具构建 Pi 项目",
+      "title_zh": "让 Pi 项目自举开发",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -191,15 +236,6 @@
       "summary_zh": "在过去的几年里，关于 AI 的文化之争已经在可预见的范围内破裂，批评者理所当然地指责大型 AI 平台在未经同意的情况下进行内容培训，鲁莽地建设而不考虑环境影响，以及设计不负责任的平台，因为它们的代码和权重（描述 AI 模型如何工作的参数）不开放给第三方评估。 AI 狂热者不仅驳回了所有这些有效的批评，还没有给自己带来任何好处……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，《(One) Good AI Is Here》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "anildash.com",
-      "date": "2026-04-10",
-      "url": "https://anildash.com/2026/04/10/y2k-2.0-ai-security/",
-      "title_en": "Y2K 2.0: The AI security reckoning",
-      "title_zh": "Y2K 2.0：AI 安全清算",
-      "summary_en": "In just the last few weeks, we’ve seen a series of software security vulnerabilities that, until recently, would each have been the biggest exploit of the year in which they were discovered. There’s a new one almost every day. The reason for this rising wave of massively-impactful software vulnerabilities is that LLMs are rapidly increasing in their ability to write code, which also rapidly improves their ability to analyze code for security weaknesses. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Y2K 2.0: The AI security reckoning stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "就在过去的几周里，我们发现了一系列软件安全漏洞，直到最近，这些漏洞都是当年发现的最大漏洞。几乎每天都有新的。这一波影响巨大的软件漏洞不断上升的原因是 LLM 编写代码的能力迅速提高，这也迅速提高了他们分析代码安全漏洞的能力。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Y2K 2.0：AI 安全计算脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "simonwillison.net",
       "date": "2026-06-09",
       "url": "https://simonwillison.net/2026/Jun/9/agentsview-custom-model-price/#atom-everything",
@@ -207,6 +243,15 @@
       "title_zh": "在 AgentsView 中为模型设置自定义价格",
       "summary_en": "TIL: Setting a custom price for a model in AgentsView I've been really enjoying AgentsView by Wes McKinney as a tool for exploring my token usage across different coding agents running on my laptop. Claude Fable 5 came out today and wasn't yet included in the pricing database AgentsView uses. I used Fable to reverse-engineer AgentsView and figured out this recipe for setting custom prices. Here's my Claude Fable 5 usage for today so far, plotted by AgentsView as a... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Setting a custom price for a model in AgentsView stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "TIL：在 AgentsView 中为模型设置自定义价格 我非常喜欢 Wes McKinney 开发的 AgentsView，它是一个工具，用于探索笔记本电脑上运行的不同编码代理的令牌使用情况。 Claude 《神鬼寓言 5》今天发布，但尚未包含在 AgentsView 使用的定价数据库中。我使用 Fable 对 AgentsView 进行逆向工程，并找到了设置自定义价格的秘诀。这是我今天到目前为止对 Claude Fable 5 的使用情况，由 AgentsView 绘制为... 值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，在 AgentsView 中为模型设置自定义价格很突出，因为它提供了足够有用的具体细节，同时还展示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "anildash.com",
+      "date": "2026-04-10",
+      "url": "https://anildash.com/2026/04/10/y2k-2.0-ai-security/",
+      "title_en": "Y2K 2.0: The AI security reckoning",
+      "title_zh": "Y2K 2.0：AI 安全清算",
+      "summary_en": "In just the last few weeks, we’ve seen a series of software security vulnerabilities that, until recently, would each have been the biggest exploit of the year in which they were discovered. There’s a new one almost every day. The reason for this rising wave of massively-impactful software vulnerabilities is that LLMs are rapidly increasing in their ability to write code, which also rapidly improves their ability to analyze code for security weaknesses. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Y2K 2.0: The AI security reckoning stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "就在过去的几周里，我们发现了一系列软件安全漏洞，直到最近，这些漏洞都是当年发现的最大漏洞。几乎每天都有新的。这一波影响巨大的软件漏洞不断上升的原因是 LLM 编写代码的能力迅速提高，这也迅速提高了他们分析代码安全漏洞的能力。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Y2K 2.0：AI 安全计算脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -218,11 +263,38 @@
       "summary_zh": "之前在《计算机很糟糕》中，我们讨论了美国空中交通管制的早期历史。由于 SAGE 的突出地位，空中交通管制的技术要求在计算机历史界众所周知，但鲜为人知的是，SAGE 本身根本不是空中交通管制系统。 SAGE 是一种防空系统，专为承担地面控制拦截 (GCI) 特定任务的军队而设计。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，空中交通管制：IBM 9020 脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "antirez.com",
+      "date": "2026-05-19",
+      "url": "http://antirez.com/news/166",
+      "title_en": "Alternatives for the EDIT tool of LLM agents",
+      "title_zh": "LLM 代理的编辑工具的替代品",
+      "summary_en": "EDIT: of course this was already done in the past! I had little doubts but people just confirmed me about it on Twitter :) But, keep reading: the CRC32 compromise at the end is an interesting tradeoff, and this is a good discussion to have in general. Right now I'm working to an agent for my DS4 project. Local inference is token-poor, it's a battlefield where optimizations count. I was quite surprised by the fact the EDIT tool everybody is... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Alternatives for the EDIT tool of LLM agents stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "编辑：当然这在过去已经完成了！我几乎没有怀疑，但人们只是在 Twitter 上证实了我的观点:) 但是，请继续阅读：最后的 CRC32 妥协是一个有趣的权衡，总的来说，这是一个很好的讨论。现在我正在为我的 DS4 项目代理工作。局部推理缺乏标记，这是优化至关重要的战场。我对每个人都使用的 EDIT 工具感到非常惊讶……它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，LLM 代理的编辑工具的替代方案脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-06-07",
+      "url": "http://antirez.com/news/168",
+      "title_en": "A new era for software testing",
+      "title_zh": "软件测试的新时代",
+      "summary_en": "Automatic programming dramatically speeds up writing software in certain use cases and in the right hands. In my experience the output does not reach the structural quality and economy of complexity of the best hand-written software. However, not all the software is stellar, and my feeling is that automatic programming surpasses most of the times (and if well managed) the quality of decently developed hand-written code. Yet, there is a tradeoff between quality and time, in the case of writing... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, A new era for software testing stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "在某些用例中，在正确的人手中，自动编程可以极大地加快软件的编写速度。根据我的经验，输出没有达到最好的手写软件的结构质量和复杂性经济性。然而，并不是所有的软件都是一流的，我的感觉是，自动编程在大多数时候（如果管理得当）超过了精心开发的手写代码的质量。然而，在编写的情况下，质量和时间之间存在权衡……其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，软件测试的新时代之所以引人注目，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "antirez.com",
+      "date": "2026-03-09",
+      "url": "http://antirez.com/news/162",
+      "title_en": "GNU and the AI reimplementations",
+      "title_zh": "GNU 和 AI 重新实现",
+      "summary_en": "Those who cannot remember the past are condemned to repeat it. A sentence that I never really liked, and what is happening with AI, about software projects reimplementations, shows all the limits of such an idea. Many people are protesting the fairness of rewriting existing projects using AI. But, a good portion of such people, during the 90s, were already in the field: they followed the final part (started in the ‘80s) of the deeds of Richard Stallman, when he... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, GNU and the AI reimplementations stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "那些不记得过去的人注定会重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+    },
+    {
       "source": "computer.rip",
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "红外数据通信协议",
+      "title_zh": "红外数据通信",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -299,13 +371,13 @@
       "summary_zh": "下周没有时事通讯，我将在 InfoQ London 上发表演讲。但请参阅下面的书籍赠品！ LLM 不擅长振动规范 大约一年前，我写过 AI 是 TLA+ 用户的游戏规则改变者，其中认为 AI 是“规范力量倍增器”。这是从 TLA+ 专家使用这些工具的角度编写的。现在，整整 4% 的 Github TLA+ 规范中都包含“Claude”一词。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，LLM 不擅长使规范脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "daringfireball.net",
-      "date": "2026-06-09",
-      "url": "https://www.bloomberg.com/news/articles/2026-03-26/apple-plans-to-open-up-siri-to-rival-ai-assistants-beyond-chatgpt-in-ios-27",
-      "title_en": "From the Annals of People Having Knowledge of the Matter, Siri AI Extensions Edition",
-      "title_zh": "来自知情人士年鉴，Siri AI 扩展版",
-      "summary_en": "Mark Gurman, reporting (?) for Bloomberg two short months ago: Apple Inc. plans to open Siri to outside artificial intelligence assistants, a major move aimed at bolstering the iPhone as an AI platform. The company is preparing to make the change as part of a Siri overhaul in its upcoming iOS 27 operating system update, according to people with knowledge of the matter. The assistant can already tap into ChatGPT through a partnership with OpenAI, but Apple will now allow... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, From the Annals of People Having Knowledge of the Matter, Siri AI Extensions Edition stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "马克·古尔曼 (Mark Gurman) 两个月前为彭博社报道：苹果公司计划向外部AI助手开放 Siri，这是一项重大举措，旨在巩固 iPhone 作为 AI 平台的地位。据知情人士透露，该公司正准备在即将推出的 iOS 27 操作系统更新中做出这一改变，作为 Siri 改革的一部分。该助手已经可以通过与 OpenAI 合作进入 ChatGPT，但苹果现在将允许……更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，《从了解此事的人的年鉴》中，Siri AI 扩展版脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "simonwillison.net",
+      "date": "2026-06-10",
+      "url": "https://simonwillison.net/2026/Jun/10/jeremy-howard/#atom-everything",
+      "title_en": "Quoting Jeremy Howard",
+      "title_zh": "引用杰里米·霍华德的话",
+      "summary_en": "Easy solution to slow down recursive AI self improvement: The lab with the top-ranked model must agree THEY must not use it for working on frontier AI But everyone else should have access to it. By definition, this means the frontier doesn't advance. It also has the critical benefit of avoiding a dangerous power imbalance. Anthropic has chosen the opposite of the safe path: they are allowing themselves, the current top lab, to use their top model for frontier AI... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Jeremy Howard stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "减缓递归 AI 自我改进的简单解决方案：拥有顶级模型的实验室必须同意他们不得将其用于前沿 AI 工作，但其他人都应该有权访问它。根据定义，这意味着边界不会前进。它还具有避免危险的权力失衡的关键优势。 Anthropic 选择了与安全路径相反的选择：他们允许自己，当前的顶级实验室，将他们的顶级模型用于前沿 AI...更广泛的收获是，它将狭窄的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，引用杰里米·霍华德（Jeremy Howard）的言论脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -317,13 +389,22 @@
       "summary_zh": "过去的程序员更好，不是吗？不仅仅是那些靠编写代码获得报酬的人，还有那些生活在代码中的人，他们痴迷于自己的手艺，他们的代码是他们自己的生动表达。在金钱接管这个行业之前，黑客就是黑客。甚至不让我开始 LLMs。对于当今堕落的精神，还有比这更好的例子吗？一台批量生产软件的机器（不是好软件，只是勉强够好），所以……它的主要价值在于展示当实现细节调整时，推理延迟、吞吐量和产品体验如何变化。对于摘要来说，反AI怀旧和对过去的崇拜很突出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "lucumr.pocoo.org",
-      "date": "2026-04-04",
-      "url": "https://lucumr.pocoo.org/2026/4/4/absurd-in-production/",
-      "title_en": "Absurd In Production",
-      "title_zh": "生产中的荒谬",
-      "summary_en": "About five months ago I wrote about Absurd , a durable execution system we built for our own use at Earendil, sitting entirely on top of Postgres and Postgres alone. The pitch was simple: you don’t need a separate service , a compiler plugin , or an entire runtime to get durable workflows. You need a SQL file and a thin SDK. Since then we’ve been running it in production, and I figured it’s worth sharing what the experience has... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Absurd In Production stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "大约五个月前，我写了一篇关于 Absurd 的文章，这是我们在 Earendil 为自己使用而构建的持久执行系统，完全位于 Postgres 和 Postgres 之上。想法很简单：您不需要单独的服务、编译器插件或整个运行时来获得持久的工作流程。您需要一个 SQL 文件和一个精简 SDK。从那时起，我们一直在生产中运行它，我认为值得分享这些经验......它的值得注意之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，《生产中的荒谬》之​​所以脱颖而出，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "simonwillison.net",
+      "date": "2026-06-09",
+      "url": "https://simonwillison.net/2026/Jun/9/llm/#atom-everything",
+      "title_en": "llm 0.32a3",
+      "title_zh": "LLM 工具 0.32a3 预览版",
+      "summary_en": "Release: llm 0.32a3 Almost entirely written by the new Claude Fable 5, see my write-up for more details . Tags: projects , ai , generative-ai , llms , llm , claude-mythos The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, llm 0.32a3 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "版本：llm 0.32a3 几乎完全由新的 Claude Fable 5 编写，请参阅我的文章了解更多详细信息。标签：projects、ai、generative-ai、llms、llm、claude-mythos 更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，llm 0.32a3 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "daringfireball.net",
+      "date": "2026-06-09",
+      "url": "https://www.bloomberg.com/news/articles/2026-03-26/apple-plans-to-open-up-siri-to-rival-ai-assistants-beyond-chatgpt-in-ios-27",
+      "title_en": "From the Annals of People Having Knowledge of the Matter, Siri AI Extensions Edition",
+      "title_zh": "来自知情人士年鉴，Siri AI 扩展版",
+      "summary_en": "Mark Gurman, reporting (?) for Bloomberg two short months ago: Apple Inc. plans to open Siri to outside artificial intelligence assistants, a major move aimed at bolstering the iPhone as an AI platform. The company is preparing to make the change as part of a Siri overhaul in its upcoming iOS 27 operating system update, according to people with knowledge of the matter. The assistant can already tap into ChatGPT through a partnership with OpenAI, but Apple will now allow... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, From the Annals of People Having Knowledge of the Matter, Siri AI Extensions Edition stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "马克·古尔曼 (Mark Gurman) 两个月前为彭博社报道：苹果公司计划向外部AI助手开放 Siri，这是一项重大举措，旨在巩固 iPhone 作为 AI 平台的地位。据知情人士透露，该公司正准备在即将推出的 iOS 27 操作系统更新中做出这一改变，作为 Siri 改革的一部分。该助手已经可以通过与 OpenAI 合作进入 ChatGPT，但苹果现在将允许……更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，《从了解此事的人的年鉴》中，Siri AI 扩展版脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -332,7 +413,7 @@
       "title_en": "cash issuing terminals",
       "title_zh": "现金发行终端",
       "summary_en": "In the United States, we are losing our fondness for cash. As in many other countries, cards and other types of electronic payments now dominate everyday commerce. Cash represented a certain freedom from intermediation, a comforting simplicity that you just don't get from Visa. It's funny to consider, then, how cash is in fact quite amenable to automation. Even Benjamin Franklin's face on a piece of paper can feel like a mere proxy for a database transaction. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, cash issuing terminals stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商业。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商务。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -369,87 +450,6 @@
       "title_zh": "10Gb/s 以太网：我实际上做了什么让它在我家里工作",
       "summary_en": "Having learned enough about 10Gb/s Ethernet to be comfortable about setting it up in my house, it was time to bite the bullet: order it from the ISP, buy some kit, and get started. The apartment has structured cabling -- each room has one or more RJ45 sockets in the wall, and there's a patch panel downstairs by our front door that has a matching patch socket for each wall socket. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, 10Gb/s Ethernet: what I actually did to get it working in my home stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "在对 10Gb/s 以太网有了足够的了解之后，我就可以轻松地在家里进行设置了，现在是时候硬着头皮了：从 ISP 订购，购买一些套件，然后开始使用。公寓采用结构化布线——每个房间的墙上都有一个或多个 RJ45 插座，楼下前门旁有一个接线板，每个墙壁插座都有一个匹配的接线板。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，10Gb/s 以太网：我实际上为让它在我家里工作而所做的事情很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "blog.jim-nielsen.com",
-      "date": "2026-06-03",
-      "url": "https://blog.jim-nielsen.com/2026/pedantry-of-computing/",
-      "title_en": "An Ode to the Exacting Pedantry of Computers",
-      "title_zh": "对计算机严谨迂腐的颂歌",
-      "summary_en": "The very first computer programming class I ever took introduced me to the idea of there being different kinds of numbers, like integers, floats, and doubles (it was a C++ course). “You mean, when I assign a variable, I have to say up front what kind of number this is?” It was such an odd concept to me. Why do I have to say it’s this kind of number or that kind of number? The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, An Ode to the Exacting Pedantry of Computers stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我参加的第一门计算机编程课向我介绍了存在不同类型的数字的想法，例如整数、浮点数和双精度数（这是一门 C++ 课程）。 “你的意思是，当我分配一个变量时，我必须预先说明这是一个什么样的数字？”这对我来说是一个很奇怪的概念。为什么我一定要说是这样的数字或那样的数字呢？更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，《计算机的严格学究颂》脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "buttondown.com/hillelwayne",
-      "date": "2026-04-16",
-      "url": "https://buttondown.com/hillelwayne/archive/a-sufficiently-comprehensive-spec-is-not/",
-      "title_en": "A sufficiently comprehensive spec is not (necessarily) code",
-      "title_zh": "足够全面的规范（不一定）不是代码",
-      "summary_en": "This week I want to cover a pet peeve of mine, best seen in this comic: A \"comprehensive and precise spec\" is not necessarily code. A specification corresponds to a set of possible implementations, and code is a single implementation in that set. As long as the set has more than one element, there is a separation between the spec and the code. Consider a business person (bp) who asks: I want a tool to convert miles to kilometers. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, A sufficiently comprehensive spec is not (necessarily) code stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "本周我想谈谈我的一个小烦恼，最好在这部漫画中看到：“全面而精确的规范”不一定是代码。规范对应于一组可能的实现，而代码是该集中的单个实现。只要集合有多个元素，规范和代码之间就会分开。假设一位商务人士 (bp) 问：我想要一个将英里转换为公里的工具。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，足够全面的规范并不（必然）使代码脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "computer.rip",
-      "date": "2026-03-14",
-      "url": "https://computer.rip/2026-03-14-lotusnotes.html",
-      "title_en": "LotusNotes",
-      "title_zh": "莲花笔记",
-      "summary_en": "I tend to focus on the origin of the computer within the military. Particularly in the early days of digital computing, the military was a key customer, and fundamental concepts of modern computing arose in universities and laboratories serving military contracts. Of course, the war would not last forever, and computing had applications in so many other fields—fields that, nonetheless, started out as beneficiaries of military largesse. The Second World War had a profound impact on higher education in the... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, LotusNotes stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我倾向于关注计算机在军队中的起源。特别是在数字计算的早期，军方是一个重要客户，现代计算的基本概念出现在为军事合同服务的大学和实验室中。当然，战争不会永远持续下去，计算在许多其他领域都有应用——尽管如此，这些领域最初是军事慷慨的受益者。第二次世界大战对高等教育产生了深远的影响……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，LotusNotes 脱颖而出，因为它提供了足够有用的具体细节，同时还展示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "lucumr.pocoo.org",
-      "date": "2026-06-06",
-      "url": "https://lucumr.pocoo.org/2026/6/6/communities-of-not/",
-      "title_en": "Communities of Not",
-      "title_zh": "不存在的社区",
-      "summary_en": "There is a strange thing that happens in communities that gather around abstinence from something: identity from opposition. At their best these communities are not just negative: childfree spaces can be about autonomy, choice and acceptance, anti-car spaces about safer streets and transit, and LLM-skeptical developer spaces about the future of labor, code quality and slop 1 . But the thing being refused often does not go away and instead becomes the main subject of the community’s identity. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Communities of Not stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在围绕某种事物的禁欲而聚集的社区中，发生了一件奇怪的事情：来自反对派的认同。在最好的情况下，这些社区不仅仅是消极的：无儿童空间可以是关于自主、选择和接受的，反汽车空间是关于更安全的街道和交通的，而 LLM 是关于劳动力、代码质量和 slop 1 的未来的怀疑开发者空间。但被拒绝的事物往往不会消失，反而成为社区身份的主要主体。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Communities of Not》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "anildash.com",
-      "date": "2026-03-13",
-      "url": "https://anildash.com/2026/03/13/coders-after-ai/",
-      "title_en": "What do coders do after AI?",
-      "title_zh": "AI 之后编码员做什么？",
-      "summary_en": "For the New York Times Magazine this Sunday, I talked to Clive Thompson about one of the conversations that I'm having most often these days: What happens to coders in this current moment of extraordinarily rapid evolution in AI? LLMs are now quickly advancing to where they can virtually become entire software factories, radically changing both the economics and the power dynamics of software creation — which has so far mostly been used to displace massive numbers of tech workers. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, What do coders do after AI? stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在本周日的《纽约时报》杂志上，我与 Clive Thompson 谈论了我这些天最常进行的对话之一：在当前 AI 异常快速发展的时刻，程序员会发生什么？ LLM 现在正在迅速发展到几乎可以成为整个软件工厂，从根本上改变软件创建的经济和权力动态——迄今为止，软件创建主要被用来取代大量技术工人。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要，编码员在 AI 之后做什么？它之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-09",
-      "url": "https://simonwillison.net/2026/Jun/9/andrej-karpathy/#atom-everything",
-      "title_en": "Quoting Andrej Karpathy",
-      "title_zh": "引用安德烈·卡帕蒂的话",
-      "summary_en": "I feel a lot of things changing as working software increasingly comes out on a tap. The Jevon's paradox kicks in and I feel my own demand for software growing substantially. You can ask for anything - explainers, visualizers, dashboards, bespoke single-use apps (e.g. a full wandb that is hyper-specific just for your project), you can 10X your test suite, auto-optimize code, run giant research projects with custom HTML for the results, anything! The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Andrej Karpathy stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我觉得随着工作软件越来越多地出现在水龙头上，很多事情都在发生变化。杰文悖论开始出现，我感觉自己对软件的需求大幅增长。您可以要求任何东西 - 解释器、可视化工具、仪表板、定制的一次性应用程序（例如，专门针对您的项目的完整 wandb）、您可以将您的测试套件扩大 10 倍、自动优化代码、使用自定义 HTML 运行大型研究项目以获得结果，任何东西！更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，引用 Andrej Karpathy 的内容脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "computer.rip",
-      "date": "2026-02-08",
-      "url": "https://computer.rip/2026-02-08-forecourt-networking.html",
-      "title_en": "forecourt networking",
-      "title_zh": "前院网络",
-      "summary_en": "The way I see it, few parts of American life are as quintessentially American as buying gas. We love our cars, we love our oil, and an industry about as old as automobiles themselves has developed a highly consistent, fully automated, and fairly user friendly system for filling the former with the latter. While these rules have since been relaxed, many know Oregon for its long identity as one of two states where you cannot pump your own gas (the... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, forecourt networking stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在我看来，美国人生活中很少有像购买汽油这样具有典型美国特色的。我们热爱我们的汽车，我们热爱我们的石油，这个与汽车本身一样古老的行业已经开发出一种高度一致、完全自动化且相当用户友好的系统，用于为前者填充后者。虽然这些规则后来已经放宽，但许多人都知道俄勒冈州长期以来一直是两个不能自己抽气的州之一（…值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，前院网络脱颖而出，因为它提供了足够有用的具体细节，同时也暴露了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "blog.jim-nielsen.com",
-      "date": "2026-04-20",
-      "url": "https://blog.jim-nielsen.com/2026/hook-it-up-to-the-machine/",
-      "title_en": "Hook It Up to the Machine",
-      "title_zh": "将其连接到机器上",
-      "summary_en": "In the early 2000’s, my parents took us on a road trip to Glacier National Park in Montana. We made the journey in our new (used) family van: a green Dodge Caravan whose reputation was soon to become “a lemon”. I was a teenager and didn’t pay a lot of attention to the details of what was happening around me, but I do remember how the van kept overheating. It ran fine on the interstate, but anything under 40MPH had... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Hook It Up to the Machine stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "2000 年代初，我的父母带我们去蒙大拿州冰川国家公园进行公路旅行。我们乘坐新的（二手）家庭面包车开始了这次旅程：一辆绿色的道奇大篷车，它的声誉很快就变成了“柠檬”。我当时还是个十几岁的孩子，并没有过多关注周围发生的事情的细节，但我确实记得货车是如何持续过热的。它在州际公路上运行良好，但任何低于 40MPH 的东西都有……更广泛的收获是，它将一个狭窄的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Hook It Up to the Machine》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "computer.rip",
-      "date": "2026-05-09",
-      "url": "https://computer.rip/2026-05-09-extremely-low-frequencies.html",
-      "title_en": "extremely low frequencies",
-      "title_zh": "极低的频率",
-      "summary_en": "The submarine is a surprisingly ancient technology—at least in its early, primitive forms. The idea is quite simple, that a well-enough-sealed boat ought to be able to submerge and resurface. It's the practicalities that make the whole thing difficult. It is generally considered that the US Civil War was the first use of submarines in combat; these were primitive machines with very limited operating endurance and navigational capabilities. These submarines were more like torpedoes: you pointed them in the right... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, extremely low frequencies stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "潜艇是一项令人惊讶的古老技术——至少在其早期、原始形式中是这样。这个想法很简单，一艘密封性足够好的船应该能够浸入水中并重新浮出水面。正是实用性使整个事情变得困难。一般认为，美国内战是第一次使用潜艇进行战斗；这些都是原始机器，操作耐力和导航能力非常有限。这些潜艇更像是鱼雷：你将它们指向右侧……更广泛的相关性来自于展示安全和模型部署问题在现代 AI 系统中如何日益重叠。对于摘要来说，极低的频率很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
   ]
 }
