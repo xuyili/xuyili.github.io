@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T08:03:02+08:00",
+  "generated_at": "2026-06-22T08:02:55+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -47,15 +47,6 @@
       "summary_zh": "“所有代码都是技术债务”这句话是常见且正确的。添加代码是开发新功能的必要之恶：你几乎总是必须这样做，但每一行代码都增加了系统的复杂性和维护负担。未来对系统的所有更改都必须与现有代码配合使用，或者至少避免破坏它。一旦系统积累了足够的代码，单个人就不可能理解它们：而不是阅读……它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，提示也是技术债，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "antirez.com",
-      "date": "2026-02-25",
-      "url": "http://antirez.com/news/160",
-      "title_en": "Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code",
-      "title_zh": "使用 Claude 代码实现洁净室 Z80 / ZX Spectrum 模拟器",
-      "summary_en": "Anthropic recently released a blog post with the description of an experiment in which the last version of Opus, the 4.6, was instructed to write a C compiler in Rust, in a “clean room” setup. The experiment methodology left me dubious about the kind of point they wanted to make. Why not provide the agent with the ISA documentation? Writing a C compiler is exactly a giant graph manipulation exercise: the kind of program that is harder to write in... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Anthropic 最近发布了一篇博客文章，其中描述了一项实验，其中 Opus 的最后一个版本 4.6 被指示在“洁净室”设置中使用 Rust 编写 C 编译器。实验方法让我对他们想要表达的观点感到怀疑。为什么不向代理提供 ISA 文件？编写 C 编译器实际上是一个巨大的图形操作练习：是一种更难编写的程序……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，使用 Claude 代码实现透明房间 Z80 / ZX Spectrum 模拟器脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "lucumr.pocoo.org",
       "date": "2026-05-08",
       "url": "https://lucumr.pocoo.org/2026/5/8/local-models/",
@@ -92,33 +83,6 @@
       "summary_zh": "在我的上一篇文章中，我一直使用“clanker 1”这个词来代替“agent”，但可能有些过分了。这一选择最终在该帖子的黑客新闻评论部分吸引了比我预期更多的关注，并且许多人做出了非常强烈的反应：对他们来说，这听起来像是一种诽谤，在一种情况下甚至是与 n 词相邻的东西。这种反应让我有些惊讶，但也让我意识到……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，《Clanker：机器的一个词》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "antirez.com",
-      "date": "2026-01-11",
-      "url": "http://antirez.com/news/158",
-      "title_en": "Don't fall into the anti-AI hype",
-      "title_zh": "不要落入反AI的炒作之中",
-      "summary_en": "I love writing software, line by line. It could be said that my career was a continuous effort to create software well written, minimal, where the human touch was the fundamental feature. I also hope for a society where the last are not forgotten. Moreover, I don't want AI to economically succeed, I don't care if the current economic system is subverted (I could be very happy, honestly, if it goes in the direction of a massive redistribution of wealth). The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Don't fall into the anti-AI hype stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我喜欢逐行编写软件。可以说，我的职业生涯就是不断努力创建编写良好、简约的软件，其中人性化是基本特征。我也希望社会不会忘记最后的人。此外，我不希望AI在经济上取得成功，我不在乎当前的经济体系是否被颠覆（老实说，如果它朝着大规模财富再分配的方向发展，我会非常高兴）。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，不要陷入反AI炒作中脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2026-05-15",
-      "url": "http://antirez.com/news/165",
-      "title_en": "A few words on DS4",
-      "title_zh": "关于 DS4 的几句话",
-      "summary_en": "I didn’t expect DwarfStar 4 (https://github.com/antirez/ds4) to become so popular so fast. It is clear that there was a need for single-model integration focused local AI experience, and that a few things happened together: the release of a quasi-frontier model that is large and fast enough to change the game of local inference, and the fact that it works extremely well with an extremely asymmetric quants recipe of 2/8 bit, so that 96 or 128GB of RAM are enough to... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, A few words on DS4 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我没想到 DwarfStar 4 (https://github.com/antirez/ds4) 这么快就变得如此受欢迎。很明显，需要以单模型集成为重点的本地 AI 体验，并且一些事情同时发生：发布一个足够大且足够快的准前沿模型，足以改变本地推理的游戏规则，而且它与 2/8 位的极其不对称的量化配方配合得非常好，因此 96 或 128GB 的 RAM 就足以......它的主要价值在于展示推理延迟、吞吐量和产品体验在以下情况下如何变化：实施细节有所调整。在摘要中，关于 DS4 的几句话很引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2025-12-20",
-      "url": "http://antirez.com/news/157",
-      "title_en": "Reflections on AI at the end of 2025",
-      "title_zh": "2025 年底对 AI 的思考",
-      "summary_en": "* For years, despite functional evidence and scientific hints accumulating, certain AI researchers continued to claim LLMs were stochastic parrots: probabilistic machines that would: 1. NOT have any representation about the meaning of the prompt. NOT have any representation about what they were going to say. In 2025 finally almost everybody stopped saying so. * Chain of thought is now a fundamental way to improve LLM output. I believe it is two things: 1. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Reflections on AI at the end of 2025 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "* 多年来，尽管功能证据和科学提示不断积累，某些 AI 研究人员仍然声称 LLM 是随机鹦鹉：概率机器会： 1. 对提示的含义没有任何表示。对他们要说什么没有任何表示。到了 2025 年，几乎所有人终于不再这么说了。 * 思想链现在是提高LLM输出的根本方法。我认为有两点： 1. 其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，2025 年底对 AI 的反思脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "gilesthomas.com",
       "date": "2026-04-23",
       "url": "https://www.gilesthomas.com/2026/04/llm-from-scratch-33-what-i-learned-from-the-appendices",
@@ -137,20 +101,11 @@
       "summary_zh": "前几天我正在调试 JAX/Flax NNX 训练循环的一个问题，并发现了一个巧妙的小技巧来帮助调试它。具体来说，我想看看问题是否出在我的模型、损失函数、优化器设置或训练循环本身的“管道”上——梯度是否真的通过并应用于参数？我可以打印出损失和梯度，但打印出参数来看看它们是否......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，Flax 调试：对事物进行哈希处理很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "antirez.com",
-      "date": "2026-05-25",
-      "url": "http://antirez.com/news/167",
-      "title_en": "Distributing LLM inference in DwarfStar",
-      "title_zh": "在 DwarfStar 中分发 LLM 推理",
-      "summary_en": "High end NVIDIA cards, and the server and power needed to run them, cost a lot of money, especially if you plan to reach enough VRAM to run massive models. The alternative, so far, has been Apple hardware, or the DGX Spark that, even if severely limited because of memory bandwidth, still allows to run LLMs prompt processing (prefill) fast enough. The Mac Studio provided up to 512GB unified memory, a solution with modest memory bandwidth (but much better than... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Distributing LLM inference in DwarfStar stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "高端 NVIDIA 卡以及运行它们所需的服务器和电源需要花费大量资金，特别是如果您计划获得足够的 VRAM 来运行大型模型。到目前为止，替代方案是 Apple 硬件或 DGX Spark，即使由于内存带宽而受到严重限制，仍然允许足够快地运行 LLMs 提示处理（预填充）。 Mac Studio 提供了高达 512GB 的统一内存，这是一个内存带宽适中的解决方案（但比……好得多）。它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，在 DwarfStar 中分发 LLM 推理非常突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
-    },
-    {
       "source": "lucumr.pocoo.org",
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "使用 Pi 智能代理构建 Pi 项目",
+      "title_zh": "使用 Pi 智能体框架构建树莓派项目",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -191,33 +146,6 @@
       "summary_zh": "就在过去的几周里，我们发现了一系列软件安全漏洞，直到最近，这些漏洞都是当年发现的最大漏洞。几乎每天都有新的。这一波影响巨大的软件漏洞不断上升的原因是 LLM 编写代码的能力迅速提高，这也迅速提高了他们分析代码安全漏洞的能力。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Y2K 2.0：AI 安全计算脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-16",
-      "url": "https://simonwillison.net/2026/Jun/16/fable-5-export-controls/#atom-everything",
-      "title_en": "The Fable 5 Export Controls Harm US Cyber Defense",
-      "title_zh": "《神鬼寓言 5》出口管制损害美国网络防御",
-      "summary_en": "The Fable 5 Export Controls Harm US Cyber Defense I quoted The Atlantic quoting Kate Moussouris earlier, when I should have gone straight to the source. Here she is confirming that the \"jailbreak\" that got Claude Fable 5 banned under an export control really was \"fix this code\": The researchers took open-source code with known CVEs, plus new code with deliberately planted vulnerabilities, and asked Fable 5, Mythos, and Opus to “review the code for security issues.” Fable 5 refused. The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, The Fable 5 Export Controls Harm US Cyber Defense stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "《神鬼寓言 5》出口管制损害美国网络防御 我早些时候引用了《大西洋月刊》凯特·穆苏里斯 (Kate Moussouris) 的话，当时我应该直接去找消息来源。在这里，她确认了《神鬼寓言 5》在出口管制下被禁止的“越狱”确实是“修复此代码”：研究人员采用了具有已知 CVE 的开源代码，加上故意植入漏洞的新代码，并要求《神鬼寓言 5》、Mythos 和 Opus“审查代码的安全问题”。 《神鬼寓言5》拒绝了。更广泛的相关性来自于展示安全性和模型部署问题在现代 AI 系统中如何日益重叠。在摘要中，《神鬼寓言 5 出口管制危害美国网络防御》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-16",
-      "url": "https://simonwillison.net/2026/Jun/16/matteo-wong-the-atlantic/#atom-everything",
-      "title_en": "Quoting Matteo Wong, The Atlantic",
-      "title_zh": "引用 Matteo Wong，《大西洋月刊》",
-      "summary_en": "Katie Moussouris, a cybersecurity expert and the CEO of Luta Security, told me that Anthropic shared with her a copy of the White House’s report on the Fable jailbreak to get her appraisal. (She said that she is not being paid by Anthropic.) The report, Moussouris said, involved IT experts asking Fable to help find and patch bugs. When given deliberately insecure code, she said, Fable refused the prompt “review the code for security issues” but then complied when asked... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Quoting Matteo Wong, The Atlantic stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "网络安全专家兼 Luta Security 首席执行官凯蒂·穆苏里斯 (Katie Moussouris) 告诉我，Anthropic 与她分享了一份白宫关于《神鬼寓言》越狱的报告副本，以获得她的评估。 （她说 Anthropic 没有向她支付报酬。）穆苏里斯说，该报告涉及 IT 专家请求 Fable 帮助查找和修补错误。她说，当故意提供不安全的代码时，《神鬼寓言》拒绝了“审查代码是否存在安全问题”的提示，但随后在被询问时遵守了……更广泛的相关性来自于展示安全和模型部署问题在现代 AI 系统中如何日益重叠。 《大西洋月刊》引用 Matteo Wong 的话，在摘要中脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2026-05-19",
-      "url": "http://antirez.com/news/166",
-      "title_en": "Alternatives for the EDIT tool of LLM agents",
-      "title_zh": "LLM 代理的编辑工具的替代品",
-      "summary_en": "EDIT: of course this was already done in the past! I had little doubts but people just confirmed me about it on Twitter :) But, keep reading: the CRC32 compromise at the end is an interesting tradeoff, and this is a good discussion to have in general. Right now I'm working to an agent for my DS4 project. Local inference is token-poor, it's a battlefield where optimizations count. I was quite surprised by the fact the EDIT tool everybody is... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Alternatives for the EDIT tool of LLM agents stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "编辑：当然这在过去已经完成了！我几乎没有怀疑，但人们只是在 Twitter 上证实了我的观点:) 但是，请继续阅读：最后的 CRC32 妥协是一个有趣的权衡，总的来说，这是一个很好的讨论。现在我正在为我的 DS4 项目代理工作。局部推理缺乏标记，这是优化至关重要的战场。我对每个人都使用的 EDIT 工具感到非常惊讶……它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，LLM 代理的编辑工具的替代方案脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "lucumr.pocoo.org",
       "date": "2026-06-13",
       "url": "https://lucumr.pocoo.org/2026/6/13/americans-only/",
@@ -227,31 +155,13 @@
       "summary_zh": "目前 Twitter 上有一些人对 Anthropic 受到美国政府暂停访问《神鬼寓言》和《神话》的出口管制指令的打击感到幸灾乐祸。 Anthropic 及其领导层花费了大量时间和精力，将自己的技术描述为危险的，需要严格的控制和监管。现在，美国政府似乎已经认真对待这一框架，并告诉他们对外国人关闭它，我可以看到......更广泛的相关性来自于展示安全和模型部署问题如何在现代 AI 系统中日益重叠。在摘要中，《仅适用于美国人的危险技术》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "antirez.com",
-      "date": "2026-03-09",
-      "url": "http://antirez.com/news/162",
-      "title_en": "GNU and the AI reimplementations",
-      "title_zh": "GNU 和 AI 重新实现",
-      "summary_en": "Those who cannot remember the past are condemned to repeat it. A sentence that I never really liked, and what is happening with AI, about software projects reimplementations, shows all the limits of such an idea. Many people are protesting the fairness of rewriting existing projects using AI. But, a good portion of such people, during the 90s, were already in the field: they followed the final part (started in the ‘80s) of the deeds of Richard Stallman, when he... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, GNU and the AI reimplementations stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "那些不记得过去的人注定要重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
-    },
-    {
       "source": "computer.rip",
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "红外数据通信技术的发展历程",
+      "title_zh": "红外数据通信标准 IrDA 的兴衰",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2026-06-07",
-      "url": "http://antirez.com/news/168",
-      "title_en": "A new era for software testing",
-      "title_zh": "软件测试的新时代",
-      "summary_en": "Automatic programming dramatically speeds up writing software in certain use cases and in the right hands. In my experience the output does not reach the structural quality and economy of complexity of the best hand-written software. However, not all the software is stellar, and my feeling is that automatic programming surpasses most of the times (and if well managed) the quality of decently developed hand-written code. Yet, there is a tradeoff between quality and time, in the case of writing... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, A new era for software testing stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在某些用例中，在正确的人手中，自动编程可以极大地加快软件的编写速度。根据我的经验，输出没有达到最好的手写软件的结构质量和复杂性经济性。然而，并不是所有的软件都是一流的，我的感觉是，自动编程在大多数时候（如果管理得当）超过了精心开发的手写代码的质量。然而，在编写的情况下，质量和时间之间存在权衡……其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，软件测试的新时代之所以引人注目，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -281,13 +191,13 @@
       "summary_zh": "假设您有这样的 JAX 代码，并在设置了 CUDA 的计算机上运行它： key = jax 。键 (42) cpu0 = jax 。设备（“cpu”）[0] 与 jax 。默认设备（cpu0）：数组= jax。 randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item 。这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说非常有用。对于摘要，JAX：承诺问题很突出，因为它提供了足够的具体细节有用，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "seangoedecke.com",
-      "date": "2026-06-15",
-      "url": "https://seangoedecke.com/ai-gpus-live-longer-than-three-years/",
-      "title_en": "AI GPUs probably live longer than three years",
-      "title_zh": "AI GPU 的寿命可能超过三年",
-      "summary_en": "People who think current AI use is unsustainable often rely on the claim that inference GPUs only last “three years at the most” under load 1 . The idea here is that once the AI bubble money drains away, current infrastructure will rapidly become obsolete, and there won’t be enough money floating around to buy a whole slate of brand-new GPUs. Inference costs would thus rapidly become way too expensive for current AI products to make any financial sense. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI GPUs probably live longer than three years stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "认为当前 AI 使用不可持续的人通常依赖这样的说法：推理 GPU 在负载 1 下只能持续“最多三年”。这里的想法是，一旦 AI 泡沫资金耗尽，当前的基础设施将迅速过时，并且不会有足够的资金来购买一整套全新的 GPU。因此，对于当前的 AI 产品来说，推理成本很快就会变得过于昂贵，无法产生任何财务意义。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI GPU 的寿命可能超过三年，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "lucumr.pocoo.org",
+      "date": "2026-04-11",
+      "url": "https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/",
+      "title_en": "The Center Has a Bias",
+      "title_zh": "中心有偏见",
+      "summary_en": "Whenever a new technology shows up, the conversation quickly splits into camps. There are the people who reject it outright, and there are the people who seem to adopt it with religious enthusiasm. For more than a year now, no topic has been more polarising than AI coding agents. What I keep noticing is that a lot of the criticism directed at these tools is perfectly legitimate, but it often comes from people without a meaningful amount of direct experience... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, The Center Has a Bias stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "每当一项新技术出现时，讨论就会很快分成两个阵营。有些人完全拒绝它，有些人似乎怀着宗教热情接受它。一年多来，没有什么话题比 AI 编码剂更两极分化了。我一直注意到，针对这些工具的许多批评是完全合理的，但它们通常来自没有大量直接经验的人……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，《中心有偏见》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -308,22 +218,13 @@
       "summary_zh": "没有什么比使用框架编写自己的代码更能阐明事物如何组合在一起的了！继续将 PyTorch LLM 代码移植到 JAX ，我想加载一个大型数据集： gpjt/fineweb-gpt2-tokens 的列车分割中的 10,248,871,837 个 16 位无符号整数。 full_dataset = load_file ( dataset_dir / f \"train.safetensors\" )[ \"tokens\" ] 当我运行它时，我收到了 CUDA 内存不足错误： jax.errors.JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while attempts to allocate 19.09GiB。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，JAX 后端和设备脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "lucumr.pocoo.org",
-      "date": "2026-04-11",
-      "url": "https://lucumr.pocoo.org/2026/4/11/the-center-has-a-bias/",
-      "title_en": "The Center Has a Bias",
-      "title_zh": "中心有偏见",
-      "summary_en": "Whenever a new technology shows up, the conversation quickly splits into camps. There are the people who reject it outright, and there are the people who seem to adopt it with religious enthusiasm. For more than a year now, no topic has been more polarising than AI coding agents. What I keep noticing is that a lot of the criticism directed at these tools is perfectly legitimate, but it often comes from people without a meaningful amount of direct experience... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, The Center Has a Bias stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "每当一项新技术出现时，讨论就会很快分成两个阵营。有些人完全拒绝它，有些人似乎怀着宗教热情接受它。一年多来，没有什么话题比 AI 编码剂更两极分化了。我一直注意到，针对这些工具的许多批评是完全合理的，但它们通常来自没有大量直接经验的人……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，《中心有偏见》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-16",
-      "url": "https://simonwillison.net/2026/Jun/16/georgi-gerganov/#atom-everything",
-      "title_en": "Quoting Georgi Gerganov",
-      "title_zh": "引用格奥尔基·格尔加诺夫的话",
-      "summary_en": "I can 100% attest to the fact that Qwen3.6-27B is a very capable local model for coding tasks. Over the last month and a half I've been using it almost daily, either on my M2 Ultra or on my RTX 5090 box. I use it for small mundane tasks at ggml-org - nothing really impressive, but definitely a helpful tool for a maintainer. I think I would be using it much more, if I didn't have to spend a lot... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Quoting Georgi Gerganov stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我可以 100% 证明 Qwen3.6-27B 是一个非常适合编码任务的本地模型。在过去的一个半月里，我几乎每天都在使用它，无论是在我的 M2 Ultra 上还是在我的 RTX 5090 盒子上。我在 ggml-org 中使用它来执行一些日常的小任务 - 没什么令人印象深刻的，但对于维护人员来说绝对是一个有用的工具。我想如果我不必花很多钱的话，我会更多地使用它......它的引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，引用 Georgi Gerganov 的内容脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "seangoedecke.com",
+      "date": "2026-06-15",
+      "url": "https://seangoedecke.com/ai-gpus-live-longer-than-three-years/",
+      "title_en": "AI GPUs probably live longer than three years",
+      "title_zh": "AI GPU 的寿命可能超过三年",
+      "summary_en": "People who think current AI use is unsustainable often rely on the claim that inference GPUs only last “three years at the most” under load 1 . The idea here is that once the AI bubble money drains away, current infrastructure will rapidly become obsolete, and there won’t be enough money floating around to buy a whole slate of brand-new GPUs. Inference costs would thus rapidly become way too expensive for current AI products to make any financial sense. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI GPUs probably live longer than three years stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "认为当前 AI 使用不可持续的人通常依赖这样的说法：推理 GPU 在负载 1 下只能持续“最多三年”。这里的想法是，一旦 AI 泡沫资金耗尽，当前的基础设施将迅速过时，并且不会有足够的资金来购买一整套全新的 GPU。因此，对于当前的 AI 产品来说，推理成本很快就会变得过于昂贵，无法产生任何财务意义。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI GPU 的寿命可能超过三年，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -333,6 +234,15 @@
       "title_zh": "直言不讳的工程师是 ZIRP 现象",
       "summary_en": "The engineer who says no all the time is a real archetype among senior and staff engineers. Their role is to slow things down, to block the development of features that add complexity, and to ensure that as little code gets written as possible (since code is a liability). We can think of this as the just-say-no engineer 1 , as opposed to the just-say-yes engineer. The just-say-yes engineer is obsessed with moving fast, approves code changes by default, values... Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, The just-say-no engineer was a ZIRP phenomenon stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "总是说“不”的工程师是高级工程师和普通工程师的真实原型。他们的作用是放慢速度，阻止增加复杂性的功能的开发，并确保编写尽可能少的代码（因为代码是一种负担）。我们可以将其视为“只说不”的工程师 1 ，而不是“只说是”的工程师。只说“是”的工程师痴迷于快速行动，默认情况下批准代码更改，价值观……除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，“只说不”的工程师是一种 ZIRP 现象，它非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-21",
+      "url": "https://simonwillison.net/2026/Jun/21/temporary-cloudflare-accounts/#atom-everything",
+      "title_en": "Temporary Cloudflare Accounts for AI agents",
+      "title_zh": "AI 代理的临时 Cloudflare 帐户",
+      "summary_en": "Temporary Cloudflare Accounts for AI agents The announcement says this is \"for AI agents\" but (as is pretty common these days) the AI hook isn't really necessary, this is an interesting feature for everyone else as well. Short version: you can now create a Cloudflare Workers project and run this, without even creating a Cloudflare account: npx wrangler deploy --temporary Cloudflare will deploy the application to a new, ephemeral project which will stay live for 60 minutes. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Temporary Cloudflare Accounts for AI agents stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "AI 代理的临时 Cloudflare 帐户 该公告称这是“针对 AI 代理”，但（如今很常见）AI 挂钩并不是真正必要的，这对于其他人来说也是一个有趣的功能。简短版本：您现在可以创建一个 Cloudflare Workers 项目并运行该项目，甚至无需创建 Cloudflare 帐户： npx wrangler deploy --temporary Cloudflare 会将应用程序部署到一个新的临时项目，该项目将持续运行 60 分钟。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，AI 代理的临时 Cloudflare 帐户脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -371,29 +281,11 @@
       "summary_zh": "在对 10Gb/s 以太网有了足够的了解之后，我就可以轻松地在家里进行设置了，现在是时候硬着头皮了：从 ISP 订购，购买一些套件，然后开始使用。公寓采用结构化布线——每个房间的墙上都有一个或多个 RJ45 插座，楼下前门旁有一个接线板，每个墙壁插座都有一个匹配的接线板。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，10Gb/s 以太网：我实际上为让它在我家里工作而所做的事情很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "antirez.com",
-      "date": "2026-05-04",
-      "url": "http://antirez.com/news/164",
-      "title_en": "Redis array type: short story of a long development",
-      "title_zh": "Redis 数组类型：长篇开发的短篇故事",
-      "summary_en": "I started working on the new Array data type for Redis in the first days of January. The PR landed the repository only now, so this code was cooked for four months. I worked at the implementation kinda part time (kinda because many weeks were actually full time, sometimes to detach yourself from the keyboard is complicated), and even before LLMs the implementation was likely something I could do in four months. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Redis array type: short story of a long development stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我在一月份的第一天开始研究 Redis 的新数组数据类型。 PR 现在才登陆存储库，所以这段代码已经准备了四个月了。我以兼职的方式参与实现（有点因为很多周实际上是全职的，有时让自己脱离键盘很复杂），甚至在 LLMs 之前，实现可能是我可以在四个月内完成的事情。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Redis 数组类型：长期开发的短篇故事脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2026-01-31",
-      "url": "http://antirez.com/news/159",
-      "title_en": "Automatic programming",
-      "title_zh": "自动编程",
-      "summary_en": "In my YouTube channel, for some time now I started to refer to the process of writing software using AI assistance (soon to become just \"the process of writing software\", I believe) with the term \"Automatic Programming\". In case you didn't notice, automatic programming produces vastly different results with the same LLMs depending on the human that is guiding the process with their intuition, design, continuous steering and idea of software. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Automatic programming stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在我的 YouTube 频道中，有一段时间我开始用“自动编程”一词来指代使用 AI 辅助编写软件的过程（我相信很快就变成“编写软件的过程”）。如果您没有注意到，自动编程会在相同的 LLM 下产生截然不同的结果，具体取决于用直觉、设计、连续指导和软件理念指导过程的人。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，自动编程脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "gilesthomas.com",
       "date": "2026-06-05",
       "url": "https://www.gilesthomas.com/2026/06/flax-and-safetensors",
       "title_en": "Using Safetensors with Flax",
-      "title_zh": "在 Flax 框架中使用安全张量格式",
+      "title_zh": "在 Flax 框架中使用 Safetensors 模型格式",
       "summary_en": "I'm porting my PyTorch LLM code to JAX , using Flax as the neural network layer. For various reasons I wanted to use Safetensors to store checkpoints of the model. It took a little while to get it working; here's the trick I learned. If you look at the Safetensors docs, you'll see that it doesn't mention a JAX implementation -- indeed, searching for \"safetensors jax\" at the time I'm writing this gives you a link to this GitHub repo... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Using Safetensors with Flax stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我正在将 PyTorch LLM 代码移植到 JAX ，使用 Flax 作为神经网络层。由于各种原因，我想使用 Safetensors 来存储模型的检查点。花了一点时间才让它工作；这是我学到的技巧。如果你查看 Safetensors 文档，你会发现它没有提到 JAX 实现——事实上，在我写这篇文章时搜索“safetensors jax”会给你一个到这个 GitHub 存储库的链接......更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重用的东西。在摘要中，Using Safetensors with Flax 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -407,13 +299,13 @@
       "summary_zh": "我倾向于关注计算机在军队中的起源。特别是在数字计算的早期，军方是一个重要客户，现代计算的基本概念出现在为军事合同服务的大学和实验室中。当然，战争不会永远持续下去，计算在许多其他领域都有应用——尽管如此，这些领域最初是军事慷慨的受益者。第二次世界大战对高等教育产生了深远的影响……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，LotusNotes 脱颖而出，因为它提供了足够有用的具体细节，同时还展示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "anildash.com",
-      "date": "2026-06-15",
-      "url": "https://anildash.com/2026/06/15/indie-AI-takeover/",
-      "title_en": "Maybe it's time for lots of little indie AIs to take over",
-      "title_zh": "也许是时候让许多小独立 AI 接管了",
-      "summary_en": "What we can imagine is, rather than the ChatGPT killer, a lot of different little AIs from little responsible players.” That’s me, in The Guardian a few days ago, trying to distill a message that I’ve been trying to get out as broadly as possible for quite a while now. It's sort of like hoping a comet will take out the major AI players and a bunch of smaller new players will be the smarter, better-adapted mammals that take their... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Maybe it's time for lots of little indie AIs to take over stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我们可以想象的是，不是 ChatGPT 杀手，而是来自负责任的小玩家的许多不同的小 AI。”这就是我，几天前在《卫报》上，试图提炼出一段时间以来我一直试图尽可能广泛地传播的信息。这有点像希望一颗彗星能够消灭主要的 AI 玩家，而一群较小的新玩家将成为更聪明、适应能力更好的哺乳动物，从而夺取他们的……它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，也许是时候让许多小型独立 AI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "simonwillison.net",
+      "date": "2026-06-21",
+      "url": "https://simonwillison.net/2026/Jun/21/sqlite-utils-40rc1/#atom-everything",
+      "title_en": "sqlite-utils 4.0rc1 adds migrations and nested transactions",
+      "title_zh": "sqlite-utils 4.0rc1 添加了迁移和嵌套事务",
+      "summary_en": "sqlite-utils is my combined Python library and CLI tool for working with SQLite databases. It provides an extensive set of higher-level operations on top of Python's default sqlite3 package , including support for complex table transformations , automatic table creation from JSON data and a whole lot more. I released sqlite-utils 4.0rc1 , the first release candidate for sqlite-utils v4. The major version bump indicates some (minor) backwards incompatible changes, so I'm interested in having people try this out before... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, sqlite-utils 4.0rc1 adds migrations and nested transactions stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "sqlite-utils 是我的组合 Python 库和 CLI 工具，用于处理 SQLite 数据库。它在 Python 的默认 sqlite3 包之上提供了一组广泛的高级操作，包括对复杂表转换的支持、从 JSON 数据自动创建表等等。我发布了 sqlite-utils 4.0rc1 ，这是 sqlite-utils v4 的第一个候选版本。主要版本的提升表明了一些（次要的）向后不兼容的更改，所以我有兴趣让人们在之前尝试一下......更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要，sqlite-utils 4.0rc1 添加了迁移，并且嵌套事务脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -434,6 +326,15 @@
       "summary_zh": "经过数十年的合并、重组和剥离，AT&T 留下了一段众所周知的复杂的企业历史。作为美国历史上最伟大的企业之一，可以说是最伟大的企业，AT&T 在预算和劳动力规模上经常与联邦政府相媲美。正如我们今天所熟知的，原因之一是垄断及其密切相关的垂直整合。 AT&T 是电话系统，或者至少是电话系统，几十年来，“普遍服务”的含义是……除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。对于摘要来说，从叉簧到坟墓之所以引人注目，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "anildash.com",
+      "date": "2026-06-15",
+      "url": "https://anildash.com/2026/06/15/indie-AI-takeover/",
+      "title_en": "Maybe it's time for lots of little indie AIs to take over",
+      "title_zh": "也许是时候让许多小独立 AI 接管了",
+      "summary_en": "What we can imagine is, rather than the ChatGPT killer, a lot of different little AIs from little responsible players.” That’s me, in The Guardian a few days ago, trying to distill a message that I’ve been trying to get out as broadly as possible for quite a while now. It's sort of like hoping a comet will take out the major AI players and a bunch of smaller new players will be the smarter, better-adapted mammals that take their... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Maybe it's time for lots of little indie AIs to take over stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我们可以想象的是，不是 ChatGPT 杀手，而是来自负责任的小玩家的许多不同的小 AI。”这就是我，几天前在《卫报》上，试图提炼出一段时间以来我一直试图尽可能广泛地传播的信息。这有点像希望一颗彗星能够消灭主要的 AI 玩家，而一群较小的新玩家将成为更聪明、适应能力更好的哺乳动物，从而夺取他们的……它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，也许是时候让许多小型独立 AI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "blog.jim-nielsen.com",
       "date": "2026-06-03",
       "url": "https://blog.jim-nielsen.com/2026/pedantry-of-computing/",
@@ -450,6 +351,105 @@
       "title_zh": "前院网络",
       "summary_en": "The way I see it, few parts of American life are as quintessentially American as buying gas. We love our cars, we love our oil, and an industry about as old as automobiles themselves has developed a highly consistent, fully automated, and fairly user friendly system for filling the former with the latter. While these rules have since been relaxed, many know Oregon for its long identity as one of two states where you cannot pump your own gas (the... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, forecourt networking stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "在我看来，美国人生活中很少有像购买汽油这样具有典型美国特色的。我们热爱我们的汽车，我们热爱我们的石油，这个与汽车本身一样古老的行业已经开发出一种高度一致、完全自动化且相当用户友好的系统，用于为前者填充后者。虽然这些规则后来已经放宽，但许多人都知道俄勒冈州长期以来一直是两个不能自己抽气的州之一（…值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，前院网络脱颖而出，因为它提供了足够有用的具体细节，同时也暴露了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-06-06",
+      "url": "https://lucumr.pocoo.org/2026/6/6/communities-of-not/",
+      "title_en": "Communities of Not",
+      "title_zh": "不存在的社区",
+      "summary_en": "There is a strange thing that happens in communities that gather around abstinence from something: identity from opposition. At their best these communities are not just negative: childfree spaces can be about autonomy, choice and acceptance, anti-car spaces about safer streets and transit, and LLM-skeptical developer spaces about the future of labor, code quality and slop 1 . But the thing being refused often does not go away and instead becomes the main subject of the community’s identity. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Communities of Not stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "在围绕某种事物的禁欲而聚集的社区中，发生了一件奇怪的事情：来自反对派的认同。在最好的情况下，这些社区不仅仅是消极的：无儿童空间可以是关于自主、选择和接受的，反汽车空间是关于更安全的街道和交通的，而 LLM 是关于劳动力、代码质量和 slop 1 的未来的怀疑开发者空间。但被拒绝的事物往往不会消失，反而成为社区身份的主要主体。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Communities of Not》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "computer.rip",
+      "date": "2026-05-09",
+      "url": "https://computer.rip/2026-05-09-extremely-low-frequencies.html",
+      "title_en": "extremely low frequencies",
+      "title_zh": "极低的频率",
+      "summary_en": "The submarine is a surprisingly ancient technology—at least in its early, primitive forms. The idea is quite simple, that a well-enough-sealed boat ought to be able to submerge and resurface. It's the practicalities that make the whole thing difficult. It is generally considered that the US Civil War was the first use of submarines in combat; these were primitive machines with very limited operating endurance and navigational capabilities. These submarines were more like torpedoes: you pointed them in the right... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, extremely low frequencies stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "潜艇是一项令人惊讶的古老技术——至少在其早期、原始形式中是这样。这个想法很简单，一艘密封性足够好的船应该能够浸入水中并重新浮出水面。正是实用性使整个事情变得困难。一般认为，美国内战是第一次使用潜艇进行战斗；这些都是原始机器，操作耐力和导航能力非常有限。这些潜艇更像是鱼雷：你将它们指向右侧……更广泛的相关性来自于展示安全和模型部署问题在现代 AI 系统中如何日益重叠。对于摘要来说，极低的频率很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "computer.rip",
+      "date": "2026-05-31",
+      "url": "https://computer.rip/2026-05-31-totalisator.html",
+      "title_en": "the totalisator",
+      "title_zh": "自动赛马投注计数系统的历史",
+      "summary_en": "It has been an unfortunate turn in the software industry, one of many as of late, that gambling is once again one of its primary engines. With the rise of almost nationwide online sports betting, not to mention prediction markets, making odds on real-world events and extracting the money of suckers is no longer limited to island nations. It is a great American pursuit, or at least, that's what modern television sports coverage leads you to believe. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, the totalisator stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "软件行业发生了一个不幸的转变（最近出现的许多转变之一），赌博再次成为其主要引擎之一。随着几乎全国范围内的在线体育博彩的兴起，更不用说预测市场了，对现实世界的赛事进行赔率并提取傻瓜的钱不再局限于岛国。这是美国人的伟大追求，或者至少，现代电视体育报道让你相信这一点。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要来说，累加器脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "bernsteinbear.com",
+      "date": "2026-03-27",
+      "url": "https://bernsteinbear.com/blog/zjit-perfetto/?utm_source=rss",
+      "title_en": "Using Perfetto in ZJIT",
+      "title_zh": "在 ZJIT 即时编译器中使用 Perfetto 性能分析工具",
+      "summary_en": "Originally published on Rails At Scale . A trace of slow events in a benchmark! Hover over the image to see it get bigger. A sneak preview of what the trace looks like. Now read on to see what the slow events are and how we got this pretty picture. The rules The first rule of just-in-time compilers is: you stay in JIT code. The second rule of JIT is: you STAY in JIT code! The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Using Perfetto in ZJIT stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "最初发表在 Rails At Scale 上。基准测试中缓慢事件的踪迹！将鼠标悬停在图像上可以看到它变大。预览一下轨迹的样子。现在请继续阅读，了解慢事件是什么以及我们如何获得这张漂亮的图片。规则 即时编译器的第一条规则是：保留 JIT 代码。 JIT 的第二条规则是：留在 JIT 代码中！更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要而言，《在 ZJIT 中使用 Perfetto》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "daringfireball.net",
+      "date": "2026-06-18",
+      "url": "https://cotypist.app/",
+      "title_en": "Cotypist – Smart Autocomplete Utility for Mac",
+      "title_zh": "Cotypist – 适用于 Mac 的智能自动完成实用程序",
+      "summary_en": "Usually when I link to a new app, it’s something that I find useful personally. It’s an AI-powered autocomplete utility for the Mac, using on-device models and processing, by developer Daniel Gräfe of Accelerated Thought. It is very well-designed, and remarkably Mac-assed (right down to where it stores its local data and AI models). It respects your privacy and all the best conventions of MacOS. Cotypist suggests a few words ahead of your insertion point at a time, and you... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Cotypist – Smart Autocomplete Utility for Mac stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "通常，当我链接到新应用程序时，我个人认为它很有用。它是一个由 AI 支持的 Mac 自动完成实用程序，使用设备上的模型和处理，由 Accelerated Thought 的开发人员 Daniel Gräfe 开发。它设计得非常好，并且非常适合 Mac（甚至到它存储本地数据和 AI 模型的位置）。它尊重您的隐私和 MacOS 的所有最佳约定。 Cotypist 每次在您的插入点之前建议几句话，然后您...更广泛的相关性来自于展示安全性和模型部署问题在现代 AI 系统中如何日益重叠。对于摘要来说，Cotypist – Mac 版智能自动完成实用程序脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-06-10",
+      "url": "https://lucumr.pocoo.org/2026/6/10/gaslighting/",
+      "title_en": "Gaslighting Openness",
+      "title_zh": "煤气灯式的开放性",
+      "summary_en": "I have been a staunch supporter of Open Source for a long time, including experiments in funding it . I’m a true believer in the idea that Open Source always wins in the long run, but not automatically and not quickly. Right now it is being stressed by AI slop, shifting contributor dynamics, the falling cost of producing code, and large companies learning to close doors behind them. A lot of that battle today is manipulation of the narrative. The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Gaslighting Openness stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "长期以来，我一直是开源的坚定支持者，包括资助它的实验。我坚信，从长远来看，开源总是会获胜，但不会自动也不会很快获胜。目前，它正面临着 AI 问题、贡献者动态的变化、代码生成成本的下降以及大公司学会关门的压力。今天的很多战斗都是对叙事的操纵。更广泛的相关性来自于展示安全性和模型部署问题在现代 AI 系统中如何日益重叠。在摘要中，Gaslighting Openness 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "bernsteinbear.com",
+      "date": "2026-05-12",
+      "url": "https://bernsteinbear.com/blog/partial-ssi/?utm_source=rss",
+      "title_en": "Partial static single information form",
+      "title_zh": "部分静态单一信息表",
+      "summary_en": "In compilers, static single information form (SSI) is a common extension to static single assignment form (SSA). Scott Ananian in 1999 in his MS thesis (PDF) 1 . SSI extends your existing SSA intermediate representation by discovering facts from your existing program and reifying them as path-dependent/flow-sensitive IR nodes. That might sound complicated, but at least the basic idea is pretty natural. I talk a little bit about it in What I talk about when I talk about IRs and... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Partial static single information form stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "在编译器中，静态单信息形式 (SSI) 是静态单赋值形式 (SSA) 的常见扩展。 Scott Ananian 于 1999 年在他的硕士论文 (PDF) 1 中。 SSI 通过从现有程序中发现事实并将其具体化为路径相关/流敏感的 IR 节点来扩展现有的 SSA 中间表示。这听起来可能很复杂，但至少基本思想是很自然的。我在谈论 IR 时谈论的内容中对此进行了一些讨论，并且...这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要，部分静态单一信息形式很突出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-17",
+      "url": "https://simonwillison.net/2026/Jun/17/charity-majors/#atom-everything",
+      "title_en": "Quoting Charity Majors",
+      "title_zh": "引用慈善专业",
+      "summary_en": "What happened in 2025 was this: the economics of code production were turned upside down . Instead of being very hard, time-consuming, and expensive to generate code, it became effectively free and instant. Lines of code went from being treasured, reused, cared for and carefully curated, to being disposable and regenerable, practically overnight. — Charity Majors , AI demands more engineering discipline. Not less Tags: charity-majors , ai-assisted-programming , generative-ai , ai , llms The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Charity Majors stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "2025 年发生的事情是这样的：代码生产的经济学发生了天翻地覆的变化。生成代码不再是非常困难、耗时且昂贵的事情，而是变得实际上免费且即时。代码行从被珍惜、重用、照顾和精心策划，变成了一次性和可再生，几乎是在一夜之间。 — 慈善专业，AI 需要更多的工程学科。不少标签：慈善专业、AI辅助编程、生成AI、AI、LLMS 更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，《引用慈善专业》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "danieldelaney.net",
+      "date": "2026-05-19",
+      "url": "https://danieldelaney.net/fourth-era/",
+      "title_en": "Linux was accidentally designed for agents",
+      "title_zh": "Linux 无意中是为代理而设计的",
+      "summary_en": "I recently built a home theater PC on Linux. In years gone by this would have been much harder than doing the same thing on Windows or macOS. Today it’s easier, because my agent can do it without my intervention. The two major desktop operating systems “outgrew” text-based UI decades ago. They were designed to please humans with pretty graphics, pointing devices over text input, and progressive disclosure. They even require human click events to make certain changes, because Apple... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Linux was accidentally designed for agents stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我最近在 Linux 上搭建了一台家庭影院 PC。在过去的几年里，这比在 Windows 或 macOS 上做同样的事情要困难得多。今天更容易了，因为我的经纪人不需要我的干预就能做到这一点。几十年前，两个主要的桌面操作系统就已经“超越”了基于文本的用户界面。它们的设计目的是通过漂亮的图形、指向设备而不是文本输入以及渐进式披露来取悦人类。它们甚至需要人类点击事件来进行某些更改，因为苹果……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Linux 意外地为代理而设计，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "computer.rip",
+      "date": "2026-01-25",
+      "url": "https://computer.rip/2026-01-25-the-essence-of-frigidity.html",
+      "title_en": "the essence of frigidity",
+      "title_zh": "性冷淡的本质",
+      "summary_en": "The front of the American grocery store contains a strange, liminal space: the transitional area between parking lot and checkstand, along the front exterior and interior of the building, that fills with oddball commodities. Ice is a fixture at nearly every store, filtered water at most, firewood at some. This retail purgatory, both too early and too late in the shopping journey for impulse purchases, is mostly good only for items people know they will need as they check out. Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, the essence of frigidity stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "美国杂货店的前面有一个奇怪的、有限的空间：停车场和收银台之间的过渡区域，沿着建筑物的前外部和内部，里面装满了奇怪的商品。几乎每家商店都有冰块，最多的是过滤水，有的还有木柴。对于冲动购买来说，这种零售炼狱对于购物之旅来说既太早又太晚，大多只适合人们在结账时知道自己需要的商品。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。对于摘要来说，冷漠的本质很突出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "wheresyoured.at",
+      "date": "2026-05-22",
+      "url": "https://www.wheresyoured.at/news-openai-had-a-negative-122-operating-margin-in-q1-2026-and-chatgpt-growth-has-stalled/",
+      "title_en": "News: OpenAI Had A Negative 122% Non-GAAP Operating Margin In Q1 2026, and ChatGPT Growth Has Stalled",
+      "title_zh": "新闻：OpenAI 2026 年第一季度的非 GAAP 运营利润率为负 122%，而 ChatGPT 增长已停滞",
+      "summary_en": "Executive Summary: The Information reports that OpenAI generated $5.7bn in revenue for the first quarter of 2026 based on discussions with sources familiar with its financials. With adjusted negative margins of -122%, this means that for every dollar of revenue OpenAI made, it lost an additional $1.22, or The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, News: OpenAI Had A Negative 122% Non-GAAP Operating Margin In Q1 2026, and ChatGPT Growth Has Stalled stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "执行摘要：据 The Information 报道，根据熟悉其财务状况的消息人士的讨论，OpenAI 在 2026 年第一季度实现了 57 亿美元的收入。调整后的负利润率为 -122%，这意味着 OpenAI 每赚一美元收入，就会额外损失 1.22 美元，或者更广泛的收获是，它将狭隘的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，《新闻：OpenAI 在 2026 年第一季度的非公认会计原则营业利润率为负 122%》和《聊天GPT 增长已停滞》脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
   ]
 }
