@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T08:04:32+08:00",
+  "generated_at": "2026-06-28T08:02:57+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -18,15 +18,6 @@
       "title_zh": "AI 推理显然是有利可图的",
       "summary_en": "Many people claim that AI inference is unprofitable to serve, and thus must be subsidized by an ocean of dumb money from investors who believe that some future AI model will come to dominate the world economy. When that dumb money goes away, so will AI products. According to this view, LLMs are just inherently too expensive (in terms of money, power, and water) to be used in consumer products. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI inference is obviously profitable stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "许多人声称 AI 推理服务无利可图，因此必须得到来自投资者的大量愚蠢资金的补贴，这些投资者相信未来某种 AI 模型将主宰世界经济。当那些愚蠢的钱消失时，AI 产品也会消失。根据这种观点，LLM 本质上太昂贵（就金钱、电力和水而言），无法用于消费品。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI 推理显然是有利可图的，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "seangoedecke.com",
-      "date": "2026-05-16",
-      "url": "https://seangoedecke.com/steering-vectors/",
-      "title_en": "DeepSeek-V4-Flash means LLM steering is interesting again",
-      "title_zh": "DeepSeek-V4-Flash 意味着 LLM 转向再次变得有趣",
-      "summary_en": "Ever since Golden Gate Claude I’ve been fascinated with “steering”: the idea that you can guide LLM outputs by directly manipulating the activations of the model mid-flight. DeepSeek V4 Flash I was inspired to write this post by antirez’s recent project DwarfStar 4 , which is a version of llama.cpp that’s been stripped down to run only DeepSeek-V4-Flash. It might be what many engineers have been waiting for: a local model good enough to compete with at least the low... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, DeepSeek-V4-Flash means LLM steering is interesting again stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "自从金门 Claude 以来，我就对“转向”着迷：您可以通过在飞行中直接操纵模型的激活来引导 LLM 输出。 DeepSeek V4 Flash 我写这篇文章的灵感来自 antirez 最近的项目 DwarfStar 4，该项目是 llama.cpp 的一个版本，已被精简为仅运行 DeepSeek-V4-Flash。这可能是许多工程师一直在等待的：一个足够好的本地模型，至少可以与低端模型竞争……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，DeepSeek-V4-Flash 意味着 LLM 转向再次变得有趣，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "lucumr.pocoo.org",
@@ -105,7 +96,7 @@
       "date": "2026-06-26",
       "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything",
       "title_en": "Quoting OpenAI",
-      "title_zh": "摘录 OpenAI 发布内容",
+      "title_zh": "引用 OpenAI 的关键说法",
       "summary_en": "We're beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2x cheaper and Luna brings strong capability at our lowest cost. [...] We believe in broad access, and we plan to make GPT‑5.6 Sol, Terra, and Luna generally available in the coming weeks. As part of our ongoing engagement with the U.S. The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Quoting OpenAI stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我们开始对 GPT‑5.6 系列进行有限预览：Sol，我们的旗舰型号； Terra，适合日常工作的平衡模型； Luna，一种快速且价格实惠的型号。 Terra 具有 GPT‑5.5 的竞争性能，同时价格便宜 2 倍，而 Luna 以最低的成本提供强大的功能。 [...] 我们相信广泛的访问权限，并计划在未来几周内普遍提供 GPT‑5.6 Sol、Terra 和 Luna。作为我们与美国持续接触的一部分，更广泛的相关性来自于展示安全和模型部署问题如何在现代 AI 系统中日益重叠。在摘要中，引用 OpenAI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -177,7 +168,7 @@
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 来构建 Pi 项目",
+      "title_zh": "用 Pi 软件构建 Pi 生态",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -198,6 +189,15 @@
       "title_zh": "内联启发式调查",
       "summary_en": "Compilers, especially method just-in-time compilers, operate on one function at a time. It is a natural code unit size, especially for a dynamic language JIT: at a given point in time, what more information can you gather about other parts of a running, changing system? I don’t have any data to back this up—maybe I should go gather some—but on average, methods are small. Especially in languages such as Ruby that use method dispatch for everything, even instance variable (attribute... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, A survey of inlining heuristics stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "编译器，尤其是方法即时编译器，一次操作一个函数。它是自然的代码单元大小，特别是对于动态语言 JIT：在给定的时间点，您还可以收集关于正在运行、不断变化的系统的其他部分的更多信息吗？我没有任何数据来支持这一点——也许我应该去收集一些数据——但平均而言，方法很小。特别是在像 Ruby 这样的语言中，它对所有事物都使用方法分派，甚至是实例变量（属性）......对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，内联启发式调查很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+    },
+    {
+      "source": "daringfireball.net",
+      "date": "2026-06-27",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
+      "title_en": "OpenAI Announces, But Is Blocked From Releasing, New GPT-5.6 Models",
+      "title_zh": "OpenAI 宣布但无法发布新的 GPT-5.6 型号",
+      "summary_en": "OpenAI yesterday: We’re beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2× cheaper and Luna brings strong capability at our lowest cost. GPT‑5.6 Sol launches with our most robust safety stack to date. We strengthened protections for higher-risk activity, sensitive cyber requests, and repeated misuse, and spent multiple weeks finding weaknesses, pressure-testing our system... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, OpenAI Announces, But Is Blocked From Releasing, New GPT-5.6 Models stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "昨天开放 AI：我们开始 GPT‑5.6 系列的有限预览：Sol，我们的旗舰型号； Terra，适合日常工作的平衡模型； Luna，一种快速且价格实惠的型号。 Terra 具有 GPT‑5.5 的竞争性能，同时价格便宜 2 倍，而 Luna 以最低的成本提供强大的功能。 GPT‑5.6 Sol 推出了迄今为止最强大的安全堆栈。我们加强了对高风险活动、敏感网络请求和重复滥用的保护，并花了数周时间寻找弱点，对我们的系统进行压力测试……更广泛的相关性来自于展示安全和模型部署问题在现代 AI 系统中如何日益重叠。在摘要中，OpenAI 宣布但被阻止发布，新的 GPT-5.6 模型脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -240,7 +240,7 @@
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "IrDA 红外通信技术",
+      "title_zh": "红外数据传输技术",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -348,7 +348,7 @@
       "date": "2026-06-26",
       "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything",
       "title_en": "Quoting Dean W. Ball",
-      "title_zh": "摘录 Dean W. Ball 关于 AI 的观点",
+      "title_zh": "引用 Dean W. Ball 的观点",
       "summary_en": "This is a bad state of affairs. Consider, in particular, some industry dynamics: Frontier models are trained at an enormous cost, and a significant fraction of that cost is recouped in the few post-release months that they are broadly available. After that period elapses, the models become sub-frontier, competition emerges, and margins compress. Every week of delay is eating into the narrow window that labs have to make their accounting work. Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, Quoting Dean W. Ball stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "这是一种糟糕的情况。特别要考虑一些行业动态：前沿模型的训练成本巨大，而其中很大一部分成本是在广泛发布后的几个月内收回的。过了这个时期，这些模型就会变得次前沿，竞争就会出现，利润就会压缩。每周的延误都在蚕食实验室进行会计工作的狭窄窗口。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，引用 Dean W. Ball 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -398,15 +398,6 @@
       "summary_zh": "在对 10Gb/s 以太网有了足够的了解之后，我就可以轻松地在家里进行设置了，现在是时候硬着头皮了：从 ISP 订购，购买一些套件，然后开始使用。公寓采用结构化布线——每个房间的墙上都有一个或多个 RJ45 插座，楼下前门旁有一个接线板，每个墙壁插座都有一个匹配的接线板。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，10Gb/s 以太网：我实际上为让它在我家里工作而所做的事情很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-25",
-      "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
-      "title_en": "AI and Liability",
-      "title_zh": "AI 系统与法律责任",
-      "summary_en": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, AI and Liability stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "AI 和责任 Bruce Schneier 关于德国最近的裁决，即 Google 应对其 AI 概述中引入的错误承担责任： AI 特工是部署他们的个人或组织的代理人，并应受到法律的对待。如果一家公司聘请人类作家来撰写摘要，该公司将为这些摘要中的不准确之处承担责任。 [...] 在同样的情况下，允许企业以 AI 错误为借口隐藏起来......值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，AI 和责任脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-05-04",
       "url": "http://antirez.com/news/164",
@@ -434,13 +425,22 @@
       "summary_zh": "在过去的几个月中，我开始看到明显由 LLM 共同编写的[工作申请]，链接到 LLM 生成的作品集网站，然后链接到 LLM 生成的 GitHub 项目，并带有纯粹 LLM 生成的提交消息。 [...]我的另一个反应是我对这些人一无所知。 [...] 完善、生成、提示的简历是通用且客观的。除了他们使用特定的工具之外，它没有告诉我关于这个人的任何信息。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，引用 Tom MacWright 的内容脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "gilesthomas.com",
-      "date": "2026-06-05",
-      "url": "https://www.gilesthomas.com/2026/06/flax-and-safetensors",
-      "title_en": "Using Safetensors with Flax",
-      "title_zh": "在神经网络框架中使用安全张量文件",
-      "summary_en": "I'm porting my PyTorch LLM code to JAX , using Flax as the neural network layer. For various reasons I wanted to use Safetensors to store checkpoints of the model. It took a little while to get it working; here's the trick I learned. If you look at the Safetensors docs, you'll see that it doesn't mention a JAX implementation -- indeed, searching for \"safetensors jax\" at the time I'm writing this gives you a link to this GitHub repo... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Using Safetensors with Flax stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我正在将 PyTorch LLM 代码移植到 JAX ，使用 Flax 作为神经网络层。由于各种原因，我想使用 Safetensors 来存储模型的检查点。花了一点时间才让它工作；这是我学到的技巧。如果你查看 Safetensors 文档，你会发现它没有提到 JAX 实现——事实上，在我写这篇文章时搜索“safetensors jax”会给你一个到这个 GitHub 存储库的链接......更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重用的东西。在摘要中，Using Safetensors with Flax 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "daringfireball.net",
+      "date": "2026-06-27",
+      "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
+      "title_en": "White House Grants Access to Anthropic’s Mythos Model to 100+ U.S. Institutions; Fable Still Shut Down",
+      "title_zh": "白宫向 100 多家美国机构授予使用 Anthropic 神话模型的权限； 《神鬼寓言》仍然停播",
+      "summary_en": "Reed Albergotti and Ben Smith, reporting last night for Semaphor: The decision, in a letter sent Friday afternoon to Anthropic, is a major de-escalation in the confrontation between the Trump Administration and one of the world’s most valuable private companies. Two weeks ago the administration imposed export controls on Mythos, leading to a shut down of the model and its cousin Fable 5 after warnings from Amazon and other companies that they could be “jailbroken” for malicious purposes. Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, White House Grants Access to Anthropic’s Mythos Model to 100+ U.S. Institutions; Fable Still Shut Down stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Reed Albergotti 和 Ben Smith 昨晚为 Semaphor 报道：周五下午致 Anthropic 的一封信中，这一决定是特朗普政府与世界上最有价值的私营公司之一之间对抗的重大缓和。两周前，美国政府对 Mythos 实施了出口管制，导致该模型及其表亲《神鬼寓言 5》被关闭，此前亚马逊和其他公司警告称，它们可能会被出于恶意目的而“越狱”。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。对于摘要，白宫向 100 多家美国机构授予使用 Anthropic 神话模型的权限； 《神鬼寓言仍然关闭》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-25",
+      "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
+      "title_en": "AI and Liability",
+      "title_zh": "AI 技术与责任边界",
+      "summary_en": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, AI and Liability stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "AI 和责任 Bruce Schneier 关于德国最近的裁决，即 Google 应对其 AI 概述中引入的错误承担责任： AI 特工是部署他们的个人或组织的代理人，并应受到法律的对待。如果一家公司聘请人类作家来撰写摘要，该公司将为这些摘要中的不准确之处承担责任。 [...] 在同样的情况下，允许企业以 AI 错误为借口隐藏起来......值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，AI 和责任脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
