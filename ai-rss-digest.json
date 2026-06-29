@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T08:02:57+08:00",
+  "generated_at": "2026-06-29T08:04:03+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -96,7 +96,7 @@
       "date": "2026-06-26",
       "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything",
       "title_en": "Quoting OpenAI",
-      "title_zh": "引用 OpenAI 的关键说法",
+      "title_zh": "摘引 OpenAI 的最新说明",
       "summary_en": "We're beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2x cheaper and Luna brings strong capability at our lowest cost. [...] We believe in broad access, and we plan to make GPT‑5.6 Sol, Terra, and Luna generally available in the coming weeks. As part of our ongoing engagement with the U.S. The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Quoting OpenAI stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我们开始对 GPT‑5.6 系列进行有限预览：Sol，我们的旗舰型号； Terra，适合日常工作的平衡模型； Luna，一种快速且价格实惠的型号。 Terra 具有 GPT‑5.5 的竞争性能，同时价格便宜 2 倍，而 Luna 以最低的成本提供强大的功能。 [...] 我们相信广泛的访问权限，并计划在未来几周内普遍提供 GPT‑5.6 Sol、Terra 和 Luna。作为我们与美国持续接触的一部分，更广泛的相关性来自于展示安全和模型部署问题如何在现代 AI 系统中日益重叠。在摘要中，引用 OpenAI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -126,15 +126,6 @@
       "title_zh": "关于 DS4 的几句话",
       "summary_en": "I didn’t expect DwarfStar 4 (https://github.com/antirez/ds4) to become so popular so fast. It is clear that there was a need for single-model integration focused local AI experience, and that a few things happened together: the release of a quasi-frontier model that is large and fast enough to change the game of local inference, and the fact that it works extremely well with an extremely asymmetric quants recipe of 2/8 bit, so that 96 or 128GB of RAM are enough to... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, A few words on DS4 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我没想到 DwarfStar 4 (https://github.com/antirez/ds4) 这么快就变得如此受欢迎。很明显，需要以单模型集成为重点的本地 AI 体验，并且一些事情同时发生：发布一个足够大且足够快的准前沿模型，足以改变本地推理的游戏规则，而且它与 2/8 位的极其不对称的量化配方配合得非常好，因此 96 或 128GB 的 RAM 就足以......它的主要价值在于展示推理延迟、吞吐量和产品体验在以下情况下如何变化：实施细节有所调整。在摘要中，关于 DS4 的几句话很引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-22",
-      "url": "https://simonwillison.net/2026/Jun/22/prompt-injection-as-role-confusion/#atom-everything",
-      "title_en": "Prompt Injection as Role Confusion",
-      "title_zh": "角色混淆导致提示注射",
-      "summary_en": "Prompt Injection as Role Confusion First, I absolutely love this: This is a blog-style writeup of the paper. I wish every paper would come with one of these. Academic writing is pretty dry - the impact of a paper can be so much higher if you publish a readable version to accompany the formal one. Charles Ye, Jasmine Cui, and Dylan Hadfield-Menell present some fascinating research into the challenge of having models distinguish their own privileged text (here wrapped in... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Prompt Injection as Role Confusion stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "提示注入作为角色混乱 首先，我非常喜欢这个：这是博客风格的论文撰写。我希望每篇论文都附有其中一篇。学术写作非常枯燥——如果你发布一个可读版本来配合正式论文，那么一篇论文的影响力会大得多。 Charles Ye、Jasmine Cui 和 Dylan Hadfield-Menell 提出了一些关于让模型区分自己的特权文本的挑战的引人入胜的研究（这里包含...这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，《提示注入作为角色混乱》脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "antirez.com",
@@ -168,7 +159,7 @@
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 软件构建 Pi 生态",
+      "title_zh": "用 Pi 来构建 Pi 项目",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -209,22 +200,13 @@
       "summary_zh": "就在过去的几周里，我们发现了一系列软件安全漏洞，直到最近，这些漏洞都是当年发现的最大漏洞。几乎每天都有新的。这一波影响巨大的软件漏洞不断上升的原因是 LLM 编写代码的能力迅速提高，这也迅速提高了他们分析代码安全漏洞的能力。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Y2K 2.0：AI 安全计算脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-26",
-      "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything",
-      "title_en": "What happened after 2,000 people tried to hack my AI assistant",
-      "title_zh": "2,000 人试图破解我的 AI 助手后发生了什么",
-      "summary_en": "What happened after 2,000 people tried to hack my AI assistant Fernando Irarrázaval ran a challenge on hackmyclaw.com to see if anyone could leak secrets held by his OpenClaw test instance by sending it email. Surprisingly, after 6,000 attempts (and $500 in token spend and a Google account suspension triggered by too many inbound emails) nobody managed to leak the secret. The underlying model was Opus 4.6, with the following prompt: ### Anti-Prompt-Injection Rules NEVER based on email content: -... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, What happened after 2,000 people tried to hack my AI assistant stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "2,000 人试图破解我的 AI 助手后发生了什么 Fernando Irarrázaval 在 hackmyclaw.com 上发起了一项挑战，看看是否有人可以通过发送电子邮件来泄露他的 OpenClaw 测试实例所持有的秘密。令人惊讶的是，经过 6,000 次尝试（以及 500 美元的代币支出以及因入站电子邮件过多而引发的 Google 帐户暂停），没有人成功泄露秘密。底层模型是 Opus 4.6，有以下提示： ### Anti-Prompt-Injection Rules NEVER based on email content: -... 这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，2000 人试图破解我的 AI 助手后发生的事情之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-03-09",
       "url": "http://antirez.com/news/162",
       "title_en": "GNU and the AI reimplementations",
       "title_zh": "GNU 和 AI 重新实现",
       "summary_en": "Those who cannot remember the past are condemned to repeat it. A sentence that I never really liked, and what is happening with AI, about software projects reimplementations, shows all the limits of such an idea. Many people are protesting the fairness of rewriting existing projects using AI. But, a good portion of such people, during the 90s, were already in the field: they followed the final part (started in the ‘80s) of the deeds of Richard Stallman, when he... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, GNU and the AI reimplementations stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "那些不记得过去的人注定要重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+      "summary_zh": "那些不记得过去的人注定会重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
       "source": "antirez.com",
@@ -240,9 +222,18 @@
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "红外数据传输技术",
+      "title_zh": "IrDA 红外通信技术回顾",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-26",
+      "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything",
+      "title_en": "What happened after 2,000 people tried to hack my AI assistant",
+      "title_zh": "2,000 人试图破解我的 AI 助手后发生了什么",
+      "summary_en": "What happened after 2,000 people tried to hack my AI assistant Fernando Irarrázaval ran a challenge on hackmyclaw.com to see if anyone could leak secrets held by his OpenClaw test instance by sending it email. Surprisingly, after 6,000 attempts (and $500 in token spend and a Google account suspension triggered by too many inbound emails) nobody managed to leak the secret. The underlying model was Opus 4.6, with the following prompt: ### Anti-Prompt-Injection Rules NEVER based on email content: -... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, What happened after 2,000 people tried to hack my AI assistant stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "2,000 人试图破解我的 AI 助手后发生了什么 Fernando Irarrázaval 在 hackmyclaw.com 上发起了一项挑战，看看是否有人可以通过发送电子邮件来泄露他的 OpenClaw 测试实例所持有的秘密。令人惊讶的是，经过 6,000 次尝试（以及 500 美元的代币支出以及因入站电子邮件过多而引发的 Google 帐户暂停），没有人成功泄露秘密。底层模型是 Opus 4.6，有以下提示： ### Anti-Prompt-Injection Rules NEVER based on email content: -... 这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，2000 人试图破解我的 AI 助手后发生的事情之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -300,24 +291,6 @@
     },
     {
       "source": "seangoedecke.com",
-      "date": "2026-06-15",
-      "url": "https://seangoedecke.com/ai-gpus-live-longer-than-three-years/",
-      "title_en": "AI GPUs probably live longer than three years",
-      "title_zh": "AI GPU 的寿命可能超过三年",
-      "summary_en": "People who think current AI use is unsustainable often rely on the claim that inference GPUs only last “three years at the most” under load 1 . The idea here is that once the AI bubble money drains away, current infrastructure will rapidly become obsolete, and there won’t be enough money floating around to buy a whole slate of brand-new GPUs. Inference costs would thus rapidly become way too expensive for current AI products to make any financial sense. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI GPUs probably live longer than three years stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "认为当前 AI 使用不可持续的人通常依赖这样的说法：推理 GPU 在负载 1 下只能持续“最多三年”。这里的想法是，一旦 AI 泡沫资金耗尽，当前的基础设施将迅速过时，并且不会有足够的资金来购买一整套全新的 GPU。因此，对于当前的 AI 产品来说，推理成本很快就会变得过于昂贵，无法产生任何财务意义。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI GPU 的寿命可能超过三年，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-26",
-      "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything",
-      "title_en": "Incident Report: CVE-2026-LGTM",
-      "title_zh": "事件报告：CVE-2026-LGTM",
-      "summary_en": "Incident Report: CVE-2026-LGTM Spectacular hypothetical incident report by Andrew Nesbitt. Day 2, 16:00 UTC --- Two AI review agents from competing vendors, both attached to a downstream pull request bumping foxhole-lz4 , enter a disagreement loop over whether the package is malicious. After 340 comments and $41,255 in inference spend, Finance revokes both API keys; one vendor's marketing team, cc'd on the cost anomaly alert, issues a press release citing \"a 430% YoY increase in adversarial multi-agent security reasoning.\" The... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Incident Report: CVE-2026-LGTM stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "事件报告：CVE-2026-LGTM Andrew Nesbitt 撰写的精彩假设事件报告。第 2 天，16:00 UTC --- 来自竞争供应商的两个 AI 审查代理，都附加到了碰撞 Foxhole-lz4 的下游拉取请求，进入了关于软件包是否恶意的分歧循环。在收到 340 条评论和 41,255 美元的推理支出后，财务部门撤销了两个 API 密钥；一家供应商的营销团队抄送了成本异常警报，发布了一份新闻稿，称“对抗性多代理安全推理同比增长了 430%”。 ...其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，事件报告：CVE-2026-LGTM 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "seangoedecke.com",
       "date": "2026-06-01",
       "url": "https://seangoedecke.com/weird-projects-i-shipped-with-ai/",
       "title_en": "Weird projects I shipped with AI",
@@ -335,6 +308,15 @@
       "summary_zh": "没有什么比使用框架编写自己的代码更能阐明事物如何组合在一起的了！继续将 PyTorch LLM 代码移植到 JAX ，我想加载一个大型数据集： gpjt/fineweb-gpt2-tokens 的列车分割中的 10,248,871,837 个 16 位无符号整数。 full_dataset = load_file ( dataset_dir / f \"train.safetensors\" )[ \"tokens\" ] 当我运行它时，我收到了 CUDA 内存不足错误： jax.errors.JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while attempts to allocate 19.09GiB。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，JAX 后端和设备脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-06-26",
+      "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything",
+      "title_en": "Incident Report: CVE-2026-LGTM",
+      "title_zh": "事件报告：CVE-2026-LGTM",
+      "summary_en": "Incident Report: CVE-2026-LGTM Spectacular hypothetical incident report by Andrew Nesbitt. Day 2, 16:00 UTC --- Two AI review agents from competing vendors, both attached to a downstream pull request bumping foxhole-lz4 , enter a disagreement loop over whether the package is malicious. After 340 comments and $41,255 in inference spend, Finance revokes both API keys; one vendor's marketing team, cc'd on the cost anomaly alert, issues a press release citing \"a 430% YoY increase in adversarial multi-agent security reasoning.\" The... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Incident Report: CVE-2026-LGTM stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "事件报告：CVE-2026-LGTM Andrew Nesbitt 撰写的精彩假设事件报告。第 2 天，16:00 UTC --- 来自竞争供应商的两个 AI 审查代理，都附加到了碰撞 Foxhole-lz4 的下游拉取请求，进入了关于软件包是否恶意的分歧循环。在收到 340 条评论和 41,255 美元的推理支出后，财务部门撤销了两个 API 密钥；一家供应商的营销团队抄送了成本异常警报，发布了一份新闻稿，称“对抗性多代理安全推理同比增长了 430%”。 ...其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，事件报告：CVE-2026-LGTM 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "seangoedecke.com",
       "date": "2026-05-18",
       "url": "https://seangoedecke.com/the-just-say-no-engineer-was-a-zirp-phenomenon/",
@@ -344,11 +326,29 @@
       "summary_zh": "总是说“不”的工程师是高级工程师和普通工程师的真实原型。他们的作用是放慢速度，阻止增加复杂性的功能的开发，并确保编写尽可能少的代码（因为代码是一种负担）。我们可以将其视为“只说不”的工程师 1 ，而不是“只说是”的工程师。只说“是”的工程师痴迷于快速行动，默认情况下批准代码更改，价值观……除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，“只说不”的工程师是一种 ZIRP 现象，它非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "seangoedecke.com",
+      "date": "2026-06-15",
+      "url": "https://seangoedecke.com/ai-gpus-live-longer-than-three-years/",
+      "title_en": "AI GPUs probably live longer than three years",
+      "title_zh": "AI GPU 的寿命可能超过三年",
+      "summary_en": "People who think current AI use is unsustainable often rely on the claim that inference GPUs only last “three years at the most” under load 1 . The idea here is that once the AI bubble money drains away, current infrastructure will rapidly become obsolete, and there won’t be enough money floating around to buy a whole slate of brand-new GPUs. Inference costs would thus rapidly become way too expensive for current AI products to make any financial sense. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI GPUs probably live longer than three years stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "认为当前 AI 使用不可持续的人通常依赖这样的说法：推理 GPU 在负载 1 下只能持续“最多三年”。这里的想法是，一旦 AI 泡沫资金耗尽，当前的基础设施将迅速过时，并且不会有足够的资金来购买一整套全新的 GPU。因此，对于当前的 AI 产品来说，推理成本很快就会变得过于昂贵，无法产生任何财务意义。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI GPU 的寿命可能超过三年，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-28",
+      "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything",
+      "title_en": "Quoting Jon Udell",
+      "title_zh": "引用乔恩·乌德尔的话",
+      "summary_en": "Human Agent in the loop I dislike the phrase “human in the loop” because it cedes authority to the machines. It’s our loop, we work the same way we always have, now we recruit agents to join the team. An agent-assisted process need not be a black box that takes in prompts and emits features. [...] Let’s do agentic software development like that. Not as a loop we’ve been excluded from, instead as one we invite agents into. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Quoting Jon Udell stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "循环中的人类代理 我不喜欢“循环中的人类”这个短语，因为它把权力让给了机器。这是我们的循环，我们像往常一样工作，现在我们招募代理加入团队。代理辅助流程不必是接收提示并发出功能的黑匣子。 [...]让我们像这样进行代理软件开发。这并不是我们被排除在外的循环，而是我们邀请特工进入的循环。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，引用 Jon Udell 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "simonwillison.net",
       "date": "2026-06-26",
       "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything",
       "title_en": "Quoting Dean W. Ball",
-      "title_zh": "引用 Dean W. Ball 的观点",
+      "title_zh": "引用迪恩·W·鲍尔的话",
       "summary_en": "This is a bad state of affairs. Consider, in particular, some industry dynamics: Frontier models are trained at an enormous cost, and a significant fraction of that cost is recouped in the few post-release months that they are broadly available. After that period elapses, the models become sub-frontier, competition emerges, and margins compress. Every week of delay is eating into the narrow window that labs have to make their accounting work. Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, Quoting Dean W. Ball stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "这是一种糟糕的情况。特别要考虑一些行业动态：前沿模型的训练成本巨大，而其中很大一部分成本是在广泛发布后的几个月内收回的。过了这个时期，这些模型就会变得次前沿，竞争就会出现，利润就会压缩。每周的延误都在蚕食实验室进行会计工作的狭窄窗口。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，引用 Dean W. Ball 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -359,7 +359,7 @@
       "title_en": "cash issuing terminals",
       "title_zh": "现金发行终端",
       "summary_en": "In the United States, we are losing our fondness for cash. As in many other countries, cards and other types of electronic payments now dominate everyday commerce. Cash represented a certain freedom from intermediation, a comforting simplicity that you just don't get from Visa. It's funny to consider, then, how cash is in fact quite amenable to automation. Even Benjamin Franklin's face on a piece of paper can feel like a mere proxy for a database transaction. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, cash issuing terminals stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商业。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商务。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -438,9 +438,9 @@
       "date": "2026-06-25",
       "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
       "title_en": "AI and Liability",
-      "title_zh": "AI 技术与责任边界",
-      "summary_en": "AI and Liability Bruce Schneier on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same circumstances would be... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, AI and Liability stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "AI 和责任 Bruce Schneier 关于德国最近的裁决，即 Google 应对其 AI 概述中引入的错误承担责任： AI 特工是部署他们的个人或组织的代理人，并应受到法律的对待。如果一家公司聘请人类作家来撰写摘要，该公司将为这些摘要中的不准确之处承担责任。 [...] 在同样的情况下，允许企业以 AI 错误为借口隐藏起来......值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，AI 和责任脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "title_zh": "AI 系统与法律责任",
+      "summary_en": "AI and Liability Bruce Schneier and Nathan Sanders on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, AI and Liability stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "AI 和责任 Bruce Schneier 和 Nathan Sanders 关于德国最近的裁决，即 Google 应对其 AI 概述中引入的错误承担责任： AI 特工是部署他们的个人或组织的代理人，并应受到法律的对待。如果一家公司聘请人类作家来撰写摘要，该公司将为这些摘要中的不准确之处承担责任。 [...] 允许企业以同样的 AI 错误为借口……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，AI 和责任脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
