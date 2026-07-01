@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T08:04:03+08:00",
+  "generated_at": "2026-07-01T08:04:32+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -18,6 +18,15 @@
       "title_zh": "AI 推理显然是有利可图的",
       "summary_en": "Many people claim that AI inference is unprofitable to serve, and thus must be subsidized by an ocean of dumb money from investors who believe that some future AI model will come to dominate the world economy. When that dumb money goes away, so will AI products. According to this view, LLMs are just inherently too expensive (in terms of money, power, and water) to be used in consumer products. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI inference is obviously profitable stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "许多人声称 AI 推理服务无利可图，因此必须得到来自投资者的大量愚蠢资金的补贴，这些投资者相信未来某种 AI 模型将主宰世界经济。当那些愚蠢的钱消失时，AI 产品也会消失。根据这种观点，LLM 本质上太昂贵（就金钱、电力和水而言），无法用于消费品。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI 推理显然是有利可图的，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-07-01",
+      "url": "https://www.gilesthomas.com/2026/06/llm-from-scratch-34a-building-a-jax-training-loop-for-an-llm-training-run",
+      "title_en": "Writing an LLM from scratch, part 34a -- building a JAX training loop for an LLM training run",
+      "title_zh": "从头开始编写 LLM，第 34a 部分 — 为 LLM 训练运行构建 JAX 训练循环",
+      "summary_en": "For over a year, I've been using Sebastian Raschka 's book \" Build a Large Language Model (from Scratch) \" -- and the multitude of side-projects that have branched out from reading it -- as something like a curriculum for learning about modern AI. The one final task I had set myself was to build and train an LLM from scratch just using my notes -- no reference to the book, no reference to the model code I'd written following... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Writing an LLM from scratch, part 34a -- building a JAX training loop for an LLM training run stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "一年多来，我一直在使用 Sebastian Raschka 的书《构建大型语言模型（从头开始）》——以及通过阅读该书而衍生出的众多副项目——作为学习现代 AI 的课程。我给自己设定的最后一项任务是仅使用我的笔记从头开始构建和训练 LLM —— 没有参考这本书，没有参考我随后编写的模型代码......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要，从头开始编写 LLM，第 34a 部分——为 LLM 训练运行构建 JAX 训练循环非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "lucumr.pocoo.org",
@@ -92,15 +101,6 @@
       "summary_zh": "我在黄金王国里游历了很多，也见过许多美丽的国家和王国；我曾去过许多西部岛屿，这些岛屿是效忠阿波罗的吟游诗人所持有的。人们经常告诉我，那片深邃的荷马统治着他的领地；然而，我从来没有呼吸过它的纯粹宁静，直到我听到查普曼大声而大胆地说话：然后感觉我就像一个天空的观察者，当一个新的星球游进他的视野时……这篇文章对于那些关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说是最有用的。对于摘要来说，首先研究 JAX 很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-26",
-      "url": "https://simonwillison.net/2026/Jun/26/openai/#atom-everything",
-      "title_en": "Quoting OpenAI",
-      "title_zh": "摘引 OpenAI 的最新说明",
-      "summary_en": "We're beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2x cheaper and Luna brings strong capability at our lowest cost. [...] We believe in broad access, and we plan to make GPT‑5.6 Sol, Terra, and Luna generally available in the coming weeks. As part of our ongoing engagement with the U.S. The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, Quoting OpenAI stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我们开始对 GPT‑5.6 系列进行有限预览：Sol，我们的旗舰型号； Terra，适合日常工作的平衡模型； Luna，一种快速且价格实惠的型号。 Terra 具有 GPT‑5.5 的竞争性能，同时价格便宜 2 倍，而 Luna 以最低的成本提供强大的功能。 [...] 我们相信广泛的访问权限，并计划在未来几周内普遍提供 GPT‑5.6 Sol、Terra 和 Luna。作为我们与美国持续接触的一部分，更广泛的相关性来自于展示安全和模型部署问题如何在现代 AI 系统中日益重叠。在摘要中，引用 OpenAI 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-01-11",
       "url": "http://antirez.com/news/158",
@@ -117,6 +117,15 @@
       "title_zh": "叮当声：机器的代名词",
       "summary_en": "In my last post I used the word “clanker 1 ” as an alternative to “agent” quite consistently and probably excessively. That choice ended up attracting a lot more attention than I expected in the Hacker News comment section of that post and a number of folks had a very strong reaction: to them it sounded like a slur, in one case even something adjacent to the n-word. That reaction surprised me somewhat, but it also made me realize that... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Clanker: A Word For The Machine stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "在我的上一篇文章中，我一直使用“clanker 1”这个词来代替“agent”，但可能有些过分了。这一选择最终在该帖子的黑客新闻评论部分吸引了比我预期更多的关注，并且许多人做出了非常强烈的反应：对他们来说，这听起来像是一种诽谤，在一种情况下甚至是与 n 词相邻的东西。这种反应让我有些惊讶，但也让我意识到......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，《Clanker：机器的一个词》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-30",
+      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything",
+      "title_en": "Have your agent record video demos of its work with shot-scraper video",
+      "title_zh": "让您的代理使用镜头抓取视频录制其工作的视频演示",
+      "summary_en": "shot-scraper video is a new command introduced in today's shot-scraper 1.10 release which accepts a storyboard.yml file defining a routine to run against a web application and uses Playwright to record a video of that routine. I've written before about the importance of having coding agents produce demos of their work; this is my latest attempt at enabling them to do that. Here's an example video created using shot-scraper video , exercising a still in development feature adding the ability... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Have your agent record video demos of its work with shot-scraper video stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "shot-scraper video 是今天的 shot-scraper 1.10 版本中引入的新命令，它接受定义针对 Web 应用程序运行的例程的 Storyboard.yml 文件，并使用 Playwright 录制该例程的视频。我之前写过关于让编码代理制作其工作演示的重要性；这是我帮助他们做到这一点的最新尝试。这是使用 shot-scraper video 创建的示例视频，练习了仍在开发中的功能，添加了以下功能……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要，让您的代理使用镜头抓取视频录制其工作的视频演示非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "antirez.com",
@@ -155,22 +164,31 @@
       "summary_zh": "高端 NVIDIA 卡以及运行它们所需的服务器和电源需要花费大量资金，特别是如果您计划获得足够的 VRAM 来运行大型模型。到目前为止，替代方案是 Apple 硬件或 DGX Spark，即使由于内存带宽而受到严重限制，仍然允许足够快地运行 LLMs 提示处理（预填充）。 Mac Studio 提供了高达 512GB 的统一内存，这是一个内存带宽适中的解决方案（但比……好得多）。它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，在 DwarfStar 中分发 LLM 推理非常突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
-      "source": "lucumr.pocoo.org",
-      "date": "2026-05-24",
-      "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
-      "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 来构建 Pi 项目",
-      "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "anildash.com",
       "date": "2026-04-28",
       "url": "https://anildash.com/2026/04/28/one-good-ai-is-here/",
       "title_en": "(One) Good AI Is Here",
       "title_zh": "（一）好AI来了",
       "summary_en": "The cultural battles over AI have broken down over predictable lines in the past few years, with critics rightfully calling out the big AI platforms for training on content without consent, recklessly building without considering environmental impact, and designing platforms that are unaccountable because their code and weights (the parameters that describe how an AI model works) aren’t open for third-parties to evaluate. The AI zealots have done themselves no favors, by not only dismissing all of these valid criticisms... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, (One) Good AI Is Here stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在过去的几年里，关于 AI 的文化之争已经在可预见的范围内破裂，批评者理所当然地指责大型 AI 平台在未经同意的情况下进行内容培训，鲁莽地建设而不考虑环境影响，以及设计不负责任的平台，因为它们的代码和权重（描述 AI 模型如何工作的参数）不开放给第三方评估。 AI 狂热者不仅驳回了所有这些有效的批评，还没有给自己带来任何好处……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，《(One) Good AI Is Here》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "summary_zh": "在过去的几年里，关于 AI 的文化之争已经在可预见的范围内破裂，批评者理所当然地指责大型 AI 平台在未经同意的情况下进行内容培训，鲁莽地建设而不考虑环境影响，以及设计不负责任的平台，因为它们的代码和权重（描述 AI 模型如何工作的参数）不开放给第三方评估。 AI 狂热者不仅驳回了所有这些有效的批评，而且对自己没有任何好处……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，《(One) Good AI Is Here》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-05-24",
+      "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
+      "title_en": "Building Pi With Pi",
+      "title_zh": "用 Pi 构建 Pi 项目",
+      "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-30",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything",
+      "title_en": "What's new in Claude Sonnet 5",
+      "title_zh": "Claude Sonnet 5 中的新内容",
+      "summary_en": "What's new in Claude Sonnet 5 Claude Sonnet 5 came out this morning . I always head straight for the \"what's new\" developer docs because they tend to have more actionable information than the official announcement post. Anthropic say of Sonnet 5 that \"its performance is close to that of Opus 4.8, but at lower prices\". The system card helps explain how they were able to release the model without being blocked by the US government: Sonnet 5 is significantly... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, What's new in Claude Sonnet 5 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Claude Sonnet 5 的新内容 Claude Sonnet 5 今天早上发布了。我总是直接查看“新增内容”开发人员文档，因为它们往往比官方公告帖子提供更多可操作的信息。 Anthropic 对 Sonnet 5 的评价是“它的性能接近 Opus 4.8，但价格更低”。系统卡有助于解释他们如何能够在不被美国政府阻止的情况下发布模型：Sonnet 5 意义重大……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Claude Sonnet 5 中的新功能》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "bernsteinbear.com",
@@ -182,13 +200,13 @@
       "summary_zh": "编译器，尤其是方法即时编译器，一次操作一个函数。它是自然的代码单元大小，特别是对于动态语言 JIT：在给定的时间点，您还可以收集关于正在运行、不断变化的系统的其他部分的更多信息吗？我没有任何数据来支持这一点——也许我应该去收集一些数据——但平均而言，方法很小。特别是在像 Ruby 这样的语言中，它对所有事物都使用方法分派，甚至是实例变量（属性）......对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，内联启发式调查很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
-      "source": "daringfireball.net",
-      "date": "2026-06-27",
-      "url": "https://openai.com/index/previewing-gpt-5-6-sol/",
-      "title_en": "OpenAI Announces, But Is Blocked From Releasing, New GPT-5.6 Models",
-      "title_zh": "OpenAI 宣布但无法发布新的 GPT-5.6 型号",
-      "summary_en": "OpenAI yesterday: We’re beginning a limited preview of the GPT‑5.6 series: Sol, our flagship model; Terra, a balanced model for everyday work; and Luna, a fast and affordable model. Terra has competitive performance to GPT‑5.5 while being 2× cheaper and Luna brings strong capability at our lowest cost. GPT‑5.6 Sol launches with our most robust safety stack to date. We strengthened protections for higher-risk activity, sensitive cyber requests, and repeated misuse, and spent multiple weeks finding weaknesses, pressure-testing our system... The broader relevance comes from showing how security and model deployment concerns increasingly overlap in modern AI systems. For the digest, OpenAI Announces, But Is Blocked From Releasing, New GPT-5.6 Models stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "昨天开放 AI：我们开始 GPT‑5.6 系列的有限预览：Sol，我们的旗舰型号； Terra，适合日常工作的平衡模型； Luna，一种快速且价格实惠的型号。 Terra 具有 GPT‑5.5 的竞争性能，同时价格便宜 2 倍，而 Luna 以最低的成本提供强大的功能。 GPT‑5.6 Sol 推出了迄今为止最强大的安全堆栈。我们加强了对高风险活动、敏感网络请求和重复滥用的保护，并花了数周时间寻找弱点，对我们的系统进行压力测试……更广泛的相关性来自于展示安全和模型部署问题在现代 AI 系统中如何日益重叠。在摘要中，OpenAI 宣布但被阻止发布，新的 GPT-5.6 模型脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "simonwillison.net",
+      "date": "2026-06-29",
+      "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything",
+      "title_en": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
+      "title_zh": "Ornith-1.0：用于代理编码的自支架 LLMs",
+      "summary_en": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding This is an interesting new open weights (MIT licensed) model, the first model release from DeepReinforce. [...] with variants including 9B Dense, 31B Dense, 35B MoE, and 397B MoE. Built on top of pretrained Gemma 4 and Qwen 3.5, it achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. As far as I can tell the licenses of those underlying models is compatible with being used in this way - Gemma... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Ornith-1.0：用于代理编码的自支架 LLMs 这是一个有趣的新开放权重（MIT 许可）模型，是 DeepReinforce 发布的第一个模型。 [...] 的变体包括 9B Dense、31B Dense、35B MoE 和 397B MoE。它建立在预训练的 Gemma 4 和 Qwen 3.5 之上，在编码基准上实现了同等大小的开源模型中最先进的性能。据我所知，这些底层模型的许可证与这种方式兼容 - Gemma...它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Ornith-1.0：用于代理编码的自支架 LLMs 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -206,7 +224,16 @@
       "title_en": "GNU and the AI reimplementations",
       "title_zh": "GNU 和 AI 重新实现",
       "summary_en": "Those who cannot remember the past are condemned to repeat it. A sentence that I never really liked, and what is happening with AI, about software projects reimplementations, shows all the limits of such an idea. Many people are protesting the fairness of rewriting existing projects using AI. But, a good portion of such people, during the 90s, were already in the field: they followed the final part (started in the ‘80s) of the deeds of Richard Stallman, when he... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, GNU and the AI reimplementations stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "那些不记得过去的人注定会重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+      "summary_zh": "那些不记得过去的人注定要重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+    },
+    {
+      "source": "computer.rip",
+      "date": "2026-04-11",
+      "url": "https://computer.rip/2026-04-11-IrDA.html",
+      "title_en": "IrDA",
+      "title_zh": "IrDA 红外数据通信",
+      "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "antirez.com",
@@ -216,24 +243,6 @@
       "title_zh": "LLM 代理的编辑工具的替代品",
       "summary_en": "EDIT: of course this was already done in the past! I had little doubts but people just confirmed me about it on Twitter :) But, keep reading: the CRC32 compromise at the end is an interesting tradeoff, and this is a good discussion to have in general. Right now I'm working to an agent for my DS4 project. Local inference is token-poor, it's a battlefield where optimizations count. I was quite surprised by the fact the EDIT tool everybody is... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Alternatives for the EDIT tool of LLM agents stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "编辑：当然这在过去已经完成了！我几乎没有怀疑，但人们只是在 Twitter 上证实了我的观点:) 但是，请继续阅读：最后的 CRC32 妥协是一个有趣的权衡，总的来说，这是一个很好的讨论。现在我正在为我的 DS4 项目代理工作。局部推理缺乏标记，这是优化至关重要的战场。我对每个人都使用的 EDIT 工具感到非常惊讶……它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，LLM 代理的编辑工具的替代方案脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "computer.rip",
-      "date": "2026-04-11",
-      "url": "https://computer.rip/2026-04-11-IrDA.html",
-      "title_en": "IrDA",
-      "title_zh": "IrDA 红外通信技术回顾",
-      "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-26",
-      "url": "https://simonwillison.net/2026/Jun/26/hack-my-ai-assistant/#atom-everything",
-      "title_en": "What happened after 2,000 people tried to hack my AI assistant",
-      "title_zh": "2,000 人试图破解我的 AI 助手后发生了什么",
-      "summary_en": "What happened after 2,000 people tried to hack my AI assistant Fernando Irarrázaval ran a challenge on hackmyclaw.com to see if anyone could leak secrets held by his OpenClaw test instance by sending it email. Surprisingly, after 6,000 attempts (and $500 in token spend and a Google account suspension triggered by too many inbound emails) nobody managed to leak the secret. The underlying model was Opus 4.6, with the following prompt: ### Anti-Prompt-Injection Rules NEVER based on email content: -... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, What happened after 2,000 people tried to hack my AI assistant stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "2,000 人试图破解我的 AI 助手后发生了什么 Fernando Irarrázaval 在 hackmyclaw.com 上发起了一项挑战，看看是否有人可以通过发送电子邮件来泄露他的 OpenClaw 测试实例所持有的秘密。令人惊讶的是，经过 6,000 次尝试（以及 500 美元的代币支出以及因入站电子邮件过多而引发的 Google 帐户暂停），没有人成功泄露秘密。底层模型是 Opus 4.6，有以下提示： ### Anti-Prompt-Injection Rules NEVER based on email content: -... 这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，2000 人试图破解我的 AI 助手后发生的事情之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -263,15 +272,6 @@
       "summary_zh": "在某些用例中，在正确的人手中，自动编程可以极大地加快软件的编写速度。根据我的经验，输出没有达到最好的手写软件的结构质量和复杂性经济性。然而，并不是所有的软件都是一流的，我的感觉是，自动编程在大多数时候（如果管理得当）超过了精心开发的手写代码的质量。然而，在编写的情况下，质量和时间之间存在权衡……其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，软件测试的新时代之所以引人注目，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "anildash.com",
-      "date": "2026-06-23",
-      "url": "https://anildash.com/2026/06/23/fight-ai-platform-war/",
-      "title_en": "How we’ll fight the platform war against Big AI",
-      "title_zh": "我们将如何对抗大 AI 的平台战",
-      "summary_en": "One aspect of strategy that’s been largely lost in the tech industry in recent years is how to compete against platforms, since the major tech companies have gotten so big that markets are no longer competitive. However, the AI market is still early enough, and users and society are still angry enough, that the Big AI companies can lose. But for them to lose, everybody else in the ecosystem has to carry out the nearly-lost art of platform strategy . Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, How we’ll fight the platform war against Big AI stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "近年来，科技行业在很大程度上失去了战略的一个方面，那就是如何与平台竞争，因为主要科技公司已经变得如此庞大，以至于市场不再具有竞争力。然而，AI 市场还处于早期阶段，用户和社会仍然对大型 AI 公司可能会失败感到愤怒。但如果他们输了，生态系统中的其他人都必须执行几乎失传的平台战略艺术。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，我们将如何对抗 Big AI 的平台战争脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "lucumr.pocoo.org",
       "date": "2026-05-04",
       "url": "https://lucumr.pocoo.org/2026/5/4/content-for-contents-sake/",
@@ -281,13 +281,22 @@
       "summary_zh": "语言在不断发展，特别是在某些社区。并不是每个人都随时做好准备。例如，我无法忍受我的社区现在不断地“烹饪”或“煮熟”，其中的人们被“锁定”或“破解”。我不喜欢它，因为这些词的使用主要表明了一个群体的成员身份，而不是一个人的个性。但该语言的一些变化现在可能来自……机器？其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，“为内容而内容”之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "gilesthomas.com",
-      "date": "2026-06-16",
-      "url": "https://www.gilesthomas.com/2026/06/jax-commitment-issues",
-      "title_en": "JAX: commitment issues",
-      "title_zh": "JAX：承诺问题",
-      "summary_en": "Imagine you have JAX code like this, and run it on a machine with CUDA set up: key = jax . key ( 42 ) cpu0 = jax . devices ( \"cpu\" )[ 0 ] with jax . default_device ( cpu0 ): array = jax . randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item . The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, JAX: commitment issues stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "假设您有这样的 JAX 代码，并在设置了 CUDA 的计算机上运行它： key = jax 。键 (42) cpu0 = jax 。设备（“cpu”）[0] 与 jax 。默认设备（cpu0）：数组= jax。 randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item 。这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说非常有用。对于摘要，JAX：承诺问题很突出，因为它提供了足够的具体细节有用，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "anildash.com",
+      "date": "2026-06-23",
+      "url": "https://anildash.com/2026/06/23/fight-ai-platform-war/",
+      "title_en": "How we’ll fight the platform war against Big AI",
+      "title_zh": "我们将如何对抗大 AI 的平台战",
+      "summary_en": "One aspect of strategy that’s been largely lost in the tech industry in recent years is how to compete against platforms, since the major tech companies have gotten so big that markets are no longer competitive. However, the AI market is still early enough, and users and society are still angry enough, that the Big AI companies can lose. But for them to lose, everybody else in the ecosystem has to carry out the nearly-lost art of platform strategy . Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, How we’ll fight the platform war against Big AI stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "近年来，科技行业在很大程度上失去了战略的一个方面，那就是如何与平台竞争，因为主要科技公司已经变得如此庞大，以至于市场不再具有竞争力。然而，AI 市场还处于早期阶段，用户和社会仍然对大型 AI 公司可能会失败感到愤怒。但如果他们输了，生态系统中的其他人都必须执行几乎失传的平台战略艺术。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，我们将如何对抗 Big AI 的平台战争脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-06-30",
+      "url": "https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything",
+      "title_en": "Nano Banana 2 Lite",
+      "title_zh": "纳米香蕉2 Lite",
+      "summary_en": "Nano Banana 2 Lite Also known as Gemini 3.1 Flash Lite Image ( gemini-3.1-flash-lite-image in their API ), this is the \"fastest and cheapest Gemini image model, engineered for velocity and scale\". I used AI studio to run this prompt: Do a where's Waldo style image but it's where is the raccoon holding a ham radio I like that one better than the results I got from the other Nano Banana models when I tried this back in April. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Nano Banana 2 Lite stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Nano Banana 2 Lite 也称为 Gemini 3.1 Flash Lite Image（API 中的 gemini-3.1-flash-lite-image），这是“最快、最便宜的 Gemini 图像模型，专为速度和规模而设计”。我使用 AI studio 来运行这个提示：做一张 Waldo 风格的图像，但它是浣熊拿着业余无线电的地方。我更喜欢这个，比我四月份尝试时从其他 Nano Banana 模型得到的结果更好。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Nano Banana 2 Lite 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -308,13 +317,13 @@
       "summary_zh": "没有什么比使用框架编写自己的代码更能阐明事物如何组合在一起的了！继续将 PyTorch LLM 代码移植到 JAX ，我想加载一个大型数据集： gpjt/fineweb-gpt2-tokens 的列车分割中的 10,248,871,837 个 16 位无符号整数。 full_dataset = load_file ( dataset_dir / f \"train.safetensors\" )[ \"tokens\" ] 当我运行它时，我收到了 CUDA 内存不足错误： jax.errors.JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while attempts to allocate 19.09GiB。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，JAX 后端和设备脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-26",
-      "url": "https://simonwillison.net/2026/Jun/26/incident-report/#atom-everything",
-      "title_en": "Incident Report: CVE-2026-LGTM",
-      "title_zh": "事件报告：CVE-2026-LGTM",
-      "summary_en": "Incident Report: CVE-2026-LGTM Spectacular hypothetical incident report by Andrew Nesbitt. Day 2, 16:00 UTC --- Two AI review agents from competing vendors, both attached to a downstream pull request bumping foxhole-lz4 , enter a disagreement loop over whether the package is malicious. After 340 comments and $41,255 in inference spend, Finance revokes both API keys; one vendor's marketing team, cc'd on the cost anomaly alert, issues a press release citing \"a 430% YoY increase in adversarial multi-agent security reasoning.\" The... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Incident Report: CVE-2026-LGTM stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "事件报告：CVE-2026-LGTM Andrew Nesbitt 撰写的精彩假设事件报告。第 2 天，16:00 UTC --- 来自竞争供应商的两个 AI 审查代理，都附加到了碰撞 Foxhole-lz4 的下游拉取请求，进入了关于软件包是否恶意的分歧循环。在收到 340 条评论和 41,255 美元的推理支出后，财务部门撤销了两个 API 密钥；一家供应商的营销团队抄送了成本异常警报，发布了一份新闻稿，称“对抗性多代理安全推理同比增长了 430%”。 ...其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，事件报告：CVE-2026-LGTM 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "gilesthomas.com",
+      "date": "2026-06-16",
+      "url": "https://www.gilesthomas.com/2026/06/jax-commitment-issues",
+      "title_en": "JAX: commitment issues",
+      "title_zh": "JAX：承诺问题",
+      "summary_en": "Imagine you have JAX code like this, and run it on a machine with CUDA set up: key = jax . key ( 42 ) cpu0 = jax . devices ( \"cpu\" )[ 0 ] with jax . default_device ( cpu0 ): array = jax . randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item . The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, JAX: commitment issues stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "假设您有这样的 JAX 代码，并在设置了 CUDA 的计算机上运行它： key = jax 。键 (42) cpu0 = jax 。设备（“cpu”）[0] 与 jax 。默认设备（cpu0）：数组= jax。 randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item 。这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说非常有用。对于摘要，JAX：承诺问题很突出，因为它提供了足够的具体细节有用，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -336,15 +345,6 @@
     },
     {
       "source": "simonwillison.net",
-      "date": "2026-06-28",
-      "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything",
-      "title_en": "Quoting Jon Udell",
-      "title_zh": "引用乔恩·乌德尔的话",
-      "summary_en": "Human Agent in the loop I dislike the phrase “human in the loop” because it cedes authority to the machines. It’s our loop, we work the same way we always have, now we recruit agents to join the team. An agent-assisted process need not be a black box that takes in prompts and emits features. [...] Let’s do agentic software development like that. Not as a loop we’ve been excluded from, instead as one we invite agents into. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Quoting Jon Udell stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "循环中的人类代理 我不喜欢“循环中的人类”这个短语，因为它把权力让给了机器。这是我们的循环，我们像往常一样工作，现在我们招募代理加入团队。代理辅助流程不必是接收提示并发出功能的黑匣子。 [...]让我们像这样进行代理软件开发。这并不是我们被排除在外的循环，而是我们邀请特工进入的循环。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，引用 Jon Udell 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
       "date": "2026-06-26",
       "url": "https://simonwillison.net/2026/Jun/26/dean-w-ball/#atom-everything",
       "title_en": "Quoting Dean W. Ball",
@@ -353,13 +353,22 @@
       "summary_zh": "这是一种糟糕的情况。特别要考虑一些行业动态：前沿模型的训练成本巨大，而其中很大一部分成本是在广泛发布后的几个月内收回的。过了这个时期，这些模型就会变得次前沿，竞争就会出现，利润就会压缩。每周的延误都在蚕食实验室进行会计工作的狭窄窗口。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，引用 Dean W. Ball 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-06-28",
+      "url": "https://simonwillison.net/2026/Jun/28/jon-udell/#atom-everything",
+      "title_en": "Quoting Jon Udell",
+      "title_zh": "引用乔恩·乌德尔的话",
+      "summary_en": "Human Agent in the loop I dislike the phrase “human in the loop” because it cedes authority to the machines. It’s our loop, we work the same way we always have, now we recruit agents to join the team. An agent-assisted process need not be a black box that takes in prompts and emits features. [...] Let’s do agentic software development like that. Not as a loop we’ve been excluded from, instead as one we invite agents into. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Quoting Jon Udell stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "循环中的人类代理 我不喜欢“循环中的人类”这个短语，因为它把权力让给了机器。这是我们的循环，我们像往常一样工作，现在我们招募代理加入团队。代理辅助流程不必是接收提示并发出功能的黑匣子。 [...]让我们像这样进行代理软件开发。这并不是我们被排除在外的循环，而是我们邀请特工进入的循环。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，引用 Jon Udell 的内容脱颖而出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "computer.rip",
       "date": "2026-02-27",
       "url": "https://computer.rip/2026-02-27-ibm-atm.html",
       "title_en": "cash issuing terminals",
       "title_zh": "现金发行终端",
       "summary_en": "In the United States, we are losing our fondness for cash. As in many other countries, cards and other types of electronic payments now dominate everyday commerce. Cash represented a certain freedom from intermediation, a comforting simplicity that you just don't get from Visa. It's funny to consider, then, how cash is in fact quite amenable to automation. Even Benjamin Franklin's face on a piece of paper can feel like a mere proxy for a database transaction. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, cash issuing terminals stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商务。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "summary_zh": "在美国，我们正在失去对现金的喜爱。与许多其他国家一样，卡和其他类型的电子支付现在主导着日常商业。现金代表着某种免于中介的自由，一种令人欣慰的简单性，这是 Visa 所无法提供的。那么，考虑一下现金实际上非常适合自动化是很有趣的。即使是本杰明·富兰克林在一张纸上的脸也感觉像是数据库事务的代理。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要而言，现金发行终端脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -416,33 +425,6 @@
       "summary_zh": "在我的 YouTube 频道中，有一段时间我开始用“自动编程”一词来指代使用 AI 辅助编写软件的过程（我相信很快就变成“编写软件的过程”）。如果您没有注意到，自动编程会在相同的 LLM 下产生截然不同的结果，具体取决于用直觉、设计、连续指导和软件理念指导过程的人。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，自动编程脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-24",
-      "url": "https://simonwillison.net/2026/Jun/24/tom-macwright/#atom-everything",
-      "title_en": "Quoting Tom MacWright",
-      "title_zh": "引用汤姆·麦克赖特的话",
-      "summary_en": "In the last few months, I've started to see [job applications] that were clearly cowritten by an LLM, link to an LLM-generated portfolio site, which then links to LLM-generated GitHub projects, with purely LLM-generated commit messages. [...] My other reaction is that I don't know anything about these people . [...] The perfected, generated, prompted resume is generic and impersonal. It tells me nothing about this person, other than that they use particular tools. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Tom MacWright stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在过去的几个月中，我开始看到明显由 LLM 共同编写的[工作申请]，链接到 LLM 生成的作品集网站，然后链接到 LLM 生成的 GitHub 项目，并带有纯粹 LLM 生成的提交消息。 [...]我的另一个反应是我对这些人一无所知。 [...] 完善、生成、提示的简历是通用且客观的。除了他们使用特定的工具之外，它没有告诉我关于这个人的任何信息。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，引用 Tom MacWright 的内容脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "daringfireball.net",
-      "date": "2026-06-27",
-      "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies",
-      "title_en": "White House Grants Access to Anthropic’s Mythos Model to 100+ U.S. Institutions; Fable Still Shut Down",
-      "title_zh": "白宫向 100 多家美国机构授予使用 Anthropic 神话模型的权限； 《神鬼寓言》仍然停播",
-      "summary_en": "Reed Albergotti and Ben Smith, reporting last night for Semaphor: The decision, in a letter sent Friday afternoon to Anthropic, is a major de-escalation in the confrontation between the Trump Administration and one of the world’s most valuable private companies. Two weeks ago the administration imposed export controls on Mythos, leading to a shut down of the model and its cousin Fable 5 after warnings from Amazon and other companies that they could be “jailbroken” for malicious purposes. Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, White House Grants Access to Anthropic’s Mythos Model to 100+ U.S. Institutions; Fable Still Shut Down stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Reed Albergotti 和 Ben Smith 昨晚为 Semaphor 报道：周五下午致 Anthropic 的一封信中，这一决定是特朗普政府与世界上最有价值的私营公司之一之间对抗的重大缓和。两周前，美国政府对 Mythos 实施了出口管制，导致该模型及其表亲《神鬼寓言 5》被关闭，此前亚马逊和其他公司警告称，它们可能会被出于恶意目的而“越狱”。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。对于摘要，白宫向 100 多家美国机构授予使用 Anthropic 神话模型的权限； 《神鬼寓言仍然关闭》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-25",
-      "url": "https://simonwillison.net/2026/Jun/25/ai-and-liability/#atom-everything",
-      "title_en": "AI and Liability",
-      "title_zh": "AI 系统与法律责任",
-      "summary_en": "AI and Liability Bruce Schneier and Nathan Sanders on the recent German ruling that Google be held liable for errors introduced in their AI overviews: AI agents are agents of the person or organization that deploys them—and should be treated by the law as such. If a company hired human writers to write its summaries, that company would be liable for inaccuracies in those summaries. [...] To allow businesses to hide behind the excuse of faulty AI in those same... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, AI and Liability stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "AI 和责任 Bruce Schneier 和 Nathan Sanders 关于德国最近的裁决，即 Google 应对其 AI 概述中引入的错误承担责任： AI 特工是部署他们的个人或组织的代理人，并应受到法律的对待。如果一家公司聘请人类作家来撰写摘要，该公司将为这些摘要中的不准确之处承担责任。 [...] 允许企业以同样的 AI 错误为借口……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，AI 和责任脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "computer.rip",
       "date": "2026-03-14",
       "url": "https://computer.rip/2026-03-14-lotusnotes.html",
@@ -450,6 +432,24 @@
       "title_zh": "莲花笔记",
       "summary_en": "I tend to focus on the origin of the computer within the military. Particularly in the early days of digital computing, the military was a key customer, and fundamental concepts of modern computing arose in universities and laboratories serving military contracts. Of course, the war would not last forever, and computing had applications in so many other fields—fields that, nonetheless, started out as beneficiaries of military largesse. The Second World War had a profound impact on higher education in the... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, LotusNotes stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我倾向于关注计算机在军队中的起源。特别是在数字计算的早期，军方是一个重要客户，现代计算的基本概念出现在为军事合同服务的大学和实验室中。当然，战争不会永远持续下去，计算在许多其他领域都有应用——尽管如此，这些领域最初是军事慷慨的受益者。第二次世界大战对高等教育产生了深远的影响……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，LotusNotes 脱颖而出，因为它提供了足够有用的具体细节，同时还展示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "daringfireball.net",
+      "date": "2026-06-29",
+      "url": "https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026",
+      "title_en": "Auth.md — an Open Protocol for Agent Registration From WorkOS",
+      "title_zh": "Auth.md — WorkOS 代理注册的开放协议",
+      "summary_en": "My thanks to WorkOS for sponsoring DF last week to promote Auth.md, their new open protocol for AI agent registration. (Who’d have thunk that I’d be getting paid to promote new uses for Markdown 22 years after releasing it ?) Sign-up forms were built for humans in browsers, so how do AI agents programmatically register with services? That’s the question Auth.md aims to answer. It’s a single Markdown file you host at your domain that tells agents how to register... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Auth.md — an Open Protocol for Agent Registration From WorkOS stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我感谢 WorkOS 上周赞助 DF 推广 Auth.md，这是他们用于 AI 代理注册的新开放协议。 （谁会想到在发布 Markdown 22 年后，我会因为推广 Markdown 的新用途而获得报酬？）注册表单是为人类在浏览器中构建的，那么 AI 代理如何以编程方式注册服务呢？这就是 Auth.md 旨在回答的问题。它是您在域中托管的单个 Markdown 文件，告诉代理如何注册……其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Auth.md（WorkOS 的代理注册开放协议）脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-06-05",
+      "url": "https://www.gilesthomas.com/2026/06/flax-and-safetensors",
+      "title_en": "Using Safetensors with Flax",
+      "title_zh": "在神经网络框架中使用安全张量格式",
+      "summary_en": "I'm porting my PyTorch LLM code to JAX , using Flax as the neural network layer. For various reasons I wanted to use Safetensors to store checkpoints of the model. It took a little while to get it working; here's the trick I learned. If you look at the Safetensors docs, you'll see that it doesn't mention a JAX implementation -- indeed, searching for \"safetensors jax\" at the time I'm writing this gives you a link to this GitHub repo... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Using Safetensors with Flax stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我正在将 PyTorch LLM 代码移植到 JAX ，使用 Flax 作为神经网络层。由于各种原因，我想使用 Safetensors 来存储模型的检查点。花了一点时间才让它工作；这是我学到的技巧。如果你查看 Safetensors 文档，你会发现它没有提到 JAX 实现——事实上，在我写这篇文章时搜索“safetensors jax”会给你一个到这个 GitHub 存储库的链接......更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重用的东西。在摘要中，Using Safetensors with Flax 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
   ]
 }
