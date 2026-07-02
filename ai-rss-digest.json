@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T08:04:32+08:00",
+  "generated_at": "2026-07-02T08:03:13+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -56,15 +56,6 @@
       "summary_zh": "前几天，我遇到了“即时注射作为角色混乱”（来自西蒙·威利森）。这是 Charles Ye、Jasmine Cui 和 Dylan Hadfield-Menell 的论文的一个非常有趣的博客风格版本，他们发现 LLMs 似乎几乎忽略了像 <system> 、 <user> 或 <think> 这样的“角色”标签，而是使用文本的语气来推断角色。这似乎可以解释很多越狱的情况。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，《关于角色混乱的思考》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "seangoedecke.com",
-      "date": "2026-05-20",
-      "url": "https://seangoedecke.com/prompts-are-technical-debt-too/",
-      "title_en": "Prompts are technical debt too",
-      "title_zh": "提示也是技术债",
-      "summary_en": "It’s common and correct to say that “all code is technical debt”. Adding code is a necessary evil for developing new features: you almost always have to do it, but each line of code adds to the complexity and maintenance burden of the system. All future changes to the system have to work with the existing code, or at least avoid breaking it. Once systems accumulate enough code, they become impossible for a single person to understand: instead of reading... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Prompts are technical debt too stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "“所有代码都是技术债务”这句话是常见且正确的。添加代码是开发新功能的必要之恶：你几乎总是必须这样做，但每一行代码都增加了系统的复杂性和维护负担。未来对系统的所有更改都必须与现有代码配合使用，或者至少避免破坏它。一旦系统积累了足够的代码，单个人就不可能理解它们：而不是阅读……它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，提示也是技术债，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-02-25",
       "url": "http://antirez.com/news/160",
@@ -72,6 +63,15 @@
       "title_zh": "使用 Claude 代码实现洁净室 Z80 / ZX Spectrum 模拟器",
       "summary_en": "Anthropic recently released a blog post with the description of an experiment in which the last version of Opus, the 4.6, was instructed to write a C compiler in Rust, in a “clean room” setup. The experiment methodology left me dubious about the kind of point they wanted to make. Why not provide the agent with the ISA documentation? Writing a C compiler is exactly a giant graph manipulation exercise: the kind of program that is harder to write in... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Implementing a clear room Z80 / ZX Spectrum emulator with Claude Code stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Anthropic 最近发布了一篇博客文章，其中描述了一项实验，其中 Opus 的最后一个版本 4.6 被指示在“洁净室”设置中使用 Rust 编写 C 编译器。实验方法让我对他们想要表达的观点感到怀疑。为什么不向代理提供 ISA 文件？编写 C 编译器实际上是一个巨大的图形操作练习：是一种更难编写的程序……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，使用 Claude 代码实现透明房间 Z80 / ZX Spectrum 模拟器脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-05-20",
+      "url": "https://seangoedecke.com/prompts-are-technical-debt-too/",
+      "title_en": "Prompts are technical debt too",
+      "title_zh": "提示也是技术债",
+      "summary_en": "It’s common and correct to say that “all code is technical debt”. Adding code is a necessary evil for developing new features: you almost always have to do it, but each line of code adds to the complexity and maintenance burden of the system. All future changes to the system have to work with the existing code, or at least avoid breaking it. Once systems accumulate enough code, they become impossible for a single person to understand: instead of reading... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Prompts are technical debt too stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "“所有代码都是技术债务”这句话是常见且正确的。添加代码是开发新功能的必要之恶：你几乎总是必须这样做，但每一行代码都增加了系统的复杂性和维护负担。未来对系统的所有更改都必须与现有代码配合使用，或者至少避免破坏它。一旦系统积累了足够的代码，单个人就不可能理解它们：而不是阅读……它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，提示也是技术债，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "lucumr.pocoo.org",
@@ -146,15 +146,6 @@
       "summary_zh": "* 多年来，尽管功能证据和科学提示不断积累，某些 AI 研究人员仍然声称 LLM 是随机鹦鹉：概率机器会： 1. 对提示的含义没有任何表示。对他们要说什么没有任何表示。到了 2025 年，几乎所有人终于不再这么说了。 * 思想链现在是提高LLM输出的根本方法。我认为有两点： 1. 其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，2025 年底对 AI 的反思脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "gilesthomas.com",
-      "date": "2026-06-17",
-      "url": "https://www.gilesthomas.com/2026/06/hashing-jax-parameters",
-      "title_en": "Flax debugging: making a hash of things",
-      "title_zh": "Flax 调试：对事物进行哈希处理",
-      "summary_en": "I was debugging an issue with a JAX/Flax NNX training loop the other day, and found a neat little trick to help debug it. Specifically, I wanted to see if the issue was with my model, my loss function, my optimiser settings, or the \"plumbing\" of the training loop itself -- were gradients actually coming through and being applied to the parameters? I could print out the loss and the gradients, but printing out the parameters to see if they... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Flax debugging: making a hash of things stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "前几天我正在调试 JAX/Flax NNX 训练循环的一个问题，并发现了一个巧妙的小技巧来帮助调试它。具体来说，我想看看问题是否出在我的模型、损失函数、优化器设置或训练循环本身的“管道”上——梯度是否真的通过并应用于参数？我可以打印出损失和梯度，但打印出参数来看看它们是否......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，Flax 调试：对事物进行哈希处理很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-05-25",
       "url": "http://antirez.com/news/167",
@@ -177,7 +168,7 @@
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 构建 Pi 项目",
+      "title_zh": "使用 Pi 构建 Pi 项目",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -189,6 +180,15 @@
       "title_zh": "Claude Sonnet 5 中的新内容",
       "summary_en": "What's new in Claude Sonnet 5 Claude Sonnet 5 came out this morning . I always head straight for the \"what's new\" developer docs because they tend to have more actionable information than the official announcement post. Anthropic say of Sonnet 5 that \"its performance is close to that of Opus 4.8, but at lower prices\". The system card helps explain how they were able to release the model without being blocked by the US government: Sonnet 5 is significantly... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, What's new in Claude Sonnet 5 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Claude Sonnet 5 的新内容 Claude Sonnet 5 今天早上发布了。我总是直接查看“新增内容”开发人员文档，因为它们往往比官方公告帖子提供更多可操作的信息。 Anthropic 对 Sonnet 5 的评价是“它的性能接近 Opus 4.8，但价格更低”。系统卡有助于解释他们如何能够在不被美国政府阻止的情况下发布模型：Sonnet 5 意义重大……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Claude Sonnet 5 中的新功能》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "gilesthomas.com",
+      "date": "2026-06-17",
+      "url": "https://www.gilesthomas.com/2026/06/hashing-jax-parameters",
+      "title_en": "Flax debugging: making a hash of things",
+      "title_zh": "Flax 调试：对事物进行哈希处理",
+      "summary_en": "I was debugging an issue with a JAX/Flax NNX training loop the other day, and found a neat little trick to help debug it. Specifically, I wanted to see if the issue was with my model, my loss function, my optimiser settings, or the \"plumbing\" of the training loop itself -- were gradients actually coming through and being applied to the parameters? I could print out the loss and the gradients, but printing out the parameters to see if they... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Flax debugging: making a hash of things stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "前几天我正在调试 JAX/Flax NNX 训练循环的一个问题，并发现了一个巧妙的小技巧来帮助调试它。具体来说，我想看看问题是否出在我的模型、损失函数、优化器设置或训练循环本身的“管道”上——梯度是否真的通过并应用于参数？我可以打印出损失和梯度，但打印出参数来看看它们是否......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，Flax 调试：对事物进行哈希处理很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "bernsteinbear.com",
@@ -231,7 +231,7 @@
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "IrDA 红外数据通信",
+      "title_zh": "IrDA 红外数据通信标准",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -380,6 +380,15 @@
       "summary_zh": "几年前，当我上大学时，我有一个朋友，他们从来没有真正在一起过。你知道类型；我说的是丢失了一张借记卡，花了三个月才得到一张新卡，因为与信用社的某种“混淆”，我认为主要是三个月没有给他们打电话。与此同时，我们共同的朋友陷入了困境：凌晨一点在沃尔玛，......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，telecheck 和 tyms Past 之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-06-30",
+      "url": "https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything",
+      "title_en": "Quoting Anthropic",
+      "title_zh": "引用人择",
+      "summary_en": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5. We'll begin restoring access tomorrow, and will share an update soon. — Anthropic , on Twitter Tags: anthropic , claude , generative-ai , claude-mythos , ai , llms The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Anthropic stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我们收到通知，商务部已取消对 Claude 《神鬼寓言 5》和《神话 5》的出口管制。我们将于明天开始恢复访问，并很快分享最新消息。 — Anthropic，在 Twitter 上 标签：anthropic、claude、generative-ai、claude-mythos、ai、llms 更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Quoting Anthropic 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "xeiaso.net",
       "date": "2026-06-23",
       "url": "https://www.tigrisdata.com/blog/objgit/",
@@ -434,20 +443,11 @@
       "summary_zh": "我倾向于关注计算机在军队中的起源。特别是在数字计算的早期，军方是一个重要客户，现代计算的基本概念出现在为军事合同服务的大学和实验室中。当然，战争不会永远持续下去，计算在许多其他领域都有应用——尽管如此，这些领域最初是军事慷慨的受益者。第二次世界大战对高等教育产生了深远的影响……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，LotusNotes 脱颖而出，因为它提供了足够有用的具体细节，同时还展示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "daringfireball.net",
-      "date": "2026-06-29",
-      "url": "https://workos.com/auth-md?utm_source=daringfireball&utm_medium=newsletter&utm_campaign=q22026",
-      "title_en": "Auth.md — an Open Protocol for Agent Registration From WorkOS",
-      "title_zh": "Auth.md — WorkOS 代理注册的开放协议",
-      "summary_en": "My thanks to WorkOS for sponsoring DF last week to promote Auth.md, their new open protocol for AI agent registration. (Who’d have thunk that I’d be getting paid to promote new uses for Markdown 22 years after releasing it ?) Sign-up forms were built for humans in browsers, so how do AI agents programmatically register with services? That’s the question Auth.md aims to answer. It’s a single Markdown file you host at your domain that tells agents how to register... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Auth.md — an Open Protocol for Agent Registration From WorkOS stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我感谢 WorkOS 上周赞助 DF 推广 Auth.md，这是他们用于 AI 代理注册的新开放协议。 （谁会想到在发布 Markdown 22 年后，我会因为推广 Markdown 的新用途而获得报酬？）注册表单是为人类在浏览器中构建的，那么 AI 代理如何以编程方式注册服务呢？这就是 Auth.md 旨在回答的问题。它是您在域中托管的单个 Markdown 文件，告诉代理如何注册……其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Auth.md（WorkOS 的代理注册开放协议）脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "gilesthomas.com",
       "date": "2026-06-05",
       "url": "https://www.gilesthomas.com/2026/06/flax-and-safetensors",
       "title_en": "Using Safetensors with Flax",
-      "title_zh": "在神经网络框架中使用安全张量格式",
+      "title_zh": "在 Flax 中使用 Safetensors 安全张量格式",
       "summary_en": "I'm porting my PyTorch LLM code to JAX , using Flax as the neural network layer. For various reasons I wanted to use Safetensors to store checkpoints of the model. It took a little while to get it working; here's the trick I learned. If you look at the Safetensors docs, you'll see that it doesn't mention a JAX implementation -- indeed, searching for \"safetensors jax\" at the time I'm writing this gives you a link to this GitHub repo... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Using Safetensors with Flax stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我正在将 PyTorch LLM 代码移植到 JAX ，使用 Flax 作为神经网络层。由于各种原因，我想使用 Safetensors 来存储模型的检查点。花了一点时间才让它工作；这是我学到的技巧。如果你查看 Safetensors 文档，你会发现它没有提到 JAX 实现——事实上，在我写这篇文章时搜索“safetensors jax”会给你一个到这个 GitHub 存储库的链接......更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重用的东西。在摘要中，Using Safetensors with Flax 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
