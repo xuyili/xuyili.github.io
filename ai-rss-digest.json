@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T08:11:34+08:00",
+  "generated_at": "2026-07-04T08:55:49+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -111,6 +111,15 @@
     },
     {
       "source": "simonwillison.net",
+      "date": "2026-07-03",
+      "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
+      "title_en": "Fable's judgement",
+      "title_zh": "寓言的判断",
+      "summary_en": "One of the most interesting tips I got from the Fireside Chat I hosted with Cat Wu and Thariq Shihipar from the Claude Code team at AIE on Wednesday was to let Fable (and to a certain extent Opus) use their own judgement rather than dictating how they should work. You can tell Fable \"only use automated testing for larger features, don't update and run tests for small copy or design changes\" - but it's better to just tell Fable... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Fable's judgement stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "周三，我在 AIE 与来自 Claude 代码团队的 Cat Wu 和 Thariq Shihipar 主持的炉边聊天中得到的最有趣的提示之一是让《Fable》（以及在某种程度上 Opus）使用自己的判断，而不是规定他们应该如何工作。你可以告诉 Fable“只对较大的功能使用自动化测试，不要更新和运行小副本或设计更改的测试” - 但最好只是告诉 Fable ... 值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要来说，《寓言》的判断很突出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
       "date": "2026-07-02",
       "url": "https://simonwillison.net/2026/Jul/2/dspy-datasette-agent-prompts/#atom-everything",
       "title_en": "Using DSPy to evaluate and improve Datasette Agent's SQL system prompts",
@@ -186,7 +195,7 @@
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 构建 Pi 项目",
+      "title_zh": "用 Pi 工具构建 Pi 项目",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -218,15 +227,6 @@
       "summary_zh": "Claude Sonnet 5 的新内容 Claude Sonnet 5 今天早上发布了。我总是直接查看“新增内容”开发人员文档，因为它们往往比官方公告帖子提供更多可操作的信息。 Anthropic 对 Sonnet 5 的评价是“它的性能接近 Opus 4.8，但价格更低”。系统卡有助于解释他们如何能够在不被美国政府阻止的情况下发布模型：Sonnet 5 意义重大……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Claude Sonnet 5 中的新功能》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-29",
-      "url": "https://simonwillison.net/2026/Jun/29/ornith/#atom-everything",
-      "title_en": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding",
-      "title_zh": "Ornith-1.0：用于代理编码的自支架 LLMs",
-      "summary_en": "Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding This is an interesting new open weights (MIT licensed) model, the first model release from DeepReinforce. [...] with variants including 9B Dense, 31B Dense, 35B MoE, and 397B MoE. Built on top of pretrained Gemma 4 and Qwen 3.5, it achieves state-of-the-art performance among open-source models of comparable size on coding benchmarks. As far as I can tell the licenses of those underlying models is compatible with being used in this way - Gemma... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Ornith-1.0: Self-Scaffolding LLMs for Agentic Coding stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Ornith-1.0：用于代理编码的自支架 LLMs 这是一个有趣的新开放权重（MIT 许可）模型，是 DeepReinforce 发布的第一个模型。 [...] 的变体包括 9B Dense、31B Dense、35B MoE 和 397B MoE。它建立在预训练的 Gemma 4 和 Qwen 3.5 之上，在编码基准上实现了同等大小的开源模型中最先进的性能。据我所知，这些底层模型的许可证与这种方式兼容 - Gemma...它值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，Ornith-1.0：用于代理编码的自支架 LLMs 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "anildash.com",
       "date": "2026-04-10",
       "url": "https://anildash.com/2026/04/10/y2k-2.0-ai-security/",
@@ -249,7 +249,7 @@
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "红外线数据协会协议",
+      "title_zh": "红外数据协会标准回顾",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -285,7 +285,7 @@
       "date": "2026-07-02",
       "url": "https://www.anthropic.com/news/redeploying-fable-5",
       "title_en": "Claude Fable and Kayfabe",
-      "title_zh": "Claude 的寓言与表演叙事",
+      "title_zh": "Claude 寓言与职业摔角式表演",
       "summary_en": "Anthropic: On Friday, June 12, the US government applied export controls to our newest models, Claude Fable 5 and Claude Mythos 5. This required us to restrict access to foreign nationals, whether inside or outside the United States. Because the order took effect immediately and we had no reliable way to verify nationality in real-time, we suspended access to both models for all users. As of today, June 30, the export controls on Fable 5 and Mythos 5 have been... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Claude Fable and Kayfabe stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Anthropic：6 月 12 日星期五，美国政府对我们的最新型号《Claude Fable 5》和《Claude Mythos 5》实施了出口管制。这要求我们限制外国人的进入，无论是在美国境内还是境外。由于该命令立即生效，并且我们没有可靠的方法来实时验证国籍，因此我们暂停了所有用户对这两个模型的访问。截至今天，即 6 月 30 日，《神鬼寓言 5》和《神话 5》的出口管制已经……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Claude Fable 和 Kayfabe 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -353,15 +353,6 @@
       "summary_zh": "假设您有这样的 JAX 代码，并在设置了 CUDA 的计算机上运行它： key = jax 。键 (42) cpu0 = jax 。设备（“cpu”）[0] 与 jax 。默认设备（cpu0）：数组= jax。 randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item 。这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说非常有用。对于摘要，JAX：承诺问题很突出，因为它提供了足够的具体细节有用，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "seangoedecke.com",
-      "date": "2026-05-18",
-      "url": "https://seangoedecke.com/the-just-say-no-engineer-was-a-zirp-phenomenon/",
-      "title_en": "The just-say-no engineer was a ZIRP phenomenon",
-      "title_zh": "直言不讳的工程师是 ZIRP 现象",
-      "summary_en": "The engineer who says no all the time is a real archetype among senior and staff engineers. Their role is to slow things down, to block the development of features that add complexity, and to ensure that as little code gets written as possible (since code is a liability). We can think of this as the just-say-no engineer 1 , as opposed to the just-say-yes engineer. The just-say-yes engineer is obsessed with moving fast, approves code changes by default, values... Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, The just-say-no engineer was a ZIRP phenomenon stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "总是说“不”的工程师是高级工程师和普通工程师的真实原型。他们的作用是放慢速度，阻止增加复杂性的功能的开发，并确保编写尽可能少的代码（因为代码是一种负担）。我们可以将其视为“只说不”的工程师 1 ，而不是“只说是”的工程师。只说“是”的工程师痴迷于快速行动，默认情况下批准代码更改，价值观……除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，“只说不”的工程师是一种 ZIRP 现象，它非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "simonwillison.net",
       "date": "2026-07-02",
       "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
@@ -369,6 +360,15 @@
       "title_zh": "了解参与",
       "summary_en": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of collaborating with coding agents as they construct increasingly large and sophisticated changes, and the need to avoid taking on cognitive debt as your understanding drifts from how the code actually works. His argument is that you need to understand the code to a depth that enables you to participate further with the model... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Understand to participate stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我昨天在 AIE 上看到杰弗里·利特 (Geoffrey Litt) 的演讲，他使用的一个框架特别引起了我的共鸣：理解参与杰弗里正在谈论与编码代理合作的挑战，因为他们构建越来越大和复杂的变化，以及避免承担认知债务的必要性，因为你的理解偏离了代码的实际工作方式。他的论点是，您需要深入理解代码，以便能够进一步参与模型……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，“理解参与”脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "seangoedecke.com",
+      "date": "2026-05-18",
+      "url": "https://seangoedecke.com/the-just-say-no-engineer-was-a-zirp-phenomenon/",
+      "title_en": "The just-say-no engineer was a ZIRP phenomenon",
+      "title_zh": "直言不讳的工程师是 ZIRP 现象",
+      "summary_en": "The engineer who says no all the time is a real archetype among senior and staff engineers. Their role is to slow things down, to block the development of features that add complexity, and to ensure that as little code gets written as possible (since code is a liability). We can think of this as the just-say-no engineer 1 , as opposed to the just-say-yes engineer. The just-say-yes engineer is obsessed with moving fast, approves code changes by default, values... Beyond the headline, the article helps frame how policy and market structure can shape the pace and direction of AI deployment. For the digest, The just-say-no engineer was a ZIRP phenomenon stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "总是说“不”的工程师是高级工程师和普通工程师的真实原型。他们的作用是放慢速度，阻止增加复杂性的功能的开发，并确保编写尽可能少的代码（因为代码是一种负担）。我们可以将其视为“只说不”的工程师 1 ，而不是“只说是”的工程师。只说“是”的工程师痴迷于快速行动，默认情况下批准代码更改，价值观……除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，“只说不”的工程师是一种 ZIRP 现象，它非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -407,6 +407,15 @@
       "summary_zh": "Gergely Orosz，在 The Pragmatic Engineer（遗憾的是，它是一个 Substack 博客）上撰文：最大的问题是：人们不再关心实际工作，而是专注于表演性工作。让我们来看看 Meta 的领导层决定在他们的工作场所引入的四个要素： 在合法的情况下，跟踪所有工程师的键盘和鼠标点击情况 将大量工程师重新分配给全职数据标签 让员工知道其中 10% 将被解雇 拥有一种文化…… 这篇文章对于关心培训选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，“为什么 Meta 会破坏它的工程组织？”之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-07-03",
+      "url": "https://simonwillison.net/2026/Jul/3/open-source-ai-gap-map/#atom-everything",
+      "title_en": "Open Source AI Gap Map",
+      "title_zh": "开源 AI 差距图",
+      "summary_en": "Open Source AI Gap Map Current AI is \"a global partnership building a public option for AI\", founded as a non-profit at the AI Action Summit in Paris in February 2025 and backed by serious capital ($400m already committed). They launched their Gap Map a couple of days ago - an attempt at indexing the current state of open source AI: The Gap Map v0.1 details 421 products in depth: 266 software tools and libraries, 85 models, 50 datasets, and... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Open Source AI Gap Map stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "开源 AI 差距图 当前 AI 是“为 AI 构建公共选择的全球合作伙伴”，于 2025 年 2 月在巴黎举行的 AI 行动峰会上作为非营利组织成立，并得到大量资本的支持（已承诺 4 亿美元）。他们几天前推出了差距地图 - 试图对开源 AI 的当前状态进行索引：差距地图 v0.1 深入详细介绍了 421 个产品：266 个软件工具和库、85 个模型、50 个数据集……更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，开源 AI 差距图脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "xeiaso.net",
       "date": "2026-06-23",
       "url": "https://www.tigrisdata.com/blog/objgit/",
@@ -441,15 +450,6 @@
       "title_zh": "引用人择",
       "summary_en": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5. We'll begin restoring access tomorrow, and will share an update soon. — Anthropic , on Twitter Tags: anthropic , claude , generative-ai , claude-mythos-fable , ai , llms The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Anthropic stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "我们收到通知，商务部已取消对 Claude 《神鬼寓言 5》和《神话 5》的出口管制。我们将于明天开始恢复访问，并很快分享最新消息。 — Anthropic，在 Twitter 上 标签：anthropic、claude、generative-ai、claude-mythos-fable、a​​i、llms 更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Quoting Anthropic 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "antirez.com",
-      "date": "2026-05-04",
-      "url": "http://antirez.com/news/164",
-      "title_en": "Redis array type: short story of a long development",
-      "title_zh": "Redis 数组类型：长篇开发的短篇故事",
-      "summary_en": "I started working on the new Array data type for Redis in the first days of January. The PR landed the repository only now, so this code was cooked for four months. I worked at the implementation kinda part time (kinda because many weeks were actually full time, sometimes to detach yourself from the keyboard is complicated), and even before LLMs the implementation was likely something I could do in four months. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Redis array type: short story of a long development stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我在一月份的第一天开始研究 Redis 的新数组数据类型。 PR 现在才登陆存储库，所以这段代码已经准备了四个月了。我以兼职的方式参与实现（有点因为很多周实际上是全职的，有时让自己脱离键盘很复杂），甚至在 LLMs 之前，实现可能是我可以在四个月内完成的事情。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，Redis 数组类型：长期开发的短篇故事脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
   ]
 }
