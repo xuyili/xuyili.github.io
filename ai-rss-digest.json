@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T08:55:49+08:00",
+  "generated_at": "2026-07-05T08:05:14+08:00",
   "items": [
     {
       "source": "seangoedecke.com",
@@ -45,6 +45,15 @@
       "title_zh": "从头开始编写 LLM，第 34a 部分 — 为 LLM 训练运行构建 JAX 训练循环",
       "summary_en": "For over a year, I've been using Sebastian Raschka 's book \" Build a Large Language Model (from Scratch) \" -- and the multitude of side-projects that have branched out from reading it -- as something like a curriculum for learning about modern AI. The one final task I had set myself was to build and train an LLM from scratch just using my notes -- no reference to the book, no reference to the model code I'd written following... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Writing an LLM from scratch, part 34a -- building a JAX training loop for an LLM training run stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "一年多来，我一直在使用 Sebastian Raschka 的书《构建大型语言模型（从头开始）》——以及通过阅读该书而衍生出的众多副项目——作为学习现代 AI 的课程。我给自己设定的最后一项任务是仅使用我的笔记从头开始构建和训练 LLM —— 没有参考这本书，没有参考我随后编写的模型代码......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要，从头开始编写 LLM，第 34a 部分——为 LLM 训练运行构建 JAX 训练循环非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "lucumr.pocoo.org",
+      "date": "2026-07-04",
+      "url": "https://lucumr.pocoo.org/2026/7/4/better-models-worse-tools/",
+      "title_en": "Better Models: Worse Tools",
+      "title_zh": "更好的模型：更糟糕的工具",
+      "summary_en": "A very strange Pi issue sent me down a rabbit hole over the last two days. The short version is that newer Claude models sometimes call Pi’s edit tool with extra, invented fields in the nested edits[] array. And not Haiku or some small model: Opus 4.8. The edit itself is usually correct but the arguments do not match the schema as the model invents made-up keys and Pi thus rejects the tool call and asks to try again. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, Better Models: Worse Tools stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "在过去的两天里，一个非常奇怪的 Pi 问题让我陷入了困境。简而言之，较新的 Claude 模型有时会在嵌套的 edits[] 数组中使用额外的发明字段来调用 Pi 的编辑工具。不是俳句或一些小模型：Opus 4.8。编辑本身通常是正确的，但参数与模式不匹配，因为模型发明了虚构的键，因此 Pi 拒绝工具调用并要求重试。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，《更好的模型：更糟糕的工具》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "gilesthomas.com",
@@ -111,6 +120,15 @@
     },
     {
       "source": "simonwillison.net",
+      "date": "2026-07-04",
+      "url": "https://simonwillison.net/2026/Jul/4/better-models-worse-tools/#atom-everything",
+      "title_en": "Better Models: Worse Tools",
+      "title_zh": "更好的模型：更糟糕的工具",
+      "summary_en": "Better Models: Worse Tools Armin reports on a weird problem he ran into while hacking on Pi: The short version is that newer Claude models sometimes call Pi’s edit tool with extra, invented fields in the nested edits[] array. And not Haiku or some small model: Opus 4.8. The edit itself is usually correct but the arguments do not match the schema as the model invents made-up keys and Pi thus rejects the tool call and asks to try again. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Better Models: Worse Tools stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "更好的模型：更糟糕的工具 Armin 报告了他在破解 Pi 时遇到的一个奇怪问题：简短的版本是，较新的 Claude 模型有时会在嵌套的 edits[] 数组中使用额外的、发明的字段来调用 Pi 的编辑工具。不是俳句或一些小模型：Opus 4.8。编辑本身通常是正确的，但参数与模式不匹配，因为模型发明了虚构的键，因此 Pi 拒绝工具调用并要求重试。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要来说，《更好的模型：更糟糕的工具》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
       "date": "2026-07-03",
       "url": "https://simonwillison.net/2026/Jul/3/judgement/#atom-everything",
       "title_en": "Fable's judgement",
@@ -164,13 +182,13 @@
       "summary_zh": "* 多年来，尽管功能证据和科学提示不断积累，某些 AI 研究人员仍然声称 LLM 是随机鹦鹉：概率机器会： 1. 对提示的含义没有任何表示。对他们要说什么没有任何表示。到了 2025 年，几乎所有人终于不再这么说了。 * 思想链现在是提高LLM输出的根本方法。我认为有两点： 1. 其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，2025 年底对 AI 的反思脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "simonwillison.net",
-      "date": "2026-06-30",
-      "url": "https://simonwillison.net/2026/Jun/30/shot-scraper-video/#atom-everything",
-      "title_en": "Have your agent record video demos of its work with shot-scraper video",
-      "title_zh": "让您的代理使用镜头抓取视频录制其工作的视频演示",
-      "summary_en": "shot-scraper video is a new command introduced in today's shot-scraper 1.10 release which accepts a storyboard.yml file defining a routine to run against a web application and uses Playwright to record a video of that routine. I've written before about the importance of having coding agents produce demos of their work; this is my latest attempt at enabling them to do that. Here's an example video created using shot-scraper video , exercising a still in development feature adding the ability... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Have your agent record video demos of its work with shot-scraper video stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "shot-scraper video 是今天的 shot-scraper 1.10 版本中引入的新命令，它接受定义针对 Web 应用程序运行的例程的 Storyboard.yml 文件，并使用 Playwright 录制该例程的视频。我之前写过关于让编码代理制作其工作演示的重要性；这是我帮助他们做到这一点的最新尝试。这是一个使用 shot-scraper video 创建的示例视频，练习了仍在开发中的功能，添加了以下功能……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。对于摘要，让您的代理使用镜头抓取视频录制其工作的视频演示非常引人注目，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "anildash.com",
+      "date": "2026-04-28",
+      "url": "https://anildash.com/2026/04/28/one-good-ai-is-here/",
+      "title_en": "(One) Good AI Is Here",
+      "title_zh": "（一）好AI来了",
+      "summary_en": "The cultural battles over AI have broken down over predictable lines in the past few years, with critics rightfully calling out the big AI platforms for training on content without consent, recklessly building without considering environmental impact, and designing platforms that are unaccountable because their code and weights (the parameters that describe how an AI model works) aren’t open for third-parties to evaluate. The AI zealots have done themselves no favors, by not only dismissing all of these valid criticisms... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, (One) Good AI Is Here stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "在过去的几年里，关于 AI 的文化之争已经在可预见的范围内破裂，批评者理所当然地指责大型 AI 平台在未经同意的情况下进行内容培训，鲁莽地建设而不考虑环境影响，以及设计不负责任的平台，因为它们的代码和权重（描述 AI 模型如何工作的参数）不开放给第三方评估。 AI 狂热者不仅驳回了所有这些有效的批评，还没有给自己带来任何好处……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，《(One) Good AI Is Here》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "antirez.com",
@@ -182,20 +200,11 @@
       "summary_zh": "高端 NVIDIA 卡以及运行它们所需的服务器和电源需要花费大量资金，特别是如果您计划获得足够的 VRAM 来运行大型模型。到目前为止，替代方案是 Apple 硬件或 DGX Spark，即使由于内存带宽而受到严重限制，仍然允许足够快地运行 LLMs 提示处理（预填充）。 Mac Studio 提供了高达 512GB 的统一内存，这是一个内存带宽适中的解决方案（但比……好得多）。它的主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，在 DwarfStar 中分发 LLM 推理非常突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
-      "source": "anildash.com",
-      "date": "2026-04-28",
-      "url": "https://anildash.com/2026/04/28/one-good-ai-is-here/",
-      "title_en": "(One) Good AI Is Here",
-      "title_zh": "（一）好AI来了",
-      "summary_en": "The cultural battles over AI have broken down over predictable lines in the past few years, with critics rightfully calling out the big AI platforms for training on content without consent, recklessly building without considering environmental impact, and designing platforms that are unaccountable because their code and weights (the parameters that describe how an AI model works) aren’t open for third-parties to evaluate. The AI zealots have done themselves no favors, by not only dismissing all of these valid criticisms... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, (One) Good AI Is Here stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在过去的几年里，关于 AI 的文化之争已经在可预见的范围内破裂，批评者理所当然地指责大型 AI 平台在未经同意的情况下进行内容培训，鲁莽地建设而不考虑环境影响，以及设计不负责任的平台，因为它们的代码和权重（描述 AI 模型如何工作的参数）不开放给第三方评估。 AI 狂热者不仅驳回了所有这些有效的批评，还没有给自己带来任何好处……这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，《(One) Good AI Is Here》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "lucumr.pocoo.org",
       "date": "2026-05-24",
       "url": "https://lucumr.pocoo.org/2026/5/24/pi-oss/",
       "title_en": "Building Pi With Pi",
-      "title_zh": "用 Pi 工具构建 Pi 项目",
+      "title_zh": "用 Pi 构建 Pi：开源智能体项目的自我迭代",
       "summary_en": "Pi is now part of Earendil, but in the important sense it is still Mario’s project. He has been living with its issue tracker longer than I have, and he has been exposed to the weirdness of the new form of agent traffic in Open Source projects for longer too. This post is mostly a reflection of my own experience after spending more time in the tracker, using Pi to work on Pi, and watching what I have learned about... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Building Pi With Pi stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Pi 现在是 Earendil 的一部分，但从重要意义上讲，它仍然是 Mario 的项目。他使用问题跟踪器的时间比我长，而且他接触开源项目中新形式的代理流量的奇怪现象的时间也更长。这篇文章主要是我自己花更多时间在跟踪器上、使用 Pi 在 Pi 上工作以及观察我学到的东西之后的经验的反映......它的主要价值在于展示当实现细节调整时推理延迟、吞吐量和产品体验如何变化。在摘要中，使用 Pi 构建 Pi 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -209,6 +218,15 @@
       "summary_zh": "前几天我正在调试 JAX/Flax NNX 训练循环的一个问题，并发现了一个巧妙的小技巧来帮助调试它。具体来说，我想看看问题是否出在我的模型、损失函数、优化器设置或训练循环本身的“管道”上——梯度是否真的通过并应用于参数？我可以打印出损失和梯度，但打印出参数来看看它们是否......这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。对于摘要来说，Flax 调试：对事物进行哈希处理很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "simonwillison.net",
+      "date": "2026-06-30",
+      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything",
+      "title_en": "What's new in Claude Sonnet 5",
+      "title_zh": "Claude Sonnet 5 中的新内容",
+      "summary_en": "What's new in Claude Sonnet 5 Claude Sonnet 5 came out this morning . I always head straight for the \"what's new\" developer docs because they tend to have more actionable information than the official announcement post. Anthropic say of Sonnet 5 that \"its performance is close to that of Opus 4.8, but at lower prices\". The system card helps explain how they were able to release the model without being blocked by the US government: Sonnet 5 is significantly... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, What's new in Claude Sonnet 5 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Claude Sonnet 5 的新内容 Claude Sonnet 5 今天早上发布了。我总是直接前往“新增内容”开发人员文档，因为它们往往比官方公告帖子提供更多可操作的信息。 Anthropic 对 Sonnet 5 的评价是“它的性能接近 Opus 4.8，但价格更低”。系统卡有助于解释他们如何能够在不被美国政府阻止的情况下发布模型：Sonnet 5 意义重大……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Claude Sonnet 5 中的新功能》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "bernsteinbear.com",
       "date": "2026-06-03",
       "url": "https://bernsteinbear.com/blog/inlining-heuristics/?utm_source=rss",
@@ -216,15 +234,6 @@
       "title_zh": "内联启发式调查",
       "summary_en": "Compilers, especially method just-in-time compilers, operate on one function at a time. It is a natural code unit size, especially for a dynamic language JIT: at a given point in time, what more information can you gather about other parts of a running, changing system? I don’t have any data to back this up—maybe I should go gather some—but on average, methods are small. Especially in languages such as Ruby that use method dispatch for everything, even instance variable (attribute... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, A survey of inlining heuristics stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "编译器，尤其是方法即时编译器，一次操作一个函数。它是自然的代码单元大小，特别是对于动态语言 JIT：在给定的时间点，您还可以收集关于正在运行、不断变化的系统的其他部分的更多信息吗？我没有任何数据来支持这一点——也许我应该去收集一些数据——但平均而言，方法很小。特别是在像 Ruby 这样的语言中，它对所有事物都使用方法分派，甚至是实例变量（属性）......对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，内联启发式调查很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-30",
-      "url": "https://simonwillison.net/2026/Jun/30/claude-sonnet-5/#atom-everything",
-      "title_en": "What's new in Claude Sonnet 5",
-      "title_zh": "Claude Sonnet 5 中的新内容",
-      "summary_en": "What's new in Claude Sonnet 5 Claude Sonnet 5 came out this morning . I always head straight for the \"what's new\" developer docs because they tend to have more actionable information than the official announcement post. Anthropic say of Sonnet 5 that \"its performance is close to that of Opus 4.8, but at lower prices\". The system card helps explain how they were able to release the model without being blocked by the US government: Sonnet 5 is significantly... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, What's new in Claude Sonnet 5 stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Claude Sonnet 5 的新内容 Claude Sonnet 5 今天早上发布了。我总是直接查看“新增内容”开发人员文档，因为它们往往比官方公告帖子提供更多可操作的信息。 Anthropic 对 Sonnet 5 的评价是“它的性能接近 Opus 4.8，但价格更低”。系统卡有助于解释他们如何能够在不被美国政府阻止的情况下发布模型：Sonnet 5 意义重大……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要来说，《Claude Sonnet 5 中的新功能》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "anildash.com",
@@ -242,14 +251,14 @@
       "title_en": "GNU and the AI reimplementations",
       "title_zh": "GNU 和 AI 重新实现",
       "summary_en": "Those who cannot remember the past are condemned to repeat it. A sentence that I never really liked, and what is happening with AI, about software projects reimplementations, shows all the limits of such an idea. Many people are protesting the fairness of rewriting existing projects using AI. But, a good portion of such people, during the 90s, were already in the field: they followed the final part (started in the ‘80s) of the deeds of Richard Stallman, when he... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, GNU and the AI reimplementations stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "那些不记得过去的人注定会重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
+      "summary_zh": "那些不记得过去的人注定要重蹈覆辙。我从来没有真正喜欢过一句话，以及 AI 正在发生的事情，关于软件项目重新实现，显示了这种想法的所有局限性。许多人抗议使用 AI 重写现有项目的公平性。但是，这些人中的很大一部分在 90 年代就已经进入了该领域：他们追随了 Richard Stallman 事迹的最后部分（始于 80 年代），当时他……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，GNU 和 AI 重新实现脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实现决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
       "date": "2026-04-11",
       "url": "https://computer.rip/2026-04-11-IrDA.html",
       "title_en": "IrDA",
-      "title_zh": "红外数据协会标准回顾",
+      "title_zh": "IrDA 红外数据通信标准的兴衰",
       "summary_en": "Light: it's the radiation we can see. The communications potential of light is obvious, and indeed, many of the earliest forms of long-distance communication relied on it: signal fires, semaphore, heliographs. You could say that we still make extensive use of light for communications today, in the form of fiber optics. Early on, some fiber users (such as AT&T) even preferred the term \"lightguide,\" a nice analogy to the long-distance waveguides that Bell Laboratories had experimented with. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, IrDA stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "光：是我们能看到的辐射。光的通信潜力是显而易见的，事实上，许多最早的远距离通信形式都依赖于它：信号灯、信号灯、日光仪。您可以说，我们今天仍然以光纤的形式广泛使用光进行通信。早期，一些光纤用户（例如 AT&T）甚至更喜欢“光导”这个术语，这与贝尔实验室试验过的长距离波导是一个很好的类比。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。在摘要中，IrDA 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
@@ -281,15 +290,6 @@
       "summary_zh": "目前 Twitter 上有一些人对 Anthropic 受到美国政府暂停访问《神鬼寓言》和《神话》的出口管制指令的打击感到幸灾乐祸。 Anthropic 及其领导层花费了大量时间和精力，将自己的技术描述为危险的，需要严格的控制和监管。现在，美国政府似乎已经认真对待这一框架，并告诉他们对外国人关闭它，我可以看到......更广泛的相关性来自于展示安全和模型部署问题如何在现代 AI 系统中日益重叠。在摘要中，《仅适用于美国人的危险技术》脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "daringfireball.net",
-      "date": "2026-07-02",
-      "url": "https://www.anthropic.com/news/redeploying-fable-5",
-      "title_en": "Claude Fable and Kayfabe",
-      "title_zh": "Claude 寓言与职业摔角式表演",
-      "summary_en": "Anthropic: On Friday, June 12, the US government applied export controls to our newest models, Claude Fable 5 and Claude Mythos 5. This required us to restrict access to foreign nationals, whether inside or outside the United States. Because the order took effect immediately and we had no reliable way to verify nationality in real-time, we suspended access to both models for all users. As of today, June 30, the export controls on Fable 5 and Mythos 5 have been... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Claude Fable and Kayfabe stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Anthropic：6 月 12 日星期五，美国政府对我们的最新型号《Claude Fable 5》和《Claude Mythos 5》实施了出口管制。这要求我们限制外国人的进入，无论是在美国境内还是境外。由于该命令立即生效，并且我们没有可靠的方法来实时验证国籍，因此我们暂停了所有用户对这两个模型的访问。截至今天，即 6 月 30 日，《神鬼寓言 5》和《神话 5》的出口管制已经……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Claude Fable 和 Kayfabe 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
       "source": "antirez.com",
       "date": "2026-06-07",
       "url": "http://antirez.com/news/168",
@@ -317,6 +317,15 @@
       "summary_zh": "近年来，科技行业在很大程度上失去了战略的一个方面，那就是如何与平台竞争，因为主要科技公司已经变得如此庞大，以至于市场不再具有竞争力。然而，AI 市场还处于早期阶段，用户和社会仍然对大型 AI 公司可能会失败感到愤怒。但如果他们输了，生态系统中的其他人都必须执行几乎失传的平台战略艺术。除了标题之外，本文还帮助构建了政策和市场结构如何塑造 AI 部署的步伐和方向。在摘要中，我们将如何对抗 Big AI 的平台战争脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "daringfireball.net",
+      "date": "2026-07-02",
+      "url": "https://www.anthropic.com/news/redeploying-fable-5",
+      "title_en": "Claude Fable and Kayfabe",
+      "title_zh": "Claude Fable 与“剧情真实感”争议",
+      "summary_en": "Anthropic: On Friday, June 12, the US government applied export controls to our newest models, Claude Fable 5 and Claude Mythos 5. This required us to restrict access to foreign nationals, whether inside or outside the United States. Because the order took effect immediately and we had no reliable way to verify nationality in real-time, we suspended access to both models for all users. As of today, June 30, the export controls on Fable 5 and Mythos 5 have been... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Claude Fable and Kayfabe stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Anthropic：6 月 12 日星期五，美国政府对我们的最新型号《Claude Fable 5》和《Claude Mythos 5》实施了出口管制。这要求我们限制外国人的进入，无论是在美国境内还是境外。由于该命令立即生效，并且我们没有可靠的方法来实时验证国籍，因此我们暂停了所有用户对这两个模型的访问。截至今天，即 6 月 30 日，《神鬼寓言 5》和《神话 5》的出口管制已经……更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Claude Fable 和 Kayfabe 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "simonwillison.net",
       "date": "2026-06-30",
       "url": "https://simonwillison.net/2026/Jun/30/nano-banana-2-lite/#atom-everything",
@@ -324,6 +333,15 @@
       "title_zh": "纳米香蕉2 Lite",
       "summary_en": "Nano Banana 2 Lite Also known as Gemini 3.1 Flash Lite Image ( gemini-3.1-flash-lite-image in their API ), this is the \"fastest and cheapest Gemini image model, engineered for velocity and scale\". I used AI studio to run this prompt: Do a where's Waldo style image but it's where is the raccoon holding a ham radio I like that one better than the results I got from the other Nano Banana models when I tried this back in April. The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Nano Banana 2 Lite stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "Nano Banana 2 Lite 也称为 Gemini 3.1 Flash Lite Image（API 中的 gemini-3.1-flash-lite-image），这是“最快、最便宜的 Gemini 图像模型，专为速度和规模而设计”。我使用 AI studio 来运行这个提示：做一张 Waldo 风格的图像，但它是浣熊拿着业余无线电的地方。我更喜欢这个，比我四月份尝试时从其他 Nano Banana 模型得到的结果更好。更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Nano Banana 2 Lite 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "daringfireball.net",
+      "date": "2026-07-04",
+      "url": "https://flexibits.com/blog/2026/06/double-booked-never-heard-of-it-meet-calendar-mirroring-in-fantastical/",
+      "title_en": "Fantastical 4.1.15 Adds Calendar Mirroring",
+      "title_zh": "Fantastical 4.1.15 新增日历镜像",
+      "summary_en": "Flexibits: Calendar Mirroring allows you to connect two separate calendars (like work and personal) so that events from one automatically show up on the other. No event information is sent to Flexibits servers or saved outside of your device. You can choose to show full event details or just block the time out as a mysterious, professional “Busy”. Your coworkers don’t need to know you’re getting a root canal, they just need to know you’re unavailable. What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Fantastical 4.1.15 Adds Calendar Mirroring stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "灵活性：日历镜像允许您连接两个单独的日历（例如工作日历和个人日历），以便一个日历中的事件自动显示在另一个日历上。不会将任何事件信息发送到 Flexibits 服务器或保存在您的设备外部。您可以选择显示完整的活动详细信息，也可以将时间设置为神秘、专业的“忙碌”。您的同事不需要知道您正在进行根管治疗，他们只需要知道您没空。其引人注目之处在于它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来。对于摘要来说，《Fantastical 4.1.15 添加日历镜像》之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -344,6 +362,15 @@
       "summary_zh": "没有什么比使用框架编写自己的代码更能阐明事物如何组合在一起的了！继续将 PyTorch LLM 代码移植到 JAX ，我想加载一个大型数据集： gpjt/fineweb-gpt2-tokens 的列车分割中的 10,248,871,837 个 16 位无符号整数。 full_dataset = load_file ( dataset_dir / f \"train.safetensors\" )[ \"tokens\" ] 当我运行它时，我收到了 CUDA 内存不足错误： jax.errors.JaxRuntimeError: RESOURCE_EXHAUSTED: Out of memory while attempts to allocate 19.09GiB。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。在摘要中，JAX 后端和设备脱颖而出，因为它提供了足够有用的具体细节，同时还呈现了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
+      "source": "computer.rip",
+      "date": "2026-07-04",
+      "url": "https://computer.rip/2026-07-04-microwave-and-power.html",
+      "title_en": "megawatts by microwave",
+      "title_zh": "微波兆瓦",
+      "summary_en": "In 1914 the Department of the Interior, through the Bureau of Reclamation, investigated the possibilities of developing the Columbia River. Thousands of arid but potentially fertile acres needed only water to become the Imperial Valley of the Northwest. Locked in the mountain ranges were valuable ores awaiting electricity to turn them into needed metals. Two years later the State engineer of Oregon urged the development of the Bonneville site as a national-defense measure: he saw in the proposed power project... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, megawatts by microwave stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "1914 年，内政部通过垦务局调查了开发哥伦比亚河的可能性。数千片干旱但潜在肥沃的土地只需要水就可以成为西北的帝王谷。山脉中蕴藏着宝贵的矿石，等待着电力将它们转化为所需的金属。两年后，俄勒冈州工程师敦促将邦纳维尔站点的开发作为一项国防措施：他在拟议的电力项目中看到……其主要价值在于展示调整实施细节时推理延迟、吞吐量和产品体验如何变化。对于摘要来说，微波兆瓦之所以脱颖而出，是因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
       "source": "gilesthomas.com",
       "date": "2026-06-16",
       "url": "https://www.gilesthomas.com/2026/06/jax-commitment-issues",
@@ -351,15 +378,6 @@
       "title_zh": "JAX：承诺问题",
       "summary_en": "Imagine you have JAX code like this, and run it on a machine with CUDA set up: key = jax . key ( 42 ) cpu0 = jax . devices ( \"cpu\" )[ 0 ] with jax . default_device ( cpu0 ): array = jax . randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item . The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, JAX: commitment issues stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "假设您有这样的 JAX 代码，并在设置了 CUDA 的计算机上运行它： key = jax 。键 (42) cpu0 = jax 。设备（“cpu”）[0] 与 jax 。默认设备（cpu0）：数组= jax。 randint ( key , ( 530640 , 6 , 1024 ), 0 , 50_000 , dtype = jax . block_until_ready () item = array [ 0 ] item 。这篇文章对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说非常有用。对于摘要，JAX：承诺问题很突出，因为它提供了足够的具体细节有用，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-07-02",
-      "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
-      "title_en": "Understand to participate",
-      "title_zh": "了解参与",
-      "summary_en": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of collaborating with coding agents as they construct increasingly large and sophisticated changes, and the need to avoid taking on cognitive debt as your understanding drifts from how the code actually works. His argument is that you need to understand the code to a depth that enables you to participate further with the model... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Understand to participate stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我昨天在 AIE 上看到杰弗里·利特 (Geoffrey Litt) 的演讲，他使用的一个框架特别引起了我的共鸣：理解参与杰弗里正在谈论与编码代理合作的挑战，因为他们构建越来越大和复杂的变化，以及避免承担认知债务的必要性，因为你的理解偏离了代码的实际工作方式。他的论点是，您需要深入理解代码，以便能够进一步参与模型……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，“理解参与”脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "seangoedecke.com",
@@ -378,6 +396,15 @@
       "title_zh": "AI GPU 的寿命可能超过三年",
       "summary_en": "People who think current AI use is unsustainable often rely on the claim that inference GPUs only last “three years at the most” under load 1 . The idea here is that once the AI bubble money drains away, current infrastructure will rapidly become obsolete, and there won’t be enough money floating around to buy a whole slate of brand-new GPUs. Inference costs would thus rapidly become way too expensive for current AI products to make any financial sense. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, AI GPUs probably live longer than three years stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
       "summary_zh": "认为当前 AI 使用不可持续的人通常依赖这样的说法：推理 GPU 在负载 1 下只能持续“最多三年”。这里的想法是，一旦 AI 泡沫资金耗尽，当前的基础设施将迅速过时，并且不会有足够的资金来购买一整套全新的 GPU。因此，对于当前的 AI 产品来说，推理成本很快就会变得过于昂贵，无法产生任何财务意义。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要来说，AI GPU 的寿命可能超过三年，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+    },
+    {
+      "source": "simonwillison.net",
+      "date": "2026-07-02",
+      "url": "https://simonwillison.net/2026/Jul/2/understand-to-participate/#atom-everything",
+      "title_en": "Understand to participate",
+      "title_zh": "了解参与",
+      "summary_en": "I saw Geoffrey Litt speak at AIE yesterday, and one framing he used particularly resonated with me: Understand to participate Geoffrey was talking about the challenge of collaborating with coding agents as they construct increasingly large and sophisticated changes, and the need to avoid taking on cognitive debt as your understanding drifts from how the code actually works. His argument is that you need to understand the code to a depth that enables you to participate further with the model... What makes it notable is the way it connects agent design decisions to practical reliability, tool use, and developer ergonomics. For the digest, Understand to participate stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "我昨天在 AIE 上看到杰弗里·利特 (Geoffrey Litt) 的演讲，他使用的一个框架特别引起了我的共鸣：理解参与杰弗里正在谈论与编码代理合作的挑战，因为他们构建越来越大和复杂的变化，以及避免承担认知债务的必要性，因为你的理解偏离了代码的实际工作方式。他的论点是，您需要深入理解代码，以便能够进一步参与模型……值得注意的是它将代理设计决策与实际可靠性、工具使用和开发人员人体工程学联系起来的方式。在摘要中，“理解参与”脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "computer.rip",
@@ -399,12 +426,12 @@
     },
     {
       "source": "daringfireball.net",
-      "date": "2026-07-02",
-      "url": "https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering",
-      "title_en": "‘Why Is Meta Destroying Its Engineering Organization?’",
-      "title_zh": "“为什么 Meta 会摧毁它的工程组织？”",
-      "summary_en": "Gergely Orosz, writing at The Pragmatic Engineer (which, sadly , is a Substack blog): The biggest problem: people stop caring about real work and focus on performative work. Let’s check the four ingredients that Meta’s leadership has decided to introduce to their workplace: Tracking the keyboards and mouse clicks of all engineers, where legally possible Reassign a good chunk of engineers to full-time data labeling Let staff know that 10% of them will be laid off Have a culture where... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, ‘Why Is Meta Destroying Its Engineering Organization?’ stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "Gergely Orosz，在 The Pragmatic Engineer（遗憾的是，它是一个 Substack 博客）上撰文：最大的问题是：人们不再关心实际工作，而是专注于表演性工作。让我们来看看 Meta 的领导层决定在他们的工作场所引入的四个要素： 在合法的情况下，跟踪所有工程师的键盘和鼠标点击情况 将大量工程师重新分配给全职数据标签 让员工知道其中 10% 将被解雇 拥有一种文化…… 这篇文章对于关心培训选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，“为什么 Meta 会破坏它的工程组织？”之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "date": "2026-07-04",
+      "url": "https://daringfireball.net/2018/12/electron_and_the_decline_of_native_apps",
+      "title_en": "From the DF Archive: ‘Electron and the Decline of Native Apps’",
+      "title_zh": "来自 DF Archive：“Electron 和原生应用程序的衰落”",
+      "summary_en": "Yours truly, back in 2018: I don’t share the depth of their pessimism regarding native apps, but Electron is without question a scourge. I think the Mac will prove more resilient than Windows, because the Mac is the platform that attracts people who care. In some ways, the worst thing that ever happened to the Mac is that it got so much more popular a decade ago. In theory, that should have been nothing but good news for the platform... The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, From the DF Archive: ‘Electron and the Decline of Native Apps’ stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "您真诚的，早在 2018 年：我不同意他们对原生应用程序的悲观情绪，但 Electron 无疑是一个祸害。我认为 Mac 将比 Windows 更具弹性，因为 Mac 是吸引关心的人的平台。从某些方面来说，Mac 发生过的最糟糕的事情就是它在十年前变得如此流行。从理论上讲，这对平台来说应该是个好消息……更广泛的收获是，它将狭隘的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。对于摘要，来自 DF Archive 的“Electron and the Decline of Native Apps”之所以脱颖而出，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
       "source": "simonwillison.net",
@@ -416,40 +443,13 @@
       "summary_zh": "开源 AI 差距图 当前 AI 是“为 AI 构建公共选择的全球合作伙伴”，于 2025 年 2 月在巴黎举行的 AI 行动峰会上作为非营利组织成立，并得到大量资本的支持（已承诺 4 亿美元）。他们几天前推出了差距地图 - 试图对开源 AI 的当前状态进行索引：差距地图 v0.1 深入详细介绍了 421 个产品：266 个软件工具和库、85 个模型、50 个数据集……更广泛的收获是，它将狭窄的更新变成了读者在考虑 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，开源 AI 差距图脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
     },
     {
-      "source": "xeiaso.net",
-      "date": "2026-06-23",
-      "url": "https://www.tigrisdata.com/blog/objgit/",
-      "title_en": "I taught a bucket to speak git",
-      "title_zh": "我教了一个桶说 git",
-      "summary_en": "What happens if I just point a git server at an object storage bucket? Back when I was porting agent sandboxes to Go , I built everything on top of billy , a filesystem abstraction for Go. The whole trick of the project was teaching a Tigris bucket to act enough like a filesystem that a shell interpreter and its tools couldn’t tell the difference. Billy was the key layer that made the entire façade fall into place. Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, I taught a bucket to speak git stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "如果我只是将 git 服务器指向对象存储桶会发生什么？当我将代理沙箱移植到 Go 时，我在 billy（Go 的文件系统抽象）之上构建了所​​有内容。该项目的全部技巧是教 Tigris 存储桶的行为足够像文件系统，以至于 shell 解释器及其工具无法区分其中的差异。比利是使整个立面到位的关键层。其主要价值在于展示调整实现细节时推理延迟、吞吐量和产品体验如何变化。在摘要中，我教了一个桶说 git 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "seangoedecke.com",
-      "date": "2026-06-04",
-      "url": "https://seangoedecke.com/anti-ai-nostalgia/",
-      "title_en": "Anti-AI nostalgia and the cult of the past",
-      "title_zh": "反AI怀旧和对过去的崇拜",
-      "summary_en": "Programmers were better back in the day, weren’t they? Not just people who got paid to write code, but people who lived it, who were obsessed with their craft, and whose code was a lively expression of themselves. Hackers were hackers in those days before money took over the industry. Don’t even get me started on LLMs. Could there be a better example of today’s degenerate spirit? A machine to mass-produce software (not good software, just barely good enough), so... Its main value is in showing how inference latency, throughput, and product experience change when implementation details are adjusted. For the digest, Anti-AI nostalgia and the cult of the past stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "过去的程序员更好，不是吗？不仅仅是那些靠编写代码获得报酬的人，还有那些生活在代码中的人，他们痴迷于自己的手艺，他们的代码是他们自己的生动表达。在金钱接管这个行业之前，黑客就是黑客。甚至不让我开始 LLMs。对于当今堕落的精神，还有比这更好的例子吗？一台批量生产软件的机器（不是好软件，只是勉强够好），所以……它的主要价值在于展示当实现细节调整时，推理延迟、吞吐量和产品体验如何变化。对于摘要来说，反AI怀旧和对过去的崇拜很突出，因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "gilesthomas.com",
-      "date": "2026-04-29",
-      "url": "https://www.gilesthomas.com/2026/04/10g-ethernet-what-i-did",
-      "title_en": "10Gb/s Ethernet: what I actually did to get it working in my home",
-      "title_zh": "10Gb/s 以太网：我实际上做了什么让它在我家里工作",
-      "summary_en": "Having learned enough about 10Gb/s Ethernet to be comfortable about setting it up in my house, it was time to bite the bullet: order it from the ISP, buy some kit, and get started. The apartment has structured cabling -- each room has one or more RJ45 sockets in the wall, and there's a patch panel downstairs by our front door that has a matching patch socket for each wall socket. The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, 10Gb/s Ethernet: what I actually did to get it working in my home stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "在对 10Gb/s 以太网有了足够的了解之后，我就可以轻松地在家里进行设置了，现在是时候硬着头皮了：从 ISP 订购，购买一些套件，然后开始使用。公寓采用结构化布线——每个房间的墙上都有一个或多个 RJ45 插座，楼下前门旁有一个接线板，每个墙壁插座都有一个匹配的接线板。对于关心训练选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说，这篇文章最有用。对于摘要，10Gb/s 以太网：我实际上为让它在我家里工作而所做的事情很突出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
-    },
-    {
-      "source": "simonwillison.net",
-      "date": "2026-06-30",
-      "url": "https://simonwillison.net/2026/Jun/30/anthropic/#atom-everything",
-      "title_en": "Quoting Anthropic",
-      "title_zh": "引用人择",
-      "summary_en": "We’ve received notice that the Department of Commerce has lifted export controls on Claude Fable 5 and Mythos 5. We'll begin restoring access tomorrow, and will share an update soon. — Anthropic , on Twitter Tags: anthropic , claude , generative-ai , claude-mythos-fable , ai , llms The broader takeaway is that it turns a narrow update into something readers can reuse when thinking about tools, systems, and tradeoffs in AI work. For the digest, Quoting Anthropic stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
-      "summary_zh": "我们收到通知，商务部已取消对 Claude 《神鬼寓言 5》和《神话 5》的出口管制。我们将于明天开始恢复访问，并很快分享最新消息。 — Anthropic，在 Twitter 上 标签：anthropic、claude、generative-ai、claude-mythos-fable、a​​i、llms 更广泛的收获是，它将狭隘的更新变成了读者在思考 AI 工作中的工具、系统和权衡时可以重复使用的东西。在摘要中，Quoting Anthropic 脱颖而出，因为它提供了足够有用的具体细节，同时还揭示了人们评估工具、模型和实施决策时重要的权衡。"
+      "source": "daringfireball.net",
+      "date": "2026-07-02",
+      "url": "https://newsletter.pragmaticengineer.com/p/why-is-meta-destroying-its-engineering",
+      "title_en": "‘Why Is Meta Destroying Its Engineering Organization?’",
+      "title_zh": "“为什么 Meta 会摧毁它的工程组织？”",
+      "summary_en": "Gergely Orosz, writing at The Pragmatic Engineer (which, sadly , is a Substack blog): The biggest problem: people stop caring about real work and focus on performative work. Let’s check the four ingredients that Meta’s leadership has decided to introduce to their workplace: Tracking the keyboards and mouse clicks of all engineers, where legally possible Reassign a good chunk of engineers to full-time data labeling Let staff know that 10% of them will be laid off Have a culture where... The piece is most useful for readers who care about how training choices affect stability, cost, and final model quality in real workflows. For the digest, ‘Why Is Meta Destroying Its Engineering Organization?’ stands out because it offers enough concrete detail to be useful, while also surfacing the tradeoffs that matter when people evaluate tools, models, and implementation decisions.",
+      "summary_zh": "Gergely Orosz，在 The Pragmatic Engineer（遗憾的是，它是一个 Substack 博客）上撰文：最大的问题是：人们不再关心实际工作，而是专注于表演性工作。让我们来看看 Meta 的领导层决定在他们的工作场所引入的四个要素： 在合法的情况下，跟踪所有工程师的键盘和鼠标点击情况 将大量工程师重新分配给全职数据标签 让员工知道其中 10% 将被解雇 拥有一种文化…… 这篇文章对于关心培训选择如何影响实际工作流程中的稳定性、成本和最终模型质量的读者来说最有用。在摘要中，“为什么 Meta 会破坏它的工程组织？”之所以引人注目，是因为它提供了足够有用的具体细节，同时也揭示了人们评估工具、模型和实施决策时重要的权衡。"
     }
   ]
 }
